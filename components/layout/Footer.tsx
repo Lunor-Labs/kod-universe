@@ -18,24 +18,20 @@ export function Footer() {
       role="contentinfo"
       aria-label="Site footer"
     >
-      {/* Main footer */}
       <div className="container-site py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-          {/* Brand column */}
           <div className="md:col-span-2">
             <Link href="/" aria-label="KOD Universe — Home">
-              <KodLogo className="h-12 w-auto text-canvas mb-6" />
+              <KodLogo className="h-20 w-auto text-canvas mb-6 brightness-0 invert" />
             </Link>
             <p className="text-dust-rose text-sm leading-relaxed max-w-xs">
-              We transform ideas into modern brands, stories, and experiences that connect,
-              inspire, and leave a lasting mark.
+              We transform ideas into modern brands, stories, and experiences
+              that connect, inspire, and leave a lasting mark.
             </p>
             <p className="font-serif italic text-secondary mt-4 text-sm">
               Ancient ideas. Modern impact.
             </p>
           </div>
-
-          {/* Navigation */}
           <div>
             <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
               Navigation
@@ -53,8 +49,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Contact & social */}
           <div>
             <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
               Connect
@@ -77,7 +71,6 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Social */}
             <div className="flex items-center gap-4">
               {siteConfig.socialLinks.map((link) => {
                 const Icon = iconMap[link.iconName] ?? ExternalLink;
@@ -101,7 +94,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-earth">
         <div className="container-site py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
