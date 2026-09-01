@@ -24,9 +24,9 @@
   --color-border-warm: #DDD5D2;
 
   /* Fonts */
-  --font-family-metropolis: "Metropolis", "Inter", sans-serif;
-  --font-family-sans: "Inter", sans-serif;
-  --font-family-serif: "Cormorant Garamond", Georgia, serif;
+  --font-metropolis: "Metropolis", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
 
   /* Max widths */
   --width-site: 1280px;
@@ -86,7 +86,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-metropolis);
+  font-family: var(--font-metropolis);
   background-color: var(--color-canvas);
   color: var(--color-void-black);
   line-height: 1.6;
@@ -100,7 +100,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-metropolis);
+  font-family: var(--font-metropolis);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 52px;
   padding: 0 16px;
   border-radius: 12px;
-  font-family: var(--font-family-metropolis);
+  font-family: var(--font-metropolis);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.05em;
@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 52px;
   padding: 0 16px;
   border-radius: 12px;
-  font-family: var(--font-family-metropolis);
+  font-family: var(--font-metropolis);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.05em;

@@ -9,7 +9,7 @@ import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  title: `${siteConfig.name} - ${siteConfig.tagline}`,
   description: siteConfig.description,
   alternates: {
     canonical: "/",
