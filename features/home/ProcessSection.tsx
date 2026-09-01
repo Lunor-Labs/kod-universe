@@ -41,7 +41,6 @@ export function ProcessSection() {
         </div>
 
         <div className="relative">
-          {/* Connecting line — desktop only */}
           <div
             className="hidden lg:block absolute top-[2.25rem] left-[12.5%] right-[12.5%] h-px bg-border-warm"
             aria-hidden="true"
@@ -50,17 +49,14 @@ export function ProcessSection() {
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6" role="list">
             {steps.map((step, index) => (
               <li key={step.number} className="relative flex flex-col items-center text-center">
-                {/* Icon circle */}
                 <div
-                  className="relative z-10 w-11 h-11 rounded-full border-2 border-border-warm bg-canvas 
+                  className="relative z-10 w-16 h-16 rounded-full border-2 border-border-warm bg-canvas 
                              flex items-center justify-center mb-5 group-hover:border-signal-orange"
                 >
-                  <step.Icon size={16} className="text-signal-orange" aria-hidden="true" />
+                  <step.Icon size={24} className="text-signal-orange" aria-hidden="true" />
                 </div>
-
-                {/* Number + title */}
                 <div className="mb-2">
-                  <span className="eyebrow text-[10px] block mb-1">{step.number}</span>
+                  <span className="text-xl block mb-1">{step.number}</span>
                   <h3 className="font-metropolis font-semibold text-earth text-sm tracking-wide uppercase">
                     {step.title}
                   </h3>

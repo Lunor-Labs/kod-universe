@@ -4,11 +4,8 @@
 @import "@fontsource/metropolis/500.css";
 @import "@fontsource/metropolis/600.css";
 @import "@fontsource/metropolis/700.css";
-
-/* ── Tailwind v4 entry point ───────────────────── */
 @import "tailwindcss";
 
-/* ── Custom design tokens ─────────────────────── */
 @theme {
   /* Colors */
   --color-void-black: #161616;
@@ -46,7 +43,7 @@
   /* Shadows */
   --shadow-soft: 0 12px 40px rgba(22, 22, 22, 0.08);
 
-  /* Font sizes — specific responsive sizes */
+  /* Font sizes - specific responsive sizes */
   --font-size-display-2xl: 44px; /* mobile default */
   --font-size-display-xl: 38px;
   --font-size-display-lg: 32px;
@@ -150,9 +147,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Typography helpers ───────────────────────── */
 .eyebrow {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-signal-orange);
 }

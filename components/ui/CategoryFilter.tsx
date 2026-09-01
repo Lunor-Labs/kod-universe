@@ -13,7 +13,7 @@ export function CategoryFilter({ categories, active, onChange }: CategoryFilterP
     <div
       role="group"
       aria-label="Filter projects by category"
-      className="flex flex-wrap gap-2"
+      className="flex flex-wrap gap-1"
     >
       {categories.map((cat) => {
         const isActive = active === cat;
@@ -24,7 +24,7 @@ export function CategoryFilter({ categories, active, onChange }: CategoryFilterP
             onClick={() => onChange(cat)}
             aria-pressed={isActive}
             className={cn(
-              "px-4 py-2 rounded-sm text-sm font-semibold tracking-[0.12em] uppercase",
+              "px-3 py-2 rounded-sm text-sm font-semibold uppercase",
               "transition-all duration-200 focus-visible:outline-solar-gold",
               isActive
                 ? "bg-earth text-canvas"

@@ -7,7 +7,13 @@ import { CategoryFilter } from "@/components/ui/CategoryFilter";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import type { Project } from "@/types/project";
 
-const CATEGORIES = ["ALL", "SOCIAL MEDIA", "BRANDING & IDENTITY", "PACKAGE DESIGN", "CREATIVE WORK"] as const;
+const CATEGORIES = [
+  "ALL",
+  "SOCIAL MEDIA",
+  "BRANDING & IDENTITY",
+  "PACKAGE DESIGN",
+  "CREATIVE WORK",
+] as const;
 
 interface FeaturedProjectsProps {
   projects: Project[];
@@ -24,12 +30,13 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const display = filtered.slice(0, 3);
 
   return (
-    <section className="section-padding border-t border-border-warm" aria-label="Selected projects">
+    <section
+      className="section-padding border-t border-border-warm"
+      aria-label="Selected projects"
+    >
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Left: filters + grid */}
           <div className="lg:col-span-2">
-            {/* Filters */}
             <div className="mb-8">
               <CategoryFilter
                 categories={[...CATEGORIES]}
@@ -37,8 +44,6 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 onChange={setActiveCategory}
               />
             </div>
-
-            {/* Grid */}
             {display.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {display.map((project, i) => (
@@ -56,9 +61,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 </p>
               </div>
             )}
-
-            {/* View all */}
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex justify-start">
               <Link
                 href="/work"
                 className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em] 
@@ -67,17 +70,14 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 View all projects
                 <ArrowRight
                   size={14}
-                  className="transition-transform duration-200 group-hover:translate-x-1"
+                  className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border w-6 h-6"
                   aria-hidden="true"
                 />
               </Link>
             </div>
           </div>
-
-          {/* Right: Our Universe intro */}
           <div className="lg:col-span-1 flex flex-col justify-center">
             <div className="bg-white border border-border-warm rounded-sm p-8 relative overflow-hidden">
-              {/* Decorative SVG cosmic ring */}
               <div
                 className="absolute -right-12 -top-12 w-40 h-40 rounded-full border border-border-warm/60 opacity-50"
                 aria-hidden="true"
@@ -92,18 +92,20 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 We are messengers of creative forces.
               </h2>
               <p className="text-secondary text-sm leading-relaxed mb-8">
-                From the vast universe, ideas spark — seeds of potential. We receive them with purpose and shape them into work that connects, inspires, and leaves a lasting mark.
+                From the vast universe, ideas spark - seeds of potential. We
+                receive them with purpose and shape them into work that
+                connects, inspires, and leaves a lasting mark.
               </p>
               <Link
                 href="/our-universe"
                 className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em] 
-                           uppercase text-earth border border-earth px-5 py-2.5 rounded-sm
+                           uppercase text-earth border border-earth px-5 py-2.5 rounded-3xl
                            hover:bg-earth hover:text-canvas transition-all duration-200 group"
               >
                 Our Story
                 <ArrowRight
                   size={13}
-                  className="transition-transform duration-200 group-hover:translate-x-1"
+                  className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border w-6 h-6"
                   aria-hidden="true"
                 />
               </Link>
