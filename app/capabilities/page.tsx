@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Share2, Fingerprint, Package, Palette, Globe, Search, Compass, Pen, Rocket, CheckCircle } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { capabilities, processSteps } from "@/data/capabilities";
+import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Capabilities",
@@ -138,6 +139,28 @@ export default function CapabilitiesPage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Proof Projects */}
+                  <div className="border-t border-border-warm pt-5 mt-5">
+                    <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
+                      Selected works
+                    </p>
+                    <div className="flex flex-col gap-2">
+                      {projects
+                        .filter((p) => p.category.toLowerCase() === cap.title.toLowerCase())
+                        .slice(0, 2)
+                        .map((p) => (
+                          <Link
+                            key={p.id}
+                            href={`/work/${p.slug}`}
+                            className="text-xs text-earth hover:text-signal-orange transition-colors truncate font-medium flex items-center gap-2 group/link"
+                          >
+                            <span className="w-1 h-1 bg-border-warm rounded-full group-hover/link:bg-signal-orange transition-colors" />
+                            {p.title}
+                          </Link>
+                        ))}
+                    </div>
                   </div>
 
                   <Link

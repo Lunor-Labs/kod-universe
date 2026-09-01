@@ -148,36 +148,57 @@ export default function OurUniversePage() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="section-padding bg-white border-t border-border-warm" aria-label="Our values">
+      {/* Core Tenets (4 Column) */}
+      <section className="border-t border-b border-border-warm bg-canvas" aria-label="Core Tenets">
         <div className="container-site">
-          <div className="text-center mb-14">
-            <SectionLabel>Our values</SectionLabel>
-            <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
-              What we believe in.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {values.map((value, i) => (
-              <div
-                key={value.title}
-                className="bg-canvas border border-border-warm rounded-sm p-7"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <span
-                    className="text-xs font-semibold text-secondary tracking-[0.1em]"
-                    aria-hidden="true"
-                  >
-                    0{i + 1}
-                  </span>
-                  <h3 className="font-metropolis font-semibold text-earth text-xl">
-                    {value.title}
-                  </h3>
-                </div>
-                <p className="text-secondary text-sm leading-relaxed">{value.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border-warm">
+            {/* Mission */}
+            <div className="p-8 lg:p-12">
+              <div className="w-12 h-12 relative mb-6 opacity-60">
+                <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
               </div>
-            ))}
+              <SectionLabel className="mb-4">Our Mission</SectionLabel>
+              <p className="text-secondary text-sm leading-relaxed">
+                To transform cosmic ideas into meaningful brand experiences that move people and shape a better tomorrow.
+              </p>
+            </div>
+            
+            {/* Philosophy */}
+            <div className="p-8 lg:p-12">
+              <div className="w-12 h-12 relative mb-6 opacity-60">
+                <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
+              </div>
+              <SectionLabel className="mb-4">Our Philosophy</SectionLabel>
+              <p className="text-secondary text-sm leading-relaxed">
+                We believe ideas are everywhere. Our role is to listen deeply, think boldly, and create with intention—uniting strategy, design, and story into powerful experiences.
+              </p>
+            </div>
+            
+            {/* Values */}
+            <div className="p-8 lg:p-12">
+              <div className="w-12 h-12 relative mb-6 opacity-60">
+                <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
+              </div>
+              <SectionLabel className="mb-4">Our Values</SectionLabel>
+              <ul className="text-secondary text-sm leading-relaxed space-y-2 list-disc list-inside">
+                <li>Curiosity over convention</li>
+                <li>Purpose over popularity</li>
+                <li>Craft over compromise</li>
+                <li>Collaboration over ego</li>
+                <li>Impact over impression</li>
+              </ul>
+            </div>
+            
+            {/* Approach */}
+            <div className="p-8 lg:p-12">
+              <div className="w-12 h-12 relative mb-6 opacity-60">
+                <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
+              </div>
+              <SectionLabel className="mb-4">Our Approach</SectionLabel>
+              <p className="text-secondary text-sm leading-relaxed">
+                We blend insight with imagination. A dynamic process that fuses strategy, storytelling, and design to build brands that connect, resonate, and endure.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -265,6 +286,41 @@ export default function OurUniversePage() {
                   &ldquo;Ancient ideas. Modern impact.&rdquo;
                 </p>
               </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="section-padding bg-canvas border-t border-border-warm" aria-label="Founder">
+        <div className="container-site">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 relative">
+              <div className="img-zoom rounded-sm overflow-hidden aspect-[3/4] relative">
+                {/* Fallback to hero image as placeholder */}
+                <Image
+                  src="/hero.jpg"
+                  alt="Founder Portrait"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <SectionLabel className="mb-4 text-clay">Founder</SectionLabel>
+              <h2 className="font-metropolis font-semibold text-earth text-display-lg mb-6">
+                Jane Doe
+              </h2>
+              <h3 className="font-editorial italic text-earth text-xl mb-6">Founder & Creative Director</h3>
+              <div className="space-y-4 text-secondary text-base leading-relaxed">
+                <p>
+                  With over 15 years in brand strategy and design, Jane founded KOD Universe on a simple belief: the best work bridges the gap between timeless principles and modern execution.
+                </p>
+                <p>
+                  Her approach draws inspiration from history, architecture, and the natural world, combining meticulous craft with bold creative vision to help brands find their true voice.
+                </p>
+              </div>
             </div>
           </div>
         </div>

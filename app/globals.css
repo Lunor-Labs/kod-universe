@@ -31,22 +31,31 @@
   /* Max widths */
   --width-site: 1280px;
 
-  /* Border radii */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 28px;
+  /* Spacing */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
 
-  /* Spacing extras */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-  --spacing-30: 7.5rem;
+  /* Shadows */
+  --shadow-soft: 0 12px 40px rgba(22, 22, 22, 0.08);
 
-  /* Font sizes — clamp-based */
-  --font-size-display-2xl: clamp(3rem, 6vw, 6rem);
-  --font-size-display-xl: clamp(2.5rem, 4.5vw, 4.5rem);
-  --font-size-display-lg: clamp(2rem, 3.5vw, 3.5rem);
-  --font-size-display-md: clamp(1.75rem, 2.5vw, 2.5rem);
-  --font-size-display-sm: clamp(1.5rem, 2vw, 2rem);
+  /* Font sizes — specific responsive sizes */
+  --font-size-display-2xl: 44px; /* mobile default */
+  --font-size-display-xl: 38px;
+  --font-size-display-lg: 32px;
+  --font-size-display-md: 26px;
+  --font-size-display-sm: 21px;
+  --font-size-lead: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-label: 12px;
 
   /* Animations */
   --animate-fade-up: fadeUp 0.6s ease-out forwards;
@@ -123,20 +132,20 @@ h1, h2, h3, h4, h5, h6 {
   .container-site { padding-left: 2rem; padding-right: 2rem; }
 }
 
-.section-padding { padding-top: 4rem; padding-bottom: 4rem; }
+.section-padding { padding-top: 56px; padding-bottom: 56px; }
 @media (min-width: 768px) {
-  .section-padding { padding-top: 6rem; padding-bottom: 6rem; }
+  .section-padding { padding-top: 72px; padding-bottom: 72px; }
 }
 @media (min-width: 1024px) {
-  .section-padding { padding-top: 8rem; padding-bottom: 8rem; }
+  .section-padding { padding-top: 96px; padding-bottom: 96px; }
 }
 
-.section-padding-sm { padding-top: 3rem; padding-bottom: 3rem; }
+.section-padding-sm { padding-top: 40px; padding-bottom: 40px; }
 @media (min-width: 768px) {
-  .section-padding-sm { padding-top: 4rem; padding-bottom: 4rem; }
+  .section-padding-sm { padding-top: 56px; padding-bottom: 56px; }
 }
 @media (min-width: 1024px) {
-  .section-padding-sm { padding-top: 5rem; padding-bottom: 5rem; }
+  .section-padding-sm { padding-top: 72px; padding-bottom: 72px; }
 }
 
 /* ── Typography helpers ───────────────────────── */
@@ -158,27 +167,40 @@ h1, h2, h3, h4, h5, h6 {
 .text-display-2xl {
   font-size: var(--font-size-display-2xl);
   line-height: 1.02;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 .text-display-xl {
   font-size: var(--font-size-display-xl);
   line-height: 1.08;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 .text-display-lg {
   font-size: var(--font-size-display-lg);
   line-height: 1.1;
+  font-weight: 700;
   letter-spacing: -0.015em;
 }
 .text-display-md {
   font-size: var(--font-size-display-md);
   line-height: 1.15;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 .text-display-sm {
   font-size: var(--font-size-display-sm);
   line-height: 1.2;
+  font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+@media (min-width: 1024px) {
+  .text-display-2xl { font-size: 72px; }
+  .text-display-xl { font-size: 56px; }
+  .text-display-lg { font-size: 44px; }
+  .text-display-md { font-size: 32px; }
+  .text-display-sm { font-size: 24px; }
 }
 
 /* ── Texture overlays ─────────────────────────── */
@@ -203,14 +225,16 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background-color: var(--color-signal-orange);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2px;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
   font-family: var(--font-family-metropolis);
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 600;
+  font-size: 14px;
   letter-spacing: 0.05em;
   transition: all 200ms ease;
   border: none;
@@ -222,15 +246,17 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background-color: transparent;
   color: var(--color-earth);
   border: 1px solid var(--color-earth);
-  padding: 0.75rem 1.5rem;
-  border-radius: 2px;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
   font-family: var(--font-family-metropolis);
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 600;
+  font-size: 14px;
   letter-spacing: 0.05em;
   transition: all 200ms ease;
   cursor: pointer;

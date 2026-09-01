@@ -29,15 +29,12 @@ export function Button({
 }: ButtonProps) {
   const base = cn(
     "inline-flex items-center gap-2 font-metropolis font-medium tracking-wide",
-    "transition-all duration-200 focus-visible:outline-solar-gold rounded-sm",
+    "transition-all duration-200 focus-visible:outline-solar-gold",
     "disabled:opacity-50 disabled:pointer-events-none",
     {
       "btn-primary": variant === "primary",
       "btn-secondary": variant === "secondary",
       "btn-ghost": variant === "ghost",
-      "text-xs py-2 px-4": size === "sm",
-      "text-sm py-3 px-6": size === "md",
-      "text-base py-4 px-8": size === "lg",
     },
     className
   );

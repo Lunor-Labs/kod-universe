@@ -42,23 +42,35 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
       {/* Filters bar */}
       <div className="border-t border-b border-border-warm py-4 mb-8">
         <div className="container-site">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <CategoryFilter
               categories={[...CATEGORIES]}
               active={activeCategory}
               onChange={setActiveCategory}
             />
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.1em] uppercase text-earth">
+              <label htmlFor="sort-work">Sort by:</label>
+              <select 
+                id="sort-work"
+                className="bg-transparent border-none outline-none cursor-pointer hover:text-signal-orange focus-visible:outline-solar-gold"
+                defaultValue="latest"
+              >
+                <option value="latest">Latest</option>
+                <option value="oldest">Oldest</option>
+                <option value="az">A-Z</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="container-site">
-        {/* Featured project highlight — shown only when All or matching category */}
+        {/* Featured project and Philosophy card — shown only when All or matching category */}
         {(activeCategory === "ALL" || featuredProject.category === activeCategory) && (
-          <div className="mb-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 border border-border-warm rounded-sm overflow-hidden bg-white">
-              {/* Image */}
-              <div className="relative aspect-[4/3] lg:aspect-auto img-zoom min-h-[280px]">
+          <div className="mb-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Featured Project (2/3 width) */}
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 border border-border-warm rounded-sm overflow-hidden bg-white">
+              <div className="relative aspect-[4/3] md:aspect-auto img-zoom min-h-[280px]">
                 <Image
                   src={featuredProject.heroImage.src}
                   alt={featuredProject.heroImage.alt}
@@ -68,23 +80,21 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-
-              {/* Text */}
-              <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="p-8 flex flex-col justify-center">
                 <SectionLabel>Featured project</SectionLabel>
-                <h2 className="font-metropolis font-semibold text-earth text-display-md mb-3">
+                <h2 className="font-metropolis font-semibold text-earth text-display-sm mb-2">
                   {featuredProject.title}
                 </h2>
                 <p className="text-signal-orange text-xs font-semibold tracking-[0.12em] uppercase mb-4">
                   {featuredProject.category}
                 </p>
-                <p className="text-secondary text-sm leading-relaxed mb-8 max-w-xs">
+                <p className="text-secondary text-sm leading-relaxed mb-6 max-w-xs">
                   {featuredProject.shortDescription}
                 </p>
                 <Link
                   href={`/work/${featuredProject.slug}`}
                   className="inline-flex items-center gap-2 border border-earth text-earth 
-                             px-5 py-2.5 rounded-sm text-xs font-semibold tracking-[0.12em] uppercase
+                             px-5 py-2 rounded-sm text-xs font-semibold tracking-[0.12em] uppercase
                              hover:bg-earth hover:text-canvas transition-all duration-200 group w-fit"
                 >
                   View case study
@@ -94,6 +104,25 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                     aria-hidden="true"
                   />
                 </Link>
+              </div>
+            </div>
+
+            {/* Philosophy Card (1/3 width) */}
+            <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain">
+              <SectionLabel>Our Philosophy</SectionLabel>
+              <h3 className="font-editorial text-2xl lg:text-3xl text-earth mb-4 italic mt-2 leading-tight">
+                Ideas are ancient.<br/>
+                Execution is modern.<br/>
+                <span className="font-bold">Impact is timeless.</span>
+              </h3>
+              <p className="text-secondary text-sm mb-auto">
+                We believe every brand has a story worth telling. Our work blends strategy, creativity, and craftsmanship to build experiences that resonate and endure.
+              </p>
+              <div className="mt-8 flex items-end justify-between">
+                <span className="font-editorial italic text-earth opacity-60">The KOD Universe</span>
+                <div className="w-16 h-16 opacity-10 relative">
+                   <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
             </div>
           </div>
