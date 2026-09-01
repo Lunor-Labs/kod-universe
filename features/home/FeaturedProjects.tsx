@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { CategoryFilter } from "@/components/ui/CategoryFilter";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import type { Project } from "@/types/project";
@@ -45,15 +46,25 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               />
             </div>
             {display.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {display.map((project, i) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    priority={i === 0}
-                  />
-                ))}
-              </div>
+              <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <AnimatePresence mode="popLayout">
+                  {display.map((project, i) => (
+                    <motion.div
+                      key={project.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
+                      <ProjectCard
+                        project={project}
+                        priority={i === 0}
+                      />
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
             ) : (
               <div className="py-16 text-center">
                 <p className="text-secondary text-sm">

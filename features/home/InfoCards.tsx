@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Project } from "@/types/project";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 interface InfoCardsProps {
   featuredProject: Project;
@@ -112,12 +113,13 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
     >
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <Link
-            href="/our-universe"
-            className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
-                       overflow-hidden hover:border-dust-rose transition-all duration-300 
-                       focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between"
-          >
+          <ScrollReveal variant="left" delay={0}>
+            <Link
+              href="/our-universe"
+              className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
+                         overflow-hidden hover:border-dust-rose transition-all duration-300 
+                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
+            >
             <div className="relative z-10 w-[60%]">
               <p className="eyebrow mb-4">OUR STORY</p>
               <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-4 leading-tight">
@@ -147,8 +149,10 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
                 className="object-cover object-right"
               />
             </div>
-          </Link>
-          <div className="group bg-white border border-border-warm rounded-md p-6 lg:p-8 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between relative overflow-hidden">
+            </Link>
+          </ScrollReveal>
+          <ScrollReveal variant="up" delay={0.1}>
+            <div className="group bg-white border border-border-warm rounded-md p-6 lg:p-8 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between relative overflow-hidden h-full">
             <div>
               <p className="eyebrow mb-4">OUR PROCESS</p>
               <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-10 leading-tight">
@@ -186,13 +190,15 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
             >
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
-          </div>
-          <Link
-            href={`/work/${featuredProject.slug}`}
-            className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
-                       overflow-hidden hover:border-dust-rose transition-all duration-300 
-                       focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between"
-          >
+            </div>
+          </ScrollReveal>
+          <ScrollReveal variant="right" delay={0.2}>
+            <Link
+              href={`/work/${featuredProject.slug}`}
+              className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
+                         overflow-hidden hover:border-dust-rose transition-all duration-300 
+                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
+            >
             <div className="relative z-10 w-[50%]">
               <p className="eyebrow mb-4">PROJECT DETAIL</p>
               <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-2 leading-tight group-hover:text-signal-orange transition-colors">
@@ -217,13 +223,15 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
                 className="object-cover object-left-top transform group-hover:scale-105 transition-transform duration-500 rounded-tl-xl shadow-lg"
               />
             </div>
-          </Link>
-          <Link
-            href="/connect"
-            className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
-                       overflow-hidden hover:border-dust-rose transition-all duration-300 
-                       focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between"
-          >
+            </Link>
+          </ScrollReveal>
+          <ScrollReveal variant="zoomIn" delay={0.3}>
+            <Link
+              href="/connect"
+              className="group relative bg-white border border-border-warm rounded-md p-6 lg:p-8 
+                         overflow-hidden hover:border-dust-rose transition-all duration-300 
+                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
+            >
             <div className="relative z-10 w-[60%]">
               <p className="eyebrow mb-4">LET'S CONNECT</p>
               <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-4 leading-tight">
@@ -255,7 +263,8 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
                 className="object-cover object-right"
               />
             </div>
-          </Link>
+            </Link>
+          </ScrollReveal>
         </div>
       </div>
     </section>

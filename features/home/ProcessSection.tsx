@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Search, Compass, Pen, Rocket } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
@@ -46,9 +49,29 @@ export function ProcessSection() {
             aria-hidden="true"
           />
 
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6" role="list">
+          <motion.ol 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6" 
+            role="list"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+          >
             {steps.map((step, index) => (
-              <li key={step.number} className="relative flex flex-col items-center text-center">
+              <motion.li 
+                key={step.number} 
+                className="relative flex flex-col items-center text-center"
+                variants={{
+                  hidden: { opacity: 0, y: 30, scale: 0.95 },
+                  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+                }}
+              >
                 <div
                   className="relative z-10 w-16 h-16 rounded-full border-2 border-border-warm bg-canvas 
                              flex items-center justify-center mb-5 group-hover:border-signal-orange"
@@ -64,9 +87,9 @@ export function ProcessSection() {
                 <p className="text-secondary text-sm leading-relaxed max-w-[160px]">
                   {step.description}
                 </p>
-              </li>
+              </motion.li>
             ))}
-          </ol>
+          </motion.ol>
         </div>
       </div>
     </section>

@@ -125,44 +125,80 @@ export function HeroSection() {
             key={`content-${currentSlide}`}
             className="max-w-2xl"
             style={{ y: textY }}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+              },
+              exit: {
+                opacity: 0,
+                y: -20,
+                transition: { duration: 0.4 },
+              },
+            }}
           >
-            <p className="text-sm font-semibold tracking-widest uppercase text-black mb-6">
+            <motion.p 
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+              }}
+              className="text-sm font-semibold tracking-widest uppercase text-black mb-6"
+            >
               {slide.eyebrow}
-            </p>
+            </motion.p>
 
-            <h1 className="font-metropolis text-earth text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] mb-6 tracking-tight">
+            <motion.h1 
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
+              }}
+              className="font-metropolis text-earth text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] mb-6 tracking-tight"
+            >
               {slide.title1} <br />
               {slide.titleHighlight}
               <em className="font-editorial italic font-normal text-earth">
                 {slide.title2}
               </em>
-            </h1>
+            </motion.h1>
 
-            <p className="text-earth text-sm md:text-base leading-relaxed mb-10 max-w-md font-medium">
+            <motion.p 
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+              }}
+              className="text-earth text-sm md:text-base leading-relaxed mb-10 max-w-md font-medium"
+            >
               {slide.description}
-            </p>
+            </motion.p>
 
-            <div>
-              <Link
-                href={slide.linkHref}
-                className="inline-flex items-center gap-3 bg-earth hover:bg-void-black text-canvas 
-                           pr-2 pl-4 py-2 rounded-full font-metropolis font-semibold text-sm tracking-widest uppercase 
-                           transition-all duration-300 shadow-md group focus-visible:outline-solar-gold"
-              >
-                <span>{slide.linkText}</span>
-                <div className="w-8 h-8 rounded-full border border-canvas/40 flex items-center justify-center group-hover:border-canvas/80 transition-colors">
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5"
-                    aria-hidden="true"
-                  />
-                </div>
-              </Link>
-            </div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+              }}
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+                <Link
+                  href={slide.linkHref}
+                  className="inline-flex items-center gap-3 bg-earth hover:bg-void-black text-canvas 
+                             pr-2 pl-4 py-2 rounded-full font-metropolis font-semibold text-sm tracking-widest uppercase 
+                             transition-colors duration-300 shadow-md group focus-visible:outline-solar-gold"
+                >
+                  <span>{slide.linkText}</span>
+                  <div className="w-8 h-8 rounded-full border border-canvas/40 flex items-center justify-center group-hover:border-canvas/80 transition-colors">
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </Link>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
 
