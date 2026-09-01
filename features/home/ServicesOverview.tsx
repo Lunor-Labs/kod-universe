@@ -78,7 +78,7 @@ export function ServicesOverview() {
                                group-hover:text-signal-orange transition-colors duration-200">
                   {cap.title}
                 </h3>
-                <p className="text-secondary text-xs leading-relaxed flex-1">
+                <p className="text-secondary text-sm leading-relaxed flex-1">
                   {cap.description}
                 </p>
 

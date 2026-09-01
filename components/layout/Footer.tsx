@@ -37,7 +37,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
+            <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
               Navigation
             </h3>
             <ul className="space-y-3" role="list">
@@ -56,7 +56,7 @@ export function Footer() {
 
           {/* Contact & social */}
           <div>
-            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
+            <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
               Connect
             </h3>
             <div className="space-y-3 mb-6">
@@ -105,19 +105,19 @@ export function Footer() {
       <div className="border-t border-earth">
         <div className="container-site py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-secondary">
+            <p className="text-sm text-secondary">
               © {new Date().getFullYear()} KOD Universe. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-xs text-secondary hover:text-dust-rose transition-colors"
+                className="text-sm text-secondary hover:text-dust-rose transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-xs text-secondary hover:text-dust-rose transition-colors"
+                className="text-sm text-secondary hover:text-dust-rose transition-colors"
               >
                 Terms of Service
               </Link>

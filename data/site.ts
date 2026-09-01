@@ -7,10 +7,10 @@ export const siteConfig: SiteConfig = {
     "KOD Universe is a creative studio that transforms ideas into modern brands, stories, and experiences that connect, inspire, and leave a lasting mark.",
   url: "https://koduniverse.com",
   nav: [
-    { label: "WORK", href: "/work" },
-    { label: "CAPABILITIES", href: "/capabilities" },
-    { label: "OUR UNIVERSE", href: "/our-universe" },
-    { label: "CONNECT", href: "/connect" },
+    { label: "PORTFOLIO", href: "/work" },
+    { label: "SERVICES", href: "/capabilities" },
+    { label: "OUR STORY", href: "/our-universe" },
+    { label: "CONTACT", href: "/connect" },
   ],
   socialLinks: [
     { platform: "Instagram", href: "https://instagram.com/koduniverse", iconName: "Instagram" },

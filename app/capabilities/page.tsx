@@ -59,7 +59,7 @@ export default function CapabilitiesPage() {
         <div className="container-site relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-xs font-semibold tracking-[0.25em] uppercase text-clay mb-5">
+              <p className="text-sm font-semibold tracking-[0.25em] uppercase text-clay mb-5">
                 Strategy. Design. Story. Impact.
               </p>
               <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-6 leading-tight">
@@ -130,7 +130,7 @@ export default function CapabilitiesPage() {
                     </p>
                     <ul className="space-y-1.5" role="list">
                       {cap.deliverables.slice(0, 4).map((d) => (
-                        <li key={d} className="flex items-start gap-2 text-xs text-secondary">
+                        <li key={d} className="flex items-start gap-2 text-sm text-secondary">
                           <span
                             className="mt-1 w-1 h-1 rounded-full bg-signal-orange flex-shrink-0"
                             aria-hidden="true"
@@ -154,7 +154,7 @@ export default function CapabilitiesPage() {
                           <Link
                             key={p.id}
                             href={`/work/${p.slug}`}
-                            className="text-xs text-earth hover:text-signal-orange transition-colors truncate font-medium flex items-center gap-2 group/link"
+                            className="text-sm text-earth hover:text-signal-orange transition-colors truncate font-medium flex items-center gap-2 group/link"
                           >
                             <span className="w-1 h-1 bg-border-warm rounded-full group-hover/link:bg-signal-orange transition-colors" />
                             {p.title}
@@ -165,7 +165,7 @@ export default function CapabilitiesPage() {
 
                   <Link
                     href="/connect"
-                    className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold 
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold 
                                tracking-[0.1em] uppercase text-earth hover:text-signal-orange 
                                transition-colors duration-200 group"
                     aria-label={`Start a ${cap.title} project`}
@@ -216,7 +216,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-metropolis font-semibold text-earth text-sm tracking-wide uppercase mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-secondary text-xs leading-relaxed max-w-[160px]">
+                    <p className="text-secondary text-sm leading-relaxed max-w-[160px]">
                       {step.description}
                     </p>
                   </li>

@@ -101,7 +101,7 @@ export default function ConnectPage() {
                     <MapPin size={13} className="text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <p className="text-sm text-earth">{siteConfig.contact.location}</p>
-                      <p className="text-xs text-secondary">{siteConfig.contact.locationDetail}</p>
+                      <p className="text-sm text-secondary">{siteConfig.contact.locationDetail}</p>
                     </div>
                   </li>
                 </ul>
@@ -153,12 +153,12 @@ export default function ConnectPage() {
                     Collaborations welcome
                   </p>
                 </div>
-                <p className="text-secondary text-xs leading-relaxed mb-4">
+                <p className="text-secondary text-sm leading-relaxed mb-4">
                   We partner with visionary brands, founders, and organizations to craft work that inspires, connects, and lasts.
                 </p>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-xs font-semibold text-signal-orange hover:text-deep-crimson transition-colors"
+                  className="text-sm font-semibold text-signal-orange hover:text-deep-crimson transition-colors"
                 >
                   Let&apos;s build something great together.
                 </a>
@@ -185,7 +185,7 @@ export default function ConnectPage() {
                     <h3 className="font-metropolis font-semibold text-earth text-sm mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-secondary text-xs leading-relaxed">{service.description}</p>
+                    <p className="text-secondary text-sm leading-relaxed">{service.description}</p>
                   </div>
                 ))}
               </div>
@@ -200,8 +200,8 @@ export default function ConnectPage() {
                 <p className="font-metropolis font-semibold text-earth text-sm mb-1">
                   {siteConfig.name}
                 </p>
-                <p className="text-secondary text-xs">{siteConfig.contact.location}</p>
-                <p className="text-secondary text-xs">United States</p>
+                <p className="text-secondary text-sm">{siteConfig.contact.location}</p>
+                <p className="text-secondary text-sm">United States</p>
               </div>
               <div className="mt-6 relative aspect-video rounded-sm overflow-hidden">
                 <Image
@@ -216,7 +216,7 @@ export default function ConnectPage() {
                   style={{ background: "linear-gradient(to top, rgba(58,47,45,0.8), transparent)" }}
                   aria-hidden="true"
                 />
-                <p className="absolute bottom-3 left-3 text-canvas text-xs font-medium">
+                <p className="absolute bottom-3 left-3 text-canvas text-sm font-medium">
                   San Francisco, CA
                 </p>
               </div>

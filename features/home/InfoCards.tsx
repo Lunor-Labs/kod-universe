@@ -31,7 +31,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
             <h3 className="font-metropolis font-semibold text-earth text-xl mb-3 leading-snug">
               Rooted in curiosity. Driven by purpose.
             </h3>
-            <p className="text-secondary text-xs leading-relaxed mb-6">
+            <p className="text-secondary text-sm leading-relaxed mb-6">
               Discover our journey, values, and the philosophy that guides everything we create.
             </p>
             <div
@@ -63,7 +63,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
               {processCards.map((step) => (
                 <div key={step.label}>
                   <p className="eyebrow text-[9px] mb-1">{step.label}</p>
-                  <p className="text-earth text-xs font-medium leading-snug">{step.title}</p>
+                  <p className="text-earth text-sm font-medium leading-snug">{step.title}</p>
                 </div>
               ))}
             </div>
@@ -123,7 +123,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
               <h3 className="font-metropolis font-semibold text-earth text-xl mb-3 leading-snug">
                 Have a project in mind?
               </h3>
-              <p className="text-secondary text-xs leading-relaxed">
+              <p className="text-secondary text-sm leading-relaxed">
                 We&apos;d love to hear about your goals and explore how we can create something extraordinary together.
               </p>
             </div>

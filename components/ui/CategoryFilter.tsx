@@ -24,7 +24,7 @@ export function CategoryFilter({ categories, active, onChange }: CategoryFilterP
             onClick={() => onChange(cat)}
             aria-pressed={isActive}
             className={cn(
-              "px-4 py-2 rounded-sm text-xs font-semibold tracking-[0.12em] uppercase",
+              "px-4 py-2 rounded-sm text-sm font-semibold tracking-[0.12em] uppercase",
               "transition-all duration-200 focus-visible:outline-solar-gold",
               isActive
                 ? "bg-earth text-canvas"

@@ -110,7 +110,7 @@ export function ContactForm() {
             setStatus("idle");
             setForm({ name: "", email: "", service: "", message: "" });
           }}
-          className="mt-8 text-xs font-semibold tracking-[0.12em] uppercase text-signal-orange 
+          className="mt-8 text-sm font-semibold tracking-[0.12em] uppercase text-signal-orange 
                      hover:text-deep-crimson transition-colors"
         >
           Send another message
@@ -153,7 +153,7 @@ export function ContactForm() {
                        }`}
           />
           {errors.name && (
-            <p id="error-name" role="alert" className="mt-1.5 text-xs text-clay">
+            <p id="error-name" role="alert" className="mt-1.5 text-sm text-clay">
               {errors.name}
             </p>
           )}
@@ -184,7 +184,7 @@ export function ContactForm() {
                        }`}
           />
           {errors.email && (
-            <p id="error-email" role="alert" className="mt-1.5 text-xs text-clay">
+            <p id="error-email" role="alert" className="mt-1.5 text-sm text-clay">
               {errors.email}
             </p>
           )}
@@ -242,7 +242,7 @@ export function ContactForm() {
                      }`}
         />
         {errors.message && (
-          <p id="error-message" role="alert" className="mt-1.5 text-xs text-clay">
+          <p id="error-message" role="alert" className="mt-1.5 text-sm text-clay">
             {errors.message}
           </p>
         )}
@@ -286,7 +286,7 @@ export function ContactForm() {
         </button>
 
         {status === "error" && (
-          <p role="alert" className="mt-3 text-xs text-clay">
+          <p role="alert" className="mt-3 text-sm text-clay">
             Something went wrong. Please try again or email us directly at hello@koduniverse.com
           </p>
         )}
@@ -295,7 +295,7 @@ export function ContactForm() {
       {/* Privacy */}
       <div className="flex items-center gap-2 pt-1">
         <Lock size={12} className="text-secondary flex-shrink-0" aria-hidden="true" />
-        <p className="text-xs text-secondary">
+        <p className="text-sm text-secondary">
           We respect your privacy. Your information will never be shared.
         </p>
       </div>

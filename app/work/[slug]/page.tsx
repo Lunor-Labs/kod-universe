@@ -48,7 +48,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="container-site relative z-10 pb-12 md:pb-16">
           <Link
             href="/work"
-            className="inline-flex items-center gap-1.5 text-dust-rose/70 text-xs font-medium 
+            className="inline-flex items-center gap-1.5 text-dust-rose/70 text-sm font-medium 
                        tracking-wide hover:text-dust-rose transition-colors mb-8"
             aria-label="Back to all projects"
           >
@@ -57,7 +57,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
             <div>
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-clay mb-3">
+              <p className="text-sm font-semibold tracking-[0.2em] uppercase text-clay mb-3">
                 {project.category}
               </p>
               <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-4 leading-tight">
@@ -153,7 +153,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-border-warm">
-                  <p className="text-xs font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
+                  <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
                     Tags
                   </p>
                   <div className="flex flex-wrap gap-2">

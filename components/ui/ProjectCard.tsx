@@ -58,10 +58,10 @@ export function ProjectCard({
                        group-hover:text-signal-orange transition-colors duration-200">
           {project.title}
         </h3>
-        <p className="text-xs text-secondary line-clamp-2 leading-relaxed">
+        <p className="text-sm text-secondary line-clamp-2 leading-relaxed">
           {project.shortDescription}
         </p>
-        <div className="mt-3 flex items-center gap-1 text-xs text-secondary">
+        <div className="mt-3 flex items-center gap-1 text-sm text-secondary">
           <span>{project.client}</span>
           <span>·</span>
           <span>{project.year}</span>

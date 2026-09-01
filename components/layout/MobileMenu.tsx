@@ -14,7 +14,6 @@ interface MobileMenuProps {
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Close on Escape
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isOpen) {
@@ -26,11 +25,10 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [isOpen, onClose, triggerRef]);
 
-  // Trap focus when open
   useEffect(() => {
     if (isOpen) {
       const firstFocusable = menuRef.current?.querySelector<HTMLElement>(
-        "a, button, [tabindex]"
+        "a, button, [tabindex]",
       );
       firstFocusable?.focus();
     }
@@ -38,36 +36,37 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         aria-hidden="true"
         onClick={onClose}
         className={`fixed inset-0 bg-void-black/40 z-40 transition-opacity duration-300 md:hidden ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       />
 
-      {/* Drawer */}
       <div
         id="mobile-menu"
         ref={menuRef}
         role="dialog"
         aria-label="Navigation menu"
         aria-modal="true"
-        className={`fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-canvas z-50 flex flex-col 
+        className={`fixed top-0 right-0 bottom-0 w-[100vw] max-w-sm bg-canvas z-50 flex flex-col 
                     transition-transform duration-400 ease-out md:hidden ${
                       isOpen ? "translate-x-0" : "translate-x-full"
                     }`}
       >
-        {/* Top bar */}
-        <div className="flex items-center justify-between px-6 h-16 border-b border-border-warm">
+        <div className="flex items-center justify-between px-6 h-16">
           <Link href="/" onClick={onClose} aria-label="KOD Universe — Home">
-            <KodLogo className="h-9 w-auto text-earth" />
+            <KodLogo className="h-12 w-auto text-earth" />
           </Link>
         </div>
 
-        {/* Nav links */}
-        <nav aria-label="Mobile navigation" className="flex-1 px-6 py-8 flex flex-col">
+        <nav
+          aria-label="Mobile navigation"
+          className="flex-1 px-6 py-8 flex flex-col"
+        >
           <ul className="space-y-1" role="list">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
@@ -84,7 +83,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             ))}
           </ul>
 
-          {/* CTA */}
           <div className="mt-8">
             <Link
               href="/connect"
@@ -96,7 +94,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           </div>
         </nav>
 
-        {/* Bottom tagline */}
         <div className="px-6 py-6 border-t border-border-warm">
           <p className="font-serif italic text-secondary text-sm">
             Ancient ideas. Modern impact.

@@ -48,7 +48,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
               active={activeCategory}
               onChange={setActiveCategory}
             />
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.1em] uppercase text-earth">
+            <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.1em] uppercase text-earth">
               <label htmlFor="sort-work">Sort by:</label>
               <select 
                 id="sort-work"
@@ -85,7 +85,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                 <h2 className="font-metropolis font-semibold text-earth text-display-sm mb-2">
                   {featuredProject.title}
                 </h2>
-                <p className="text-signal-orange text-xs font-semibold tracking-[0.12em] uppercase mb-4">
+                <p className="text-signal-orange text-sm font-semibold tracking-[0.12em] uppercase mb-4">
                   {featuredProject.category}
                 </p>
                 <p className="text-secondary text-sm leading-relaxed mb-6 max-w-xs">
@@ -94,7 +94,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                 <Link
                   href={`/work/${featuredProject.slug}`}
                   className="inline-flex items-center gap-2 border border-earth text-earth 
-                             px-5 py-2 rounded-sm text-xs font-semibold tracking-[0.12em] uppercase
+                             px-5 py-2 rounded-sm text-sm font-semibold tracking-[0.12em] uppercase
                              hover:bg-earth hover:text-canvas transition-all duration-200 group w-fit"
                 >
                   View case study

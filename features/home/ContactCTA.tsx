@@ -21,7 +21,7 @@ export function ContactCTA() {
 
       <div className="container-site relative z-10">
         <div className="max-w-xl">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-clay mb-6">
+          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-clay mb-6">
             Ready to create impact?
           </p>
           <h2 className="font-metropolis font-semibold text-canvas text-display-xl mb-8 leading-tight text-balance">
