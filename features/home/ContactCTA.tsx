@@ -1,48 +1,57 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function ContactCTA() {
   return (
-    <section
-      className="section-padding bg-earth relative overflow-hidden texture-cave"
-      aria-label="Contact call to action"
-    >
-      {/* Decorative rings */}
-      <div
-        className="absolute right-16 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full 
-                   border border-dust-rose/20 hidden lg:block"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute right-24 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full 
-                   border border-dust-rose/15 hidden lg:block"
-        aria-hidden="true"
-      />
-
-      <div className="container-site relative z-10">
-        <div className="max-w-xl">
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-clay mb-6">
-            Ready to create impact?
-          </p>
-          <h2 className="font-metropolis font-semibold text-canvas text-display-xl mb-8 leading-tight text-balance">
-            Let&apos;s build something{" "}
-            <br className="hidden sm:block" />
-            extraordinary{" "}
-            <em className="font-serif italic font-normal text-dust-rose">together.</em>
-          </h2>
-          <Link
-            href="/connect"
-            className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                       px-7 py-3.5 rounded-sm font-metropolis font-medium text-sm tracking-wide 
-                       transition-all duration-200 hover:bg-deep-crimson group focus-visible:outline-solar-gold"
+    <section className="py-8 bg-white" aria-label="Contact call to action">
+      <div className="container-site">
+        <div className="relative bg-canvas border border-border-warm rounded-sm overflow-hidden shadow-sm h-auto md:h-56">
+          <div
+            className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] pointer-events-none mix-blend-multiply opacity-50"
+            style={{
+              maskImage: "linear-gradient(to left, black 30%, transparent)",
+              WebkitMaskImage:
+                "linear-gradient(to left, black 30%, transparent)",
+            }}
           >
-            Start a project
-            <ArrowRight
-              size={15}
-              className="transition-transform duration-200 group-hover:translate-x-1"
-              aria-hidden="true"
+            <Image
+              src="/project-cosmic.jpg"
+              alt=""
+              fill
+              className="object-cover object-right"
             />
-          </Link>
+          </div>
+
+          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-start gap-12 md:gap-24 p-8 md:p-0 h-full">
+            <h2 className="font-editorial text-4xl md:text-5xl text-earth leading-tight flex-shrink-0 md:pl-16">
+              Let's Create
+              <br />
+              What's Next.
+            </h2>
+            <div className="flex flex-col gap-6 max-w-sm">
+              <p className="text-secondary leading-relaxed">
+                Whether you have a spark or need help finding one,
+                <br className="hidden md:block" />
+                we're here to turn ideas into impact.
+              </p>
+
+              <Link
+                href="/connect"
+                className="inline-flex items-center justify-center gap-3 bg-signal-orange text-white 
+                           px-6 py-3 rounded-full font-semibold tracking-wider uppercase
+                           hover:bg-deep-crimson transition-all duration-200 group self-start"
+              >
+                START A CONVERSATION
+                <div className="w-7 h-7 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                  <ArrowRight
+                    size={14}
+                    className="group-hover:translate-x-0.5 transition-transform"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
