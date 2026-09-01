@@ -91,14 +91,14 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div
-        className="bg-white border border-border-warm rounded-sm p-10 flex flex-col items-center text-center"
+        className="flex flex-col items-center text-center py-12"
         role="status"
         aria-live="polite"
       >
         <div className="w-14 h-14 rounded-full bg-canvas border border-border-warm flex items-center justify-center mb-6">
           <CheckCircle size={26} className="text-signal-orange" aria-hidden="true" />
         </div>
-        <h3 className="font-metropolis font-semibold text-earth text-xl mb-3">
+        <h3 className="font-editorial italic text-earth text-3xl mb-3">
           Message received.
         </h3>
         <p className="text-secondary text-sm leading-relaxed max-w-xs">
@@ -111,7 +111,7 @@ export function ContactForm() {
             setForm({ name: "", email: "", service: "", message: "" });
           }}
           className="mt-8 text-sm font-semibold tracking-[0.12em] uppercase text-signal-orange 
-                     hover:text-deep-crimson transition-colors"
+                     hover:text-earth transition-colors"
         >
           Send another message
         </button>
@@ -119,11 +119,13 @@ export function ContactForm() {
     );
   }
 
+  const inputStyles = "w-full px-4 py-3 bg-transparent border rounded-md text-sm text-earth placeholder-secondary/50 focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 transition-colors duration-200";
+
   return (
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="bg-white border border-border-warm rounded-sm p-7 space-y-6"
+      className="space-y-6"
       aria-label="Project enquiry form"
     >
       {/* Name + Email */}
@@ -131,9 +133,9 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="field-name"
-            className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-2"
+            className="block eyebrow mb-2"
           >
-            Your name <span aria-hidden="true">*</span>
+            YOUR NAME
           </label>
           <input
             id="field-name"
@@ -146,14 +148,12 @@ export function ContactForm() {
             aria-required="true"
             aria-describedby={errors.name ? "error-name" : undefined}
             aria-invalid={!!errors.name}
-            className={`w-full px-4 py-3 bg-canvas border rounded-sm text-sm text-earth placeholder-secondary/60 
-                       focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 
-                       transition-colors duration-200 ${
-                         errors.name ? "border-clay" : "border-border-warm"
-                       }`}
+            className={`${inputStyles} ${
+              errors.name ? "border-red-400" : "border-border-warm/70"
+            }`}
           />
           {errors.name && (
-            <p id="error-name" role="alert" className="mt-1.5 text-sm text-clay">
+            <p id="error-name" role="alert" className="mt-1.5 text-sm text-red-500">
               {errors.name}
             </p>
           )}
@@ -162,9 +162,9 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="field-email"
-            className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-2"
+            className="block eyebrow mb-2"
           >
-            Your email <span aria-hidden="true">*</span>
+            YOUR EMAIL
           </label>
           <input
             id="field-email"
@@ -177,14 +177,12 @@ export function ContactForm() {
             aria-required="true"
             aria-describedby={errors.email ? "error-email" : undefined}
             aria-invalid={!!errors.email}
-            className={`w-full px-4 py-3 bg-canvas border rounded-sm text-sm text-earth placeholder-secondary/60 
-                       focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 
-                       transition-colors duration-200 ${
-                         errors.email ? "border-clay" : "border-border-warm"
-                       }`}
+            className={`${inputStyles} ${
+              errors.email ? "border-red-400" : "border-border-warm/70"
+            }`}
           />
           {errors.email && (
-            <p id="error-email" role="alert" className="mt-1.5 text-sm text-clay">
+            <p id="error-email" role="alert" className="mt-1.5 text-sm text-red-500">
               {errors.email}
             </p>
           )}
@@ -195,68 +193,71 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="field-service"
-          className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-2"
+          className="block eyebrow mb-2"
         >
-          Service you&apos;re interested in
+          SERVICE YOU'RE INTERESTED IN
         </label>
-        <select
-          id="field-service"
-          name="service"
-          value={form.service}
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-canvas border border-border-warm rounded-sm text-sm text-earth 
-                     focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 
-                     transition-colors duration-200 appearance-none cursor-pointer"
-        >
-          <option value="">Select a service</option>
-          {SERVICE_OPTIONS.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <select
+            id="field-service"
+            name="service"
+            value={form.service}
+            onChange={handleChange}
+            className={`${inputStyles} border-border-warm/70 appearance-none cursor-pointer pr-10`}
+          >
+            <option value="">Select a service</option>
+            {SERVICE_OPTIONS.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+          <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-secondary">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Message */}
       <div>
         <label
           htmlFor="field-message"
-          className="block text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-2"
+          className="block eyebrow mb-2"
         >
-          Tell us about your project <span aria-hidden="true">*</span>
+          TELL US ABOUT YOUR PROJECT
         </label>
         <textarea
           id="field-message"
           name="message"
-          rows={5}
+          rows={4}
           value={form.message}
           onChange={handleChange}
           placeholder="Share your goals, ideas, timeline, and any details that will help us understand your project better..."
           aria-required="true"
           aria-describedby={errors.message ? "error-message" : undefined}
           aria-invalid={!!errors.message}
-          className={`w-full px-4 py-3 bg-canvas border rounded-sm text-sm text-earth placeholder-secondary/60 
-                     resize-none focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 
-                     transition-colors duration-200 ${
-                       errors.message ? "border-clay" : "border-border-warm"
-                     }`}
+          className={`${inputStyles} resize-none ${
+            errors.message ? "border-red-400" : "border-border-warm/70"
+          }`}
         />
         {errors.message && (
-          <p id="error-message" role="alert" className="mt-1.5 text-sm text-clay">
+          <p id="error-message" role="alert" className="mt-1.5 text-sm text-red-500">
             {errors.message}
           </p>
         )}
       </div>
 
-      {/* Submit */}
-      <div>
+      {/* Submit & Privacy */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                     px-7 py-3.5 rounded-sm font-medium text-sm tracking-wide
+          className="inline-flex items-center justify-center gap-3 bg-signal-orange text-white 
+                     px-6 py-3 rounded-full font-semibold text-sm tracking-wider
                      hover:bg-deep-crimson transition-all duration-200 group
-                     disabled:opacity-70 disabled:pointer-events-none focus-visible:outline-solar-gold"
+                     disabled:opacity-70 disabled:pointer-events-none w-full sm:w-auto"
           aria-busy={status === "loading"}
         >
           {status === "loading" ? (
@@ -266,38 +267,28 @@ export function ContactForm() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Sending...
+              SENDING...
             </>
           ) : (
             <>
-              Send message
-              <ArrowRight
-                size={14}
-                className="group-hover:translate-x-1 transition-transform"
-                aria-hidden="true"
-              />
+              SEND MESSAGE
+              <div className="w-5 h-5 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+              </div>
             </>
           )}
         </button>
 
-        {status === "error" && (
-          <p role="alert" className="mt-3 text-sm text-clay">
-            Something went wrong. Please try again or email us directly at hello@koduniverse.com
+        <div className="flex items-center justify-center sm:justify-end gap-2 text-secondary">
+          <Lock size={14} className="opacity-60" />
+          <p className="text-sm">
+            We respect your privacy. Your information will never be shared.
           </p>
-        )}
-      </div>
-
-      {/* Privacy */}
-      <div className="flex items-center gap-2 pt-1">
-        <Lock size={12} className="text-secondary flex-shrink-0" aria-hidden="true" />
-        <p className="text-sm text-secondary">
-          We respect your privacy. Your information will never be shared.
-        </p>
+        </div>
       </div>
     </form>
   );

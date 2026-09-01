@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ExternalLink, Globe } from "lucide-react";
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Globe,
+  Target,
+  Package,
+  Zap,
+  BarChart,
+  Link2,
+  Sun,
+  ArrowRight,
+} from "lucide-react";
 import { ContactForm } from "@/features/contact/ContactForm";
 import { siteConfig, services } from "@/data/site";
 
@@ -16,111 +28,113 @@ export const metadata: Metadata = {
 const contactIcons: Record<string, React.ElementType> = {
   Instagram: ExternalLink,
   Linkedin: ExternalLink,
-  ExternalLink,
   Twitter: ExternalLink,
+  ExternalLink,
 };
+
+const serviceIcons = [Target, Package, Zap, BarChart];
 
 export default function ConnectPage() {
   return (
-    <>
-      {/* Page hero */}
-      <section
-        className="relative overflow-hidden bg-canvas texture-cave pt-28 md:pt-36 pb-20 md:pb-28"
-        aria-label="Connect page hero"
+    <div className="relative min-h-screen bg-canvas overflow-hidden pt-32 pb-24 text-earth">
+      <div
+        className="absolute left-0 top-0 bottom-0 w-[50%] pointer-events-none mix-blend-multiply opacity-30"
+        style={{
+          maskImage: "linear-gradient(to right, black 20%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, black 20%, transparent)",
+        }}
       >
-        {/* Subtle cave texture background */}
-        <div className="absolute inset-0 opacity-[0.07]" aria-hidden="true">
-          <Image src="/hero.jpg" alt="" fill className="object-cover" priority />
-        </div>
-
-        {/* Decorative handprints - left side */}
-        <div
-          className="absolute left-0 top-1/4 w-64 h-64 opacity-[0.06] pointer-events-none"
-          aria-hidden="true"
-          style={{
-            backgroundImage: "url('/project-origins.jpg')",
-            backgroundSize: "cover",
-          }}
+        <Image
+          src="/project-origins.jpg"
+          alt=""
+          fill
+          className="object-cover object-left"
         />
+      </div>
+      <div
+        className="absolute right-0 top-0 bottom-0 w-[50%] pointer-events-none mix-blend-multiply opacity-25"
+        style={{
+          maskImage: "linear-gradient(to left, black 20%, transparent)",
+          WebkitMaskImage: "linear-gradient(to left, black 20%, transparent)",
+        }}
+      >
+        <Image
+          src="/project-cosmic.jpg"
+          alt=""
+          fill
+          className="object-cover object-right"
+        />
+      </div>
 
-        <div className="container-site relative z-10 text-center">
-          <p className="eyebrow mb-5">We&apos;d love to hear from you.</p>
-          <h1 className="font-metropolis font-semibold text-earth text-display-2xl mb-6 leading-tight text-balance">
-            Let&apos;s Create Something{" "}
-            <em className="font-serif italic font-normal text-secondary">Extraordinary.</em>
+      <div className="container-site relative z-10">
+        <div className="text-center mb-14 mt-8">
+          <p className="eyebrow mb-6">WE'D LOVE TO HEAR FROM YOU.</p>
+          <h1 className="font-editorial text-5xl md:text-6xl text-earth mb-6 leading-[1.1]">
+            Let's Create
+            <br />
+            Something <em className="italic font-normal">Extraordinary.</em>
           </h1>
-          <p className="text-secondary text-base leading-relaxed max-w-md mx-auto mb-3">
-            Whether you have a bold idea, a complex challenge, or just want to explore possibilities — our team is here to help.
-          </p>
-          <p className="font-semibold text-earth text-sm">
-            We turn ideas into meaningful impact.
+          <p className="text-secondary text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+            Whether you have a bold idea, a complex challenge,
+            <br className="hidden md:block" />
+            or just want to explore possibilities—our team is here to help.
+            <br />
+            <strong className="font-bold text-earth block mt-3">
+              We turn ideas into meaningful impact.
+            </strong>
           </p>
         </div>
-      </section>
-
-      {/* Contact grid */}
-      <section className="section-padding border-t border-border-warm" aria-label="Contact details and form">
-        <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-            {/* Left: Contact info */}
-            <aside className="lg:col-span-1 space-y-8" aria-label="Contact information">
-              {/* Contact details */}
-              <div className="bg-canvas border border-border-warm rounded-sm p-6">
-                <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className="w-8 h-8 rounded-sm border border-border-warm flex items-center justify-center text-signal-orange"
-                    aria-hidden="true"
-                  >
+        <div className="bg-white/80 backdrop-blur-md border border-border-warm rounded-2xl shadow-sm overflow-hidden mb-12 max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
+            <div className="lg:col-span-4 p-2 md:p-6 border-b lg:border-b-0 lg:border-r border-border-warm flex flex-col justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-8 h-8 rounded-full bg-signal-orange text-white flex items-center justify-center">
                     <MapPin size={14} />
                   </div>
-                  <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-secondary">
-                    Contact information
-                  </p>
+                  <h2 className="eyebrow mb-0">CONTACT INFORMATION</h2>
                 </div>
-
-                <ul className="space-y-4" role="list">
+                <ul className="space-y-4 text-sm text-secondary pl-11">
                   <li className="flex items-center gap-3">
-                    <Mail size={13} className="text-secondary flex-shrink-0" aria-hidden="true" />
+                    <Mail size={16} className="text-secondary/60" />
                     <a
                       href={`mailto:${siteConfig.contact.email}`}
-                      className="text-sm text-earth hover:text-signal-orange transition-colors"
+                      className="hover:text-signal-orange transition-colors"
                     >
                       {siteConfig.contact.email}
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
-                    <Phone size={13} className="text-secondary flex-shrink-0" aria-hidden="true" />
+                    <Phone size={16} className="text-secondary/60" />
                     <a
                       href={`tel:${siteConfig.contact.phone.replace(/\D/g, "")}`}
-                      className="text-sm text-earth hover:text-signal-orange transition-colors"
+                      className="hover:text-signal-orange transition-colors"
                     >
                       {siteConfig.contact.phone}
                     </a>
                   </li>
                   <li className="flex items-start gap-3">
-                    <MapPin size={13} className="text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                    <MapPin size={16} className="mt-0.5 text-secondary/60" />
                     <div>
-                      <p className="text-sm text-earth">{siteConfig.contact.location}</p>
-                      <p className="text-sm text-secondary">{siteConfig.contact.locationDetail}</p>
+                      <p>{siteConfig.contact.location}</p>
+                      <p className="mt-0.5 opacity-80">
+                        {siteConfig.contact.locationDetail}
+                      </p>
                     </div>
                   </li>
                 </ul>
               </div>
 
-              {/* Social links */}
-              <div className="bg-canvas border border-border-warm rounded-sm p-6">
-                <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className="w-8 h-8 rounded-sm border border-border-warm flex items-center justify-center text-signal-orange"
-                    aria-hidden="true"
-                  >
-                    <Globe size={14} />
+              <div className="h-px bg-border-warm w-full" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-8 h-8 rounded-full bg-signal-orange text-white flex items-center justify-center">
+                    <Link2 size={14} />
                   </div>
-                  <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-secondary">
-                    Let&apos;s connect
-                  </p>
+                  <h2 className="eyebrow mb-0">LET'S CONNECT</h2>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 pl-11">
                   {siteConfig.socialLinks.map((link) => {
                     const Icon = contactIcons[link.iconName] ?? ExternalLink;
                     return (
@@ -130,100 +144,102 @@ export default function ConnectPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${siteConfig.name} on ${link.platform}`}
-                        className="w-10 h-10 rounded-sm border border-border-warm flex items-center justify-center 
-                                   text-earth hover:border-signal-orange hover:text-signal-orange transition-colors duration-200"
+                        className="w-10 h-10 rounded-full border border-border-warm flex items-center justify-center text-earth hover:border-signal-orange hover:text-signal-orange transition-colors bg-white/50"
                       >
-                        <Icon size={15} aria-hidden="true" />
+                        <Icon size={14} aria-hidden="true" />
                       </a>
                     );
                   })}
                 </div>
               </div>
 
-              {/* Collaborations */}
-              <div className="bg-canvas border border-border-warm rounded-sm p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-8 h-8 rounded-sm border border-border-warm flex items-center justify-center text-signal-orange"
-                    aria-hidden="true"
-                  >
-                    <Mail size={14} />
-                  </div>
-                  <p className="text-[10px] font-semibold tracking-[0.2em] uppercase text-secondary">
-                    Collaborations welcome
-                  </p>
-                </div>
-                <p className="text-secondary text-sm leading-relaxed mb-4">
-                  We partner with visionary brands, founders, and organizations to craft work that inspires, connects, and lasts.
-                </p>
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="text-sm font-semibold text-signal-orange hover:text-deep-crimson transition-colors"
-                >
-                  Let&apos;s build something great together.
-                </a>
-              </div>
-            </aside>
+              <div className="h-px bg-border-warm w-full" />
 
-            {/* Right: Form */}
-            <div className="lg:col-span-2">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full bg-signal-orange text-white flex items-center justify-center">
+                    <Sun size={14} />
+                  </div>
+                  <h2 className="eyebrow mb-0">COLLABORATIONS WELCOME</h2>
+                </div>
+                <div className="pl-11">
+                  <p className="text-secondary text-sm leading-relaxed mb-3">
+                    We partner with visionary brands, founders, and
+                    organizations to craft work that inspires, connects, and
+                    lasts.
+                  </p>
+                  <a
+                    href={`mailto:${siteConfig.contact.email}`}
+                    className="text-sm font-semibold text-signal-orange hover:text-earth transition-colors"
+                  >
+                    Let's build something great together.
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-8 p-8 md:p-10 lg:p-12">
               <ContactForm />
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Services summary */}
-      <section className="section-padding-sm border-t border-border-warm bg-white" aria-label="How we can help">
-        <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div className="lg:col-span-2">
-              <SectionLabel className="mb-6">How we can help</SectionLabel>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {services.slice(0, 4).map((service) => (
-                  <div key={service.title}>
-                    <h3 className="font-metropolis font-semibold text-earth text-sm mb-2">
+        <div className="bg-white/80 backdrop-blur-md border border-border-warm rounded-2xl shadow-sm p-8 mx-auto mb-10">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px bg-border-warm w-16" />
+            <p className="eyebrow mb-0">HOW WE CAN HELP</p>
+            <div className="h-px bg-border-warm w-16" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {services.slice(0, 4).map((service, idx) => {
+                const Icon = serviceIcons[idx];
+                return (
+                  <div
+                    key={service.title}
+                    className="flex flex-col items-center text-center"
+                  >
+                    <div className="w-12 h-12 rounded-full border border-border-warm flex items-center justify-center mb-3 bg-white/50 text-signal-orange">
+                      <Icon size={18} strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-metropolis font-bold text-sm uppercase tracking-wider text-earth mb-2 line-clamp-1">
                       {service.title}
                     </h3>
-                    <p className="text-secondary text-sm leading-relaxed">{service.description}</p>
+                    <p className="text-secondary text-sm leading-relaxed line-clamp-3">
+                      {service.description}
+                    </p>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
 
-            {/* Office card */}
-            <div className="border border-border-warm rounded-sm p-6 flex flex-col justify-between">
+            <div className="hidden md:block md:col-span-1 border-l border-dashed border-border-warm h-24 mx-auto" />
+
+            <div className="md:col-span-4 flex items-center justify-between">
               <div>
-                <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-4">
-                  Office details
-                </p>
-                <p className="font-metropolis font-semibold text-earth text-sm mb-1">
+                <p className="eyebrow mb-3">OFFICE DETAILS</p>
+                <p className="text-sm text-secondary leading-relaxed mb-3">
                   {siteConfig.name}
+                  <br />
+                  {siteConfig.contact.location}
+                  <br />
+                  United States
                 </p>
-                <p className="text-secondary text-sm">{siteConfig.contact.location}</p>
-                <p className="text-secondary text-sm">United States</p>
-              </div>
-              <div className="mt-6 relative aspect-video rounded-sm overflow-hidden">
-                <Image
-                  src="/project-cosmic.jpg"
-                  alt="Global creative studio location"
-                  fill
-                  className="object-cover opacity-60"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: "linear-gradient(to top, rgba(58,47,45,0.8), transparent)" }}
-                  aria-hidden="true"
-                />
-                <p className="absolute bottom-3 left-3 text-canvas text-sm font-medium">
-                  San Francisco, CA
-                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-signal-orange hover:text-earth transition-colors"
+                >
+                  View on Map
+                  <div className="w-5 h-5 rounded-full border border-signal-orange flex items-center justify-center">
+                    <ArrowRight size={12} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
