@@ -1,0 +1,23 @@
+import type { MetadataRoute } from "next";
+import { projects } from "@/data/projects";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://koduniverse.com";
+
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/work`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/capabilities`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/our-universe`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/connect`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+  ];
+
+  const projectPages: MetadataRoute.Sitemap = projects.map((p) => ({
+    url: `${baseUrl}/work/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...projectPages];
+}

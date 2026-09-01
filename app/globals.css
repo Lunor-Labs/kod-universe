@@ -1,26 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import "@fontsource/metropolis/300.css";
+@import "@fontsource/metropolis/400.css";
+@import "@fontsource/metropolis/500.css";
+@import "@fontsource/metropolis/600.css";
+@import "@fontsource/metropolis/700.css";
+
+/* ── Tailwind v4 entry point ───────────────────── */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Custom design tokens ─────────────────────── */
+@theme {
+  /* Colors */
+  --color-void-black: #161616;
+  --color-dust-rose: #C9BABA;
+  --color-mist: #EDEAEA;
+  --color-canvas: #F7F3F1;
+  --color-solar-gold: #EAC240;
+  --color-clay: #DB705E;
+  --color-signal-orange: #E54C2A;
+  --color-deep-crimson: #7E041D;
+  --color-earth: #3A2F2D;
+  --color-secondary: #6B625F;
+  --color-border-warm: #DDD5D2;
+
+  /* Fonts */
+  --font-family-metropolis: "Metropolis", "Inter", sans-serif;
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-serif: "Cormorant Garamond", Georgia, serif;
+
+  /* Max widths */
+  --width-site: 1280px;
+
+  /* Border radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Spacing extras */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Font sizes — clamp-based */
+  --font-size-display-2xl: clamp(3rem, 6vw, 6rem);
+  --font-size-display-xl: clamp(2.5rem, 4.5vw, 4.5rem);
+  --font-size-display-lg: clamp(2rem, 3.5vw, 3.5rem);
+  --font-size-display-md: clamp(1.75rem, 2.5vw, 2.5rem);
+  --font-size-display-sm: clamp(1.5rem, 2vw, 2rem);
+
+  /* Animations */
+  --animate-fade-up: fadeUp 0.6s ease-out forwards;
+  --animate-fade-in: fadeIn 0.4s ease-out forwards;
+
+  --keyframes-fadeUp: {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  };
+  --keyframes-fadeIn: {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  };
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Global base styles ───────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-metropolis);
+  background-color: var(--color-canvas);
+  color: var(--color-void-black);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-solar-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-metropolis);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background-color: var(--color-signal-orange);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-canvas); }
+::-webkit-scrollbar-thumb { background: var(--color-border-warm); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-dust-rose); }
+
+/* ── Layout helpers ───────────────────────────── */
+.container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .container-site { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .container-site { padding-left: 2rem; padding-right: 2rem; }
+}
+
+.section-padding { padding-top: 4rem; padding-bottom: 4rem; }
+@media (min-width: 768px) {
+  .section-padding { padding-top: 6rem; padding-bottom: 6rem; }
+}
+@media (min-width: 1024px) {
+  .section-padding { padding-top: 8rem; padding-bottom: 8rem; }
+}
+
+.section-padding-sm { padding-top: 3rem; padding-bottom: 3rem; }
+@media (min-width: 768px) {
+  .section-padding-sm { padding-top: 4rem; padding-bottom: 4rem; }
+}
+@media (min-width: 1024px) {
+  .section-padding-sm { padding-top: 5rem; padding-bottom: 5rem; }
+}
+
+/* ── Typography helpers ───────────────────────── */
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-signal-orange);
+}
+
+.divider-warm {
+  border-top: 1px solid var(--color-border-warm);
+}
+
+.text-balance { text-wrap: balance; }
+
+/* ── Display sizes ────────────────────────────── */
+.text-display-2xl {
+  font-size: var(--font-size-display-2xl);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.text-display-xl {
+  font-size: var(--font-size-display-xl);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.text-display-lg {
+  font-size: var(--font-size-display-lg);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.text-display-md {
+  font-size: var(--font-size-display-md);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.text-display-sm {
+  font-size: var(--font-size-display-sm);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* ── Texture overlays ─────────────────────────── */
+.texture-cave { position: relative; }
+.texture-cave::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='6' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+/* ── Image zoom hover ─────────────────────────── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1); }
+.img-zoom:hover img { transform: scale(1.03); }
+
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-signal-orange);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-family-metropolis);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  transition: all 200ms ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary:hover { background-color: var(--color-deep-crimson); gap: 0.75rem; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-earth);
+  border: 1px solid var(--color-earth);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-family-metropolis);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  transition: all 200ms ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secondary:hover { background-color: var(--color-earth); color: var(--color-canvas); gap: 0.75rem; }
+
+/* ── Nav links ────────────────────────────────── */
+.nav-link {
+  position: relative;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-earth);
+  transition: color 200ms ease;
+  padding: 0.25rem 0;
+  text-decoration: none;
+}
+.nav-link:hover { color: var(--color-signal-orange); }
+.nav-link.active { color: var(--color-signal-orange); }
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-signal-orange);
+}
+
+/* ── Aspect ratios ────────────────────────────── */
+.aspect-project-card { aspect-ratio: 3 / 4; }
+.aspect-hero { aspect-ratio: 16 / 7; }
+
+/* ── Scrollbar hidden ─────────────────────────── */
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ── Reduced motion ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
