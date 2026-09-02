@@ -56,7 +56,7 @@ const stats = [
 
 export function ImpactStats() {
   return (
-    <section className="pb-6  text-canvas" aria-label="Impact statistics">
+    <section className="pb-12  text-canvas" aria-label="Impact statistics">
       <div className="container-site bg-secondary rounded-sm p-4 ">
         <ScrollReveal variant="up">
           <div className="text-center mb-6">

@@ -5,12 +5,12 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function ContactCTA() {
   return (
-    <section className="py-8 bg-white" aria-label="Contact call to action">
+    <section className="py-10 bg-white" aria-label="Contact call to action">
       <div className="container-site">
         <ScrollReveal variant="zoomOut">
-          <div className="relative bg-canvas border border-border-warm rounded-sm overflow-hidden shadow-sm h-auto md:h-56">
+          <div className="relative bg-canvas rounded-sm overflow-hidden shadow-sm h-auto md:h-56">
             <div
-              className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] pointer-events-none mix-blend-multiply opacity-50"
+              className="absolute right-0 top-0 bottom-0 w-full md:w-[40%] pointer-events-none mix-blend-multiply opacity-50"
               style={{
                 maskImage: "linear-gradient(to left, black 30%, transparent)",
                 WebkitMaskImage:
@@ -36,7 +36,7 @@ export function ContactCTA() {
               
               <ScrollReveal variant="up" delay={0.4}>
                 <div className="flex flex-col gap-6 max-w-sm">
-                  <p className="text-secondary leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     Whether you have a spark or need help finding one,
                     <br className="hidden md:block" />
                     we&apos;re here to turn ideas into impact.

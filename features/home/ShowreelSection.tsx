@@ -58,7 +58,7 @@ export function ShowreelSection() {
           </div>
           <div className="order-1 lg:order-2 sm:w-1/2 flex justify-center sm:justify-end items-center">
             <ScrollReveal delay={0.2} width="fit-content">
-              <div className="relative w-[320px] aspect-[9/16] rounded-md overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform transition-transform hover:rotate-0 duration-700">
+              <div className="relative w-[320px] aspect-[9/16] rounded-md overflow-hidden  shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform transition-transform hover:rotate-0 duration-700">
                 <video
                   ref={videoRef}
                   src="/video/video1.mp4"

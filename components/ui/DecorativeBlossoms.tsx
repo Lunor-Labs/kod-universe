@@ -3,7 +3,7 @@ import Image from "next/image";
 export function DecorativeBlossoms() {
   return (
     <>
-      <div className="absolute top-[24%] -left-[200px] w-[800px] h-[800px] pointer-events-none opacity-20 mix-blend-multiply z-30 transform -rotate-12">
+      <div className="absolute top-[26%] -left-[200px] w-[600px] h-[600px] pointer-events-none opacity-30 mix-blend-multiply z-30 transform -rotate-12">
         <Image src="/main/blossom.webp" alt="" fill className="object-contain" priority />
       </div>
       <div className="absolute top-[40%] -right-[200px] w-[600px] h-[600px] pointer-events-none opacity-[0.15] mix-blend-multiply z-30 transform rotate-135">

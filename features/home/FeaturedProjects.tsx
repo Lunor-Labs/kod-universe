@@ -32,7 +32,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
   return (
     <section
-      className="section-padding border-t border-border-warm"
+      className="section-padding "
       aria-label="Selected projects"
     >
       <div className="container-site">
@@ -88,7 +88,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             </div>
           </div>
           <div className="lg:col-span-1 flex flex-col justify-center">
-            <div className="bg-white border border-border-warm rounded-sm p-8 relative overflow-hidden">
+            <div className="bg-white border border-border-warm/30 rounded-sm p-8 relative overflow-hidden">
               <div
                 className="absolute -right-12 -top-12 w-40 h-40 rounded-full border border-border-warm/60 opacity-50"
                 aria-hidden="true"
@@ -110,13 +110,13 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               <Link
                 href="/our-universe"
                 className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em] 
-                           uppercase text-earth border border-earth px-5 py-2.5 rounded-3xl
+                           uppercase text-earth border border-earth/40 px-5 py-2.5 rounded-3xl
                            hover:bg-earth hover:text-canvas transition-all duration-200 group"
               >
                 Our Story
                 <ArrowRight
                   size={13}
-                  className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border w-6 h-6"
+                  className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border border-earth/40 w-6 h-6"
                   aria-hidden="true"
                 />
               </Link>

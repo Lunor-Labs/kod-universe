@@ -57,7 +57,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="section-padding bg-canvas overflow-hidden flex flex-col" aria-label="Client testimonials">
+    <section className="section-padding-sm bg-canvas overflow-hidden flex flex-col" aria-label="Client testimonials">
       <div className="container-site text-center mb-12">
         <p className="eyebrow mb-2">TESTIMONIALS</p>
         <h2 className="font-editorial text-4xl md:text-5xl text-earth">What Our Clients Say</h2>

@@ -59,7 +59,7 @@ const caps = [
 export function ServicesOverview() {
   return (
     <section
-      className="section-padding bg-white border-t border-border-warm"
+      className="section-padding bg-white"
       aria-label="Our capabilities"
     >
       <div className="container-site">
@@ -80,12 +80,12 @@ export function ServicesOverview() {
               <ScrollReveal key={cap.title} variant={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
                 <Link
                   href={cap.href}
-                  className="group relative bg-canvas border border-border-warm rounded-sm p-5
+                  className="group relative bg-canvas border border-border-warm/30 rounded p-5
                              hover:border-dust-rose hover:shadow-sm transition-all duration-300
                              focus-visible:outline-solar-gold flex flex-col h-full"
                 >
                   <div
-                    className="w-16 h-16 rounded-sm border border-border-warm flex items-center justify-center mb-4
+                    className="w-16 h-16 rounded border border-border-warm/30 flex items-center justify-center mb-4
                                group-hover:border-signal-orange group-hover:text-signal-orange transition-colors duration-200 text-earth"
                   >
                     <Icon size={28} aria-hidden="true" />

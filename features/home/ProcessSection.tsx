@@ -37,11 +37,11 @@ const steps = [
 export function ProcessSection() {
   return (
     <section
-      className="section-padding border-t border-border-warm"
+      className="section-padding"
       aria-label="Our creative process"
     >
       <div className="container-site">
-        <div className="relative backdrop-blur-sm py-10">
+        <div className="relative backdrop-blur-sm">
           <div className="text-center mb-14">
             <SectionLabel>Our process</SectionLabel>
             <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
