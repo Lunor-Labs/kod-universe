@@ -13,10 +13,9 @@ export const siteConfig: SiteConfig = {
     { label: "CONTACT", href: "/connect" },
   ],
   socialLinks: [
-    { platform: "Instagram", href: "https://instagram.com/koduniverse", iconName: "Instagram" },
-    { platform: "Behance", href: "https://behance.net/koduniverse", iconName: "ExternalLink" },
-    { platform: "LinkedIn", href: "https://linkedin.com/company/koduniverse", iconName: "Linkedin" },
-    { platform: "X", href: "https://x.com/koduniverse", iconName: "Twitter" },
+    { platform: "Instagram", href: "https://www.instagram.com/kod.universe", iconName: "Instagram" },
+    { platform: "LinkedIn",  href: "https://www.linkedin.com/company/conceptsbykod", iconName: "Linkedin" },
+    { platform: "Facebook",  href: "https://www.facebook.com/kod.universe", iconName: "ExternalLink" },
   ],
   contact: {
     email: "hello@koduniverse.com",

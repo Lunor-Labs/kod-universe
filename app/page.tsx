@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/features/home/HeroSection";
+import { ShowreelSection } from "@/features/home/ShowreelSection";
 import { FeaturedProjects } from "@/features/home/FeaturedProjects";
 import { ServicesOverview } from "@/features/home/ServicesOverview";
 import { ProcessSection } from "@/features/home/ProcessSection";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <ServicesOverview />
       <ProcessSection />
       <ImpactStats />
+      <ShowreelSection />
       <InfoCards featuredProject={featuredProject} />
       <Testimonials />
       <ContactCTA />
