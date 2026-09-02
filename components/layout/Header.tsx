@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
-import { Menu, MenuIcon, X } from "lucide-react";
+import { useState, useEffect, useRef, startTransition } from "react";
+import { MenuIcon, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
@@ -23,7 +23,7 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    setMenuOpen(false);
+    startTransition(() => setMenuOpen(false));
   }, [pathname]);
 
   useEffect(() => {

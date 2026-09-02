@@ -164,7 +164,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
               <div className="relative flex justify-between items-start mt-6">
                 <div className="absolute top-[18px] left-[15%] right-[15%] h-[1px] border-t border-dashed border-border-warm z-0" />
 
-                {processCards.map((step, idx) => (
+                {processCards.map((step) => (
                   <div
                     key={step.label}
                     className="relative z-10 flex flex-col items-center text-center flex-1 px-1"
@@ -233,14 +233,14 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
                          focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
             <div className="relative z-10 w-[60%]">
-              <p className="eyebrow mb-4">LET'S CONNECT</p>
+              <p className="eyebrow mb-4">LET&apos;S CONNECT</p>
               <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-4 leading-tight">
                 Have a project
                 <br />
                 in mind?
               </h3>
               <p className="text-secondary leading-relaxed">
-                We'd love to hear about your goals and explore how we can create
+                We&apos;d love to hear about your goals and explore how we can create
                 something extraordinary together.
               </p>
             </div>

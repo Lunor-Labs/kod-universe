@@ -63,7 +63,7 @@ export function ProcessSection() {
               },
             }}
           >
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <motion.li 
                 key={step.number} 
                 className="relative flex flex-col items-center text-center"

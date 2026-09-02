@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Mail,
   Phone,
   MapPin,
   ExternalLink,
-  Globe,
   Target,
   Package,
   Zap,
@@ -68,9 +66,9 @@ export default function ConnectPage() {
 
       <div className="container-site relative z-10">
         <div className="text-center mb-14 mt-8">
-          <p className="eyebrow mb-6">WE'D LOVE TO HEAR FROM YOU.</p>
+          <p className="eyebrow mb-6">WE&apos;D LOVE TO HEAR FROM YOU.</p>
           <h1 className="font-editorial text-5xl md:text-6xl text-earth mb-6 leading-[1.1]">
-            Let's Create
+            Let&apos;s Create
             <br />
             Something <em className="italic font-normal">Extraordinary.</em>
           </h1>
@@ -132,7 +130,7 @@ export default function ConnectPage() {
                   <div className="w-8 h-8 rounded-full bg-signal-orange text-white flex items-center justify-center">
                     <Link2 size={14} />
                   </div>
-                  <h2 className="eyebrow mb-0">LET'S CONNECT</h2>
+                  <h2 className="eyebrow mb-0">LET&apos;S CONNECT</h2>
                 </div>
                 <div className="flex items-center gap-3 pl-11">
                   {siteConfig.socialLinks.map((link) => {
@@ -172,7 +170,7 @@ export default function ConnectPage() {
                     href={`mailto:${siteConfig.contact.email}`}
                     className="text-sm font-semibold text-signal-orange hover:text-earth transition-colors"
                   >
-                    Let's build something great together.
+                    Let&apos;s build something great together.
                   </a>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";

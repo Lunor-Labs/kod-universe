@@ -19,7 +19,7 @@ export function Button({
   href,
   onClick,
   variant = "primary",
-  size = "md",
+  size: _size = "md",
   children,
   className,
   type = "button",

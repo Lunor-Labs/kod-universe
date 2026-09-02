@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
 
         <div className="prose prose-sm md:prose-base prose-headings:font-metropolis prose-headings:font-semibold prose-headings:text-earth prose-p:text-secondary prose-a:text-signal-orange prose-a:no-underline hover:prose-a:underline max-w-none">
           <p>
-            Welcome to KOD Universe. These Terms of Service ("Terms") govern your access to and use of our website, 
+            Welcome to KOD Universe. These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website,
             services, and applications. Please read them carefully.
           </p>
 

@@ -28,9 +28,9 @@ export function ContactCTA() {
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-start gap-12 md:gap-24 p-8 md:p-0 h-full">
               <ScrollReveal variant="left" delay={0.2}>
                 <h2 className="font-editorial text-4xl md:text-5xl text-earth leading-tight flex-shrink-0 md:pl-16">
-                  Let's Create
+                  Let&apos;s Create
                   <br />
-                  What's Next.
+                  What&apos;s Next.
                 </h2>
               </ScrollReveal>
               
@@ -39,22 +39,12 @@ export function ContactCTA() {
                   <p className="text-secondary leading-relaxed">
                     Whether you have a spark or need help finding one,
                     <br className="hidden md:block" />
-                    we're here to turn ideas into impact.
+                    we&apos;re here to turn ideas into impact.
                   </p>
 
-                  <Link
-                    href="/connect"
-                    className="inline-flex items-center justify-center gap-3 bg-signal-orange text-white 
-                               px-6 py-3 rounded-full font-semibold tracking-wider uppercase
-                               hover:bg-deep-crimson transition-all duration-200 group self-start"
-                  >
-                    START A CONVERSATION
-                    <div className="w-7 h-7 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                      <ArrowRight
-                        size={14}
-                        className="group-hover:translate-x-0.5 transition-transform"
-                      />
-                    </div>
+                  <Link href="/connect" className="btn-primary self-start">
+                    <span>Start a Conversation</span>
+                    <ArrowRight size={14} aria-hidden="true" />
                   </Link>
                 </div>
               </ScrollReveal>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExternalLink, ArrowUp } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 import { BackToTop } from "@/components/ui/BackToTop";

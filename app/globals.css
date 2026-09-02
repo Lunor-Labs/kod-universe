@@ -6,50 +6,97 @@
 @import "@fontsource/metropolis/700.css";
 @import "tailwindcss";
 
+/* KOD Universe — proposed design tokens */
+:root {
+  --kod-black: #161616;
+  --kod-dust: #C9BABA;
+  --kod-mist: #EDEAEA;
+  --kod-white: #FFFFFF;
+  --kod-gold: #EAC240;
+  --kod-clay: #DB705E;
+  --kod-orange: #E54C2A;
+  --kod-crimson: #7E041D;
+  --kod-earth: #3A2F2D;
+
+  --kod-canvas: #F7F3F1;
+  --kod-text-2: #6B625F;
+  --kod-border: #DDD5D2;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 12px 40px rgba(22,22,22,.08);
+}
+
 @theme {
-  /* Colors */
-  --color-void-black: #161616;
-  --color-dust-rose: #C9BABA;
-  --color-mist: #EDEAEA;
-  --color-canvas: #F7F3F1;
-  --color-solar-gold: #EAC240;
-  --color-clay: #DB705E;
-  --color-signal-orange: #E54C2A;
-  --color-deep-crimson: #7E041D;
-  --color-earth: #3A2F2D;
-  --color-secondary: #6B625F;
-  --color-border-warm: #DDD5D2;
+  /* Colors - KOD Specific */
+  --color-kod-black: var(--kod-black);
+  --color-kod-dust: var(--kod-dust);
+  --color-kod-mist: var(--kod-mist);
+  --color-kod-white: var(--kod-white);
+  --color-kod-gold: var(--kod-gold);
+  --color-kod-clay: var(--kod-clay);
+  --color-kod-orange: var(--kod-orange);
+  --color-kod-crimson: var(--kod-crimson);
+  --color-kod-earth: var(--kod-earth);
+  --color-kod-canvas: var(--kod-canvas);
+  --color-kod-text-2: var(--kod-text-2);
+  --color-kod-border: var(--kod-border);
+
+  /* Colors - Backwards compatibility */
+  --color-void-black: var(--kod-black);
+  --color-dust-rose: var(--kod-dust);
+  --color-mist: var(--kod-mist);
+  --color-canvas: var(--kod-canvas);
+  --color-solar-gold: var(--kod-gold);
+  --color-clay: var(--kod-clay);
+  --color-signal-orange: var(--kod-orange);
+  --color-deep-crimson: var(--kod-crimson);
+  --color-earth: var(--kod-earth);
+  --color-secondary: var(--kod-text-2);
+  --color-border-warm: var(--kod-border);
 
   /* Fonts */
-  --font-metropolis: "Metropolis", "Inter", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-metropolis: "Metropolis", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-editorial: "Cormorant Garamond", Georgia, serif;
 
   /* Max widths */
   --width-site: 1280px;
 
   /* Spacing */
-  --spacing-1: 4px;
-  --spacing-2: 8px;
-  --spacing-3: 12px;
-  --spacing-4: 16px;
-  --spacing-6: 24px;
-  --spacing-8: 32px;
-  --spacing-12: 48px;
-  --spacing-16: 64px;
-  --spacing-24: 96px;
-  --spacing-32: 128px;
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-6: var(--space-6);
+  --spacing-8: var(--space-8);
+  --spacing-12: var(--space-12);
+  --spacing-16: var(--space-16);
+  --spacing-24: var(--space-24);
+  --spacing-32: var(--space-32);
 
   /* Shadows */
-  --shadow-soft: 0 12px 40px rgba(22, 22, 22, 0.08);
+  --shadow-soft: var(--shadow-soft);
 
   /* Font sizes - specific responsive sizes */
-  --font-size-display-2xl: 44px; /* mobile default */
-  --font-size-display-xl: 38px;
-  --font-size-display-lg: 32px;
-  --font-size-display-md: 26px;
-  --font-size-display-sm: 21px;
-  --font-size-lead: 18px;
+  --font-size-display-2xl: 72px;
+  --font-size-display-xl: 56px;
+  --font-size-display-lg: 44px;
+  --font-size-display-md: 32px;
+  --font-size-display-sm: 24px;
+  --font-size-lead: 20px;
   --font-size-body: 16px;
   --font-size-small: 14px;
   --font-size-label: 12px;
@@ -147,57 +194,51 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Typography helpers ───────────────────────── */
 .eyebrow {
-  font-size: 0.9rem;
+  font-family: var(--font-metropolis);
+  font-size: var(--font-size-label);
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-signal-orange);
+  color: var(--kod-orange);
+  display: block;
 }
 
 .divider-warm {
-  border-top: 1px solid var(--color-border-warm);
+  border-top: 1px solid var(--kod-border);
 }
 
 .text-balance { text-wrap: balance; }
 
 /* ── Display sizes ────────────────────────────── */
 .text-display-2xl {
-  font-size: var(--font-size-display-2xl);
+  font-size: clamp(40px, 6vw, 72px);
   line-height: 1.02;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 .text-display-xl {
-  font-size: var(--font-size-display-xl);
+  font-size: clamp(34px, 5vw, 56px);
   line-height: 1.08;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 .text-display-lg {
-  font-size: var(--font-size-display-lg);
+  font-size: clamp(28px, 4vw, 44px);
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.015em;
 }
 .text-display-md {
-  font-size: var(--font-size-display-md);
+  font-size: clamp(22px, 3vw, 32px);
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 .text-display-sm {
-  font-size: var(--font-size-display-sm);
+  font-size: clamp(18px, 2.5vw, 24px);
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: -0.01em;
-}
-
-@media (min-width: 1024px) {
-  .text-display-2xl { font-size: 72px; }
-  .text-display-xl { font-size: 56px; }
-  .text-display-lg { font-size: 44px; }
-  .text-display-md { font-size: 32px; }
-  .text-display-sm { font-size: 24px; }
 }
 
 /* ── Texture overlays ─────────────────────────── */
@@ -219,62 +260,127 @@ h1, h2, h3, h4, h5, h6 {
 .img-zoom:hover img { transform: scale(1.03); }
 
 /* ── Buttons ──────────────────────────────────── */
+
+/*  .btn-primary — filled orange pill, arrow slides on hover */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  background-color: var(--color-signal-orange);
-  color: white;
+  gap: 0.75rem;
+  background-color: var(--kod-orange);
+  color: #fff;
   height: 52px;
-  padding: 0 16px;
-  border-radius: 12px;
+  padding: 0 28px;
+  border-radius: 9999px;
   font-family: var(--font-metropolis);
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  transition: all 200ms ease;
+  font-size: var(--font-size-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   border: none;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 4px 16px rgba(229, 76, 42, 0.20);
+  transition: background-color 200ms ease, gap 200ms ease, box-shadow 200ms ease;
 }
-.btn-primary:hover { background-color: var(--color-deep-crimson); gap: 0.75rem; }
+.btn-primary:hover {
+  background-color: var(--kod-crimson);
+  gap: 1rem;
+  box-shadow: 0 6px 24px rgba(126, 4, 29, 0.28);
+}
+/* Arrow child element */
+.btn-primary .btn-arrow,
+.btn-primary svg {
+  transition: transform 200ms ease;
+}
+.btn-primary:hover .btn-arrow,
+.btn-primary:hover svg {
+  transform: translateX(4px);
+}
 
+/* .btn-secondary — outlined earth border, fills on hover */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   background-color: transparent;
-  color: var(--color-earth);
-  border: 1px solid var(--color-earth);
+  color: var(--kod-earth);
+  border: 1px solid var(--kod-earth);
   height: 52px;
-  padding: 0 16px;
-  border-radius: 12px;
+  padding: 0 28px;
+  border-radius: 9999px;
   font-family: var(--font-metropolis);
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   letter-spacing: 0.05em;
-  transition: all 200ms ease;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease, gap 200ms ease;
 }
-.btn-secondary:hover { background-color: var(--color-earth); color: var(--color-canvas); gap: 0.75rem; }
+.btn-secondary:hover {
+  background-color: var(--kod-earth);
+  color: var(--kod-canvas);
+  gap: 0.75rem;
+}
+
+/* .btn-icon — small circular border button (CorePillars arrow links) */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid var(--kod-border);
+  color: var(--kod-earth);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+.btn-icon:hover {
+  border-color: var(--kod-orange);
+  color: var(--kod-orange);
+}
+.btn-icon svg {
+  transition: transform 200ms ease;
+}
+.btn-icon:hover svg {
+  transform: translateX(2px);
+}
+
+/* .step-badge — numbered pill badge (TheJourney) */
+.step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: var(--kod-orange);
+  color: #fff;
+  font-family: var(--font-metropolis);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+}
 
 /* ── Nav links ────────────────────────────────── */
 .nav-link {
   position: relative;
+  font-family: var(--font-metropolis);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-earth);
+  color: var(--kod-earth);
   transition: color 200ms ease;
   padding: 0.25rem 0;
   text-decoration: none;
 }
-.nav-link:hover { color: var(--color-signal-orange); }
-.nav-link.active { color: var(--color-signal-orange); }
+.nav-link:hover { color: var(--kod-orange); }
+.nav-link.active { color: var(--kod-orange); }
 .nav-link.active::after {
   content: '';
   position: absolute;
@@ -282,7 +388,17 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 1px;
-  background-color: var(--color-signal-orange);
+  background-color: var(--kod-orange);
+}
+
+/* ── Pillar heading — used in CorePillars, TheJourney */
+.pillar-heading {
+  font-family: var(--font-metropolis);
+  font-weight: 700;
+  font-size: var(--font-size-small);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kod-earth);
 }
 
 /* ── Aspect ratios ────────────────────────────── */
