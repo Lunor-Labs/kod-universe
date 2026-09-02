@@ -24,8 +24,8 @@ export function ShowreelSection() {
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-kod-orange/20 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
       
       <div className="container-site relative z-10">
-        <div className="flex justify-between">
-          <div className="order-2 lg:order-1 flex flex-col items-center justify-center text-left w-1/2">
+        <div className="sm:flex flex-row justify-between space-y-8">
+          <div className="order-2 lg:order-1 flex flex-col items-center justify-center text-left sm:w-1/2">
             <ScrollReveal>
               <span className="eyebrow text-white mb-6 block tracking-[0.2em] opacity-80">
                 Showreel
@@ -56,7 +56,7 @@ export function ShowreelSection() {
               </button>
             </ScrollReveal>
           </div>
-          <div className="order-1 lg:order-2 w-1/2 flex justify-end items-center">
+          <div className="order-1 lg:order-2 sm:w-1/2 flex justify-center sm:justify-end items-center">
             <ScrollReveal delay={0.2} width="fit-content">
               <div className="relative w-[320px] aspect-[9/16] rounded-md overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform transition-transform hover:rotate-0 duration-700">
                 <video

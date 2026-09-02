@@ -1,56 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, Compass, Pen, Rocket } from "lucide-react";
+import { Sun, Asterisk, PenTool, Target } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const steps = [
   {
     number: "01",
     title: "Discover",
-    description: "We dive deep to understand your goals, audience, and opportunities.",
-    Icon: Search,
+    description:
+      "We dive deep to understand your goals, audience, and opportunities.",
+    Icon: Sun,
   },
   {
     number: "02",
     title: "Define",
-    description: "We shape the strategy and creative direction with clarity and intent.",
-    Icon: Compass,
+    description:
+      "We shape the strategy and creative direction with clarity and intent.",
+    Icon: Asterisk,
   },
   {
     number: "03",
     title: "Create",
     description: "We design, craft, and refine ideas that connect and convert.",
-    Icon: Pen,
+    Icon: PenTool,
   },
   {
     number: "04",
     title: "Deliver",
-    description: "We launch with precision and support your growth every step ahead.",
-    Icon: Rocket,
+    description:
+      "We launch with precision and support your growth every step ahead.",
+    Icon: Target,
   },
 ];
 
 export function ProcessSection() {
   return (
-    <section className="section-padding border-t border-border-warm" aria-label="Our creative process">
+    <section
+      className="section-padding border-t border-border-warm"
+      aria-label="Our creative process"
+    >
       <div className="container-site">
-        <div className="text-center mb-14">
-          <SectionLabel>Our process</SectionLabel>
-          <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
-            A clear path from spark to{" "}
-            <em className="font-serif italic font-normal">impact.</em>
-          </h2>
-        </div>
+        <div className="relative backdrop-blur-sm py-10">
+          <div className="text-center mb-14">
+            <SectionLabel>Our process</SectionLabel>
+            <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
+              A clear path from spark to{" "}
+              <em className="font-serif italic font-normal">impact.</em>
+            </h2>
+          </div>
 
-        <div className="relative">
-          <div
-            className="hidden lg:block absolute top-[2.25rem] left-[12.5%] right-[12.5%] h-px bg-border-warm"
-            aria-hidden="true"
-          />
-
-          <motion.ol 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6" 
+          <motion.ol
+            className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-8 lg:gap-0"
             role="list"
             initial="hidden"
             whileInView="show"
@@ -63,30 +64,51 @@ export function ProcessSection() {
               },
             }}
           >
-            {steps.map((step) => (
-              <motion.li 
-                key={step.number} 
-                className="relative flex flex-col items-center text-center"
+            {steps.map((step, index) => (
+              <motion.li
+                key={step.number}
+                className={`relative flex items-center w-full lg:w-auto ${index < steps.length - 1 ? "lg:flex-1" : ""}`}
                 variants={{
-                  hidden: { opacity: 0, y: 30, scale: 0.95 },
-                  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+                  hidden: { opacity: 0, x: -20 },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+                  },
                 }}
               >
-                <div
-                  className="relative z-10 w-16 h-16 rounded-full border-2 border-border-warm bg-canvas 
-                             flex items-center justify-center mb-5 group-hover:border-signal-orange"
-                >
-                  <step.Icon size={24} className="text-signal-orange" aria-hidden="true" />
+                <div className="flex items-start sm:items-center gap-5 z-10 bg-transparent lg:pr-2 w-full lg:w-auto">
+                  <div
+                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-signal-orange/20 bg-signal-orange/5 
+                               flex items-center justify-center transition-colors"
+                  >
+                    <step.Icon
+                      size={24}
+                      className="text-signal-orange stroke-[1.25]"
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <div className="flex flex-col text-left flex-1 lg:flex-none">
+                    <div className="flex items-center gap-2.5 mb-1.5">
+                      <span className="text-signal-orange font-bold tracking-wider">
+                        {step.number}
+                      </span>
+                      <h3 className="font-metropolis font-bold text-earth tracking-[0.1em] uppercase">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <p className="text-secondary text-sm leading-[1.6] max-w-[280px] lg:max-w-[140px]">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="mb-2">
-                  <span className="text-xl block mb-1">{step.number}</span>
-                  <h3 className="font-metropolis font-semibold text-earth text-sm tracking-wide uppercase">
-                    {step.title}
-                  </h3>
-                </div>
-                <p className="text-secondary text-sm leading-relaxed max-w-[160px]">
-                  {step.description}
-                </p>
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:flex flex-1 items-center px-4 opacity-60">
+                    <div className="w-full border border-dashed border-secondary" />
+                    <div className="w-2 h-2 flex-shrink-0 rounded-full border border-secondary bg-transparent ml-1" />
+                  </div>
+                )}
               </motion.li>
             ))}
           </motion.ol>
