@@ -254,10 +254,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center justify-center gap-3 bg-signal-orange text-white 
-                     px-6 py-3 rounded-full font-semibold text-sm tracking-wider
-                     hover:bg-deep-crimson transition-all duration-200 group
-                     disabled:opacity-70 disabled:pointer-events-none w-full sm:w-auto"
+          className="btn-primary w-full sm:w-auto disabled:opacity-70 disabled:pointer-events-none"
           aria-busy={status === "loading"}
         >
           {status === "loading" ? (
@@ -271,14 +268,14 @@ export function ContactForm() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              SENDING...
+              <span>Sending...</span>
             </>
           ) : (
             <>
-              SEND MESSAGE
-              <div className="w-5 h-5 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
-              </div>
+              <span>Send Message</span>
+              <span className="btn-badge">
+                <ArrowRight size={13} aria-hidden="true" />
+              </span>
             </>
           )}
         </button>

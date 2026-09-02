@@ -272,14 +272,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             Let&apos;s build something{" "}
             <em className="font-serif italic font-normal text-dust-rose">extraordinary.</em>
           </h2>
-          <Link
-            href="/connect"
-            className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                       px-6 py-3 rounded-sm font-medium text-sm tracking-wide
-                       hover:bg-deep-crimson transition-all duration-200 group"
-          >
-            Get in touch
-            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+          <Link href="/connect" className="btn-primary">
+            <span>Get in touch</span>
+            <span className="btn-badge">
+              <ArrowRight size={13} aria-hidden="true" />
+            </span>
           </Link>
         </div>
       </section>

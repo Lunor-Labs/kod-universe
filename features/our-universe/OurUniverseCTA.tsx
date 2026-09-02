@@ -39,7 +39,9 @@ export function OurUniverseCTA() {
                 </p>
                 <Link href="/connect" className="btn-primary flex-shrink-0">
                   <span>Start a Conversation</span>
-                  <ArrowRight size={14} aria-hidden="true" />
+                  <span className="btn-badge">
+                    <ArrowRight size={13} aria-hidden="true" />
+                  </span>
                 </Link>
               </div>
             </div>

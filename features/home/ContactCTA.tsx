@@ -44,7 +44,9 @@ export function ContactCTA() {
 
                   <Link href="/connect" className="btn-primary self-start">
                     <span>Start a Conversation</span>
-                    <ArrowRight size={14} aria-hidden="true" />
+                    <span className="btn-badge">
+                      <ArrowRight size={13} aria-hidden="true" />
+                    </span>
                   </Link>
                 </div>
               </ScrollReveal>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 
@@ -89,7 +90,10 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               onClick={onClose}
               className="btn-primary w-full justify-center"
             >
-              Start a project
+              <span>Start a Project</span>
+              <span className="btn-badge">
+                <ArrowRight size={13} aria-hidden="true" />
+              </span>
             </Link>
           </div>
         </nav>

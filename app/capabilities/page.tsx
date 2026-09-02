@@ -69,14 +69,11 @@ export default function CapabilitiesPage() {
               <p className="text-dust-rose text-base leading-relaxed max-w-sm mb-10">
                 KOD Universe is a creative studio that transforms ideas into meaningful brands, experiences, and expressions that connect and endure.
               </p>
-              <Link
-                href="/connect"
-                className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                           px-6 py-3 rounded-sm font-medium text-sm tracking-wide
-                           hover:bg-deep-crimson transition-all duration-200 group"
-              >
-                Start a project
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <Link href="/connect" className="btn-primary">
+                <span>Start a project</span>
+                <span className="btn-badge">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
               </Link>
             </div>
           </div>
@@ -263,14 +260,11 @@ export default function CapabilitiesPage() {
               <h3 className="font-metropolis font-semibold text-canvas text-display-sm mb-6 leading-snug">
                 Let&apos;s build something extraordinary together.
               </h3>
-              <Link
-                href="/connect"
-                className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                           px-6 py-3 rounded-sm font-medium text-sm tracking-wide
-                           hover:bg-deep-crimson transition-all duration-200 group"
-              >
-                Start a project
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <Link href="/connect" className="btn-primary">
+                <span>Start a project</span>
+                <span className="btn-badge">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
               </Link>
             </div>
           </div>

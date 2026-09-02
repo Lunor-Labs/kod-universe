@@ -31,21 +31,13 @@ export default function NotFound() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 bg-signal-orange text-white 
-                       px-6 py-3 rounded-sm font-medium text-sm tracking-wide
-                       hover:bg-deep-crimson transition-all duration-200 group"
-          >
-            <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" aria-hidden="true" />
-            Back to home
+          <Link href="/" className="btn-back">
+            <span className="btn-badge">
+              <ArrowLeft size={13} aria-hidden="true" />
+            </span>
+            <span>Back to home</span>
           </Link>
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-2 border border-earth text-earth 
-                       px-6 py-3 rounded-sm font-medium text-sm tracking-wide
-                       hover:bg-earth hover:text-canvas transition-all duration-200"
-          >
+          <Link href="/work" className="btn-secondary">
             View our work
           </Link>
         </div>

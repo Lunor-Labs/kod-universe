@@ -44,7 +44,9 @@ export function OurUniverseHero() {
 
             <Link href="/work" className="btn-primary w-fit">
               <span>Explore Our Work</span>
-              <ArrowRight size={14} aria-hidden="true" />
+              <span className="btn-badge">
+                <ArrowRight size={13} aria-hidden="true" />
+              </span>
             </Link>
           </div>
 

@@ -41,13 +41,11 @@ export function Button({
 
   const content = (
     <>
-      {children}
+      <span>{children}</span>
       {showArrow && (
-        <ArrowRight
-          size={15}
-          className="transition-transform duration-200 group-hover:translate-x-1"
-          aria-hidden="true"
-        />
+        <span className="btn-badge">
+          <ArrowRight size={13} aria-hidden="true" />
+        </span>
       )}
     </>
   );
