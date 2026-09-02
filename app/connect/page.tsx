@@ -16,6 +16,7 @@ import {
 import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 import { ContactForm } from "@/features/contact/ContactForm";
 import { siteConfig, services } from "@/data/site";
+import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
   title: "Connect",

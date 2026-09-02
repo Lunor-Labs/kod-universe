@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",

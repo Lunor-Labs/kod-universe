@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProjectGrid } from "@/features/work/ProjectGrid";
 import { projects, getFeaturedProject } from "@/data/projects";
+import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
   title: "Selected Works",
@@ -16,7 +17,8 @@ export default function WorkPage() {
   const featuredProject = getFeaturedProject();
 
   return (
-    <>
+    <main className="relative bg-canvas overflow-hidden">
+      <div className="relative z-10">
       {/* Page hero */}
       <section
         className="relative overflow-hidden texture-cave bg-earth pt-32 pb-20"
@@ -61,6 +63,8 @@ export default function WorkPage() {
       <section className="py-12 md:py-16" aria-label="Portfolio projects">
         <ProjectGrid projects={projects} featuredProject={featuredProject} />
       </section>
-    </>
+      </div>
+      <DecorativeBlossoms />
+    </main>
   );
 }

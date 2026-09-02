@@ -4,6 +4,7 @@ import { CorePillars } from "@/features/our-universe/CorePillars";
 import { TheJourney } from "@/features/our-universe/TheJourney";
 import { FounderPanel } from "@/features/our-universe/FounderPanel";
 import { OurUniverseCTA } from "@/features/our-universe/OurUniverseCTA";
+import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
   title: "Our Story",
@@ -14,12 +15,15 @@ export const metadata: Metadata = {
 
 export default function OurUniversePage() {
   return (
-    <div className="bg-kod-canvas text-kod-earth">
-      <OurUniverseHero />
-      <CorePillars />
-      <TheJourney />
-      <FounderPanel />
-      <OurUniverseCTA />
-    </div>
+    <main className="relative bg-canvas overflow-hidden">
+      <div className="relative z-10">
+        <OurUniverseHero />
+        <CorePillars />
+        <TheJourney />
+        <FounderPanel />
+        <OurUniverseCTA />
+      </div>
+      <DecorativeBlossoms />
+    </main>
   );
 }

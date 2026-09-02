@@ -5,6 +5,7 @@ import { ArrowRight, Share2, Fingerprint, Package, Palette, Globe, Search, Compa
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { capabilities, processSteps } from "@/data/capabilities";
 import { projects } from "@/data/projects";
+import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
   title: "Capabilities",
@@ -39,7 +40,8 @@ const deliverableItems = [
 
 export default function CapabilitiesPage() {
   return (
-    <>
+    <main className="relative bg-canvas overflow-hidden">
+      <div className="relative z-10">
       {/* Hero */}
       <section
         className="relative bg-earth overflow-hidden texture-cave pt-32 pb-20"
@@ -270,6 +272,8 @@ export default function CapabilitiesPage() {
           </div>
         </div>
       </section>
-    </>
+      </div>
+      <DecorativeBlossoms />
+    </main>
   );
 }
