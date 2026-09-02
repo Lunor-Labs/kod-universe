@@ -57,10 +57,10 @@ export function Header() {
                 }`}
               />
             </Link>
-            <div className="flex items-center">
+            <div className="flex items-center gap-6">
               <nav
                 aria-label="Main navigation"
-                className="hidden md:flex items-center gap-8 mr-8"
+                className="hidden lg:flex items-center gap-8"
               >
                 {siteConfig.nav.map((item) => {
                   const isActive =
@@ -70,16 +70,35 @@ export function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`text-sm font-medium tracking-widest uppercase transition-colors ${
-                        isActive ? "text-signal-orange" : "text-black hover:text-signal-orange"
-                      }`}
+                      className="group relative inline-flex overflow-hidden py-1"
                       aria-current={isActive ? "page" : undefined}
                     >
-                      {item.label}
+                      <span
+                        className={`text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] ${
+                          isActive ? "text-signal-orange" : "text-black"
+                        }`}
+                      >
+                        {item.label}
+                      </span>
+                      <span
+                        className="absolute left-0 top-[120%] text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] text-signal-orange"
+                        aria-hidden="true"
+                      >
+                        {item.label}
+                      </span>
                     </Link>
                   );
                 })}
               </nav>
+
+              <div className="hidden md:block">
+                <Link href="/connect" className="btn-primary" style={{ height: '44px', paddingLeft: '20px', paddingRight: '6px' }}>
+                  <span className="text-[11px]">Free Consultation</span>
+                  <span className="btn-badge" style={{ width: '32px', height: '32px' }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </span>
+                </Link>
+              </div>
 
               <button
                 ref={menuButtonRef}
@@ -90,9 +109,9 @@ export function Header() {
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 onClick={() => setMenuOpen((v) => !v)}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/50 backdrop-blur-sm  text-black hover:border-earth transition-colors"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white/60 backdrop-blur-md border border-white/20 shadow-sm text-black hover:border-earth transition-colors lg:hidden"
               >
-                {menuOpen ? <X size={18} strokeWidth={1.5} /> : <MenuIcon />}
+                {menuOpen ? <X size={18} strokeWidth={1.5} /> : <MenuIcon size={18} />}
               </button>
             </div>
           </div>
