@@ -1,61 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const FacebookIcon = ({ size = 24, className = "" }: { size?: number | string, className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-  </svg>
-);
-
-const InstagramIcon = ({ size = 24, className = "" }: { size?: number | string, className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-);
-
-const LinkedinIcon = ({ size = 24, className = "" }: { size?: number | string, className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-  </svg>
-);
+import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export function FounderPanel() {
   return (
@@ -82,7 +28,7 @@ export function FounderPanel() {
               <div className="relative overflow-hidden rounded-2xl border border-kod-border bg-kod-mist aspect-[4/5] img-zoom">
                 <Image
                   src="/main/profile.jpg"
-                  alt="KOD Universe Founder"
+                  alt="KOD Universe Founder - Ishara Jakod"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -96,7 +42,7 @@ export function FounderPanel() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 border border-kod-border/50 shadow-sm flex items-center justify-between">
                   <div>
-                    <p className="font-metropolis font-bold text-kod-earth text-sm tracking-wide">Khalid Al-Yousuf</p>
+                    <p className="font-metropolis font-bold text-kod-earth text-sm tracking-wide">Ishara Jakod</p>
                     <p className="text-kod-text-2 text-xs tracking-[0.1em] uppercase">Founder & Creative Director</p>
                   </div>
                   {/* Social icons */}

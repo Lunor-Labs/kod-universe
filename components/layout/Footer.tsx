@@ -3,12 +3,13 @@ import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 const iconMap: Record<string, React.ElementType> = {
-  Instagram: ExternalLink,
-  Linkedin: ExternalLink,
+  Instagram: InstagramIcon,
+  Linkedin: LinkedinIcon,
+  Facebook: FacebookIcon,
   ExternalLink,
-  Twitter: ExternalLink,
 };
 
 export function Footer() {

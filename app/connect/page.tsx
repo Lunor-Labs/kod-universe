@@ -13,6 +13,7 @@ import {
   Sun,
   ArrowRight,
 } from "lucide-react";
+import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 import { ContactForm } from "@/features/contact/ContactForm";
 import { siteConfig, services } from "@/data/site";
 
@@ -24,9 +25,9 @@ export const metadata: Metadata = {
 };
 
 const contactIcons: Record<string, React.ElementType> = {
-  Instagram: ExternalLink,
-  Linkedin: ExternalLink,
-  Twitter: ExternalLink,
+  Instagram: InstagramIcon,
+  Linkedin: LinkedinIcon,
+  Facebook: FacebookIcon,
   ExternalLink,
 };
 

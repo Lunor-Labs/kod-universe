@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
   socialLinks: [
     { platform: "Instagram", href: "https://www.instagram.com/kod.universe", iconName: "Instagram" },
     { platform: "LinkedIn",  href: "https://www.linkedin.com/company/conceptsbykod", iconName: "Linkedin" },
-    { platform: "Facebook",  href: "https://www.facebook.com/kod.universe", iconName: "ExternalLink" },
+    { platform: "Facebook",  href: "https://www.facebook.com/kod.universe", iconName: "Facebook" },
   ],
   contact: {
     email: "hello@koduniverse.com",
