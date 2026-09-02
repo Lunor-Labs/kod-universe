@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect } from "react";
 
 type RevealVariant = "up" | "down" | "left" | "right" | "zoomIn" | "zoomOut" | "fade";
 
@@ -22,6 +22,12 @@ export function ScrollReveal({
   className = "",
   width = "100%",
 }: ScrollRevealProps) {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   const getVariants = () => {
     switch (variant) {
       case "up":
@@ -46,7 +52,7 @@ export function ScrollReveal({
     <div style={{ width }} className={`relative ${className}`}>
       <motion.div
         variants={getVariants()}
-        initial="hidden"
+        initial={hasMounted ? "hidden" : false}
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}

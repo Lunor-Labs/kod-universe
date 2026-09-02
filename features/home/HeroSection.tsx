@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const SLIDES = [
   {
@@ -67,9 +67,20 @@ export function HeroSection() {
   const { scrollY } = useScroll();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(!e.matches);
+    update(mq);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   const imageY = useTransform(scrollY, [0, 400], [0, 60]);
   const textY = useTransform(scrollY, [0, 400], [0, -30]);
+  const disableParallax = isMobile || prefersReducedMotion;
 
   useEffect(() => {
     if (isHovered) return;
@@ -84,20 +95,20 @@ export function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative flex items-center overflow-hidden bg-mist"
+      className="relative flex items-center overflow-hidden bg-stone-300"
       aria-label="Hero slider"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} mode="sync">
         <motion.div
           key={`bg-${currentSlide}`}
           className="absolute inset-0 z-0"
-          style={{ y: imageY }}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          style={disableParallax ? undefined : { y: imageY }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.1, ease: "easeInOut" }}
+          transition={{ duration: disableParallax ? 0.6 : 1.1, ease: "easeInOut" }}
         >
           <Image
             src={slide.image}
@@ -124,7 +135,7 @@ export function HeroSection() {
           <motion.div
             key={`content-${currentSlide}`}
             className="max-w-2xl"
-            style={{ y: textY }}
+            style={disableParallax ? undefined : { y: textY }}
             initial="hidden"
             animate="show"
             exit="exit"

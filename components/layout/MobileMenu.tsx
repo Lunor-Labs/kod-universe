@@ -18,12 +18,12 @@ const menuVariants = {
   closed: {
     y: "-100%",
     opacity: 0,
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] },
   },
   open: {
     y: "0%",
     opacity: 1,
-    transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] },
   },
 };
 
@@ -34,7 +34,7 @@ const containerVariants = {
 
 const itemVariants = {
   closed: { y: 40, opacity: 0 },
-  open: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  open: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
@@ -64,6 +64,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
+          key="mobile-menu"
           id="mobile-menu"
           ref={menuRef}
           role="dialog"
@@ -128,13 +129,13 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             </p>
             
             <div className="flex items-center gap-4 text-secondary">
-              <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Instagram">
+              <a href={siteConfig.socialLinks.find(s => s.platform === "Instagram")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Instagram">
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <a href={siteConfig.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="LinkedIn">
+              <a href={siteConfig.socialLinks.find(s => s.platform === "LinkedIn")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="LinkedIn">
                 <LinkedinIcon className="w-5 h-5" />
               </a>
-              <a href={siteConfig.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Facebook">
+              <a href={siteConfig.socialLinks.find(s => s.platform === "Facebook")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Facebook">
                 <FacebookIcon className="w-5 h-5" />
               </a>
             </div>
