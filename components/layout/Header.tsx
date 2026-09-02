@@ -71,7 +71,7 @@ export function Header() {
                       key={item.href}
                       href={item.href}
                       className={`text-sm font-medium tracking-widest uppercase transition-colors ${
-                        isActive ? "text-white" : "text-black hover:underline"
+                        isActive ? "text-signal-orange" : "text-black hover:text-signal-orange"
                       }`}
                       aria-current={isActive ? "page" : undefined}
                     >

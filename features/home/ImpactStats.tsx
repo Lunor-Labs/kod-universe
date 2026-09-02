@@ -16,7 +16,7 @@ function Counter({
   duration?: number;
 }) {
   const nodeRef = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(nodeRef, { once: true, margin: "-100px" });
+  const isInView = useInView(nodeRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
     if (!isInView) return;

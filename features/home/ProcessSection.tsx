@@ -54,7 +54,7 @@ export function ProcessSection() {
             role="list"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{
               hidden: { opacity: 0 },
               show: {
