@@ -71,7 +71,7 @@ export function Testimonials() {
           {[...testimonials, ...testimonials].map((t, idx) => (
             <div 
               key={idx} 
-              className="w-[300px] md:w-[400px] flex-shrink-0 bg-white rounded-lg p-8 flex flex-col "
+              className="w-[300px] md:w-[400px] flex-shrink-0 bg-white rounded p-8 flex flex-col "
             >
               <svg
                 className="w-8 h-8 text-signal-orange/20 mb-6"

@@ -8,7 +8,7 @@ export function ContactCTA() {
     <section className="py-10 bg-white" aria-label="Contact call to action">
       <div className="container-site">
         <ScrollReveal variant="zoomOut">
-          <div className="relative bg-canvas rounded-sm overflow-hidden shadow-sm h-auto md:h-56">
+          <div className="relative bg-canvas rounded overflow-hidden shadow-sm h-auto md:h-56">
             <div
               className="absolute right-0 top-0 bottom-0 w-full md:w-[40%] pointer-events-none mix-blend-multiply opacity-50"
               style={{

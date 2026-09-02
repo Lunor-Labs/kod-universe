@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-metropolis);
   font-size: var(--font-size-body);
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--kod-orange);
   display: block;
