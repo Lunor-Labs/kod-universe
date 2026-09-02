@@ -33,14 +33,12 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   const related = getRelatedProjects(project.relatedSlugs).slice(0, 3);
 
-  // Prev / next
   const idx = projects.findIndex((p) => p.slug === slug);
   const prev = idx > 0 ? projects[idx - 1] : null;
   const next = idx < projects.length - 1 ? projects[idx + 1] : null;
 
   return (
     <>
-      {/* Hero */}
       <section
         className="relative pt-24 md:pt-32 pb-0 bg-earth overflow-hidden"
         aria-label={`${project.title} project hero`}
@@ -48,11 +46,11 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="container-site relative z-10 pb-12 md:pb-16">
           <Link
             href="/work"
-            className="inline-flex items-center gap-1.5 text-dust-rose/70 text-sm font-medium 
+            className="inline-flex items-center gap-1.5 text-dust-rose/70 font-medium 
                        tracking-wide hover:text-dust-rose transition-colors mb-8"
             aria-label="Back to all projects"
           >
-            <ArrowLeft size={13} aria-hidden="true" />
+            <ArrowLeft size={16} aria-hidden="true" />
             All work
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
@@ -74,7 +72,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 { label: "Category", value: project.category.split(" & ")[0] },
               ].map((meta) => (
                 <div key={meta.label}>
-                  <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-1">
+                  <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-1">
                     {meta.label}
                   </p>
                   <p className="text-canvas text-sm font-medium">{meta.value}</p>
@@ -84,14 +82,13 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Hero image */}
-        <div className="relative aspect-[16/7] w-full">
+        <div className="relative aspect-[3/2] w-full">
           <Image
             src={project.heroImage.src}
             alt={project.heroImage.alt}
             fill
             priority
-            className="object-cover"
+            className="object-contain"
             sizes="100vw"
           />
           <div

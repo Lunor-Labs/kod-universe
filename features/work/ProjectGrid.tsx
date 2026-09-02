@@ -34,13 +34,11 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
     [projects, activeCategory]
   );
 
-  // Remove featured from grid (shown above)
   const gridProjects = filtered.filter((p) => p.id !== featuredProject.id);
 
   return (
     <>
-      {/* Filters bar */}
-      <div className="border-t border-b border-border-warm py-4 mb-8">
+      <div className=" py-4 mb-8">
         <div className="container-site">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <CategoryFilter
@@ -65,10 +63,8 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
       </div>
 
       <div className="container-site">
-        {/* Featured project and Philosophy card — shown only when All or matching category */}
         {(activeCategory === "ALL" || featuredProject.category === activeCategory) && (
           <div className="mb-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {/* Featured Project (2/3 width) */}
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 border border-border-warm rounded-sm overflow-hidden bg-white">
               <div className="relative aspect-[4/3] md:aspect-auto img-zoom min-h-[280px]">
                 <Image

@@ -19,50 +19,54 @@ export default function WorkPage() {
   return (
     <main className="relative bg-canvas overflow-hidden">
       <div className="relative z-10">
-      {/* Page hero */}
-      <section
-        className="relative overflow-hidden texture-cave bg-earth pt-32 pb-20"
-        aria-label="Portfolio page hero"
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(58,47,45,0.96) 0%, rgba(58,47,45,0.82) 60%, rgba(201,186,186,0.2) 100%)",
-          }}
-          aria-hidden="true"
-        />
-        {/* Background hero image faded */}
-        <div className="absolute inset-0 opacity-30" aria-hidden="true">
-          <Image src="/hero.jpg" alt="" fill className="object-cover" priority />
-        </div>
+        {/* Page hero */}
+        <section
+          className="relative overflow-hidden texture-cave bg-earth pt-32 pb-20"
+          aria-label="Portfolio page hero"
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(58,47,45,0.96) 0%, rgba(58,47,45,0.82) 60%, rgba(201,186,186,0.2) 100%)",
+            }}
+            aria-hidden="true"
+          />
+          {/* Background hero image faded */}
+          <div className="absolute inset-0 opacity-30" aria-hidden="true">
+            <Image
+              src="/hero.jpg"
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
-        <div className="container-site relative z-10">
-          <p className="text-sm font-semibold tracking-[0.25em] uppercase text-dust-rose mb-5">
-            Seeds of ideas. Forged on earth.
-          </p>
-          <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-6 leading-tight">
-            Selected Works.
-          </h1>
-          <p className="text-dust-rose text-base leading-relaxed max-w-md mb-10">
-            Ideas have energy. We transform them into visual stories that connect, inspire, and leave a lasting mark.
-          </p>
-          <Link
-            href="/connect"
-            className="inline-flex items-center gap-2 border border-dust-rose/60 text-canvas
-                       px-6 py-3 rounded-sm text-sm font-medium tracking-wide
-                       hover:border-signal-orange hover:text-signal-orange transition-all duration-200 group"
-          >
-            Start a project
-            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+          <div className="container-site relative z-10">
+            <p className="text-sm font-semibold tracking-[0.25em] uppercase text-dust-rose mb-5">
+              Seeds of ideas. Forged on earth.
+            </p>
+            <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-6 leading-tight">
+              Selected Works.
+            </h1>
+            <p className="text-dust-rose text-base leading-relaxed max-w-md mb-10">
+              Ideas have energy. We transform them into visual stories that
+              connect, inspire, and leave a lasting mark.
+            </p>
+            <Link href="/connect" className="btn-primary">
+              <span>Start a project</span>
+              <span className="btn-badge">
+                <ArrowRight size={13} aria-hidden="true" />
+              </span>
+            </Link>
+          </div>
+        </section>
 
-      {/* Portfolio grid with filters */}
-      <section className="py-12 md:py-16" aria-label="Portfolio projects">
-        <ProjectGrid projects={projects} featuredProject={featuredProject} />
-      </section>
+        {/* Portfolio grid with filters */}
+        <section className="py-12 md:py-16" aria-label="Portfolio projects">
+          <ProjectGrid projects={projects} featuredProject={featuredProject} />
+        </section>
       </div>
       <DecorativeBlossoms />
     </main>
