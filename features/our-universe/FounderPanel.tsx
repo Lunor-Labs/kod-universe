@@ -6,7 +6,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@/components/ui/Socia
 export function FounderPanel() {
   return (
     <section
-      className="section-padding bg-kod-canvas border-t border-kod-border"
+      className="section-padding-sm bg-kod-canvas"
       aria-label="Founder Biography"
     >
       <div className="container-site">

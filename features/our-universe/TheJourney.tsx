@@ -102,9 +102,9 @@ const steps = [
 
 export function TheJourney() {
   return (
-    <section className="section-padding" aria-label="The Journey">
+    <section className="section-padding-sm" aria-label="The Journey">
       <div className="container-site">
-        <div className="border border-kod-border rounded-xl bg-kod-mist/70 p-8 sm:p-12 shadow-sm">
+        <div className="rounded-xl bg-kod-mist/70 p-8 sm:p-12 shadow-sm">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 text-sm font-semibold tracking-[0.25em] uppercase text-kod-text-2">
               <span aria-hidden="true">✦</span>

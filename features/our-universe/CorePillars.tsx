@@ -1,19 +1,19 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, HandFist, University } from "lucide-react";
 
 export function CorePillars() {
   return (
     <section
-      className="border-t border-b border-kod-border bg-kod-canvas py-12 md:py-16"
+      className="bg-kod-canvas py-12 md:py-16"
       aria-label="Core Pillars"
     >
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-kod-border">
           <div className="lg:px-8 first:pl-0 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
                 <svg
-                  className="w-10 h-10"
+                  className="w-16 h-16"
                   viewBox="0 0 40 40"
                   fill="none"
                   stroke="currentColor"
@@ -41,24 +41,8 @@ export function CorePillars() {
 
           <div className="lg:px-8 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 mb-5 text-kod-orange flex items-center justify-center">
-                <svg
-                  className="w-10 h-10"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.2"
-                >
-                  <circle cx="20" cy="20" r="8" />
-                  <ellipse
-                    cx="20"
-                    cy="20"
-                    rx="18"
-                    ry="6"
-                    transform="rotate(-25 20 20)"
-                  />
-                  <circle cx="29" cy="14" r="1.5" fill="currentColor" />
-                </svg>
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+                <University className="w-10 h-10"/>
               </div>
               <h3 className="pillar-heading mb-3">Our Philosophy</h3>
               <p className="text-kod-text-2 text-sm leading-relaxed mb-6">
@@ -78,17 +62,8 @@ export function CorePillars() {
 
           <div className="lg:px-8 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 mb-5 text-kod-orange flex items-center justify-center">
-                <svg
-                  className="w-9 h-9"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2a1.5 1.5 0 0 0-1.5 1.5v6.5h-1V5a1.5 1.5 0 0 0-3 0v7a6.5 6.5 0 0 0 13 0V6.5a1.5 1.5 0 0 0-3 0V10h-1V3.5A1.5 1.5 0 0 0 13.5 2h-1.5z"
-                    opacity="0.85"
-                  />
-                </svg>
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+                <HandFist className="w-10 h-10"/>
               </div>
               <h3 className="pillar-heading mb-3">Our Values</h3>
               <ul className="text-kod-text-2 text-sm leading-relaxed space-y-1.5 mb-6">
@@ -117,9 +92,9 @@ export function CorePillars() {
 
           <div className="lg:px-8 last:pr-0 flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
                 <svg
-                  className="w-10 h-10"
+                  className="w-16 h-16"
                   viewBox="0 0 40 40"
                   fill="none"
                   stroke="currentColor"
