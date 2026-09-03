@@ -38,7 +38,7 @@ export function Header() {
 
   const headerBg =
     scrolled || menuOpen
-      ? "bg-canvas/95 backdrop-blur-sm shadow-sm"
+      ? "bg-canvas/45 backdrop-blur-sm shadow-sm"
       : "bg-transparent";
 
   return (
@@ -92,10 +92,10 @@ export function Header() {
               </nav>
 
               <div className="hidden md:block">
-                <Link href="/connect" className="btn-primary" style={{ height: '44px', paddingLeft: '20px', paddingRight: '6px' }}>
-                  <span className="text-[11px]">Free Consultation</span>
+                <Link href="/connect" className="btn-primary !bg-black" style={{ height: '44px', paddingLeft: '20px', paddingRight: '6px' }}>
+                  <span className="">Connect with KoD</span>
                   <span className="btn-badge" style={{ width: '32px', height: '32px' }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </span>
                 </Link>
               </div>

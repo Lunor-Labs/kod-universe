@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform, AnimatePresence, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+  useReducedMotion,
+} from "framer-motion";
 
 const SLIDES = [
   {
@@ -14,7 +20,8 @@ const SLIDES = [
     titleHighlight: "Modern ",
     description: (
       <>
-        We believe creative forces arrive from the universe - <br className="hidden md:block" />
+        We believe creative forces arrive from the universe -{" "}
+        <br className="hidden md:block" />
         carrying meaning, energy, and responsibility.
         <br className="hidden md:block" />
         We transform these seeds of ideas into modern
@@ -33,9 +40,12 @@ const SLIDES = [
     titleHighlight: "Taking ",
     description: (
       <>
-        We listen to the universe, observing signals and shifts.<br className="hidden md:block" />
-        Aligning raw potential with human truth, we shape<br className="hidden md:block" />
-        brand identities that resonate deeply and endure<br className="hidden md:block" />
+        We listen to the universe, observing signals and shifts.
+        <br className="hidden md:block" />
+        Aligning raw potential with human truth, we shape
+        <br className="hidden md:block" />
+        brand identities that resonate deeply and endure
+        <br className="hidden md:block" />
         across changing landscapes and eras.
       </>
     ),
@@ -50,9 +60,12 @@ const SLIDES = [
     titleHighlight: "What's ",
     description: (
       <>
-        Whether you have a spark or need help finding one,<br className="hidden md:block" />
-        we are here to turn ideas into tangible impact.<br className="hidden md:block" />
-        Join us in building experiences that connect,<br className="hidden md:block" />
+        Whether you have a spark or need help finding one,
+        <br className="hidden md:block" />
+        we are here to turn ideas into tangible impact.
+        <br className="hidden md:block" />
+        Join us in building experiences that connect,
+        <br className="hidden md:block" />
         inspire, and leave a lasting mark.
       </>
     ),
@@ -72,7 +85,8 @@ export function HeroSection() {
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
-    const update = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(!e.matches);
+    const update = (e: MediaQueryListEvent | MediaQueryList) =>
+      setIsMobile(!e.matches);
     update(mq);
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
@@ -95,20 +109,23 @@ export function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative flex items-center overflow-hidden bg-stone-300"
+      className="relative flex items-center overflow-hidden bg-stone-300 min-h-screen"
       aria-label="Hero slider"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <AnimatePresence initial={false} mode="sync">
-        <motion.div
+        {/* <motion.div
           key={`bg-${currentSlide}`}
           className="absolute inset-0 z-0"
           style={disableParallax ? undefined : { y: imageY }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: disableParallax ? 0.6 : 1.1, ease: "easeInOut" }}
+          transition={{
+            duration: disableParallax ? 0.6 : 1.1,
+            ease: "easeInOut",
+          }}
         >
           <Image
             src={slide.image}
@@ -119,6 +136,7 @@ export function HeroSection() {
             className="object-cover object-center"
             aria-hidden="true"
           />
+          
           <div
             className="absolute inset-0"
             style={{
@@ -127,14 +145,26 @@ export function HeroSection() {
             }}
             aria-hidden="true"
           />
-        </motion.div>
+        </motion.div> */}
+        <div className="absolute inset-0 z-0 w-full h-full">
+          <video
+            src={"/video/cave-painting.mp4"}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-center"
+            aria-hidden="true"
+          />
+          
+        </div>
       </AnimatePresence>
 
       <div className="container-site relative z-10 pt-28 md:pt-36 pb-20 w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
-            className="max-w-2xl"
+            className="relative max-w-2xl"
             style={disableParallax ? undefined : { y: textY }}
             initial="hidden"
             animate="show"
@@ -143,31 +173,48 @@ export function HeroSection() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+                transition: { staggerChildren: 0.18, delayChildren: 0.1 },
               },
               exit: {
                 opacity: 0,
-                y: -20,
                 transition: { duration: 0.4 },
               },
             }}
           >
-            <motion.p 
+            <motion.p
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+                hidden: { opacity: 0, x: -40 },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+                exit: {
+                  opacity: 0,
+                  x: 40,
+                  transition: { duration: 0.35 },
+                },
               }}
               className="text-sm font-semibold tracking-widest uppercase text-black mb-6"
             >
               {slide.eyebrow}
             </motion.p>
 
-            <motion.h1 
+            <motion.h1
               variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
+                hidden: { opacity: 0, x: 50 },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+                },
+                exit: {
+                  opacity: 0,
+                  x: -40,
+                  transition: { duration: 0.35 },
+                },
               }}
-              className="font-metropolis text-earth text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] mb-6 tracking-tight"
+              className="text-earth text-4xl sm:text-5xl md:text-7xl font-normal leading-[1.1] mb-6 tracking-tight"
             >
               {slide.title1} <br />
               {slide.titleHighlight}
@@ -176,10 +223,19 @@ export function HeroSection() {
               </em>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+                hidden: { opacity: 0, x: -35 },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+                exit: {
+                  opacity: 0,
+                  x: 30,
+                  transition: { duration: 0.3 },
+                },
               }}
               className="text-earth text-sm md:text-base leading-relaxed mb-10 max-w-md font-medium"
             >
@@ -188,11 +244,24 @@ export function HeroSection() {
 
             <motion.div
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+                hidden: { opacity: 0, x: 40 },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+                exit: {
+                  opacity: 0,
+                  x: -30,
+                  transition: { duration: 0.3 },
+                },
               }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block"
+              >
                 <Link
                   href={slide.linkHref}
                   className="inline-flex items-center gap-3 bg-earth hover:bg-void-black text-canvas 
@@ -213,55 +282,123 @@ export function HeroSection() {
           </motion.div>
         </AnimatePresence>
 
+        <motion.div className="absolute -top-20 -right-200 w-full h-full z-10">
+          <img
+            src="/icons/Web Hero Design-23.png"
+            alt="Moon"
+            className="w-180 h-auto opacity-60 "
+          />
+        </motion.div>
         <motion.div
-          className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3 text-white/60"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
+          className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3"
+          initial="hidden"
+          animate="show"
           aria-hidden="true"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { staggerChildren: 0.12, delayChildren: 1 },
+            },
+          }}
         >
-          <svg
-            className="w-8 h-8 mb-1 text-white/80"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
+          {/* Moon symbol — entrance slide + CSS spin */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: -15 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+              },
+            }}
           >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
-          </svg>
+            <svg
+              className="w-8 h-8 mb-1 text-white/80 animate-spin-slow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
+            </svg>
+          </motion.div>
 
-          <div className="w-1 h-1 rounded-full bg-white/50" />
-          <div className="w-1 h-1 rounded-full bg-white/60" />
-          <div className="w-1 h-1 rounded-full bg-white/70" />
+          {/* Dot trail — entrance pop + CSS twinkle */}
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={`dot-top-${i}`}
+              className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
+              style={{ animationDelay: `${i * 0.4}s` }}
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+              }}
+            />
+          ))}
 
-          <svg
-            className="w-6 h-6 my-1 text-white/90"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
+          {/* Compass star — entrance spin-in + CSS slow rotation */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, scale: 0.5, rotate: -45 },
+              show: {
+                opacity: 1,
+                scale: 1,
+                rotate: 0,
+                transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+              },
+            }}
           >
-            <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
-          </svg>
+            <svg
+              className="w-6 h-6 my-1 text-white/90 animate-spin-slower"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+            >
+              <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
+            </svg>
+          </motion.div>
 
-          <div className="w-1 h-1 rounded-full bg-white/70" />
-          <div className="w-1 h-1 rounded-full bg-white/60" />
-          <div className="w-1 h-1 rounded-full bg-white/50" />
+          {/* Dot trail bottom — entrance pop + CSS twinkle */}
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={`dot-bot-${i}`}
+              className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
+              style={{ animationDelay: `${1.2 + i * 0.4}s` }}
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+              }}
+            />
+          ))}
 
-          <svg
-            className="w-8 h-8 mt-1 text-white/70"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
+          {/* Circle — entrance slide-up + CSS breathe */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 15 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+              },
+            }}
           >
-            <circle cx="12" cy="12" r="9" />
-          </svg>
+            <svg
+              className="w-8 h-8 mt-1 text-white animate-breathe"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+            >
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+          </motion.div>
         </motion.div>
       </div>
 
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -280,7 +417,7 @@ export function HeroSection() {
             }`}
           />
         ))}
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
