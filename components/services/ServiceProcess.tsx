@@ -33,7 +33,7 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
             aria-hidden="true"
           />
 
-          <div className="space-y-16 lg:space-y-24">
+          <div className="space-y-12 lg:space-y-24">
             {steps.map((step, idx) => {
               const isEven = idx % 2 === 0;
               return (
@@ -45,16 +45,19 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
                     {step.number}
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
                     <div className={`lg:col-span-5 ${isEven ? "lg:text-right" : "lg:order-last"}`}>
                       <ScrollReveal variant={isEven ? "left" : "right"}>
-                        <span className="text-sm font-semibold tracking-[0.2em] uppercase text-kod-orange mb-2 block">
+                        <div className="inline-flex items-center gap-2 lg:hidden px-3 py-1 bg-kod-orange/10 rounded-full text-kod-orange text-xs font-semibold tracking-wider uppercase mb-3">
+                          <span>PHASE {step.number}</span>
+                        </div>
+                        <span className="hidden lg:block text-sm font-semibold tracking-[0.2em] uppercase text-kod-orange mb-2">
                           {step.number} {step.title}
                         </span>
-                        <h3 className="font-metropolis font-semibold text-2xl text-kod-earth mb-3">
+                        <h3 className="font-metropolis font-semibold text-2xl sm:text-3xl text-kod-earth mb-3">
                           {step.subtitle}
                         </h3>
-                        <p className="text-kod-text-2 text-sm leading-relaxed font-light">
+                        <p className="text-kod-text-2 text-sm sm:text-base leading-relaxed font-light">
                           {step.description}
                         </p>
                       </ScrollReveal>

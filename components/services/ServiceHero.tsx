@@ -28,7 +28,7 @@ export function ServiceHero({
 
   return (
     <section
-      className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 border-b border-kod-border bg-kod-canvas overflow-hidden "
+      className="relative pt-28 pb-20 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-36 border-b border-kod-border bg-kod-canvas overflow-hidden"
       aria-label="Service hero"
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -41,7 +41,6 @@ export function ServiceHero({
           playsInline
           className="w-full h-full object-cover object-top opacity-60"
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-kod-canvas/90 via-kod-canvas/60 to-transparent" /> */}
       </div>
 
       <div className="container-site relative z-10">
@@ -57,28 +56,28 @@ export function ServiceHero({
           </div>
           <div className="lg:col-span-11 xl:col-span-10 relative z-20">
             <ScrollReveal variant="left">
-              <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-6 block drop-shadow-sm">
+              <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-4 sm:mb-6 block drop-shadow-sm">
                 {eyebrow}
               </span>
 
-              <h1 className="font-metropolis font-semibold text-5xl sm:text-6xl lg:text-6xl text-kod-earth leading-[1.06] mb-8 text-balance drop-shadow-sm max-w-4xl">
-                {titlePrefix}
+              <h1 className="font-metropolis font-semibold text-4xl sm:text-5xl lg:text-6xl text-kod-earth leading-[1.08] mb-6 sm:mb-8 text-balance drop-shadow-sm max-w-4xl">
+                {titlePrefix}{" "}
                 <span className="block sm:inline font-editorial italic font-normal text-kod-earth">
                   {titleItalic}
                 </span>
               </h1>
 
-              <p className="text-base md:text-lg text-kod-text-2 leading-relaxed max-w-xl font-medium mb-10 drop-shadow-sm">
+              <p className="text-base sm:text-lg md:text-lg text-kod-text-2 leading-relaxed max-w-xl font-medium mb-8 sm:mb-10 drop-shadow-sm">
                 {description}
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/connect"
-                  className="group inline-flex items-center gap-4 bg-kod-orange text-white pl-8 pr-3 py-3 rounded-full font-metropolis font-semibold text-sm tracking-[0.15em] uppercase hover:bg-kod-crimson transition-all shadow-lg"
+                  className="group inline-flex items-center gap-3 sm:gap-4 bg-kod-orange text-white pl-6 sm:pl-8 pr-3 py-3 rounded-full font-metropolis font-semibold text-xs sm:text-sm tracking-[0.15em] uppercase hover:bg-kod-crimson transition-all shadow-lg"
                 >
                   <span>START A BRAND PROJECT</span>
-                  <span className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-kod-crimson transition-all">
+                  <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-kod-crimson transition-all flex-shrink-0">
                     <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>

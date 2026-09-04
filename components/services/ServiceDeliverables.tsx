@@ -28,7 +28,7 @@ export function ServiceDeliverables({
                 <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange block">
                   SERVICE {serviceNumber}
                 </span>
-                <div className="flex items-center gap-3 text-sm tracking-widest uppercase font-semibold text-kod-text-2">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm tracking-widest uppercase font-semibold text-kod-text-2">
                   <span>01 Strategy</span>
                   <span className="text-kod-orange font-bold">
                     / 02 Identity
@@ -74,13 +74,13 @@ export function ServiceDeliverables({
                       variant="up"
                       delay={idx * 0.08}
                     >
-                      <div className="py-6 md:px-8 group hover:bg-black/[0.02] transition-colors flex items-start justify-between gap-4">
-                        <div className="flex items-start gap-4">
-                          <div className="w-20 h-20 rounded-full bg-kod-mist flex items-center justify-center text-kod-orange group-hover:bg-kod-orange group-hover:text-white transition-all flex-shrink-0 mt-0.5">
-                            <Icon size={32} />
+                      <div className="py-5 sm:py-6 md:px-8 group hover:bg-black/[0.02] transition-colors flex items-start justify-between gap-3 sm:gap-4">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                          <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-kod-mist flex items-center justify-center text-kod-orange group-hover:bg-kod-orange group-hover:text-white transition-all flex-shrink-0 mt-0.5">
+                            <Icon size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8" />
                           </div>
                           <div>
-                            <h3 className="font-metropolis font-semibold text-base text-kod-earth group-hover:text-kod-orange transition-colors mb-1.5">
+                            <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
                               {item.title}
                             </h3>
                             <p className="text-kod-text-2 text-sm leading-relaxed font-light">
@@ -88,8 +88,8 @@ export function ServiceDeliverables({
                             </p>
                           </div>
                         </div>
-                        <span className="text-kod-text-2/40 group-hover:text-kod-orange group-hover:translate-x-1 transition-all pt-1">
-                          <ArrowRight size={24} />
+                        <span className="hidden sm:block text-kod-text-2/40 group-hover:text-kod-orange group-hover:translate-x-1 transition-all pt-1 flex-shrink-0">
+                          <ArrowRight size={20} />
                         </span>
                       </div>
                     </ScrollReveal>
@@ -105,13 +105,13 @@ export function ServiceDeliverables({
                       variant="up"
                       delay={(idx + 3) * 0.08}
                     >
-                      <div className="py-6 md:px-8 group hover:bg-black/[0.02] transition-colors flex items-start justify-between gap-4">
-                        <div className="flex items-start gap-4">
-                          <div className="w-20 h-20 rounded-full bg-kod-mist flex items-center justify-center text-kod-orange group-hover:bg-kod-orange group-hover:text-white transition-all flex-shrink-0 mt-0.5">
-                            <Icon size={32} />
+                      <div className="py-5 sm:py-6 md:px-8 group hover:bg-black/[0.02] transition-colors flex items-start justify-between gap-3 sm:gap-4">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                          <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-kod-mist flex items-center justify-center text-kod-orange group-hover:bg-kod-orange group-hover:text-white transition-all flex-shrink-0 mt-0.5">
+                            <Icon size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8" />
                           </div>
                           <div>
-                            <h3 className="font-metropolis font-semibold text-base text-kod-earth group-hover:text-kod-orange transition-colors mb-1.5">
+                            <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
                               {item.title}
                             </h3>
                             <p className="text-kod-text-2 text-sm leading-relaxed font-light">
@@ -119,8 +119,8 @@ export function ServiceDeliverables({
                             </p>
                           </div>
                         </div>
-                        <span className="text-kod-text-2/40 group-hover:text-kod-orange group-hover:translate-x-1 transition-all pt-1">
-                          <ArrowRight size={24} />
+                        <span className="hidden sm:block text-kod-text-2/40 group-hover:text-kod-orange group-hover:translate-x-1 transition-all pt-1 flex-shrink-0">
+                          <ArrowRight size={20} />
                         </span>
                       </div>
                     </ScrollReveal>

@@ -101,7 +101,7 @@ export function ServiceSystemMosaic() {
                   </div>
                 </div>
                 <div className="md:col-span-3">
-                  <div className="relative h-full min-h-[360px] rounded overflow-hidden bg-kod-black border-2 border-kod-border shadow-xl group p-2.5 flex flex-col justify-between">
+                  <div className="relative h-full min-h-[300px] md:min-h-[360px] rounded overflow-hidden bg-kod-black border-2 border-kod-border shadow-xl group p-2.5 flex flex-col justify-between">
                     <div className="relative h-full w-full rounded overflow-hidden bg-kod-black flex flex-col justify-between p-4 border border-white/5">
                       <Image
                         src="/project-cosmic.jpg"
@@ -147,20 +147,20 @@ export function ServiceSystemMosaic() {
                           <br />
                           Advancing tomorrow.
                         </p>
-                        <div className="bg-kod-orange text-white text-sm tracking-widest uppercase font-semibold text-center py-2 rounded-full shadow">
+                        <div className="bg-kod-orange text-white text-xs sm:text-sm tracking-widest uppercase font-semibold text-center py-2 rounded-full shadow">
                           LEARN MORE
                         </div>
                       </div>
                     </div>
 
-                    <span className="absolute bottom-4 left-4 text-sm text-white/70 font-light tracking-wider select-none z-20">
+                    <span className="absolute bottom-4 left-4 text-sm text-white/80 font-medium tracking-wider select-none z-20">
                       Digital
                     </span>
                   </div>
                 </div>
 
                 <div className="md:col-span-6 flex flex-col gap-3.5">
-                  <div className="grid grid-cols-2 gap-3.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group">
                       <Image
                         src="/system/hd/packaging_soluna.jpg"
@@ -169,7 +169,7 @@ export function ServiceSystemMosaic() {
                         className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                      <span className="absolute bottom-3 left-3 text-sm text-white/70 font-light tracking-wider select-none">
+                      <span className="absolute bottom-3 left-3 text-sm text-white/80 font-medium tracking-wider select-none">
                         Packaging
                       </span>
                     </div>
@@ -189,13 +189,13 @@ export function ServiceSystemMosaic() {
                           possible.
                         </span>
                       </div>
-                      <span className="absolute bottom-3 left-3 text-sm text-white/70 font-light tracking-wider select-none z-10">
+                      <span className="absolute bottom-3 left-3 text-sm text-white/80 font-medium tracking-wider select-none z-10">
                         Campaign
                       </span>
                     </div>
                   </div>
 
-                  <div className="relative aspect-[32/13] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1">
+                  <div className="relative aspect-[16/9] md:aspect-[32/13] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1 min-h-[180px]">
                     <Image
                       src="/system/hd/guidelines_spread.jpg"
                       alt="Brand guidelines and style manual book spread"
@@ -203,7 +203,7 @@ export function ServiceSystemMosaic() {
                       className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                    <span className="absolute bottom-3 left-3 text-sm text-white/70 font-light tracking-wider select-none">
+                    <span className="absolute bottom-3 left-3 text-xs sm:text-sm text-white/70 font-light tracking-wider select-none">
                       Guidelines
                     </span>
                   </div>

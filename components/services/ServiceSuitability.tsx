@@ -34,16 +34,16 @@ export function ServiceSuitability({ points, faqs }: ServiceSuitabilityProps) {
                   return (
                     <div
                       key={point.title}
-                      className="p-5 rounded flex items-start gap-4"
+                      className="p-3.5 sm:p-5 rounded flex items-start gap-3 sm:gap-4 border border-kod-border/40 sm:border-none"
                     >
-                      <div className="w-12 h-12 rounded bg-kod-mist flex items-center justify-center text-kod-orange flex-shrink-0 mt-0.5">
-                        <Icon size={25} />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded bg-kod-mist flex items-center justify-center text-kod-orange flex-shrink-0 mt-0.5">
+                        <Icon size={22} className="sm:w-6 sm:h-6" />
                       </div>
                       <div>
-                        <h3 className="font-metropolis font-semiboldtext-kod-earth mb-1">
+                        <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth mb-1">
                           {point.title}
                         </h3>
-                        <p className="text-kod-text-2 leading-relaxed font-light">
+                        <p className="text-kod-text-2 text-sm leading-relaxed font-light">
                           {point.description}
                         </p>
                       </div>

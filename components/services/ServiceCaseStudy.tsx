@@ -22,34 +22,34 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
                 {caseStudy.badge}
               </span>
 
-              <h2 className="font-metropolis font-semibold text-4xl sm:text-5xl text-white mb-2">
+              <h2 className="font-metropolis font-semibold text-4xl sm:text-5xl lg:text-5xl text-white mb-2">
                 {caseStudy.client}
               </h2>
 
-              <p className="font-editorial italic text-xl text-kod-gold mb-6">
+              <p className="font-editorial italic text-xl sm:text-2xl text-kod-gold mb-6">
                 {caseStudy.tagline}
               </p>
 
-              <p className="text-white/70 text-sm leading-relaxed font-light mb-8 max-w-md">
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed font-light mb-8 max-w-md">
                 {caseStudy.description}
               </p>
               <div className="mb-8">
-                <span className="text-sm font-semibold tracking-widest uppercase text-white/50 mb-3 block">
+                <span className="text-sm font-semibold tracking-widest uppercase text-white/60 mb-3 block">
                   DELIVERABLES
                 </span>
-                <div className="grid grid-cols-2 gap-2 text-sm text-white/80 font-light">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-white/90 font-light">
                   {caseStudy.deliverables.map((del) => (
                     <div key={del} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-kod-orange" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-kod-orange flex-shrink-0" />
                       <span>{del}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-6 items-end mb-8">
+              <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start sm:items-end mb-8">
                 <div>
-                  <span className="text-sm font-semibold tracking-widest uppercase text-white/50 mb-2.5 block">
+                  <span className="text-sm font-semibold tracking-widest uppercase text-white/60 mb-2.5 block">
                     COLOR SYSTEM
                   </span>
                   <div className="flex items-center gap-1.5">
@@ -68,7 +68,7 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
                   <span className="font-editorial text-4xl text-white font-normal leading-none select-none">
                     Aa
                   </span>
-                  <div className="text-sm uppercase tracking-wider text-white/60 leading-tight">
+                  <div className="text-sm uppercase tracking-wider text-white/70 leading-tight">
                     <p className="text-white font-semibold font-editorial">
                       {caseStudy.headlineFont}
                     </p>
