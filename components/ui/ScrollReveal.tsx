@@ -51,6 +51,7 @@ export function ScrollReveal({
   return (
     <div style={{ width }} className={`relative ${className}`}>
       <motion.div
+        className={className}
         variants={getVariants()}
         initial={hasMounted ? "hidden" : false}
         whileInView="show"

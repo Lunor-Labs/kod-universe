@@ -1,60 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Share2,
-  Fingerprint,
-  Package,
-  Palette,
-  Globe,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-
-const capabilityIcons: Record<string, React.ElementType> = {
-  Share2,
-  Fingerprint,
-  Package,
-  Palette,
-  Globe,
-};
-
-const caps = [
-  {
-    iconName: "Share2",
-    title: "Social Media",
-    description:
-      "Scroll-stopping content that sparks conversations and builds communities.",
-    href: "/capabilities#social-media",
-  },
-  {
-    iconName: "Fingerprint",
-    title: "Branding & Identity",
-    description:
-      "Purpose-driven brands with identity systems that inspire trust and endure.",
-    href: "/capabilities#branding-and-identity",
-  },
-  {
-    iconName: "Package",
-    title: "Package Design",
-    description:
-      "Packaging that protects, persuades, and elevates your product on every shelf.",
-    href: "/capabilities#package-design",
-  },
-  {
-    iconName: "Palette",
-    title: "Creative Work",
-    description:
-      "Campaigns, content, and visuals that tell powerful stories across any medium.",
-    href: "/capabilities#creative-work",
-  },
-  {
-    iconName: "Globe",
-    title: "Digital Experiences",
-    description:
-      "Websites and digital experiences crafted for clarity, and conversion.",
-    href: "/capabilities#digital-experiences",
-  },
-];
+import { capabilities } from "@/data/capabilities";
 
 export function ServicesOverview() {
   return (
@@ -73,22 +22,28 @@ export function ServicesOverview() {
           </ScrollReveal>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {caps.map((cap, index) => {
-            const Icon = capabilityIcons[cap.iconName] ?? Share2;
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {capabilities.map((cap, index) => {
             return (
-              <ScrollReveal key={cap.title} variant={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+              <ScrollReveal key={cap.id} variant={index % 2 === 0 ? "left" : "right"} delay={index * 0.06} className="h-full">
                 <Link
-                  href={cap.href}
-                  className="group relative bg-canvas border border-border-warm/30 rounded p-5
+                  href={`/capabilities#${cap.slug}`}
+                  className="group relative bg-canvas border border-border-warm/30 rounded p-3
                              hover:border-dust-rose hover:shadow-sm transition-all duration-300
-                             focus-visible:outline-solar-gold flex flex-col h-full"
+                             focus-visible:outline-solar-gold flex flex-col items-center text-center h-full"
                 >
                   <div
-                    className="w-16 h-16 rounded border border-border-warm/30 flex items-center justify-center mb-4
-                               group-hover:border-signal-orange group-hover:text-signal-orange transition-colors duration-200 text-earth"
+                    className="w-20 h-20 rounded border border-border-warm/30 flex items-center justify-center mb-4
+                               group-hover:border-signal-orange transition-colors duration-200"
                   >
-                    <Icon size={28} aria-hidden="true" />
+                    <Image
+                      src={`/icons/${cap.iconName}.png`}
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="object-contain"
+                      aria-hidden="true"
+                    />
                   </div>
   
                   <h3
@@ -100,7 +55,7 @@ export function ServicesOverview() {
                   <p className="text-secondary text-sm leading-relaxed flex-1">
                     {cap.description}
                   </p>
-                  <div className="mt-4 flex items-center justify-end">
+                  <div className="mt-4 flex items-center justify-center">
                     <ArrowRight
                       size={13}
                       className="text-secondary group-hover:text-signal-orange group-hover:translate-x-1 

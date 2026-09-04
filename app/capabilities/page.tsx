@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Share2, Fingerprint, Package, Palette, Globe, Search, Compass, Pen, Rocket, CheckCircle } from "lucide-react";
+import { ArrowRight, Search, Compass, Pen, Rocket, CheckCircle } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { capabilities, processSteps } from "@/data/capabilities";
 import { projects } from "@/data/projects";
@@ -10,16 +10,8 @@ import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 export const metadata: Metadata = {
   title: "Capabilities",
   description:
-    "Explore KOD Universe's creative capabilities: social media, branding & identity, package design, creative work, and digital experiences.",
+    "Explore KOD Universe's creative capabilities: social media, branding & identity, package design, logo design, web design, poster design, filming, visual storytelling, thumbnail design, merchandising, architecture designs, and digital art.",
   alternates: { canonical: "/capabilities" },
-};
-
-const capabilityIconMap: Record<string, React.ElementType> = {
-  Share2,
-  Fingerprint,
-  Package,
-  Palette,
-  Globe,
 };
 
 const processIconMap: Record<string, React.ElementType> = {
@@ -93,23 +85,27 @@ export default function CapabilitiesPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {capabilities.map((cap) => {
-              const Icon = capabilityIconMap[cap.iconName] ?? Share2;
               return (
                 <article
                   key={cap.id}
                   id={cap.slug}
-                  className="bg-white border border-border-warm rounded-sm p-7 flex flex-col 
+                  className="bg-white border border-border-warm rounded-sm p-4 flex flex-col 
                              hover:border-dust-rose hover:shadow-sm transition-all duration-300"
                   aria-labelledby={`cap-${cap.id}-title`}
                 >
-                  {/* Icon */}
                   <div
-                    className="w-10 h-10 rounded-sm border border-border-warm flex items-center justify-center mb-5 text-signal-orange"
+                    className="w-24 h-24 rounded-sm border border-border-warm flex items-center justify-center mb-5"
                     aria-hidden="true"
                   >
-                    <Icon size={18} />
+                    <Image
+                      src={`/icons/${cap.iconName}.png`}
+                      alt=""
+                      width={60}
+                      height={60}
+                      className="object-contain"
+                    />
                   </div>
 
                   <h3
@@ -118,13 +114,11 @@ export default function CapabilitiesPage() {
                   >
                     {cap.title}
                   </h3>
-                  <p className="text-secondary text-sm leading-relaxed mb-6 flex-1">
+                  <p className="text-secondary leading-relaxed mb-6 flex-1">
                     {cap.longDescription}
                   </p>
-
-                  {/* Deliverables */}
                   <div className="border-t border-border-warm pt-5 mt-auto">
-                    <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
+                    <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
                       What you get
                     </p>
                     <ul className="space-y-1.5" role="list">
@@ -139,10 +133,8 @@ export default function CapabilitiesPage() {
                       ))}
                     </ul>
                   </div>
-
-                  {/* Proof Projects */}
                   <div className="border-t border-border-warm pt-5 mt-5">
-                    <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
+                    <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
                       Selected works
                     </p>
                     <div className="flex flex-col gap-2">
@@ -182,8 +174,6 @@ export default function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
-      {/* Process */}
       <section className="section-padding bg-white border-t border-border-warm" aria-label="Creative process">
         <div className="container-site">
           <div className="text-center mb-14">
@@ -195,12 +185,11 @@ export default function CapabilitiesPage() {
           </div>
 
           <div className="relative">
-            {/* Connecting line */}
             <div
               className="hidden lg:block absolute top-[2.25rem] left-[12.5%] right-[12.5%] h-px bg-border-warm"
               aria-hidden="true"
             />
-            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6" role="list">
+            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-3" role="list">
               {processSteps.map((step) => {
                 const Icon = processIconMap[step.iconName] ?? Search;
                 return (
@@ -215,7 +204,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-metropolis font-semibold text-earth text-sm tracking-wide uppercase mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-secondary text-sm leading-relaxed max-w-[160px]">
+                    <p className="text-secondary leading-relaxed max-w-[160px]">
                       {step.description}
                     </p>
                   </li>
@@ -225,8 +214,6 @@ export default function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
-      {/* Deliverables promise */}
       <section className="section-padding border-t border-border-warm" aria-label="What clients receive">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -246,13 +233,11 @@ export default function CapabilitiesPage() {
                       className="text-signal-orange flex-shrink-0 mt-0.5"
                       aria-hidden="true"
                     />
-                    <p className="text-secondary text-sm leading-relaxed">{item}</p>
+                    <p className="text-secondary leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* CTA card */}
             <div className="bg-earth rounded-sm p-10 relative overflow-hidden texture-cave">
               <div
                 className="absolute -right-10 -top-10 w-48 h-48 rounded-full border border-dust-rose/20"
