@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Layout helpers ───────────────────────────── */
 .container-site {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -190,6 +190,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1024px) {
   .section-padding-sm { padding-top: 72px; padding-bottom: 72px; }
+}
+
+.section-padding-top { padding-top: 56px; }
+@media (min-width: 768px) {
+  .section-padding-top { padding-top: 72px; }
+}
+@media (min-width: 1024px) {
+  .section-padding-top { padding-top: 96px; }
 }
 
 /* ── Typography helpers ───────────────────────── */

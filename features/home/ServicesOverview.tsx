@@ -8,7 +8,7 @@ import { capabilities } from "@/data/capabilities";
 export function ServicesOverview() {
   return (
     <section
-      className="section-padding bg-white"
+      className="section-padding-top bg-transparent"
       aria-label="Our capabilities"
     >
       <div className="container-site">
@@ -28,7 +28,7 @@ export function ServicesOverview() {
               <ScrollReveal key={cap.id} variant={index % 2 === 0 ? "left" : "right"} delay={index * 0.06} className="h-full">
                 <Link
                   href={`/capabilities#${cap.slug}`}
-                  className="group relative bg-canvas border border-border-warm/30 rounded p-3
+                  className="group relative bg-white border border-border-warm/30 rounded p-3
                              hover:border-dust-rose hover:shadow-sm transition-all duration-300
                              focus-visible:outline-solar-gold flex flex-col items-center text-center h-full"
                 >

@@ -92,7 +92,6 @@ export function HeroSection() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  const imageY = useTransform(scrollY, [0, 400], [0, 60]);
   const textY = useTransform(scrollY, [0, 400], [0, -30]);
   const disableParallax = isMobile || prefersReducedMotion;
 
@@ -115,37 +114,6 @@ export function HeroSection() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <AnimatePresence initial={false} mode="sync">
-        {/* <motion.div
-          key={`bg-${currentSlide}`}
-          className="absolute inset-0 z-0"
-          style={disableParallax ? undefined : { y: imageY }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{
-            duration: disableParallax ? 0.6 : 1.1,
-            ease: "easeInOut",
-          }}
-        >
-          <Image
-            src={slide.image}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-            aria-hidden="true"
-          />
-          
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(237, 234, 234, 0.2) 0%, rgba(237, 234, 234, 0.4) 30%, rgba(237, 234, 234, 0.1) 60%)",
-            }}
-            aria-hidden="true"
-          />
-        </motion.div> */}
         <div className="absolute inset-0 z-0 w-full h-full">
           <video
             src={"/video/cave-painting.mp4"}
@@ -302,7 +270,6 @@ export function HeroSection() {
             },
           }}
         >
-          {/* Moon symbol — entrance slide + CSS spin */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: -15 },
@@ -324,8 +291,6 @@ export function HeroSection() {
               <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
             </svg>
           </motion.div>
-
-          {/* Dot trail — entrance pop + CSS twinkle */}
           {[0, 1, 2].map((i) => (
             <motion.div
               key={`dot-top-${i}`}
@@ -337,8 +302,6 @@ export function HeroSection() {
               }}
             />
           ))}
-
-          {/* Compass star — entrance spin-in + CSS slow rotation */}
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0.5, rotate: -45 },
@@ -360,8 +323,6 @@ export function HeroSection() {
               <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
             </svg>
           </motion.div>
-
-          {/* Dot trail bottom — entrance pop + CSS twinkle */}
           {[0, 1, 2].map((i) => (
             <motion.div
               key={`dot-bot-${i}`}
@@ -373,8 +334,6 @@ export function HeroSection() {
               }}
             />
           ))}
-
-          {/* Circle — entrance slide-up + CSS breathe */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 15 },
@@ -397,27 +356,7 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
-      >
-        {SLIDES.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            aria-current={currentSlide === index ? "true" : "false"}
-            className={`w-2 h-2 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solar-gold ${
-              currentSlide === index
-                ? "bg-white scale-125 shadow-sm"
-                : "bg-white/40 hover:bg-white/70"
-            }`}
-          />
-        ))}
-      </motion.div> */}
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas to-transparent pointer-events-none z-20" />
     </section>
   );
 }

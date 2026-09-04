@@ -25,16 +25,17 @@ export default function HomePage() {
   const featuredProject = getFeaturedProject();
 
   return (
-    <main className="relative bg-canvas overflow-hidden">
+    <main className="relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-10">
+        <Image
+          src="/main/cave-small-items.webp"
+          alt=""
+          fill
+          className="object-contain object-top"
+          priority
+        />
+      </div>
       <div className="relative z-10">
-        <div className="absolute top-[50%] -left-[100px] w-[700px] h-[700px] pointer-events-none opacity-[0.12] mix-blend-multiply z-30 transform rotate-90">
-          <Image
-            src="/main/deco-2.png"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </div>
         <HeroSection />
         <FeaturedProjects projects={projects} />
         <ServicesOverview />
@@ -45,7 +46,7 @@ export default function HomePage() {
         <Testimonials />
         <ContactCTA />
       </div>
-      <DecorativeBlossoms />
+      {/* <DecorativeBlossoms /> */}
     </main>
   );
 }
