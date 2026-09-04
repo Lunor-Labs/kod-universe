@@ -116,7 +116,7 @@ export function HeroSection() {
       <AnimatePresence initial={false} mode="sync">
         <div className="absolute inset-0 z-0 w-full h-full">
           <video
-            src={"/video/cave-painting.mp4"}
+            src={"/video/main-video.mp4"}
             autoPlay
             loop
             muted
@@ -124,7 +124,6 @@ export function HeroSection() {
             className="w-full h-full object-cover object-center"
             aria-hidden="true"
           />
-          
         </div>
       </AnimatePresence>
 
@@ -356,6 +355,36 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
+      <div className="absolute inset-0 pointer-events-none z-50 top-140 sm:top-30">
+        <div className="container-site relative w-full flex justify-end">
+          <Link
+            href="/our-universe"
+            className="group flex flex-col items-center gap-4 pointer-events-auto pr-2 md:pr-4"
+          >
+            <motion.div
+              animate={{ scale: [1, 1.08, 1] }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
+              className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl"
+            >
+              <Image
+                src="/icons/Web Hero Design-20.png"
+                alt="About Us"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+            <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
+              About Us
+            </span>
+          </Link>
+        </div>
+      </div>
+
       <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas to-transparent pointer-events-none z-20" />
     </section>
   );
