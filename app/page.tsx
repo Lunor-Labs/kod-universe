@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/features/home/HeroSection";
 import { ShowreelSection } from "@/features/home/ShowreelSection";
+import { RadicalSceneSection } from "@/features/home/RadicalSceneSection";
 import { FeaturedProjects } from "@/features/home/FeaturedProjects";
 import { ServicesOverview } from "@/features/home/ServicesOverview";
 import { ProcessSection } from "@/features/home/ProcessSection";
@@ -8,6 +9,7 @@ import { ImpactStats } from "@/features/home/ImpactStats";
 import { InfoCards } from "@/features/home/InfoCards";
 import { Testimonials } from "@/features/home/Testimonials";
 import { ContactCTA } from "@/features/home/ContactCTA";
+import { FAQSection } from "@/features/home/FAQSection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
@@ -43,7 +45,9 @@ export default function HomePage() {
         <ImpactStats />
         <ShowreelSection />
         <InfoCards featuredProject={featuredProject} />
+        {/* <RadicalSceneSection /> */}
         <Testimonials />
+        <FAQSection />
         <ContactCTA />
       </div>
       {/* <DecorativeBlossoms /> */}

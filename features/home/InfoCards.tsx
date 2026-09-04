@@ -108,7 +108,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
 
   return (
     <section
-      className="section-padding-sm bg-transparent"
+      className="section-padding-top bg-transparent"
       aria-label="Story and project highlights"
     >
       <div className="container-site">
