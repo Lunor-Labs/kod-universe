@@ -40,19 +40,20 @@ const deliverableItems = [
 
 export default function CapabilitiesPage() {
   return (
-    <main className="relative bg-canvas overflow-hidden">
-      <div className="relative z-10">
+    <main className="relative bg-canvas  overflow-hidden">
+      <div className="relative z-10 ">
         <section
-          className="relative bg-earth overflow-hidden texture-cave pt-32 pb-20"
+          className="relative bg-earth overflow-hidden texture-cave flex items-center justify-center min-h-[80vh] "
           aria-label="Capabilities page hero"
         >
-          <div className="absolute inset-0 opacity-50" aria-hidden="true">
-            <Image
-              src="/hero.jpg"
-              alt=""
-              fill
-              className="object-cover object-center"
-              priority
+          <div className="absolute inset-0 opacity-80" aria-hidden="true">
+            <video
+              src="/video/video-4.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-center"
             />
             <div
               className="absolute inset-0"
@@ -90,6 +91,8 @@ export default function CapabilitiesPage() {
               </div>
             </div>
           </div>
+
+          <div className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/30 to-transparent pointer-events-none z-20" aria-hidden="true" />
         </section>
 
         {/* Service cards */}

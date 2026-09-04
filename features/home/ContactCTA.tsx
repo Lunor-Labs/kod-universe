@@ -10,7 +10,7 @@ export function ContactCTA() {
   return (
     <section className="relative overflow-hidden section-padding bg-transparent " aria-label="Contact call to action">
       <div className="container-site bg-white/50 py-8 rounded-xl w-full">
-        <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col justify-center">
             <ScrollReveal variant="left">
               <p className="eyebrow mb-6 text-earth/60">Get in touch</p>

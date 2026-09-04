@@ -87,6 +87,8 @@ export function ServiceHero({
           </div>
         </div>
       </div>
+
+      <div className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-kod-canvas via-kod-canvas/60 to-transparent pointer-events-none z-20" aria-hidden="true" />
     </section>
   );
 }

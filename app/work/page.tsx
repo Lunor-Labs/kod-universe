@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProjectGrid } from "@/features/work/ProjectGrid";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+
+import { SlowVideoBackdrop } from "@/components/ui/SlowVideoBackdrop";
 
 export const metadata: Metadata = {
   title: "Selected Works",
@@ -19,27 +20,23 @@ export default function WorkPage() {
   return (
     <main className="relative bg-canvas overflow-hidden">
       <div className="relative z-10">
-        {/* Page hero */}
         <section
-          className="relative overflow-hidden texture-cave bg-earth pt-32 pb-20"
+          className="relative overflow-hidden texture-cave bg-earth flex items-center justify-center min-h-screen pt-32 pb-20"
           aria-label="Portfolio page hero"
         >
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(58,47,45,0.96) 0%, rgba(58,47,45,0.82) 60%, rgba(201,186,186,0.2) 100%)",
-            }}
-            aria-hidden="true"
-          />
-          {/* Background hero image faded */}
-          <div className="absolute inset-0 opacity-30" aria-hidden="true">
-            <Image
-              src="/hero.jpg"
-              alt=""
-              fill
-              className="object-cover"
-              priority
+          <div className="absolute inset-0 opacity-80" aria-hidden="true">
+            <SlowVideoBackdrop
+              src="/video/video-5.mp4"
+              playbackRate={0.2}
+              className="w-full h-full object-cover object-center"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(58,47,45,0.75) 0%, rgba(58,47,45,0.5) 60%, rgba(201,186,186,0.15) 100%)",
+              }}
+              aria-hidden="true"
             />
           </div>
 
@@ -61,10 +58,11 @@ export default function WorkPage() {
               </span>
             </Link>
           </div>
+
+          <div className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/30 to-transparent pointer-events-none z-20" aria-hidden="true" />
         </section>
 
-        {/* Portfolio grid with filters */}
-        <section className="py-12 md:py-16" aria-label="Portfolio projects">
+        <section className="section-padding" aria-label="Portfolio projects">
           <ProjectGrid projects={projects} featuredProject={featuredProject} />
         </section>
       </div>

@@ -4,6 +4,7 @@ import { ShowreelSection } from "@/features/home/ShowreelSection";
 import { RadicalSceneSection } from "@/features/home/RadicalSceneSection";
 import { FeaturedProjects } from "@/features/home/FeaturedProjects";
 import { ServicesOverview } from "@/features/home/ServicesOverview";
+import { WhyUsSection } from "@/features/home/WhyUsSection";
 import { ProcessSection } from "@/features/home/ProcessSection";
 import { ImpactStats } from "@/features/home/ImpactStats";
 import { InfoCards } from "@/features/home/InfoCards";
@@ -36,17 +37,26 @@ export default function HomePage() {
           className="object-contain object-top"
           priority
         />
+        <Image
+          src="/main/cave-small-items.webp"
+          alt=""
+          fill
+          className="object-contain object-bottom opacity-30"
+          priority
+        />
       </div>
       <div className="relative z-10">
         <HeroSection />
         <FeaturedProjects projects={projects} />
         <ServicesOverview />
+
         <ProcessSection />
         <ImpactStats />
         <ShowreelSection />
         <InfoCards featuredProject={featuredProject} />
         {/* <RadicalSceneSection /> */}
         <Testimonials />
+        <WhyUsSection />
         <FAQSection />
         <ContactCTA />
       </div>

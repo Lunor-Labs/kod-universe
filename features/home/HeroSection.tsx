@@ -385,7 +385,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas to-transparent pointer-events-none z-20" />
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-20" aria-hidden="true" />
     </section>
   );
 }
