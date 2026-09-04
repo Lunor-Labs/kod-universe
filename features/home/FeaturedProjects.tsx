@@ -86,7 +86,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             </div>
           </div>
           <div className="lg:col-span-1 flex flex-col justify-start">
-            <div className="bg-white/70 p-8  flex justify-between">
+            <div className="bg-white/70 p-8 sm:flex justify-between">
               <div className="">
                 <div
                   className="absolute -right-12 -top-12 w-40 h-40 rounded-full border border-border-warm/60 opacity-50"
@@ -120,13 +120,13 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   />
                 </Link>
               </div>
-              <div className="">
+              <div className="pt-10 sm:pt-0">
                 <Image
                   src={"/main/circle.png"}
                   alt={""}
                   width={1500}
                   height={1500}
-                  className="object-cover"
+                  className="object-cover animate-spin-slower"
                 />
               </div>
             </div>
