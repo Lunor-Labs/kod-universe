@@ -20,4 +20,5 @@ export interface ProcessStep {
   title: string;
   description: string;
   iconName: string;
+  iconPath?: string;
 }

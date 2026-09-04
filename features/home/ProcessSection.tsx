@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Sun, Asterisk, PenTool, Target } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const steps = [
@@ -10,27 +10,27 @@ const steps = [
     title: "Discover",
     description:
       "We dive deep to understand your goals, audience, and opportunities.",
-    Icon: Sun,
+    iconPath: "/icons/Discover-Icon.png",
   },
   {
     number: "02",
     title: "Define",
     description:
       "We shape the strategy and creative direction with clarity and intent.",
-    Icon: Asterisk,
+    iconPath: "/icons/Define.png",
   },
   {
     number: "03",
     title: "Create",
     description: "We design, craft, and refine ideas that connect and convert.",
-    Icon: PenTool,
+    iconPath: "/icons/Create.png",
   },
   {
     number: "04",
     title: "Deliver",
     description:
       "We launch with precision and support your growth every step ahead.",
-    Icon: Target,
+    iconPath: "/icons/Deliver.png",
   },
 ];
 
@@ -79,13 +79,15 @@ export function ProcessSection() {
               >
                 <div className="flex items-start sm:items-center gap-5 z-10 bg-transparent lg:pr-2 w-full lg:w-auto">
                   <div
-                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-signal-orange/20 bg-signal-orange/5 
-                               flex items-center justify-center transition-colors"
+                    className="flex-shrink-0
+                               flex items-center justify-center transition-colors p-1 overflow-hidden"
                   >
-                    <step.Icon
-                      size={24}
-                      className="text-signal-orange stroke-[1.25]"
-                      aria-hidden="true"
+                    <Image
+                      src={step.iconPath}
+                      alt={step.title}
+                      width={72}
+                      height={72}
+                      className="object-contain w-full h-full"
                     />
                   </div>
 

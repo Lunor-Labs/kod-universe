@@ -227,23 +227,27 @@ export const processSteps: ProcessStep[] = [
     title: "Discover",
     description: "We dive deep to understand your goals, audience, and opportunities.",
     iconName: "Search",
+    iconPath: "/icons/Discover-Icon.png",
   },
   {
     number: "02",
     title: "Define",
     description: "We shape the strategy and creative direction with clarity and intent.",
     iconName: "Compass",
+    iconPath: "/icons/Define.png",
   },
   {
     number: "03",
     title: "Create",
     description: "We design, craft, and refine ideas that connect and convert.",
     iconName: "Pen",
+    iconPath: "/icons/Create.png",
   },
   {
     number: "04",
     title: "Deliver",
     description: "We launch with precision and support your growth every step ahead.",
     iconName: "Rocket",
+    iconPath: "/icons/Deliver.png",
   },
 ];
