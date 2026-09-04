@@ -45,16 +45,12 @@ export function ContactCTA() {
               <div className="flex flex-col gap-8 w-full md:w-80">
                 <div className="flex flex-col gap-4 border-b border-border-warm/30 pb-8 mb-2">
                   <a href="mailto:hello@koduniverse.com" className="flex items-center justify-between group py-2">
-                    <span className="text-earth font-metropolis font-semibold text-sm uppercase tracking-widest group-hover:text-dust-rose transition-colors">Email Us</span>
+                    <span className="text-earth font-metropolis font-semibold text-sm uppercase tracking-widest group-hover:text-dust-rose transition-colors">hello@koduniverse.com</span>
                     <Mail size={18} className="text-earth/50 group-hover:text-dust-rose transition-colors" />
                   </a>
-                  <a href="#" className="flex items-center justify-between group py-2">
-                    <span className="text-earth font-metropolis font-semibold text-sm uppercase tracking-widest group-hover:text-dust-rose transition-colors">Instagram</span>
-                    <ArrowUpRight size={18} className="text-earth/50 group-hover:text-dust-rose transition-colors" />
-                  </a>
-                  <a href="#" className="flex items-center justify-between group py-2">
-                    <span className="text-earth font-metropolis font-semibold text-sm uppercase tracking-widest group-hover:text-dust-rose transition-colors">LinkedIn</span>
-                    <ArrowUpRight size={18} className="text-earth/50 group-hover:text-dust-rose transition-colors" />
+                  <a href="tel:+947720000504" className="flex items-center justify-between group py-2">
+                    <span className="text-earth font-metropolis font-semibold text-sm uppercase tracking-widest group-hover:text-dust-rose transition-colors">Colombo, LK</span>
+                    <span className="text-earth/70 font-metropolis text-sm group-hover:text-dust-rose transition-colors">+94 77 2000 0504</span>
                   </a>
                 </div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>

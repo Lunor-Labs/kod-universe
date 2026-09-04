@@ -113,89 +113,84 @@ export default function CapabilitiesPage() {
                     key={cap.id}
                     id={cap.slug}
                     className="bg-white border border-border-warm rounded-sm p-4 flex flex-col 
-                             hover:border-dust-rose hover:shadow-sm transition-all duration-300"
+                             hover:border-signal-orange hover:shadow-sm transition-all duration-300 group"
                     aria-labelledby={`cap-${cap.id}-title`}
                   >
-                    <div
-                      className="w-24 h-24 rounded-sm border border-border-warm flex items-center justify-center mb-5"
-                      aria-hidden="true"
-                    >
-                      <Image
-                        src={`/icons/${cap.iconName}.png`}
-                        alt=""
-                        width={60}
-                        height={60}
-                        className="object-contain"
-                      />
-                    </div>
-
-                    <h3
-                      id={`cap-${cap.id}-title`}
-                      className="font-metropolis font-semibold text-earth text-lg mb-3"
-                    >
-                      {cap.title}
-                    </h3>
-                    <p className="text-secondary leading-relaxed mb-6 flex-1">
-                      {cap.longDescription}
-                    </p>
-                    <div className="border-t border-border-warm pt-5 mt-auto">
-                      <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
-                        What you get
-                      </p>
-                      <ul className="space-y-1.5" role="list">
-                        {cap.deliverables.slice(0, 4).map((d) => (
-                          <li
-                            key={d}
-                            className="flex items-start gap-2 text-sm text-secondary"
-                          >
-                            <span
-                              className="mt-1 w-1 h-1 rounded-full bg-signal-orange flex-shrink-0"
-                              aria-hidden="true"
-                            />
-                            {d}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="border-t border-border-warm pt-5 mt-5">
-                      <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
-                        Selected works
-                      </p>
-                      <div className="flex flex-col gap-2">
-                        {projects
-                          .filter(
-                            (p) =>
-                              p.category.toLowerCase() ===
-                              cap.title.toLowerCase(),
-                          )
-                          .slice(0, 2)
-                          .map((p) => (
-                            <Link
-                              key={p.id}
-                              href={`/work/${p.slug}`}
-                              className="text-sm text-earth hover:text-signal-orange transition-colors truncate font-medium flex items-center gap-2 group/link"
-                            >
-                              <span className="w-1 h-1 bg-border-warm rounded-full group-hover/link:bg-signal-orange transition-colors" />
-                              {p.title}
-                            </Link>
-                          ))}
-                      </div>
-                    </div>
-
-                    <Link
-                      href="/connect"
-                      className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold 
-                               tracking-[0.1em] uppercase text-earth hover:text-signal-orange 
-                               transition-colors duration-200 group"
-                      aria-label={`Start a ${cap.title} project`}
-                    >
-                      Start a project
-                      <ArrowRight
-                        size={12}
-                        className="group-hover:translate-x-0.5 transition-transform"
+                    <Link href={`/capabilities/${cap.slug}`} className="flex flex-col flex-1">
+                      <div
+                        className="w-24 h-24 rounded-sm border border-border-warm flex items-center justify-center mb-5
+                                   group-hover:border-signal-orange transition-colors duration-200"
                         aria-hidden="true"
-                      />
+                      >
+                        <Image
+                          src={`/icons/${cap.iconName}.png`}
+                          alt=""
+                          width={60}
+                          height={60}
+                          className="object-contain"
+                        />
+                      </div>
+
+                      <h3
+                        id={`cap-${cap.id}-title`}
+                        className="font-metropolis font-semibold text-earth text-lg mb-3 group-hover:text-signal-orange transition-colors duration-200"
+                      >
+                        {cap.title}
+                      </h3>
+                      <p className="text-secondary leading-relaxed mb-6 flex-1 text-sm">
+                        {cap.description}
+                      </p>
+                      <div className="border-t border-border-warm pt-5 mt-auto">
+                        <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
+                          What you get
+                        </p>
+                        <ul className="space-y-1.5" role="list">
+                          {cap.deliverables.slice(0, 3).map((d) => (
+                            <li
+                              key={d}
+                              className="flex items-start gap-2 text-sm text-secondary"
+                            >
+                              <span
+                                className="mt-1 w-1 h-1 rounded-full bg-signal-orange flex-shrink-0"
+                                aria-hidden="true"
+                              />
+                              {d}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </Link>
+
+                    <div className="border-t border-border-warm pt-5 mt-5 flex items-center justify-between">
+                      <Link
+                        href={`/capabilities/${cap.slug}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold 
+                                 tracking-[0.1em] uppercase text-signal-orange 
+                                 transition-colors duration-200 group/view"
+                        aria-label={`View ${cap.title} service details`}
+                      >
+                        View service
+                        <ArrowRight
+                          size={12}
+                          className="group-hover/view:translate-x-0.5 transition-transform"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                      <Link
+                        href="/connect"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold 
+                                 tracking-[0.1em] uppercase text-earth hover:text-signal-orange 
+                                 transition-colors duration-200 group/start"
+                        aria-label={`Start a ${cap.title} project`}
+                      >
+                        Start project
+                        <ArrowRight
+                          size={12}
+                          className="group-hover/start:translate-x-0.5 transition-transform"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </div>
                   </article>
                 );
               })}

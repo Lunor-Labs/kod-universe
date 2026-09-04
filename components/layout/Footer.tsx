@@ -61,15 +61,22 @@ export function Footer() {
               >
                 {siteConfig.contact.email}
               </a>
-              <a
-                href={`tel:${siteConfig.contact.phone.replace(/\D/g, "")}`}
-                className="block text-sm text-dust-rose hover:text-canvas transition-colors duration-200"
-              >
-                {siteConfig.contact.phone}
-              </a>
-              <p className="text-sm text-secondary">
-                {siteConfig.contact.location}
-              </p>
+              {siteConfig.contact.phones.map((phone) => (
+                <a
+                  key={phone.number}
+                  href={`tel:${phone.number.replace(/\D/g, "")}`}
+                  className="block text-sm text-dust-rose hover:text-canvas transition-colors duration-200"
+                >
+                  {phone.number} <span className="text-secondary opacity-70 ml-1">({phone.region})</span>
+                </a>
+              ))}
+              <div className="pt-2 space-y-1">
+                {siteConfig.contact.locations.map((loc) => (
+                  <p key={loc} className="text-sm text-secondary">
+                    {loc}
+                  </p>
+                ))}
+              </div>
             </div>
 
             <div className="flex items-center gap-4">

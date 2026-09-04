@@ -28,9 +28,9 @@ export default function HomePage() {
 
   return (
     <main className="relative overflow-hidden min-h-screen">
-      <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-10">
+      <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-40">
         <Image
-          src="/main/cave-small-items.webp"
+          src="/main/Wall-main-image-02.png"
           alt=""
           fill
           className="object-contain object-top"

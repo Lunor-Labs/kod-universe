@@ -13,9 +13,8 @@ export interface SocialLink {
 
 export interface ContactInfo {
   email: string;
-  phone: string;
-  location: string;
-  locationDetail: string;
+  phones: { region: string; number: string }[];
+  locations: string[];
 }
 
 export interface SiteConfig {

@@ -19,9 +19,12 @@ export const siteConfig: SiteConfig = {
   ],
   contact: {
     email: "hello@koduniverse.com",
-    phone: "+1 (415) 555-0198",
-    location: "San Francisco, California",
-    locationDetail: "Serving clients worldwide",
+    phones: [
+      { region: "Sri Lanka Hub", number: "+94 77 2000 0504" }
+    ],
+    locations: [
+      "Colombo 07, Sri Lanka"
+    ],
   },
 };
 

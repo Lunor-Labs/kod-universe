@@ -106,20 +106,25 @@ export default function ConnectPage() {
                   </li>
                   <li className="flex items-center gap-3">
                     <Phone size={16} className="text-secondary/60" />
-                    <a
-                      href={`tel:${siteConfig.contact.phone.replace(/\D/g, "")}`}
-                      className="hover:text-signal-orange transition-colors"
-                    >
-                      {siteConfig.contact.phone}
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      {siteConfig.contact.phones.map((phone) => (
+                        <a
+                          key={phone.number}
+                          href={`tel:${phone.number.replace(/\D/g, "")}`}
+                          className="hover:text-signal-orange transition-colors"
+                        >
+                          {phone.number}
+                          <span className="text-secondary ml-2 text-xs opacity-70">({phone.region})</span>
+                        </a>
+                      ))}
+                    </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <MapPin size={16} className="mt-0.5 text-secondary/60" />
-                    <div>
-                      <p>{siteConfig.contact.location}</p>
-                      <p className="mt-0.5 opacity-80">
-                        {siteConfig.contact.locationDetail}
-                      </p>
+                    <div className="flex flex-col gap-1">
+                      {siteConfig.contact.locations.map((loc) => (
+                        <p key={loc}>{loc}</p>
+                      ))}
                     </div>
                   </li>
                 </ul>
@@ -222,7 +227,7 @@ export default function ConnectPage() {
                 <p className="text-sm text-secondary leading-relaxed mb-3">
                   {siteConfig.name}
                   <br />
-                  {siteConfig.contact.location}
+                  {siteConfig.contact.locations[0]}
                   <br />
                   United States
                 </p>
