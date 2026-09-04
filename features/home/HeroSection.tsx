@@ -249,11 +249,17 @@ export function HeroSection() {
           </motion.div>
         </AnimatePresence>
 
-        <motion.div className="absolute -top-20 -right-200 w-full h-full z-10">
-          <img
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="absolute -top-10 -right-20 w-[480px] sm:w-[600px] h-[480px] sm:h-[600px] pointer-events-none z-10 overflow-hidden"
+        >
+          <Image
             src="/icons/Web Hero Design-23.png"
-            alt="Moon"
-            className="w-180 h-auto opacity-60 "
+            alt=""
+            fill
+            className="object-contain"
           />
         </motion.div>
         <motion.div
@@ -355,7 +361,7 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-      <div className="absolute inset-0 pointer-events-none z-50 top-140 sm:top-30">
+      <div className="absolute inset-0 pointer-events-none z-30 pt-36 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
           <Link
             href="/our-universe"
