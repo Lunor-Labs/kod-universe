@@ -121,7 +121,7 @@ export function Footer() {
               >
                 Terms of Service
               </Link>
-              <BackToTop />
+              {/* <BackToTop /> */}
             </div>
           </div>
         </div>

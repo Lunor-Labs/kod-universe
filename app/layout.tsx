@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import { FloatingActions } from "@/components/ui/FloatingActions";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,6 +54,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <FloatingActions />
         </SmoothScrollProvider>
       </body>
     </html>

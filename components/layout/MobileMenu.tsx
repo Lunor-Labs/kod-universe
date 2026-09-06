@@ -16,25 +16,29 @@ interface MobileMenuProps {
 
 const menuVariants = {
   closed: {
-    y: "-100%",
     opacity: 0,
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] },
+    transition: { duration: 0.2, ease: "easeInOut" as const },
   },
   open: {
-    y: "0%",
     opacity: 1,
-    transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] },
+    transition: { duration: 0.25, ease: "easeOut" as const },
   },
 };
 
 const containerVariants = {
-  closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
-  open: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+  closed: { opacity: 0 },
+  open: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05, delayChildren: 0.05 },
+  },
 };
 
 const itemVariants = {
-  closed: { y: 40, opacity: 0 },
-  open: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" as const } },
+  closed: { opacity: 0 },
+  open: {
+    opacity: 1,
+    transition: { duration: 0.25, ease: "easeOut" as const },
+  },
 };
 
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
@@ -74,21 +78,20 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           animate="open"
           exit="closed"
           variants={menuVariants}
-          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden"
+          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden [transform:translateZ(0)] will-change-[opacity] antialiased"
         >
-          {/* Decorative Background */}
-          <div className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.15] mix-blend-multiply z-0 transform rotate-45">
+          <div className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.12] mix-blend-multiply z-0 transform rotate-45">
             <Image src="/main/blossom.webp" alt="" fill className="object-contain" priority />
           </div>
 
           <nav aria-label="Mobile navigation" className="flex-1 flex flex-col justify-center relative z-10">
             <motion.ul variants={containerVariants} className="space-y-6" role="list">
               {siteConfig.nav.map((item) => (
-                <motion.li key={item.href} variants={itemVariants} className="overflow-hidden">
+                <motion.li key={item.href} variants={itemVariants}>
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="block font-editorial text-5xl sm:text-6xl text-earth hover:text-signal-orange transition-colors duration-300"
+                    className="block font-editorial text-5xl sm:text-6xl text-earth hover:text-signal-orange transition-colors duration-200"
                   >
                     {item.label}
                   </Link>
@@ -96,34 +99,21 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               ))}
             </motion.ul>
 
-            <motion.div
-              variants={containerVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-              className="mt-12"
-            >
-              <motion.div variants={itemVariants}>
-                <Link
-                  href="/connect"
-                  onClick={onClose}
-                  className="btn-primary w-fit"
-                >
-                  <span>Start a Project</span>
-                  <span className="btn-badge">
-                    <ArrowRight size={13} aria-hidden="true" />
-                  </span>
-                </Link>
-              </motion.div>
+            <motion.div variants={itemVariants} className="mt-12">
+              <Link
+                href="/connect"
+                onClick={onClose}
+                className="btn-primary w-fit"
+              >
+                <span>Start a Project</span>
+                <span className="btn-badge">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
+              </Link>
             </motion.div>
           </nav>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-auto border-t border-border-warm pt-6 flex items-center justify-between relative z-10"
-          >
+          <div className="mt-auto border-t border-border-warm pt-6 flex items-center justify-between relative z-10">
             <p className="font-serif italic text-secondary text-sm">
               Ancient ideas. Modern impact.
             </p>
@@ -139,7 +129,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                 <FacebookIcon className="w-5 h-5" />
               </a>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
