@@ -1,0 +1,94 @@
+export interface DropdownLink {
+  label: string;
+  href: string;
+  badge?: string;
+}
+
+export interface DropdownSpotlight {
+  title: string;
+  description: string;
+  href: string;
+  tag: string;
+  image?: string;
+}
+
+export interface DropdownSectionData {
+  primaryHeading: string;
+  primaryLinks: DropdownLink[];
+  secondaryHeading: string;
+  secondaryLinks: DropdownLink[];
+  spotlight: DropdownSpotlight;
+}
+
+export const navigationDropdowns: Record<string, DropdownSectionData> = {
+  PORTFOLIO: {
+    primaryHeading: "Explore Portfolio",
+    primaryLinks: [
+      { label: "All Selected Work", href: "/work" },
+      { label: "Social Media Management", href: "/work?category=SOCIAL+MEDIA" },
+      { label: "Brand Identity & Systems", href: "/work?category=BRANDING" },
+      { label: "Packaging & Structural Craft", href: "/work?category=PACKAGE+DESIGN" },
+    ],
+    secondaryHeading: "Featured Case Studies",
+    secondaryLinks: [
+      { label: "Bio-Oil Social Media", href: "/work/bio-oil-skincare-campaign" },
+      { label: "Area 6 Brand Campaign", href: "/work/area-6-social-media" },
+      { label: "Coats Sri Lanka Post", href: "/work/coats-sri-lanka-campaign" },
+      { label: "Niwarthana Packaging", href: "/work/niwarthana-packaging-design" },
+      { label: "Frans Niwasa Identity", href: "/work/frans-niwasa-identity" },
+    ],
+    spotlight: {
+      tag: "Case Study Spotlight",
+      title: "Bio-Oil Social Media Management",
+      description: "A transformative digital presence built on authentic skincare narratives.",
+      href: "/work/bio-oil-skincare-campaign",
+      image: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Bio Oil Podium Showcase.png",
+    },
+  },
+  SERVICES: {
+    primaryHeading: "Explore Capabilities",
+    primaryLinks: [
+      { label: "All Creative Services", href: "/capabilities" },
+      { label: "Content Marketing & Social", href: "/capabilities#marketing" },
+      { label: "Branding & Visual Systems", href: "/capabilities#designing" },
+      { label: "Package Design & Craft", href: "/capabilities#beyond" },
+    ],
+    secondaryHeading: "Our Disciplines",
+    secondaryLinks: [
+      { label: "Creative Direction & Art", href: "/capabilities" },
+      { label: "Digital Growth & Media", href: "/capabilities#marketing" },
+      { label: "Tactile Structural Box Dies", href: "/capabilities#beyond" },
+      { label: "Brand Guidelines & Vector Kits", href: "/capabilities#designing" },
+      { label: "Bespoke Studio Inquiry", href: "/connect" },
+    ],
+    spotlight: {
+      tag: "Studio Philosophy",
+      title: "Ancient Ideas. Modern Impact.",
+      description: "Rooted in timeless creative principles, engineered for modern brand dominance.",
+      href: "/capabilities",
+      image: "/projects/Social-Media/Area 6/Location-mention-post 2.png",
+    },
+  },
+  "OUR STORY": {
+    primaryHeading: "The Studio",
+    primaryLinks: [
+      { label: "Our Story & Vision", href: "/our-universe" },
+      { label: "Studio Philosophy & Origins", href: "/our-universe#philosophy" },
+      { label: "Core Creative Pillars", href: "/our-universe#pillars" },
+      { label: "Client Wall & Collaborators", href: "/our-universe#wall" },
+    ],
+    secondaryHeading: "Studio Insights",
+    secondaryLinks: [
+      { label: "Why KOD Universe", href: "/our-universe" },
+      { label: "Creative Process & Rhythm", href: "/capabilities" },
+      { label: "Careers & Internships", href: "/connect#careers" },
+      { label: "Press & Media Inquiries", href: "/connect#press" },
+    ],
+    spotlight: {
+      tag: "Studio Manifesto",
+      title: "Crafting Brands That Endure",
+      description: "We partner with visionary founders to build identities with soul, weight, and longevity.",
+      href: "/our-universe",
+    },
+  },
+};
