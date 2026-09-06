@@ -57,24 +57,7 @@ export const capabilities: Capability[] = [
     ],
     relatedProjectSlugs: ["threadline-textiles-packaging", "bio-oil-retail-packaging"],
   },
-  {
-    id: "4",
-    slug: "logo-design",
-    title: "Logo Design",
-    iconName: "Logo Design",
-    description: "Distinctive marks and symbols that capture the essence of your brand at a glance.",
-    longDescription:
-      "A logo is the cornerstone of your visual identity. We design memorable, versatile marks — wordmarks, lettermarks, emblems, and abstract symbols — that distil your brand's personality into a single, enduring icon. Every curve, weight, and colour choice is purposeful.",
-    deliverables: [
-      "Logo concept exploration and refinement",
-      "Primary and alternate logo variations",
-      "Favicon and app icon design",
-      "Colour and monochrome versions",
-      "Usage guidelines and clear space rules",
-      "File delivery in all required formats",
-    ],
-    relatedProjectSlugs: ["corepoint-fitness-identity", "soluna-wellness-identity"],
-  },
+
   {
     id: "5",
     slug: "web-design",
@@ -147,24 +130,7 @@ export const capabilities: Capability[] = [
     ],
     relatedProjectSlugs: ["origins-concept-series", "cosmic-explorations"],
   },
-  {
-    id: "9",
-    slug: "thumbnail-design",
-    title: "Thumbnail Design",
-    iconName: "THUMBNAIL DESIGN",
-    description: "Click-worthy thumbnails that boost engagement and drive views across digital platforms.",
-    longDescription:
-      "In a sea of content, your thumbnail is your first impression. We design attention-grabbing thumbnails for YouTube, social media, and digital platforms that balance curiosity with clarity — maximising click-through rates while staying true to your brand aesthetic.",
-    deliverables: [
-      "Thumbnail concept and layout design",
-      "Typography and colour optimisation",
-      "A/B testing variants",
-      "Platform-specific sizing and formatting",
-      "Template systems for series content",
-      "Performance analysis and iteration",
-    ],
-    relatedProjectSlugs: [],
-  },
+
   {
     id: "10",
     slug: "merchandising",

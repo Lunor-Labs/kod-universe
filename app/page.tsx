@@ -31,19 +31,19 @@ export default function HomePage() {
     <main className="relative overflow-hidden min-h-screen">
       <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-40">
         <Image
-          src="/main/Wall-main-image-02.png"
+          src="/main/Wall-main-image-04.png"
           alt=""
           fill
-          className="object-contain object-top"
+          className="object-contain object-top "
           priority
         />
-        <Image
+        {/* <Image
           src="/main/cave-small-items.webp"
           alt=""
           fill
           className="object-contain object-bottom opacity-30"
           priority
-        />
+        /> */}
       </div>
       <div className="relative z-10">
         <HeroSection />
@@ -51,7 +51,7 @@ export default function HomePage() {
         <ServicesOverview />
 
         <ProcessSection />
-        <ImpactStats />
+        {/* <ImpactStats /> */}
         <ShowreelSection />
         <InfoCards featuredProject={featuredProject} />
         {/* <RadicalSceneSection /> */}

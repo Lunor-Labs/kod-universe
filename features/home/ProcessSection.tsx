@@ -80,7 +80,7 @@ export function ProcessSection() {
                 <div className="flex items-start sm:items-center gap-5 z-10 bg-transparent lg:pr-2 w-full lg:w-auto">
                   <div
                     className="flex-shrink-0
-                               flex items-center justify-center transition-colors p-1 overflow-hidden"
+                               flex items-center justify-center bg-white rounded-full shadow-xs transition-colors p-3 overflow-hidden"
                   >
                     <Image
                       src={step.iconPath}

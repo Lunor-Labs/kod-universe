@@ -273,46 +273,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     ],
   },
 
-  "logo-design": {
-    categoryTrack: ["Mark", "Symbol", "Vector"],
-    heroTitlePrefix: "Craft iconic marks that ",
-    heroTitleItalic: "endure over time.",
-    philosophyTitlePrefix: "A logo is the ",
-    philosophyTitleItalic: "cornerstone of identity.",
-    philosophyCol1: "We design memorable, versatile marks — wordmarks, emblems, and abstract symbols — that capture your essence at a glance.",
-    philosophyCol2: "Every line, ratio, and vector curve is purposefully crafted to maintain clarity from a small 16px favicon to giant billboards.",
-    deliverables: [
-      { num: "01", icon: Target, title: "Concept Exploration", description: "Diverse visual territories and symbol direction options." },
-      { num: "02", icon: Sparkles, title: "Primary & Alternate Logos", description: "Full, stacked, horizontal, and monogram logo variations." },
-      { num: "03", icon: Compass, title: "Favicon & App Icons", description: "Optimized small-scale marks for digital products and apps." },
-      { num: "04", icon: Volume2, title: "Color & Monochrome Suites", description: "Dark, light, single-color, and reversed logo variations." },
-      { num: "05", icon: Sliders, title: "Clear Space Rules", description: "Proportional guidelines to protect mark integrity in print and web." },
-      { num: "06", icon: BookOpen, title: "Master File Delivery", description: "SVG, EPS, PNG, PDF, and vector AI files delivered." },
-    ],
-    featuredCaseStudy: {
-      badge: "FEATURED MARK",
-      client: "CorePoint Fitness",
-      tagline: "Dynamic Symbol Architecture",
-      description: "Designed a high-energy, versatile geometric emblem and wordmark system for CorePoint's international fitness franchise.",
-      deliverables: ["Primary Mark", "Secondary Monogram", "Vector Suite", "Brand Assets"],
-      palette: ["#161616", "#E54C2A", "#FFFFFF", "#2D2825"],
-      headlineFont: "Metropolis",
-      bodyFont: "Inter",
-      slug: "corepoint-fitness-identity",
-      imageSrc: "/project-corepoint.jpg",
-    },
-    qualificationPoints: [
-      { icon: Sparkles, title: "Starting a new venture.", description: "Requiring an iconic mark that projects immediate credibility." },
-      { icon: TrendingUp, title: "Current logo doesn't scale.", description: "Existing logo gets blurry or illegible on mobile devices." },
-      { icon: RefreshCw, title: "Rebranding after pivot.", description: "Your business has evolved beyond your original logo mark." },
-    ],
-    faqs: [
-      { question: "How many logo concepts do you present?", answer: "We present 3 to 5 distinct creative directions during initial exploration." },
-      { question: "Will I own the copyright?", answer: "Yes, 100% full commercial copyright is transferred to you upon project completion." },
-      { question: "In what file formats will I receive my logo?", answer: "You get SVG, EPS, PDF, AI vector source files, and high-res transparent PNGs." },
-      { question: "Can you assist with trademark registration?", answer: "We provide clean vector art suitable for trademark filing and guide clearance checks." },
-    ],
-  },
+
 
   "web-design": {
     categoryTrack: ["UX Strategy", "UI Design", "Next.js"],
@@ -478,46 +439,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     ],
   },
 
-  "thumbnail-design": {
-    categoryTrack: ["CTR Optimization", "Graphics", "A/B Testing"],
-    heroTitlePrefix: "Maximize video views with ",
-    heroTitleItalic: "click-worthy art.",
-    philosophyTitlePrefix: "Thumbnails are your ",
-    philosophyTitleItalic: "digital front door.",
-    philosophyCol1: "In a crowded feed, your thumbnail is your first impression. We design click-worthy thumbnails that drive views.",
-    philosophyCol2: "We balance curiosity, high-contrast imagery, and bold typography to maximize click-through rates while staying true to your brand.",
-    deliverables: [
-      { num: "01", icon: Target, title: "CTR Concept Development", description: "Compositional strategies engineered to grab instant user focus." },
-      { num: "02", icon: Sparkles, title: "High-Contrast Graphics", description: "Color contrast and focal point design for mobile screens." },
-      { num: "03", icon: Compass, title: "Expressive Typography", description: "Bold thumbnail text layout designed for rapid 1-second legibility." },
-      { num: "04", icon: Volume2, title: "A/B Testing Variants", description: "Multiple thumbnail variations provided for platform split testing." },
-      { num: "05", icon: Sliders, title: "Series Template System", description: "Reusable thumbnail framework for consistent video channel branding." },
-      { num: "06", icon: BookOpen, title: "Platform Sizing Specs", description: "Exported in YouTube, TikTok, and social media display specs." },
-    ],
-    featuredCaseStudy: {
-      badge: "FEATURED CHANNEL DESIGN",
-      client: "Cosmic Explorations",
-      tagline: "Thumbnail & Channel System",
-      description: "Designed a high-CTR thumbnail template system for Cosmic Explorations, lifting channel view rate by 42%.",
-      deliverables: ["Thumbnail Framework", "A/B Variants", "Typography Kit", "Channel Art"],
-      palette: ["#0B0C10", "#E54C2A", "#EAC240", "#FFFFFF"],
-      headlineFont: "Metropolis",
-      bodyFont: "Inter",
-      slug: "cosmic-explorations",
-      imageSrc: "/project-cosmic.jpg",
-    },
-    qualificationPoints: [
-      { icon: Sparkles, title: "YouTube CTR is below target.", description: "Your video quality is great, but impressions aren't turning into clicks." },
-      { icon: TrendingUp, title: "Channel branding feels messy.", description: "Each thumbnail looks random without cohesive channel identity." },
-      { icon: RefreshCw, title: "Publishing high-frequency content.", description: "Needing modular templates for rapid thumbnail turnaround." },
-    ],
-    faqs: [
-      { question: "What is your turnaround time for thumbnails?", answer: "Standard thumbnail turnarounds are 24 to 48 hours per batch." },
-      { question: "Do you supply editable source files?", answer: "Yes, we provide editable Photoshop (PSD) or Figma template files." },
-      { question: "Do you provide A/B test variations?", answer: "Yes, every thumbnail project includes 2 to 3 visual variants for testing." },
-      { question: "What dimensions do you deliver?", answer: "1920x1080 for YouTube/Vimeo, plus vertical 1080x1920 specs for Shorts/Reels." },
-    ],
-  },
+
 
   "merchandising": {
     categoryTrack: ["Product Design", "Apparel", "Print Specs"],
