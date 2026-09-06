@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { SectionLabel } from "@/components/ui/SectionLabel";
-import { ProjectCard } from "@/components/ui/ProjectCard";
-import { projects, getProjectBySlug, getRelatedProjects } from "@/data/projects";
+import {
+  projects,
+  getProjectBySlug,
+  getRelatedProjects,
+} from "@/data/projects";
+import type { Project, ProjectPillar } from "@/types/project";
+import { ProjectHeroShowcase } from "@/features/work/ProjectHeroShowcase";
+import { ProjectCaseStudy } from "@/features/work/ProjectCaseStudy";
+import { ProjectNavigation } from "@/features/work/ProjectNavigation";
+import { RelatedProjectsSection } from "@/features/work/RelatedProjectsSection";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -26,12 +30,93 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function getPillarsForProject(project: Project): ProjectPillar[] {
+  if (project.pillars && project.pillars.length > 0) {
+    return project.pillars;
+  }
+  if (project.category === "SOCIAL MEDIA") {
+    return [
+      {
+        title: "Growth",
+        description:
+          "Built a stronger digital presence with consistent branded content.",
+        icon: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Icon/Growth.png",
+      },
+      {
+        title: "Awareness",
+        description:
+          "Created memorable campaigns, product education and seasonal storytelling.",
+        icon: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Icon/Awareness.png",
+      },
+      {
+        title: "Engagement",
+        description:
+          "Designed conversation-driven posts and community-first content.",
+        icon: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Icon/Engagement.png",
+      },
+      {
+        title: "Lead Conversion",
+        description:
+          "Supported promotions, inquiries and product-driven action.",
+        icon: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Icon/Lead Conversion.png",
+      },
+    ];
+  }
+  if (project.category === "PACKAGE DESIGN") {
+    return [
+      {
+        title: "Structural Craft",
+        description:
+          "Custom engineered box dies, tactile debossing, and protective architecture.",
+      },
+      {
+        title: "Visual Harmony",
+        description:
+          "Curated harmonious color palettes and refined typographic balance.",
+      },
+      {
+        title: "Shelf Impact",
+        description:
+          "Distinguished boutique presence commanding attention across retail shelves.",
+      },
+      {
+        title: "Sustainability",
+        description:
+          "Ethically sourced paper stocks, eco inks, and sustainable finishing.",
+      },
+    ];
+  }
+  return [
+    {
+      title: "Brand Strategy",
+      description:
+        "Uncovered market white-space and established core positioning.",
+    },
+    {
+      title: "Visual Identity",
+      description:
+        "Engineered iconic logomark, typographic system, and color hierarchy.",
+    },
+    {
+      title: "Touchpoint System",
+      description:
+        "Applied identity seamlessly across physical, spatial, and digital media.",
+    },
+    {
+      title: "System Guidelines",
+      description:
+        "Comprehensive asset kits, vector libraries, and production-ready rules.",
+    },
+  ];
+}
+
 export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
   const related = getRelatedProjects(project.relatedSlugs).slice(0, 3);
+  const pillars = getPillarsForProject(project);
 
   const idx = projects.findIndex((p) => p.slug === slug);
   const prev = idx > 0 ? projects[idx - 1] : null;
@@ -39,244 +124,10 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <>
-      <section
-        className="relative pt-24 md:pt-32 pb-0 bg-earth overflow-hidden"
-        aria-label={`${project.title} project hero`}
-      >
-        <div className="container-site relative z-10 pb-12 md:pb-16">
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-1.5 text-dust-rose/70 font-medium 
-                       tracking-wide hover:text-dust-rose transition-colors mb-8"
-            aria-label="Back to all projects"
-          >
-            <ArrowLeft size={16} aria-hidden="true" />
-            All work
-          </Link>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
-            <div>
-              <p className="text-sm font-semibold tracking-[0.2em] uppercase text-clay mb-3">
-                {project.category}
-              </p>
-              <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-4 leading-tight">
-                {project.title}
-              </h1>
-              <p className="text-dust-rose text-base leading-relaxed max-w-md">
-                {project.shortDescription}
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-4 lg:justify-end">
-              {[
-                { label: "Client", value: project.client },
-                { label: "Year", value: String(project.year) },
-                { label: "Category", value: project.category.split(" & ")[0] },
-              ].map((meta) => (
-                <div key={meta.label}>
-                  <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-1">
-                    {meta.label}
-                  </p>
-                  <p className="text-canvas text-sm font-medium">{meta.value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="relative aspect-[3/2] w-full">
-          <Image
-            src={project.heroImage.src}
-            alt={project.heroImage.alt}
-            fill
-            priority
-            className="object-contain"
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(to bottom, rgba(58,47,45,0.6) 0%, transparent 40%)",
-            }}
-            aria-hidden="true"
-          />
-        </div>
-      </section>
-
-      {/* Content */}
-      <article className="section-padding bg-canvas" aria-label="Project details">
-        <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            {/* Main body */}
-            <div className="lg:col-span-2 space-y-12">
-              {/* Overview */}
-              <div>
-                <SectionLabel>Project overview</SectionLabel>
-                <p className="text-earth text-base leading-relaxed">{project.overview}</p>
-              </div>
-
-              <div className="divider-warm" />
-
-              {/* Challenge */}
-              <div>
-                <SectionLabel>The challenge</SectionLabel>
-                <p className="text-secondary text-base leading-relaxed">{project.challenge}</p>
-              </div>
-
-              <div className="divider-warm" />
-
-              {/* Approach */}
-              <div>
-                <SectionLabel>Our approach</SectionLabel>
-                <p className="text-secondary text-base leading-relaxed">{project.approach}</p>
-              </div>
-            </div>
-
-            {/* Sidebar: Deliverables */}
-            <aside className="lg:col-span-1" aria-label="Project deliverables">
-              <div className="sticky top-28 bg-white border border-border-warm rounded-sm p-6">
-                <SectionLabel>Deliverables</SectionLabel>
-                <ul className="space-y-2 mt-4" role="list">
-                  {project.deliverables.map((d) => (
-                    <li
-                      key={d}
-                      className="flex items-start gap-2 text-sm text-secondary"
-                    >
-                      <span
-                        className="mt-1.5 w-1.5 h-1.5 rounded-full bg-signal-orange flex-shrink-0"
-                        aria-hidden="true"
-                      />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-8 pt-6 border-t border-border-warm">
-                  <p className="text-sm font-semibold tracking-[0.15em] uppercase text-secondary mb-3">
-                    Tags
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] font-medium tracking-wide uppercase px-2.5 py-1 
-                                   bg-mist border border-border-warm rounded-sm text-secondary"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          {/* Gallery */}
-          {project.galleryImages.length > 0 && (
-            <div className="mt-16" aria-label="Project image gallery">
-              <SectionLabel className="mb-6">Project gallery</SectionLabel>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {project.galleryImages.map((img, i) => (
-                  <div key={i} className="img-zoom rounded-sm overflow-hidden aspect-[4/3] relative">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </article>
-
-      {/* Prev / Next navigation */}
-      <nav
-        className="border-t border-border-warm bg-white"
-        aria-label="Project navigation"
-      >
-        <div className="container-site py-8">
-          <div className="grid grid-cols-2 gap-4">
-            {prev ? (
-              <Link
-                href={`/work/${prev.slug}`}
-                className="group flex items-center gap-3 p-4 rounded-sm hover:bg-canvas transition-colors"
-                aria-label={`Previous project: ${prev.title}`}
-              >
-                <ArrowLeft
-                  size={16}
-                  className="text-secondary group-hover:text-signal-orange group-hover:-translate-x-1 transition-all"
-                  aria-hidden="true"
-                />
-                <div>
-                  <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-0.5">
-                    Previous
-                  </p>
-                  <p className="text-sm font-medium text-earth group-hover:text-signal-orange transition-colors">
-                    {prev.title}
-                  </p>
-                </div>
-              </Link>
-            ) : (
-              <div />
-            )}
-
-            {next && (
-              <Link
-                href={`/work/${next.slug}`}
-                className="group flex items-center gap-3 p-4 rounded-sm hover:bg-canvas transition-colors text-right justify-end ml-auto"
-                aria-label={`Next project: ${next.title}`}
-              >
-                <div>
-                  <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-secondary mb-0.5">
-                    Next
-                  </p>
-                  <p className="text-sm font-medium text-earth group-hover:text-signal-orange transition-colors">
-                    {next.title}
-                  </p>
-                </div>
-                <ArrowRight
-                  size={16}
-                  className="text-secondary group-hover:text-signal-orange group-hover:translate-x-1 transition-all"
-                  aria-hidden="true"
-                />
-              </Link>
-            )}
-          </div>
-        </div>
-      </nav>
-
-      {/* Related projects */}
-      {related.length > 0 && (
-        <section className="section-padding-sm border-t border-border-warm" aria-label="Related projects">
-          <div className="container-site">
-            <SectionLabel className="mb-6">You might also like</SectionLabel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {related.map((p) => (
-                <ProjectCard key={p.id} project={p} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Contact CTA */}
-      <section className="section-padding-sm bg-earth text-canvas" aria-label="Start a project">
-        <div className="container-site text-center">
-          <p className="eyebrow text-clay mb-4">Ready to start?</p>
-          <h2 className="font-metropolis font-semibold text-canvas text-display-md mb-6 text-balance">
-            Let&apos;s build something{" "}
-            <em className="font-serif italic font-normal text-dust-rose">extraordinary.</em>
-          </h2>
-          <Link href="/connect" className="btn-primary">
-            <span>Get in touch</span>
-            <span className="btn-badge">
-              <ArrowRight size={13} aria-hidden="true" />
-            </span>
-          </Link>
-        </div>
-      </section>
+      <ProjectHeroShowcase project={project} pillars={pillars} />
+      <ProjectCaseStudy project={project} />
+      <ProjectNavigation prev={prev} next={next} />
+      <RelatedProjectsSection projects={related} />
     </>
   );
 }

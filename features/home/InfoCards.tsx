@@ -1,14 +1,67 @@
+"use client";
+
+import { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Project } from "@/types/project";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
+const DEFAULT_HIGHLIGHTED_SLUGS = [
+  "area-6-brand-identity",
+  "bio-oil-skincare-campaign",
+  "niwarthana-packaging-design",
+  "rouka-brand-identity",
+  "coffee-1911-identity",
+];
+
 interface InfoCardsProps {
-  featuredProject: Project;
+  featuredProject?: Project;
+  projects?: Project[];
+  highlightedProjects?: Project[];
 }
 
-export function InfoCards({ featuredProject }: InfoCardsProps) {
+export function InfoCards({
+  featuredProject,
+  projects = [],
+  highlightedProjects,
+}: InfoCardsProps) {
+  const items = useMemo(() => {
+    if (highlightedProjects && highlightedProjects.length > 0) {
+      return highlightedProjects.slice(0, 5);
+    }
+    if (projects.length > 0) {
+      const selected = DEFAULT_HIGHLIGHTED_SLUGS.map((slug) =>
+        projects.find((p) => p.slug === slug)
+      ).filter(Boolean) as Project[];
+
+      if (selected.length < 5) {
+        const remaining = projects.filter((p) => !selected.some((s) => s.id === p.id));
+        selected.push(...remaining.slice(0, 5 - selected.length));
+      }
+      return selected.slice(0, 5);
+    }
+    return featuredProject ? [featuredProject] : [];
+  }, [highlightedProjects, projects, featuredProject]);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const total = items.length;
+  const currentProject = items[currentIndex] || items[0] || featuredProject;
+
+  const nextSlide = useCallback(() => {
+    if (total <= 1) return;
+    setCurrentIndex((prev) => (prev + 1) % total);
+  }, [total]);
+
+  useEffect(() => {
+    if (isPaused || total <= 1) return;
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide, total]);
+
   const processCards = [
     {
       label: "DISCOVER",
@@ -152,6 +205,7 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
               </div>
             </Link>
           </ScrollReveal>
+
           <ScrollReveal variant="up" delay={0.1}>
             <div className="group bg-white border border-border-warm/30 rounded p-6 lg:p-8 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between relative overflow-hidden h-full">
               <div>
@@ -195,39 +249,119 @@ export function InfoCards({ featuredProject }: InfoCardsProps) {
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal variant="right" delay={0.2}>
-            <Link
-              href={`/work/${featuredProject.slug}`}
-              className="group relative bg-white border border-border-warm/30 rounded p-6 lg:p-8 
-                         overflow-hidden hover:border-dust-rose transition-all duration-300 
-                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
-            >
-              <div className="relative z-10 w-[50%]">
-                <p className="eyebrow mb-4">PROJECT DETAIL</p>
-                <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-2 leading-tight group-hover:text-signal-orange transition-colors">
-                  {featuredProject.title}
-                </h3>
-                <p className="text-earth text-sm font-semibold mb-4 tracking-widest uppercase">
-                  {featuredProject.category}
-                </p>
-                <p className="text-secondary leading-relaxed line-clamp-3">
-                  {featuredProject.shortDescription}
-                </p>
-              </div>
+          {currentProject && (
+            <ScrollReveal variant="right" delay={0.2}>
+              <div
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="h-full"
+              >
+                <Link
+                  href={`/work/${currentProject.slug}`}
+                  className="group relative bg-white border border-border-warm/30 rounded p-6 lg:p-8 
+                             overflow-hidden hover:border-dust-rose transition-all duration-300 
+                             focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full select-none"
+                >
+                  <div className="relative z-10 w-[55%] sm:w-[50%]">
+                    <div className="flex items-center justify-between gap-2 mb-4">
+                      <p className="eyebrow text-signal-orange">PROJECT DETAIL</p>
+                      {total > 1 && (
+                        <span className="text-[11px] font-mono tracking-widest text-earth/50 font-semibold">
+                          0{currentIndex + 1} / 0{total}
+                        </span>
+                      )}
+                    </div>
 
-              <div className="relative z-10 mt-8 w-12 h-12 rounded-full border border-border-warm flex items-center justify-center group-hover:border-signal-orange group-hover:text-signal-orange bg-white transition-colors duration-200">
-                <ArrowRight size={16} aria-hidden="true" />
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentProject.id}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-2 leading-tight group-hover:text-signal-orange transition-colors">
+                          {currentProject.title}
+                        </h3>
+                        <p className="text-earth text-xs font-semibold mb-4 tracking-widest uppercase">
+                          {currentProject.category}
+                        </p>
+                        <p className="text-secondary leading-relaxed line-clamp-3">
+                          {currentProject.shortDescription}
+                        </p>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+
+                  <div className="relative z-10 mt-8 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full border border-border-warm flex items-center justify-center group-hover:border-signal-orange group-hover:text-signal-orange bg-white transition-colors duration-200">
+                        <ArrowRight size={16} aria-hidden="true" />
+                      </div>
+                      <span className="text-xs font-semibold tracking-wider uppercase text-earth group-hover:text-signal-orange transition-colors hidden sm:inline-block">
+                        View Project
+                      </span>
+                    </div>
+
+                    {total > 1 && (
+                      <div
+                        className="flex items-center gap-1.5 z-20 py-2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                      >
+                        {items.map((_, idx) => (
+                          <button
+                            key={idx}
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setCurrentIndex(idx);
+                            }}
+                            aria-label={`Go to highlighted project ${idx + 1}`}
+                            className={`h-2 rounded-full transition-all duration-300 ${
+                              idx === currentIndex
+                                ? "w-6 bg-signal-orange"
+                                : "w-2 bg-border-warm hover:bg-earth/40"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="absolute top-0 right-0 bottom-0 w-[45%] sm:w-[50%] pointer-events-none p-4 sm:p-6 flex items-center justify-center overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentProject.id}
+                        initial={{ opacity: 0, scale: 0.95, x: 20 }}
+                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                        exit={{ opacity: 0, scale: 0.95, x: -20 }}
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                        className="relative w-full h-full"
+                      >
+                        <Image
+                          src={
+                            currentProject.slug === "bio-oil-skincare-campaign"
+                              ? "/bio-oils.webp"
+                              : currentProject.cardImage?.src ||
+                                currentProject.heroImage.src
+                          }
+                          alt={currentProject.title}
+                          fill
+                          className="object-contain transform group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 1024px) 50vw, 25vw"
+                        />
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+                </Link>
               </div>
-              <div className="absolute top-0 right-0 bottom-0 w-[50%] pointer-events-none">
-                <Image
-                  src="/bio-oils.webp"
-                  alt={featuredProject.heroImage.alt}
-                  fill
-                  className="object-contain transform group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </Link>
-          </ScrollReveal>
+            </ScrollReveal>
+          )}
+
           <ScrollReveal variant="zoomIn" delay={0.3}>
             <Link
               href="/connect"

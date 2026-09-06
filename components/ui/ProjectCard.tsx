@@ -66,7 +66,7 @@ export function ProjectCard({
         >
           {project.title}
         </h3>
-        <p className="text-sm text-secondary line-clamp-2 leading-relaxed">
+        <p className="text-secondary line-clamp-2 leading-relaxed">
           {project.shortDescription}
         </p>
         <div className="mt-3 flex items-center gap-1 text-xs text-secondary">

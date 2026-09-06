@@ -53,7 +53,7 @@ export default function HomePage() {
         <ProcessSection />
         {/* <ImpactStats /> */}
         <ShowreelSection />
-        <InfoCards featuredProject={featuredProject} />
+        <InfoCards featuredProject={featuredProject} projects={projects} />
         {/* <RadicalSceneSection /> */}
         <Testimonials />
         <WhyUsSection />

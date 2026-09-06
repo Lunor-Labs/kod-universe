@@ -35,13 +35,12 @@ export function ServicesOverview() {
             >
               <Link
                 href={`/capabilities#${group.id}`}
-                className="group relative bg-white border border-border-warm rounded p-7 lg:p-8 flex flex-col justify-between h-full
-                           hover:border-signal-orange hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
+                            hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-signal-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
-                <div>
-                  <div className="w-24 h-24 rounded border border-border-warm/80 bg-canvas/40 flex items-center justify-center mb-6 group-hover:border-signal-orange group-hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col justify-center items-center">
+                  <div className="w-24 h-24 rounded bg-canvas/40 flex items-center justify-center mb-6 group-hover:border-signal-orange group-hover:scale-105 transition-all duration-300">
                     <Image
                       src={`/icons/${group.iconName || "Branding"}.png`}
                       alt=""
@@ -54,19 +53,19 @@ export function ServicesOverview() {
                   <h3 className="font-metropolis font-bold text-earth text-2xl lg:text-3xl mb-2 group-hover:text-signal-orange transition-colors duration-200">
                     {group.title}
                   </h3>
-                  <p className="text-secondary text-sm leading-relaxed mb-6">
+                  <p className="text-secondary leading-relaxed mb-6">
                     {group.description}
                   </p>
                   {group.tags && group.tags.length > 0 && (
-                    <div className="border-t border-border-warm/60 pt-4 mb-6">
+                    <div className="mb-6">
                       <p className="text-[11px] font-semibold tracking-wider uppercase text-secondary/80 mb-2.5">
                         Inside this discipline:
                       </p>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap justify-center gap-1.5">
                         {group.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="inline-block px-2.5 py-1 rounded text-xs bg-canvas text-earth border border-border-warm/60 group-hover:border-border-warm transition-colors"
+                            className="inline-block px-2.5 py-1 rounded bg-canvas text-earth group-hover:border-border-warm transition-colors"
                           >
                             {tag}
                           </span>
@@ -75,7 +74,7 @@ export function ServicesOverview() {
                     </div>
                   )}
                 </div>
-                <div className="pt-4 border-t border-border-warm/60 flex items-center justify-between mt-auto">
+                <div className="flex items-center justify-between gap-4 mt-auto">
                   <span className="text-xs font-bold uppercase tracking-wider text-earth group-hover:text-signal-orange transition-colors">
                     Explore {group.title}
                   </span>

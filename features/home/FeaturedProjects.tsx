@@ -101,7 +101,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 <h2 className="font-metropolis font-semibold text-earth text-display-sm mb-4 text-balance">
                   We are messengers of creative forces.
                 </h2>
-                <p className="text-secondary text-sm leading-relaxed mb-8">
+                <p className="text-secondary leading-relaxed mb-8">
                   From the vast universe, ideas spark - seeds of potential. We
                   receive them with purpose and shape them into work that
                   connects, inspires, and leaves a lasting mark.

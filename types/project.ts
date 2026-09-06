@@ -14,6 +14,12 @@ export interface ProjectImage {
   height: number;
 }
 
+export interface ProjectPillar {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -21,11 +27,14 @@ export interface Project {
   client: string;
   category: ProjectCategory;
   year: number;
+  location?: string;
+  timeline?: string;
   shortDescription: string;
   overview: string;
   challenge: string;
   approach: string;
   deliverables: string[];
+  pillars?: ProjectPillar[];
   heroImage: ProjectImage;
   cardImage?: ProjectImage;
   galleryImages: ProjectImage[];
@@ -33,3 +42,4 @@ export interface Project {
   featured: boolean;
   relatedSlugs: string[];
 }
+

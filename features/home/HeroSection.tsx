@@ -347,7 +347,7 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-      <div className="absolute inset-0 pointer-events-none z-30 pt-36 sm:pt-28">
+      <div className="absolute inset-0 pointer-events-none z-30 pt-38 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
           <Link
             href="/our-universe"
