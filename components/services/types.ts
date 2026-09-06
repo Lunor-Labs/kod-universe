@@ -42,6 +42,20 @@ export interface SelectedProject {
   imageSrc: string;
 }
 
+export interface ServiceDiscipline {
+  title: string;
+  badge?: string;
+  description: string;
+  deliverables: string[];
+  iconName?: string;
+}
+
+export interface ImpactMetric {
+  value: string;
+  label: string;
+  description: string;
+}
+
 export interface ServiceDetailConfig {
   serviceNumber: string;
   categoryTrack: string[];
@@ -54,6 +68,13 @@ export interface ServiceDetailConfig {
   philosophyTitleItalic: string;
   philosophyCol1: string;
   philosophyCol2: string;
+  disciplines?: ServiceDiscipline[];
+  impactMetrics?: ImpactMetric[];
+  selectedWorkTitle?: string;
+  selectedWorkSubtitle?: string;
+  selectedWorkProjects?: SelectedProject[];
+  ctaTitle?: string;
+  ctaDescription?: string;
   deliverables: DeliverableItem[];
   featuredCaseStudy: FeaturedCaseStudy;
   process: ProcessStep[];

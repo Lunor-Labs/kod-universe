@@ -26,7 +26,7 @@ export default function WorkPage() {
         >
           <div className="absolute inset-0 opacity-80" aria-hidden="true">
             <SlowVideoBackdrop
-              src="/video/video-5.mp4"
+              src="/video/cave-art.mp4"
               playbackRate={0.2}
               className="w-full h-full object-cover object-center"
             />
@@ -59,7 +59,10 @@ export default function WorkPage() {
             </Link>
           </div>
 
-          <div className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/30 to-transparent pointer-events-none z-20" aria-hidden="true" />
+          <div
+            className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/30 to-transparent pointer-events-none z-20"
+            aria-hidden="true"
+          />
         </section>
 
         <section className="section-padding" aria-label="Portfolio projects">

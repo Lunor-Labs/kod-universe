@@ -1,6 +1,7 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { capabilities } from "@/data/capabilities";
+import { capabilities, serviceGroups } from "@/data/capabilities";
 import {
   getServiceDetailConfig,
   selectedWorkProjects,
@@ -8,10 +9,10 @@ import {
 import {
   ServiceHero,
   ServicePhilosophy,
+  ServiceDisciplines,
   ServiceDeliverables,
   ServiceCaseStudy,
   ServiceProcess,
-  ServiceSystemMosaic,
   ServiceSelectedWork,
   ServiceSuitability,
   ServiceNav,
@@ -47,21 +48,41 @@ export default async function ServiceDetailPage({
 
   const config = getServiceDetailConfig(slug, cap.title, cap.description);
 
-  const currentIndex = capabilities.findIndex((c) => c.slug === slug);
-  const prevCap = currentIndex > 0 ? capabilities[currentIndex - 1] : null;
+  const currentGroupIndex = serviceGroups.findIndex(
+    (g) => g.id === slug || g.services.some((s) => s.slug === slug),
+  );
+  const prevCap =
+    currentGroupIndex > 0
+      ? serviceGroups[currentGroupIndex - 1].services[0]
+      : null;
   const nextCap =
-    currentIndex < capabilities.length - 1
-      ? capabilities[currentIndex + 1]
+    currentGroupIndex >= 0 && currentGroupIndex < serviceGroups.length - 1
+      ? serviceGroups[currentGroupIndex + 1].services[0]
       : null;
 
   return (
-    <main className="bg-kod-canvas text-kod-earth min-h-screen overflow-hidden selection:bg-kod-orange selection:text-white">
-      <ServiceHero
-        eyebrow={config.eyebrow}
-        titlePrefix={config.heroTitlePrefix}
-        titleItalic={config.heroTitleItalic}
-        description={config.heroDescription}
-      />
+    <main className="relative text-kod-earth min-h-screen overflow-hidden selection:bg-kod-orange selection:text-white">
+      <div
+        className="absolute top-0 left-0 right-0 w-full h-[2000px] sm:h-[2400px] lg:h-[2800px] pointer-events-none z-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        <Image
+          src="/main/single-service-main.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-[#F7F3F1]" />
+      </div>
+
+      <div className="relative z-10">
+        <ServiceHero
+          eyebrow={config.eyebrow}
+          titlePrefix={config.heroTitlePrefix}
+          titleItalic={config.heroTitleItalic}
+          description={config.heroDescription}
+        />
 
       <ServicePhilosophy
         number={config.philosophyNumber}
@@ -70,21 +91,33 @@ export default async function ServiceDetailPage({
         col1={config.philosophyCol1}
         col2={config.philosophyCol2}
       />
+
+      <ServiceDisciplines
+        serviceTitle={cap.title}
+        disciplines={config.disciplines}
+      />
+
       <ServiceDeliverables
         serviceNumber={config.serviceNumber}
         items={config.deliverables}
       />
-      <ServiceCaseStudy caseStudy={config.featuredCaseStudy} />
 
       <ServiceProcess steps={config.process} />
-      <ServiceSystemMosaic />
-      <ServiceSelectedWork projects={selectedWorkProjects} />
+
+      <ServiceCaseStudy caseStudy={config.featuredCaseStudy} />
+
+      <ServiceSelectedWork
+        projects={config.selectedWorkProjects || selectedWorkProjects}
+        title={config.selectedWorkTitle}
+        subtitle={config.selectedWorkSubtitle}
+      />
 
       <ServiceSuitability
         points={config.qualificationPoints}
         faqs={config.faqs}
       />
       <ServiceNav prevCap={prevCap} nextCap={nextCap} />
+      </div>
     </main>
   );
 }

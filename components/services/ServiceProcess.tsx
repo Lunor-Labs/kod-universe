@@ -9,7 +9,7 @@ interface ServiceProcessProps {
 export function ServiceProcess({ steps }: ServiceProcessProps) {
   return (
     <section
-      className="section-padding border-b border-kod-border bg-kod-canvas relative"
+      className="section-padding border-b border-kod-border bg-transparent relative"
       aria-label="Our Process Timeline"
     >
       <div className="container-site">

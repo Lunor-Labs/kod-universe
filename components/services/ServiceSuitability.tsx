@@ -10,7 +10,7 @@ interface ServiceSuitabilityProps {
 export function ServiceSuitability({ points, faqs }: ServiceSuitabilityProps) {
   return (
     <section
-      className="section-padding bg-kod-canvas"
+      className="section-padding bg-transparent"
       aria-label="Service Suitability and FAQs"
     >
       <div className="container-site">

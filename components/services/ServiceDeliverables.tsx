@@ -17,7 +17,7 @@ export function ServiceDeliverables({
 
   return (
     <section
-      className="section-padding border-b border-kod-border bg-kod-canvas"
+      className="section-padding-top bg-transparent"
       aria-label="Capabilities Matrix"
     >
       <div className="container-site">

@@ -19,7 +19,7 @@ export function ServicePhilosophy({
 }: ServicePhilosophyProps) {
   return (
     <section
-      className="section-padding-top bg-kod-canvas relative overflow-hidden"
+      className="section-padding-top bg-transparent relative overflow-hidden"
       aria-label="Brand Philosophy and Symbol Evolution"
     >
       <div className="container-site">
@@ -39,7 +39,7 @@ export function ServicePhilosophy({
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-sm sm:text-base text-kod-text-2 leading-relaxed font-light border-t border-kod-border/70">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-kod-text leading-relaxed font-light border-t border-kod-border/70">
                 <p>{col1}</p>
                 <p>{col2}</p>
               </div>
@@ -63,7 +63,7 @@ export function ServicePhilosophy({
           </div>
           <div className="lg:col-span-6">
             <ScrollReveal variant="right" delay={0.15}>
-              <div className="bg-kod-canvas rounded-lg p-5 sm:p-8 lg:p-10 shadow-sm relative group hover:border-kod-orange/50 transition-colors">
+              <div className="bg-kod-canvas rounded p-5 sm:p-8 lg:p-10 shadow-sm relative group hover:border-kod-orange/50 transition-colors">
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center justify-center mb-6 sm:mb-8">
                   <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-85 group-hover/item:opacity-100 transition-opacity">

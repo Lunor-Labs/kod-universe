@@ -9,7 +9,7 @@ interface ServiceNavProps {
 
 export function ServiceNav({ prevCap, nextCap }: ServiceNavProps) {
   return (
-    <nav className="border-t border-kod-border bg-kod-canvas" aria-label="Service navigation">
+    <nav className="border-t border-kod-border bg-transparent" aria-label="Service navigation">
       <div className="container-site py-6 sm:py-8 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 sm:gap-4">
         {prevCap ? (
           <Link

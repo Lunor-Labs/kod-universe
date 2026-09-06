@@ -175,6 +175,413 @@ export const defaultCaseStudy = {
 };
 
 const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
+  "marketing": {
+    categoryTrack: ["Content Strategy", "Social Media", "Community Growth"],
+    heroTitlePrefix: "Ignite culture & ",
+    heroTitleItalic: "build community.",
+    heroDescription:
+      "We engineer platform-native content and social media ecosystems that convert audience attention into lasting brand loyalty.",
+    philosophyNumber: "01",
+    philosophyTitlePrefix: "Modern marketing is ",
+    philosophyTitleItalic: "two-way connection.",
+    philosophyCol1:
+      "Audiences do not want commercial noise; they seek authentic content that mirrors their values and enriches their daily lives. We align channel-native formats with your brand voice.",
+    philosophyCol2:
+      "Across Instagram, TikTok, LinkedIn, and beyond, we build platform-native content engines that turn casual scrollers into passionate brand advocates.",
+    disciplines: [
+      {
+        title: "Content Marketing (Social Media)",
+        badge: "Core Discipline",
+        iconName: "SOCIAL MEDIA",
+        description:
+          "Strategic platform-native content that sparks conversations, builds engaged communities, and drives sustained brand growth.",
+        deliverables: [
+          "Social media strategy & editorial calendar",
+          "Platform-specific template design systems",
+          "Caption writing and brand voice guide",
+          "Community management framework",
+          "Campaign concepts & execution",
+          "Analytics and performance reporting",
+        ],
+      },
+      {
+        title: "Photo & Video Direction",
+        badge: "Visual Production",
+        iconName: "VISUAL STORYTELLING",
+        description:
+          "High-impact visual direction and short-form video concepts engineered specifically for platform algorithms.",
+        deliverables: [
+          "Photography art direction & shoot production",
+          "Short-form video scripts & editing",
+          "Reels & TikTok visual storytelling",
+          "Brand aesthetic guidelines for video",
+        ],
+      },
+    ],
+    impactMetrics: [
+      {
+        value: "+180%",
+        label: "Organic Engagement",
+        description: "Average boost in community interactions across client activations.",
+      },
+      {
+        value: "4.8x",
+        label: "Audience Retention",
+        description: "Multiplied long-term follower engagement through serial content.",
+      },
+      {
+        value: "2.5M+",
+        label: "Monthly Reach",
+        description: "Organic impressions generated across client social channels.",
+      },
+      {
+        value: "100%",
+        label: "Platform Native",
+        description: "Tailored creative systems engineered for channel algorithms.",
+      },
+    ],
+    selectedWorkTitle: "SELECTED MARKETING & CAMPAIGN WORK",
+    selectedWorkSubtitle: "Content that sparks conversations and drives measurable growth.",
+    selectedWorkProjects: [
+      {
+        id: "1",
+        slug: "bio-oil-skincare-campaign",
+        title: "Bio-Oil Skincare Campaign",
+        category: "SOCIAL MEDIA & CAMPAIGN",
+        imageSrc: "/project-bio-oil.jpg",
+      },
+      {
+        id: "2",
+        slug: "bio-oil-skincare-campaign",
+        title: "Glow Naturally Retail Campaign",
+        category: "OMNICHANNEL SOCIAL",
+        imageSrc: "/project-bio-oil-retail.jpg",
+      },
+      {
+        id: "3",
+        slug: "soluna-wellness-identity",
+        title: "Soluna Social Activation",
+        category: "COMMUNITY & CONTENT",
+        imageSrc: "/project-soluna.jpg",
+      },
+    ],
+    ctaTitle: "Ready to spark cultural momentum?",
+    ctaDescription:
+      "Let's build a platform-native content engine that grows your community and scales your brand presence.",
+    deliverables: [
+      { num: "01", icon: Target, title: "Content Strategy & Calendar", description: "Channel-native publishing roadmap aligned with brand milestones." },
+      { num: "02", icon: Sparkles, title: "Photo & Video Direction", description: "High-impact visual direction and short-form video concepts." },
+      { num: "03", icon: Sliders, title: "Platform Template Systems", description: "Modular design templates for rapid, on-brand content creation." },
+      { num: "04", icon: Volume2, title: "Caption & Voice Guidelines", description: "Channel-specific tone of voice and editorial copywriting rules." },
+      { num: "05", icon: Compass, title: "Community Management", description: "Engagement frameworks to foster active follower conversations." },
+      { num: "06", icon: TrendingUp, title: "Analytics & Performance", description: "Data-driven insights to continuously optimize reach and ROI." },
+    ],
+    featuredCaseStudy: {
+      badge: "FEATURED CAMPAIGN",
+      client: "Bio-Oil Skincare",
+      tagline: "Omnichannel Social Activation",
+      description:
+        "We developed an authentic social content strategy and short-form video campaign that increased organic engagement by 180% across platforms.",
+      deliverables: ["Content Strategy", "Short-Form Video", "Template System", "Art Direction"],
+      palette: ["#E54C2A", "#F4A261", "#E9C46A", "#2A9D8F", "#264653"],
+      headlineFont: "Metropolis",
+      bodyFont: "Inter",
+      slug: "bio-oil-skincare-campaign",
+      imageSrc: "/project-bio-oil.jpg",
+    },
+    qualificationPoints: [
+      { icon: Sparkles, title: "Launching social channels.", description: "Stepping into market and needing an immediate, cohesive content strategy." },
+      { icon: TrendingUp, title: "Organic engagement has stagnated.", description: "Your current content is not breaking through platform algorithms." },
+      { icon: RefreshCw, title: "Brand voice feels inconsistent.", description: "Multiple team members produce disjointed social graphics and copy." },
+    ],
+    faqs: [
+      { question: "Which social platforms do you support?", answer: "We support Instagram, TikTok, LinkedIn, YouTube, X, and Pinterest with platform-tailored creative strategies." },
+      { question: "Do you handle shoot production?", answer: "Yes, we handle end-to-end creative direction, photography, and video shooting." },
+      { question: "How often will content be published?", answer: "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 posts per week per channel." },
+      { question: "How do you measure success?", answer: "We track reach, engagement rate, follower growth, click-through rates, and community conversions." },
+    ],
+  },
+
+  "designing": {
+    categoryTrack: ["Brand Strategy", "Package Design", "Logo Design"],
+    heroTitlePrefix: "Enduring identity & ",
+    heroTitleItalic: "tactile packaging.",
+    heroDescription:
+      "From memorable logo mark systems to high-impact product packaging, we craft cohesive brand identities engineered to command attention and inspire trust.",
+    philosophyNumber: "02",
+    philosophyTitlePrefix: "A great brand is ",
+    philosophyTitleItalic: "unmistakable.",
+    philosophyCol1:
+      "Your brand identity is your ultimate competitive moat. We begin with deep strategic positioning before translating vision into iconic marks and tactile touchpoints.",
+    philosophyCol2:
+      "From retail shelves to digital screens, we design unified systems that protect, persuade, and elevate your product at every single customer interaction.",
+    disciplines: [
+      {
+        title: "Package Design",
+        badge: "Brand Identity",
+        iconName: "Packaging",
+        description:
+          "Packaging that protects, persuades, and elevates your product on every shelf, creating an unforgettable unboxing experience.",
+        deliverables: [
+          "Structural and graphic packaging design",
+          "Label and hangtag systems",
+          "Retail display & POP packaging",
+          "Unboxing experience design",
+          "Regulatory text layout & compliance",
+          "Print production specification & oversight",
+        ],
+      },
+      {
+        title: "Logo Design",
+        badge: "Brand Identity",
+        iconName: "Logo Design",
+        description:
+          "Purpose-driven logo marks, typographic hierarchies, and brand guidelines that establish market authority and lasting trust.",
+        deliverables: [
+          "Brand strategy & positioning",
+          "Naming & tagline development",
+          "Logo and brand mark systems",
+          "Typography & colour palette",
+          "Comprehensive brand guidelines",
+          "Stationery & collateral design",
+        ],
+      },
+    ],
+    impactMetrics: [
+      {
+        value: "#1",
+        label: "Shelf Distinction",
+        description: "Superior visual recall and unboxing perception in competitive retail.",
+      },
+      {
+        value: "100%",
+        label: "Press Accuracy",
+        description: "Zero-defect press-ready dielines and sustainable substrate specifications.",
+      },
+      {
+        value: "60+",
+        label: "Deliverable Assets",
+        description: "Comprehensive brand guidelines scaling from packaging to digital.",
+      },
+      {
+        value: "Timeless",
+        label: "Identity Longevity",
+        description: "Visual systems built to endure brand expansion and multiple SKUs.",
+      },
+    ],
+    selectedWorkTitle: "SELECTED IDENTITY & PACKAGING WORK",
+    selectedWorkSubtitle: "Tactile packaging and distinctive brand systems crafted to stand apart.",
+    selectedWorkProjects: [
+      {
+        id: "1",
+        slug: "threadline-textiles-packaging",
+        title: "Threadline Textiles",
+        category: "SUSTAINABLE PACKAGING & IDENTITY",
+        imageSrc: "/project-threadline.jpg",
+      },
+      {
+        id: "2",
+        slug: "corepoint-fitness-identity",
+        title: "CorePoint Fitness",
+        category: "DYNAMIC IDENTITY SYSTEM",
+        imageSrc: "/project-corepoint.jpg",
+      },
+      {
+        id: "3",
+        slug: "terra-origins-brand-kit",
+        title: "Terra Origins",
+        category: "ORGANIC BRAND KIT",
+        imageSrc: "/project-terra.jpg",
+      },
+    ],
+    ctaTitle: "Ready to build an identity that endures?",
+    ctaDescription:
+      "Let's engineer a distinctive brand and packaging system that wins on the shelf and commands customer loyalty.",
+    deliverables: [
+      { num: "01", icon: Target, title: "Structural & Graphic Packaging", description: "Custom 3D container shape and shelf-commanding graphic layouts." },
+      { num: "02", icon: Sparkles, title: "Logo & Brand Mark Systems", description: "Distinctive brand marks, monograms, and typographic hierarchies." },
+      { num: "03", icon: Compass, title: "Unboxing Experience Design", description: "Inner reveals, tactile papers, and memorable customer moments." },
+      { num: "04", icon: Volume2, title: "Label & Tag Systems", description: "Foil stamping, embossing, die-cuts, and regulatory integration." },
+      { num: "05", icon: Sliders, title: "Brand Guidelines Document", description: "Comprehensive rules ensuring cohesive application across all media." },
+      { num: "06", icon: BookOpen, title: "Print Production Management", description: "Dieline engineering, press checks, and printer manufacturer liaison." },
+    ],
+    featuredCaseStudy: {
+      badge: "FEATURED PACKAGING",
+      client: "Threadline Textiles",
+      tagline: "Sustainable Packaging & Identity",
+      description:
+        "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details, dieline engineering, and unboxing box architecture.",
+      deliverables: ["Packaging Dielines", "Unboxing Box", "Hangtags", "Print Specs"],
+      palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
+      headlineFont: "Cormorant Garamond",
+      bodyFont: "Metropolis",
+      slug: "threadline-textiles-packaging",
+      imageSrc: "/project-threadline.jpg",
+    },
+    qualificationPoints: [
+      { icon: Sparkles, title: "Launching a physical product.", description: "Demanding shelf impact in competitive retail or direct-to-consumer markets." },
+      { icon: TrendingUp, title: "Packaging feels dated or cheap.", description: "Customer unboxing experience doesn't match product quality or price point." },
+      { icon: RefreshCw, title: "Expanding product lines.", description: "Needing scalable packaging guidelines and visual consistency across multiple SKUs." },
+    ],
+    faqs: [
+      { question: "Do you supply the dielines or use ours?", answer: "We can engineer custom dielines from scratch or build directly from your packaging manufacturer's specifications." },
+      { question: "Do you handle print vendor communication?", answer: "Yes, we prepare print-ready dieline files and coordinate directly with your print vendor for press checks." },
+      { question: "Can you design sustainable packaging?", answer: "Absolutely. We specialize in plastic-free, recyclable, biodegradable, and low-waste packaging solutions." },
+      { question: "How long does a branding and packaging project take?", answer: "Typical timelines range from 4 to 8 weeks depending on SKU count, prototyping, and review cycles." },
+    ],
+  },
+
+  "and-beyond": {
+    categoryTrack: ["Digital Architecture", "Merchandising", "Storytelling", "Web Design"],
+    heroTitlePrefix: "Spatial, tangible & ",
+    heroTitleItalic: "digital experiences.",
+    heroDescription:
+      "Extending your brand universe into spatial 3D architecture, wearable merchandise, visual storytelling, and high-performance modern web platforms.",
+    philosophyNumber: "03",
+    philosophyTitlePrefix: "Brands exist in ",
+    philosophyTitleItalic: "multiple dimensions.",
+    philosophyCol1:
+      "True brand resonance happens when your world expands beyond logos. We create physical environments, collectible products, and fluid digital platforms that bring your story to life.",
+    philosophyCol2:
+      "Every spatial layout, wearable garment, editorial visual, and interactive web component is crafted to deliver immersive, unforgettable experiences.",
+    disciplines: [
+      {
+        title: "Digital Architecture Designs",
+        badge: "Spatial & 3D",
+        iconName: "ARCHITECTURE DESIGNS",
+        description:
+          "Spatial design concepts that translate brand identities into physical interiors, exhibition pavilions, and photorealistic 3D virtual spaces.",
+        deliverables: [
+          "Spatial concept & mood boarding",
+          "Interior layout & flow planning",
+          "Material & finish specification",
+          "3D visualisation & photorealistic rendering",
+        ],
+      },
+      {
+        title: "Merchandising",
+        badge: "Tangible Products",
+        iconName: "MERCHANDISING",
+        description:
+          "High-appeal merchandise design that extends your brand into wearable apparel, accessories, and collectible physical products.",
+        deliverables: [
+          "Merchandise concept & product selection",
+          "Graphic and pattern design for products",
+          "Apparel design & tech packs",
+          "Packaging and presentation design",
+        ],
+      },
+      {
+        title: "Visual Storytelling",
+        badge: "Narrative Systems",
+        iconName: "VISUAL STORYTELLING",
+        description:
+          "Narrative-driven visual systems, editorial photography direction, and sequential imagery that communicate complex ideas with emotional resonance.",
+        deliverables: [
+          "Visual narrative strategy",
+          "Photography direction & curation",
+          "Illustration & infographic design",
+          "Multi-channel visual systems",
+        ],
+      },
+      {
+        title: "Web Design",
+        badge: "Digital Platforms",
+        iconName: "WEB DESIGN",
+        description:
+          "High-performance websites and digital experiences built with Next.js, tailored UX strategy, and fluid micro-animations engineered to convert.",
+        deliverables: [
+          "Website design and UX strategy",
+          "Custom design systems & component libraries",
+          "Next.js and React web development",
+          "SEO & performance optimisation",
+        ],
+      },
+    ],
+    impactMetrics: [
+      {
+        value: "99/100",
+        label: "Lighthouse Speed",
+        description: "Sub-second load times and fluid 60fps animations across all devices.",
+      },
+      {
+        value: "3D",
+        label: "Spatial Immersion",
+        description: "Photorealistic architectural visualisations bringing brand spaces to life.",
+      },
+      {
+        value: "100%",
+        label: "Bespoke Code",
+        description: "Clean code architectures engineered without restrictive templates.",
+      },
+      {
+        value: "Global",
+        label: "Cross-Channel Cohesion",
+        description: "Unified narrative from physical merchandise to international web presence.",
+      },
+    ],
+    selectedWorkTitle: "SELECTED EXPERIENTIAL & DIGITAL WORK",
+    selectedWorkSubtitle: "Modern web experiences, narrative visuals, and spatial brand worlds.",
+    selectedWorkProjects: [
+      {
+        id: "1",
+        slug: "soluna-wellness-identity",
+        title: "Soluna Wellness Platform",
+        category: "WEB PLATFORM & DIGITAL EXPERIENCE",
+        imageSrc: "/project-soluna.jpg",
+      },
+      {
+        id: "2",
+        slug: "origins-concept-series",
+        title: "Origins Concept Series",
+        category: "VISUAL STORYTELLING & ART DIRECTION",
+        imageSrc: "/project-origins.jpg",
+      },
+      {
+        id: "3",
+        slug: "cosmic-explorations",
+        title: "Cosmic Explorations",
+        category: "SPATIAL & DIGITAL ARCHITECTURE",
+        imageSrc: "/project-cosmic.jpg",
+      },
+    ],
+    ctaTitle: "Ready to expand your brand universe?",
+    ctaDescription:
+      "Let's craft spatial, digital, and tangible expressions that push past the conventional and set a new standard.",
+    deliverables: [
+      { num: "01", icon: Target, title: "Spatial 3D Environments", description: "Virtual spaces, retail interiors, and experiential brand concepts." },
+      { num: "02", icon: Sparkles, title: "High-Performance Web Platforms", description: "Bespoke Next.js and React sites engineered for clarity and conversion." },
+      { num: "03", icon: Compass, title: "Custom Merchandise & Apparel", description: "Wearable products, tech packs, and collectible physical assets." },
+      { num: "04", icon: Volume2, title: "Visual Narrative Systems", description: "Sequential storytelling, art direction, and editorial imagery." },
+      { num: "05", icon: Sliders, title: "Design Systems & Components", description: "Modular UI kits and design tokens ensuring future development speed." },
+      { num: "06", icon: BookOpen, title: "Technical SEO & Speed Optimization", description: "Lighthouse 90+ performance scores, metadata, and analytics." },
+    ],
+    featuredCaseStudy: {
+      badge: "FEATURED DIGITAL PLATFORM",
+      client: "Soluna Wellness",
+      tagline: "Immersive Web Experience",
+      description:
+        "Built a high-converting web platform with smooth scroll reveals, custom booking flow, and responsive design for Soluna Wellness.",
+      deliverables: ["UX Architecture", "Next.js Frontend", "Animation Engine", "CMS Integration"],
+      palette: ["#1F2937", "#4B5563", "#D97706", "#F59E0B", "#FEF3C7"],
+      headlineFont: "Metropolis",
+      bodyFont: "Inter",
+      slug: "soluna-wellness-identity",
+      imageSrc: "/project-soluna.jpg",
+    },
+    qualificationPoints: [
+      { icon: Sparkles, title: "Transcending a standard website.", description: "Needing a world-class digital experience with rich animations and fast performance." },
+      { icon: TrendingUp, title: "Creating physical brand extensions.", description: "Ready to launch branded apparel, products, or physical showroom spaces." },
+      { icon: RefreshCw, title: "Communicating complex stories.", description: "Requiring visual storytelling and narrative clarity for sophisticated audiences." },
+    ],
+    faqs: [
+      { question: "What technologies do you use for web design?", answer: "We build modern digital experiences with Next.js, React, Tailwind CSS, TypeScript, and Framer Motion." },
+      { question: "Can you provide 3D spatial renders for contractors?", answer: "Yes, our digital architecture deliverables include dimensioned layout plans, finishes, and 3D visualisations." },
+      { question: "Do you handle apparel sourcing for merchandise?", answer: "We provide complete tech packs, print dielines, and guidance on ethical manufacturer sourcing." },
+      { question: "Will our team be able to update website content?", answer: "Yes, we integrate user-friendly headless CMS solutions allowing your team to update content effortlessly." },
+    ],
+  },
+
   "content-marketing": {
     categoryTrack: ["Strategy", "Content", "Community"],
     heroTitlePrefix: "Spark conversation and ",
@@ -545,7 +952,7 @@ export function getServiceDetailConfig(
       ? "web-design"
       : slug;
 
-  const customConfig = serviceConfigsMap[mappedSlug] || serviceConfigsMap[slug] || {};
+  const customConfig = serviceConfigsMap[slug] || serviceConfigsMap[mappedSlug] || {};
 
   const defaultDeliverablesList: DeliverableItem[] = (cap?.deliverables || []).map((del, idx) => ({
     num: String(idx + 1).padStart(2, "0"),
@@ -570,6 +977,13 @@ export function getServiceDetailConfig(
     philosophyCol2:
       customConfig.philosophyCol2 ||
       `Every asset is designed with long-term brand equity in mind, ensuring your identity scales consistently across all physical and digital channels.`,
+    disciplines: customConfig.disciplines,
+    impactMetrics: customConfig.impactMetrics,
+    selectedWorkTitle: customConfig.selectedWorkTitle,
+    selectedWorkSubtitle: customConfig.selectedWorkSubtitle,
+    selectedWorkProjects: customConfig.selectedWorkProjects,
+    ctaTitle: customConfig.ctaTitle,
+    ctaDescription: customConfig.ctaDescription,
     deliverables: customConfig.deliverables || (defaultDeliverablesList.length > 0 ? defaultDeliverablesList : brandingDeliverables),
     featuredCaseStudy: customConfig.featuredCaseStudy || defaultCaseStudy,
     process: customConfig.process || brandingProcess,
