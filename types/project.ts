@@ -27,6 +27,7 @@ export interface Project {
   approach: string;
   deliverables: string[];
   heroImage: ProjectImage;
+  cardImage?: ProjectImage;
   galleryImages: ProjectImage[];
   tags: string[];
   featured: boolean;

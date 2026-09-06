@@ -17,6 +17,8 @@ export function ProjectCard({
   className,
   priority = false,
 }: ProjectCardProps) {
+  const image = project.cardImage ?? project.heroImage;
+
   return (
     <Link
       href={`/work/${project.slug}`}
@@ -30,24 +32,23 @@ export function ProjectCard({
     >
       <div
         className={cn(
-          "img-zoom relative",
-          size === "large" ? "aspect-[4/3]" : "aspect-square",
+          "img-zoom relative aspect-square bg-[#FBF9F5] flex items-center justify-center overflow-hidden",
         )}
       >
         <Image
-          src={project.heroImage.src}
-          alt={project.heroImage.alt}
+          src={image.src}
+          alt={image.alt}
           fill
           sizes={
             size === "large"
               ? "(max-width: 768px) 100vw, 50vw"
               : "(max-width: 768px) 100vw, 33vw"
           }
-          className="object-cover"
+          className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
           priority={priority}
         />
         <div
-          className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/90 
+          className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/90 shadow-sm
                      flex items-center justify-center opacity-80 group-hover:opacity-100 
                      translate-x-2 group-hover:translate-x-0 transition-all duration-300"
           aria-hidden="true"

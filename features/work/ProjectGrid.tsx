@@ -66,13 +66,13 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
         {(activeCategory === "ALL" || featuredProject.category === activeCategory) && (
           <div className="mb-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 border border-border-warm rounded-sm overflow-hidden bg-white">
-              <div className="relative aspect-[4/3] md:aspect-auto img-zoom min-h-[280px]">
+              <div className="relative aspect-square img-zoom min-h-[260px] bg-[#FBF9F5] flex items-center justify-center">
                 <Image
-                  src={featuredProject.heroImage.src}
+                  src={featuredProject.cardImage?.src ?? featuredProject.heroImage.src}
                   alt={featuredProject.heroImage.alt}
                   fill
                   priority
-                  className="object-cover"
+                  className="object-contain p-4"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -103,7 +103,6 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
               </div>
             </div>
 
-            {/* Philosophy Card (1/3 width) */}
             <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain">
               <SectionLabel>Our Philosophy</SectionLabel>
               <h3 className="font-editorial text-2xl lg:text-3xl text-earth mb-4 italic mt-2 leading-tight">
@@ -123,8 +122,6 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
             </div>
           </div>
         )}
-
-        {/* Project grid */}
         {gridProjects.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {gridProjects.map((project) => (
