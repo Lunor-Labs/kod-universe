@@ -45,14 +45,14 @@ export function FAQSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="space-y-4">
+        <div className="space-y-4 max-w-5xl mx-auto">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             
             return (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div 
-                  className={`border ${isOpen ? 'border-earth/40 bg-white/40' : 'border-border-warm/30 bg-white/20'} rounded-lg overflow-hidden transition-colors duration-300 backdrop-blur-sm`}
+                  className={`border ${isOpen ? 'border-earth/20 bg-white/40' : 'border-border-warm/30 bg-white/20'} rounded overflow-hidden transition-colors duration-300 backdrop-blur-sm`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
@@ -62,7 +62,7 @@ export function FAQSection() {
                     <span className="font-metropolis font-semibold text-earth text-lg pr-8">
                       {faq.question}
                     </span>
-                    <div className={`flex-shrink-0 w-8 h-8 rounded-full border ${isOpen ? 'border-earth/50 text-earth' : 'border-border-warm text-earth/60'} flex items-center justify-center transition-colors duration-300`}>
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-full border ${isOpen ? 'border-earth/10 text-earth' : 'border-border-warm text-earth/60'} flex items-center justify-center transition-colors duration-300`}>
                       {isOpen ? (
                         <Minus size={16} />
                       ) : (

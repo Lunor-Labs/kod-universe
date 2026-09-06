@@ -29,7 +29,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
       ? projects
       : projects.filter((p) => p.category === activeCategory);
 
-  const display = filtered.slice(0, 3);
+  const display = filtered.slice(0, 2);
 
   return (
     <section className="section-padding-top " aria-label="Selected projects">
@@ -46,7 +46,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             {display.length > 0 ? (
               <motion.div
                 layout
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
               >
                 <AnimatePresence mode="popLayout">
                   {display.map((project, i) => (
@@ -85,7 +85,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-1 flex flex-col justify-start">
+          <div className="lg:col-span-1 flex flex-col justify-center">
             <div className="bg-white/70 p-8 sm:flex justify-between">
               <div className="">
                 <div

@@ -18,7 +18,7 @@ export function WhyUsSection() {
     >
       <div className="container-site">
         <ScrollReveal variant="up">
-          <div className="grid grid-cols-1 lg:grid-cols-12 rounded-xl overflow-hidden border border-kod-border bg-kod-canvas shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-12 rounded-xl overflow-hidden  bg-kod-canvas/50 shadow-lg">
             <div className="lg:col-span-3 p-8 lg:p-10 bg-kod-mist/60 border-b lg:border-b-0 lg:border-r border-kod-border flex flex-col justify-between relative overflow-hidden min-h-[320px]">
               <div className="absolute bottom-10 left-0 w-full h-64 opacity-35 mix-blend-multiply pointer-events-none z-0">
                 <Image
@@ -59,7 +59,7 @@ export function WhyUsSection() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
             </div>
 
-            <div className="lg:col-span-5 p-8 lg:p-12 bg-kod-canvas flex flex-col justify-between">
+            <div className="lg:col-span-5 p-8 lg:p-12 bg-kod-canvas/30 flex flex-col justify-between">
               <div>
                 <h3 className="font-editorial text-3xl sm:text-4xl lg:text-4xl text-kod-earth leading-tight mb-6">
                   From quiet idea <br />
