@@ -102,12 +102,6 @@ export const projects: Project[] = [
         width: 1080,
         height: 1080,
       },
-      {
-        src: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Bio Oil Social media and Campaign web pages-01.png",
-        alt: "Bio-Oil surreal digital campaign composition",
-        width: 1080,
-        height: 1080,
-      },
     ],
     tags: [
       "Social Media Design",
@@ -140,10 +134,10 @@ export const projects: Project[] = [
       "Community activation copy",
     ],
     heroImage: {
-      src: "/projects/Social-Media/Area 6/Area 6 Social media hero.png",
-      alt: "Area 6 Social Media Hero visual",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 Fitness Equipment Showcase.png",
+      alt: "Area 6 Fitness Equipment and Urban Lifestyle Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Social-Media/Area 6/Poster style Single set  (5).png",
@@ -221,10 +215,10 @@ export const projects: Project[] = [
       "Platform engagement assets",
     ],
     heroImage: {
-      src: "/projects/Social-Media/Coats Sri Lanka Social Media Post/Coats Social Media Post hero.png",
-      alt: "Coats Sri Lanka Social Media Post hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Social-Media/Coats Sri Lanka Social Media Post/Coats Thread Showcase.png",
+      alt: "Coats Sri Lanka Industrial Thread Heritage and Craft Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Social-Media/Coats Sri Lanka Social Media Post/100 Countries_COATS.jpg",
@@ -233,6 +227,12 @@ export const projects: Project[] = [
       height: 1080,
     },
     galleryImages: [
+      {
+        src: "/projects/Social-Media/Coats Sri Lanka Social Media Post/Coats Thread Showcase.png",
+        alt: "Coats Sri Lanka industrial thread spools and craft showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Social-Media/Coats Sri Lanka Social Media Post/100 Countries_COATS.jpg",
         alt: "Coats 100 Countries presence post",
@@ -365,10 +365,10 @@ export const projects: Project[] = [
       "Social & digital brand assets",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/Branding/rouka (1).png",
-      alt: "ROUKA brand identity system hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/ROUKA/Rouka Apparel Packaging Showcase.png",
+      alt: "ROUKA Haute Couture Apparel Packaging and Garment Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/ROUKA/ROUKA (1).png",
@@ -377,6 +377,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/ROUKA/Rouka Apparel Packaging Showcase.png",
+        alt: "ROUKA apparel box, folded t-shirt, and branded bag showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/Branding/rouka (2).png",
         alt: "ROUKA brand application 2",
@@ -434,10 +440,10 @@ export const projects: Project[] = [
       "Social media identity kit",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/SLSA Logo/Sri Lankan Student Association_UK-01.png",
-      alt: "Sri Lankan Student Association UK official branding",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/SLSA Logo/SLSA Merchandise Showcase.png",
+      alt: "SLSA UK Student Leadership Merchandise and Stationery Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/SLSA Logo/Sri Lankan Student Association_UK-01.png",
@@ -446,6 +452,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/SLSA Logo/SLSA Merchandise Showcase.png",
+        alt: "SLSA official merchandise, tumbler, and stationery showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/SLSA Logo/SLSA Logo Mock (1).png",
         alt: "SLSA logo mockup on stationery",
@@ -503,10 +515,10 @@ export const projects: Project[] = [
       "Storefront and menu styling",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 (1).png",
-      alt: "Coffee 1911 Brand Identity",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 Brand Showcase.png",
+      alt: "Coffee 1911 Artisanal Coffee Packaging and Canister Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 (1).png",
@@ -515,6 +527,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 Brand Showcase.png",
+        alt: "Coffee 1911 artisanal coffee cup, pouch, and canister showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 (2).png",
         alt: "Coffee 1911 mark variation 2",
@@ -578,10 +596,10 @@ export const projects: Project[] = [
       "Digital identity kit",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Final  (1).png",
-      alt: "Cool Step Final Brand Mark",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Dance Studio Sneaker Showcase.png",
+      alt: "Cool Step Dance Studio Footwear and Box Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Final  (3).png",
@@ -590,6 +608,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Dance Studio Sneaker Showcase.png",
+        alt: "Cool Step dance studio sneaker, box, and brand card showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Final  (2).png",
         alt: "Cool Step variation 2",
@@ -653,10 +677,10 @@ export const projects: Project[] = [
       "Presentation and branding templates",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/FOCAL/FOCAL Logo (1).png",
-      alt: "FOCAL Brand Logo Hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/FOCAL/Focal Camera and Controller Showcase.png",
+      alt: "FOCAL Precision Optics, Mirrorless Camera and Gaming Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/FOCAL/FOCAL Logo (1).png",
@@ -665,6 +689,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FOCAL/Focal Camera and Controller Showcase.png",
+        alt: "FOCAL camera, console controller, and box showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/FOCAL/FOCAL Logo (2).png",
         alt: "FOCAL logo variation 2",
@@ -722,10 +752,10 @@ export const projects: Project[] = [
       "Digital presence assets",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (1).png",
-      alt: "FRANS Niwasa Brand Identity Hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/Frans Niwasa Framed Poster Showcase.png",
+      alt: "FRANS Niwasa Framed Poster and Architectural Exhibition Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (2).png",
@@ -734,6 +764,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/Frans Niwasa Framed Poster Showcase.png",
+        alt: "FRANS Niwasa framed poster and architectural exhibition showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (2).png",
         alt: "FRANS Niwasa variation 2",
@@ -790,10 +826,10 @@ export const projects: Project[] = [
       "Digital presence guidelines",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz (Amila) (1).png",
-      alt: "Kaiz Brand Logo Hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz Apparel Merch Showcase.png",
+      alt: "Kaiz Apparel Merchandise Podium Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz (Amila) (1).png",
@@ -802,6 +838,18 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz Apparel Merch Showcase.png",
+        alt: "Kaiz apparel merchandise podium showcase",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz King Crown and Plaque Showcase.png",
+        alt: "Kaiz king crown, microphone, and branded plaque showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz (Amila) (2).png",
         alt: "Kaiz monogram variation 2",
@@ -852,10 +900,10 @@ export const projects: Project[] = [
       "Digital exhibition artwork",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/MAYA/ChatGPT Image Sep 5, 2026, 08_49_12 PM.png",
-      alt: "MAYA Brand Symbol Hero",
-      width: 1200,
-      height: 800,
+      src: "/projects/Branding-Identity/LoGo Design/MAYA/Maya Spice Packaging Showcase.png",
+      alt: "MAYA Artisanal Spice Packaging and Jars Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/MAYA/ChatGPT Image Sep 5, 2026, 08_49_12 PM.png",
@@ -864,6 +912,12 @@ export const projects: Project[] = [
       height: 1200,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/MAYA/Maya Spice Packaging Showcase.png",
+        alt: "MAYA artisanal spice jars and packaging pouch showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/MAYA/ChatGPT Image Sep 5, 2026, 08_45_57 PM (2).png",
         alt: "MAYA symbol variation 2",
@@ -909,10 +963,10 @@ export const projects: Project[] = [
       "Signage and spatial environmental branding",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
-      alt: "Area 6 Brand & Identity Hero",
-      width: 1254,
-      height: 1254,
+      src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 Fitness Products Showcase.png",
+      alt: "Area 6 Quality Life Fitness Shaker, Protein Tub and Gear Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
@@ -921,6 +975,18 @@ export const projects: Project[] = [
       height: 1254,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 Fitness Products Showcase.png",
+        alt: "Area 6 fitness shaker, protein tub, and workout gear showcase",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 Fitness Equipment Showcase.png",
+        alt: "Area 6 spiral logo icon, kettlebell, and fitness gear showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
         alt: "Area 6 logo composition 1",
@@ -978,10 +1044,10 @@ export const projects: Project[] = [
       "Brand visual guidelines",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
-      alt: "Bito Brand Logo Design Hero",
-      width: 1254,
-      height: 1254,
+      src: "/projects/Branding-Identity/LoGo Design/bito/Bito Footwear and Packaging Showcase.png",
+      alt: "Bito Modern Footwear, Shoebox and Retail Packaging Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
@@ -990,6 +1056,12 @@ export const projects: Project[] = [
       height: 1254,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/bito/Bito Footwear and Packaging Showcase.png",
+        alt: "Bito modern footwear, shoebox, and packaging showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
         alt: "Bito logo showcase 1",
@@ -1041,10 +1113,10 @@ export const projects: Project[] = [
       "Digital asset kit",
     ],
     heroImage: {
-      src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
-      alt: "COCO Brand & Identity Hero",
-      width: 1254,
-      height: 1254,
+      src: "/projects/Branding-Identity/LoGo Design/coco/COCO Packaging and Jar Showcase.png",
+      alt: "COCO Coconut Oil Jar, Packaging Pouch and Natural Lifestyle Showcase",
+      width: 1672,
+      height: 941,
     },
     cardImage: {
       src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
@@ -1053,6 +1125,12 @@ export const projects: Project[] = [
       height: 1254,
     },
     galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/coco/COCO Packaging and Jar Showcase.png",
+        alt: "COCO coconut oil jar, packaging pouch, and natural lifestyle showcase",
+        width: 1672,
+        height: 941,
+      },
       {
         src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
         alt: "COCO brand mark 1",

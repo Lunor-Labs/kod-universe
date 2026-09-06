@@ -38,31 +38,14 @@ export default function ConnectPage() {
   return (
     <div className="relative min-h-screen bg-canvas overflow-hidden pt-32 pb-24 text-earth">
       <div
-        className="absolute left-0 top-0 bottom-0 w-[50%] pointer-events-none mix-blend-multiply opacity-30"
-        style={{
-          maskImage: "linear-gradient(to right, black 20%, transparent)",
-          WebkitMaskImage: "linear-gradient(to right, black 20%, transparent)",
-        }}
+        className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-40"
       >
         <Image
-          src="/project-origins.jpg"
+          src="/main/cave.png"
           alt=""
           fill
-          className="object-cover object-left"
-        />
-      </div>
-      <div
-        className="absolute right-0 top-0 bottom-0 w-[50%] pointer-events-none mix-blend-multiply opacity-25"
-        style={{
-          maskImage: "linear-gradient(to left, black 20%, transparent)",
-          WebkitMaskImage: "linear-gradient(to left, black 20%, transparent)",
-        }}
-      >
-        <Image
-          src="/project-cosmic.jpg"
-          alt=""
-          fill
-          className="object-cover object-right"
+          className="object-cover object-top"
+          priority
         />
       </div>
 
@@ -77,16 +60,16 @@ export default function ConnectPage() {
           <p className="text-secondary text-sm md:text-base leading-relaxed max-w-xl mx-auto">
             Whether you have a bold idea, a complex challenge,
             <br className="hidden md:block" />
-            or just want to explore possibilities—our team is here to help.
+            or just want to explore possibilities-our team is here to help.
             <br />
             <strong className="font-bold text-earth block mt-3">
               We turn ideas into meaningful impact.
             </strong>
           </p>
         </div>
-        <div className="bg-white/80 backdrop-blur-md border border-border-warm rounded-2xl shadow-sm overflow-hidden mb-12 max-w-[1100px] mx-auto">
+        <div className="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden mb-12 max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12">
-            <div className="lg:col-span-4 p-2 md:p-6 border-b lg:border-b-0 lg:border-r border-border-warm flex flex-col justify-between gap-8">
+            <div className="lg:col-span-4 p-2 md:p-6  flex flex-col justify-between gap-8">
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-8 h-8 rounded-full bg-signal-orange text-white flex items-center justify-center">
@@ -114,7 +97,7 @@ export default function ConnectPage() {
                           className="hover:text-signal-orange transition-colors"
                         >
                           {phone.number}
-                          <span className="text-secondary ml-2 text-xs opacity-70">({phone.region})</span>
+                          <span className="text-secondary ml-2 opacity-70">({phone.region})</span>
                         </a>
                       ))}
                     </div>
@@ -129,8 +112,6 @@ export default function ConnectPage() {
                   </li>
                 </ul>
               </div>
-
-              <div className="h-px bg-border-warm w-full" />
 
               <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -151,14 +132,12 @@ export default function ConnectPage() {
                         aria-label={`${siteConfig.name} on ${link.platform}`}
                         className="w-10 h-10 rounded-full border border-border-warm flex items-center justify-center text-earth hover:border-signal-orange hover:text-signal-orange transition-colors bg-white/50"
                       >
-                        <Icon size={14} aria-hidden="true" />
+                        <Icon size={20} aria-hidden="true" />
                       </a>
                     );
                   })}
                 </div>
               </div>
-
-              <div className="h-px bg-border-warm w-full" />
 
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -168,7 +147,7 @@ export default function ConnectPage() {
                   <h2 className="eyebrow mb-0">COLLABORATIONS WELCOME</h2>
                 </div>
                 <div className="pl-11">
-                  <p className="text-secondary text-sm leading-relaxed mb-3">
+                  <p className="text-secondary leading-relaxed mb-3">
                     We partner with visionary brands, founders, and
                     organizations to craft work that inspires, connects, and
                     lasts.
@@ -189,7 +168,7 @@ export default function ConnectPage() {
           </div>
         </div>
 
-        <div className="bg-white/80 backdrop-blur-md border border-border-warm rounded-2xl shadow-sm p-8 mx-auto mb-10">
+        <div className="bg-white/80 backdrop-blur-md rounded-xl shadow-xs p-8 mx-auto mb-10">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px bg-border-warm w-16" />
             <p className="eyebrow mb-0">HOW WE CAN HELP</p>

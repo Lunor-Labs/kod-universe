@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProjectGrid } from "@/features/work/ProjectGrid";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
-
-import { SlowVideoBackdrop } from "@/components/ui/SlowVideoBackdrop";
 
 export const metadata: Metadata = {
   title: "Selected Works",
@@ -21,33 +20,28 @@ export default function WorkPage() {
     <main className="relative bg-canvas overflow-hidden">
       <div className="relative z-10">
         <section
-          className="relative overflow-hidden texture-cave bg-earth flex items-center justify-center min-h-screen pt-32 pb-20"
+          className="relative overflow-hidden bg-earth flex items-center justify-center min-h-[70vh] pt-32 pb-20"
           aria-label="Portfolio page hero"
         >
-          <div className="absolute inset-0 opacity-80" aria-hidden="true">
-            <SlowVideoBackdrop
-              src="/video/cave-art.mp4"
-              playbackRate={0.2}
-              className="w-full h-full object-cover object-center"
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(58,47,45,0.75) 0%, rgba(58,47,45,0.5) 60%, rgba(201,186,186,0.15) 100%)",
-              }}
-              aria-hidden="true"
+          <div className="absolute inset-0" aria-hidden="true">
+            <Image
+              src="/main/work-hero.jpg"
+              alt="KOD Universe Selected Works"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
             />
           </div>
 
           <div className="container-site relative z-10">
-            <p className="text-sm font-semibold tracking-[0.25em] uppercase text-dust-rose mb-5">
+            <p className="text-sm font-semibold tracking-[0.25em] uppercase text-black mb-5">
               Seeds of ideas. Forged on earth.
             </p>
-            <h1 className="font-metropolis font-semibold text-canvas text-display-xl mb-6 leading-tight">
+            <h1 className="font-metropolis font-semibold text-black text-display-xl mb-6 leading-tight">
               Selected Works.
             </h1>
-            <p className="text-dust-rose text-base leading-relaxed max-w-md mb-10">
+            <p className="text-black text-base leading-relaxed max-w-md mb-10">
               Ideas have energy. We transform them into visual stories that
               connect, inspire, and leave a lasting mark.
             </p>
