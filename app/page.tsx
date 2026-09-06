@@ -11,6 +11,7 @@ import { InfoCards } from "@/features/home/InfoCards";
 import { Testimonials } from "@/features/home/Testimonials";
 import { ContactCTA } from "@/features/home/ContactCTA";
 import { FAQSection } from "@/features/home/FAQSection";
+import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
@@ -54,6 +55,7 @@ export default function HomePage() {
         {/* <ImpactStats /> */}
         <ShowreelSection />
         <InfoCards featuredProject={featuredProject} projects={projects} />
+        <MasonryGallerySection />
         {/* <RadicalSceneSection /> */}
         <Testimonials />
         <WhyUsSection />

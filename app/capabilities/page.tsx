@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowUpRight,
   Search,
   Compass,
   Pen,
@@ -124,95 +125,58 @@ export default function CapabilitiesPage() {
                       </div>
 
                       <Link
-                        href="/connect"
-                        className="self-start lg:self-center inline-flex items-center gap-2 font-semibold tracking-wider uppercase bg-canvas px-4 py-2.5 rounded-sm hover:border-signal-orange hover:text-signal-orange transition-all"
+                        href={`/capabilities/${group.id}`}
+                        className="self-start lg:self-center inline-flex items-center gap-2 font-semibold text-xs tracking-wider uppercase bg-canvas hover:bg-kod-canvas border border-border-warm/60 px-4 py-2.5 rounded text-earth hover:text-signal-orange transition-all"
                       >
-                        Inquire about {group.title}
+                        Explore {group.title}
                         <ArrowRight size={12} aria-hidden="true" />
                       </Link>
                     </div>
+
                     <div className="space-y-6">
                       <div
-                        className={`grid gap-6 ${
+                        className={`grid gap-5 ${
                           group.contentSections.length === 1
-                            ? "grid-cols-1"
+                            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                             : group.contentSections.length === 2
                             ? "grid-cols-1 md:grid-cols-2"
-                            : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                            : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
                         }`}
                       >
                         {group.contentSections.map((section) => (
-                          <div
+                          <Link
                             key={section.title}
-                            className="bg-canvas/50 rounded p-6 flex flex-col justify-between"
+                            href={`/capabilities/${group.id}`}
+                            className="group bg-canvas/50 hover:bg-canvas/90 rounded p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xs border border-transparent hover:border-border-warm/60"
                           >
                             <div>
                               <div className="flex items-center justify-between mb-4">
                                 {section.iconName && (
-                                  <div className="w-24 h-24 rounded bg-white flex items-center justify-center">
+                                  <div className="w-12 h-12 rounded bg-white flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
                                     <Image
                                       src={`/icons/${section.iconName}.png`}
                                       alt=""
-                                      width={96}
-                                      height={96}
+                                      width={28}
+                                      height={28}
                                       className="object-contain"
                                     />
                                   </div>
                                 )}
-                                {section.badge && (
-                                  <span className="font-semibold tracking-wider uppercase text-signal-orange bg-signal-orange/10 px-2 py-0.5 rounded">
-                                    {section.badge}
-                                  </span>
-                                )}
+                                <ArrowUpRight
+                                  size={16}
+                                  className="text-secondary/50 group-hover:text-signal-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                                />
                               </div>
 
-                              <h4 className="font-metropolis font-bold text-earth text-lg mb-2">
+                              <h4 className="font-metropolis font-bold text-earth text-lg mb-2 group-hover:text-signal-orange transition-colors">
                                 {section.title}
                               </h4>
-                              <p className="text-secondary leading-relaxed mb-5">
+                              <p className="text-secondary text-sm leading-relaxed">
                                 {section.description}
                               </p>
                             </div>
-
-                            <div className="mt-auto">
-                              <p className=" font-semibold tracking-[0.15em] uppercase text-secondary mb-2.5">
-                                Scope & Deliverables
-                              </p>
-                              <ul className="space-y-1.5" role="list">
-                                {section.deliverables.map((d) => (
-                                  <li
-                                    key={d}
-                                    className="flex items-start gap-2 text-secondary leading-normal"
-                                  >
-                                    <span
-                                      className="mt-1 w-1.5 h-1.5 rounded-full bg-signal-orange flex-shrink-0"
-                                      aria-hidden="true"
-                                    />
-                                    {d}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
+                          </Link>
                         ))}
-                      </div>
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <Link
-                          href={`/capabilities/${group.id}`}
-                          className="btn-primary inline-flex"
-                        >
-                          <span>Explore {group.title} deep dive</span>
-                          <span className="btn-badge">
-                            <ArrowRight size={13} aria-hidden="true" />
-                          </span>
-                        </Link>
-                        <Link
-                          href="/connect"
-                          className="inline-flex items-center gap-2 font-semibold tracking-wider uppercase text-earth hover:text-signal-orange transition-colors"
-                        >
-                          Start a {group.title} project
-                          <ArrowRight size={12} aria-hidden="true" />
-                        </Link>
                       </div>
                     </div>
                   </div>
