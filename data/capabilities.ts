@@ -1,190 +1,300 @@
-import type { Capability, ProcessStep } from "@/types/capability";
+import type { Capability, ServiceGroup, ProcessStep } from "@/types/capability";
 
-export const capabilities: Capability[] = [
+/* ── 3 Main Services ── */
+
+export const serviceGroups: ServiceGroup[] = [
   {
-    id: "1",
-    slug: "social-media",
-    title: "Social Media",
+    id: "marketing",
+    number: "01",
+    title: "Marketing",
+    tagline: "Content Marketing (Social Media)",
+    description:
+      "Strategic content and platform-native community growth that transforms audience attention into lasting brand loyalty.",
     iconName: "SOCIAL MEDIA",
-    description: "Scroll-stopping content that sparks conversations and builds communities.",
-    longDescription:
-      "We craft platform-native content strategies that align your brand's story with the rhythms of each channel. From Instagram to TikTok to LinkedIn, we build the visual language, editorial calendar, and community framework that turns followers into advocates.",
-    deliverables: [
-      "Content strategy and editorial calendar",
-      "Photography and video art direction",
-      "Platform-specific template systems",
-      "Caption writing and brand voice guide",
-      "Community management framework",
-      "Campaign concepts and execution",
-      "Analytics and performance reporting",
+    tags: ["Content Marketing", "Social Media"],
+    contentSections: [
+      {
+        title: "Content Marketing (Social Media)",
+        badge: "Social Media",
+        iconName: "SOCIAL MEDIA",
+        description:
+          "Strategic content that sparks conversations, builds communities, and drives platform-native growth across social media.",
+        deliverables: [
+          "Social media strategy & editorial calendar",
+          "Photography and video art direction",
+          "Platform-specific template systems",
+          "Caption writing and brand voice guide",
+          "Community management framework",
+          "Campaign concepts and execution",
+          "Analytics and performance reporting",
+        ],
+      },
     ],
-    relatedProjectSlugs: ["bio-oil-skincare-campaign", "glow-naturally-campaign"],
+    services: [
+      {
+        id: "marketing",
+        slug: "marketing",
+        title: "Marketing",
+        iconName: "SOCIAL MEDIA",
+        description:
+          "Strategic content that sparks conversations, builds communities, and drives platform-native growth across social media.",
+        longDescription:
+          "We craft platform-native content strategies that align your brand's story with the rhythms of each channel. From Instagram to TikTok to LinkedIn, we build the visual language, editorial calendar, and community framework that turns followers into advocates.",
+        deliverables: [
+          "Social media strategy & editorial calendar",
+          "Photography and video art direction",
+          "Platform-specific template systems",
+          "Caption writing and brand voice guide",
+          "Community management framework",
+          "Campaign concepts and execution",
+          "Analytics and performance reporting",
+        ],
+        relatedProjectSlugs: ["bio-oil-skincare-campaign", "glow-naturally-campaign"],
+      },
+    ],
   },
   {
-    id: "2",
-    slug: "branding-and-identity",
-    title: "Branding & Identity",
-    iconName: "Branding",
-    description: "Purpose-driven brands with identity systems that inspire trust and leave a lasting mark.",
-    longDescription:
-      "Great brands are not designed — they are uncovered. We start with strategy and research, move through positioning and naming, and arrive at visual systems that are as functional as they are beautiful. Everything from logo to typeface to tone of voice is considered, tested, and refined.",
-    deliverables: [
-      "Brand strategy and positioning",
-      "Naming and tagline development",
-      "Logo and brand mark system",
-      "Typography and colour palette",
-      "Brand guidelines document",
-      "Stationery and collateral design",
-      "Digital asset library",
+    id: "designing",
+    number: "02",
+    title: "Designing",
+    tagline: "Brand Identity (Package Design, Logo Design)",
+    description:
+      "End-to-end brand identity systems spanning physical product packaging and enduring logo design marks.",
+    iconName: "Packaging",
+    tags: ["Brand Identity", "Package Design", "Logo Design"],
+    contentSections: [
+      {
+        title: "Package Design",
+        badge: "Brand Identity",
+        iconName: "Packaging",
+        description:
+          "Packaging that protects, persuades, and elevates your product on every shelf.",
+        deliverables: [
+          "Structural and graphic packaging design",
+          "Label and tag design",
+          "Retail display systems",
+          "Unboxing experience design",
+          "Regulatory text layout",
+          "Print production specification and management",
+        ],
+      },
+      {
+        title: "Logo Design",
+        badge: "Brand Identity",
+        iconName: "Logo Design",
+        description:
+          "Purpose-driven logo and brand mark systems that inspire trust and leave a lasting mark.",
+        deliverables: [
+          "Brand strategy and positioning",
+          "Naming and tagline development",
+          "Logo and brand mark system",
+          "Typography and colour palette",
+          "Brand guidelines document",
+          "Stationery and collateral design",
+        ],
+      },
     ],
-    relatedProjectSlugs: ["corepoint-fitness-identity", "terra-origins-brand-kit", "soluna-wellness-identity"],
+    services: [
+      {
+        id: "designing",
+        slug: "designing",
+        title: "Designing",
+        iconName: "Packaging",
+        description:
+          "End-to-end brand identity systems spanning physical product packaging and enduring logo design marks.",
+        longDescription:
+          "Great brands are not designed — they are uncovered. We combine strategic positioning, tactile packaging design, and memorable logo mark systems that build enduring brand authority and shelf presence.",
+        deliverables: [
+          "Brand strategy and positioning",
+          "Structural and graphic packaging design",
+          "Logo and brand mark system",
+          "Typography and colour palette",
+          "Unboxing experience design",
+          "Brand guidelines document",
+        ],
+        relatedProjectSlugs: [
+          "threadline-textiles-packaging",
+          "bio-oil-retail-packaging",
+          "corepoint-fitness-identity",
+          "terra-origins-brand-kit",
+        ],
+      },
+    ],
   },
   {
-    id: "3",
+    id: "and-beyond",
+    number: "03",
+    title: "And Beyond",
+    tagline: "Digital Architecture, Merchandising, Visual Storytelling, Web Design",
+    description:
+      "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
+    iconName: "WEB DESIGN",
+    tags: [
+      "Digital Architecture",
+      "Merchandising",
+      "Visual Storytelling",
+      "Web Design",
+    ],
+    contentSections: [
+      {
+        title: "Digital Architecture Designs",
+        iconName: "ARCHITECTURE DESIGNS",
+        description:
+          "Spatial design concepts that bring brand experiences into physical and digital environments.",
+        deliverables: [
+          "Spatial concept and mood boarding",
+          "Interior layout and flow planning",
+          "Material and finish specification",
+          "3D visualisation and rendering",
+        ],
+      },
+      {
+        title: "Merchandising",
+        iconName: "MERCHANDISING",
+        description:
+          "Merchandise design that extends your brand into tangible, wearable, and collectible products.",
+        deliverables: [
+          "Merchandise concept and product selection",
+          "Graphic and pattern design for products",
+          "Apparel design and tech packs",
+          "Packaging and presentation design",
+        ],
+      },
+      {
+        title: "Visual Storytelling",
+        iconName: "VISUAL STORYTELLING",
+        description:
+          "Narrative-driven visuals that communicate complex ideas through compelling imagery.",
+        deliverables: [
+          "Visual narrative strategy",
+          "Photography direction and curation",
+          "Illustration and infographic design",
+          "Multi-channel visual systems",
+        ],
+      },
+      {
+        title: "Web Design",
+        iconName: "WEB DESIGN",
+        description:
+          "Websites and digital experiences crafted for clarity, connection, and conversion.",
+        deliverables: [
+          "Website design and UX strategy",
+          "Design systems and component libraries",
+          "Next.js and React development",
+          "SEO and performance optimisation",
+        ],
+      },
+    ],
+    services: [
+      {
+        id: "and-beyond",
+        slug: "and-beyond",
+        title: "And Beyond",
+        iconName: "WEB DESIGN",
+        description:
+          "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
+        longDescription:
+          "We push past conventional boundaries to extend your brand universe into spatial architecture, wearable merchandise, narrative visuals, and high-performance modern web platforms.",
+        deliverables: [
+          "Digital architecture and 3D spatial design",
+          "Custom branded merchandise and apparel",
+          "Visual narrative frameworks and editorial design",
+          "Modern high-speed responsive web development",
+        ],
+        relatedProjectSlugs: ["origins-concept-series", "cosmic-explorations"],
+      },
+    ],
+  },
+];
+
+/* ── Primary 3 services + backward compatibility aliases ── */
+
+const legacyAliases: Capability[] = [
+  {
+    id: "legacy-content-marketing",
+    slug: "content-marketing",
+    title: "Marketing",
+    iconName: "SOCIAL MEDIA",
+    description: "Strategic content that sparks conversations and drives social media growth.",
+    longDescription: "We craft platform-native content strategies across Instagram, TikTok, LinkedIn, and beyond.",
+    deliverables: ["Social media strategy", "Content creation", "Community management"],
+    relatedProjectSlugs: ["bio-oil-skincare-campaign"],
+  },
+  {
+    id: "legacy-package-design",
     slug: "package-design",
-    title: "Package Design",
+    title: "Designing",
     iconName: "Packaging",
     description: "Packaging that protects, persuades, and elevates your product on every shelf.",
-    longDescription:
-      "Packaging is your product's first handshake. We design primary and secondary packaging that communicates quality at three distances — shelf, arm's length, in hand — while navigating regulatory requirements, production constraints, and sustainability goals.",
-    deliverables: [
-      "Structural and graphic packaging design",
-      "Label and tag design",
-      "Retail display systems",
-      "Unboxing experience design",
-      "Regulatory text layout",
-      "Print production specification and management",
-    ],
-    relatedProjectSlugs: ["threadline-textiles-packaging", "bio-oil-retail-packaging"],
-  },
-
-  {
-    id: "5",
-    slug: "web-design",
-    title: "Web Design",
-    iconName: "WEB DESIGN",
-    description: "Websites and digital experiences crafted for clarity, connection, and conversion.",
-    longDescription:
-      "We design and develop digital experiences that are as considered as they are performant. From portfolio sites to brand platforms to campaign microsites, we build with purpose — every interaction, transition, and page serves a clear human and business goal.",
-    deliverables: [
-      "Website design and UX strategy",
-      "Design systems and component libraries",
-      "Next.js and React development",
-      "CMS integration and training",
-      "SEO and performance optimisation",
-      "Analytics setup and reporting",
-    ],
-    relatedProjectSlugs: [],
-  },
-  {
-    id: "6",
-    slug: "poster-design",
-    title: "Poster Design",
-    iconName: "POSTER DESIGN",
-    description: "Bold, eye-catching posters that communicate your message with visual impact.",
-    longDescription:
-      "Whether for events, campaigns, or retail spaces, our poster designs combine striking typography with compelling imagery to command attention. We balance creative expression with clear communication, ensuring your message resonates at every scale.",
-    deliverables: [
-      "Concept development and art direction",
-      "Typography and layout design",
-      "Print-ready file preparation",
-      "Large-format and billboard adaptation",
-      "Digital poster variants for social and web",
-      "Series design for campaign consistency",
-    ],
-    relatedProjectSlugs: ["editorial-campaign"],
-  },
-  {
-    id: "7",
-    slug: "filming",
-    title: "Filming",
-    iconName: "FILMING",
-    description: "Cinematic video content that brings your brand story to life with emotion and purpose.",
-    longDescription:
-      "From concept to final cut, we produce video content that moves audiences. Our filming services cover brand films, product showcases, social media content, and campaign videos — all guided by strong creative direction and a deep understanding of visual narrative.",
-    deliverables: [
-      "Creative concept and storyboarding",
-      "On-location and studio filming",
-      "Post-production editing and colour grading",
-      "Motion graphics and titling",
-      "Sound design and music licensing",
-      "Multi-platform format delivery",
-    ],
-    relatedProjectSlugs: [],
-  },
-  {
-    id: "8",
-    slug: "visual-storytelling",
-    title: "Visual Storytelling",
-    iconName: "VISUAL STORYTELLING",
-    description: "Narrative-driven visuals that communicate complex ideas through compelling imagery.",
-    longDescription:
-      "Great stories transcend words. We use photography, illustration, infographics, and sequential imagery to craft visual narratives that inform, inspire, and persuade. Every frame is designed to carry meaning and build emotional connection with your audience.",
-    deliverables: [
-      "Visual narrative strategy",
-      "Photography direction and curation",
-      "Illustration and infographic design",
-      "Editorial layout and sequencing",
-      "Brand storytelling frameworks",
-      "Multi-channel visual content systems",
-    ],
-    relatedProjectSlugs: ["origins-concept-series", "cosmic-explorations"],
-  },
-
-  {
-    id: "10",
-    slug: "merchandising",
-    title: "Merchandising",
-    iconName: "MERCHANDISING",
-    description: "Merchandise design that extends your brand into tangible, wearable, and collectible products.",
-    longDescription:
-      "We design merchandise that people actually want to own. From apparel and accessories to limited-edition collectibles, we create product designs that feel authentic to your brand, function beautifully in the physical world, and turn customers into walking ambassadors.",
-    deliverables: [
-      "Merchandise concept and product selection",
-      "Graphic and pattern design for products",
-      "Apparel design and tech packs",
-      "Packaging and presentation design",
-      "Production sourcing guidance",
-      "E-commerce product photography direction",
-    ],
+    longDescription: "Structural and graphic packaging design that communicates quality at three distances.",
+    deliverables: ["Structural packaging", "Label design", "Unboxing experience"],
     relatedProjectSlugs: ["threadline-textiles-packaging"],
   },
   {
-    id: "11",
-    slug: "architecture-designs",
-    title: "Architecture Designs",
+    id: "legacy-brand-identity",
+    slug: "brand-identity",
+    title: "Designing",
+    iconName: "Packaging",
+    description: "End-to-end brand identity systems spanning packaging and logo marks.",
+    longDescription: "Comprehensive brand identity design that creates consistency across every touchpoint.",
+    deliverables: ["Brand strategy", "Logo design", "Packaging design"],
+    relatedProjectSlugs: ["threadline-textiles-packaging"],
+  },
+  {
+    id: "legacy-logo-design",
+    slug: "logo-design",
+    title: "Designing",
+    iconName: "Logo Design",
+    description: "Purpose-driven logo and brand mark systems.",
+    longDescription: "Visual systems that are as functional as they are beautiful.",
+    deliverables: ["Logo system", "Typography", "Brand guidelines"],
+    relatedProjectSlugs: ["corepoint-fitness-identity"],
+  },
+  {
+    id: "legacy-digital-architecture",
+    slug: "digital-architecture-designs",
+    title: "And Beyond",
     iconName: "ARCHITECTURE DESIGNS",
-    description: "Spatial design concepts that bring brand experiences into physical environments.",
-    longDescription:
-      "We translate brand identities into three-dimensional spaces. From retail interiors and exhibition stands to office environments and pop-up installations, we create spatial designs that immerse visitors in your brand world and leave a lasting impression.",
-    deliverables: [
-      "Spatial concept and mood boarding",
-      "Interior layout and flow planning",
-      "Material and finish specification",
-      "Signage and wayfinding design",
-      "3D visualisation and rendering",
-      "Contractor liaison and project oversight",
-    ],
+    description: "Spatial design concepts and 3D visualization.",
+    longDescription: "Bringing brand experiences into physical and digital environments.",
+    deliverables: ["Spatial concepts", "3D rendering", "Wayfinding"],
     relatedProjectSlugs: [],
   },
   {
-    id: "12",
-    slug: "digital-art",
-    title: "Digital Art",
-    iconName: "DESIGN DIGITAL ART",
-    description: "Original digital artwork and illustrations that give your brand a unique creative edge.",
-    longDescription:
-      "Our digital art practice pushes creative boundaries. We produce original illustrations, digital paintings, generative art, and mixed-media compositions that elevate campaigns, editorial content, and brand communications with a distinctive artistic voice.",
-    deliverables: [
-      "Custom digital illustration",
-      "Character and mascot design",
-      "Abstract and generative art",
-      "Mixed-media composition",
-      "Art print and limited-edition design",
-      "Animation-ready illustration assets",
-    ],
-    relatedProjectSlugs: ["cosmic-explorations"],
+    id: "legacy-merchandising",
+    slug: "merchandising",
+    title: "And Beyond",
+    iconName: "MERCHANDISING",
+    description: "Merchandise design extending brands into wearable products.",
+    longDescription: "Branded products that people actually want to own.",
+    deliverables: ["Apparel design", "Tech packs", "Product graphics"],
+    relatedProjectSlugs: [],
   },
+  {
+    id: "legacy-visual-storytelling",
+    slug: "visual-storytelling",
+    title: "And Beyond",
+    iconName: "VISUAL STORYTELLING",
+    description: "Narrative-driven visuals communicating complex ideas.",
+    longDescription: "Photography, illustration, and sequential imagery.",
+    deliverables: ["Visual narrative", "Editorial layout", "Infographics"],
+    relatedProjectSlugs: [],
+  },
+  {
+    id: "legacy-web-design",
+    slug: "web-design",
+    title: "And Beyond",
+    iconName: "WEB DESIGN",
+    description: "Websites and digital experiences crafted for clarity and conversion.",
+    longDescription: "Next.js and React web development engineered for performance.",
+    deliverables: ["Web design", "Next.js development", "Design systems"],
+    relatedProjectSlugs: [],
+  },
+];
+
+export const capabilities: Capability[] = [
+  ...serviceGroups.flatMap((g) => g.services),
+  ...legacyAliases,
 ];
 
 export const processSteps: ProcessStep[] = [

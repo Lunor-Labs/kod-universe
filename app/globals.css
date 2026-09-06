@@ -200,6 +200,13 @@ h1, h2, h3, h4, h5, h6 {
   .section-padding-top { padding-top: 96px; }
 }
 
+.section-padding-bottom { padding-bottom: 56px; }
+@media (min-width: 768px) {
+  .section-padding-bottom { padding-bottom: 72px; }
+}
+@media (min-width: 1024px) {
+  .section-padding-bottom { padding-bottom: 96px; }
+}
 /* ── Typography helpers ───────────────────────── */
 .eyebrow {
   font-family: var(--font-metropolis);

@@ -175,7 +175,7 @@ export const defaultCaseStudy = {
 };
 
 const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
-  "social-media": {
+  "content-marketing": {
     categoryTrack: ["Strategy", "Content", "Community"],
     heroTitlePrefix: "Spark conversation and ",
     heroTitleItalic: "build community.",
@@ -218,7 +218,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     ],
   },
 
-  "branding-and-identity": {
+  "logo-design": {
     categoryTrack: ["Strategy", "Identity", "Systems"],
     heroTitlePrefix: "Build a brand ",
     heroTitleItalic: "remember.",
@@ -233,6 +233,47 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
   },
 
   "package-design": {
+    categoryTrack: ["Structural", "Graphics", "Unboxing"],
+    heroTitlePrefix: "Packaging that ",
+    heroTitleItalic: "persuades on shelf.",
+    philosophyTitlePrefix: "Packaging is your product's ",
+    philosophyTitleItalic: "first handshake.",
+    philosophyCol1: "We design primary and secondary packaging that communicates quality at three distances: shelf, arm's length, and in hand.",
+    philosophyCol2: "We balance artistic shelf appeal with regulatory compliance, print feasibility, and eco-friendly material selection.",
+    deliverables: [
+      { num: "01", icon: Target, title: "Structural & Graphic Design", description: "Custom 3D bottle, box, and container shape and graphic layout." },
+      { num: "02", icon: Sparkles, title: "Label & Hangtag Systems", description: "Tactile labels with foil stamping, embossing, and die-cut details." },
+      { num: "03", icon: Compass, title: "Retail Display Packaging", description: "POP displays and shipping containers designed for retail environments." },
+      { num: "04", icon: Volume2, title: "Unboxing Experience", description: "Inner tissue, inserts, and reveal mechanics that delight customers." },
+      { num: "05", icon: Sliders, title: "Regulatory Text Layout", description: "FDA, EU, and global compliance info integrated without clutter." },
+      { num: "06", icon: BookOpen, title: "Print Production Mgmt", description: "Dieline creation, press checks, and printer liaison." },
+    ],
+    featuredCaseStudy: {
+      badge: "FEATURED PACKAGING",
+      client: "Threadline Textiles",
+      tagline: "Sustainable Packaging & Identity",
+      description: "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details and unboxing box architecture.",
+      deliverables: ["Packaging Dielines", "Unboxing Box", "Hangtags", "Print Specs"],
+      palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
+      headlineFont: "Cormorant Garamond",
+      bodyFont: "Metropolis",
+      slug: "threadline-textiles-packaging",
+      imageSrc: "/project-threadline.jpg",
+    },
+    qualificationPoints: [
+      { icon: Sparkles, title: "Launching a physical product.", description: "Demanding shelf impact in competitive retail or e-commerce markets." },
+      { icon: TrendingUp, title: "Packaging feels dated or cheap.", description: "Customer unboxing experience doesn't match product quality." },
+      { icon: RefreshCw, title: "Expanding product lines.", description: "Needing scalable packaging guidelines across multiple SKUs." },
+    ],
+    faqs: [
+      { question: "Do you supply the dielines or use ours?", answer: "We can work from your manufacturer's dielines or custom engineer new ones." },
+      { question: "Do you handle print vendor communication?", answer: "Yes, we prepare print-ready files and coordinate directly with your print vendor." },
+      { question: "Can you design sustainable packaging?", answer: "Absolutely. We specialize in recyclable, biodegradable, and low-waste packaging solutions." },
+      { question: "How long does a packaging project take?", answer: "Typical timelines range from 4 to 8 weeks depending on SKU count and prototyping." },
+    ],
+  },
+
+  "brand-identity": {
     categoryTrack: ["Structural", "Graphics", "Unboxing"],
     heroTitlePrefix: "Packaging that ",
     heroTitleItalic: "persuades on shelf.",
@@ -316,87 +357,8 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     ],
   },
 
-  "poster-design": {
-    categoryTrack: ["Typography", "Art Direction", "Print"],
-    heroTitlePrefix: "Command attention with ",
-    heroTitleItalic: "bold poster art.",
-    philosophyTitlePrefix: "Posters turn public space into ",
-    philosophyTitleItalic: "visual theatre.",
-    philosophyCol1: "Whether for cultural events, brand launches, or retail spaces, our poster design combines typography with bold artwork.",
-    philosophyCol2: "We balance creative expression with instant readability, ensuring your message resonates across crowded physical spaces.",
-    deliverables: [
-      { num: "01", icon: Target, title: "Concept Art Direction", description: "Bold visual themes designed to capture immediate attention." },
-      { num: "02", icon: Sparkles, title: "Typography Layout", description: "Expressive typographic hierarchy tailored for event impact." },
-      { num: "03", icon: Compass, title: "Large-Format Files", description: "High-resolution print master files for billposting and billboards." },
-      { num: "04", icon: Volume2, title: "Digital Ad Variants", description: "Social media and screen adaptations for digital campaign rollouts." },
-      { num: "05", icon: Sliders, title: "Series Design System", description: "Cohesive multi-poster campaign designs." },
-      { num: "06", icon: BookOpen, title: "Print Production Specs", description: "Paper stock, finish selection, and print vendor handoff." },
-    ],
-    featuredCaseStudy: {
-      badge: "FEATURED CAMPAIGN",
-      client: "Editorial Campaign",
-      tagline: "Large-Format Poster Series",
-      description: "Created a series of 12 typographic event posters for an international design biennial with silk-screen print finishes.",
-      deliverables: ["12 Poster Series", "Billboard Layouts", "Print Specs", "Digital Motion Clips"],
-      palette: ["#000000", "#FFFFFF", "#E54C2A"],
-      headlineFont: "Editorial New",
-      bodyFont: "Metropolis",
-      slug: "editorial-campaign",
-      imageSrc: "/project-editorial.jpg",
-    },
-    qualificationPoints: [
-      { icon: Sparkles, title: "Promoting an event or launch.", description: "Demanding high visual impact in print or outdoor media." },
-      { icon: TrendingUp, title: "Launching an ad campaign.", description: "Needing artwork designed for billposters and billboards." },
-      { icon: RefreshCw, title: "Seeking artistic campaign art.", description: "Wanting bespoke artwork rather than generic stock templates." },
-    ],
-    faqs: [
-      { question: "What sizes do you design posters for?", answer: "We design for standard sizes (A0, A1, A2, 24x36) up to massive billboard specs." },
-      { question: "Do you supply print files?", answer: "Yes, we provide 300+ DPI press-ready CMYK PDFs with bleed lines and crop marks." },
-      { question: "Can poster art be animated for digital screens?", answer: "Yes, we create animated digital poster variants for LED screens and social media." },
-      { question: "How many revisions are included?", answer: "We include 3 rounds of refinement following initial concept selection." },
-    ],
-  },
 
-  "filming": {
-    categoryTrack: ["Production", "Cinematography", "Editing"],
-    heroTitlePrefix: "Tell stories that ",
-    heroTitleItalic: "move audiences.",
-    philosophyTitlePrefix: "Filming brings your story into ",
-    philosophyTitleItalic: "living motion.",
-    philosophyCol1: "From brand films and product showcases to campaign videos, we produce cinematic video content with narrative depth.",
-    philosophyCol2: "Our production team manages lighting, camera work, sound, and post-production editing for screen engagement.",
-    deliverables: [
-      { num: "01", icon: Target, title: "Concept & Storyboarding", description: "Narrative scripts, shot lists, and visual storyboards." },
-      { num: "02", icon: Sparkles, title: "On-Location & Studio Shooting", description: "4K/6K cinema camera setup, lighting, and audio recording." },
-      { num: "03", icon: Compass, title: "Editing & Color Grading", description: "Pacing edit, cinematic color grading, and visual enhancement." },
-      { num: "04", icon: Volume2, title: "Sound Design & Scoring", description: "Custom audio mixing, sound FX, and licensed soundtrack scoring." },
-      { num: "05", icon: Sliders, title: "Motion Graphics & Titling", description: "Lower thirds, animated logos, and visual typography overlay." },
-      { num: "06", icon: BookOpen, title: "Multi-Platform Export", description: "Delivered in 16:9 widescreen, 9:16 vertical, and 1:1 square formats." },
-    ],
-    featuredCaseStudy: {
-      badge: "FEATURED FILM",
-      client: "Cosmic Explorations",
-      tagline: "Cinematic Brand Documentary",
-      description: "Produced a short brand film detailing the origin story of Cosmic Explorations with custom scoring and color grading.",
-      deliverables: ["Brand Film", "30s Social Edits", "Custom Score", "Color Grade"],
-      palette: ["#0B0C10", "#1F2833", "#C5C6C7", "#66FCF1", "#45A29E"],
-      headlineFont: "Cormorant Garamond",
-      bodyFont: "Metropolis",
-      slug: "cosmic-explorations",
-      imageSrc: "/project-cosmic.jpg",
-    },
-    qualificationPoints: [
-      { icon: Sparkles, title: "Launching a flagship product.", description: "Requiring video to explain features and provoke emotion." },
-      { icon: TrendingUp, title: "Social video engagement is low.", description: "Needing broadcast-quality production for digital ad campaigns." },
-      { icon: RefreshCw, title: "Telling an origin story.", description: "Wanting a documentary-style video for corporate branding." },
-    ],
-    faqs: [
-      { question: "Where do you shoot video projects?", answer: "We shoot on location globally and in dedicated studio setups." },
-      { question: "Do you supply raw footage?", answer: "Raw camera rushes can be included as an optional add-on deliverable." },
-      { question: "Do you handle voiceover and music licensing?", answer: "Yes, we manage voice talent casting and full commercial music licensing." },
-      { question: "What formats do you deliver?", answer: "We deliver 4K master files formatted for YouTube, Web, Socials (9:16), and TV." },
-    ],
-  },
+
 
   "visual-storytelling": {
     categoryTrack: ["Narrative", "Photography", "Curation"],
@@ -482,7 +444,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     ],
   },
 
-  "architecture-designs": {
+  "digital-architecture-designs": {
     categoryTrack: ["Spatial UX", "3D Rendering", "Interiors"],
     heroTitlePrefix: "Translate your brand into ",
     heroTitleItalic: "physical space.",
@@ -574,7 +536,16 @@ export function getServiceDetailConfig(
   const capIndex = capabilities.findIndex((c) => c.slug === slug);
   const formattedNumber = capIndex >= 0 ? String(capIndex + 1).padStart(2, "0") : "01";
 
-  const customConfig = serviceConfigsMap[slug] || {};
+  const mappedSlug =
+    slug === "marketing"
+      ? "content-marketing"
+      : slug === "designing"
+      ? "brand-identity"
+      : slug === "and-beyond"
+      ? "web-design"
+      : slug;
+
+  const customConfig = serviceConfigsMap[mappedSlug] || serviceConfigsMap[slug] || {};
 
   const defaultDeliverablesList: DeliverableItem[] = (cap?.deliverables || []).map((del, idx) => ({
     num: String(idx + 1).padStart(2, "0"),

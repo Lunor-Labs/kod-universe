@@ -100,7 +100,7 @@ export function ProcessSection() {
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-secondary text-sm leading-[1.6] max-w-[280px] lg:max-w-[140px]">
+                    <p className="text-secondary leading-[1.6] max-w-[280px] lg:max-w-[140px]">
                       {step.description}
                     </p>
                   </div>
