@@ -18,7 +18,7 @@ import { ProcessSection } from "@/features/home/ProcessSection";
 export const metadata: Metadata = {
   title: "Capabilities",
   description:
-    "Explore KOD Universe's core creative disciplines: Marketing (Content Marketing & Social Media), Designing (Brand Identity, Package Design & Logo Design), and And Beyond (Digital Architecture, Merchandising, Visual Storytelling, Web Design).",
+    "Explore KOD Universe's core creative disciplines: Marketing (Content Marketing), Designing (Brand Identity, Package Design & Logo Design), and Beyond (Digital Architecture, Merchandising, Visual Storytelling, Web Design).",
   alternates: { canonical: "/capabilities" },
 };
 

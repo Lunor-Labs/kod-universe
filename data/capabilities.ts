@@ -7,24 +7,24 @@ export const serviceGroups: ServiceGroup[] = [
     id: "marketing",
     number: "01",
     title: "Marketing",
-    tagline: "Content Marketing (Social Media)",
+    tagline: "Content Marketing",
     description:
-      "Strategic content and platform-native community growth that transforms audience attention into lasting brand loyalty.",
+      "Strategic content and community growth that transforms audience attention into lasting brand loyalty.",
     iconName: "SOCIAL MEDIA",
-    tags: ["Content Marketing", "Social Media"],
+    tags: ["Content Marketing"],
     contentSections: [
       {
-        title: "Content Marketing (Social Media)",
-        badge: "Social Media",
+        title: "Content Marketing",
+        badge: "Content Marketing",
         iconName: "SOCIAL MEDIA",
         description:
-          "Strategic content that sparks conversations, builds communities, and drives platform-native growth across social media.",
+          "Strategic content that sparks conversations, builds engaged communities, and drives scalable brand growth.",
         deliverables: [
-          "Social media strategy & editorial calendar",
+          "Content marketing strategy & editorial calendar",
           "Photography and video art direction",
-          "Platform-specific template systems",
+          "Platform template systems",
           "Caption writing and brand voice guide",
-          "Community management framework",
+          "Community engagement framework",
           "Campaign concepts and execution",
           "Analytics and performance reporting",
         ],
@@ -37,19 +37,19 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Marketing",
         iconName: "SOCIAL MEDIA",
         description:
-          "Strategic content that sparks conversations, builds communities, and drives platform-native growth across social media.",
+          "Strategic content that sparks conversations, builds engaged communities, and drives scalable brand growth.",
         longDescription:
-          "We craft platform-native content strategies that align your brand's story with the rhythms of each channel. From Instagram to TikTok to LinkedIn, we build the visual language, editorial calendar, and community framework that turns followers into advocates.",
+          "We craft high-impact content marketing strategies that align your brand's story with modern audience rhythms. We build the visual language, editorial calendar, and community framework that turn followers into brand advocates.",
         deliverables: [
-          "Social media strategy & editorial calendar",
+          "Content marketing strategy & editorial calendar",
           "Photography and video art direction",
-          "Platform-specific template systems",
+          "Platform template systems",
           "Caption writing and brand voice guide",
-          "Community management framework",
+          "Community engagement framework",
           "Campaign concepts and execution",
           "Analytics and performance reporting",
         ],
-        relatedProjectSlugs: ["bio-oil-skincare-campaign", "glow-naturally-campaign"],
+        relatedProjectSlugs: ["bio-oil-skincare-campaign", "area-6-social-media"],
       },
     ],
   },
@@ -113,10 +113,11 @@ export const serviceGroups: ServiceGroup[] = [
           "Brand guidelines document",
         ],
         relatedProjectSlugs: [
-          "threadline-textiles-packaging",
-          "bio-oil-retail-packaging",
-          "corepoint-fitness-identity",
-          "terra-origins-brand-kit",
+          "niwarthana-packaging-design",
+          "area-6-brand-identity",
+          "rouka-brand-identity",
+          "slsa-uk-identity",
+          "coffee-1911-identity",
         ],
       },
     ],
@@ -124,7 +125,7 @@ export const serviceGroups: ServiceGroup[] = [
   {
     id: "and-beyond",
     number: "03",
-    title: "And Beyond",
+    title: "Beyond",
     tagline: "Digital Architecture, Merchandising, Visual Storytelling, Web Design",
     description:
       "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
@@ -189,7 +190,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         id: "and-beyond",
         slug: "and-beyond",
-        title: "And Beyond",
+        title: "Beyond",
         iconName: "WEB DESIGN",
         description:
           "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
@@ -253,7 +254,7 @@ const legacyAliases: Capability[] = [
   {
     id: "legacy-digital-architecture",
     slug: "digital-architecture-designs",
-    title: "And Beyond",
+    title: "Beyond",
     iconName: "ARCHITECTURE DESIGNS",
     description: "Spatial design concepts and 3D visualization.",
     longDescription: "Bringing brand experiences into physical and digital environments.",
@@ -263,7 +264,7 @@ const legacyAliases: Capability[] = [
   {
     id: "legacy-merchandising",
     slug: "merchandising",
-    title: "And Beyond",
+    title: "Beyond",
     iconName: "MERCHANDISING",
     description: "Merchandise design extending brands into wearable products.",
     longDescription: "Branded products that people actually want to own.",
@@ -273,7 +274,7 @@ const legacyAliases: Capability[] = [
   {
     id: "legacy-visual-storytelling",
     slug: "visual-storytelling",
-    title: "And Beyond",
+    title: "Beyond",
     iconName: "VISUAL STORYTELLING",
     description: "Narrative-driven visuals communicating complex ideas.",
     longDescription: "Photography, illustration, and sequential imagery.",
@@ -283,7 +284,7 @@ const legacyAliases: Capability[] = [
   {
     id: "legacy-web-design",
     slug: "web-design",
-    title: "And Beyond",
+    title: "Beyond",
     iconName: "WEB DESIGN",
     description: "Websites and digital experiences crafted for clarity and conversion.",
     longDescription: "Next.js and React web development engineered for performance.",

@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
 };
 
 export const services = [
-  { title: "Social Media", description: "Scroll-stopping content that builds communities." },
+  { title: "Content Marketing", description: "Strategic content that builds lasting brand communities." },
   { title: "Branding & Identity", description: "Purpose-driven brands that endure." },
   { title: "Package Design", description: "Packaging that tells your story and sells." },
   { title: "Creative Work", description: "Campaigns that engage and inspire." },

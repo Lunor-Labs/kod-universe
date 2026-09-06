@@ -248,20 +248,6 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
         </AnimatePresence>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="absolute -top-10 -right-20 w-[480px] sm:w-[600px] h-[480px] sm:h-[600px] pointer-events-none z-10 overflow-hidden"
-        >
-          <Image
-            src="/icons/Web Hero Design-23.png"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </motion.div>
         <motion.div
           className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3"
           initial="hidden"

@@ -176,28 +176,28 @@ export const defaultCaseStudy = {
 
 const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
   "marketing": {
-    categoryTrack: ["Content Strategy", "Social Media", "Community Growth"],
+    categoryTrack: ["Content Strategy", "Brand Storytelling", "Community Growth"],
     heroTitlePrefix: "Ignite culture & ",
     heroTitleItalic: "build community.",
     heroDescription:
-      "We engineer platform-native content and social media ecosystems that convert audience attention into lasting brand loyalty.",
+      "We engineer high-impact content marketing ecosystems that convert audience attention into lasting brand loyalty.",
     philosophyNumber: "01",
     philosophyTitlePrefix: "Modern marketing is ",
     philosophyTitleItalic: "two-way connection.",
     philosophyCol1:
-      "Audiences do not want commercial noise; they seek authentic content that mirrors their values and enriches their daily lives. We align channel-native formats with your brand voice.",
+      "Audiences do not want commercial noise; they seek authentic content that mirrors their values and enriches their daily lives. We align narrative formats with your brand voice.",
     philosophyCol2:
-      "Across Instagram, TikTok, LinkedIn, and beyond, we build platform-native content engines that turn casual scrollers into passionate brand advocates.",
+      "Across modern digital touchpoints, we build content engines that turn casual viewers into passionate brand advocates.",
     disciplines: [
       {
-        title: "Content Marketing (Social Media)",
+        title: "Content Marketing",
         badge: "Core Discipline",
         iconName: "SOCIAL MEDIA",
         description:
-          "Strategic platform-native content that sparks conversations, builds engaged communities, and drives sustained brand growth.",
+          "Strategic content marketing that sparks conversations, builds engaged communities, and drives sustained brand growth.",
         deliverables: [
-          "Social media strategy & editorial calendar",
-          "Platform-specific template design systems",
+          "Content marketing strategy & editorial calendar",
+          "Platform template design systems",
           "Caption writing and brand voice guide",
           "Community management framework",
           "Campaign concepts & execution",
@@ -209,11 +209,11 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         badge: "Visual Production",
         iconName: "VISUAL STORYTELLING",
         description:
-          "High-impact visual direction and short-form video concepts engineered specifically for platform algorithms.",
+          "High-impact visual direction and short-form video concepts engineered specifically for platform engagement.",
         deliverables: [
           "Photography art direction & shoot production",
           "Short-form video scripts & editing",
-          "Reels & TikTok visual storytelling",
+          "Reels visual storytelling",
           "Brand aesthetic guidelines for video",
         ],
       },
@@ -290,15 +290,15 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/projects/Social-Media/Bio Oil Social Media Content Highlights/Bio Oil Social Media Hero.png",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching social channels.", description: "Stepping into market and needing an immediate, cohesive content strategy." },
-      { icon: TrendingUp, title: "Organic engagement has stagnated.", description: "Your current content is not breaking through platform algorithms." },
-      { icon: RefreshCw, title: "Brand voice feels inconsistent.", description: "Multiple team members produce disjointed social graphics and copy." },
+      { icon: Sparkles, title: "Launching content channels.", description: "Stepping into market and needing an immediate, cohesive content strategy." },
+      { icon: TrendingUp, title: "Audience engagement has stagnated.", description: "Your current content is not breaking through modern channel algorithms." },
+      { icon: RefreshCw, title: "Brand voice feels inconsistent.", description: "Multiple team members produce disjointed marketing graphics and copy." },
     ],
     faqs: [
-      { question: "Which social platforms do you support?", answer: "We support Instagram, TikTok, LinkedIn, YouTube, X, and Pinterest with platform-tailored creative strategies." },
+      { question: "Which digital channels do you support?", answer: "We support omnichannel digital platforms, editorial ecosystems, and video networks with tailored creative strategies." },
       { question: "Do you handle shoot production?", answer: "Yes, we handle end-to-end creative direction, photography, and video shooting." },
-      { question: "How often will content be published?", answer: "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 posts per week per channel." },
-      { question: "How do you measure success?", answer: "We track reach, engagement rate, follower growth, click-through rates, and community conversions." },
+      { question: "How often will content be published?", answer: "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 releases per week per channel." },
+      { question: "How do you measure success?", answer: "We track reach, engagement rate, audience growth, click-through rates, and community conversions." },
     ],
   },
 

@@ -135,10 +135,28 @@ export const projects: Project[] = [
         width: 800,
         height: 1000,
       },
+      {
+        src: "/projects/Social-Media/Area 6/poster message.png",
+        alt: "Area 6 poster message graphic",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Social-Media/Area 6/Singale post.jpg",
+        alt: "Area 6 single post composition",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Social-Media/Area 6/Normal (1).png",
+        alt: "Area 6 training visual post",
+        width: 800,
+        height: 1000,
+      },
     ],
     tags: ["Social Media", "Poster Design", "Creative Direction"],
     featured: false,
-    relatedSlugs: ["bio-oil-skincare-campaign", "coats-sri-lanka-campaign"],
+    relatedSlugs: ["area-6-brand-identity", "bio-oil-skincare-campaign", "coats-sri-lanka-campaign"],
   },
   {
     id: "3",
@@ -480,6 +498,18 @@ export const projects: Project[] = [
         width: 800,
         height: 1000,
       },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 (6).png",
+        alt: "Coffee 1911 mark variation 6",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Coffee 1911/Coffee 1911 (7).png",
+        alt: "Coffee 1911 mark variation 7",
+        width: 800,
+        height: 1000,
+      },
     ],
     tags: ["Branding", "Logo Design", "Coffee Culture", "Identity"],
     featured: false,
@@ -543,17 +573,29 @@ export const projects: Project[] = [
         width: 800,
         height: 1000,
       },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Final  (6).png",
+        alt: "Cool Step variation 6",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Cool Step Final/Cool Step Final  (7).png",
+        alt: "Cool Step variation 7",
+        width: 800,
+        height: 1000,
+      },
     ],
     tags: ["Branding", "Logo Design", "Footwear", "Apparel"],
     featured: false,
-    relatedSlugs: ["focal-logo-identity", "frans-niwasa-identity"],
+    relatedSlugs: ["area-6-brand-identity", "focal-logo-identity", "frans-niwasa-identity"],
   },
   {
     id: "9",
     slug: "focal-logo-identity",
     title: "FOCAL Visual Identity",
     client: "FOCAL",
-    category: "CREATIVE WORK",
+    category: "BRANDING & IDENTITY",
     year: 2024,
     shortDescription:
       "Precision-engineered geometric brand identity crafted for clarity, visual focus, and modern creative technology.",
@@ -600,6 +642,18 @@ export const projects: Project[] = [
         width: 800,
         height: 1000,
       },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FOCAL/FOCAL Logo (5).png",
+        alt: "FOCAL logo variation 5",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FOCAL/FOCAL Logo (6).png",
+        alt: "FOCAL logo variation 6",
+        width: 800,
+        height: 1000,
+      },
     ],
     tags: ["Creative Direction", "Logo Design", "Geometry", "Identity"],
     featured: false,
@@ -610,7 +664,7 @@ export const projects: Project[] = [
     slug: "frans-niwasa-identity",
     title: "FRANS Niwasa Brand Identity",
     client: "FRANS Niwasa",
-    category: "CREATIVE WORK",
+    category: "BRANDING & IDENTITY",
     year: 2024,
     shortDescription:
       "An architectural, warm living space brand identity expressing sanctuary, domestic serenity, and architectural harmony.",
@@ -654,6 +708,18 @@ export const projects: Project[] = [
       {
         src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (4).png",
         alt: "FRANS Niwasa variation 4",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (5).png",
+        alt: "FRANS Niwasa variation 5",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/FRANS Niwasa/FRANS Niwasa  (6).png",
+        alt: "FRANS Niwasa variation 6",
         width: 800,
         height: 1000,
       },
@@ -710,6 +776,12 @@ export const projects: Project[] = [
       {
         src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz (Amila) (4).png",
         alt: "Kaiz monogram variation 4",
+        width: 800,
+        height: 1000,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Kaiz/Kaiz (Amila) (5).png",
+        alt: "Kaiz monogram variation 5",
         width: 800,
         height: 1000,
       },
@@ -773,6 +845,201 @@ export const projects: Project[] = [
     tags: ["Creative Work", "Symbol Design", "Sacred Geometry", "Art Direction"],
     featured: false,
     relatedSlugs: ["kaiz-brand-identity", "focal-logo-identity"],
+  },
+  {
+    id: "13",
+    slug: "area-6-brand-identity",
+    title: "Area 6 Brand & Identity",
+    client: "Area 6",
+    category: "BRANDING & IDENTITY",
+    year: 2024,
+    shortDescription:
+      "A powerful, high-impact athletic and lifestyle identity system expressing strength, discipline, and modern community spirit.",
+    overview:
+      "Area 6 engaged KOD Universe to engineer a comprehensive brand mark and identity system that represents urban vitality, focused training, and elite performance across apparel, spatial signage, and digital touchpoints.",
+    challenge:
+      "Creating an iconic, immediately identifiable mark that feels authoritative, athletic, and memorable across both physical apparel and digital platforms.",
+    approach:
+      "We designed a bold geometric logomark anchored in precision angles and strength, complemented by modern typography and versatile application guidelines.",
+    deliverables: [
+      "Primary brand mark & secondary badges",
+      "Athletic brand guidelines",
+      "Apparel and merchandise mockups",
+      "Signage and spatial environmental branding",
+    ],
+    heroImage: {
+      src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
+      alt: "Area 6 Brand & Identity Hero",
+      width: 1254,
+      height: 1254,
+    },
+    cardImage: {
+      src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
+      alt: "Area 6 Brand Logo Mark",
+      width: 1254,
+      height: 1254,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (1).png",
+        alt: "Area 6 logo composition 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (2).png",
+        alt: "Area 6 brand mark application 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (3).png",
+        alt: "Area 6 emblem detail 3",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (4).png",
+        alt: "Area 6 apparel graphic 4",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/Area 6/Area 6 (5).png",
+        alt: "Area 6 visual system 5",
+        width: 1254,
+        height: 1254,
+      },
+    ],
+    tags: ["Branding", "Logo Design", "Identity", "Athletic", "Apparel"],
+    featured: false,
+    relatedSlugs: ["area-6-social-media", "cool-step-identity", "kaiz-brand-identity"],
+  },
+  {
+    id: "14",
+    slug: "bito-brand-identity",
+    title: "Bito Brand & Logo Design",
+    client: "Bito",
+    category: "BRANDING & IDENTITY",
+    year: 2024,
+    shortDescription:
+      "Modern, minimal, and playful brand mark crafted for seamless digital discovery and dynamic visual recognition.",
+    overview:
+      "Bito partnered with KOD Universe to develop a clean, character-rich brand mark that connects effortlessly with digital-native audiences while remaining versatile across physical touchpoints.",
+    challenge:
+      "Balancing playful personality with crisp corporate legibility and timeless geometric balance.",
+    approach:
+      "We crafted an approachable emblem combining friendly contours, sharp typography, and versatile presentation styles.",
+    deliverables: [
+      "Core brand mark & icon suite",
+      "Color systems and typography",
+      "Digital application mockups",
+      "Brand visual guidelines",
+    ],
+    heroImage: {
+      src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
+      alt: "Bito Brand Logo Design Hero",
+      width: 1254,
+      height: 1254,
+    },
+    cardImage: {
+      src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
+      alt: "Bito Brand Logo",
+      width: 1254,
+      height: 1254,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/bito/bito (1).png",
+        alt: "Bito logo showcase 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/bito/bito (2).png",
+        alt: "Bito logo variation 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/bito/bito (3).png",
+        alt: "Bito brand application 3",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/bito/bito (4).png",
+        alt: "Bito identity system 4",
+        width: 1254,
+        height: 1254,
+      },
+    ],
+    tags: ["Branding", "Logo Design", "Digital Identity", "Visual System"],
+    featured: false,
+    relatedSlugs: ["coco-brand-identity", "focal-logo-identity", "coffee-1911-identity"],
+  },
+  {
+    id: "15",
+    slug: "coco-brand-identity",
+    title: "COCO Brand & Identity",
+    client: "COCO",
+    category: "BRANDING & IDENTITY",
+    year: 2024,
+    shortDescription:
+      "Sleek, contemporary logomark and brand identity celebrating natural elegance, modern lifestyle, and organic luxury.",
+    overview:
+      "COCO commissioned KOD Universe to design an alluring, modern visual identity that embodies pure sophistication, natural aesthetics, and premium product positioning.",
+    challenge:
+      "Establishing a distinctive presence in a competitive lifestyle market with an iconic, minimalist emblem.",
+    approach:
+      "We designed a balanced, rhythm-focused mark that harmonizes circular geometry with delicate, upscale typography.",
+    deliverables: [
+      "Primary brand mark & secondary marks",
+      "Packaging and print mockups",
+      "Brand visual guidelines",
+      "Digital asset kit",
+    ],
+    heroImage: {
+      src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
+      alt: "COCO Brand & Identity Hero",
+      width: 1254,
+      height: 1254,
+    },
+    cardImage: {
+      src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
+      alt: "COCO Brand Logo",
+      width: 1254,
+      height: 1254,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Branding-Identity/LoGo Design/coco/COCO (1).png",
+        alt: "COCO brand mark 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/coco/COCO (2).png",
+        alt: "COCO mark variation 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/coco/COCO (3).png",
+        alt: "COCO brand identity application 3",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Branding-Identity/LoGo Design/coco/COCO (4).png",
+        alt: "COCO branding system 4",
+        width: 1254,
+        height: 1254,
+      },
+    ],
+    tags: ["Branding", "Logo Design", "Lifestyle", "Minimalism"],
+    featured: false,
+    relatedSlugs: ["bito-brand-identity", "rouka-brand-identity", "niwarthana-packaging-design"],
   },
 ];
 

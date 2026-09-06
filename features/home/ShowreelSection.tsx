@@ -13,7 +13,7 @@ const VIDEOS = [
 
 const STAGGER_PX = [0, 64, 0, 64];
 
-const CARD_W = 220;
+const CARD_W = 280;
 const GAP = 20;
 
 export function ShowreelSection() {
