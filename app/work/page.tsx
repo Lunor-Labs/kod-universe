@@ -25,7 +25,7 @@ export default function WorkPage() {
         >
           <div className="absolute inset-0" aria-hidden="true">
             <Image
-              src="/main/Portfolio Hero.png"
+              src="/main/portfolio-hero.png"
               alt="KOD Universe Selected Works - Ancient cave painting of human creative origins"
               fill
               priority

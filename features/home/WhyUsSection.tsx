@@ -22,7 +22,7 @@ export function WhyUsSection() {
             <div className="lg:col-span-3 p-8 lg:p-10 bg-[#120F0E] border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-between relative overflow-hidden min-h-[320px]">
               <div className="absolute bottom-6 left-0 w-full h-64 opacity-15 invert mix-blend-screen pointer-events-none z-0">
                 <Image
-                  src="/icons/Web Hero Design-25.png"
+                  src="/icons/web-hero-design-25.png"
                   alt=""
                   fill
                   className="object-contain object-left"

@@ -89,7 +89,7 @@ export function ServiceSystemMosaic() {
                   </div>
                   <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1">
                     <Image
-                      src="/system/hd/collateral_terra.jpg"
+                      src="/system/hd/collateral-terra.jpg"
                       alt="Collateral and corporate stationery flatlay"
                       fill
                       className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-700"
@@ -163,7 +163,7 @@ export function ServiceSystemMosaic() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group">
                       <Image
-                        src="/system/hd/packaging_soluna.jpg"
+                        src="/system/hd/packaging-soluna.jpg"
                         alt="Nova Origin luxury dark packaging box with gold foil"
                         fill
                         className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
@@ -197,7 +197,7 @@ export function ServiceSystemMosaic() {
 
                   <div className="relative aspect-[16/9] md:aspect-[32/13] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1 min-h-[180px]">
                     <Image
-                      src="/system/hd/guidelines_spread.jpg"
+                      src="/system/hd/guidelines-spread.jpg"
                       alt="Brand guidelines and style manual book spread"
                       fill
                       className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"

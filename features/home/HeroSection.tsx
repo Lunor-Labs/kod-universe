@@ -364,7 +364,7 @@ export function HeroSection() {
               className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl"
             >
               <Image
-                src="/icons/Web Hero Design-20.png"
+                src="/icons/web-hero-design-20.png"
                 alt="About Us"
                 fill
                 className="object-contain"

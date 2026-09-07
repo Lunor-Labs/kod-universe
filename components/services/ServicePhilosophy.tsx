@@ -68,7 +68,7 @@ export function ServicePhilosophy({
                   <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-85 group-hover/item:opacity-100 transition-opacity">
                       <Image
-                        src="/icons/Logo Design.png"
+                        src="/icons/logo-design.png"
                         alt="Spark - Logo Design Icon"
                         width={84}
                         height={84}
@@ -83,7 +83,7 @@ export function ServicePhilosophy({
                   <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-90 group-hover/item:opacity-100 transition-opacity">
                       <Image
-                        src="/icons/VISUAL STORYTELLING.png"
+                        src="/icons/visual-storytelling.png"
                         alt="Harmony - Visual Storytelling Icon"
                         width={84}
                         height={84}
@@ -99,7 +99,7 @@ export function ServicePhilosophy({
                     <div className="absolute inset-2 animate-spin-slow pointer-events-none" />
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center z-10">
                       <Image
-                        src="/icons/Branding.png"
+                        src="/icons/branding.png"
                         alt="The Mark - Branding Icon"
                         width={84}
                         height={84}

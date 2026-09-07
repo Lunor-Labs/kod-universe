@@ -10,27 +10,27 @@ const steps = [
     title: "Discover",
     description:
       "We dive deep to understand your goals, audience, and opportunities.",
-    iconPath: "/icons/Discover-Icon.png",
+    iconPath: "/icons/discover-icon.png",
   },
   {
     number: "02",
     title: "Define",
     description:
       "We shape the strategy and creative direction with clarity and intent.",
-    iconPath: "/icons/Define.png",
+    iconPath: "/icons/define.png",
   },
   {
     number: "03",
     title: "Create",
     description: "We design, craft, and refine ideas that connect and convert.",
-    iconPath: "/icons/Create.png",
+    iconPath: "/icons/create.png",
   },
   {
     number: "04",
     title: "Deliver",
     description:
       "We launch with precision and support your growth every step ahead.",
-    iconPath: "/icons/Deliver.png",
+    iconPath: "/icons/deliver.png",
   },
 ];
 
