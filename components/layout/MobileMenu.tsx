@@ -84,8 +84,20 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           exit="closed"
           variants={menuVariants}
           className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden antialiased"
+          style={{ 
+            willChange: "opacity", 
+            WebkitBackfaceVisibility: "hidden", 
+            backfaceVisibility: "hidden" 
+          }}
         >
-          <div className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.12] mix-blend-multiply z-0 transform rotate-45">
+          <div 
+            className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.08] z-0"
+            style={{ 
+              transform: "rotate(45deg) translateZ(0)", 
+              WebkitBackfaceVisibility: "hidden", 
+              backfaceVisibility: "hidden" 
+            }}
+          >
             <Image
               src="/main/blossom.webp"
               alt=""
@@ -109,6 +121,11 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                   key={item.href}
                   variants={itemVariants}
                   className="antialiased"
+                  style={{ 
+                    willChange: "opacity, transform",
+                    WebkitBackfaceVisibility: "hidden", 
+                    backfaceVisibility: "hidden" 
+                  }}
                 >
                   <Link
                     href={item.href}
@@ -121,7 +138,15 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               ))}
             </motion.ul>
 
-            <motion.div variants={itemVariants} className="mt-12 antialiased">
+            <motion.div 
+              variants={itemVariants} 
+              className="mt-12 antialiased"
+              style={{ 
+                willChange: "opacity, transform",
+                WebkitBackfaceVisibility: "hidden", 
+                backfaceVisibility: "hidden" 
+              }}
+            >
               <Link
                 href="/connect"
                 onClick={onClose}
@@ -135,7 +160,10 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             </motion.div>
           </nav>
 
-          <div className="mt-auto border-t border-border-warm pt-6 flex items-center justify-between relative z-10">
+          <div 
+            className="mt-auto border-t border-border-warm pt-6 flex items-center justify-between relative z-10"
+            style={{ WebkitBackfaceVisibility: "hidden", backfaceVisibility: "hidden", transform: "translateZ(0)" }}
+          >
             <p className="font-serif italic text-secondary text-sm">
               Ancient ideas. Modern impact.
             </p>
