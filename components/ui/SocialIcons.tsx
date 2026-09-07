@@ -48,7 +48,26 @@ export const LinkedinIcon = ({ size = 24, className = "" }: { size?: number | st
     className={className}
   >
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
     <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
+export const BehanceIcon = ({ size = 24, className = "" }: { size?: number | string, className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M16 8h-5" />
+    <path d="M3 7h4.5a2.5 2.5 0 0 1 0 5H3V7z" />
+    <path d="M3 12h5a2.5 2.5 0 0 1 0 5H3v-5z" />
+    <path d="M17 11.5a2.5 2.5 0 1 1-2.5 2.5v-.5a2 2 0 0 1 2.5-2z" />
   </svg>
 );

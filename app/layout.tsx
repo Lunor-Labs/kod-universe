@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { FloatingActions } from "@/components/ui/FloatingActions";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -23,12 +38,21 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - ${siteConfig.tagline}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
     creator: "@koduniverse",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -43,11 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body className="bg-canvas text-void-black antialiased">
+      <body className={`${inter.variable} ${cormorant.variable} bg-canvas text-void-black antialiased`}>
         <SmoothScrollProvider>
           <Header />
           <main id="main-content" tabIndex={-1}>

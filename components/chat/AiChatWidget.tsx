@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import {
   MessageSquare,
@@ -224,13 +225,13 @@ export function AiChatWidget() {
         </button>
       </div>
 
-      {isOpen && (
+      {isOpen && mounted && createPortal(
         <div
           data-lenis-prevent="true"
           data-lenis-prevent-touch="true"
           onWheel={(e) => e.stopPropagation()}
           onTouchMove={(e) => e.stopPropagation()}
-          className="fixed bottom-[84px] left-3 right-3 sm:left-auto sm:bottom-24 sm:right-7 z-[100] sm:w-[440px] sm:max-w-[400px] h-[calc(80dvh-100px)] sm:h-[600px] sm:max-h-[85vh] rounded-xl bg-kod-black shadow-2xl flex flex-col overflow-hidden text-white font-sans animate-fade-in"
+          className="fixed bottom-[84px] left-3 right-3 sm:left-auto sm:bottom-24 sm:right-7 z-[100] sm:w-[440px] sm:max-w-[400px] h-[calc(100dvh-120px)] sm:h-[600px] sm:max-h-[85vh] rounded-xl bg-kod-black shadow-2xl flex flex-col overflow-hidden text-white font-sans animate-fade-in"
         >
           <div className="px-4 py-3.5 bg-kod-earth border-b border-kod-border/20 flex items-center justify-between select-none">
             <div className="flex items-center gap-3">
@@ -476,7 +477,8 @@ export function AiChatWidget() {
             >Get A Quote
             </button>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

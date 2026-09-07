@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap");
-@import "@fontsource/metropolis/300.css";
 @import "@fontsource/metropolis/400.css";
-@import "@fontsource/metropolis/500.css";
 @import "@fontsource/metropolis/600.css";
 @import "@fontsource/metropolis/700.css";
 @import "tailwindcss";
@@ -68,9 +65,9 @@
   --color-border-warm: var(--kod-border);
 
   /* Fonts */
-  --font-metropolis: "Metropolis", "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-metropolis: "Metropolis", var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Metropolis", var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  --font-editorial: var(--font-cormorant), Georgia, serif;
 
   /* Max widths */
   --width-site: 1280px;

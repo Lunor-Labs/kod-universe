@@ -9,11 +9,13 @@ import {
   InstagramIcon,
   LinkedinIcon,
   FacebookIcon,
+  BehanceIcon,
 } from "@/components/ui/SocialIcons";
 
 const iconMap: Record<string, React.ElementType> = {
   Instagram: InstagramIcon,
   Linkedin: LinkedinIcon,
+  Behance: BehanceIcon,
   Facebook: FacebookIcon,
   ExternalLink,
 };

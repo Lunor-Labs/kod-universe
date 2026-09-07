@@ -10,6 +10,7 @@ import {
   InstagramIcon,
   LinkedinIcon,
   FacebookIcon,
+  BehanceIcon,
 } from "@/components/ui/SocialIcons";
 
 interface MobileMenuProps {
@@ -145,6 +146,9 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               </a>
               <a href={siteConfig.socialLinks.find(s => s.platform === "LinkedIn")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="LinkedIn">
                 <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a href={siteConfig.socialLinks.find(s => s.platform === "Behance")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Behance">
+                <BehanceIcon className="w-5 h-5" />
               </a>
               <a href={siteConfig.socialLinks.find(s => s.platform === "Facebook")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Facebook">
                 <FacebookIcon className="w-5 h-5" />

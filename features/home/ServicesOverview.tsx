@@ -42,7 +42,7 @@ export function ServicesOverview() {
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-24 h-24 rounded bg-canvas/40 flex items-center justify-center mb-6 group-hover:border-signal-orange group-hover:scale-105 transition-all duration-300">
                     <Image
-                      src={`/icons/${group.iconName || "Branding"}.png`}
+                      src={`/icons/${group.iconName || "Branding"}.webp`}
                       alt=""
                       width={72}
                       height={72}

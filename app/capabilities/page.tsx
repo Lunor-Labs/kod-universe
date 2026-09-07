@@ -156,7 +156,7 @@ export default function CapabilitiesPage() {
                                 {section.iconName && (
                                   <div className="w-12 h-12 rounded bg-white flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
                                     <Image
-                                      src={`/icons/${section.iconName}.png`}
+                                      src={`/icons/${section.iconName}.webp`}
                                       alt=""
                                       width={28}
                                       height={28}

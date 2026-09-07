@@ -50,7 +50,7 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
                     {item.iconName && (
                       <div className="w-16 h-16 rounded bg-kod-canvas flex items-center justify-center">
                         <Image
-                          src={`/icons/${item.iconName}.png`}
+                          src={`/icons/${item.iconName}.webp`}
                           alt=""
                           width={72}
                           height={72}
