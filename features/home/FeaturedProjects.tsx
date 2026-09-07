@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,13 +23,31 @@ interface FeaturedProjectsProps {
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const [activeCategory, setActiveCategory] = useState("ALL");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const filtered =
     activeCategory === "ALL"
       ? projects
       : projects.filter((p) => p.category === activeCategory);
 
-  const display = filtered.slice(0, 2);
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [activeCategory]);
+
+  useEffect(() => {
+    if (filtered.length <= 2) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % filtered.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [filtered.length]);
+
+  const display = [];
+  for (let i = 0; i < Math.min(2, filtered.length); i++) {
+    display.push(filtered[(currentIndex + i) % filtered.length]);
+  }
 
   return (
     <section className="section-padding-top " aria-label="Selected projects">

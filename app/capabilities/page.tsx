@@ -154,12 +154,12 @@ export default function CapabilitiesPage() {
                             <div>
                               <div className="flex items-center justify-between mb-4">
                                 {section.iconName && (
-                                  <div className="w-12 h-12 rounded bg-white flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
+                                  <div className="w-16 h-16 rounded bg-white flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
                                     <Image
                                       src={`/icons/${section.iconName}.webp`}
                                       alt=""
-                                      width={28}
-                                      height={28}
+                                      width={64}
+                                      height={64}
                                       className="object-contain"
                                     />
                                   </div>
@@ -216,9 +216,9 @@ export default function CapabilitiesPage() {
                   <Image
                     src="/icons/web-hero-design-25.webp"
                     alt=""
-                    width={300}
-                    height={300}
-                    className="rounded-sm mb-8 w-40 h-60 object-cover sm:w-[300px] sm:h-auto"
+                    width={240}
+                    height={240}
+                    className="rounded-sm mb-8 w-40 h-80 object-cover sm:w-[240px] sm:h-auto"
                     aria-hidden="true"
                   />
                 </div>

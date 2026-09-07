@@ -209,7 +209,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Content Marketing",
         badge: "Core Discipline",
-        iconName: "SOCIAL MEDIA",
+        iconName: "social-media",
         description:
           "Strategic content marketing that sparks conversations, builds engaged communities, and drives sustained brand growth.",
         deliverables: [
@@ -224,7 +224,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Photo & Video Direction",
         badge: "Visual Production",
-        iconName: "VISUAL STORYTELLING",
+        iconName: "visual-storytelling",
         description:
           "High-impact visual direction and short-form video concepts engineered specifically for platform engagement.",
         deliverables: [
@@ -416,7 +416,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Package Design",
         badge: "Brand Identity",
-        iconName: "Packaging",
+        iconName: "packaging",
         description:
           "Packaging that protects, persuades, and elevates your product on every shelf, creating an unforgettable unboxing experience.",
         deliverables: [
@@ -431,7 +431,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Logo Design",
         badge: "Brand Identity",
-        iconName: "Logo Design",
+        iconName: "logo-design",
         description:
           "Purpose-driven logo marks, typographic hierarchies, and brand guidelines that establish market authority and lasting trust.",
         deliverables: [
@@ -628,7 +628,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Digital Architecture Designs",
         badge: "Spatial & 3D",
-        iconName: "ARCHITECTURE DESIGNS",
+        iconName: "architecture-designs",
         description:
           "Spatial design concepts that translate brand identities into physical interiors, exhibition pavilions, and photorealistic 3D virtual spaces.",
         deliverables: [
@@ -641,7 +641,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Merchandising",
         badge: "Tangible Products",
-        iconName: "MERCHANDISING",
+        iconName: "merchandising",
         description:
           "High-appeal merchandise design that extends your brand into wearable apparel, accessories, and collectible physical products.",
         deliverables: [
@@ -654,7 +654,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Visual Storytelling",
         badge: "Narrative Systems",
-        iconName: "VISUAL STORYTELLING",
+        iconName: "visual-storytelling",
         description:
           "Narrative-driven visual systems, editorial photography direction, and sequential imagery that communicate complex ideas with emotional resonance.",
         deliverables: [
@@ -667,7 +667,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Web Design",
         badge: "Digital Platforms",
-        iconName: "WEB DESIGN",
+        iconName: "web-design",
         description:
           "High-performance websites and digital experiences built with Next.js, tailored UX strategy, and fluid micro-animations engineered to convert.",
         deliverables: [
