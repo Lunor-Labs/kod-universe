@@ -33,25 +33,25 @@ export function ServiceHero({
           </div>
           <div className="lg:col-span-11 xl:col-span-10 relative z-20">
             <ScrollReveal variant="left">
-              <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-4 sm:mb-6 block drop-shadow-sm">
+              <span className="eyebrow text-kod-orange mb-4 sm:mb-6 block drop-shadow-sm">
                 {eyebrow}
               </span>
 
-              <h1 className="font-metropolis font-semibold text-4xl sm:text-5xl lg:text-6xl text-kod-earth leading-[1.08] mb-6 sm:mb-8 text-balance drop-shadow-sm max-w-4xl">
+              <h1 className="heading-hero text-kod-earth mb-6 sm:mb-8 text-balance drop-shadow-sm max-w-4xl">
                 {titlePrefix}{" "}
                 <span className="block sm:inline font-editorial italic font-normal text-kod-earth">
                   {titleItalic}
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-lg text-kod-text leading-relaxed max-w-xl font-medium mb-8 sm:mb-10 drop-shadow-sm">
+              <p className="text-lead text-kod-text max-w-xl mb-8 sm:mb-10 drop-shadow-sm">
                 {description}
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/connect"
-                  className="group inline-flex items-center gap-3 sm:gap-4 bg-kod-orange text-white pl-6 sm:pl-8 pr-3 py-3 rounded-full font-metropolis font-semibold text-xs sm:text-sm tracking-[0.15em] uppercase hover:bg-kod-crimson transition-all shadow-lg"
+                  className="group inline-flex items-center gap-3 sm:gap-4 bg-kod-orange text-white pl-6 sm:pl-8 pr-3 py-3 rounded-full font-metropolis font-bold text-sm tracking-[0.15em] uppercase hover:bg-kod-crimson transition-all shadow-lg"
                 >
                   <span>START A PROJECT</span>
                   <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-kod-crimson transition-all flex-shrink-0">

@@ -26,10 +26,10 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
                 aria-hidden="true"
               />
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase text-kod-text-2 mb-1">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/70 mb-1">
                   Previous
                 </p>
-                <p className="text-base md:text-lg font-medium text-kod-earth group-hover:text-kod-clay transition-colors">
+                <p className="text-base md:text-lg font-bold text-kod-earth group-hover:text-kod-clay transition-colors">
                   {prev.title}
                 </p>
               </div>
@@ -45,10 +45,10 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
               aria-label={`Next project: ${next.title}`}
             >
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase text-kod-text-2 mb-1">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/70 mb-1">
                   Next
                 </p>
-                <p className="text-base md:text-lg font-medium text-kod-earth group-hover:text-kod-clay transition-colors">
+                <p className="text-base md:text-lg font-bold text-kod-earth group-hover:text-kod-clay transition-colors">
                   {next.title}
                 </p>
               </div>

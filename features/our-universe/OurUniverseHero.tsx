@@ -28,7 +28,7 @@ export function OurUniverseHero() {
           <div className="lg:col-span-7 max-w-xl">
             <p className="eyebrow mb-4">Our Story. Our Origin. Our Why.</p>
 
-            <h1 className="text-display-xl text-kod-earth font-metropolis font-bold leading-[1.08] mb-6 text-balance">
+            <h1 className="heading-hero text-kod-earth mb-6 text-balance">
               We Are Messengers <br />
               of{" "}
               <span className="font-editorial italic font-normal text-kod-earth">
@@ -36,7 +36,7 @@ export function OurUniverseHero() {
               </span>
             </h1>
 
-            <p className="text-kod-earth text-base leading-relaxed mb-8 max-w-lg font-normal">
+            <p className="text-lead text-kod-earth mb-8 max-w-lg font-normal">
               From the vast universe, ideas spark—seeds of potential. We receive
               them with purpose and shape them into modern brand experiences
               that connect, inspire, and leave a lasting mark.

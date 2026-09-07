@@ -26,7 +26,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        <p className="text-secondary text-base leading-relaxed max-w-sm mx-auto mb-10">
+        <p className="text-kod-earth/85 text-base leading-relaxed max-w-sm mx-auto mb-10">
           The page you&apos;re looking for has drifted into another dimension. Let&apos;s get you back on course.
         </p>
 
@@ -42,7 +42,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <p className="mt-12 font-serif italic text-secondary text-sm">
+        <p className="mt-12 font-serif italic text-kod-earth/80 text-base">
           Ancient ideas. Modern impact.
         </p>
       </div>

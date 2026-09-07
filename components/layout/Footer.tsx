@@ -25,16 +25,16 @@ export function Footer() {
             <Link href="/" aria-label="KOD Universe — Home">
               <KodLogo className="h-20 w-auto text-canvas mb-6 brightness-0 invert" />
             </Link>
-            <p className="text-dust-rose text-sm leading-relaxed max-w-xs">
+            <p className="text-kod-dust/90 text-base leading-relaxed max-w-sm">
               We transform ideas into modern brands, stories, and experiences
               that connect, inspire, and leave a lasting mark.
             </p>
-            <p className="font-serif italic text-secondary mt-4 text-sm">
+            <p className="font-serif italic text-kod-dust/80 mt-4 text-base">
               Ancient ideas. Modern impact.
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
+            <h3 className="text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-white/80 mb-6">
               Navigation
             </h3>
             <ul className="space-y-3" role="list">
@@ -42,7 +42,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-dust-rose hover:text-canvas transition-colors duration-200"
+                    className="text-base text-kod-dust hover:text-canvas transition-colors duration-200"
                   >
                     {item.label}
                   </Link>
@@ -51,13 +51,13 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-secondary mb-6">
+            <h3 className="text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-white/80 mb-6">
               Connect
             </h3>
             <div className="space-y-3 mb-6">
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="block text-sm text-dust-rose hover:text-canvas transition-colors duration-200"
+                className="block text-base text-kod-dust hover:text-canvas transition-colors duration-200"
               >
                 {siteConfig.contact.email}
               </a>
@@ -65,14 +65,14 @@ export function Footer() {
                 <a
                   key={phone.number}
                   href={`tel:${phone.number.replace(/\D/g, "")}`}
-                  className="block text-sm text-dust-rose hover:text-canvas transition-colors duration-200"
+                  className="block text-base text-kod-dust hover:text-canvas transition-colors duration-200"
                 >
-                  {phone.number} <span className="text-secondary opacity-70 ml-1">({phone.region})</span>
+                  {phone.number} <span className="text-white/60 ml-1">({phone.region})</span>
                 </a>
               ))}
               <div className="pt-2 space-y-1">
                 {siteConfig.contact.locations.map((loc) => (
-                  <p key={loc} className="text-sm text-secondary">
+                  <p key={loc} className="text-base text-kod-dust/75">
                     {loc}
                   </p>
                 ))}
@@ -105,19 +105,19 @@ export function Footer() {
       <div className="border-t border-earth">
         <div className="container-site py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-secondary">
+            <p className="text-sm text-white/70">
               © {new Date().getFullYear()} KOD Universe. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-sm text-secondary hover:text-dust-rose transition-colors"
+                className="text-sm text-white/70 hover:text-dust-rose transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-sm text-secondary hover:text-dust-rose transition-colors"
+                className="text-sm text-white/70 hover:text-dust-rose transition-colors"
               >
                 Terms of Service
               </Link>

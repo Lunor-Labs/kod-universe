@@ -25,7 +25,7 @@ export function CorePillars() {
                 </svg>
               </div>
               <h3 className="pillar-heading mb-3">Our Mission</h3>
-              <p className="text-kod-text-2 text-sm leading-relaxed mb-6">
+              <p className="text-kod-earth/85 text-base leading-relaxed mb-6">
                 To transform cosmic ideas into meaningful brand experiences that
                 move people and shape a better tomorrow.
               </p>
@@ -45,7 +45,7 @@ export function CorePillars() {
                 <University className="w-10 h-10"/>
               </div>
               <h3 className="pillar-heading mb-3">Our Philosophy</h3>
-              <p className="text-kod-text-2 text-sm leading-relaxed mb-6">
+              <p className="text-kod-earth/85 text-base leading-relaxed mb-6">
                 We believe ideas are everywhere. Our role is to listen deeply,
                 think boldly, and create with intention—uniting strategy,
                 design, and story into powerful experiences.
@@ -66,7 +66,7 @@ export function CorePillars() {
                 <HandFist className="w-10 h-10"/>
               </div>
               <h3 className="pillar-heading mb-3">Our Values</h3>
-              <ul className="text-kod-text-2 text-sm leading-relaxed space-y-1.5 mb-6">
+              <ul className="text-kod-earth/85 text-base font-medium leading-relaxed space-y-2 mb-6">
                 {[
                   "Curiosity over convention",
                   "Purpose over popularity",
@@ -74,9 +74,9 @@ export function CorePillars() {
                   "Collaboration over ego",
                   "Impact over impression",
                 ].map((v) => (
-                  <li key={v} className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-kod-orange flex-shrink-0" />
-                    {v}
+                  <li key={v} className="flex items-center gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-kod-orange flex-shrink-0" />
+                    <span>{v}</span>
                   </li>
                 ))}
               </ul>
@@ -107,7 +107,7 @@ export function CorePillars() {
                 </svg>
               </div>
               <h3 className="pillar-heading mb-3">Our Approach</h3>
-              <p className="text-kod-text-2 text-sm leading-relaxed mb-6">
+              <p className="text-kod-earth/85 text-base leading-relaxed mb-6">
                 We blend insight with imagination. A dynamic process that fuses
                 strategy, storytelling, and design to build brands that connect,
                 resonate, and endure.

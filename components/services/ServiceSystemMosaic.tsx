@@ -147,7 +147,7 @@ export function ServiceSystemMosaic() {
                           <br />
                           Advancing tomorrow.
                         </p>
-                        <div className="bg-kod-orange text-white text-xs sm:text-sm tracking-widest uppercase font-semibold text-center py-2 rounded-full shadow">
+                        <div className="bg-kod-orange text-white text-sm tracking-wider uppercase font-bold text-center py-2 rounded-full shadow">
                           LEARN MORE
                         </div>
                       </div>
@@ -203,7 +203,7 @@ export function ServiceSystemMosaic() {
                       className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                    <span className="absolute bottom-3 left-3 text-xs sm:text-sm text-white/70 font-light tracking-wider select-none">
+                    <span className="absolute bottom-3 left-3 text-sm text-white/80 font-medium tracking-wider select-none">
                       Guidelines
                     </span>
                   </div>

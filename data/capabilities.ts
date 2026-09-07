@@ -10,13 +10,13 @@ export const serviceGroups: ServiceGroup[] = [
     tagline: "Content Marketing",
     description:
       "Strategic content and community growth that transforms audience attention into lasting brand loyalty.",
-    iconName: "SOCIAL MEDIA",
+    iconName: "social-media",
     tags: ["Content Marketing"],
     contentSections: [
       {
         title: "Content Marketing",
         badge: "Content Marketing",
-        iconName: "SOCIAL MEDIA",
+        iconName: "social-media",
         description:
           "Strategic content that sparks conversations, builds engaged communities, and drives scalable brand growth.",
         deliverables: [
@@ -35,7 +35,7 @@ export const serviceGroups: ServiceGroup[] = [
         id: "marketing",
         slug: "marketing",
         title: "Marketing",
-        iconName: "SOCIAL MEDIA",
+        iconName: "social-media",
         description:
           "Strategic content that sparks conversations, builds engaged communities, and drives scalable brand growth.",
         longDescription:
@@ -60,13 +60,13 @@ export const serviceGroups: ServiceGroup[] = [
     tagline: "Brand Identity (Package Design, Logo Design)",
     description:
       "End-to-end brand identity systems spanning physical product packaging and enduring logo design marks.",
-    iconName: "Packaging",
+    iconName: "packaging",
     tags: ["Brand Identity", "Package Design", "Logo Design"],
     contentSections: [
       {
         title: "Package Design",
         badge: "Brand Identity",
-        iconName: "Packaging",
+        iconName: "packaging",
         description:
           "Packaging that protects, persuades, and elevates your product on every shelf.",
         deliverables: [
@@ -81,7 +81,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Logo Design",
         badge: "Brand Identity",
-        iconName: "Logo Design",
+        iconName: "logo-design",
         description:
           "Purpose-driven logo and brand mark systems that inspire trust and leave a lasting mark.",
         deliverables: [
@@ -99,7 +99,7 @@ export const serviceGroups: ServiceGroup[] = [
         id: "designing",
         slug: "designing",
         title: "Designing",
-        iconName: "Packaging",
+        iconName: "packaging",
         description:
           "End-to-end brand identity systems spanning physical product packaging and enduring logo design marks.",
         longDescription:
@@ -129,7 +129,7 @@ export const serviceGroups: ServiceGroup[] = [
     tagline: "Digital Architecture, Merchandising, Visual Storytelling, Web Design",
     description:
       "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
-    iconName: "WEB DESIGN",
+    iconName: "web-design",
     tags: [
       "Digital Architecture",
       "Merchandising",
@@ -139,7 +139,7 @@ export const serviceGroups: ServiceGroup[] = [
     contentSections: [
       {
         title: "Digital Architecture Designs",
-        iconName: "ARCHITECTURE DESIGNS",
+        iconName: "architecture-designs",
         description:
           "Spatial design concepts that bring brand experiences into physical and digital environments.",
         deliverables: [
@@ -151,7 +151,7 @@ export const serviceGroups: ServiceGroup[] = [
       },
       {
         title: "Merchandising",
-        iconName: "MERCHANDISING",
+        iconName: "merchandising",
         description:
           "Merchandise design that extends your brand into tangible, wearable, and collectible products.",
         deliverables: [
@@ -163,7 +163,7 @@ export const serviceGroups: ServiceGroup[] = [
       },
       {
         title: "Visual Storytelling",
-        iconName: "VISUAL STORYTELLING",
+        iconName: "visual-storytelling",
         description:
           "Narrative-driven visuals that communicate complex ideas through compelling imagery.",
         deliverables: [
@@ -175,7 +175,7 @@ export const serviceGroups: ServiceGroup[] = [
       },
       {
         title: "Web Design",
-        iconName: "WEB DESIGN",
+        iconName: "web-design",
         description:
           "Websites and digital experiences crafted for clarity, connection, and conversion.",
         deliverables: [
@@ -191,7 +191,7 @@ export const serviceGroups: ServiceGroup[] = [
         id: "and-beyond",
         slug: "and-beyond",
         title: "Beyond",
-        iconName: "WEB DESIGN",
+        iconName: "web-design",
         description:
           "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
         longDescription:

@@ -15,33 +15,33 @@ export default function TermsOfServicePage() {
         <header className="mb-12 border-b border-border-warm pb-8">
           <p className="eyebrow mb-4">LEGAL</p>
           <h1 className="font-editorial text-4xl md:text-5xl mb-4">Terms of Service</h1>
-          <p className="text-secondary text-sm">Last updated: {lastUpdated}</p>
+          <p className="text-kod-earth/80 text-base">Last updated: {lastUpdated}</p>
         </header>
 
-        <div className="prose prose-sm md:prose-base prose-headings:font-metropolis prose-headings:font-semibold prose-headings:text-earth prose-p:text-secondary prose-a:text-signal-orange prose-a:no-underline hover:prose-a:underline max-w-none">
+        <div className="prose prose-base prose-headings:font-metropolis prose-headings:font-semibold prose-headings:text-earth prose-p:text-kod-earth/85 prose-p:text-base prose-p:leading-relaxed prose-a:text-signal-orange prose-a:no-underline hover:prose-a:underline max-w-none">
           <p>
             Welcome to KOD Universe. These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website,
             services, and applications. Please read them carefully.
           </p>
 
-          <h2 className="text-xl mt-8 mb-4">1. Acceptance of Terms</h2>
+          <h2 className="text-2xl mt-8 mb-4">1. Acceptance of Terms</h2>
           <p>
             By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy. 
             If you do not agree to these Terms, do not use our services.
           </p>
 
-          <h2 className="text-xl mt-8 mb-4">2. Intellectual Property Rights</h2>
+          <h2 className="text-2xl mt-8 mb-4">2. Intellectual Property Rights</h2>
           <p>
             The content, design, graphics, and other materials related to our website and services are protected under 
             applicable copyrights, trademarks, and other proprietary rights. The copying, redistribution, use, or publication 
             by you of any such matters or any part of our website is strictly prohibited.
           </p>
 
-          <h2 className="text-xl mt-8 mb-4">3. User Conduct</h2>
+          <h2 className="text-2xl mt-8 mb-4">3. User Conduct</h2>
           <p>
             You agree not to use the services to:
           </p>
-          <ul className="list-disc pl-5 space-y-2 mb-6 text-secondary text-sm">
+          <ul className="list-disc pl-5 space-y-2 mb-6 text-kod-earth/85 text-base">
             <li>Violate any local, state, national, or international law.</li>
             <li>Infringe upon the rights of others.</li>
             <li>Distribute viruses or any other technologies that may harm the website or the interests or property of its users.</li>

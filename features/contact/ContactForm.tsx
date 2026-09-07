@@ -119,7 +119,7 @@ export function ContactForm() {
     );
   }
 
-  const inputStyles = "w-full px-4 py-3 bg-transparent border rounded-md text-sm text-earth placeholder-secondary/50 focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 transition-colors duration-200";
+  const inputStyles = "w-full px-4 py-3 bg-transparent border rounded-md text-base text-earth placeholder-secondary/50 focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 transition-colors duration-200";
 
   return (
     <form
@@ -280,9 +280,9 @@ export function ContactForm() {
           )}
         </button>
 
-        <div className="flex items-center justify-center sm:justify-end gap-2 text-secondary">
-          <Lock size={14} className="opacity-60" />
-          <p className="text-sm">
+        <div className="flex items-center justify-center sm:justify-end gap-2 text-kod-earth/75">
+          <Lock size={14} className="opacity-70" />
+          <p className="text-sm sm:text-base font-medium">
             We respect your privacy. Your information will never be shared.
           </p>
         </div>

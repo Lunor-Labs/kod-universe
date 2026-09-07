@@ -37,7 +37,7 @@ export function HeaderDropdown({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-5">
               <p
-                className={`text-xs font-semibold tracking-[0.16em] uppercase text-kod-clay mb-5 font-metropolis transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`text-sm font-bold tracking-[0.16em] uppercase text-kod-clay mb-5 font-metropolis transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                 }`}
                 style={{ transitionDelay: "40ms" }}
@@ -73,7 +73,7 @@ export function HeaderDropdown({
 
             <div className="lg:col-span-3">
               <p
-                className={`font-semibold tracking-[0.16em] uppercase text-kod-clay mb-5 font-metropolis transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`text-sm font-bold tracking-[0.16em] uppercase text-kod-clay mb-5 font-metropolis transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                 }`}
                 style={{ transitionDelay: "70ms" }}
@@ -94,7 +94,7 @@ export function HeaderDropdown({
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className="font-medium text-kod-text-2 hover:text-kod-clay transition-colors block py-1 font-sans"
+                      className="text-base font-medium text-kod-earth/80 hover:text-kod-clay transition-colors block py-1 font-sans"
                     >
                       {link.label}
                     </Link>
@@ -109,18 +109,18 @@ export function HeaderDropdown({
               style={{ transitionDelay: "130ms" }}
             >
               <div className="bg-kod-white rounded p-5 shadow-soft hover:border-kod-clay/70 transition-all group relative overflow-hidden">
-                <p className="text-xs font-semibold tracking-[0.15em] uppercase text-kod-clay mb-2 font-metropolis">
+                <p className="text-sm font-bold tracking-[0.15em] uppercase text-kod-clay mb-2 font-metropolis">
                   {data.spotlight.tag}
                 </p>
                 <h4 className="text-lg font-bold text-kod-earth font-metropolis mb-2 group-hover:text-kod-clay transition-colors">
                   {data.spotlight.title}
                 </h4>
-                <p className="text-xs text-kod-text-2 leading-relaxed">
+                <p className="text-sm text-kod-earth/80 leading-relaxed mb-3">
                   {data.spotlight.description}
                 </p>
 
                 {data.spotlight.image && (
-                  <div className="relative w-full h-32 rounded-lg overflow-hidden">
+                  <div className="relative w-full h-32 rounded-lg overflow-hidden mb-3">
                     <Image
                       src={data.spotlight.image}
                       alt={data.spotlight.title}
@@ -133,7 +133,7 @@ export function HeaderDropdown({
                 <Link
                   href={data.spotlight.href}
                   onClick={onClose}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-kod-clay group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-kod-clay group-hover:gap-3 transition-all"
                 >
                   <span>Explore</span>
                   <ArrowRight size={14} />

@@ -18,16 +18,16 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
       <div className="container-site">
         <div className="max-w-3xl mb-14">
           <ScrollReveal variant="left">
-            <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-3 block">
+            <span className="eyebrow text-kod-orange mb-3 block">
               INTEGRATED DISCIPLINES
             </span>
-            <h2 className="font-metropolis font-semibold text-3xl sm:text-4xl lg:text-5xl text-kod-earth leading-[1.1] mb-5">
+            <h2 className="heading-section text-kod-earth mb-5">
               Everything inside{" "}
               <em className="font-editorial italic font-normal text-kod-earth">
                 {serviceTitle}.
               </em>
             </h2>
-            <p className="text-kod-text-2 leading-relaxed">
+            <p className="text-body text-kod-text-2">
               We eliminate disjointed agency silos by clustering specialized creative capabilities into one seamless, end-to-end discipline.
             </p>
           </ScrollReveal>
@@ -60,30 +60,30 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
                       </div>
                     )}
                     {item.badge && (
-                      <span className="font-semibold tracking-wider uppercase text-kod-orange bg-kod-orange/10 px-2.5 py-1 rounded">
+                      <span className="text-sm font-semibold tracking-wider uppercase text-kod-orange bg-kod-orange/10 px-2.5 py-1 rounded">
                         {item.badge}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="font-metropolis font-bold text-kod-earth text-xl mb-3">
+                  <h3 className="heading-card text-kod-earth mb-3">
                     {item.title}
                   </h3>
 
-                  <p className="text-kod-text-2 leading-relaxed mb-6">
+                  <p className="text-body text-kod-text-2 mb-6">
                     {item.description}
                   </p>
                 </div>
 
                 <div className="border-t border-kod-border/60 pt-5 mt-auto">
-                  <p className="font-semibold tracking-[0.2em] uppercase text-kod-text-2 mb-3">
+                  <p className="eyebrow text-kod-text-2 mb-3">
                     Key Deliverables
                   </p>
                   <ul className="space-y-2" role="list">
                     {item.deliverables.map((del) => (
                       <li
                         key={del}
-                        className="flex items-start gap-2.5 text-kod-text-2 leading-normal"
+                        className="flex items-start gap-2.5 text-body text-kod-text-2"
                       >
                         <span
                           className="mt-1.5 w-1.5 h-1.5 rounded-full bg-kod-orange flex-shrink-0"

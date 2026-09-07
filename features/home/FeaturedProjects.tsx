@@ -65,7 +65,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               </motion.div>
             ) : (
               <div className="py-16 text-center">
-                <p className="text-secondary text-sm">
+                <p className="text-kod-earth/80 text-base font-medium">
                   No projects in this category yet.
                 </p>
               </div>
@@ -73,7 +73,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             <div className="mt-8 flex justify-start">
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em] 
+                className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.1em] 
                            uppercase text-earth hover:text-signal-orange transition-colors duration-200 group"
               >
                 View all projects
@@ -98,17 +98,17 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 />
 
                 <p className="eyebrow mb-4">Our origin. Your impact.</p>
-                <h2 className="font-metropolis font-semibold text-earth text-display-sm mb-4 text-balance">
+                <h2 className="heading-section text-earth mb-4 text-balance">
                   We are messengers of creative forces.
                 </h2>
-                <p className="text-secondary leading-relaxed mb-8">
+                <p className="text-body text-kod-earth/85 mb-8">
                   From the vast universe, ideas spark - seeds of potential. We
                   receive them with purpose and shape them into work that
                   connects, inspires, and leaves a lasting mark.
                 </p>
                 <Link
                   href="/our-universe"
-                  className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em] 
+                  className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.1em] 
                            uppercase text-earth border border-earth/40 px-5 py-2.5 rounded-3xl
                            hover:bg-earth hover:text-canvas transition-all duration-200 group"
                 >

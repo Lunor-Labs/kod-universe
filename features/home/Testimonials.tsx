@@ -108,10 +108,10 @@ export function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-auto pt-6 border-t border-border-warm/50">
-                <p className="font-metropolis font-semibold text-earth uppercase tracking-widest text-xs">
+                <p className="font-metropolis font-bold text-earth uppercase tracking-wider text-sm">
                   {t.author}
                 </p>
-                <p className="text-secondary text-xs mt-1">{t.role}</p>
+                <p className="text-kod-earth/75 text-sm mt-1">{t.role}</p>
               </div>
             </div>
           ))}

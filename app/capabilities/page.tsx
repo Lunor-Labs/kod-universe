@@ -61,16 +61,16 @@ export default function CapabilitiesPage() {
           <div className="container-site relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
-                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-clay mb-5">
+                <p className="eyebrow text-clay mb-5">
                   Strategy. Design. Story. Impact.
                 </p>
-                <h1 className="font-metropolis font-semibold text-kod-earth text-display-xl mb-6 leading-tight">
+                <h1 className="heading-hero text-kod-earth mb-6">
                   How Ideas Become{" "}
                   <em className="font-serif italic font-normal text-kod-earth">
                     Impact.
                   </em>
                 </h1>
-                <p className="text-kod-earth text-base leading-relaxed max-w-sm mb-10">
+                <p className="text-lead text-kod-earth max-w-sm mb-10">
                   KOD Universe is a creative studio that transforms ideas into
                   meaningful brands, experiences, and expressions that connect
                   and endure.
@@ -95,11 +95,11 @@ export default function CapabilitiesPage() {
           <div className="container-site">
             <div className="text-center mb-16">
               <SectionLabel>Our creative services</SectionLabel>
-              <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
+              <h2 className="heading-section text-earth text-balance">
                 End-to-end creative{" "}
                 <em className="font-serif italic font-normal">solutions.</em>
               </h2>
-              <p className="text-secondary text-base max-w-xl mx-auto mt-3">
+              <p className="text-body text-kod-earth/85 max-w-xl mx-auto mt-3">
                 Three core disciplines housing our specialized capabilities to transform your vision into market-defining execution.
               </p>
             </div>
@@ -115,21 +115,21 @@ export default function CapabilitiesPage() {
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-8 border-b border-border-warm">
                       <div>
                         <div className="flex items-center gap-3 flex-wrap">
-                          <h3 className="font-metropolis font-bold text-earth text-3xl">
+                          <h3 className="heading-card text-earth">
                             {group.title}
                           </h3>
                         </div>
-                        <p className="text-secondary text-sm md:text-base mt-2 max-w-2xl leading-relaxed">
+                        <p className="text-body text-kod-earth/85 mt-2 max-w-2xl">
                           {group.description}
                         </p>
                       </div>
 
                       <Link
                         href={`/capabilities/${group.id}`}
-                        className="self-start lg:self-center inline-flex items-center gap-2 font-semibold text-xs tracking-wider uppercase bg-canvas hover:bg-kod-canvas border border-border-warm/60 px-4 py-2.5 rounded text-earth hover:text-signal-orange transition-all"
+                        className="self-start lg:self-center inline-flex items-center gap-2 font-bold text-sm tracking-wider uppercase bg-canvas hover:bg-kod-canvas border border-border-warm/60 px-5 py-2.5 rounded text-earth hover:text-signal-orange transition-all"
                       >
                         Explore {group.title}
-                        <ArrowRight size={12} aria-hidden="true" />
+                        <ArrowRight size={13} aria-hidden="true" />
                       </Link>
                     </div>
 
@@ -168,10 +168,10 @@ export default function CapabilitiesPage() {
                                 />
                               </div>
 
-                              <h4 className="font-metropolis font-bold text-earth text-lg mb-2 group-hover:text-signal-orange transition-colors">
+                              <h4 className="heading-item text-earth mb-2 group-hover:text-signal-orange transition-colors">
                                 {section.title}
                               </h4>
-                              <p className="text-secondary text-sm leading-relaxed">
+                              <p className="text-body text-kod-earth/80">
                                 {section.description}
                               </p>
                             </div>
@@ -191,7 +191,7 @@ export default function CapabilitiesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <SectionLabel>What clients receive</SectionLabel>
-                <h2 className="font-metropolis font-semibold text-earth text-display-lg mb-6 text-balance">
+                <h2 className="heading-section text-earth mb-6 text-balance">
                   More than deliverables. <br />
                   We deliver{" "}
                   <em className="font-serif italic font-normal">momentum.</em>
@@ -204,7 +204,7 @@ export default function CapabilitiesPage() {
                         className="text-signal-orange flex-shrink-0 mt-0.5"
                         aria-hidden="true"
                       />
-                      <p className="text-secondary leading-relaxed">{item}</p>
+                      <p className="text-body text-kod-earth/85">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -223,7 +223,7 @@ export default function CapabilitiesPage() {
                 <p className="eyebrow text-clay mb-4">
                   Ready to create impact?
                 </p>
-                <h3 className="font-metropolis font-semibold text-canvas text-display-sm mb-6 leading-snug">
+                <h3 className="heading-card text-canvas mb-6 leading-snug">
                   Let&apos;s build something extraordinary together.
                 </h3>
                 <Link href="/connect" className="btn-primary">

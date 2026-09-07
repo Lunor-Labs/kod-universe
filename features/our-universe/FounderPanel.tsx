@@ -14,7 +14,7 @@ export function FounderPanel() {
           {/* Header */}
           <div className="mb-12">
             <span className="eyebrow mb-3">Founder</span>
-            <h2 className="text-display-md text-kod-black">
+            <h2 className="heading-section text-kod-black">
               The Vision Behind KOD
             </h2>
           </div>
@@ -42,8 +42,8 @@ export function FounderPanel() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 border border-kod-border/50 shadow-sm flex items-center justify-between">
                   <div>
-                    <p className="font-metropolis font-bold text-kod-earth text-sm tracking-wide">Ishara Jakod</p>
-                    <p className="text-kod-text-2 text-xs tracking-[0.1em] uppercase">Founder & Creative Director</p>
+                    <p className="font-metropolis font-bold text-kod-earth text-base tracking-wide">Ishara Jakod</p>
+                    <p className="text-kod-earth/80 text-sm font-semibold tracking-[0.08em] uppercase">Founder & Creative Director</p>
                   </div>
                   {/* Social icons */}
                   <div className="flex gap-2">
@@ -88,7 +88,7 @@ export function FounderPanel() {
 
               <div className="h-px w-12 bg-kod-orange" aria-hidden="true" />
 
-              <div className="text-kod-text-2 text-[15px] leading-relaxed space-y-4">
+              <div className="text-kod-earth/85 text-base leading-relaxed space-y-4">
                 <p>
                   KOD Universe was founded on the belief that ideas are not
                   invented—they are discovered. Like a rare creative seed
@@ -112,7 +112,7 @@ export function FounderPanel() {
                 ].map((s) => (
                   <div key={s.label}>
                     <p className="font-metropolis font-bold text-2xl text-kod-earth">{s.n}</p>
-                    <p className="text-kod-text-2 text-xs uppercase tracking-[0.1em]">{s.label}</p>
+                    <p className="text-kod-earth/80 text-sm font-semibold uppercase tracking-[0.08em]">{s.label}</p>
                   </div>
                 ))}
               </div>

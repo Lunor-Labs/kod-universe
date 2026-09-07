@@ -18,11 +18,11 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5">
             <ScrollReveal variant="left">
-              <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-3 block">
+              <span className="eyebrow text-kod-orange mb-3 block">
                 {caseStudy.badge}
               </span>
 
-              <h2 className="font-metropolis font-semibold text-4xl sm:text-5xl lg:text-5xl text-white mb-2">
+              <h2 className="heading-section text-white mb-2">
                 {caseStudy.client}
               </h2>
 
@@ -30,14 +30,14 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
                 {caseStudy.tagline}
               </p>
 
-              <p className="text-white/80 text-sm sm:text-base leading-relaxed font-light mb-8 max-w-md">
+              <p className="text-body text-white/80 font-light mb-8 max-w-md">
                 {caseStudy.description}
               </p>
               <div className="mb-8">
-                <span className="text-sm font-semibold tracking-widest uppercase text-white/60 mb-3 block">
+                <span className="eyebrow text-white/60 mb-3 block">
                   DELIVERABLES
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-white/90 font-light">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-body text-white/90 font-light">
                   {caseStudy.deliverables.map((del) => (
                     <div key={del} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-kod-orange flex-shrink-0" />

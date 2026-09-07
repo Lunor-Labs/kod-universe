@@ -131,7 +131,7 @@ export function HeroSection() {
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
-            className="relative max-w-2xl"
+            className="relative max-w-4xl"
             style={disableParallax ? undefined : { y: textY }}
             initial="hidden"
             animate="show"
@@ -181,7 +181,7 @@ export function HeroSection() {
                   transition: { duration: 0.35 },
                 },
               }}
-              className="text-earth text-4xl sm:text-5xl md:text-7xl font-normal leading-[1.1] mb-6 tracking-tight"
+              className="heading-hero text-earth mb-6 tracking-tight font-normal"
             >
               {slide.title1} <br />
               {slide.titleHighlight}
@@ -204,7 +204,7 @@ export function HeroSection() {
                   transition: { duration: 0.3 },
                 },
               }}
-              className="text-earth text-sm md:text-base leading-relaxed mb-10 max-w-md font-medium"
+              className="text-lead text-earth mb-10 max-w-xl"
             >
               {slide.description}
             </motion.p>

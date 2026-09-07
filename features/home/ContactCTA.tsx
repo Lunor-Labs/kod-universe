@@ -77,10 +77,10 @@ export function ContactCTA() {
                       <Mail size={16} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-kod-text-2">
+                      <p className="text-sm font-bold uppercase tracking-wider text-kod-earth/70">
                         Direct Mail
                       </p>
-                      <p className="text-sm font-semibold">
+                      <p className="text-base font-semibold text-kod-earth">
                         hello@koduniverse.com
                       </p>
                     </div>
@@ -94,10 +94,10 @@ export function ContactCTA() {
                       <Phone size={16} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-kod-text-2">
+                      <p className="text-sm font-bold uppercase tracking-wider text-kod-earth/70">
                         Studio Line
                       </p>
-                      <p className="text-sm font-semibold">+94 77 2000 0504</p>
+                      <p className="text-base font-semibold text-kod-earth">+94 77 2000 0504</p>
                     </div>
                   </a>
 
@@ -106,16 +106,16 @@ export function ContactCTA() {
                       <MapPin size={16} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-kod-text-2">
+                      <p className="text-sm font-bold uppercase tracking-wider text-kod-earth/70">
                         Headquarters
                       </p>
-                      <p className="text-sm font-semibold">
+                      <p className="text-base font-semibold text-kod-earth">
                         Colombo 07, Sri Lanka
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="inline-flex items-center gap-2.5 bg-kod-canvas/80 px-4 py-2 rounded italic font-medium text-kod-earth">
+                <div className="inline-flex items-center gap-2.5 bg-kod-canvas/80 px-4 py-2.5 rounded italic text-sm font-medium text-kod-earth">
                   <span>
                     * We review and respond to inquiries within 24 hours.
                   </span>
@@ -145,7 +145,7 @@ export function ContactCTA() {
                       <button
                         type="button"
                         onClick={handleReset}
-                        className="btn-secondary !text-xs !h-10 !px-5"
+                        className="btn-secondary !text-sm !h-11 !px-6"
                       >
                         Send Another Inquiry
                       </button>
@@ -159,13 +159,13 @@ export function ContactCTA() {
                         <h3 className="font-metropolis font-bold text-xl sm:text-2xl text-kod-earth mb-1">
                           Quick Project Inquiry
                         </h3>
-                        <p className="text-kod-text-2">
+                        <p className="text-kod-earth/80 text-sm sm:text-base leading-relaxed">
                           Fill out this brief form and our team will get back to
                           you with insights and next steps.
                         </p>
                       </div>
                       <div>
-                        <label className="block font-semibold uppercase tracking-wider text-kod-earth mb-2.5 font-metropolis">
+                        <label className="block text-sm font-bold uppercase tracking-wider text-kod-earth mb-2.5 font-metropolis">
                           I am interested in:
                         </label>
                         <div className="flex flex-wrap gap-2">
@@ -176,7 +176,7 @@ export function ContactCTA() {
                                 key={svc}
                                 type="button"
                                 onClick={() => setSelectedService(svc)}
-                                className={`text-sm font-medium px-3.5 py-2 rounded border transition-all cursor-pointer ${
+                                className={`text-sm font-semibold px-3.5 py-2 rounded border transition-all cursor-pointer ${
                                   isSelected
                                     ? "bg-kod-clay border-kod-clay text-white shadow-sm"
                                     : "bg-kod-canvas border-kod-border text-kod-earth hover:border-kod-clay/50"
@@ -192,7 +192,7 @@ export function ContactCTA() {
                         <div>
                           <label
                             htmlFor="inquiry-name"
-                            className="block text-xs font-semibold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
+                            className="block text-sm font-bold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
                           >
                             Your Name *
                           </label>
@@ -203,14 +203,14 @@ export function ContactCTA() {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="e.g. John Doe"
-                            className="w-full h-11 px-4 text-sm rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50"
+                            className="w-full h-11 px-4 text-sm sm:text-base rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50"
                           />
                         </div>
 
                         <div>
                           <label
                             htmlFor="inquiry-contact"
-                            className="block text-xs font-semibold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
+                            className="block text-sm font-bold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
                           >
                             Email or Phone *
                           </label>
@@ -221,14 +221,14 @@ export function ContactCTA() {
                             value={contact}
                             onChange={(e) => setContact(e.target.value)}
                             placeholder="john@example.com / +94..."
-                            className="w-full h-11 px-4 text-sm rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50"
+                            className="w-full h-11 px-4 text-sm sm:text-base rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50"
                           />
                         </div>
                       </div>
                       <div>
                         <label
                           htmlFor="inquiry-message"
-                          className="block text-xs font-semibold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
+                          className="block text-sm font-bold uppercase tracking-wider text-kod-earth mb-1.5 font-metropolis"
                         >
                           Project Brief / Message *
                         </label>
@@ -239,7 +239,7 @@ export function ContactCTA() {
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           placeholder="Tell us about your brand vision, goals, or timeline..."
-                          className="w-full p-3.5 text-sm rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50 resize-none"
+                          className="w-full p-3.5 text-sm sm:text-base rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50 resize-none"
                         />
                       </div>
                       <button
@@ -247,7 +247,7 @@ export function ContactCTA() {
                         disabled={isSubmitting}
                         className="w-full btn-primary transition-all flex items-center justify-center cursor-pointer disabled:opacity-50"
                       >
-                        <span className="font-metropolis text-sm font-semibold tracking-wider text-white">
+                        <span className="font-metropolis text-sm sm:text-base font-bold tracking-wider text-white">
                           {isSubmitting
                             ? "Sending Inquiry..."
                             : "Submit Project Inquiry"}

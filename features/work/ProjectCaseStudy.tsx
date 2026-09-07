@@ -23,14 +23,14 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
 
             <div>
               <SectionLabel>The Challenge</SectionLabel>
-              <p className="text-kod-text-2 text-base md:text-lg leading-relaxed mt-3">
+              <p className="text-kod-earth/85 text-base md:text-lg leading-relaxed mt-3">
                 {project.challenge}
               </p>
             </div>
 
             <div>
               <SectionLabel>Our Approach</SectionLabel>
-              <p className="text-kod-text-2 text-base md:text-lg leading-relaxed mt-3">
+              <p className="text-kod-earth/85 text-base md:text-lg leading-relaxed mt-3">
                 {project.approach}
               </p>
             </div>
@@ -42,7 +42,7 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                 {project.deliverables.map((d) => (
                   <li
                     key={d}
-                    className="flex items-start gap-3 text-base text-kod-text-2"
+                    className="flex items-start gap-3 text-base text-kod-earth/85 font-medium"
                   >
                     <span
                       className="mt-2 w-2 h-2 rounded-full bg-kod-clay flex-shrink-0"
@@ -54,7 +54,7 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
               </ul>
 
               <div className="mt-8 pt-6 border-t border-kod-border">
-                <p className="text-sm font-semibold tracking-wider uppercase text-kod-earth/70 mb-3">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/80 mb-3">
                   Project Disciplines
                 </p>
                 <div className="flex flex-wrap gap-2.5">

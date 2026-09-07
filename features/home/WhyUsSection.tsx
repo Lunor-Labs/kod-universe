@@ -30,10 +30,10 @@ export function WhyUsSection() {
               </div>
 
               <div className="relative z-10">
-                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-kod-orange mb-4 block">
+                <span className="text-sm font-bold tracking-[0.2em] uppercase text-kod-orange mb-3 block">
                   THE CHALLENGE
                 </span>
-                <p className="font-editorial italic text-lg text-white/90 leading-relaxed font-normal">
+                <p className="font-editorial italic text-xl text-white/95 leading-relaxed font-normal">
                   Marrow Studio needed an identity that reflected their quiet
                   confidence, creative rigor and elevated craft—without feeling
                   generic.
@@ -41,7 +41,7 @@ export function WhyUsSection() {
               </div>
 
               <div className="relative z-10 pt-6">
-                <span className="text-xs tracking-widest uppercase font-semibold text-kod-dust/70 block">
+                <span className="text-sm tracking-wider uppercase font-bold text-kod-dust/80 block">
                   WHY US / KOD UNIVERSE
                 </span>
               </div>
@@ -61,26 +61,26 @@ export function WhyUsSection() {
 
             <div className="lg:col-span-5 p-8 lg:p-12 bg-[#171312] flex flex-col justify-between">
               <div>
-                <h3 className="font-editorial text-3xl sm:text-4xl lg:text-4xl text-white leading-tight mb-6">
+                <h3 className="heading-section font-editorial font-normal text-white mb-6">
                   From quiet idea <br />
-                  <em className="italic font-normal text-kod-dust">to confident identity.</em>
+                  <em className="italic text-kod-dust">to confident identity.</em>
                 </h3>
 
                 <div className="space-y-2 mb-8">
-                  <span className="text-xs font-semibold tracking-[0.25em] uppercase text-kod-orange block">
+                  <span className="eyebrow text-kod-orange block">
                     OUR APPROACH
                   </span>
-                  <p className="text-white/70 text-sm leading-relaxed font-light">
+                  <p className="text-body text-white/85">
                     We distilled their essence into a refined identity
                     system—minimal, tactile and enduring.
                   </p>
                 </div>
 
                 <div className="mb-8">
-                  <span className="text-xs font-semibold tracking-widest uppercase text-white/80 mb-3.5 block">
+                  <span className="eyebrow text-white/90 mb-3.5 block">
                     DELIVERABLES
                   </span>
-                  <ul className="space-y-2.5 text-sm text-white/90 font-medium">
+                  <ul className="space-y-2.5 text-body text-white/95 font-medium">
                     {deliverables.map((item) => (
                       <li key={item} className="flex items-center gap-2.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-kod-orange shadow-[0_0_6px_rgba(229,76,42,0.8)]" />
@@ -94,7 +94,7 @@ export function WhyUsSection() {
               <div>
                 <Link
                   href="/work"
-                  className="group inline-flex items-center gap-3 text-xs font-semibold tracking-[0.15em] uppercase text-white hover:text-kod-orange transition-colors"
+                  className="group inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase text-white hover:text-kod-orange transition-colors"
                 >
                   <span className="border-b border-white/30 group-hover:border-kod-orange transition-colors pb-0.5">
                     VIEW CASE STUDY

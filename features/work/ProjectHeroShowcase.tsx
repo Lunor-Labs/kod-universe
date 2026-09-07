@@ -30,7 +30,7 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-8">
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <h1 className="font-metropolis font-bold text-display-md sm:text-display-lg md:text-display-xl text-kod-clay leading-[1.1] mb-3 tracking-tight">
+            <h1 className="heading-hero text-kod-clay mb-3 tracking-tight">
               {project.title}
             </h1>
 
@@ -44,7 +44,7 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
               </span>
             </p>
 
-            <p className="text-kod-earth/85 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+            <p className="text-lead text-kod-earth/85 mb-8 max-w-xl">
               {project.shortDescription}
             </p>
 
@@ -66,10 +66,10 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
                       </div>
                     )}
                   </div>
-                  <h4 className="font-bold text-kod-clay mb-1.5 font-metropolis">
+                  <h4 className="heading-item text-kod-clay mb-1.5 font-metropolis">
                     {pillar.title}
                   </h4>
-                  <p className="text-sm text-kod-text-2 leading-relaxed">
+                  <p className="text-body text-kod-earth/80">
                     {pillar.description}
                   </p>
                 </div>

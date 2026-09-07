@@ -30,7 +30,7 @@ export function ServicePhilosophy({
                 <span className="font-editorial text-7xl lg:text-8xl text-kod-orange font-normal leading-none select-none">
                   {number}
                 </span>
-                <h2 className="font-metropolis font-semibold text-3xl sm:text-4xl text-kod-earth leading-tight">
+                <h2 className="heading-section text-kod-earth leading-tight">
                   {titlePrefix}
                   <br />
                   <em className="font-editorial italic font-normal text-kod-earth">
@@ -39,7 +39,7 @@ export function ServicePhilosophy({
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-kod-text leading-relaxed font-light border-t border-kod-border/70">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-body text-kod-text leading-relaxed border-t border-kod-border/70">
                 <p>{col1}</p>
                 <p>{col2}</p>
               </div>
@@ -75,7 +75,7 @@ export function ServicePhilosophy({
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-xs sm:text-sm tracking-widest uppercase font-semibold text-kod-text-2 mt-2 sm:mt-3 block">
+                    <span className="text-sm tracking-wider uppercase font-bold text-kod-earth/80 mt-2 sm:mt-3 block">
                       Spark
                     </span>
                   </div>
@@ -90,7 +90,7 @@ export function ServicePhilosophy({
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-xs sm:text-sm tracking-widest uppercase font-semibold text-kod-text-2 mt-2 sm:mt-3 block">
+                    <span className="text-sm tracking-wider uppercase font-bold text-kod-earth/80 mt-2 sm:mt-3 block">
                       Harmony
                     </span>
                   </div>
@@ -106,13 +106,13 @@ export function ServicePhilosophy({
                         className="object-contain drop-shadow-[0_0_8px_rgba(229,76,42,0.4)]"
                       />
                     </div>
-                    <span className="text-xs sm:text-sm tracking-widest uppercase font-semibold text-kod-orange mt-2 sm:mt-3 block relative z-10">
+                    <span className="text-sm tracking-wider uppercase font-bold text-kod-orange mt-2 sm:mt-3 block relative z-10">
                       The Mark
                     </span>
                   </div>
                 </div>
 
-                <p className="text-center text-sm text-kod-text-2 font-light max-w-sm mx-auto leading-relaxed">
+                <p className="text-center text-sm sm:text-base text-kod-earth/80 max-w-md mx-auto leading-relaxed">
                   From ancient archetypes to precision geometry. We build iconic marks engineered for enduring brand recognition.
                 </p>
               </div>

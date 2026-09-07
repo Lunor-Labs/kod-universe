@@ -15,10 +15,10 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
       <div className="container-site">
         <div className="text-center max-w-2xl mx-auto mb-20">
           <ScrollReveal variant="down">
-            <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-3 block">
+            <span className="eyebrow text-kod-orange mb-3 block">
               OUR PROCESS
             </span>
-            <h2 className="font-metropolis font-semibold text-3xl sm:text-4xl text-kod-earth">
+            <h2 className="heading-section text-kod-earth">
               From first spark to{" "}
               <em className="font-editorial italic font-normal text-kod-earth">
                 lasting identity.
@@ -48,16 +48,16 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
                     <div className={`lg:col-span-5 ${isEven ? "lg:text-right" : "lg:order-last"}`}>
                       <ScrollReveal variant={isEven ? "left" : "right"}>
-                        <div className="inline-flex items-center gap-2 lg:hidden px-3 py-1 bg-kod-orange/10 rounded-full text-kod-orange text-xs font-semibold tracking-wider uppercase mb-3">
+                        <div className="inline-flex items-center gap-2 lg:hidden px-3.5 py-1 bg-kod-orange/10 rounded-full text-kod-orange text-sm font-bold tracking-wider uppercase mb-3">
                           <span>PHASE {step.number}</span>
                         </div>
-                        <span className="hidden lg:block text-sm font-semibold tracking-[0.2em] uppercase text-kod-orange mb-2">
+                        <span className="hidden lg:block eyebrow text-kod-orange mb-2">
                           {step.number} {step.title}
                         </span>
-                        <h3 className="font-metropolis font-semibold text-2xl sm:text-3xl text-kod-earth mb-3">
+                        <h3 className="heading-card text-kod-earth mb-3">
                           {step.subtitle}
                         </h3>
-                        <p className="text-kod-text-2 text-sm sm:text-base leading-relaxed font-light">
+                        <p className="text-body text-kod-earth/85">
                           {step.description}
                         </p>
                       </ScrollReveal>

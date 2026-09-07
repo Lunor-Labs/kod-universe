@@ -15,11 +15,11 @@ export function ServicesOverview() {
         <div className="text-center mb-16">
           <ScrollReveal variant="down">
             <SectionLabel>Our creative services</SectionLabel>
-            <h2 className="font-semibold text-earth text-display-lg text-balance">
+            <h2 className="heading-section text-earth text-balance">
               End-to-end creative{" "}
               <em className="font-serif italic font-normal">solutions.</em>
             </h2>
-            <p className="mt-3 text-secondary text-base max-w-xl mx-auto">
+            <p className="mt-3 text-body text-kod-earth/85 max-w-xl mx-auto">
               Three core creative disciplines engineered to scale your brand from initial spark to global resonance.
             </p>
           </ScrollReveal>
@@ -50,22 +50,22 @@ export function ServicesOverview() {
                       aria-hidden="true"
                     />
                   </div>
-                  <h3 className="font-metropolis font-bold text-earth text-2xl lg:text-3xl mb-2 group-hover:text-signal-orange transition-colors duration-200">
+                  <h3 className="heading-card text-earth mb-2 group-hover:text-signal-orange transition-colors duration-200">
                     {group.title}
                   </h3>
-                  <p className="text-secondary leading-relaxed mb-6">
+                  <p className="text-body text-kod-earth/85 mb-6">
                     {group.description}
                   </p>
                   {group.tags && group.tags.length > 0 && (
                     <div className="mb-6">
-                      <p className="text-[11px] font-semibold tracking-wider uppercase text-secondary/80 mb-2.5">
+                      <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/80 mb-2.5">
                         Inside this discipline:
                       </p>
                       <div className="flex flex-wrap justify-center gap-1.5">
                         {group.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="inline-block px-2.5 py-1 rounded bg-canvas text-earth group-hover:border-border-warm transition-colors"
+                            className="inline-block px-3 py-1 rounded bg-canvas text-earth text-sm font-semibold group-hover:border-border-warm transition-colors"
                           >
                             {tag}
                           </span>
@@ -75,7 +75,7 @@ export function ServicesOverview() {
                   )}
                 </div>
                 <div className="flex items-center justify-between gap-4 mt-auto">
-                  <span className="text-xs font-bold uppercase tracking-wider text-earth group-hover:text-signal-orange transition-colors">
+                  <span className="text-sm font-bold uppercase tracking-wider text-earth group-hover:text-signal-orange transition-colors">
                     Explore {group.title}
                   </span>
                   <div className="w-8 h-8 rounded-full border border-border-warm flex items-center justify-center group-hover:bg-signal-orange group-hover:border-signal-orange text-earth group-hover:text-white transition-all duration-200 shadow-sm">

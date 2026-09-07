@@ -78,24 +78,24 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <SectionLabel>Featured project</SectionLabel>
-                <h2 className="font-metropolis font-semibold text-earth text-display-sm mb-2">
+                <h2 className="heading-card text-earth mb-2">
                   {featuredProject.title}
                 </h2>
                 <p className="text-signal-orange text-sm font-semibold tracking-[0.12em] uppercase mb-4">
                   {featuredProject.category}
                 </p>
-                <p className="text-secondary text-sm leading-relaxed mb-6 max-w-xs">
+                <p className="text-body text-kod-earth/85 mb-6 max-w-sm">
                   {featuredProject.shortDescription}
                 </p>
                 <Link
                   href={`/work/${featuredProject.slug}`}
                   className="inline-flex items-center gap-2 border border-earth text-earth 
-                             px-5 py-2 rounded-sm text-sm font-semibold tracking-[0.12em] uppercase
+                             px-5 py-2.5 rounded-sm text-sm font-bold tracking-[0.12em] uppercase
                              hover:bg-earth hover:text-canvas transition-all duration-200 group w-fit"
                 >
                   View case study
                   <ArrowRight
-                    size={12}
+                    size={13}
                     className="transition-transform duration-200 group-hover:translate-x-1"
                     aria-hidden="true"
                   />
@@ -105,16 +105,16 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
 
             <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain">
               <SectionLabel>Our Philosophy</SectionLabel>
-              <h3 className="font-editorial text-2xl lg:text-3xl text-earth mb-4 italic mt-2 leading-tight">
+              <h3 className="heading-card font-editorial text-earth mb-4 italic mt-2 leading-tight">
                 Ideas are ancient.<br/>
                 Execution is modern.<br/>
                 <span className="font-bold">Impact is timeless.</span>
               </h3>
-              <p className="text-secondary text-sm mb-auto">
+              <p className="text-body text-kod-earth/85 mb-auto">
                 We believe every brand has a story worth telling. Our work blends strategy, creativity, and craftsmanship to build experiences that resonate and endure.
               </p>
               <div className="mt-8 flex items-end justify-between">
-                <span className="font-editorial italic text-earth opacity-60">The KOD Universe</span>
+                <span className="font-editorial italic text-base text-earth opacity-70">The KOD Universe</span>
                 <div className="w-16 h-16 opacity-10 relative">
                    <Image src="/icon_astrolabe.svg" alt="" fill className="object-contain" />
                 </div>
@@ -130,7 +130,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
           </div>
         ) : (
           <div className="py-24 text-center">
-            <p className="text-secondary text-sm">
+            <p className="text-kod-earth/80 text-base font-medium">
               No projects in this category yet. Check back soon.
             </p>
           </div>

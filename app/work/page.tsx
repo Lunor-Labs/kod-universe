@@ -39,13 +39,13 @@ export default function WorkPage() {
           </div>
 
           <div className="container-site relative z-10">
-            <p className="text-sm font-semibold tracking-[0.25em] uppercase text-black mb-5">
+            <p className="eyebrow text-black mb-5">
               Seeds of ideas. Forged on earth.
             </p>
-            <h1 className="font-metropolis font-semibold text-black text-display-xl mb-6 leading-tight">
+            <h1 className="heading-hero text-black mb-6">
               Selected Works.
             </h1>
-            <p className="text-black text-base leading-relaxed max-w-md mb-10">
+            <p className="text-lead text-black max-w-md mb-10">
               Ideas have energy. We transform them into visual stories that
               connect, inspire, and leave a lasting mark.
             </p>

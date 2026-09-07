@@ -25,10 +25,10 @@ export function ServiceSelectedWork({
       <div className="container-site">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-12 gap-6">
           <ScrollReveal variant="left">
-            <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-2 block">
+            <span className="eyebrow text-kod-orange mb-2 block">
               {title}
             </span>
-            <h2 className="font-metropolis font-semibold text-3xl sm:text-4xl text-kod-earth">
+            <h2 className="heading-section text-kod-earth">
               {subtitle}
             </h2>
           </ScrollReveal>
@@ -64,10 +64,10 @@ export function ServiceSelectedWork({
                 </div>
                 <div className="p-6 flex items-center justify-between">
                   <div>
-                    <span className="text-xs font-semibold tracking-[0.2em] uppercase text-kod-orange block mb-1">
+                    <span className="text-sm font-bold tracking-wider uppercase text-kod-orange block mb-1">
                       {project.category}
                     </span>
-                    <h3 className="font-metropolis font-semibold text-lg text-kod-earth group-hover:text-kod-orange transition-colors">
+                    <h3 className="heading-item text-kod-earth group-hover:text-kod-orange transition-colors">
                       {project.title}
                     </h3>
                   </div>

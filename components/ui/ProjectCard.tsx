@@ -56,20 +56,20 @@ export function ProjectCard({
           <ArrowRight size={14} className="text-signal-orange" />
         </div>
       </div>
-      <div className="p-4">
-        <p className="eyebrow text-sm mb-1.5 text-secondary">
+      <div className="p-4 sm:p-5">
+        <p className="eyebrow mb-1.5 text-signal-orange">
           {project.category}
         </p>
         <h3
-          className="font-metropolis font-semibold text-earth text-base leading-snug mb-1 
+          className="heading-item text-earth leading-snug mb-1.5 
                        group-hover:text-signal-orange transition-colors duration-200"
         >
           {project.title}
         </h3>
-        <p className="text-secondary line-clamp-2 leading-relaxed">
+        <p className="text-body text-kod-earth/80 mb-2 line-clamp-2">
           {project.shortDescription}
         </p>
-        <div className="mt-3 flex items-center gap-1 text-xs text-secondary">
+        <div className="mt-3 flex items-center gap-1.5 text-sm font-medium text-kod-earth/70">
           <span>{project.client}</span>
           <span>·</span>
           <span>{project.year}</span>

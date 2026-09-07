@@ -33,10 +33,10 @@ export function TheJourney() {
       <div className="container-site">
         <div className="rounded-xl bg-kod-mist/70 p-8 sm:p-12 shadow-sm">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 text-sm font-semibold tracking-[0.25em] uppercase text-kod-text-2">
-              <span aria-hidden="true">✦</span>
+            <div className="inline-flex items-center gap-3 text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-kod-earth">
+              <span aria-hidden="true" className="text-kod-orange">✦</span>
               <span>The Journey: From Spark to Impact</span>
-              <span aria-hidden="true">✦</span>
+              <span aria-hidden="true" className="text-kod-orange">✦</span>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ export function TheJourney() {
                 <div className="step-badge mb-3">{step.n}</div>
 
                 <h4 className="pillar-heading mb-2">{step.title}</h4>
-                <p className="text-kod-text-2 text-sm leading-relaxed max-w-[200px]">
+                <p className="text-kod-earth/85 text-base leading-relaxed max-w-[260px]">
                   {step.body}
                 </p>
               </div>

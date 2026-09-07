@@ -24,7 +24,7 @@ export function OurUniverseCTA() {
           <div className="relative z-10 p-8 sm:p-12 md:p-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5">
-                <h2 className="text-display-md text-kod-earth font-metropolis font-bold leading-tight">
+                <h2 className="heading-section text-kod-earth leading-tight">
                   Let&apos;s Create <br />
                   <span className="font-editorial italic font-normal">
                     What&apos;s Next.
@@ -33,7 +33,7 @@ export function OurUniverseCTA() {
               </div>
 
               <div className="lg:col-span-7 flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:justify-start">
-                <p className="text-kod-earth text-sm sm:text-base leading-relaxed max-w-sm">
+                <p className="text-body text-kod-earth/85 max-w-sm">
                   Whether you have a spark or need help finding one, we&apos;re
                   here to turn ideas into impact.
                 </p>

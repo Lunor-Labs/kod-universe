@@ -75,7 +75,7 @@ export function FloatingActions() {
           </svg>
         </div>
 
-        <span className="hidden sm:block absolute right-full mr-3 px-3 py-1.5 rounded bg-earth text-white text-xs font-semibold tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 pointer-events-none shadow-lg">
+        <span className="hidden sm:block absolute right-full mr-3 px-3.5 py-1.5 rounded bg-earth text-white text-sm font-bold tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 pointer-events-none shadow-lg">
           Chat on WhatsApp
         </span>
       </a>

@@ -44,7 +44,7 @@ export function ProcessSection() {
         <div className="relative backdrop-blur-sm">
           <div className="text-center mb-14">
             <SectionLabel>Our process</SectionLabel>
-            <h2 className="font-metropolis font-semibold text-earth text-display-lg text-balance">
+            <h2 className="heading-section text-earth text-balance">
               A clear path from spark to{" "}
               <em className="font-serif italic font-normal">impact.</em>
             </h2>
@@ -93,14 +93,14 @@ export function ProcessSection() {
 
                   <div className="flex flex-col text-left flex-1 lg:flex-none">
                     <div className="flex items-center gap-2.5 mb-1.5">
-                      <span className="text-signal-orange font-bold tracking-wider">
+                      <span className="text-signal-orange font-bold text-base tracking-wider">
                         {step.number}
                       </span>
-                      <h3 className="font-metropolis font-bold text-earth tracking-[0.1em] uppercase">
+                      <h3 className="heading-item text-earth tracking-[0.05em] uppercase">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-secondary leading-[1.6] max-w-[280px] lg:max-w-[140px]">
+                    <p className="text-body text-kod-earth/85 max-w-[280px] lg:max-w-[230px]">
                       {step.description}
                     </p>
                   </div>

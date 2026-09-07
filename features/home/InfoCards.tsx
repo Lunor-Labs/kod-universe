@@ -175,10 +175,10 @@ export function InfoCards({
             >
               <div className="relative z-10 w-[60%]">
                 <p className="eyebrow mb-4">OUR STORY</p>
-                <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-4 leading-tight">
+                <h3 className="heading-card font-editorial font-normal text-earth mb-4 leading-tight">
                   Rooted in curiosity. Driven by purpose.
                 </h3>
-                <p className="text-secondary leading-relaxed">
+                <p className="text-body text-kod-earth/85">
                   Discover our journey, values, and the philosophy that guides
                   everything we create.
                 </p>
@@ -212,7 +212,7 @@ export function InfoCards({
                 <div className="flex justify-between">
                   <div>
                     <p className="eyebrow mb-4">OUR PROCESS</p>
-                    <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-10 leading-tight">
+                    <h3 className="heading-card font-editorial font-normal text-earth mb-10 leading-tight">
                       From spark
                       <br />
                       to impact.
@@ -240,7 +240,7 @@ export function InfoCards({
                       <p className="eyebrow !text-sm !font-bold mb-2 tracking-wide">
                         {step.label}
                       </p>
-                      <p className="text-secondary text-sm leading-tight whitespace-pre-line hidden sm:block">
+                      <p className="text-kod-earth/85 text-sm sm:text-base font-medium leading-snug whitespace-pre-line hidden sm:block">
                         {step.title}
                       </p>
                     </div>
@@ -266,7 +266,7 @@ export function InfoCards({
                     <div className="flex items-center justify-between gap-2 mb-4">
                       <p className="eyebrow text-signal-orange">PROJECT DETAIL</p>
                       {total > 1 && (
-                        <span className="text-[11px] font-mono tracking-widest text-earth/50 font-semibold">
+                        <span className="text-sm font-mono tracking-widest text-earth/70 font-semibold">
                           0{currentIndex + 1} / 0{total}
                         </span>
                       )}
@@ -280,13 +280,13 @@ export function InfoCards({
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-2 leading-tight group-hover:text-signal-orange transition-colors">
+                        <h3 className="heading-card font-editorial font-normal text-earth mb-2 leading-tight group-hover:text-signal-orange transition-colors">
                           {currentProject.title}
                         </h3>
-                        <p className="text-earth text-xs font-semibold mb-4 tracking-widest uppercase">
+                        <p className="text-signal-orange text-sm font-semibold mb-4 tracking-wider uppercase">
                           {currentProject.category}
                         </p>
-                        <p className="text-secondary leading-relaxed line-clamp-3">
+                        <p className="text-body text-kod-earth/85 line-clamp-3">
                           {currentProject.shortDescription}
                         </p>
                       </motion.div>
@@ -298,7 +298,7 @@ export function InfoCards({
                       <div className="w-12 h-12 rounded-full border border-border-warm flex items-center justify-center group-hover:border-signal-orange group-hover:text-signal-orange bg-white transition-colors duration-200">
                         <ArrowRight size={16} aria-hidden="true" />
                       </div>
-                      <span className="text-xs font-semibold tracking-wider uppercase text-earth group-hover:text-signal-orange transition-colors hidden sm:inline-block">
+                      <span className="text-sm font-semibold tracking-wider uppercase text-earth group-hover:text-signal-orange transition-colors hidden sm:inline-block">
                         View Project
                       </span>
                     </div>
@@ -371,12 +371,12 @@ export function InfoCards({
             >
               <div className="relative z-10 w-[60%]">
                 <p className="eyebrow mb-4">LET&apos;S CONNECT</p>
-                <h3 className="font-editorial text-earth text-3xl lg:text-4xl mb-4 leading-tight">
+                <h3 className="heading-card font-editorial font-normal text-earth mb-4 leading-tight">
                   Have a project
                   <br />
                   in mind?
                 </h3>
-                <p className="text-secondary leading-relaxed">
+                <p className="text-body text-kod-earth/85">
                   We&apos;d love to hear about your goals and explore how we can
                   create something extraordinary together.
                 </p>

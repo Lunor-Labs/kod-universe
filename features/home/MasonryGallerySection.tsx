@@ -112,11 +112,11 @@ export function MasonryGallerySection() {
           <div>
             <ScrollReveal variant="down">
               <SectionLabel>Visual Archive</SectionLabel>
-              <h2 className="font-metropolis font-bold text-earth text-display-md text-balance">
+              <h2 className="heading-section text-earth text-balance">
                 Moments in the{" "}
                 <em className="font-serif italic font-normal">Universe.</em>
               </h2>
-              <p className="mt-2 text-secondary text-sm sm:text-base max-w-xl">
+              <p className="mt-2 text-body text-kod-earth/85 max-w-xl">
                 A curated mosaic of brand artifacts, editorial frames, and
                 physical craft created by KOD Universe.
               </p>
@@ -137,10 +137,10 @@ export function MasonryGallerySection() {
                     onClick={() => handleCategoryChange(cat)}
                     role="tab"
                     aria-selected={isActive}
-                    className={`text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded transition-all cursor-pointer ${
+                    className={`text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded transition-all cursor-pointer ${
                       isActive
                         ? "bg-earth text-white shadow-xs"
-                        : "bg-white/80 hover:bg-white text-secondary hover:text-earth border border-border-warm/50"
+                        : "bg-white/80 hover:bg-white text-kod-earth/70 hover:text-earth border border-border-warm/50"
                     }`}
                   >
                     {cat === "ALL" ? "All Moments" : cat}
@@ -186,14 +186,14 @@ export function MasonryGallerySection() {
                   </div>
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-kod-clay mb-1">
+                    <span className="text-sm font-bold uppercase tracking-wider text-kod-clay mb-1">
                       {item.category}
                     </span>
-                    <h3 className="font-metropolis font-semibold text-sm leading-snug line-clamp-2">
+                    <h3 className="font-metropolis font-bold text-base leading-snug line-clamp-2">
                       {item.title}
                     </h3>
                     {item.projectTitle && (
-                      <p className="text-[11px] text-white/75 mt-0.5 truncate">
+                      <p className="text-sm text-white/85 mt-0.5 truncate">
                         {item.projectTitle}
                       </p>
                     )}
@@ -208,19 +208,19 @@ export function MasonryGallerySection() {
           {hasMore ? (
             <button
               onClick={handleLoadMore}
-              className="inline-flex items-center gap-2.5 bg-white hover:bg-kod-canvas border border-border-warm px-6 py-3 rounded font-semibold text-xs uppercase tracking-wider text-earth shadow-xs hover:shadow-md hover:border-kod-clay transition-all group cursor-pointer"
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-kod-canvas border border-border-warm px-6 py-3 rounded font-bold text-sm uppercase tracking-wider text-earth shadow-xs hover:shadow-md hover:border-kod-clay transition-all group cursor-pointer"
             >
               <Plus
                 size={14}
                 className="group-hover:rotate-90 transition-transform duration-200"
               />
               <span>Load More Moments</span>
-              <span className="text-secondary/70 font-normal">
+              <span className="text-kod-earth/70 font-normal">
                 ({filteredItems.length - visibleCount} remaining)
               </span>
             </button>
           ) : (
-            <p className="text-xs font-semibold uppercase tracking-wider text-secondary/60 bg-white/50 border border-border-warm/40 px-4 py-1.5 rounded">
+            <p className="text-sm font-semibold uppercase tracking-wider text-secondary/70 bg-white/50 border border-border-warm/40 px-4 py-1.5 rounded">
               Showing all {filteredItems.length} moments
             </p>
           )}
@@ -243,10 +243,10 @@ export function MasonryGallerySection() {
               className="absolute top-4 left-4 right-4 sm:top-6 sm:left-8 sm:right-8 flex items-center justify-between z-30 pointer-events-auto"
             >
               <div className="flex items-center gap-3">
-                <span className="text-white font-metropolis text-xs md:text-sm font-semibold bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded border border-white/20 shadow-lg">
+                <span className="text-white font-metropolis text-sm font-semibold bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded border border-white/20 shadow-lg">
                   {selectedItemIndex + 1} / {filteredItems.length}
                 </span>
-                <span className="hidden sm:inline-block text-xs uppercase tracking-widest text-kod-clay bg-black/50 backdrop-blur-md px-3 py-1.5 rounded border border-white/10">
+                <span className="hidden sm:inline-block text-sm uppercase tracking-wider text-kod-clay bg-black/50 backdrop-blur-md px-3 py-1.5 rounded border border-white/10 font-medium">
                   {currentZoomItem.category}
                 </span>
               </div>
@@ -290,11 +290,11 @@ export function MasonryGallerySection() {
 
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 w-full max-w-2xl px-4 py-2 rounded bg-black/50 backdrop-blur-md border border-white/15">
                 <div className="text-center sm:text-left">
-                  <p className="text-white font-medium text-sm md:text-base">
+                  <p className="text-white font-bold text-base md:text-lg">
                     {currentZoomItem.title}
                   </p>
                   {currentZoomItem.projectTitle && (
-                    <p className="text-white/60 text-xs mt-0.5">
+                    <p className="text-white/80 text-sm mt-0.5">
                       {currentZoomItem.projectTitle}
                     </p>
                   )}
@@ -304,10 +304,10 @@ export function MasonryGallerySection() {
                   <Link
                     href={`/work/${currentZoomItem.projectSlug}`}
                     onClick={() => setSelectedItemIndex(null)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-kod-clay hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded flex-shrink-0"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-kod-clay hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded flex-shrink-0"
                   >
                     View Project
-                    <ArrowRight size={12} />
+                    <ArrowRight size={13} />
                   </Link>
                 )}
               </div>

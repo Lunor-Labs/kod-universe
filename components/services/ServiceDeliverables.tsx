@@ -25,10 +25,10 @@ export function ServiceDeliverables({
           <div className="lg:col-span-4">
             <ScrollReveal variant="left">
               <div className="space-y-4 mb-8">
-                <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange block">
+                <span className="eyebrow text-kod-orange block">
                   SERVICE {serviceNumber}
                 </span>
-                <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm tracking-widest uppercase font-semibold text-kod-text-2">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm tracking-wider uppercase font-bold text-kod-earth/80">
                   <span>01 Strategy</span>
                   <span className="text-kod-orange font-bold">
                     / 02 Identity
@@ -37,14 +37,14 @@ export function ServiceDeliverables({
                 </div>
               </div>
 
-              <h2 className="font-metropolis font-semibold text-3xl sm:text-4xl text-kod-earth leading-tight mb-6">
+              <h2 className="heading-section text-kod-earth leading-tight mb-6">
                 What we shape <br />
                 <em className="font-editorial italic font-normal text-kod-earth">
                   together.
                 </em>
               </h2>
 
-              <p className="text-kod-text-2 text-sm leading-relaxed font-light max-w-sm mb-8">
+              <p className="text-body text-kod-earth/85 max-w-sm mb-8">
                 Every brand touchpoint is an opportunity to assert your
                 presence. We craft cohesive systems designed to scale seamlessly
                 across every digital and physical medium.
@@ -52,7 +52,7 @@ export function ServiceDeliverables({
 
               <Link
                 href="/connect"
-                className="group inline-flex items-center gap-3 text-sm font-semibold tracking-[0.15em] uppercase text-kod-orange hover:text-kod-crimson transition-colors"
+                className="group inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase text-kod-orange hover:text-kod-crimson transition-colors"
               >
                 <span>REQUEST CAPABILITIES DECK</span>
                 <ArrowRight
@@ -80,10 +80,10 @@ export function ServiceDeliverables({
                             <Icon size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8" />
                           </div>
                           <div>
-                            <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
+                            <h3 className="heading-item text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
                               {item.title}
                             </h3>
-                            <p className="text-kod-text-2 text-sm leading-relaxed font-light">
+                            <p className="text-body text-kod-earth/80">
                               {item.description}
                             </p>
                           </div>
@@ -111,10 +111,10 @@ export function ServiceDeliverables({
                             <Icon size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8" />
                           </div>
                           <div>
-                            <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
+                            <h3 className="heading-item text-kod-earth group-hover:text-kod-orange transition-colors mb-1">
                               {item.title}
                             </h3>
-                            <p className="text-kod-text-2 text-sm leading-relaxed font-light">
+                            <p className="text-body text-kod-earth/80">
                               {item.description}
                             </p>
                           </div>
