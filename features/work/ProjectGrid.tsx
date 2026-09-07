@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { CategoryFilter } from "@/components/ui/CategoryFilter";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -25,14 +25,39 @@ interface ProjectGridProps {
 
 export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
   const [activeCategory, setActiveCategory] = useState("ALL");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOption, setSortOption] = useState("latest");
 
-  const filtered = useMemo(
-    () =>
-      activeCategory === "ALL"
-        ? projects
-        : projects.filter((p) => p.category === activeCategory),
-    [projects, activeCategory]
-  );
+  const filtered = useMemo(() => {
+    let result = projects;
+
+    if (activeCategory !== "ALL") {
+      result = result.filter((p) => p.category === activeCategory);
+    }
+
+    if (searchQuery.trim() !== "") {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(
+        (p) =>
+          p.title.toLowerCase().includes(q) ||
+          p.shortDescription.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.client.toLowerCase().includes(q)
+      );
+    }
+
+    result = [...result].sort((a, b) => {
+      if (sortOption === "az") {
+        return a.title.localeCompare(b.title);
+      }
+      if (sortOption === "oldest") {
+        return a.year === b.year ? a.id.localeCompare(b.id) : a.year - b.year;
+      }
+      return a.year === b.year ? b.id.localeCompare(a.id) : b.year - a.year;
+    });
+
+    return result;
+  }, [projects, activeCategory, searchQuery, sortOption]);
 
   const gridProjects = filtered.filter((p) => p.id !== featuredProject.id);
 
@@ -40,23 +65,36 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
     <>
       <div className=" py-4 mb-8">
         <div className="container-site">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <CategoryFilter
               categories={[...CATEGORIES]}
               active={activeCategory}
               onChange={setActiveCategory}
             />
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.1em] uppercase text-earth">
-              <label htmlFor="sort-work">Sort by:</label>
-              <select 
-                id="sort-work"
-                className="bg-transparent border-none outline-none cursor-pointer hover:text-signal-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
-                defaultValue="latest"
-              >
-                <option value="latest">Latest</option>
-                <option value="oldest">Oldest</option>
-                <option value="az">A-Z</option>
-              </select>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="relative flex items-center">
+                <Search size={16} className="absolute left-0 text-kod-earth/50" />
+                <input 
+                  type="text" 
+                  placeholder="Search projects..." 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="bg-transparent border-b border-border-warm pb-1 pl-6 outline-none focus:border-kod-orange transition-colors text-sm w-full sm:w-48 placeholder:text-kod-earth/50 text-kod-earth"
+                />
+              </div>
+              <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.1em] uppercase text-earth">
+                <label htmlFor="sort-work">Sort by:</label>
+                <select 
+                  id="sort-work"
+                  className="bg-transparent border-none outline-none cursor-pointer hover:text-signal-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
+                  value={sortOption}
+                  onChange={(e) => setSortOption(e.target.value)}
+                >
+                  <option value="latest">Latest</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="az">A-Z</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

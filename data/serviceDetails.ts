@@ -271,7 +271,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
         imageSrc:
-          "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.webp",
+          "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promoetion-01.webp",
       },
       {
         id: "2",
@@ -353,7 +353,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       bodyFont: "Inter",
       slug: "bio-oil-skincare-campaign",
       imageSrc:
-        "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.webp",
+        "/projects/social-media/bio-oil-social-media-content-highlights/01-01.webp",
     },
     qualificationPoints: [
       {

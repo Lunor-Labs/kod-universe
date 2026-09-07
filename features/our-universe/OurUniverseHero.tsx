@@ -10,8 +10,8 @@ export function OurUniverseHero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/main/our-story-section-hero.webp"
-          alt="Ancient sandstone cave overlooking a desert under starry sky with shooting star"
+          src="/main/our-universe-cave.png"
+          alt="Cave wall with KOD logo painted on it"
           fill
           priority
           className="object-cover object-center"

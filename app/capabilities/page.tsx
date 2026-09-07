@@ -85,7 +85,7 @@ export default function CapabilitiesPage() {
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-canvas via-canvas/80 to-transparent pointer-events-none z-20" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-canvas via-canvas/80 to-transparent pointer-events-none z-0" aria-hidden="true" />
         </section>
 
         <section

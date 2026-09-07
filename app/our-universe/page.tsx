@@ -3,6 +3,7 @@ import { OurUniverseHero } from "@/features/our-universe/OurUniverseHero";
 import { CorePillars } from "@/features/our-universe/CorePillars";
 import { TheJourney } from "@/features/our-universe/TheJourney";
 import { FounderPanel } from "@/features/our-universe/FounderPanel";
+import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { OurUniverseCTA } from "@/features/our-universe/OurUniverseCTA";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
@@ -21,6 +22,7 @@ export default function OurUniversePage() {
         <CorePillars />
         <TheJourney />
         <FounderPanel />
+        <MasonryGallerySection />
         <OurUniverseCTA />
       </div>
       <DecorativeBlossoms />

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export function OurUniverseCTA() {
   return (
-    <section className="pb-20 md:pb-28" aria-label="Call to action">
+    <section className="section-padding" aria-label="Call to action">
       <div className="container-site">
         <div className="relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 z-0">

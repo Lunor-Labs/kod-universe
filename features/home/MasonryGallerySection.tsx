@@ -24,7 +24,7 @@ const CATEGORIES = [
   "SOCIAL MEDIA",
 ];
 
-const INITIAL_BATCH = 8;
+const INITIAL_BATCH = 12;
 const LOAD_MORE_STEP = 6;
 
 export function MasonryGallerySection() {

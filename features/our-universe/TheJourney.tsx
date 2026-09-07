@@ -29,7 +29,7 @@ const steps = [
 
 export function TheJourney() {
   return (
-    <section className="section-padding-sm" aria-label="The Journey">
+    <section className="section-padding-top" aria-label="The Journey">
       <div className="container-site">
         <div className="rounded-xl bg-kod-mist/70 p-8 sm:p-12 shadow-sm">
           <div className="text-center mb-12">

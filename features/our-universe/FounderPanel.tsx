@@ -10,7 +10,7 @@ import {
 export function FounderPanel() {
   return (
     <section
-      className="section-padding-sm bg-kod-canvas"
+      className="section-padding-top bg-kod-canvas"
       aria-label="Founder Biography"
     >
       <div className="container-site">

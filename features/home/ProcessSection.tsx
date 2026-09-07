@@ -41,7 +41,7 @@ export function ProcessSection() {
       aria-label="Our creative process"
     >
       <div className="container-site">
-        <div className="relative backdrop-blur-sm">
+        <div className="relative backdrop-blur-sm rounded p-4 bg-white/80">
           <div className="text-center mb-14">
             <SectionLabel>Our process</SectionLabel>
             <h2 className="heading-section text-earth text-balance">
