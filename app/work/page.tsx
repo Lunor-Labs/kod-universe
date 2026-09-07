@@ -25,12 +25,16 @@ export default function WorkPage() {
         >
           <div className="absolute inset-0" aria-hidden="true">
             <Image
-              src="/main/work-hero.jpg"
-              alt="KOD Universe Selected Works"
+              src="/main/Portfolio Hero.png"
+              alt="KOD Universe Selected Works - Ancient cave painting of human creative origins"
               fill
               priority
               sizes="100vw"
               className="object-cover object-center"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-kod-canvas/90 via-kod-canvas/60 to-transparent md:w-1/2"
+              aria-hidden="true"
             />
           </div>
 

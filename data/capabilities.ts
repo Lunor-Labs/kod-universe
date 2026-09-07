@@ -202,7 +202,12 @@ export const serviceGroups: ServiceGroup[] = [
           "Visual narrative frameworks and editorial design",
           "Modern high-speed responsive web development",
         ],
-        relatedProjectSlugs: ["origins-concept-series", "cosmic-explorations"],
+        relatedProjectSlugs: [
+          "ibiza-mirissa-architectural-design",
+          "pissu-kanna-brand-merchandise",
+          "digital-art-visual-explorations",
+          "union-assurance-commercial",
+        ],
       },
     ],
   },

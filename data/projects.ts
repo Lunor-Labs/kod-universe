@@ -1160,6 +1160,470 @@ export const projects: Project[] = [
     featured: false,
     relatedSlugs: ["bito-brand-identity", "rouka-brand-identity", "niwarthana-packaging-design"],
   },
+  {
+    id: "16",
+    slug: "ibiza-mirissa-architectural-design",
+    title: "IBIZA Mirissa Spatial Architecture",
+    client: "IBIZA Mirissa",
+    category: "DIGITAL EXPERIENCES",
+    year: 2024,
+    location: "Mirissa, Sri Lanka",
+    timeline: "2024",
+    shortDescription:
+      "Comprehensive 3D architectural visualization, spatial flow conceptualization, and luxury coastal hospitality rendering for IBIZA Mirissa.",
+    overview:
+      "IBIZA Mirissa partnered with KOD Universe to translate their ambitious southern coastline hospitality vision into photorealistic spatial architecture and experiential 3D visualization. We explored dusk lighting, raw natural stone, timber textures, and open-air ocean flows to establish an iconic benchmark for luxury beachside venues.",
+    challenge:
+      "Balancing tropical coastal environmental realities with modern architectural luxury, capturing natural warmth, intricate wood lattices, and atmospheric open-air hospitality flows in high-fidelity 3D renders.",
+    approach:
+      "We modeled spatial layouts with exact lighting physics, natural textures, ambient landscape integration, and multi-angle perspectives spanning private villas, terraces, and sunset lounges.",
+    deliverables: [
+      "3D Spatial Architecture & Modeling",
+      "Exterior & Interior CGI Rendering",
+      "Hospitality Concept & Lighting Design",
+      "Material & Texture Specification",
+      "Architectural Visual Storytelling",
+    ],
+    pillars: [
+      {
+        title: "Atmosphere",
+        description: "Capturing the serene, golden-hour dusk light across oceanside living spaces.",
+      },
+      {
+        title: "Materiality",
+        description: "Curating authentic textures of raw timber, sandstone, and bespoke fixtures.",
+      },
+      {
+        title: "Spatial Flow",
+        description: "Seamless transitions between open-air coastal terraces and secluded villas.",
+      },
+      {
+        title: "Immersion",
+        description: "Photorealistic perspective rendering that brings prospective guests into the space.",
+      },
+    ],
+    heroImage: {
+      src: "/projects/Architectural Design/IBIZA Mirissa/M5.jpg",
+      alt: "IBIZA Mirissa Luxury Architectural Villa & Pool 3D Rendering",
+      width: 1920,
+      height: 1080,
+    },
+    cardImage: {
+      src: "/projects/Architectural Design/IBIZA Mirissa/Opening Post.jpg",
+      alt: "IBIZA Mirissa Opening Post Architecture Visual",
+      width: 1980,
+      height: 1980,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/M5.jpg",
+        alt: "IBIZA Mirissa Oceanfront Villa and Infinity Pool",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/M3.jpg",
+        alt: "IBIZA Mirissa Coastal Terrace Lounge",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/M6.jpg",
+        alt: "IBIZA Mirissa Evening Sunset Architecture View",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/M7.jpg",
+        alt: "IBIZA Mirissa Aerial Architectural Perspective",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/L1.jpg",
+        alt: "IBIZA Mirissa Interior Bedroom with Natural Light",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/L2.jpg",
+        alt: "IBIZA Mirissa Luxury Suite Bathroom & Stone Elements",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/L7.jpg",
+        alt: "IBIZA Mirissa Living Area & Panoramic Ocean View",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/P3.jpg",
+        alt: "IBIZA Mirissa Outdoor Dining Pavilion",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/P4.jpg",
+        alt: "IBIZA Mirissa Sunset Cabana Design",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S1.jpg",
+        alt: "IBIZA Mirissa Architectural Detail & Wood Lattice",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S3.jpg",
+        alt: "IBIZA Mirissa Palm Garden Walkway",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S4.jpg",
+        alt: "IBIZA Mirissa Entrance Courtyard & Water Feature",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S9.jpg",
+        alt: "IBIZA Mirissa Evening Facade & Ambience Lighting",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S12.jpg",
+        alt: "IBIZA Mirissa Open Plan Kitchen & Bar Space",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/S13.jpg",
+        alt: "IBIZA Mirissa Balcony Lounge with Ocean Horizon",
+        width: 1512,
+        height: 1080,
+      },
+      {
+        src: "/projects/Architectural Design/IBIZA Mirissa/Opening Post.jpg",
+        alt: "IBIZA Mirissa Architectural Key Visual",
+        width: 1980,
+        height: 1980,
+      },
+    ],
+    tags: ["3D Architecture", "Spatial Design", "CGI Rendering", "Hospitality", "Luxury"],
+    featured: false,
+    relatedSlugs: ["digital-art-visual-explorations", "pissu-kanna-brand-merchandise", "area-6-brand-identity"],
+  },
+  {
+    id: "17",
+    slug: "pissu-kanna-brand-merchandise",
+    title: "Pissu Kanna Brand & Merchandise",
+    client: "Pissu Kanna",
+    category: "BRANDING & IDENTITY",
+    year: 2024,
+    location: "Sri Lanka",
+    timeline: "2024",
+    shortDescription:
+      "Bold street-culture brand identity, character illustration, and wearable merchandise apparel system for Pissu Kanna.",
+    overview:
+      "Pissu Kanna commissioned KOD Universe to develop an irreverent, expressive youth-culture lifestyle identity. Combining raw graphic character illustrations, street art aesthetics, and bespoke apparel merchandise, we built a brand that commands attention in modern urban spaces.",
+    challenge:
+      "Creating an unapologetic, high-energy visual language that resonates deeply with youth subcultures while maintaining crisp, reproducible print standards across apparel, labels, and packaging.",
+    approach:
+      "We crafted a distinctive mascot identity, high-contrast typography, collectible sticker and patch boards, and detailed apparel mockups bridging streetwear culture with modern lifestyle commerce.",
+    deliverables: [
+      "Brand Identity & Mascot Character Design",
+      "Apparel & Streetwear Graphic Tech Packs",
+      "Art Boards & Merchandise Collectibles",
+      "Typography & Badge Systems",
+      "Packaging & Unboxing Aesthetics",
+    ],
+    pillars: [
+      {
+        title: "Rebellion",
+        description: "Breaking free from corporate neutrality with authentic, high-voltage street personality.",
+      },
+      {
+        title: "Character",
+        description: "An instantly identifiable mascot mark engineered for stickers, shirts, and screens.",
+      },
+      {
+        title: "Tactility",
+        description: "Rich apparel mockups and screen-print-ready artwork calibrated for high quality.",
+      },
+      {
+        title: "Culture",
+        description: "Deeply rooted in grassroots urban art, youth humor, and creative freedom.",
+      },
+    ],
+    heroImage: {
+      src: "/projects/Pissu Kanna/Mock.jpg",
+      alt: "Pissu Kanna Streetwear T-Shirt & Lifestyle Apparel Mockup",
+      width: 5018,
+      height: 3584,
+    },
+    cardImage: {
+      src: "/projects/Pissu Kanna/Kanna Branding.jpg",
+      alt: "Pissu Kanna Signature Brand Identity & Logo Mark",
+      width: 3584,
+      height: 3584,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Pissu Kanna/Mock.jpg",
+        alt: "Pissu Kanna Apparel Merchandise Presentation",
+        width: 5018,
+        height: 3584,
+      },
+      {
+        src: "/projects/Pissu Kanna/Kanna Branding.jpg",
+        alt: "Pissu Kanna Brand Mark & Typography",
+        width: 3584,
+        height: 3584,
+      },
+      {
+        src: "/projects/Pissu Kanna/Pissu Kanna Art Board-03.jpg",
+        alt: "Pissu Kanna Street Graphic Art Board 03",
+        width: 2251,
+        height: 2250,
+      },
+      {
+        src: "/projects/Pissu Kanna/Pissu Kanna Art Board-04.jpg",
+        alt: "Pissu Kanna Character Art Board 04",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/projects/Pissu Kanna/Pissu Kanna Art Board-06.jpg",
+        alt: "Pissu Kanna Merchandise Graphic Board 06",
+        width: 2251,
+        height: 2250,
+      },
+      {
+        src: "/projects/Pissu Kanna/Pissu Kanna Art Board-07.jpg",
+        alt: "Pissu Kanna Collectible Graphic Board 07",
+        width: 2250,
+        height: 2250,
+      },
+    ],
+    tags: ["Branding", "Merchandising", "Streetwear", "Character Design", "Illustration"],
+    featured: false,
+    relatedSlugs: ["area-6-brand-identity", "kaiz-brand-identity", "slsa-uk-identity"],
+  },
+  {
+    id: "18",
+    slug: "digital-art-visual-explorations",
+    title: "Digital Art & Visual Explorations",
+    client: "KOD Creative Lab",
+    category: "CREATIVE WORK",
+    year: 2024,
+    location: "Global",
+    timeline: "Ongoing",
+    shortDescription:
+      "An evocative series of surreal digital artworks, character concept illustrations, and mythological visual explorations.",
+    overview:
+      "Curated directly from the research and exploration lab at KOD Universe, this collection spans surrealist character designs, sci-fi cyber elements, and ancient archetypes rendered through contemporary digital painting and lighting techniques.",
+    challenge:
+      "Experimenting freely beyond commercial constraints to explore new storytelling dimensions, emotive color theory, and digital texture craft.",
+    approach:
+      "We produced thematic visual series balancing cosmic mystique with sharp digital brushwork, cinematic lighting contrasts, and dynamic postures.",
+    deliverables: [
+      "Concept Art & Character Visuals",
+      "Digital Paintings & Surreal Illustrations",
+      "Fine Art Print Resolutions",
+      "Color & Lighting Experiments",
+    ],
+    pillars: [
+      {
+        title: "Expression",
+        description: "Pure creative freedom exploring surreal and mythical motifs.",
+      },
+      {
+        title: "Lighting",
+        description: "Dramatic chiaroscuro and luminescent color palettes creating cinematic mood.",
+      },
+      {
+        title: "Detail",
+        description: "Intricate digital brushwork and textural nuance built for gallery-scale viewing.",
+      },
+    ],
+    heroImage: {
+      src: "/projects/Digital art/Digital Art (1).png",
+      alt: "Digital Art Concept Exploration Character Visual",
+      width: 1122,
+      height: 1402,
+    },
+    cardImage: {
+      src: "/projects/Digital art/Digi Art (1).png",
+      alt: "Digi Art Character Portrait",
+      width: 1254,
+      height: 1254,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Digital art/Digital Art (1).png",
+        alt: "Digital Art Study 01 - Cyber Character Portrait",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (2).png",
+        alt: "Digital Art Study 02 - Ethereal Concept Art",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (3).png",
+        alt: "Digital Art Study 03 - Surreal Creature Visual",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (5).png",
+        alt: "Digital Art Study 05 - Futuristic Warrior",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (6).png",
+        alt: "Digital Art Study 06 - Luminous Fantasy Figure",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (7).png",
+        alt: "Digital Art Study 07 - Cyberpunk Concept Art",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (8).png",
+        alt: "Digital Art Study 08 - Mythological Deity",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (9).png",
+        alt: "Digital Art Study 09 - Galactic Nomad",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digital Art (10).png",
+        alt: "Digital Art Study 10 - Celestial Guardian",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (1).png",
+        alt: "Digi Art Square Study 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (2).png",
+        alt: "Digi Art Square Study 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (3).png",
+        alt: "Digi Art Square Study 03",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (4).png",
+        alt: "Digi Art Square Study 04",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (5).png",
+        alt: "Digi Art Square Study 05",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/projects/Digital art/Digi Art (7).png",
+        alt: "Digi Art Square Study 07",
+        width: 1254,
+        height: 1254,
+      },
+    ],
+    tags: ["Digital Art", "Illustration", "Concept Art", "Visual Storytelling", "Creative Lab"],
+    featured: false,
+    relatedSlugs: ["union-assurance-commercial", "ibiza-mirissa-architectural-design", "maya-brand-identity"],
+  },
+  {
+    id: "19",
+    slug: "union-assurance-commercial",
+    title: "Union Assurance Commercial Storytelling",
+    client: "Union Assurance",
+    category: "CREATIVE WORK",
+    year: 2024,
+    location: "Sri Lanka",
+    timeline: "2024",
+    shortDescription:
+      "Cinematic commercial visual storytelling and campaign concept frames capturing genuine human protection and security.",
+    overview:
+      "Union Assurance engaged KOD Universe to develop emotive, cinematic visual storytelling for their commercial broadcast narrative. We conceptualized storyboard sequences and keyframes celebrating generational protection, trust, and human connection.",
+    challenge:
+      "Translating complex financial insurance security into authentic, heart-touching moments that resonate across demographic groups.",
+    approach:
+      "We crafted tender cinematic frames with natural lighting, focusing on emotional intimacy, warmth, and reliable strength.",
+    deliverables: [
+      "Commercial Storyboarding & Narrative Direction",
+      "Keyframe Visual Development",
+      "Cinematic Lighting & Color Schemes",
+      "Campaign Art Direction",
+    ],
+    pillars: [
+      {
+        title: "Empathy",
+        description: "Capturing life's quiet, meaningful moments that need protection.",
+      },
+      {
+        title: "Cinematography",
+        description: "Warm, natural lighting and compositional depth tailored for commercial film.",
+      },
+      {
+        title: "Trust",
+        description: "Building an unwavering sense of institutional strength and genuine care.",
+      },
+    ],
+    heroImage: {
+      src: "/projects/Story telling/Union-Assuranse-Commercial.png",
+      alt: "Union Assurance Commercial Visual Storytelling Keyframe",
+      width: 1672,
+      height: 941,
+    },
+    cardImage: {
+      src: "/projects/Story telling/Union-Assuranse-Commercial 2.png",
+      alt: "Union Assurance Commercial Storytelling Keyframe 2",
+      width: 1672,
+      height: 941,
+    },
+    galleryImages: [
+      {
+        src: "/projects/Story telling/Union-Assuranse-Commercial.png",
+        alt: "Union Assurance Commercial Storytelling Keyframe 1",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/projects/Story telling/Union-Assuranse-Commercial 2.png",
+        alt: "Union Assurance Commercial Storytelling Keyframe 2",
+        width: 1672,
+        height: 941,
+      },
+    ],
+    tags: ["Visual Storytelling", "Commercial", "Filming", "Art Direction", "Campaign"],
+    featured: false,
+    relatedSlugs: ["digital-art-visual-explorations", "bio-oil-skincare-campaign", "area-6-social-media"],
+  },
 ];
 
 // Slug aliases to ensure backward-compatibility with old dummy slugs

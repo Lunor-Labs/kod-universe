@@ -5,12 +5,12 @@ import Image from "next/image";
 export function OurUniverseHero() {
   return (
     <section
-      className="relative flex items-center pt-28 pb-20 min-h-screen overflow-hidden"
+      className="relative flex items-center pt-28 pb-20 min-h-[80vh] overflow-hidden"
       aria-label="Our Story hero"
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/our-story-hero.jpg"
+          src="/main/Our-Story-section-Hero.png"
           alt="Ancient sandstone cave overlooking a desert under starry sky with shooting star"
           fill
           priority
