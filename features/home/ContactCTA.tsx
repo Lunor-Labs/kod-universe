@@ -87,7 +87,7 @@ export function ContactCTA() {
                   </a>
 
                   <a
-                    href="tel:+947720000504"
+                    href="tel:0772000504"
                     className="flex items-center gap-3.5 text-kod-earth hover:text-kod-clay transition-colors group"
                   >
                     <div className="w-9 h-9 rounded-full bg-kod-canvas flex items-center justify-center text-kod-earth group-hover:bg-kod-clay group-hover:text-white transition-colors">
@@ -97,7 +97,7 @@ export function ContactCTA() {
                       <p className="text-sm font-bold uppercase tracking-wider text-kod-earth/70">
                         Studio Line
                       </p>
-                      <p className="text-base font-semibold text-kod-earth">+94 77 2000 0504</p>
+                      <p className="text-base font-semibold text-kod-earth">077 200 0504</p>
                     </div>
                   </a>
 

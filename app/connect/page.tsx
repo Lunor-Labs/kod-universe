@@ -207,8 +207,6 @@ export default function ConnectPage() {
                   {siteConfig.name}
                   <br />
                   {siteConfig.contact.locations[0]}
-                  <br />
-                  United States
                 </p>
                 <a
                   href="#"

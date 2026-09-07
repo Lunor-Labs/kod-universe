@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   contact: {
     email: "hello@koduniverse.com",
     phones: [
-      { region: "Sri Lanka Hub", number: "+94 77 2000 0504" }
+      { region: "Sri Lanka Hub", number: "077 200 0504" }
     ],
     locations: [
       "Colombo 07, Sri Lanka"
