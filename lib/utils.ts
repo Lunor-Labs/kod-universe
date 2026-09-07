@@ -1,6 +1,6 @@
 import type { ClassValue } from "clsx";
 
-// Simple cn utility — avoids importing tailwind-merge to keep bundle lean
+// Simple cn utility - avoids importing tailwind-merge to keep bundle lean
 export function cn(...inputs: ClassValue[]): string {
   return inputs.flat().filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
 }

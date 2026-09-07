@@ -22,7 +22,7 @@ export function ServiceSystemMosaic() {
               </h2>
               <p className="text-kod-text-2 text-sm leading-relaxed font-light max-w-xs">
                 Every brand touchpoint is engineered as part of a seamless
-                ecosystem—from digital handheld screens to architectural
+                ecosystem-from digital handheld screens to architectural
                 packaging and campaign applications.
               </p>
             </ScrollReveal>

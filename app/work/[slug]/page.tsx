@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectBySlug(slug);
   if (!project) return {};
   return {
-    title: `${project.title} — ${project.client}`,
+    title: `${project.title} - ${project.client}`,
     description: project.shortDescription,
     alternates: { canonical: `/work/${project.slug}` },
   };

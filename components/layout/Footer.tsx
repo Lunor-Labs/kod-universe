@@ -5,7 +5,11 @@ import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 import { BackToTop } from "@/components/ui/BackToTop";
-import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/SocialIcons";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  FacebookIcon,
+} from "@/components/ui/SocialIcons";
 
 const iconMap: Record<string, React.ElementType> = {
   Instagram: InstagramIcon,
@@ -27,7 +31,7 @@ export function Footer() {
             <Link
               href="/"
               scroll={true}
-              aria-label="KOD Universe — Home"
+              aria-label="KOD Universe - Home"
               onClick={(e) => {
                 if (window.location.pathname === "/") {
                   e.preventDefault();
@@ -80,7 +84,8 @@ export function Footer() {
                   href={`tel:${phone.number.replace(/\D/g, "")}`}
                   className="block text-base text-kod-dust hover:text-canvas transition-colors duration-200"
                 >
-                  {phone.number} <span className="text-white/60 ml-1">({phone.region})</span>
+                  {phone.number}{" "}
+                  <span className="text-white/60 ml-1">({phone.region})</span>
                 </a>
               ))}
               <div className="pt-2 space-y-1">
@@ -116,7 +121,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-earth">
-        <div className="container-site py-5">
+        <div className="container-site py-5 pb-16 md:pb-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/70">
               © {new Date().getFullYear()} KOD Universe. All rights reserved.

@@ -25,7 +25,7 @@ interface FormErrors {
   message?: string;
 }
 
-// ✦ Isolated submit function — replace this with an API call in future
+// ✦ Isolated submit function - replace this with an API call in future
 async function submitProjectEnquiry(data: FormData): Promise<void> {
   // Simulate API request latency
   await new Promise<void>((resolve) => setTimeout(resolve, 1500));
@@ -55,17 +55,23 @@ export function ContactForm() {
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    (
+      e: React.ChangeEvent<
+        HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+      >,
+    ) => {
       setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
       // Clear field error on change
       if (errors[e.target.name as keyof FormErrors]) {
         setErrors((prev) => ({ ...prev, [e.target.name]: undefined }));
       }
     },
-    [errors]
+    [errors],
   );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -96,13 +102,18 @@ export function ContactForm() {
         aria-live="polite"
       >
         <div className="w-14 h-14 rounded-full bg-canvas border border-border-warm flex items-center justify-center mb-6">
-          <CheckCircle size={26} className="text-signal-orange" aria-hidden="true" />
+          <CheckCircle
+            size={26}
+            className="text-signal-orange"
+            aria-hidden="true"
+          />
         </div>
         <h3 className="font-editorial italic text-earth text-3xl mb-3">
           Message received.
         </h3>
         <p className="text-secondary text-sm leading-relaxed max-w-xs">
-          Thank you for reaching out. We&apos;ll review your enquiry and get back to you within 1–2 business days.
+          Thank you for reaching out. We&apos;ll review your enquiry and get
+          back to you within 1–2 business days.
         </p>
         <button
           type="button"
@@ -119,7 +130,8 @@ export function ContactForm() {
     );
   }
 
-  const inputStyles = "w-full px-4 py-3 bg-transparent border rounded-md text-base text-earth placeholder-secondary/50 focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 transition-colors duration-200";
+  const inputStyles =
+    "w-full px-4 py-3 bg-transparent border rounded-md text-base text-earth placeholder-secondary/50 focus:outline-none focus:border-signal-orange focus:ring-1 focus:ring-signal-orange/20 transition-colors duration-200";
 
   return (
     <form
@@ -131,10 +143,7 @@ export function ContactForm() {
       {/* Name + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label
-            htmlFor="field-name"
-            className="block eyebrow mb-2"
-          >
+          <label htmlFor="field-name" className="block eyebrow mb-2">
             YOUR NAME
           </label>
           <input
@@ -153,17 +162,18 @@ export function ContactForm() {
             }`}
           />
           {errors.name && (
-            <p id="error-name" role="alert" className="mt-1.5 text-sm text-red-500">
+            <p
+              id="error-name"
+              role="alert"
+              className="mt-1.5 text-sm text-red-500"
+            >
               {errors.name}
             </p>
           )}
         </div>
 
         <div>
-          <label
-            htmlFor="field-email"
-            className="block eyebrow mb-2"
-          >
+          <label htmlFor="field-email" className="block eyebrow mb-2">
             YOUR EMAIL
           </label>
           <input
@@ -182,7 +192,11 @@ export function ContactForm() {
             }`}
           />
           {errors.email && (
-            <p id="error-email" role="alert" className="mt-1.5 text-sm text-red-500">
+            <p
+              id="error-email"
+              role="alert"
+              className="mt-1.5 text-sm text-red-500"
+            >
               {errors.email}
             </p>
           )}
@@ -191,10 +205,7 @@ export function ContactForm() {
 
       {/* Service selector */}
       <div>
-        <label
-          htmlFor="field-service"
-          className="block eyebrow mb-2"
-        >
+        <label htmlFor="field-service" className="block eyebrow mb-2">
           SERVICE YOU&apos;RE INTERESTED IN
         </label>
         <div className="relative">
@@ -213,8 +224,20 @@ export function ContactForm() {
             ))}
           </select>
           <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-secondary">
-            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
         </div>
@@ -222,10 +245,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label
-          htmlFor="field-message"
-          className="block eyebrow mb-2"
-        >
+        <label htmlFor="field-message" className="block eyebrow mb-2">
           TELL US ABOUT YOUR PROJECT
         </label>
         <textarea
@@ -243,7 +263,11 @@ export function ContactForm() {
           }`}
         />
         {errors.message && (
-          <p id="error-message" role="alert" className="mt-1.5 text-sm text-red-500">
+          <p
+            id="error-message"
+            role="alert"
+            className="mt-1.5 text-sm text-red-500"
+          >
             {errors.message}
           </p>
         )}
@@ -265,8 +289,19 @@ export function ContactForm() {
                 fill="none"
                 viewBox="0 0 24 24"
               >
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                />
               </svg>
               <span>Sending...</span>
             </>

@@ -23,37 +23,43 @@ export const brandingDeliverables: DeliverableItem[] = [
     num: "01",
     icon: Target,
     title: "Brand Strategy",
-    description: "We define your purpose, audience, position, and clear path to market impact.",
+    description:
+      "We define your purpose, audience, position, and clear path to market impact.",
   },
   {
     num: "04",
     icon: Sparkles,
     title: "Creative Direction",
-    description: "We guide the look, tone, and storytelling expression across your entire brand world.",
+    description:
+      "We guide the look, tone, and storytelling expression across your entire brand world.",
   },
   {
     num: "02",
     icon: Compass,
     title: "Naming & Positioning",
-    description: "We craft distinctive names, territories, and taglines that resonate and differentiate.",
+    description:
+      "We craft distinctive names, territories, and taglines that resonate and differentiate.",
   },
   {
     num: "05",
     icon: Volume2,
     title: "Brand Voice",
-    description: "We shape the words, key messaging pillars, and language that articulate your character.",
+    description:
+      "We shape the words, key messaging pillars, and language that articulate your character.",
   },
   {
     num: "03",
     icon: Sliders,
     title: "Visual Identity",
-    description: "We build iconic marks, custom typography, color systems, and dynamic brand assets.",
+    description:
+      "We build iconic marks, custom typography, color systems, and dynamic brand assets.",
   },
   {
     num: "06",
     icon: BookOpen,
     title: "Brand Guidelines",
-    description: "We document standards, design systems, and rules to protect and scale your identity seamlessly.",
+    description:
+      "We document standards, design systems, and rules to protect and scale your identity seamlessly.",
   },
 ];
 
@@ -85,28 +91,32 @@ export const brandingProcess: ProcessStep[] = [
     number: "01",
     title: "DISCOVER",
     subtitle: "Find the truth",
-    description: "We explore your world, audience, competitors, and core opportunities to uncover what truly matters.",
+    description:
+      "We explore your world, audience, competitors, and core opportunities to uncover what truly matters.",
     imageSrc: "/cave-painting-bento.jpg",
   },
   {
     number: "02",
     title: "DEFINE",
     subtitle: "Choose the position",
-    description: "We distill insights and define a clear, defensible position that sets you apart with deliberate purpose.",
+    description:
+      "We distill insights and define a clear, defensible position that sets you apart with deliberate purpose.",
     imageSrc: "/project-cosmic.jpg",
   },
   {
     number: "03",
     title: "DESIGN",
     subtitle: "Craft the system",
-    description: "We build the visual and verbal universe—from primary marks to expressive typography and motion gestures.",
+    description:
+      "We build the visual and verbal universe-from primary marks to expressive typography and motion gestures.",
     imageSrc: "/service-hero-3d.jpg",
   },
   {
     number: "04",
     title: "DEPLOY",
     subtitle: "Create consistency",
-    description: "We roll out the complete identity across physical and digital touchpoints, empowering your team to scale.",
+    description:
+      "We roll out the complete identity across physical and digital touchpoints, empowering your team to scale.",
     imageSrc: "/project-corepoint-mockup.jpg",
   },
 ];
@@ -115,17 +125,20 @@ export const brandingQualifications: QualificationPoint[] = [
   {
     icon: Sparkles,
     title: "You are launching something new.",
-    description: "Stepping into market with an ambitious product, service, or venture that demands instant recognition.",
+    description:
+      "Stepping into market with an ambitious product, service, or venture that demands instant recognition.",
   },
   {
     icon: TrendingUp,
     title: "Your identity no longer reflects your growth.",
-    description: "Your business has matured and outgrown its original look, requiring an elevated, enterprise-grade presence.",
+    description:
+      "Your business has matured and outgrown its original look, requiring an elevated, enterprise-grade presence.",
   },
   {
     icon: RefreshCw,
     title: "Your brand feels fragmented or inconsistent.",
-    description: "Multiple teams and agencies have created disjointed assets, leaving customers confused by mixed signals.",
+    description:
+      "Multiple teams and agencies have created disjointed assets, leaving customers confused by mixed signals.",
   },
 ];
 
@@ -134,21 +147,21 @@ export const selectedWorkProjects: SelectedProject[] = [
     id: "1",
     slug: "aurelia-hotels",
     title: "Aurelia Hotels",
-    category: "HOSPITALITY — IDENTITY & DIRECTION",
+    category: "HOSPITALITY - IDENTITY & DIRECTION",
     imageSrc: "/project-soluna.jpg",
   },
   {
     id: "2",
     slug: "terra-loom",
     title: "Terra Loom",
-    category: "SUSTAINABLE LIVING — IDENTITY & PACKAGING",
+    category: "SUSTAINABLE LIVING - IDENTITY & PACKAGING",
     imageSrc: "/project-terra.jpg",
   },
   {
     id: "3",
     slug: "liora-botanicals",
     title: "Liora Botanicals",
-    category: "SOCIAL WELLNESS — IDENTITY & PACKAGING",
+    category: "SOCIAL WELLNESS - IDENTITY & PACKAGING",
     imageSrc: "/project-bio-oil.jpg",
   },
 ];
@@ -175,8 +188,12 @@ export const defaultCaseStudy = {
 };
 
 const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
-  "marketing": {
-    categoryTrack: ["Content Strategy", "Brand Storytelling", "Community Growth"],
+  marketing: {
+    categoryTrack: [
+      "Content Strategy",
+      "Brand Storytelling",
+      "Community Growth",
+    ],
     heroTitlePrefix: "Ignite culture & ",
     heroTitleItalic: "build community.",
     heroDescription:
@@ -222,33 +239,39 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         value: "+180%",
         label: "Organic Engagement",
-        description: "Average boost in community interactions across client activations.",
+        description:
+          "Average boost in community interactions across client activations.",
       },
       {
         value: "4.8x",
         label: "Audience Retention",
-        description: "Multiplied long-term follower engagement through serial content.",
+        description:
+          "Multiplied long-term follower engagement through serial content.",
       },
       {
         value: "2.5M+",
         label: "Monthly Reach",
-        description: "Organic impressions generated across client social channels.",
+        description:
+          "Organic impressions generated across client social channels.",
       },
       {
         value: "100%",
         label: "Platform Native",
-        description: "Tailored creative systems engineered for channel algorithms.",
+        description:
+          "Tailored creative systems engineered for channel algorithms.",
       },
     ],
     selectedWorkTitle: "SELECTED MARKETING & CAMPAIGN WORK",
-    selectedWorkSubtitle: "Content that sparks conversations and drives measurable growth.",
+    selectedWorkSubtitle:
+      "Content that sparks conversations and drives measurable growth.",
     selectedWorkProjects: [
       {
         id: "1",
         slug: "bio-oil-skincare-campaign",
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
-        imageSrc: "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
+        imageSrc:
+          "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
       },
       {
         id: "2",
@@ -262,19 +285,56 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         slug: "coats-sri-lanka-campaign",
         title: "Coats Sri Lanka Campaign",
         category: "HERITAGE & SOCIAL",
-        imageSrc: "/projects/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
+        imageSrc:
+          "/projects/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
       },
     ],
     ctaTitle: "Ready to spark cultural momentum?",
     ctaDescription:
       "Let's build a platform-native content engine that grows your community and scales your brand presence.",
     deliverables: [
-      { num: "01", icon: Target, title: "Content Strategy & Calendar", description: "Channel-native publishing roadmap aligned with brand milestones." },
-      { num: "02", icon: Sparkles, title: "Photo & Video Direction", description: "High-impact visual direction and short-form video concepts." },
-      { num: "03", icon: Sliders, title: "Platform Template Systems", description: "Modular design templates for rapid, on-brand content creation." },
-      { num: "04", icon: Volume2, title: "Caption & Voice Guidelines", description: "Channel-specific tone of voice and editorial copywriting rules." },
-      { num: "05", icon: Compass, title: "Community Management Rules", description: "Engagement frameworks to foster active, loyal follower conversations." },
-      { num: "06", icon: BookOpen, title: "Analytics & Growth Sprints", description: "Data-driven insights to continuously optimize reach and conversion." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Content Strategy & Calendar",
+        description:
+          "Channel-native publishing roadmap aligned with brand milestones.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Photo & Video Direction",
+        description:
+          "High-impact visual direction and short-form video concepts.",
+      },
+      {
+        num: "03",
+        icon: Sliders,
+        title: "Platform Template Systems",
+        description:
+          "Modular design templates for rapid, on-brand content creation.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Caption & Voice Guidelines",
+        description:
+          "Channel-specific tone of voice and editorial copywriting rules.",
+      },
+      {
+        num: "05",
+        icon: Compass,
+        title: "Community Management Rules",
+        description:
+          "Engagement frameworks to foster active, loyal follower conversations.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Analytics & Growth Sprints",
+        description:
+          "Data-driven insights to continuously optimize reach and conversion.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED CAMPAIGN",
@@ -282,27 +342,64 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       tagline: "Omnichannel Social Activation",
       description:
         "We developed an authentic social content strategy, creative direction, and promotional campaign that amplified brand trust and retail engagement.",
-      deliverables: ["Content Strategy", "Creative Direction", "Retail Creatives", "Community Growth"],
+      deliverables: [
+        "Content Strategy",
+        "Creative Direction",
+        "Retail Creatives",
+        "Community Growth",
+      ],
       palette: ["#E54C2A", "#F4A261", "#E9C46A", "#2A9D8F", "#264653"],
       headlineFont: "Metropolis",
       bodyFont: "Inter",
       slug: "bio-oil-skincare-campaign",
-      imageSrc: "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
+      imageSrc:
+        "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching content channels.", description: "Stepping into market and needing an immediate, cohesive content strategy." },
-      { icon: TrendingUp, title: "Audience engagement has stagnated.", description: "Your current content is not breaking through modern channel algorithms." },
-      { icon: RefreshCw, title: "Brand voice feels inconsistent.", description: "Multiple team members produce disjointed marketing graphics and copy." },
+      {
+        icon: Sparkles,
+        title: "Launching content channels.",
+        description:
+          "Stepping into market and needing an immediate, cohesive content strategy.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Audience engagement has stagnated.",
+        description:
+          "Your current content is not breaking through modern channel algorithms.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Brand voice feels inconsistent.",
+        description:
+          "Multiple team members produce disjointed marketing graphics and copy.",
+      },
     ],
     faqs: [
-      { question: "Which digital channels do you support?", answer: "We support omnichannel digital platforms, editorial ecosystems, and video networks with tailored creative strategies." },
-      { question: "Do you handle shoot production?", answer: "Yes, we handle end-to-end creative direction, photography, and video shooting." },
-      { question: "How often will content be published?", answer: "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 releases per week per channel." },
-      { question: "How do you measure success?", answer: "We track reach, engagement rate, audience growth, click-through rates, and community conversions." },
+      {
+        question: "Which digital channels do you support?",
+        answer:
+          "We support omnichannel digital platforms, editorial ecosystems, and video networks with tailored creative strategies.",
+      },
+      {
+        question: "Do you handle shoot production?",
+        answer:
+          "Yes, we handle end-to-end creative direction, photography, and video shooting.",
+      },
+      {
+        question: "How often will content be published?",
+        answer:
+          "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 releases per week per channel.",
+      },
+      {
+        question: "How do you measure success?",
+        answer:
+          "We track reach, engagement rate, audience growth, click-through rates, and community conversions.",
+      },
     ],
   },
 
-  "designing": {
+  designing: {
     categoryTrack: ["Brand Strategy", "Package Design", "Logo Design"],
     heroTitlePrefix: "Enduring identity & ",
     heroTitleItalic: "tactile packaging.",
@@ -351,26 +448,31 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         value: "#1",
         label: "Shelf Distinction",
-        description: "Superior visual recall and unboxing perception in competitive retail.",
+        description:
+          "Superior visual recall and unboxing perception in competitive retail.",
       },
       {
         value: "100%",
         label: "Press Accuracy",
-        description: "Zero-defect press-ready dielines and sustainable substrate specifications.",
+        description:
+          "Zero-defect press-ready dielines and sustainable substrate specifications.",
       },
       {
         value: "60+",
         label: "Deliverable Assets",
-        description: "Comprehensive brand guidelines scaling from packaging to digital.",
+        description:
+          "Comprehensive brand guidelines scaling from packaging to digital.",
       },
       {
         value: "Timeless",
         label: "Identity Longevity",
-        description: "Visual systems built to endure brand expansion and multiple SKUs.",
+        description:
+          "Visual systems built to endure brand expansion and multiple SKUs.",
       },
     ],
     selectedWorkTitle: "SELECTED IDENTITY & PACKAGING WORK",
-    selectedWorkSubtitle: "Tactile packaging and distinctive brand systems crafted to stand apart.",
+    selectedWorkSubtitle:
+      "Tactile packaging and distinctive brand systems crafted to stand apart.",
     selectedWorkProjects: [
       {
         id: "1",
@@ -391,19 +493,56 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         slug: "slsa-uk-identity",
         title: "SLSA UK Emblem & Identity",
         category: "COMMUNITY BRAND & LOGO",
-        imageSrc: "/projects/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.png",
+        imageSrc:
+          "/projects/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.png",
       },
     ],
     ctaTitle: "Ready to build an identity that endures?",
     ctaDescription:
       "Let's engineer a distinctive brand and packaging system that wins on the shelf and commands customer loyalty.",
     deliverables: [
-      { num: "01", icon: Target, title: "Structural & Graphic Packaging", description: "Custom 3D container shape and shelf-commanding graphic layouts." },
-      { num: "02", icon: Sparkles, title: "Logo & Brand Mark Systems", description: "Distinctive brand marks, monograms, and typographic hierarchies." },
-      { num: "03", icon: Compass, title: "Unboxing Experience Design", description: "Inner reveals, tactile papers, and memorable customer moments." },
-      { num: "04", icon: Volume2, title: "Label & Tag Systems", description: "Foil stamping, embossing, die-cuts, and regulatory integration." },
-      { num: "05", icon: Sliders, title: "Brand Guidelines Document", description: "Comprehensive rules ensuring cohesive application across all media." },
-      { num: "06", icon: BookOpen, title: "Print Production Management", description: "Dieline engineering, press checks, and printer manufacturer liaison." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Structural & Graphic Packaging",
+        description:
+          "Custom 3D container shape and shelf-commanding graphic layouts.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Logo & Brand Mark Systems",
+        description:
+          "Distinctive brand marks, monograms, and typographic hierarchies.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Unboxing Experience Design",
+        description:
+          "Inner reveals, tactile papers, and memorable customer moments.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Label & Tag Systems",
+        description:
+          "Foil stamping, embossing, die-cuts, and regulatory integration.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Brand Guidelines Document",
+        description:
+          "Comprehensive rules ensuring cohesive application across all media.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Print Production Management",
+        description:
+          "Dieline engineering, press checks, and printer manufacturer liaison.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED PACKAGING",
@@ -411,7 +550,12 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       tagline: "Sustainable Packaging & Identity",
       description:
         "Engineered tactile, artisanal packaging architecture for Niwarthana with intricate foil stamping, custom die cuts, and memorable unboxing layers.",
-      deliverables: ["Packaging Dielines", "Unboxing Architecture", "Label Hierarchy", "Print Specifications"],
+      deliverables: [
+        "Packaging Dielines",
+        "Unboxing Architecture",
+        "Label Hierarchy",
+        "Print Specifications",
+      ],
       palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
@@ -419,20 +563,56 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/projects/branding-identity/package-design/niwarthana-1.png",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching a physical product.", description: "Demanding shelf impact in competitive retail or direct-to-consumer markets." },
-      { icon: TrendingUp, title: "Packaging feels dated or cheap.", description: "Customer unboxing experience doesn't match product quality or price point." },
-      { icon: RefreshCw, title: "Expanding product lines.", description: "Needing scalable packaging guidelines and visual consistency across multiple SKUs." },
+      {
+        icon: Sparkles,
+        title: "Launching a physical product.",
+        description:
+          "Demanding shelf impact in competitive retail or direct-to-consumer markets.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Packaging feels dated or cheap.",
+        description:
+          "Customer unboxing experience doesn't match product quality or price point.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Expanding product lines.",
+        description:
+          "Needing scalable packaging guidelines and visual consistency across multiple SKUs.",
+      },
     ],
     faqs: [
-      { question: "Do you supply the dielines or use ours?", answer: "We can engineer custom dielines from scratch or build directly from your packaging manufacturer's specifications." },
-      { question: "Do you handle print vendor communication?", answer: "Yes, we prepare print-ready dieline files and coordinate directly with your print vendor for press checks." },
-      { question: "Can you design sustainable packaging?", answer: "Absolutely. We specialize in plastic-free, recyclable, biodegradable, and low-waste packaging solutions." },
-      { question: "How long does a branding and packaging project take?", answer: "Typical timelines range from 4 to 8 weeks depending on SKU count, prototyping, and review cycles." },
+      {
+        question: "Do you supply the dielines or use ours?",
+        answer:
+          "We can engineer custom dielines from scratch or build directly from your packaging manufacturer's specifications.",
+      },
+      {
+        question: "Do you handle print vendor communication?",
+        answer:
+          "Yes, we prepare print-ready dieline files and coordinate directly with your print vendor for press checks.",
+      },
+      {
+        question: "Can you design sustainable packaging?",
+        answer:
+          "Absolutely. We specialize in plastic-free, recyclable, biodegradable, and low-waste packaging solutions.",
+      },
+      {
+        question: "How long does a branding and packaging project take?",
+        answer:
+          "Typical timelines range from 4 to 8 weeks depending on SKU count, prototyping, and review cycles.",
+      },
     ],
   },
 
   "and-beyond": {
-    categoryTrack: ["Digital Architecture", "Merchandising", "Storytelling", "Web Design"],
+    categoryTrack: [
+      "Digital Architecture",
+      "Merchandising",
+      "Storytelling",
+      "Web Design",
+    ],
     heroTitlePrefix: "Spatial, tangible & ",
     heroTitleItalic: "digital experiences.",
     heroDescription:
@@ -502,59 +682,103 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         value: "99/100",
         label: "Lighthouse Speed",
-        description: "Sub-second load times and fluid 60fps animations across all devices.",
+        description:
+          "Sub-second load times and fluid 60fps animations across all devices.",
       },
       {
         value: "3D",
         label: "Spatial Immersion",
-        description: "Photorealistic architectural visualisations bringing brand spaces to life.",
+        description:
+          "Photorealistic architectural visualisations bringing brand spaces to life.",
       },
       {
         value: "100%",
         label: "Bespoke Code",
-        description: "Clean code architectures engineered without restrictive templates.",
+        description:
+          "Clean code architectures engineered without restrictive templates.",
       },
       {
         value: "Global",
         label: "Cross-Channel Cohesion",
-        description: "Unified narrative from physical merchandise to international web presence.",
+        description:
+          "Unified narrative from physical merchandise to international web presence.",
       },
     ],
     selectedWorkTitle: "SELECTED EXPERIENTIAL & DIGITAL WORK",
-    selectedWorkSubtitle: "Modern web experiences, narrative visuals, and spatial brand worlds.",
+    selectedWorkSubtitle:
+      "Modern web experiences, narrative visuals, and spatial brand worlds.",
     selectedWorkProjects: [
       {
         id: "1",
         slug: "coffee-1911-identity",
         title: "Coffee 1911 Brand & Spatial",
         category: "BRAND & SPATIAL ARCHITECTURE",
-        imageSrc: "/projects/branding-identity/logo-design/coffee-1911/coffee-1911-1.png",
+        imageSrc:
+          "/projects/branding-identity/logo-design/coffee-1911/coffee-1911-1.png",
       },
       {
         id: "2",
         slug: "cool-step-identity",
         title: "Cool Step Footwear Identity",
         category: "PRODUCT & APPAREL DESIGN",
-        imageSrc: "/projects/branding-identity/logo-design/cool-step-final/cool-step-final-1.png",
+        imageSrc:
+          "/projects/branding-identity/logo-design/cool-step-final/cool-step-final-1.png",
       },
       {
         id: "3",
         slug: "focal-logo-identity",
         title: "FOCAL Visual Architecture",
         category: "DIGITAL IDENTITY & GEOMETRY",
-        imageSrc: "/projects/branding-identity/logo-design/focal/focal-logo-1.png",
+        imageSrc:
+          "/projects/branding-identity/logo-design/focal/focal-logo-1.png",
       },
     ],
     ctaTitle: "Ready to expand your brand universe?",
     ctaDescription:
       "Let's craft spatial, digital, and tangible expressions that push past the conventional and set a new standard.",
     deliverables: [
-      { num: "01", icon: Target, title: "Spatial 3D Environments", description: "Virtual spaces, retail interiors, and experiential brand concepts." },
-      { num: "02", icon: Sparkles, title: "High-Performance Web Platforms", description: "Bespoke Next.js and React sites engineered for clarity and conversion." },
-      { num: "03", icon: Compass, title: "Custom Merchandise & Apparel", description: "Wearable products, tech packs, and collectible physical assets." },
-      { num: "04", icon: Volume2, title: "Visual Narrative Systems", description: "Sequential storytelling, art direction, and editorial imagery." },
-      { num: "05", icon: Sliders, title: "Design Systems & Components", description: "Modular UI kits and design tokens ensuring future development speed." },
-      { num: "06", icon: BookOpen, title: "Technical SEO & Speed Optimization", description: "Lighthouse 90+ performance scores, metadata, and analytics." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Spatial 3D Environments",
+        description:
+          "Virtual spaces, retail interiors, and experiential brand concepts.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "High-Performance Web Platforms",
+        description:
+          "Bespoke Next.js and React sites engineered for clarity and conversion.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Custom Merchandise & Apparel",
+        description:
+          "Wearable products, tech packs, and collectible physical assets.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Visual Narrative Systems",
+        description:
+          "Sequential storytelling, art direction, and editorial imagery.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Design Systems & Components",
+        description:
+          "Modular UI kits and design tokens ensuring future development speed.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Technical SEO & Speed Optimization",
+        description:
+          "Lighthouse 90+ performance scores, metadata, and analytics.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED ARCHITECTURE",
@@ -562,7 +786,12 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       tagline: "Immersive Brand Architecture",
       description:
         "Engineered end-to-end visual storytelling, spatial signage concepts, and cohesive brand touchpoints for ROUKA.",
-      deliverables: ["Spatial Concepts", "Brand Signage", "Identity Systems", "Digital Experience"],
+      deliverables: [
+        "Spatial Concepts",
+        "Brand Signage",
+        "Identity Systems",
+        "Digital Experience",
+      ],
       palette: ["#1F2937", "#4B5563", "#D97706", "#F59E0B", "#FEF3C7"],
       headlineFont: "Metropolis",
       bodyFont: "Inter",
@@ -570,15 +799,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/projects/branding-identity/branding/rouka-1.png",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Transcending a standard website.", description: "Needing a world-class digital experience with rich animations and fast performance." },
-      { icon: TrendingUp, title: "Creating physical brand extensions.", description: "Ready to launch branded apparel, products, or physical showroom spaces." },
-      { icon: RefreshCw, title: "Communicating complex stories.", description: "Requiring visual storytelling and narrative clarity for sophisticated audiences." },
+      {
+        icon: Sparkles,
+        title: "Transcending a standard website.",
+        description:
+          "Needing a world-class digital experience with rich animations and fast performance.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Creating physical brand extensions.",
+        description:
+          "Ready to launch branded apparel, products, or physical showroom spaces.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Communicating complex stories.",
+        description:
+          "Requiring visual storytelling and narrative clarity for sophisticated audiences.",
+      },
     ],
     faqs: [
-      { question: "What technologies do you use for web design?", answer: "We build modern digital experiences with Next.js, React, Tailwind CSS, TypeScript, and Framer Motion." },
-      { question: "Can you provide 3D spatial renders for contractors?", answer: "Yes, our digital architecture deliverables include dimensioned layout plans, finishes, and 3D visualisations." },
-      { question: "Do you handle apparel sourcing for merchandise?", answer: "We provide complete tech packs, print dielines, and guidance on ethical manufacturer sourcing." },
-      { question: "Will our team be able to update website content?", answer: "Yes, we integrate user-friendly headless CMS solutions allowing your team to update content effortlessly." },
+      {
+        question: "What technologies do you use for web design?",
+        answer:
+          "We build modern digital experiences with Next.js, React, Tailwind CSS, TypeScript, and Framer Motion.",
+      },
+      {
+        question: "Can you provide 3D spatial renders for contractors?",
+        answer:
+          "Yes, our digital architecture deliverables include dimensioned layout plans, finishes, and 3D visualisations.",
+      },
+      {
+        question: "Do you handle apparel sourcing for merchandise?",
+        answer:
+          "We provide complete tech packs, print dielines, and guidance on ethical manufacturer sourcing.",
+      },
+      {
+        question: "Will our team be able to update website content?",
+        answer:
+          "Yes, we integrate user-friendly headless CMS solutions allowing your team to update content effortlessly.",
+      },
     ],
   },
 
@@ -593,19 +853,61 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     philosophyCol2:
       "From Instagram to TikTok to LinkedIn, we build content engines that turn passive scrollers into dedicated brand advocates.",
     deliverables: [
-      { num: "01", icon: Target, title: "Content Strategy & Calendar", description: "Channel-native publishing roadmap aligned with brand milestones." },
-      { num: "02", icon: Sparkles, title: "Photo & Video Direction", description: "High-impact visual direction and short-form video concepts." },
-      { num: "03", icon: Sliders, title: "Platform Template Systems", description: "Modular design templates for rapid, on-brand content creation." },
-      { num: "04", icon: Volume2, title: "Caption & Voice Guidelines", description: "Channel-specific tone of voice and editorial copywriting rules." },
-      { num: "05", icon: Compass, title: "Community Management", description: "Engagement frameworks to foster active follower conversations." },
-      { num: "06", icon: TrendingUp, title: "Analytics & Performance", description: "Data-driven insights to continuously optimize reach and ROI." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Content Strategy & Calendar",
+        description:
+          "Channel-native publishing roadmap aligned with brand milestones.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Photo & Video Direction",
+        description:
+          "High-impact visual direction and short-form video concepts.",
+      },
+      {
+        num: "03",
+        icon: Sliders,
+        title: "Platform Template Systems",
+        description:
+          "Modular design templates for rapid, on-brand content creation.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Caption & Voice Guidelines",
+        description:
+          "Channel-specific tone of voice and editorial copywriting rules.",
+      },
+      {
+        num: "05",
+        icon: Compass,
+        title: "Community Management",
+        description:
+          "Engagement frameworks to foster active follower conversations.",
+      },
+      {
+        num: "06",
+        icon: TrendingUp,
+        title: "Analytics & Performance",
+        description:
+          "Data-driven insights to continuously optimize reach and ROI.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED CAMPAIGN",
       client: "Bio-Oil Skincare",
       tagline: "Omnichannel Social Activation",
-      description: "We developed an authentic social content strategy and short-form video campaign that increased organic engagement by 180% across platforms.",
-      deliverables: ["Content Strategy", "Short-Form Video", "Template System", "Art Direction"],
+      description:
+        "We developed an authentic social content strategy and short-form video campaign that increased organic engagement by 180% across platforms.",
+      deliverables: [
+        "Content Strategy",
+        "Short-Form Video",
+        "Template System",
+        "Art Direction",
+      ],
       palette: ["#E54C2A", "#F4A261", "#E9C46A", "#2A9D8F", "#264653"],
       headlineFont: "Metropolis",
       bodyFont: "Inter",
@@ -613,15 +915,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-bio-oil.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching social channels.", description: "Stepping into market and needing an immediate content strategy." },
-      { icon: TrendingUp, title: "Organic engagement has stagnated.", description: "Your current content is not breaking through platform algorithms." },
-      { icon: RefreshCw, title: "Brand voice feels inconsistent.", description: "Multiple team members produce disjointed social graphics." },
+      {
+        icon: Sparkles,
+        title: "Launching social channels.",
+        description:
+          "Stepping into market and needing an immediate content strategy.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Organic engagement has stagnated.",
+        description:
+          "Your current content is not breaking through platform algorithms.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Brand voice feels inconsistent.",
+        description:
+          "Multiple team members produce disjointed social graphics.",
+      },
     ],
     faqs: [
-      { question: "Which social platforms do you support?", answer: "We support Instagram, TikTok, LinkedIn, YouTube, X, and Pinterest with platform-tailored creative strategies." },
-      { question: "Do you handle shoot production?", answer: "Yes, we handle end-to-end creative direction, photography, and video shooting." },
-      { question: "How often will content be published?", answer: "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 posts per week per channel." },
-      { question: "How do you measure success?", answer: "We track reach, engagement rate, follower growth, click-through rates, and community conversions." },
+      {
+        question: "Which social platforms do you support?",
+        answer:
+          "We support Instagram, TikTok, LinkedIn, YouTube, X, and Pinterest with platform-tailored creative strategies.",
+      },
+      {
+        question: "Do you handle shoot production?",
+        answer:
+          "Yes, we handle end-to-end creative direction, photography, and video shooting.",
+      },
+      {
+        question: "How often will content be published?",
+        answer:
+          "Publishing cadence is tailored to your goals, typically ranging from 3 to 6 posts per week per channel.",
+      },
+      {
+        question: "How do you measure success?",
+        answer:
+          "We track reach, engagement rate, follower growth, click-through rates, and community conversions.",
+      },
     ],
   },
 
@@ -631,8 +964,10 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "remember.",
     philosophyTitlePrefix: "A brand is more than ",
     philosophyTitleItalic: "a mark.",
-    philosophyCol1: "It's clarity that connects people to purpose. A recognizable signal that stands out in noise and earns lasting customer trust.",
-    philosophyCol2: "Great identities create consistency across every touchpoint so your story lives, moves, and grows as your business expands.",
+    philosophyCol1:
+      "It's clarity that connects people to purpose. A recognizable signal that stands out in noise and earns lasting customer trust.",
+    philosophyCol2:
+      "Great identities create consistency across every touchpoint so your story lives, moves, and grows as your business expands.",
     deliverables: brandingDeliverables,
     featuredCaseStudy: defaultCaseStudy,
     qualificationPoints: brandingQualifications,
@@ -645,22 +980,65 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "persuades on shelf.",
     philosophyTitlePrefix: "Packaging is your product's ",
     philosophyTitleItalic: "first handshake.",
-    philosophyCol1: "We design primary and secondary packaging that communicates quality at three distances: shelf, arm's length, and in hand.",
-    philosophyCol2: "We balance artistic shelf appeal with regulatory compliance, print feasibility, and eco-friendly material selection.",
+    philosophyCol1:
+      "We design primary and secondary packaging that communicates quality at three distances: shelf, arm's length, and in hand.",
+    philosophyCol2:
+      "We balance artistic shelf appeal with regulatory compliance, print feasibility, and eco-friendly material selection.",
     deliverables: [
-      { num: "01", icon: Target, title: "Structural & Graphic Design", description: "Custom 3D bottle, box, and container shape and graphic layout." },
-      { num: "02", icon: Sparkles, title: "Label & Hangtag Systems", description: "Tactile labels with foil stamping, embossing, and die-cut details." },
-      { num: "03", icon: Compass, title: "Retail Display Packaging", description: "POP displays and shipping containers designed for retail environments." },
-      { num: "04", icon: Volume2, title: "Unboxing Experience", description: "Inner tissue, inserts, and reveal mechanics that delight customers." },
-      { num: "05", icon: Sliders, title: "Regulatory Text Layout", description: "FDA, EU, and global compliance info integrated without clutter." },
-      { num: "06", icon: BookOpen, title: "Print Production Mgmt", description: "Dieline creation, press checks, and printer liaison." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Structural & Graphic Design",
+        description:
+          "Custom 3D bottle, box, and container shape and graphic layout.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Label & Hangtag Systems",
+        description:
+          "Tactile labels with foil stamping, embossing, and die-cut details.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Retail Display Packaging",
+        description:
+          "POP displays and shipping containers designed for retail environments.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Unboxing Experience",
+        description:
+          "Inner tissue, inserts, and reveal mechanics that delight customers.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Regulatory Text Layout",
+        description:
+          "FDA, EU, and global compliance info integrated without clutter.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Print Production Mgmt",
+        description: "Dieline creation, press checks, and printer liaison.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED PACKAGING",
       client: "Threadline Textiles",
       tagline: "Sustainable Packaging & Identity",
-      description: "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details and unboxing box architecture.",
-      deliverables: ["Packaging Dielines", "Unboxing Box", "Hangtags", "Print Specs"],
+      description:
+        "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details and unboxing box architecture.",
+      deliverables: [
+        "Packaging Dielines",
+        "Unboxing Box",
+        "Hangtags",
+        "Print Specs",
+      ],
       palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
@@ -668,15 +1046,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-threadline.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching a physical product.", description: "Demanding shelf impact in competitive retail or e-commerce markets." },
-      { icon: TrendingUp, title: "Packaging feels dated or cheap.", description: "Customer unboxing experience doesn't match product quality." },
-      { icon: RefreshCw, title: "Expanding product lines.", description: "Needing scalable packaging guidelines across multiple SKUs." },
+      {
+        icon: Sparkles,
+        title: "Launching a physical product.",
+        description:
+          "Demanding shelf impact in competitive retail or e-commerce markets.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Packaging feels dated or cheap.",
+        description:
+          "Customer unboxing experience doesn't match product quality.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Expanding product lines.",
+        description:
+          "Needing scalable packaging guidelines across multiple SKUs.",
+      },
     ],
     faqs: [
-      { question: "Do you supply the dielines or use ours?", answer: "We can work from your manufacturer's dielines or custom engineer new ones." },
-      { question: "Do you handle print vendor communication?", answer: "Yes, we prepare print-ready files and coordinate directly with your print vendor." },
-      { question: "Can you design sustainable packaging?", answer: "Absolutely. We specialize in recyclable, biodegradable, and low-waste packaging solutions." },
-      { question: "How long does a packaging project take?", answer: "Typical timelines range from 4 to 8 weeks depending on SKU count and prototyping." },
+      {
+        question: "Do you supply the dielines or use ours?",
+        answer:
+          "We can work from your manufacturer's dielines or custom engineer new ones.",
+      },
+      {
+        question: "Do you handle print vendor communication?",
+        answer:
+          "Yes, we prepare print-ready files and coordinate directly with your print vendor.",
+      },
+      {
+        question: "Can you design sustainable packaging?",
+        answer:
+          "Absolutely. We specialize in recyclable, biodegradable, and low-waste packaging solutions.",
+      },
+      {
+        question: "How long does a packaging project take?",
+        answer:
+          "Typical timelines range from 4 to 8 weeks depending on SKU count and prototyping.",
+      },
     ],
   },
 
@@ -686,22 +1095,65 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "persuades on shelf.",
     philosophyTitlePrefix: "Packaging is your product's ",
     philosophyTitleItalic: "first handshake.",
-    philosophyCol1: "We design primary and secondary packaging that communicates quality at three distances: shelf, arm's length, and in hand.",
-    philosophyCol2: "We balance artistic shelf appeal with regulatory compliance, print feasibility, and eco-friendly material selection.",
+    philosophyCol1:
+      "We design primary and secondary packaging that communicates quality at three distances: shelf, arm's length, and in hand.",
+    philosophyCol2:
+      "We balance artistic shelf appeal with regulatory compliance, print feasibility, and eco-friendly material selection.",
     deliverables: [
-      { num: "01", icon: Target, title: "Structural & Graphic Design", description: "Custom 3D bottle, box, and container shape and graphic layout." },
-      { num: "02", icon: Sparkles, title: "Label & Hangtag Systems", description: "Tactile labels with foil stamping, embossing, and die-cut details." },
-      { num: "03", icon: Compass, title: "Retail Display Packaging", description: "POP displays and shipping containers designed for retail environments." },
-      { num: "04", icon: Volume2, title: "Unboxing Experience", description: "Inner tissue, inserts, and reveal mechanics that delight customers." },
-      { num: "05", icon: Sliders, title: "Regulatory Text Layout", description: "FDA, EU, and global compliance info integrated without clutter." },
-      { num: "06", icon: BookOpen, title: "Print Production Mgmt", description: "Dieline creation, press checks, and printer liaison." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Structural & Graphic Design",
+        description:
+          "Custom 3D bottle, box, and container shape and graphic layout.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Label & Hangtag Systems",
+        description:
+          "Tactile labels with foil stamping, embossing, and die-cut details.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Retail Display Packaging",
+        description:
+          "POP displays and shipping containers designed for retail environments.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Unboxing Experience",
+        description:
+          "Inner tissue, inserts, and reveal mechanics that delight customers.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Regulatory Text Layout",
+        description:
+          "FDA, EU, and global compliance info integrated without clutter.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Print Production Mgmt",
+        description: "Dieline creation, press checks, and printer liaison.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED PACKAGING",
       client: "Threadline Textiles",
       tagline: "Sustainable Packaging & Identity",
-      description: "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details and unboxing box architecture.",
-      deliverables: ["Packaging Dielines", "Unboxing Box", "Hangtags", "Print Specs"],
+      description:
+        "Crafted zero-plastic packaging for Threadline's organic textile collection with foil details and unboxing box architecture.",
+      deliverables: [
+        "Packaging Dielines",
+        "Unboxing Box",
+        "Hangtags",
+        "Print Specs",
+      ],
       palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
@@ -709,19 +1161,48 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-threadline.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching a physical product.", description: "Demanding shelf impact in competitive retail or e-commerce markets." },
-      { icon: TrendingUp, title: "Packaging feels dated or cheap.", description: "Customer unboxing experience doesn't match product quality." },
-      { icon: RefreshCw, title: "Expanding product lines.", description: "Needing scalable packaging guidelines across multiple SKUs." },
+      {
+        icon: Sparkles,
+        title: "Launching a physical product.",
+        description:
+          "Demanding shelf impact in competitive retail or e-commerce markets.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Packaging feels dated or cheap.",
+        description:
+          "Customer unboxing experience doesn't match product quality.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Expanding product lines.",
+        description:
+          "Needing scalable packaging guidelines across multiple SKUs.",
+      },
     ],
     faqs: [
-      { question: "Do you supply the dielines or use ours?", answer: "We can work from your manufacturer's dielines or custom engineer new ones." },
-      { question: "Do you handle print vendor communication?", answer: "Yes, we prepare print-ready files and coordinate directly with your print vendor." },
-      { question: "Can you design sustainable packaging?", answer: "Absolutely. We specialize in recyclable, biodegradable, and low-waste packaging solutions." },
-      { question: "How long does a packaging project take?", answer: "Typical timelines range from 4 to 8 weeks depending on SKU count and prototyping." },
+      {
+        question: "Do you supply the dielines or use ours?",
+        answer:
+          "We can work from your manufacturer's dielines or custom engineer new ones.",
+      },
+      {
+        question: "Do you handle print vendor communication?",
+        answer:
+          "Yes, we prepare print-ready files and coordinate directly with your print vendor.",
+      },
+      {
+        question: "Can you design sustainable packaging?",
+        answer:
+          "Absolutely. We specialize in recyclable, biodegradable, and low-waste packaging solutions.",
+      },
+      {
+        question: "How long does a packaging project take?",
+        answer:
+          "Typical timelines range from 4 to 8 weeks depending on SKU count and prototyping.",
+      },
     ],
   },
-
-
 
   "web-design": {
     categoryTrack: ["UX Strategy", "UI Design", "Next.js"],
@@ -729,22 +1210,62 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "convert & inspire.",
     philosophyTitlePrefix: "Websites are active ",
     philosophyTitleItalic: "brand experiences.",
-    philosophyCol1: "We design and develop web platforms that combine artistic storytelling with high-speed performance and high conversion.",
-    philosophyCol2: "From micro-interactions to responsive layouts, every pixel is engineered to build trust and guide users to action.",
+    philosophyCol1:
+      "We design and develop web platforms that combine artistic storytelling with high-speed performance and high conversion.",
+    philosophyCol2:
+      "From micro-interactions to responsive layouts, every pixel is engineered to build trust and guide users to action.",
     deliverables: [
-      { num: "01", icon: Target, title: "UX Strategy & Wireframing", description: "User journey mapping, architecture, and layout wireframes." },
-      { num: "02", icon: Sparkles, title: "Custom UI & Design System", description: "Bespoke interface component library and design system." },
-      { num: "03", icon: Compass, title: "Next.js & React Build", description: "High-performance frontend code with fluid web motion." },
-      { num: "04", icon: Volume2, title: "CMS Integration", description: "Headless CMS setup allowing non-technical team updates." },
-      { num: "05", icon: Sliders, title: "SEO & Speed Optimization", description: "Lighthouse 90+ performance scores and technical SEO." },
-      { num: "06", icon: BookOpen, title: "Analytics & Launch Support", description: "Google Analytics 4 event tracking and zero-downtime deployment." },
+      {
+        num: "01",
+        icon: Target,
+        title: "UX Strategy & Wireframing",
+        description:
+          "User journey mapping, architecture, and layout wireframes.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Custom UI & Design System",
+        description: "Bespoke interface component library and design system.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Next.js & React Build",
+        description: "High-performance frontend code with fluid web motion.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "CMS Integration",
+        description: "Headless CMS setup allowing non-technical team updates.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "SEO & Speed Optimization",
+        description: "Lighthouse 90+ performance scores and technical SEO.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Analytics & Launch Support",
+        description:
+          "Google Analytics 4 event tracking and zero-downtime deployment.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED DIGITAL PLATFORM",
       client: "Soluna Wellness",
       tagline: "Immersive Web Experience",
-      description: "Built a high-converting web platform with smooth scroll reveals, custom booking flow, and responsive design for Soluna.",
-      deliverables: ["UX Architecture", "Next.js Frontend", "Animation Engine", "CMS Integration"],
+      description:
+        "Built a high-converting web platform with smooth scroll reveals, custom booking flow, and responsive design for Soluna.",
+      deliverables: [
+        "UX Architecture",
+        "Next.js Frontend",
+        "Animation Engine",
+        "CMS Integration",
+      ],
       palette: ["#FAF7F2", "#1C1B19", "#E54C2A", "#EAC240"],
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
@@ -752,20 +1273,47 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-soluna.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Current website is underperforming.", description: "Visitors drop off without converting into leads or sales." },
-      { icon: TrendingUp, title: "Outgrown page templates.", description: "Existing site doesn't reflect your premium service tier." },
-      { icon: RefreshCw, title: "Slow load times & bad mobile UX.", description: "Site feels clunky on mobile devices and ranks poorly on Google." },
+      {
+        icon: Sparkles,
+        title: "Current website is underperforming.",
+        description:
+          "Visitors drop off without converting into leads or sales.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Outgrown page templates.",
+        description: "Existing site doesn't reflect your premium service tier.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Slow load times & bad mobile UX.",
+        description:
+          "Site feels clunky on mobile devices and ranks poorly on Google.",
+      },
     ],
     faqs: [
-      { question: "What technologies do you use for web development?", answer: "We build modern sites using Next.js, React, TailwindCSS, TypeScript, and headless CMS integrations." },
-      { question: "Will I be able to update content myself?", answer: "Yes, we integrate easy-to-use CMS admin panels for full content control." },
-      { question: "Is SEO included in web design?", answer: "Yes, technical SEO, fast page loads, schema markup, and meta tags are built-in." },
-      { question: "How long does a website design project take?", answer: "Projects take 4 to 8 weeks depending on custom feature complexity." },
+      {
+        question: "What technologies do you use for web development?",
+        answer:
+          "We build modern sites using Next.js, React, TailwindCSS, TypeScript, and headless CMS integrations.",
+      },
+      {
+        question: "Will I be able to update content myself?",
+        answer:
+          "Yes, we integrate easy-to-use CMS admin panels for full content control.",
+      },
+      {
+        question: "Is SEO included in web design?",
+        answer:
+          "Yes, technical SEO, fast page loads, schema markup, and meta tags are built-in.",
+      },
+      {
+        question: "How long does a website design project take?",
+        answer:
+          "Projects take 4 to 8 weeks depending on custom feature complexity.",
+      },
     ],
   },
-
-
-
 
   "visual-storytelling": {
     categoryTrack: ["Narrative", "Photography", "Curation"],
@@ -773,22 +1321,65 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "visual narrative.",
     philosophyTitlePrefix: "Visuals transcend ",
     philosophyTitleItalic: "written words.",
-    philosophyCol1: "We use photography, illustration, infographics, and sequential imagery to craft visual stories that inform and inspire.",
-    philosophyCol2: "Every photo, illustration, and graphic frame is designed to convey emotion and build customer connection.",
+    philosophyCol1:
+      "We use photography, illustration, infographics, and sequential imagery to craft visual stories that inform and inspire.",
+    philosophyCol2:
+      "Every photo, illustration, and graphic frame is designed to convey emotion and build customer connection.",
     deliverables: [
-      { num: "01", icon: Target, title: "Narrative Strategy", description: "Structuring your brand story into compelling visual arcs." },
-      { num: "02", icon: Sparkles, title: "Photo Art Direction", description: "Curating shoot themes, moodboards, and photo sequencing." },
-      { num: "03", icon: Compass, title: "Illustration & Infographics", description: "Custom diagrams and artworks explaining complex concepts." },
-      { num: "04", icon: Volume2, title: "Editorial Layout", description: "Magazine spreads, brand books, and digital presentation layout." },
-      { num: "05", icon: Sliders, title: "Brand Storytelling Framework", description: "Guidelines for visual tone across internal and public assets." },
-      { num: "06", icon: BookOpen, title: "Multi-Channel Content System", description: "Cohesive visual story assets delivered for web, print, and social." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Narrative Strategy",
+        description:
+          "Structuring your brand story into compelling visual arcs.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Photo Art Direction",
+        description: "Curating shoot themes, moodboards, and photo sequencing.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Illustration & Infographics",
+        description:
+          "Custom diagrams and artworks explaining complex concepts.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Editorial Layout",
+        description:
+          "Magazine spreads, brand books, and digital presentation layout.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Brand Storytelling Framework",
+        description:
+          "Guidelines for visual tone across internal and public assets.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Multi-Channel Content System",
+        description:
+          "Cohesive visual story assets delivered for web, print, and social.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED NARRATIVE",
       client: "Origins Series",
       tagline: "Visual Storytelling Campaign",
-      description: "Developed an editorial photographic story series celebrating raw materials and craft for Origins.",
-      deliverables: ["Visual Narrative Arc", "Photo Series", "Editorial Book", "Digital Campaign"],
+      description:
+        "Developed an editorial photographic story series celebrating raw materials and craft for Origins.",
+      deliverables: [
+        "Visual Narrative Arc",
+        "Photo Series",
+        "Editorial Book",
+        "Digital Campaign",
+      ],
       palette: ["#2E2824", "#A34A29", "#E54C2A", "#FAF7F2"],
       headlineFont: "Editorial New",
       bodyFont: "Metropolis",
@@ -796,41 +1387,106 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-origins.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Complex message to communicate.", description: "Needing visual diagrams, photos, and narrative flow to simplify concepts." },
-      { icon: TrendingUp, title: "Brand materials lack emotional depth.", description: "Marketing collateral feels dry or overly technical." },
-      { icon: RefreshCw, title: "Publishing a brand book or annual report.", description: "Wanting an editorial presentation of your year's milestones." },
+      {
+        icon: Sparkles,
+        title: "Complex message to communicate.",
+        description:
+          "Needing visual diagrams, photos, and narrative flow to simplify concepts.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Brand materials lack emotional depth.",
+        description: "Marketing collateral feels dry or overly technical.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Publishing a brand book or annual report.",
+        description:
+          "Wanting an editorial presentation of your year's milestones.",
+      },
     ],
     faqs: [
-      { question: "What is visual storytelling?", answer: "It is the art of combining photography, design, typography, and sequential layout to tell a brand story." },
-      { question: "Do you conduct custom photo shoots?", answer: "Yes, we handle creative direction and photography shoots worldwide." },
-      { question: "Can visual storytelling be adapted for websites?", answer: "Yes, we design scroll-driven web narratives with interactive visual steps." },
-      { question: "What deliverables do we get?", answer: "You get full high-res photo suites, vector illustrations, and layout files." },
+      {
+        question: "What is visual storytelling?",
+        answer:
+          "It is the art of combining photography, design, typography, and sequential layout to tell a brand story.",
+      },
+      {
+        question: "Do you conduct custom photo shoots?",
+        answer:
+          "Yes, we handle creative direction and photography shoots worldwide.",
+      },
+      {
+        question: "Can visual storytelling be adapted for websites?",
+        answer:
+          "Yes, we design scroll-driven web narratives with interactive visual steps.",
+      },
+      {
+        question: "What deliverables do we get?",
+        answer:
+          "You get full high-res photo suites, vector illustrations, and layout files.",
+      },
     ],
   },
 
-
-
-  "merchandising": {
+  merchandising: {
     categoryTrack: ["Product Design", "Apparel", "Print Specs"],
     heroTitlePrefix: "Extend your brand into ",
     heroTitleItalic: "wearable product.",
     philosophyTitlePrefix: "Merchandise turns customers into ",
     philosophyTitleItalic: "brand ambassadors.",
-    philosophyCol1: "We design merchandise people actually want to wear and collect — from apparel and accessories to limited-edition drops.",
-    philosophyCol2: "We combine print artwork with tech pack specs, garment selection, and supplier guidance for physical products.",
+    philosophyCol1:
+      "We design merchandise people actually want to wear and collect - from apparel and accessories to limited-edition drops.",
+    philosophyCol2:
+      "We combine print artwork with tech pack specs, garment selection, and supplier guidance for physical products.",
     deliverables: [
-      { num: "01", icon: Target, title: "Merchandise Concepting", description: "Curating product lines aligned with your audience lifestyle." },
-      { num: "02", icon: Sparkles, title: "Graphic & Pattern Design", description: "Bespoke screen-print graphics, embroidery, and repeating patterns." },
-      { num: "03", icon: Compass, title: "Apparel Tech Packs", description: "Print placements, pantone colors, and garment tech specifications." },
-      { num: "04", icon: Volume2, title: "Hangtag & Label Design", description: "Woven neck labels, custom hangtags, and packaging bags." },
-      { num: "05", icon: Sliders, title: "Sourcing Guidance", description: "Recommending premium blank suppliers and screen-print partners." },
-      { num: "06", icon: BookOpen, title: "E-Commerce Photo Specs", description: "Mockup templates and product photo art direction." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Merchandise Concepting",
+        description:
+          "Curating product lines aligned with your audience lifestyle.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Graphic & Pattern Design",
+        description:
+          "Bespoke screen-print graphics, embroidery, and repeating patterns.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Apparel Tech Packs",
+        description:
+          "Print placements, pantone colors, and garment tech specifications.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Hangtag & Label Design",
+        description: "Woven neck labels, custom hangtags, and packaging bags.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Sourcing Guidance",
+        description:
+          "Recommending premium blank suppliers and screen-print partners.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "E-Commerce Photo Specs",
+        description: "Mockup templates and product photo art direction.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED MERCH",
       client: "Threadline Goods",
       tagline: "Apparel Capsule & Brand Kit",
-      description: "Designed a 6-piece organic cotton merchandise capsule with custom screen prints, woven tags, and packaging boxes.",
+      description:
+        "Designed a 6-piece organic cotton merchandise capsule with custom screen prints, woven tags, and packaging boxes.",
       deliverables: ["Tech Packs", "Graphics", "Woven Tags", "Lookbook Art"],
       palette: ["#1C1B19", "#FAF7F2", "#E54C2A", "#D9B08C"],
       headlineFont: "Metropolis",
@@ -839,15 +1495,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-threadline.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Launching a merchandise capsule.", description: "Wanting custom product designs that feel premium rather than cheap promo swag." },
-      { icon: TrendingUp, title: "Monetizing brand community.", description: "Your audience is asking for wearable gear and lifestyle products." },
-      { icon: RefreshCw, title: "Creating event apparel.", description: "Needing staff uniforms, team gear, or conference merchandise." },
+      {
+        icon: Sparkles,
+        title: "Launching a merchandise capsule.",
+        description:
+          "Wanting custom product designs that feel premium rather than cheap promo swag.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Monetizing brand community.",
+        description:
+          "Your audience is asking for wearable gear and lifestyle products.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Creating event apparel.",
+        description:
+          "Needing staff uniforms, team gear, or conference merchandise.",
+      },
     ],
     faqs: [
-      { question: "Do you print and produce the physical items?", answer: "We design all products and tech packs, and connect you with trusted production partners." },
-      { question: "What are tech packs?", answer: "Tech packs are technical blueprints detailing measurements, print positions, Pantone colors, and embroidery specs for factories." },
-      { question: "Can you design custom packaging for merch?", answer: "Yes, we design polybags, boxes, stickers, unboxing cards, and tissue paper." },
-      { question: "What products can you design for?", answer: "T-shirts, hoodies, caps, totes, drinkware, notebooks, pins, and custom goods." },
+      {
+        question: "Do you print and produce the physical items?",
+        answer:
+          "We design all products and tech packs, and connect you with trusted production partners.",
+      },
+      {
+        question: "What are tech packs?",
+        answer:
+          "Tech packs are technical blueprints detailing measurements, print positions, Pantone colors, and embroidery specs for factories.",
+      },
+      {
+        question: "Can you design custom packaging for merch?",
+        answer:
+          "Yes, we design polybags, boxes, stickers, unboxing cards, and tissue paper.",
+      },
+      {
+        question: "What products can you design for?",
+        answer:
+          "T-shirts, hoodies, caps, totes, drinkware, notebooks, pins, and custom goods.",
+      },
     ],
   },
 
@@ -857,22 +1544,66 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "physical space.",
     philosophyTitlePrefix: "Architecture is brand ",
     philosophyTitleItalic: "in 3D environment.",
-    philosophyCol1: "We design retail interiors, exhibition stands, and pop-up spaces that immerse visitors in your brand world.",
-    philosophyCol2: "We balance spatial flow, material textures, lighting, and signage to create memorable physical experiences.",
+    philosophyCol1:
+      "We design retail interiors, exhibition stands, and pop-up spaces that immerse visitors in your brand world.",
+    philosophyCol2:
+      "We balance spatial flow, material textures, lighting, and signage to create memorable physical experiences.",
     deliverables: [
-      { num: "01", icon: Target, title: "Spatial Concept & Moodboard", description: "Architectural mood, material palettes, and interior layout direction." },
-      { num: "02", icon: Sparkles, title: "Layout & Flow Planning", description: "Optimizing customer walk-through paths and display zoning." },
-      { num: "03", icon: Compass, title: "3D Visualization & Renderings", description: "Photorealistic 3D interior renders of your spatial concept." },
-      { num: "04", icon: Volume2, title: "Material Specifications", description: "Curating wood, metal, stone, lighting, and fabric finishes." },
-      { num: "05", icon: Sliders, title: "Signage & Wayfinding Design", description: "Integrated 3D logo signs, neon elements, and directional signage." },
-      { num: "06", icon: BookOpen, title: "Build Handoff Drawings", description: "Dimensional design drawings for architects and contractors." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Spatial Concept & Moodboard",
+        description:
+          "Architectural mood, material palettes, and interior layout direction.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Layout & Flow Planning",
+        description:
+          "Optimizing customer walk-through paths and display zoning.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "3D Visualization & Renderings",
+        description:
+          "Photorealistic 3D interior renders of your spatial concept.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Material Specifications",
+        description:
+          "Curating wood, metal, stone, lighting, and fabric finishes.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Signage & Wayfinding Design",
+        description:
+          "Integrated 3D logo signs, neon elements, and directional signage.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Build Handoff Drawings",
+        description:
+          "Dimensional design drawings for architects and contractors.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED SPATIAL DESIGN",
       client: "Aurelia Hotels",
       tagline: "Lobby & Spatial Experience",
-      description: "Designed spatial interior concepts, lighting, and wayfinding signage for Aurelia's flagship boutique lobby.",
-      deliverables: ["3D Renders", "Material Palette", "Wayfinding", "Lighting Concept"],
+      description:
+        "Designed spatial interior concepts, lighting, and wayfinding signage for Aurelia's flagship boutique lobby.",
+      deliverables: [
+        "3D Renders",
+        "Material Palette",
+        "Wayfinding",
+        "Lighting Concept",
+      ],
       palette: ["#161616", "#2D2825", "#EAC240", "#EDEAEA"],
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
@@ -880,15 +1611,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-soluna.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Opening a retail store or pop-up.", description: "Requiring spatial design that reflects your brand identity." },
-      { icon: TrendingUp, title: "Designing an exhibition booth.", description: "Needing a standout trade show presence to attract visitors." },
-      { icon: RefreshCw, title: "Upgrading corporate office interiors.", description: "Wanting physical workspace design that inspires your team." },
+      {
+        icon: Sparkles,
+        title: "Opening a retail store or pop-up.",
+        description:
+          "Requiring spatial design that reflects your brand identity.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Designing an exhibition booth.",
+        description:
+          "Needing a standout trade show presence to attract visitors.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Upgrading corporate office interiors.",
+        description:
+          "Wanting physical workspace design that inspires your team.",
+      },
     ],
     faqs: [
-      { question: "Do you supply photorealistic 3D renders?", answer: "Yes, we provide 4K photorealistic 3D renders showing lighting, textures, and spatial layout." },
-      { question: "Do you coordinate with build contractors?", answer: "Yes, we provide design specs and liaise with contractors during construction." },
-      { question: "Can you design temporary pop-up shops?", answer: "Yes, we specialize in modular pop-up structures designed for quick assembly." },
-      { question: "What materials do you specify?", answer: "We select durable, sustainable materials tailored to your budget and foot traffic." },
+      {
+        question: "Do you supply photorealistic 3D renders?",
+        answer:
+          "Yes, we provide 4K photorealistic 3D renders showing lighting, textures, and spatial layout.",
+      },
+      {
+        question: "Do you coordinate with build contractors?",
+        answer:
+          "Yes, we provide design specs and liaise with contractors during construction.",
+      },
+      {
+        question: "Can you design temporary pop-up shops?",
+        answer:
+          "Yes, we specialize in modular pop-up structures designed for quick assembly.",
+      },
+      {
+        question: "What materials do you specify?",
+        answer:
+          "We select durable, sustainable materials tailored to your budget and foot traffic.",
+      },
     ],
   },
 
@@ -898,22 +1660,66 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
     heroTitleItalic: "original digital art.",
     philosophyTitlePrefix: "Digital art gives brand ",
     philosophyTitleItalic: "a creative soul.",
-    philosophyCol1: "Our digital art practice produces bespoke illustrations, key visuals, and digital paintings that give your brand a distinct edge.",
-    philosophyCol2: "We combine traditional artistic craft with modern digital tools to build artwork for campaigns, products, and web platforms.",
+    philosophyCol1:
+      "Our digital art practice produces bespoke illustrations, key visuals, and digital paintings that give your brand a distinct edge.",
+    philosophyCol2:
+      "We combine traditional artistic craft with modern digital tools to build artwork for campaigns, products, and web platforms.",
     deliverables: [
-      { num: "01", icon: Target, title: "Custom Illustration", description: "Bespoke digital vector or raster artworks crafted for your brand." },
-      { num: "02", icon: Sparkles, title: "Character & Mascot Design", description: "Unique brand characters, mascots, and avatar illustrations." },
-      { num: "03", icon: Compass, title: "Abstract Key Visuals", description: "Expressive digital artwork for campaign backgrounds and headers." },
-      { num: "04", icon: Volume2, title: "Mixed-Media Compositions", description: "Blending photo collage, digital paint, and 3D graphic elements." },
-      { num: "05", icon: Sliders, title: "Print & Display Artwork", description: "Ultra-high resolution art files suitable for art prints and displays." },
-      { num: "06", icon: BookOpen, title: "Animation-Ready Layering", description: "Organized layered source files optimized for motion graphics." },
+      {
+        num: "01",
+        icon: Target,
+        title: "Custom Illustration",
+        description:
+          "Bespoke digital vector or raster artworks crafted for your brand.",
+      },
+      {
+        num: "02",
+        icon: Sparkles,
+        title: "Character & Mascot Design",
+        description:
+          "Unique brand characters, mascots, and avatar illustrations.",
+      },
+      {
+        num: "03",
+        icon: Compass,
+        title: "Abstract Key Visuals",
+        description:
+          "Expressive digital artwork for campaign backgrounds and headers.",
+      },
+      {
+        num: "04",
+        icon: Volume2,
+        title: "Mixed-Media Compositions",
+        description:
+          "Blending photo collage, digital paint, and 3D graphic elements.",
+      },
+      {
+        num: "05",
+        icon: Sliders,
+        title: "Print & Display Artwork",
+        description:
+          "Ultra-high resolution art files suitable for art prints and displays.",
+      },
+      {
+        num: "06",
+        icon: BookOpen,
+        title: "Animation-Ready Layering",
+        description:
+          "Organized layered source files optimized for motion graphics.",
+      },
     ],
     featuredCaseStudy: {
       badge: "FEATURED DIGITAL ART",
       client: "Cosmic Explorations",
       tagline: "Key Visuals & Art Suite",
-      description: "Created a series of 8 surreal digital artworks for Cosmic Explorations' digital launch campaign.",
-      deliverables: ["8 Key Visuals", "Character Art", "High-Res Prints", "Motion Layers"],
+      description:
+        "Created a series of 8 surreal digital artworks for Cosmic Explorations' digital launch campaign.",
+      deliverables: [
+        "8 Key Visuals",
+        "Character Art",
+        "High-Res Prints",
+        "Motion Layers",
+      ],
       palette: ["#0B0C10", "#1F2833", "#E54C2A", "#66FCF1"],
       headlineFont: "Editorial New",
       bodyFont: "Metropolis",
@@ -921,15 +1727,46 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       imageSrc: "/project-cosmic.jpg",
     },
     qualificationPoints: [
-      { icon: Sparkles, title: "Need custom visual artwork.", description: "Tired of generic stock imagery; wanting unique artistic assets." },
-      { icon: TrendingUp, title: "Launching a creative campaign.", description: "Requiring key visual artwork for billboards, web, and ads." },
-      { icon: RefreshCw, title: "Developing a brand mascot.", description: "Wanting an illustrated character to represent your brand." },
+      {
+        icon: Sparkles,
+        title: "Need custom visual artwork.",
+        description:
+          "Tired of generic stock imagery; wanting unique artistic assets.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Launching a creative campaign.",
+        description:
+          "Requiring key visual artwork for billboards, web, and ads.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Developing a brand mascot.",
+        description:
+          "Wanting an illustrated character to represent your brand.",
+      },
     ],
     faqs: [
-      { question: "What formats do you deliver digital artwork in?", answer: "We deliver vector EPS/SVG files and high-res 300+ DPI PNG/PSD files." },
-      { question: "Can the artwork be animated later?", answer: "Yes, we deliver organized, layered source files ready for motion graphics." },
-      { question: "Do I own full commercial rights to the art?", answer: "Yes, full commercial ownership and licensing rights are transferred to you." },
-      { question: "How long does a digital art project take?", answer: "Turnarounds range from 1 to 4 weeks depending on illustration detail." },
+      {
+        question: "What formats do you deliver digital artwork in?",
+        answer:
+          "We deliver vector EPS/SVG files and high-res 300+ DPI PNG/PSD files.",
+      },
+      {
+        question: "Can the artwork be animated later?",
+        answer:
+          "Yes, we deliver organized, layered source files ready for motion graphics.",
+      },
+      {
+        question: "Do I own full commercial rights to the art?",
+        answer:
+          "Yes, full commercial ownership and licensing rights are transferred to you.",
+      },
+      {
+        question: "How long does a digital art project take?",
+        answer:
+          "Turnarounds range from 1 to 4 weeks depending on illustration detail.",
+      },
     ],
   },
 };
@@ -937,39 +1774,57 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
 export function getServiceDetailConfig(
   slug: string,
   capTitle: string,
-  capDescription: string
+  capDescription: string,
 ): ServiceDetailConfig {
   const cap = capabilities.find((c) => c.slug === slug);
   const capIndex = capabilities.findIndex((c) => c.slug === slug);
-  const formattedNumber = capIndex >= 0 ? String(capIndex + 1).padStart(2, "0") : "01";
+  const formattedNumber =
+    capIndex >= 0 ? String(capIndex + 1).padStart(2, "0") : "01";
 
   const mappedSlug =
     slug === "marketing"
       ? "content-marketing"
       : slug === "designing"
-      ? "brand-identity"
-      : slug === "and-beyond"
-      ? "web-design"
-      : slug;
+        ? "brand-identity"
+        : slug === "and-beyond"
+          ? "web-design"
+          : slug;
 
-  const customConfig = serviceConfigsMap[slug] || serviceConfigsMap[mappedSlug] || {};
+  const customConfig =
+    serviceConfigsMap[slug] || serviceConfigsMap[mappedSlug] || {};
 
-  const defaultDeliverablesList: DeliverableItem[] = (cap?.deliverables || []).map((del, idx) => ({
+  const defaultDeliverablesList: DeliverableItem[] = (
+    cap?.deliverables || []
+  ).map((del, idx) => ({
     num: String(idx + 1).padStart(2, "0"),
-    icon: [Target, Sparkles, Compass, Volume2, Sliders, BookOpen, TrendingUp, RefreshCw][idx % 8],
+    icon: [
+      Target,
+      Sparkles,
+      Compass,
+      Volume2,
+      Sliders,
+      BookOpen,
+      TrendingUp,
+      RefreshCw,
+    ][idx % 8],
     title: del,
     description: `Professional ${del.toLowerCase()} crafted to elevate your brand's presence and impact.`,
   }));
 
   return {
     serviceNumber: formattedNumber,
-    categoryTrack: customConfig.categoryTrack || ["Strategy", "Creative", "Execution"],
+    categoryTrack: customConfig.categoryTrack || [
+      "Strategy",
+      "Creative",
+      "Execution",
+    ],
     eyebrow: `SERVICE ${formattedNumber} / ${capTitle.toUpperCase()}`,
     heroTitlePrefix: customConfig.heroTitlePrefix || `${capTitle} `,
     heroTitleItalic: customConfig.heroTitleItalic || "crafted.",
     heroDescription: cap?.longDescription || capDescription,
     philosophyNumber: formattedNumber,
-    philosophyTitlePrefix: customConfig.philosophyTitlePrefix || `${capTitle} is `,
+    philosophyTitlePrefix:
+      customConfig.philosophyTitlePrefix || `${capTitle} is `,
     philosophyTitleItalic: customConfig.philosophyTitleItalic || "purposeful.",
     philosophyCol1:
       customConfig.philosophyCol1 ||
@@ -984,10 +1839,15 @@ export function getServiceDetailConfig(
     selectedWorkProjects: customConfig.selectedWorkProjects,
     ctaTitle: customConfig.ctaTitle,
     ctaDescription: customConfig.ctaDescription,
-    deliverables: customConfig.deliverables || (defaultDeliverablesList.length > 0 ? defaultDeliverablesList : brandingDeliverables),
+    deliverables:
+      customConfig.deliverables ||
+      (defaultDeliverablesList.length > 0
+        ? defaultDeliverablesList
+        : brandingDeliverables),
     featuredCaseStudy: customConfig.featuredCaseStudy || defaultCaseStudy,
     process: customConfig.process || brandingProcess,
-    qualificationPoints: customConfig.qualificationPoints || brandingQualifications,
+    qualificationPoints:
+      customConfig.qualificationPoints || brandingQualifications,
     faqs: customConfig.faqs || defaultFaqs,
   };
 }

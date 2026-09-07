@@ -49,7 +49,10 @@ export const serviceGroups: ServiceGroup[] = [
           "Campaign concepts and execution",
           "Analytics and performance reporting",
         ],
-        relatedProjectSlugs: ["bio-oil-skincare-campaign", "area-6-social-media"],
+        relatedProjectSlugs: [
+          "bio-oil-skincare-campaign",
+          "area-6-social-media",
+        ],
       },
     ],
   },
@@ -103,7 +106,7 @@ export const serviceGroups: ServiceGroup[] = [
         description:
           "End-to-end brand identity systems spanning physical product packaging and enduring logo design marks.",
         longDescription:
-          "Great brands are not designed — they are uncovered. We combine strategic positioning, tactile packaging design, and memorable logo mark systems that build enduring brand authority and shelf presence.",
+          "Great brands are not designed - they are uncovered. We combine strategic positioning, tactile packaging design, and memorable logo mark systems that build enduring brand authority and shelf presence.",
         deliverables: [
           "Brand strategy and positioning",
           "Structural and graphic packaging design",
@@ -126,7 +129,8 @@ export const serviceGroups: ServiceGroup[] = [
     id: "and-beyond",
     number: "03",
     title: "Beyond",
-    tagline: "Digital Architecture, Merchandising, Visual Storytelling, Web Design",
+    tagline:
+      "Digital Architecture, Merchandising, Visual Storytelling, Web Design",
     description:
       "Multidisciplinary creative expressions extending brand universes across spatial, physical, editorial, and digital environments.",
     iconName: "web-design",
@@ -221,9 +225,15 @@ const legacyAliases: Capability[] = [
     slug: "content-marketing",
     title: "Marketing",
     iconName: "SOCIAL MEDIA",
-    description: "Strategic content that sparks conversations and drives social media growth.",
-    longDescription: "We craft platform-native content strategies across Instagram, TikTok, LinkedIn, and beyond.",
-    deliverables: ["Social media strategy", "Content creation", "Community management"],
+    description:
+      "Strategic content that sparks conversations and drives social media growth.",
+    longDescription:
+      "We craft platform-native content strategies across Instagram, TikTok, LinkedIn, and beyond.",
+    deliverables: [
+      "Social media strategy",
+      "Content creation",
+      "Community management",
+    ],
     relatedProjectSlugs: ["bio-oil-skincare-campaign"],
   },
   {
@@ -231,9 +241,15 @@ const legacyAliases: Capability[] = [
     slug: "package-design",
     title: "Designing",
     iconName: "Packaging",
-    description: "Packaging that protects, persuades, and elevates your product on every shelf.",
-    longDescription: "Structural and graphic packaging design that communicates quality at three distances.",
-    deliverables: ["Structural packaging", "Label design", "Unboxing experience"],
+    description:
+      "Packaging that protects, persuades, and elevates your product on every shelf.",
+    longDescription:
+      "Structural and graphic packaging design that communicates quality at three distances.",
+    deliverables: [
+      "Structural packaging",
+      "Label design",
+      "Unboxing experience",
+    ],
     relatedProjectSlugs: ["threadline-textiles-packaging"],
   },
   {
@@ -241,8 +257,10 @@ const legacyAliases: Capability[] = [
     slug: "brand-identity",
     title: "Designing",
     iconName: "Packaging",
-    description: "End-to-end brand identity systems spanning packaging and logo marks.",
-    longDescription: "Comprehensive brand identity design that creates consistency across every touchpoint.",
+    description:
+      "End-to-end brand identity systems spanning packaging and logo marks.",
+    longDescription:
+      "Comprehensive brand identity design that creates consistency across every touchpoint.",
     deliverables: ["Brand strategy", "Logo design", "Packaging design"],
     relatedProjectSlugs: ["threadline-textiles-packaging"],
   },
@@ -252,7 +270,8 @@ const legacyAliases: Capability[] = [
     title: "Designing",
     iconName: "Logo Design",
     description: "Purpose-driven logo and brand mark systems.",
-    longDescription: "Visual systems that are as functional as they are beautiful.",
+    longDescription:
+      "Visual systems that are as functional as they are beautiful.",
     deliverables: ["Logo system", "Typography", "Brand guidelines"],
     relatedProjectSlugs: ["corepoint-fitness-identity"],
   },
@@ -262,7 +281,8 @@ const legacyAliases: Capability[] = [
     title: "Beyond",
     iconName: "ARCHITECTURE DESIGNS",
     description: "Spatial design concepts and 3D visualization.",
-    longDescription: "Bringing brand experiences into physical and digital environments.",
+    longDescription:
+      "Bringing brand experiences into physical and digital environments.",
     deliverables: ["Spatial concepts", "3D rendering", "Wayfinding"],
     relatedProjectSlugs: [],
   },
@@ -291,8 +311,10 @@ const legacyAliases: Capability[] = [
     slug: "web-design",
     title: "Beyond",
     iconName: "WEB DESIGN",
-    description: "Websites and digital experiences crafted for clarity and conversion.",
-    longDescription: "Next.js and React web development engineered for performance.",
+    description:
+      "Websites and digital experiences crafted for clarity and conversion.",
+    longDescription:
+      "Next.js and React web development engineered for performance.",
     deliverables: ["Web design", "Next.js development", "Design systems"],
     relatedProjectSlugs: [],
   },
@@ -307,14 +329,16 @@ export const processSteps: ProcessStep[] = [
   {
     number: "01",
     title: "Discover",
-    description: "We dive deep to understand your goals, audience, and opportunities.",
+    description:
+      "We dive deep to understand your goals, audience, and opportunities.",
     iconName: "Search",
     iconPath: "/icons/discover-icon.png",
   },
   {
     number: "02",
     title: "Define",
-    description: "We shape the strategy and creative direction with clarity and intent.",
+    description:
+      "We shape the strategy and creative direction with clarity and intent.",
     iconName: "Compass",
     iconPath: "/icons/define.png",
   },
@@ -328,7 +352,8 @@ export const processSteps: ProcessStep[] = [
   {
     number: "04",
     title: "Deliver",
-    description: "We launch with precision and support your growth every step ahead.",
+    description:
+      "We launch with precision and support your growth every step ahead.",
     iconName: "Rocket",
     iconPath: "/icons/deliver.png",
   },

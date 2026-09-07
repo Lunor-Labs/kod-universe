@@ -1,4 +1,4 @@
-# KOD Universe — Premium Portfolio Website
+# KOD Universe - Premium Portfolio Website
 
 A production-quality portfolio website for **KOD Universe** built with Next.js 14 App Router, TypeScript, Tailwind CSS, Lucide React, and Framer Motion.
 
@@ -18,14 +18,14 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home — hero, projects, services, process, CTAs |
-| `/work` | Portfolio gallery with category filters |
-| `/work/[slug]` | Dynamic project detail pages (static) |
-| `/capabilities` | Services + process + deliverables |
-| `/our-universe` | Editorial about/story page |
-| `/connect` | Contact page with enquiry form |
+| Route           | Description                                    |
+| --------------- | ---------------------------------------------- |
+| `/`             | Home - hero, projects, services, process, CTAs |
+| `/work`         | Portfolio gallery with category filters        |
+| `/work/[slug]`  | Dynamic project detail pages (static)          |
+| `/capabilities` | Services + process + deliverables              |
+| `/our-universe` | Editorial about/story page                     |
+| `/connect`      | Contact page with enquiry form                 |
 
 ---
 

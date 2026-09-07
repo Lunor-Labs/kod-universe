@@ -37,7 +37,7 @@ export function OurUniverseHero() {
             </h1>
 
             <p className="text-lead text-kod-earth mb-8 max-w-lg font-normal">
-              From the vast universe, ideas spark—seeds of potential. We receive
+              From the vast universe, ideas spark-seeds of potential. We receive
               them with purpose and shape them into modern brand experiences
               that connect, inspire, and leave a lasting mark.
             </p>
@@ -72,7 +72,10 @@ export function OurUniverseHero() {
         </div>
       </div>
 
-      <div className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-kod-canvas via-kod-canvas/60 to-transparent pointer-events-none z-20" aria-hidden="true" />
+      <div
+        className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-kod-canvas via-kod-canvas/60 to-transparent pointer-events-none z-20"
+        aria-hidden="true"
+      />
     </section>
   );
 }

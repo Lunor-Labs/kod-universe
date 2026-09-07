@@ -3,10 +3,7 @@ import { ArrowRight, HandFist, University } from "lucide-react";
 
 export function CorePillars() {
   return (
-    <section
-      className="bg-kod-canvas py-12 md:py-16"
-      aria-label="Core Pillars"
-    >
+    <section className="bg-kod-canvas py-12 md:py-16" aria-label="Core Pillars">
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-kod-border">
           <div className="lg:px-8 first:pl-0 flex flex-col justify-between">
@@ -42,12 +39,12 @@ export function CorePillars() {
           <div className="lg:px-8 flex flex-col justify-between">
             <div>
               <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
-                <University className="w-10 h-10"/>
+                <University className="w-10 h-10" />
               </div>
               <h3 className="pillar-heading mb-3">Our Philosophy</h3>
               <p className="text-kod-earth/85 text-base leading-relaxed mb-6">
                 We believe ideas are everywhere. Our role is to listen deeply,
-                think boldly, and create with intention—uniting strategy,
+                think boldly, and create with intention-uniting strategy,
                 design, and story into powerful experiences.
               </p>
             </div>
@@ -63,7 +60,7 @@ export function CorePillars() {
           <div className="lg:px-8 flex flex-col justify-between">
             <div>
               <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
-                <HandFist className="w-10 h-10"/>
+                <HandFist className="w-10 h-10" />
               </div>
               <h3 className="pillar-heading mb-3">Our Values</h3>
               <ul className="text-kod-earth/85 text-base font-medium leading-relaxed space-y-2 mb-6">

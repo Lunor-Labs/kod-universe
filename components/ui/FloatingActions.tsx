@@ -1,15 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUp, MessageCircle } from "lucide-react";
+import Link from "next/link";
+import { ArrowUp, Phone, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { AiChatWidget } from "@/components/chat/AiChatWidget";
-
-const WHATSAPP_NUMBER = "94772000504";
-const WHATSAPP_PREFILL_TEXT = encodeURIComponent(
-  "Hello KOD Universe, I would like to inquire about a project.",
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_PREFILL_TEXT}`;
 
 export function FloatingActions() {
   const [showTopButton, setShowTopButton] = useState(false);
@@ -32,10 +27,12 @@ export function FloatingActions() {
     }
   };
 
+  const phoneRaw = siteConfig.contact.phones[0]?.number.replace(/\s+/g, "") || "0772000504";
+
   return (
     <>
       <div
-        className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 flex flex-col items-center gap-3 select-none pointer-events-auto"
+        className="fixed bottom-20 right-4 sm:bottom-7 sm:right-7 z-50 flex flex-col items-center gap-3 select-none pointer-events-auto"
         aria-label="Floating quick actions"
       >
         <button
@@ -56,6 +53,23 @@ export function FloatingActions() {
         </button>
 
         <AiChatWidget />
+      </div>
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 p-3 bg-kod-canvas/95 backdrop-blur-xl border-t border-kod-border/40 shadow-2xl flex md:hidden items-center gap-3">
+        <a
+          href={`tel:${phoneRaw}`}
+          className="flex-1 h-12 rounded-xl bg-kod-earth hover:bg-black text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
+        >
+          <Phone size={15} className="text-kod-orange" />
+          <span>Call Now</span>
+        </a>
+        <Link
+          href="/connect"
+          className="flex-1 h-12 rounded-xl bg-kod-orange hover:bg-kod-earth text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
+        >
+          <span>Connect</span>
+          <ArrowRight size={15} />
+        </Link>
       </div>
     </>
   );

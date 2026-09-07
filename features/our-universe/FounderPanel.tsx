@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from "@/components/ui/SocialIcons";
 
 export function FounderPanel() {
   return (
@@ -23,7 +27,10 @@ export function FounderPanel() {
             {/* Photo column */}
             <div className="md:col-span-5 relative">
               {/* Decorative border offset */}
-              <div className="absolute -top-3 -left-3 w-full h-full rounded-2xl border border-kod-orange/30 pointer-events-none" aria-hidden="true" />
+              <div
+                className="absolute -top-3 -left-3 w-full h-full rounded-2xl border border-kod-orange/30 pointer-events-none"
+                aria-hidden="true"
+              />
 
               <div className="relative overflow-hidden rounded-2xl border border-kod-border bg-kod-mist aspect-[4/5] img-zoom">
                 <Image
@@ -42,8 +49,12 @@ export function FounderPanel() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 border border-kod-border/50 shadow-sm flex items-center justify-between">
                   <div>
-                    <p className="font-metropolis font-bold text-kod-earth text-base tracking-wide">Ishara Jakod</p>
-                    <p className="text-kod-earth/80 text-sm font-semibold tracking-[0.08em] uppercase">Founder & Creative Director</p>
+                    <p className="font-metropolis font-bold text-kod-earth text-base tracking-wide">
+                      Ishara Jakod
+                    </p>
+                    <p className="text-kod-earth/80 text-sm font-semibold tracking-[0.08em] uppercase">
+                      Founder & Creative Director
+                    </p>
                   </div>
                   {/* Social icons */}
                   <div className="flex gap-2">
@@ -82,8 +93,8 @@ export function FounderPanel() {
             {/* Content column */}
             <div className="md:col-span-7 flex flex-col gap-7 pt-2">
               <blockquote className="font-editorial italic text-kod-earth text-2xl sm:text-3xl leading-[1.3]">
-                &ldquo;Our role is to observe the moment, understand the culture,
-                then create work that belongs to that moment.&rdquo;
+                &ldquo;Our role is to observe the moment, understand the
+                culture, then create work that belongs to that moment.&rdquo;
               </blockquote>
 
               <div className="h-px w-12 bg-kod-orange" aria-hidden="true" />
@@ -91,7 +102,7 @@ export function FounderPanel() {
               <div className="text-kod-earth/85 text-base leading-relaxed space-y-4">
                 <p>
                   KOD Universe was founded on the belief that ideas are not
-                  invented—they are discovered. Like a rare creative seed
+                  invented-they are discovered. Like a rare creative seed
                   traveling through the universe, inspiration arrives and takes
                   root in the present.
                 </p>
@@ -111,8 +122,12 @@ export function FounderPanel() {
                   { n: "3", label: "Continents reached" },
                 ].map((s) => (
                   <div key={s.label}>
-                    <p className="font-metropolis font-bold text-2xl text-kod-earth">{s.n}</p>
-                    <p className="text-kod-earth/80 text-sm font-semibold uppercase tracking-[0.08em]">{s.label}</p>
+                    <p className="font-metropolis font-bold text-2xl text-kod-earth">
+                      {s.n}
+                    </p>
+                    <p className="text-kod-earth/80 text-sm font-semibold uppercase tracking-[0.08em]">
+                      {s.label}
+                    </p>
                   </div>
                 ))}
               </div>

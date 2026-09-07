@@ -35,7 +35,7 @@ export function WhyUsSection() {
                 </span>
                 <p className="font-editorial italic text-xl text-white/95 leading-relaxed font-normal">
                   Marrow Studio needed an identity that reflected their quiet
-                  confidence, creative rigor and elevated craft—without feeling
+                  confidence, creative rigor and elevated craft-without feeling
                   generic.
                 </p>
               </div>
@@ -63,7 +63,9 @@ export function WhyUsSection() {
               <div>
                 <h3 className="heading-section font-editorial font-normal text-white mb-6">
                   From quiet idea <br />
-                  <em className="italic text-kod-dust">to confident identity.</em>
+                  <em className="italic text-kod-dust">
+                    to confident identity.
+                  </em>
                 </h3>
 
                 <div className="space-y-2 mb-8">
@@ -72,7 +74,7 @@ export function WhyUsSection() {
                   </span>
                   <p className="text-body text-white/85">
                     We distilled their essence into a refined identity
-                    system—minimal, tactile and enduring.
+                    system-minimal, tactile and enduring.
                   </p>
                 </div>
 
@@ -98,10 +100,7 @@ export function WhyUsSection() {
                 >
                   <span>View case study</span>
                   <span className="btn-icon-circle !border-white/30 group-hover:!border-kod-orange">
-                    <ArrowRight
-                      size={13}
-                      aria-hidden="true"
-                    />
+                    <ArrowRight size={13} aria-hidden="true" />
                   </span>
                 </Link>
               </div>

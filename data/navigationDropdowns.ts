@@ -66,7 +66,7 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       title: "Ancient Ideas. Modern Impact.",
       description: "Rooted in timeless creative principles, engineered for modern brand dominance.",
       href: "/capabilities",
-      image: "/projects/social-media/area-6/location-mention-post-2.png",
+      image: "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.png",
     },
   },
   "OUR STORY": {

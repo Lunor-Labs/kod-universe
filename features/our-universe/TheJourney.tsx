@@ -4,19 +4,19 @@ const steps = [
   {
     n: 1,
     title: "Curiosity",
-    body: "We listen to the universe—observing signals, shifts, and stories waiting to be discovered.",
+    body: "We listen to the universe-observing signals, shifts, and stories waiting to be discovered.",
     icon: "/icons/journey/curiosity.png",
   },
   {
     n: 2,
     title: "Purpose",
-    body: "We find meaning in the spark—aligning it with truth, intention, and human need.",
+    body: "We find meaning in the spark-aligning it with truth, intention, and human need.",
     icon: "/icons/journey/purpose.png",
   },
   {
     n: 3,
     title: "Imagination",
-    body: "We shape the idea into form—through strategy, storytelling, and inspired design.",
+    body: "We shape the idea into form-through strategy, storytelling, and inspired design.",
     icon: "/icons/journey/imagination.png",
   },
   {
@@ -34,9 +34,13 @@ export function TheJourney() {
         <div className="rounded-xl bg-kod-mist/70 p-8 sm:p-12 shadow-sm">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-kod-earth">
-              <span aria-hidden="true" className="text-kod-orange">✦</span>
+              <span aria-hidden="true" className="text-kod-orange">
+                ✦
+              </span>
               <span>The Journey: From Spark to Impact</span>
-              <span aria-hidden="true" className="text-kod-orange">✦</span>
+              <span aria-hidden="true" className="text-kod-orange">
+                ✦
+              </span>
             </div>
           </div>
 

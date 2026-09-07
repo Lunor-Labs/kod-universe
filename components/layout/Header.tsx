@@ -110,7 +110,7 @@ export function Header() {
             <Link
               href="/"
               scroll={true}
-              aria-label="KOD Universe — Home"
+              aria-label="KOD Universe - Home"
               onClick={handleLogoClick}
               className="flex-shrink-0 focus-visible:outline-solar-gold cursor-pointer"
             >
