@@ -230,7 +230,7 @@ export function AiChatWidget() {
           data-lenis-prevent-touch="true"
           onWheel={(e) => e.stopPropagation()}
           onTouchMove={(e) => e.stopPropagation()}
-          className="fixed bottom-20 right-4 sm:bottom-24 sm:right-7 z-50 w-[94vw] sm:w-[440px] max-w-[400px] h-[600px] max-h-[85vh] rounded-xl bg-kod-black shadow-2xl flex flex-col overflow-hidden text-white font-sans animate-fade-in"
+          className="fixed bottom-[84px] left-3 right-3 sm:left-auto sm:bottom-24 sm:right-7 z-[100] sm:w-[440px] sm:max-w-[400px] h-[calc(80dvh-100px)] sm:h-[600px] sm:max-h-[85vh] rounded-xl bg-kod-black shadow-2xl flex flex-col overflow-hidden text-white font-sans animate-fade-in"
         >
           <div className="px-4 py-3.5 bg-kod-earth border-b border-kod-border/20 flex items-center justify-between select-none">
             <div className="flex items-center gap-3">

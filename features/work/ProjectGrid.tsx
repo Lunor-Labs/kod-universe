@@ -50,7 +50,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
               <label htmlFor="sort-work">Sort by:</label>
               <select 
                 id="sort-work"
-                className="bg-transparent border-none outline-none cursor-pointer hover:text-signal-orange focus-visible:outline-solar-gold"
+                className="bg-transparent border-none outline-none cursor-pointer hover:text-signal-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
                 defaultValue="latest"
               >
                 <option value="latest">Latest</option>
@@ -138,3 +138,4 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
     </>
   );
 }
+

@@ -112,7 +112,7 @@ export function Header() {
               scroll={true}
               aria-label="KOD Universe - Home"
               onClick={handleLogoClick}
-              className="flex-shrink-0 focus-visible:outline-solar-gold cursor-pointer"
+              className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 cursor-pointer"
             >
               <KodLogo
                 className={`h-12 sm:h-32 w-auto transition-colors duration-300 ${
@@ -217,3 +217,4 @@ export function Header() {
     </>
   );
 }
+

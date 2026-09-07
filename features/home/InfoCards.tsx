@@ -97,7 +97,7 @@ export function InfoCards({
               href="/our-universe"
               className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
-                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
               <div className="relative z-10 w-[60%]">
                 <p className="eyebrow mb-4">OUR STORY</p>
@@ -186,7 +186,7 @@ export function InfoCards({
                   href={`/work/${currentProject.slug}`}
                   className="group relative bg-white rounded p-6 lg:p-8 
                              overflow-hidden hover:border-dust-rose transition-all duration-300 
-                             focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full select-none"
+                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full select-none"
                 >
                   <div className="relative z-10 w-[55%] sm:w-[50%]">
                     <div className="flex items-center justify-between gap-2 mb-4">
@@ -293,7 +293,7 @@ export function InfoCards({
               href="/connect"
               className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
-                         focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
               <div className="relative z-10 w-[60%]">
                 <p className="eyebrow mb-4">LET&apos;S CONNECT</p>
@@ -334,3 +334,4 @@ export function InfoCards({
     </section>
   );
 }
+

@@ -25,7 +25,7 @@ export function CategoryFilter({ categories, active, onChange }: CategoryFilterP
             aria-pressed={isActive}
             className={cn(
               "px-3 py-2 rounded-sm text-sm font-semibold uppercase",
-              "transition-all duration-200 focus-visible:outline-solar-gold",
+              "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50",
               isActive
                 ? "bg-earth text-canvas"
                 : "bg-transparent text-earth border border-border-warm hover:border-dust-rose hover:text-signal-orange"
@@ -38,3 +38,4 @@ export function CategoryFilter({ categories, active, onChange }: CategoryFilterP
     </div>
   );
 }
+

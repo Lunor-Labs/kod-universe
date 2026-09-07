@@ -25,7 +25,7 @@ export function ProjectCard({
       className={cn(
         "group block bg-white border border-border-warm/30 rounded overflow-hidden",
         "transition-colors duration-300",
-        "focus-visible:outline-solar-gold",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50",
         className,
       )}
       aria-label={`View project: ${project.title} by ${project.client}`}
@@ -78,3 +78,4 @@ export function ProjectCard({
     </Link>
   );
 }
+

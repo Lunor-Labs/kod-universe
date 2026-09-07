@@ -29,7 +29,7 @@ export function Button({
 }: ButtonProps) {
   const base = cn(
     "inline-flex items-center gap-2 font-metropolis font-medium tracking-wide",
-    "transition-all duration-200 focus-visible:outline-solar-gold",
+    "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50",
     "disabled:opacity-50 disabled:pointer-events-none",
     {
       "btn-primary": variant === "primary",
@@ -71,3 +71,4 @@ export function Button({
     </button>
   );
 }
+

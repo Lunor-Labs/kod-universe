@@ -87,7 +87,11 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           <nav aria-label="Mobile navigation" className="flex-1 flex flex-col justify-center relative z-10">
             <motion.ul variants={containerVariants} className="space-y-6" role="list">
               {siteConfig.nav.map((item) => (
-                <motion.li key={item.href} variants={itemVariants}>
+                <motion.li 
+                  key={item.href} 
+                  variants={itemVariants}
+                  className="transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+                >
                   <Link
                     href={item.href}
                     onClick={onClose}
@@ -99,7 +103,10 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               ))}
             </motion.ul>
 
-            <motion.div variants={itemVariants} className="mt-12">
+            <motion.div 
+              variants={itemVariants} 
+              className="mt-12 transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+            >
               <Link
                 href="/connect"
                 onClick={onClose}

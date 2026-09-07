@@ -127,7 +127,7 @@ export function HeroSection() {
         </div>
       </AnimatePresence>
 
-      <div className="container-site relative z-10 pt-28 md:pt-36 pb-20 w-full">
+      <div className="container-site relative z-10 pt-10 md:pt-36 pb-20 w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
@@ -166,7 +166,7 @@ export function HeroSection() {
                   transition: { duration: 0.2 },
                 },
               }}
-              className="text-sm font-semibold tracking-widest uppercase text-black mb-6"
+              className="text-sm font-semibold tracking-widest uppercase text-black mb-6 transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
             >
               {slide.eyebrow}
             </motion.p>
@@ -185,7 +185,7 @@ export function HeroSection() {
                   transition: { duration: 0.2 },
                 },
               }}
-              className="heading-hero text-earth mb-6 tracking-tight font-normal"
+              className="heading-hero text-earth mb-6 tracking-tight font-normal transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
             >
               {slide.title1} <br />
               {slide.titleHighlight}
@@ -208,7 +208,7 @@ export function HeroSection() {
                   transition: { duration: 0.2 },
                 },
               }}
-              className="text-lead text-earth mb-10 max-w-xl"
+              className="text-lead text-earth mb-10 max-w-xl transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
             >
               {slide.description}
             </motion.p>
@@ -227,11 +227,12 @@ export function HeroSection() {
                   transition: { duration: 0.2 },
                 },
               }}
+              className="transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
             >
               <div className="inline-block">
                 <Link
                   href={slide.linkHref}
-                  className="btn-dark focus-visible:outline-solar-gold"
+                  className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
                 >
                   <span>{slide.linkText}</span>
                   <span className="btn-badge">
@@ -378,3 +379,4 @@ export function HeroSection() {
     </section>
   );
 }
+
