@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Ancient ideas. Modern impact.",
   description:
     "KOD Universe is a creative studio that transforms ideas into modern brands, stories, and experiences that connect, inspire, and leave a lasting mark.",
-  url: "https://koduniverse.com",
+  url: "https://www.kod.lk",
   nav: [
     { label: "PORTFOLIO", href: "/work" },
     { label: "SERVICES", href: "/capabilities" },
@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
     { platform: "Facebook",  href: "https://www.facebook.com/kod.universe", iconName: "Facebook" },
   ],
   contact: {
-    email: "hello@koduniverse.com",
+    email: "hello@kod.lk",
     phones: [
       { region: "Sri Lanka Hub", number: "077 200 0504" }
     ],

@@ -4,14 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  AnimatePresence,
-  useReducedMotion,
-} from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
 const SLIDES = [
   {
     eyebrow: "Seeds of ideas. Forged on earth.",
@@ -77,11 +70,9 @@ const SLIDES = [
 
 export function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
-  const { scrollY } = useScroll();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
-  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -92,8 +83,7 @@ export function HeroSection() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  const textY = useTransform(scrollY, [0, 400], [0, -30]);
-  const disableParallax = isMobile || prefersReducedMotion;
+
 
   useEffect(() => {
     if (isHovered) return;
@@ -113,7 +103,7 @@ export function HeroSection() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <AnimatePresence initial={false} mode="sync">
+      <>
         <div className="absolute inset-0 z-0 w-full h-full">
           <video
             src={"/video/main-video.mp4"}
@@ -121,192 +111,205 @@ export function HeroSection() {
             loop
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             className="w-full h-full object-cover object-center"
             aria-hidden="true"
           />
         </div>
-      </AnimatePresence>
+      </>
 
       <div className="container-site relative z-10 pt-10 md:pt-36 pb-20 w-full">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`content-${currentSlide}`}
-            className="relative max-w-4xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
-            }}
+        {isMobile ? (
+          <div
+            key={`content-mobile-${currentSlide}`}
+            className="relative max-w-4xl animate-fade-in"
           >
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                delay: 0.05,
-                ease: "easeOut",
-              }}
-              className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased"
-            >
+            <p className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased">
               {slide.eyebrow}
-            </motion.p>
-
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.45,
-                delay: 0.1,
-                ease: "easeOut",
-              }}
-              className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased"
-            >
+            </p>
+            <h1 className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased">
               {slide.title1} <br />
               {slide.titleHighlight}
               <em className="font-editorial italic font-normal text-earth">
                 {slide.title2}
               </em>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.45,
-                delay: 0.15,
-                ease: "easeOut",
-              }}
-              className="text-lead text-earth mb-10 max-w-xl antialiased"
-            >
+            </h1>
+            <p className="text-lead text-earth mb-10 max-w-xl antialiased">
               {slide.description}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.4,
-                delay: 0.2,
-                ease: "easeOut",
-              }}
-              className="antialiased"
-            >
+            </p>
+            <div className="antialiased">
               <div className="inline-block">
                 <Link
                   href={slide.linkHref}
                   className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
                 >
                   <span>{slide.linkText}</span>
-
                   <span className="btn-badge">
                     <ArrowRight size={14} aria-hidden="true" />
                   </span>
                 </Link>
               </div>
+            </div>
+          </div>
+        ) : (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`content-desktop-${currentSlide}`}
+              className="relative max-w-4xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+            >
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.05, ease: "easeOut" }}
+                className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased"
+              >
+                {slide.eyebrow}
+              </motion.p>
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.45, delay: 0.1, ease: "easeOut" }}
+                className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased"
+              >
+                {slide.title1} <br />
+                {slide.titleHighlight}
+                <em className="font-editorial italic font-normal text-earth">
+                  {slide.title2}
+                </em>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.45, delay: 0.15, ease: "easeOut" }}
+                className="text-lead text-earth mb-10 max-w-xl antialiased"
+              >
+                {slide.description}
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                className="antialiased"
+              >
+                <div className="inline-block">
+                  <Link
+                    href={slide.linkHref}
+                    className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
+                  >
+                    <span>{slide.linkText}</span>
+                    <span className="btn-badge">
+                      <ArrowRight size={14} aria-hidden="true" />
+                    </span>
+                  </Link>
+                </div>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        )}
+        {!isMobile && (
+          <motion.div
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3"
+            initial="hidden"
+            animate="show"
+            aria-hidden="true"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.12, delayChildren: 1 },
+              },
+            }}
+          >
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: -15 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+            >
+              <svg
+                className="w-8 h-8 mb-1 text-white/80 animate-spin-slow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
+              </svg>
+            </motion.div>
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={`dot-top-${i}`}
+                className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
+                style={{ animationDelay: `${i * 0.4}s` }}
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+                }}
+              />
+            ))}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, rotate: -45 },
+                show: {
+                  opacity: 1,
+                  scale: 1,
+                  rotate: 0,
+                  transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+            >
+              <svg
+                className="w-6 h-6 my-1 text-white/90 animate-spin-slower"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
+              </svg>
+            </motion.div>
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={`dot-bot-${i}`}
+                className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
+                style={{ animationDelay: `${1.2 + i * 0.4}s` }}
+                variants={{
+                  hidden: { opacity: 0, scale: 0 },
+                  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+                }}
+              />
+            ))}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 15 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+            >
+              <svg
+                className="w-8 h-8 mt-1 text-white animate-breathe"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <circle cx="12" cy="12" r="9" />
+              </svg>
             </motion.div>
           </motion.div>
-        </AnimatePresence>
-        <motion.div
-          className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3"
-          initial="hidden"
-          animate="show"
-          aria-hidden="true"
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: { staggerChildren: 0.12, delayChildren: 1 },
-            },
-          }}
-        >
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: -15 },
-              show: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-              },
-            }}
-          >
-            <svg
-              className="w-8 h-8 mb-1 text-white/80 animate-spin-slow"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
-            </svg>
-          </motion.div>
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={`dot-top-${i}`}
-              className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
-              style={{ animationDelay: `${i * 0.4}s` }}
-              variants={{
-                hidden: { opacity: 0, scale: 0 },
-                show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-              }}
-            />
-          ))}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, rotate: -45 },
-              show: {
-                opacity: 1,
-                scale: 1,
-                rotate: 0,
-                transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
-              },
-            }}
-          >
-            <svg
-              className="w-6 h-6 my-1 text-white/90 animate-spin-slower"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-            >
-              <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
-            </svg>
-          </motion.div>
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={`dot-bot-${i}`}
-              className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
-              style={{ animationDelay: `${1.2 + i * 0.4}s` }}
-              variants={{
-                hidden: { opacity: 0, scale: 0 },
-                show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-              }}
-            />
-          ))}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 15 },
-              show: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-              },
-            }}
-          >
-            <svg
-              className="w-8 h-8 mt-1 text-white animate-breathe"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-            >
-              <circle cx="12" cy="12" r="9" />
-            </svg>
-          </motion.div>
-        </motion.div>
+        )}
       </div>
       <div className="absolute inset-0 pointer-events-none z-30 pt-38 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
@@ -314,15 +317,8 @@ export function HeroSection() {
             href="/our-universe"
             className="group flex flex-col items-center gap-4 pointer-events-auto pr-2 md:pr-4"
           >
-            <motion.div
-              animate={{ scale: [1, 1.08, 1] }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
-              className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl"
+            <div
+              className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl animate-breathe group-hover:scale-110 transition-transform duration-300"
             >
               <Image
                 src="/icons/web-hero-design-20.webp"
@@ -330,7 +326,7 @@ export function HeroSection() {
                 fill
                 className="object-contain"
               />
-            </motion.div>
+            </div>
             <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
               About Us
             </span>

@@ -70,7 +70,7 @@ export function ContactCTA() {
                 </p>
                 <div className="space-y-4 pt-4 mb-8">
                   <a
-                    href="mailto:hello@koduniverse.com"
+                    href="mailto:hello@kod.lk"
                     className="flex items-center gap-3.5 text-kod-earth hover:text-kod-clay transition-colors group"
                   >
                     <div className="w-9 h-9 rounded-full bg-kod-canvas flex items-center justify-center text-kod-earth group-hover:bg-kod-clay group-hover:text-white transition-colors">
@@ -81,7 +81,7 @@ export function ContactCTA() {
                         Direct Mail
                       </p>
                       <p className="text-base font-semibold text-kod-earth">
-                        hello@koduniverse.com
+                        hello@kod.lk
                       </p>
                     </div>
                   </a>

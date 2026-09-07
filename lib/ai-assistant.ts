@@ -80,7 +80,7 @@ export function generateAssistantResponse(
   // Handle direct contact inquiry
   if (actionType === "contact_info" || query.includes("phone") || query.includes("email") || query.includes("contact") || query.includes("call")) {
     return {
-      text: "We'd love to connect! You can reach us directly:\n\n• **Phone / WhatsApp**: 077 200 0504\n• **Email**: hello@koduniverse.com\n• **Location**: Colombo 07, Sri Lanka\n\nOr leave your phone number & name below and we'll call you right back!",
+      text: "We'd love to connect! You can reach us directly:\n\n• **Phone / WhatsApp**: 077 200 0504\n• **Email**: hello@kod.lk\n• **Location**: Colombo 07, Sri Lanka\n\nOr leave your phone number & name below and we'll call you right back!",
       hasForm: true,
       options: [
         {

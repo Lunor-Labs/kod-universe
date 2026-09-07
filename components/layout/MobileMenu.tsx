@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/data/site";
 import {
   InstagramIcon,
@@ -19,32 +18,7 @@ interface MobileMenuProps {
   triggerRef: React.RefObject<HTMLButtonElement | null>;
 }
 
-const menuVariants = {
-  closed: {
-    opacity: 0,
-    transition: { duration: 0.2, ease: "easeInOut" as const },
-  },
-  open: {
-    opacity: 1,
-    transition: { duration: 0.25, ease: "easeOut" as const },
-  },
-};
 
-const containerVariants = {
-  closed: { opacity: 0 },
-  open: {
-    opacity: 1,
-    transition: { staggerChildren: 0.05, delayChildren: 0.05 },
-  },
-};
-
-const itemVariants = {
-  closed: { opacity: 0 },
-  open: {
-    opacity: 1,
-    transition: { duration: 0.25, ease: "easeOut" as const },
-  },
-};
 
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
@@ -70,19 +44,14 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   }, [isOpen]);
 
   return (
-    <AnimatePresence>
+    <>
       {isOpen && (
-        <motion.div
-          key="mobile-menu"
+        <div
           id="mobile-menu"
           ref={menuRef}
           role="dialog"
           aria-label="Navigation menu"
           aria-modal="true"
-          initial="closed"
-          animate="open"
-          exit="closed"
-          variants={menuVariants}
           className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden antialiased"
           style={{ 
             willChange: "opacity", 
@@ -111,15 +80,13 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             aria-label="Mobile navigation"
             className="flex-1 flex flex-col justify-center relative z-10"
           >
-            <motion.ul
-              variants={containerVariants}
+            <ul
               className="space-y-6"
               role="list"
             >
               {siteConfig.nav.map((item) => (
-                <motion.li
+                <li
                   key={item.href}
-                  variants={itemVariants}
                   className="antialiased"
                   style={{ 
                     willChange: "opacity, transform",
@@ -134,12 +101,11 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                   >
                     {item.label}
                   </Link>
-                </motion.li>
+                </li>
               ))}
-            </motion.ul>
+            </ul>
 
-            <motion.div 
-              variants={itemVariants} 
+            <div 
               className="mt-12 antialiased"
               style={{ 
                 willChange: "opacity, transform",
@@ -157,7 +123,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                   <ArrowRight size={13} aria-hidden="true" />
                 </span>
               </Link>
-            </motion.div>
+            </div>
           </nav>
 
           <div 
@@ -183,8 +149,8 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 }
