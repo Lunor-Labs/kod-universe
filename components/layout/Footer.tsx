@@ -123,7 +123,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-earth">
-        <div className="container-site py-5 pb-6 md:pb-5">
+        <div className="container-site py-5 pb-24 md:pb-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/70">
               © {new Date().getFullYear()} KOD Universe. All rights reserved.
