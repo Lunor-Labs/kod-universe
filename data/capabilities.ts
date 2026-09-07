@@ -332,7 +332,7 @@ export const processSteps: ProcessStep[] = [
     description:
       "We dive deep to understand your goals, audience, and opportunities.",
     iconName: "Search",
-    iconPath: "/icons/discover-icon.png",
+    iconPath: "/icons/discover-icon.webp",
   },
   {
     number: "02",
@@ -340,14 +340,14 @@ export const processSteps: ProcessStep[] = [
     description:
       "We shape the strategy and creative direction with clarity and intent.",
     iconName: "Compass",
-    iconPath: "/icons/define.png",
+    iconPath: "/icons/define.webp",
   },
   {
     number: "03",
     title: "Create",
     description: "We design, craft, and refine ideas that connect and convert.",
     iconName: "Pen",
-    iconPath: "/icons/create.png",
+    iconPath: "/icons/create.webp",
   },
   {
     number: "04",
@@ -355,6 +355,6 @@ export const processSteps: ProcessStep[] = [
     description:
       "We launch with precision and support your growth every step ahead.",
     iconName: "Rocket",
-    iconPath: "/icons/deliver.png",
+    iconPath: "/icons/deliver.webp",
   },
 ];

@@ -6,7 +6,11 @@ import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/data/site";
-import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/SocialIcons";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  FacebookIcon,
+} from "@/components/ui/SocialIcons";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -78,19 +82,32 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           animate="open"
           exit="closed"
           variants={menuVariants}
-          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden [transform:translateZ(0)] will-change-[opacity] antialiased"
+          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden antialiased"
         >
           <div className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.12] mix-blend-multiply z-0 transform rotate-45">
-            <Image src="/main/blossom.webp" alt="" fill className="object-contain" priority />
+            <Image
+              src="/main/blossom.webp"
+              alt=""
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
 
-          <nav aria-label="Mobile navigation" className="flex-1 flex flex-col justify-center relative z-10">
-            <motion.ul variants={containerVariants} className="space-y-6" role="list">
+          <nav
+            aria-label="Mobile navigation"
+            className="flex-1 flex flex-col justify-center relative z-10"
+          >
+            <motion.ul
+              variants={containerVariants}
+              className="space-y-6"
+              role="list"
+            >
               {siteConfig.nav.map((item) => (
-                <motion.li 
-                  key={item.href} 
+                <motion.li
+                  key={item.href}
                   variants={itemVariants}
-                  className="transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+                  className="antialiased"
                 >
                   <Link
                     href={item.href}
@@ -103,10 +120,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               ))}
             </motion.ul>
 
-            <motion.div 
-              variants={itemVariants} 
-              className="mt-12 transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
-            >
+            <motion.div variants={itemVariants} className="mt-12 antialiased">
               <Link
                 href="/connect"
                 onClick={onClose}

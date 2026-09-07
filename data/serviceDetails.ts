@@ -93,7 +93,7 @@ export const brandingProcess: ProcessStep[] = [
     subtitle: "Find the truth",
     description:
       "We explore your world, audience, competitors, and core opportunities to uncover what truly matters.",
-    imageSrc: "/cave-painting-bento.jpg",
+    imageSrc: "/cave-painting-bento.webp",
   },
   {
     number: "02",
@@ -101,7 +101,7 @@ export const brandingProcess: ProcessStep[] = [
     subtitle: "Choose the position",
     description:
       "We distill insights and define a clear, defensible position that sets you apart with deliberate purpose.",
-    imageSrc: "/project-cosmic.jpg",
+    imageSrc: "/project-cosmic.webp",
   },
   {
     number: "03",
@@ -109,7 +109,7 @@ export const brandingProcess: ProcessStep[] = [
     subtitle: "Craft the system",
     description:
       "We build the visual and verbal universe-from primary marks to expressive typography and motion gestures.",
-    imageSrc: "/service-hero-3d.jpg",
+    imageSrc: "/service-hero-3d.webp",
   },
   {
     number: "04",
@@ -117,7 +117,7 @@ export const brandingProcess: ProcessStep[] = [
     subtitle: "Create consistency",
     description:
       "We roll out the complete identity across physical and digital touchpoints, empowering your team to scale.",
-    imageSrc: "/project-corepoint-mockup.jpg",
+    imageSrc: "/project-corepoint-mockup.webp",
   },
 ];
 
@@ -148,21 +148,21 @@ export const selectedWorkProjects: SelectedProject[] = [
     slug: "aurelia-hotels",
     title: "Aurelia Hotels",
     category: "HOSPITALITY - IDENTITY & DIRECTION",
-    imageSrc: "/project-soluna.jpg",
+    imageSrc: "/project-soluna.webp",
   },
   {
     id: "2",
     slug: "terra-loom",
     title: "Terra Loom",
     category: "SUSTAINABLE LIVING - IDENTITY & PACKAGING",
-    imageSrc: "/project-terra.jpg",
+    imageSrc: "/project-terra.webp",
   },
   {
     id: "3",
     slug: "liora-botanicals",
     title: "Liora Botanicals",
     category: "SOCIAL WELLNESS - IDENTITY & PACKAGING",
-    imageSrc: "/project-bio-oil.jpg",
+    imageSrc: "/project-bio-oil.webp",
   },
 ];
 
@@ -184,7 +184,7 @@ export const defaultCaseStudy = {
   headlineFont: "Cormorant Garamond",
   bodyFont: "Metropolis",
   slug: "nova-origin",
-  imageSrc: "/project-corepoint-mockup.jpg",
+  imageSrc: "/project-corepoint-mockup.webp",
 };
 
 const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
@@ -271,14 +271,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
         imageSrc:
-          "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
+          "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.webp",
       },
       {
         id: "2",
         slug: "area-6-social-media",
         title: "Area 6 Social & Posters",
         category: "POSTER & ENGAGEMENT",
-        imageSrc: "/projects/social-media/area-6/area-6-social-media-hero.png",
+        imageSrc: "/projects/social-media/area-6/area-6-social-media-hero.webp",
       },
       {
         id: "3",
@@ -286,7 +286,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coats Sri Lanka Campaign",
         category: "HERITAGE & SOCIAL",
         imageSrc:
-          "/projects/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
+          "/projects/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.webp",
       },
     ],
     ctaTitle: "Ready to spark cultural momentum?",
@@ -353,7 +353,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       bodyFont: "Inter",
       slug: "bio-oil-skincare-campaign",
       imageSrc:
-        "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
+        "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.webp",
     },
     qualificationPoints: [
       {
@@ -479,14 +479,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         slug: "niwarthana-packaging-design",
         title: "Niwarthana Artisan Packaging",
         category: "SUSTAINABLE PACKAGING & CRAFT",
-        imageSrc: "/projects/branding-identity/package-design/niwarthana-1.png",
+        imageSrc: "/projects/branding-identity/package-design/niwarthana-1.webp",
       },
       {
         id: "2",
         slug: "rouka-brand-identity",
         title: "ROUKA Brand Identity",
         category: "BRAND SYSTEM & IDENTITY",
-        imageSrc: "/projects/branding-identity/branding/rouka-1.png",
+        imageSrc: "/projects/branding-identity/branding/rouka-1.webp",
       },
       {
         id: "3",
@@ -494,7 +494,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "SLSA UK Emblem & Identity",
         category: "COMMUNITY BRAND & LOGO",
         imageSrc:
-          "/projects/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.png",
+          "/projects/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.webp",
       },
     ],
     ctaTitle: "Ready to build an identity that endures?",
@@ -560,7 +560,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "niwarthana-packaging-design",
-      imageSrc: "/projects/branding-identity/package-design/niwarthana-1.png",
+      imageSrc: "/projects/branding-identity/package-design/niwarthana-1.webp",
     },
     qualificationPoints: [
       {
@@ -714,7 +714,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coffee 1911 Brand & Spatial",
         category: "BRAND & SPATIAL ARCHITECTURE",
         imageSrc:
-          "/projects/branding-identity/logo-design/coffee-1911/coffee-1911-1.png",
+          "/projects/branding-identity/logo-design/coffee-1911/coffee-1911-1.webp",
       },
       {
         id: "2",
@@ -722,7 +722,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Cool Step Footwear Identity",
         category: "PRODUCT & APPAREL DESIGN",
         imageSrc:
-          "/projects/branding-identity/logo-design/cool-step-final/cool-step-final-1.png",
+          "/projects/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
       },
       {
         id: "3",
@@ -730,7 +730,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "FOCAL Visual Architecture",
         category: "DIGITAL IDENTITY & GEOMETRY",
         imageSrc:
-          "/projects/branding-identity/logo-design/focal/focal-logo-1.png",
+          "/projects/branding-identity/logo-design/focal/focal-logo-1.webp",
       },
     ],
     ctaTitle: "Ready to expand your brand universe?",
@@ -796,7 +796,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Metropolis",
       bodyFont: "Inter",
       slug: "rouka-brand-identity",
-      imageSrc: "/projects/branding-identity/branding/rouka-1.png",
+      imageSrc: "/projects/branding-identity/branding/rouka-1.webp",
     },
     qualificationPoints: [
       {
@@ -912,7 +912,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Metropolis",
       bodyFont: "Inter",
       slug: "bio-oil-skincare-campaign",
-      imageSrc: "/project-bio-oil.jpg",
+      imageSrc: "/project-bio-oil.webp",
     },
     qualificationPoints: [
       {
@@ -1043,7 +1043,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "threadline-textiles-packaging",
-      imageSrc: "/project-threadline.jpg",
+      imageSrc: "/project-threadline.webp",
     },
     qualificationPoints: [
       {
@@ -1158,7 +1158,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "threadline-textiles-packaging",
-      imageSrc: "/project-threadline.jpg",
+      imageSrc: "/project-threadline.webp",
     },
     qualificationPoints: [
       {
@@ -1270,7 +1270,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "soluna-wellness-identity",
-      imageSrc: "/project-soluna.jpg",
+      imageSrc: "/project-soluna.webp",
     },
     qualificationPoints: [
       {
@@ -1384,7 +1384,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Editorial New",
       bodyFont: "Metropolis",
       slug: "origins-concept-series",
-      imageSrc: "/project-origins.jpg",
+      imageSrc: "/project-origins.webp",
     },
     qualificationPoints: [
       {
@@ -1492,7 +1492,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Metropolis",
       bodyFont: "Inter",
       slug: "threadline-textiles-packaging",
-      imageSrc: "/project-threadline.jpg",
+      imageSrc: "/project-threadline.webp",
     },
     qualificationPoints: [
       {
@@ -1608,7 +1608,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "aurelia-hotels",
-      imageSrc: "/project-soluna.jpg",
+      imageSrc: "/project-soluna.webp",
     },
     qualificationPoints: [
       {
@@ -1724,7 +1724,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Editorial New",
       bodyFont: "Metropolis",
       slug: "cosmic-explorations",
-      imageSrc: "/project-cosmic.jpg",
+      imageSrc: "/project-cosmic.webp",
     },
     qualificationPoints: [
       {

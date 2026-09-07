@@ -10,7 +10,7 @@ export function OurUniverseHero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/main/our-story-section-hero.png"
+          src="/main/our-story-section-hero.webp"
           alt="Ancient sandstone cave overlooking a desert under starry sky with shooting star"
           fill
           priority

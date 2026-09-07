@@ -67,7 +67,7 @@ export default async function ServiceDetailPage({
         aria-hidden="true"
       >
         <Image
-          src="/main/single-service-main.png"
+          src="/main/single-service-main.webp"
           alt=""
           fill
           priority

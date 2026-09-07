@@ -214,7 +214,7 @@ export default function CapabilitiesPage() {
               <div className="bg-earth rounded-sm p-10 relative overflow-hidden texture-cave">
                 <div className="absolute  -right-16 -top-10">
                   <Image
-                    src="/icons/web-hero-design-25.png"
+                    src="/icons/web-hero-design-25.webp"
                     alt=""
                     width={300}
                     height={300}

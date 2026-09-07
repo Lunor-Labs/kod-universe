@@ -209,7 +209,7 @@ export function AiChatWidget() {
           ) : (
             <div className="relative w-7 h-7 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
               <Image
-                src="/icons/KoD-Eye.png"
+                src="/icons/KoD-Eye.webp"
                 alt="KOD Eye"
                 width={26}
                 height={26}
@@ -236,7 +236,7 @@ export function AiChatWidget() {
             <div className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-full bg-kod-orange/90 p-1.5 flex items-center justify-center text-white shadow-md border border-white/20">
                 <Image
-                  src="/icons/KoD-Eye.png"
+                  src="/icons/KoD-Eye.webp"
                   alt="KOD Eye Logo"
                   width={24}
                   height={24}

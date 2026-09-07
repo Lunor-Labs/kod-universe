@@ -123,7 +123,7 @@ export function InfoCards({
                 }}
               >
                 <Image
-                  src="/hero.jpg"
+                  src="/hero.webp"
                   alt=""
                   fill
                   className="object-cover object-right"
@@ -321,7 +321,7 @@ export function InfoCards({
                 }}
               >
                 <Image
-                  src="/project-origins.jpg"
+                  src="/project-origins.webp"
                   alt=""
                   fill
                   className="object-cover object-right"

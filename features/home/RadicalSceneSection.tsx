@@ -57,7 +57,7 @@ export function RadicalSceneSection() {
           className="w-[350px] h-[300px] opacity-30 pointer-events-none"
         >
           <Image
-            src="/main/circle.png"
+            src="/main/circle.webp"
             alt=""
             fill
             className="object-contain"

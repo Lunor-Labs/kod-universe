@@ -41,7 +41,7 @@ export default function ConnectPage() {
         className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-40"
       >
         <Image
-          src="/main/cave.png"
+          src="/main/cave.webp"
           alt=""
           fill
           className="object-cover object-top"

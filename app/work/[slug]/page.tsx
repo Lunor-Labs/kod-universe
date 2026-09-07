@@ -40,25 +40,25 @@ function getPillarsForProject(project: Project): ProjectPillar[] {
         title: "Growth",
         description:
           "Built a stronger digital presence with consistent branded content.",
-        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/growth.png",
+        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
       },
       {
         title: "Awareness",
         description:
           "Created memorable campaigns, product education and seasonal storytelling.",
-        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/awareness.png",
+        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
       },
       {
         title: "Engagement",
         description:
           "Designed conversation-driven posts and community-first content.",
-        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/engagement.png",
+        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
       },
       {
         title: "Lead Conversion",
         description:
           "Supported promotions, inquiries and product-driven action.",
-        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.png",
+        icon: "/projects/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
       },
     ];
   }

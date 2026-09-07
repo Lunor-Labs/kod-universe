@@ -109,7 +109,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               </div>
               <div className="pt-10 sm:pt-0">
                 <Image
-                  src={"/main/circle.png"}
+                  src={"/main/circle.webp"}
                   alt={""}
                   width={1500}
                   height={1500}

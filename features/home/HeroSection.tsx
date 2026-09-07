@@ -49,7 +49,7 @@ const SLIDES = [
         across changing landscapes and eras.
       </>
     ),
-    image: "/hero.jpg",
+    image: "/hero.webp",
     linkText: "See our capabilities",
     linkHref: "/capabilities",
   },
@@ -69,7 +69,7 @@ const SLIDES = [
         inspire, and leave a lasting mark.
       </>
     ),
-    image: "/our-story-cta.jpg",
+    image: "/our-story-cta.webp",
     linkText: "Start a conversation",
     linkHref: "/connect",
   },
@@ -121,6 +121,7 @@ export function HeroSection() {
             loop
             muted
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover object-center"
             aria-hidden="true"
           />
@@ -131,61 +132,37 @@ export function HeroSection() {
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
-            className="relative max-w-4xl transform-gpu"
-            style={{
-              backfaceVisibility: "hidden",
-              WebkitBackfaceVisibility: "hidden",
-              ...(disableParallax ? {} : { y: textY }),
-            }}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            variants={{
-              hidden: { opacity: 0 },
-              show: {
-                opacity: 1,
-                transition: { staggerChildren: 0.12, delayChildren: 0.05 },
-              },
-              exit: {
-                opacity: 0,
-                transition: { duration: 0.25 },
-              },
+            className="relative max-w-4xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.45,
+              ease: "easeOut",
             }}
           >
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                },
-                exit: {
-                  opacity: 0,
-                  y: -6,
-                  transition: { duration: 0.2 },
-                },
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.05,
+                ease: "easeOut",
               }}
-              className="text-sm font-semibold tracking-widest uppercase text-black mb-6 transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+              className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased"
             >
               {slide.eyebrow}
             </motion.p>
 
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 14 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-                },
-                exit: {
-                  opacity: 0,
-                  y: -8,
-                  transition: { duration: 0.2 },
-                },
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.45,
+                delay: 0.1,
+                ease: "easeOut",
               }}
-              className="heading-hero text-earth mb-6 tracking-tight font-normal transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+              className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased"
             >
               {slide.title1} <br />
               {slide.titleHighlight}
@@ -195,39 +172,27 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 12 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-                },
-                exit: {
-                  opacity: 0,
-                  y: -6,
-                  transition: { duration: 0.2 },
-                },
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.45,
+                delay: 0.15,
+                ease: "easeOut",
               }}
-              className="text-lead text-earth mb-10 max-w-xl transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+              className="text-lead text-earth mb-10 max-w-xl antialiased"
             >
               {slide.description}
             </motion.p>
 
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                },
-                exit: {
-                  opacity: 0,
-                  y: -4,
-                  transition: { duration: 0.2 },
-                },
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.2,
+                ease: "easeOut",
               }}
-              className="transform-gpu will-change-transform antialiased [backface-visibility:hidden]"
+              className="antialiased"
             >
               <div className="inline-block">
                 <Link
@@ -235,11 +200,9 @@ export function HeroSection() {
                   className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
                 >
                   <span>{slide.linkText}</span>
+
                   <span className="btn-badge">
-                    <ArrowRight
-                      size={14}
-                      aria-hidden="true"
-                    />
+                    <ArrowRight size={14} aria-hidden="true" />
                   </span>
                 </Link>
               </div>
@@ -353,16 +316,16 @@ export function HeroSection() {
           >
             <motion.div
               animate={{ scale: [1, 1.08, 1] }}
-              transition={{ 
-                duration: 2.5, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
               whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
               className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl"
             >
               <Image
-                src="/icons/web-hero-design-20.png"
+                src="/icons/web-hero-design-20.webp"
                 alt="About Us"
                 fill
                 className="object-contain"
@@ -375,8 +338,10 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-20" aria-hidden="true" />
+      <div
+        className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-20"
+        aria-hidden="true"
+      />
     </section>
   );
 }
-

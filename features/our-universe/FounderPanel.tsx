@@ -34,7 +34,7 @@ export function FounderPanel() {
 
               <div className="relative overflow-hidden rounded-2xl border border-kod-border bg-kod-mist aspect-[4/5] img-zoom">
                 <Image
-                  src="/main/profile.jpg"
+                  src="/main/profile.webp"
                   alt="KOD Universe Founder - Ishara Jakod"
                   fill
                   className="object-cover object-top"

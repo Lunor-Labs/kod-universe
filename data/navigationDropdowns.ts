@@ -42,7 +42,7 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       title: "Bio-Oil Social Media Management",
       description: "A transformative digital presence built on authentic skincare narratives.",
       href: "/work/bio-oil-skincare-campaign",
-      image: "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-podium-showcase.png",
+      image: "/projects/social-media/bio-oil-social-media-content-highlights/bio-oil-podium-showcase.webp",
     },
   },
   SERVICES: {
@@ -66,7 +66,7 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       title: "Ancient Ideas. Modern Impact.",
       description: "Rooted in timeless creative principles, engineered for modern brand dominance.",
       href: "/capabilities",
-      image: "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.png",
+      image: "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
     },
   },
   "OUR STORY": {

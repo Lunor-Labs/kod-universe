@@ -5,25 +5,25 @@ const steps = [
     n: 1,
     title: "Curiosity",
     body: "We listen to the universe-observing signals, shifts, and stories waiting to be discovered.",
-    icon: "/icons/journey/curiosity.png",
+    icon: "/icons/journey/curiosity.webp",
   },
   {
     n: 2,
     title: "Purpose",
     body: "We find meaning in the spark-aligning it with truth, intention, and human need.",
-    icon: "/icons/journey/purpose.png",
+    icon: "/icons/journey/purpose.webp",
   },
   {
     n: 3,
     title: "Imagination",
     body: "We shape the idea into form-through strategy, storytelling, and inspired design.",
-    icon: "/icons/journey/imagination.png",
+    icon: "/icons/journey/imagination.webp",
   },
   {
     n: 4,
     title: "Impact",
     body: "We launch experiences that connect, inspire, and create ripples that last.",
-    icon: "/icons/journey/impact.png",
+    icon: "/icons/journey/impact.webp",
   },
 ];
 

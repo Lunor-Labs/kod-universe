@@ -32,7 +32,7 @@ export default function HomePage() {
     <main className="relative overflow-hidden min-h-screen">
       <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-40">
         <Image
-          src="/main/wall-main-image-04.png"
+          src="/main/wall-main-image-04.webp"
           alt=""
           fill
           className="object-contain object-top "

@@ -34,7 +34,7 @@ export function ServiceSystemMosaic() {
                 <div className="md:col-span-3 flex flex-col gap-3.5">
                   <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group">
                     <Image
-                      src="/system/hd/stone.jpg"
+                      src="/system/hd/stone.webp"
                       alt="Core mark stone texture"
                       fill
                       className="object-cover opacity-40 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700"
@@ -89,7 +89,7 @@ export function ServiceSystemMosaic() {
                   </div>
                   <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1">
                     <Image
-                      src="/system/hd/collateral-terra.jpg"
+                      src="/system/hd/collateral-terra.webp"
                       alt="Collateral and corporate stationery flatlay"
                       fill
                       className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-700"
@@ -104,7 +104,7 @@ export function ServiceSystemMosaic() {
                   <div className="relative h-full min-h-[300px] md:min-h-[360px] rounded overflow-hidden bg-kod-black border-2 border-kod-border shadow-xl group p-2.5 flex flex-col justify-between">
                     <div className="relative h-full w-full rounded overflow-hidden bg-kod-black flex flex-col justify-between p-4 border border-white/5">
                       <Image
-                        src="/project-cosmic.jpg"
+                        src="/project-cosmic.webp"
                         alt="Mobile digital experience cosmic artwork"
                         fill
                         className="object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
@@ -163,7 +163,7 @@ export function ServiceSystemMosaic() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group">
                       <Image
-                        src="/system/hd/packaging-soluna.jpg"
+                        src="/system/hd/packaging-soluna.webp"
                         alt="Nova Origin luxury dark packaging box with gold foil"
                         fill
                         className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
@@ -176,7 +176,7 @@ export function ServiceSystemMosaic() {
 
                     <div className="relative aspect-[16/11] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group">
                       <Image
-                        src="/system/hd/cosmic.jpg"
+                        src="/system/hd/cosmic.webp"
                         alt="Beyond possible campaign billboard visual"
                         fill
                         className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
@@ -197,7 +197,7 @@ export function ServiceSystemMosaic() {
 
                   <div className="relative aspect-[16/9] md:aspect-[32/13] rounded overflow-hidden bg-kod-black border border-white/10 shadow-md group flex-1 min-h-[180px]">
                     <Image
-                      src="/system/hd/guidelines-spread.jpg"
+                      src="/system/hd/guidelines-spread.webp"
                       alt="Brand guidelines and style manual book spread"
                       fill
                       className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"

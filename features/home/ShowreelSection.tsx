@@ -192,6 +192,7 @@ export function ShowreelSection() {
                           muted
                           loop
                           playsInline
+                          preload="metadata"
                           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-kod-black/10 via-transparent to-kod-black/50 pointer-events-none" />
