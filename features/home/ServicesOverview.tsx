@@ -13,7 +13,7 @@ export function ServicesOverview() {
     >
       <div className="container-site">
         <div className="text-center mb-16">
-          <ScrollReveal variant="down">
+          <ScrollReveal variant="up">
             <SectionLabel>Our creative services</SectionLabel>
             <h2 className="heading-section text-earth text-balance">
               End-to-end creative{" "}
@@ -34,7 +34,7 @@ export function ServicesOverview() {
               className="h-full"
             >
               <Link
-                href={`/capabilities#${group.id}`}
+                href={`/capabilities/${group.id}`}
                 className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
                             hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
@@ -86,19 +86,13 @@ export function ServicesOverview() {
             </ScrollReveal>
           ))}
         </div>
-        <ScrollReveal variant="zoomIn" delay={0.3}>
+        <ScrollReveal variant="up" delay={0.2}>
           <div className="mt-14 text-center">
-            <Link
-              href="/capabilities"
-              className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.1em]
-                         uppercase text-earth hover:text-signal-orange transition-colors duration-200 group"
-            >
-              View all capabilities & deliverables
-              <ArrowRight
-                size={14}
-                className="transition-transform duration-200 group-hover:translate-x-1 p-1 w-6 h-6 rounded-full border border-border-warm"
-                aria-hidden="true"
-              />
+            <Link href="/capabilities" className="btn-link">
+              <span>View all capabilities & deliverables</span>
+              <span className="btn-icon-circle">
+                <ArrowRight size={13} aria-hidden="true" />
+              </span>
             </Link>
           </div>
         </ScrollReveal>

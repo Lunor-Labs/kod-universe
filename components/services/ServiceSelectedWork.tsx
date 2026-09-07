@@ -36,13 +36,15 @@ export function ServiceSelectedWork({
           <ScrollReveal variant="right">
             <Link
               href="/work"
-              className="group inline-flex items-center gap-3 text-sm font-semibold tracking-[0.15em] uppercase text-kod-orange hover:text-kod-crimson transition-colors"
+              className="btn-link !text-kod-orange hover:!text-kod-earth"
             >
-              <span>VIEW ALL WORK</span>
-              <ArrowRight
-                size={13}
-                className="group-hover:translate-x-1 transition-transform"
-              />
+              <span>View all work</span>
+              <span className="btn-icon-circle">
+                <ArrowRight
+                  size={13}
+                  aria-hidden="true"
+                />
+              </span>
             </Link>
           </ScrollReveal>
         </div>

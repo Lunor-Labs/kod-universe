@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
@@ -22,7 +24,18 @@ export function Footer() {
       <div className="container-site py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-2">
-            <Link href="/" aria-label="KOD Universe — Home">
+            <Link
+              href="/"
+              scroll={true}
+              aria-label="KOD Universe — Home"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              className="cursor-pointer inline-block"
+            >
               <KodLogo className="h-20 w-auto text-canvas mb-6 brightness-0 invert" />
             </Link>
             <p className="text-kod-dust/90 text-base leading-relaxed max-w-sm">

@@ -89,16 +89,15 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                 </p>
                 <Link
                   href={`/work/${featuredProject.slug}`}
-                  className="inline-flex items-center gap-2 border border-earth text-earth 
-                             px-5 py-2.5 rounded-sm text-sm font-bold tracking-[0.12em] uppercase
-                             hover:bg-earth hover:text-canvas transition-all duration-200 group w-fit"
+                  className="btn-secondary w-fit"
                 >
-                  View case study
-                  <ArrowRight
-                    size={13}
-                    className="transition-transform duration-200 group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
+                  <span>View case study</span>
+                  <span className="btn-badge">
+                    <ArrowRight
+                      size={13}
+                      aria-hidden="true"
+                    />
+                  </span>
                 </Link>
               </div>
             </div>

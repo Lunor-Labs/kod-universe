@@ -94,17 +94,15 @@ export function WhyUsSection() {
               <div>
                 <Link
                   href="/work"
-                  className="group inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase text-white hover:text-kod-orange transition-colors"
+                  className="btn-link !text-white hover:!text-kod-orange"
                 >
-                  <span className="border-b border-white/30 group-hover:border-kod-orange transition-colors pb-0.5">
-                    VIEW CASE STUDY
-                  </span>
-                  <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center group-hover:border-kod-orange group-hover:bg-kod-orange group-hover:text-white transition-all shadow-sm">
+                  <span>View case study</span>
+                  <span className="btn-icon-circle !border-white/30 group-hover:!border-kod-orange">
                     <ArrowRight
-                      size={14}
-                      className="group-hover:translate-x-0.5 transition-transform"
+                      size={13}
+                      aria-hidden="true"
                     />
-                  </div>
+                  </span>
                 </Link>
               </div>
             </div>

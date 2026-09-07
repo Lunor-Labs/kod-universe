@@ -110,7 +110,7 @@ export function MasonryGallerySection() {
       <div className="container-site">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div>
-            <ScrollReveal variant="down">
+            <ScrollReveal variant="up">
               <SectionLabel>Visual Archive</SectionLabel>
               <h2 className="heading-section text-earth text-balance">
                 Moments in the{" "}

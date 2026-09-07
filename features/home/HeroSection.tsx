@@ -131,8 +131,12 @@ export function HeroSection() {
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
-            className="relative max-w-4xl"
-            style={disableParallax ? undefined : { y: textY }}
+            className="relative max-w-4xl transform-gpu"
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              ...(disableParallax ? {} : { y: textY }),
+            }}
             initial="hidden"
             animate="show"
             exit="exit"
@@ -140,26 +144,26 @@ export function HeroSection() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.18, delayChildren: 0.1 },
+                transition: { staggerChildren: 0.12, delayChildren: 0.05 },
               },
               exit: {
                 opacity: 0,
-                transition: { duration: 0.4 },
+                transition: { duration: 0.25 },
               },
             }}
           >
             <motion.p
               variants={{
-                hidden: { opacity: 0, x: -40 },
+                hidden: { opacity: 0, y: 10 },
                 show: {
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                  y: 0,
+                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
                 },
                 exit: {
                   opacity: 0,
-                  x: 40,
-                  transition: { duration: 0.35 },
+                  y: -6,
+                  transition: { duration: 0.2 },
                 },
               }}
               className="text-sm font-semibold tracking-widest uppercase text-black mb-6"
@@ -169,16 +173,16 @@ export function HeroSection() {
 
             <motion.h1
               variants={{
-                hidden: { opacity: 0, x: 50 },
+                hidden: { opacity: 0, y: 14 },
                 show: {
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+                  y: 0,
+                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
                 },
                 exit: {
                   opacity: 0,
-                  x: -40,
-                  transition: { duration: 0.35 },
+                  y: -8,
+                  transition: { duration: 0.2 },
                 },
               }}
               className="heading-hero text-earth mb-6 tracking-tight font-normal"
@@ -192,16 +196,16 @@ export function HeroSection() {
 
             <motion.p
               variants={{
-                hidden: { opacity: 0, x: -35 },
+                hidden: { opacity: 0, y: 12 },
                 show: {
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                  y: 0,
+                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
                 },
                 exit: {
                   opacity: 0,
-                  x: 30,
-                  transition: { duration: 0.3 },
+                  y: -6,
+                  transition: { duration: 0.2 },
                 },
               }}
               className="text-lead text-earth mb-10 max-w-xl"
@@ -211,40 +215,33 @@ export function HeroSection() {
 
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: 40 },
+                hidden: { opacity: 0, y: 10 },
                 show: {
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                  y: 0,
+                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
                 },
                 exit: {
                   opacity: 0,
-                  x: -30,
-                  transition: { duration: 0.3 },
+                  y: -4,
+                  transition: { duration: 0.2 },
                 },
               }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block"
-              >
+              <div className="inline-block">
                 <Link
                   href={slide.linkHref}
-                  className="inline-flex items-center gap-3 bg-earth hover:bg-void-black text-canvas 
-                             pr-2 pl-4 py-2 rounded-full font-metropolis font-semibold text-sm tracking-widest uppercase 
-                             transition-colors duration-300 shadow-md group focus-visible:outline-solar-gold"
+                  className="btn-dark focus-visible:outline-solar-gold"
                 >
                   <span>{slide.linkText}</span>
-                  <div className="w-8 h-8 rounded-full border border-canvas/40 flex items-center justify-center group-hover:border-canvas/80 transition-colors">
+                  <span className="btn-badge">
                     <ArrowRight
-                      size={16}
-                      className="transition-transform duration-300 group-hover:translate-x-1"
+                      size={14}
                       aria-hidden="true"
                     />
-                  </div>
+                  </span>
                 </Link>
-              </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </AnimatePresence>

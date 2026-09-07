@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef, startTransition } from "react";
-import { MenuIcon, X } from "lucide-react";
+import { MenuIcon, X, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { navigationDropdowns } from "@/data/navigationDropdowns";
 import { KodLogo } from "@/components/ui/KodLogo";
@@ -71,6 +71,15 @@ export function Header() {
 
   const isDropdownOpen = !!activeDropdown;
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setActiveDropdown(null);
+    setMenuOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const headerBase =
     "fixed top-0 left-0 right-0 z-[100] transition-all duration-300";
 
@@ -100,9 +109,10 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link
               href="/"
+              scroll={true}
               aria-label="KOD Universe — Home"
-              onClick={() => setActiveDropdown(null)}
-              className="flex-shrink-0 focus-visible:outline-solar-gold"
+              onClick={handleLogoClick}
+              className="flex-shrink-0 focus-visible:outline-solar-gold cursor-pointer"
             >
               <KodLogo
                 className={`h-12 sm:h-32 w-auto transition-colors duration-300 ${
@@ -161,31 +171,11 @@ export function Header() {
                 <Link
                   href="/connect"
                   onClick={() => setActiveDropdown(null)}
-                  className="btn-primary !bg-black"
-                  style={{
-                    height: "44px",
-                    paddingLeft: "20px",
-                    paddingRight: "6px",
-                  }}
+                  className="btn-dark !h-11 !px-4 !text-xs"
                 >
                   <span>Connect with KoD</span>
-                  <span
-                    className="btn-badge"
-                    style={{ width: "32px", height: "32px" }}
-                  >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="m12 5 7 7-7 7" />
-                    </svg>
+                  <span className="btn-badge !w-7 !h-7">
+                    <ArrowRight size={13} aria-hidden="true" />
                   </span>
                 </Link>
               </div>

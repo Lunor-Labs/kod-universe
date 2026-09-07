@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search, Target, PenTool, Rocket } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Project } from "@/types/project";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -66,96 +66,22 @@ export function InfoCards({
     {
       label: "DISCOVER",
       title: "Uncover insight\nand opportunity.",
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          className="w-6 h-6 text-signal-orange"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="6"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeDasharray="2 2"
-          />
-          <circle cx="12" cy="12" r="2" fill="currentColor" />
-          <path
-            d="M12 2v2M12 20v2M2 12h2M20 12h2"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </svg>
-      ),
+      icon: <Search className="w-5 h-5 text-signal-orange" />,
     },
     {
       label: "DEFINE",
       title: "Build strategy\nwith clarity.",
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          className="w-6 h-6 text-signal-orange"
-        >
-          <path
-            d="M12 3l9 6-9 6-9-6 9-6z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <path
-            d="M12 21l9-6-9 6-9-6 9 6z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <circle cx="12" cy="15" r="1.5" fill="currentColor" />
-        </svg>
-      ),
+      icon: <Target className="w-5 h-5 text-signal-orange" />,
     },
     {
       label: "CREATE",
       title: "Craft ideas\nthat connect.",
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          className="w-6 h-6 text-signal-orange"
-        >
-          <path
-            d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
+      icon: <PenTool className="w-5 h-5 text-signal-orange" />,
     },
     {
       label: "DELIVER",
       title: "Launch, refine,\nand elevate.",
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          className="w-6 h-6 text-signal-orange"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="7"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="1.5" />
-          <circle
-            cx="12"
-            cy="12"
-            r="3"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-        </svg>
-      ),
+      icon: <Rocket className="w-5 h-5 text-signal-orange" />,
     },
   ];
 
@@ -166,10 +92,10 @@ export function InfoCards({
     >
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <ScrollReveal variant="left" delay={0}>
+          <ScrollReveal variant="up" delay={0}>
             <Link
               href="/our-universe"
-              className="group relative bg-white border border-border-warm/30 rounded p-6 lg:p-8 
+              className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
                          focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
@@ -188,7 +114,7 @@ export function InfoCards({
                 <ArrowRight size={16} aria-hidden="true" />
               </div>
               <div
-                className="absolute top-0 right-0 bottom-0 w-[50%] pointer-events-none opacity-40 mix-blend-multiply"
+                className="absolute top-0 right-0 bottom-0 w-[50%] pointer-events-none opacity-90 mix-blend-multiply"
                 style={{
                   maskImage:
                     "linear-gradient(to right, transparent, black 60%)",
@@ -206,8 +132,8 @@ export function InfoCards({
             </Link>
           </ScrollReveal>
 
-          <ScrollReveal variant="up" delay={0.1}>
-            <div className="group bg-white border border-border-warm/30 rounded p-6 lg:p-8 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between relative overflow-hidden h-full">
+          <ScrollReveal variant="up" delay={0.08}>
+            <div className="group bg-white rounded p-6 lg:p-8 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between relative overflow-hidden h-full">
               <div>
                 <div className="flex justify-between">
                   <div>
@@ -250,7 +176,7 @@ export function InfoCards({
             </div>
           </ScrollReveal>
           {currentProject && (
-            <ScrollReveal variant="right" delay={0.2}>
+            <ScrollReveal variant="up" delay={0.16}>
               <div
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
@@ -258,7 +184,7 @@ export function InfoCards({
               >
                 <Link
                   href={`/work/${currentProject.slug}`}
-                  className="group relative bg-white border border-border-warm/30 rounded p-6 lg:p-8 
+                  className="group relative bg-white rounded p-6 lg:p-8 
                              overflow-hidden hover:border-dust-rose transition-all duration-300 
                              focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full select-none"
                 >
@@ -362,10 +288,10 @@ export function InfoCards({
             </ScrollReveal>
           )}
 
-          <ScrollReveal variant="zoomIn" delay={0.3}>
+          <ScrollReveal variant="up" delay={0.24}>
             <Link
               href="/connect"
-              className="group relative bg-white border border-border-warm/30 rounded p-6 lg:p-8 
+              className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
                          focus-visible:outline-solar-gold col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
@@ -386,7 +312,7 @@ export function InfoCards({
                 <ArrowRight size={16} aria-hidden="true" />
               </div>
               <div
-                className="absolute top-0 right-0 bottom-0 w-[50%] pointer-events-none opacity-30 mix-blend-multiply"
+                className="absolute top-0 right-0 bottom-0 w-[50%] pointer-events-none opacity-90 mix-blend-multiply"
                 style={{
                   maskImage:
                     "linear-gradient(to right, transparent, black 60%)",

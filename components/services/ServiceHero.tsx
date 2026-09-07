@@ -51,11 +51,11 @@ export function ServiceHero({
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/connect"
-                  className="group inline-flex items-center gap-3 sm:gap-4 bg-kod-orange text-white pl-6 sm:pl-8 pr-3 py-3 rounded-full font-metropolis font-bold text-sm tracking-[0.15em] uppercase hover:bg-kod-crimson transition-all shadow-lg"
+                  className="btn-primary"
                 >
-                  <span>START A PROJECT</span>
-                  <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-kod-crimson transition-all flex-shrink-0">
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  <span>Start a project</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={14} aria-hidden="true" />
                   </span>
                 </Link>
               </div>

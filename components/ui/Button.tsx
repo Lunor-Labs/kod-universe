@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface ButtonProps {
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "dark" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
@@ -33,6 +33,7 @@ export function Button({
     "disabled:opacity-50 disabled:pointer-events-none",
     {
       "btn-primary": variant === "primary",
+      "btn-dark": variant === "dark",
       "btn-secondary": variant === "secondary",
       "btn-ghost": variant === "ghost",
     },

@@ -71,17 +71,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               </div>
             )}
             <div className="mt-8 flex justify-start">
-              <Link
-                href="/work"
-                className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.1em] 
-                           uppercase text-earth hover:text-signal-orange transition-colors duration-200 group"
-              >
-                View all projects
-                <ArrowRight
-                  size={14}
-                  className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border w-6 h-6"
-                  aria-hidden="true"
-                />
+              <Link href="/work" className="btn-link">
+                <span>View all projects</span>
+                <span className="btn-icon-circle">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
               </Link>
             </div>
           </div>
@@ -106,18 +100,11 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   receive them with purpose and shape them into work that
                   connects, inspires, and leaves a lasting mark.
                 </p>
-                <Link
-                  href="/our-universe"
-                  className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.1em] 
-                           uppercase text-earth border border-earth/40 px-5 py-2.5 rounded-3xl
-                           hover:bg-earth hover:text-canvas transition-all duration-200 group"
-                >
-                  Our Story
-                  <ArrowRight
-                    size={13}
-                    className="transition-transform duration-200 group-hover:translate-x-1 rounded-full p-1 border border-earth/40 w-6 h-6"
-                    aria-hidden="true"
-                  />
+                <Link href="/our-universe" className="btn-secondary">
+                  <span>Our Story</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={13} aria-hidden="true" />
+                  </span>
                 </Link>
               </div>
               <div className="pt-10 sm:pt-0">

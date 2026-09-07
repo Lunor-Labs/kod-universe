@@ -100,7 +100,7 @@ export function ShowreelSection() {
               <span className="eyebrow text-white mb-6 block tracking-[0.2em] opacity-80">
                 Showreel
               </span>
-              <h2 className="font-editorial italic text-white text-display-md md:text-5xl mb-8 leading-tight">
+              <h2 className="heading-section italic text-white mb-8 leading-tight">
                 Ideas that transcend.
                 <br />
                 Work that moves.

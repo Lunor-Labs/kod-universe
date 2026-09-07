@@ -126,10 +126,12 @@ export default function CapabilitiesPage() {
 
                       <Link
                         href={`/capabilities/${group.id}`}
-                        className="self-start lg:self-center inline-flex items-center gap-2 font-bold text-sm tracking-wider uppercase bg-canvas hover:bg-kod-canvas border border-border-warm/60 px-5 py-2.5 rounded text-earth hover:text-signal-orange transition-all"
+                        className="btn-secondary !h-11 !px-5 self-start lg:self-center"
                       >
-                        Explore {group.title}
-                        <ArrowRight size={13} aria-hidden="true" />
+                        <span>Explore {group.title}</span>
+                        <span className="btn-badge !w-7 !h-7">
+                          <ArrowRight size={13} aria-hidden="true" />
+                        </span>
                       </Link>
                     </div>
 

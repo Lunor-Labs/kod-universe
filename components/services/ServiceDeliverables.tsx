@@ -52,13 +52,15 @@ export function ServiceDeliverables({
 
               <Link
                 href="/connect"
-                className="group inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase text-kod-orange hover:text-kod-crimson transition-colors"
+                className="btn-link !text-kod-orange hover:!text-kod-earth"
               >
-                <span>REQUEST CAPABILITIES DECK</span>
-                <ArrowRight
-                  size={13}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+                <span>Request capabilities deck</span>
+                <span className="btn-icon-circle">
+                  <ArrowRight
+                    size={13}
+                    aria-hidden="true"
+                  />
+                </span>
               </Link>
             </ScrollReveal>
           </div>

@@ -245,20 +245,20 @@ export function ContactCTA() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full btn-primary transition-all flex items-center justify-center cursor-pointer disabled:opacity-50"
+                        className="w-full btn-primary disabled:opacity-50 disabled:pointer-events-none"
                       >
-                        <span className="font-metropolis text-sm sm:text-base font-bold tracking-wider text-white">
+                        <span>
                           {isSubmitting
                             ? "Sending Inquiry..."
                             : "Submit Project Inquiry"}
                         </span>
-                        <div className="w-8 h-8 rounded bg-white/15 flex items-center justify-center text-white">
+                        <span className="btn-badge">
                           {isSubmitting ? (
-                            <Loader2 size={16} className="animate-spin" />
+                            <Loader2 size={14} className="animate-spin" />
                           ) : (
-                            <ArrowRight size={16} />
+                            <ArrowRight size={13} aria-hidden="true" />
                           )}
-                        </div>
+                        </span>
                       </button>
                     </form>
                   )}
