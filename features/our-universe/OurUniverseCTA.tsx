@@ -9,7 +9,7 @@ export function OurUniverseCTA() {
         <div className="relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/our-story-cta.webp"
+              src="/assets/our-story-cta.webp"
               alt="Ancient carved solar wheel with light ray"
               fill
               className="object-cover object-right"

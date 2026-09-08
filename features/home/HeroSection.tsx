@@ -42,7 +42,7 @@ const SLIDES = [
         across changing landscapes and eras.
       </>
     ),
-    image: "/hero.webp",
+    image: "/assets/hero.webp",
     linkText: "See our capabilities",
     linkHref: "/capabilities",
   },
@@ -62,7 +62,7 @@ const SLIDES = [
         inspire, and leave a lasting mark.
       </>
     ),
-    image: "/our-story-cta.webp",
+    image: "/assets/our-story-cta.webp",
     linkText: "Start a conversation",
     linkHref: "/connect",
   },
