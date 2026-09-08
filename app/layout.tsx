@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -65,8 +66,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/icon.png`,
+    description: siteConfig.description,
+    sameAs: siteConfig.socialLinks.map((link) => link.href),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: siteConfig.contact.phones[0]?.number,
+      contactType: 'customer service',
+      areaServed: 'LK',
+      availableLanguage: 'English',
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${cormorant.variable} bg-canvas text-void-black antialiased`}>
         <SmoothScrollProvider>
           <Header />

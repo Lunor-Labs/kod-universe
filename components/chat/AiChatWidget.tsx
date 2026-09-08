@@ -203,7 +203,7 @@ export function AiChatWidget() {
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle KOD AI Chat Assistant"
-          className="relative flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-kod-orange text-white shadow-xl hover:bg-kod-earth transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
+          className="relative flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-kod-earth text-white shadow-xl hover:bg-kod-orange transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
         >
           {isOpen ? (
             <X size={22} className="transition-transform duration-200" />
