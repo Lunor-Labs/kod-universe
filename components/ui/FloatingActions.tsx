@@ -6,8 +6,13 @@ import { ArrowUp, Phone, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { AiChatWidget } from "@/components/chat/AiChatWidget";
 
+import { usePathname } from "next/navigation";
+
 export function FloatingActions() {
+  const pathname = usePathname();
   const [showTopButton, setShowTopButton] = useState(false);
+
+  if (pathname === "/coming-soon") return null;
 
   useEffect(() => {
     const handleScroll = () => {

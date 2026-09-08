@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { KodLogo } from "@/components/ui/KodLogo";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { usePathname } from "next/navigation";
 import {
   InstagramIcon,
   LinkedinIcon,
@@ -21,6 +22,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/coming-soon") return null;
+
   return (
     <footer
       className="bg-void-black text-canvas"

@@ -80,6 +80,10 @@ export function Header() {
     }
   };
 
+  if (pathname === "/coming-soon") {
+    return null;
+  }
+
   const headerBase =
     "fixed top-0 left-0 right-0 z-[100] transition-all duration-300";
 
