@@ -123,7 +123,7 @@ export function InfoCards({
                 }}
               >
                 <Image
-                  src="/hero.webp"
+                  src="/assets/hero.webp"
                   alt=""
                   fill
                   className="object-cover object-right"
@@ -271,7 +271,7 @@ export function InfoCards({
                         <Image
                           src={
                             currentProject.slug === "bio-oil-skincare-campaign"
-                              ? "/bio-oils.webp"
+                              ? "/assets/bio-oils.webp"
                               : currentProject.cardImage?.src ||
                                 currentProject.heroImage.src
                           }
@@ -321,7 +321,7 @@ export function InfoCards({
                 }}
               >
                 <Image
-                  src="/project-origins.webp"
+                  src="/assets/project-origins.webp"
                   alt=""
                   fill
                   className="object-cover object-right"
