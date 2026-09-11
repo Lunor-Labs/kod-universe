@@ -78,7 +78,7 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
               </div>
 
               <Link
-                href={`/work/${caseStudy.slug}`}
+                href={`/portfolio/${caseStudy.slug}`}
                 className="group inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-7 py-3.5 rounded-full font-metropolis font-semibold text-sm tracking-[0.15em] uppercase hover:bg-white hover:text-kod-black transition-all shadow-md"
               >
                 <span>EXPLORE CASE STUDY</span>

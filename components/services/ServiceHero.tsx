@@ -50,7 +50,7 @@ export function ServiceHero({
 
               <div className="flex flex-wrap items-center gap-4">
                 <Link
-                  href="/connect"
+                  href="/contact-us"
                   className="btn-primary"
                 >
                   <span>Start a project</span>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Capabilities",
   description:
     "Explore KOD Universe's core creative disciplines: Marketing (Content Marketing), Designing (Brand Identity, Package Design & Logo Design), and Beyond (Digital Architecture, Merchandising, Visual Storytelling, Web Design).",
-  alternates: { canonical: "/capabilities" },
+  alternates: { canonical: "/services" },
 };
 
 const processIconMap: Record<string, React.ElementType> = {
@@ -75,7 +75,7 @@ export default function CapabilitiesPage() {
                   meaningful brands, experiences, and expressions that connect
                   and endure.
                 </p>
-                <Link href="/connect" className="btn-primary">
+                <Link href="/contact-us" className="btn-primary">
                   <span>Start a project</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} aria-hidden="true" />
@@ -125,7 +125,7 @@ export default function CapabilitiesPage() {
                       </div>
 
                       <Link
-                        href={`/capabilities/${group.id}`}
+                        href={`/services/${group.id}`}
                         className="btn-secondary !h-11 !px-5 self-start lg:self-center"
                       >
                         <span>Explore {group.title}</span>
@@ -148,7 +148,7 @@ export default function CapabilitiesPage() {
                         {group.contentSections.map((section) => (
                           <Link
                             key={section.title}
-                            href={`/capabilities/${group.id}`}
+                            href={`/services/${group.id}`}
                             className="group bg-canvas/50 hover:bg-canvas/90 rounded p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xs border border-transparent hover:border-border-warm/60"
                           >
                             <div>
@@ -228,7 +228,7 @@ export default function CapabilitiesPage() {
                 <h3 className="heading-card text-canvas mb-6 leading-snug">
                   Let&apos;s build something extraordinary together.
                 </h3>
-                <Link href="/connect" className="btn-primary">
+                <Link href="/contact-us" className="btn-primary">
                   <span>Start a project</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} aria-hidden="true" />

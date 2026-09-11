@@ -28,7 +28,7 @@ export function CorePillars() {
               </p>
             </div>
             <Link
-              href="/capabilities"
+              href="/services"
               aria-label="Learn about our mission"
               className="btn-icon"
             >
@@ -49,7 +49,7 @@ export function CorePillars() {
               </p>
             </div>
             <Link
-              href="/capabilities"
+              href="/services"
               aria-label="Learn about our philosophy"
               className="btn-icon"
             >
@@ -79,7 +79,7 @@ export function CorePillars() {
               </ul>
             </div>
             <Link
-              href="/capabilities"
+              href="/services"
               aria-label="Learn about our values"
               className="btn-icon"
             >
@@ -111,7 +111,7 @@ export function CorePillars() {
               </p>
             </div>
             <Link
-              href="/capabilities"
+              href="/services"
               aria-label="Learn about our approach"
               className="btn-icon"
             >

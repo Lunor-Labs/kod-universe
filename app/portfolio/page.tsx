@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Selected Works",
   description:
     "Explore KOD Universe's portfolio of branding, social media, packaging, and digital experience projects.",
-  alternates: { canonical: "/work" },
+  alternates: { canonical: "/portfolio" },
 };
 
 export default function WorkPage() {
@@ -49,7 +49,7 @@ export default function WorkPage() {
               Ideas have energy. We transform them into visual stories that
               connect, inspire, and leave a lasting mark.
             </p>
-            <Link href="/connect" className="btn-primary">
+            <Link href="/contact-us" className="btn-primary">
               <span>Start a project</span>
               <span className="btn-badge">
                 <ArrowRight size={13} aria-hidden="true" />

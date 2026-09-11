@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Connect",
   description:
     "Start a project with KOD Universe. Share your goals and let's explore how we can create something extraordinary together.",
-  alternates: { canonical: "/connect" },
+  alternates: { canonical: "/contact-us" },
 };
 
 const contactIcons: Record<string, React.ElementType> = {

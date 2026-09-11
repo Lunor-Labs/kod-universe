@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Our Story",
   description:
     "We Are Messengers of Creative Forces. The story, origin, mission, philosophy, and creative journey behind KOD Universe.",
-  alternates: { canonical: "/our-universe" },
+  alternates: { canonical: "/about-us" },
 };
 
 export default function OurUniversePage() {

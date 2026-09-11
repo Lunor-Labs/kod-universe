@@ -34,7 +34,7 @@ export function ServicesOverview() {
               className="h-full"
             >
               <Link
-                href={`/capabilities/${group.id}`}
+                href={`/services/${group.id}`}
                 className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
                             hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
@@ -88,7 +88,7 @@ export function ServicesOverview() {
         </div>
         <ScrollReveal variant="up" delay={0.2}>
           <div className="mt-14 text-center">
-            <Link href="/capabilities" className="btn-link">
+            <Link href="/services" className="btn-link">
               <span>View all capabilities & deliverables</span>
               <span className="btn-icon-circle">
                 <ArrowRight size={13} aria-hidden="true" />

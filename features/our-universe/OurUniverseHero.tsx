@@ -42,7 +42,7 @@ export function OurUniverseHero() {
               that connect, inspire, and leave a lasting mark.
             </p>
 
-            <Link href="/work" className="btn-primary w-fit">
+            <Link href="/portfolio" className="btn-primary w-fit">
               <span>Explore Our Work</span>
               <span className="btn-badge">
                 <ArrowRight size={13} aria-hidden="true" />

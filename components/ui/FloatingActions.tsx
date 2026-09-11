@@ -69,7 +69,7 @@ export function FloatingActions() {
           <span>Call Now</span>
         </a>
         <Link
-          href="/connect"
+          href="/contact-us"
           className="flex-1 h-12 rounded-xl bg-kod-orange hover:bg-kod-earth text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
         >
           <span>Connect</span>

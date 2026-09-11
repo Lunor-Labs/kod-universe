@@ -24,7 +24,7 @@ const SLIDES = [
     ),
     image: "/main/hero1.webp",
     linkText: "Explore our work",
-    linkHref: "/work",
+    linkHref: "/portfolio",
   },
   {
     eyebrow: "Strategy. Design. Story.",
@@ -44,7 +44,7 @@ const SLIDES = [
     ),
     image: "/assets/hero.webp",
     linkText: "See our capabilities",
-    linkHref: "/capabilities",
+    linkHref: "/services",
   },
   {
     eyebrow: "Your vision, realized.",
@@ -64,7 +64,7 @@ const SLIDES = [
     ),
     image: "/assets/our-story-cta.webp",
     linkText: "Start a conversation",
-    linkHref: "/connect",
+    linkHref: "/contact-us",
   },
 ];
 
@@ -314,7 +314,7 @@ export function HeroSection() {
       <div className="absolute inset-0 pointer-events-none z-30 pt-38 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
           <Link
-            href="/our-universe"
+            href="/about-us"
             className="group flex flex-col items-center gap-4 pointer-events-auto pr-2 md:pr-4"
           >
             <div

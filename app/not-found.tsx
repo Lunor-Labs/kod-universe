@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -8,7 +7,6 @@ export default function NotFound() {
       aria-label="Page not found"
     >
       <div className="container-site text-center py-24">
-        {/* Large 404 */}
         <div className="relative mb-8">
           <p
             className="text-[8rem] md:text-[12rem] font-metropolis font-semibold text-earth/5 leading-none select-none"
@@ -31,13 +29,10 @@ export default function NotFound() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/" className="btn-back">
-            <span className="btn-badge">
-              <ArrowLeft size={13} aria-hidden="true" />
-            </span>
+          <Link href="/" className="btn-primary">
             <span>Back to home</span>
           </Link>
-          <Link href="/work" className="btn-secondary">
+          <Link href="/portfolio" className="btn-secondary">
             View our work
           </Link>
         </div>

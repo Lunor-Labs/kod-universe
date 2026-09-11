@@ -126,7 +126,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
                   {featuredProject.shortDescription}
                 </p>
                 <Link
-                  href={`/work/${featuredProject.slug}`}
+                  href={`/portfolio/${featuredProject.slug}`}
                   className="btn-secondary w-fit"
                 >
                   <span>View case study</span>

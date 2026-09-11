@@ -1,6 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/work", destination: "/portfolio", permanent: true },
+      { source: "/work/:path*", destination: "/portfolio/:path*", permanent: true },
+      { source: "/works", destination: "/portfolio", permanent: true },
+      { source: "/works/:path*", destination: "/portfolio/:path*", permanent: true },
+      { source: "/projects", destination: "/portfolio", permanent: true },
+      { source: "/projects/:path*", destination: "/portfolio/:path*", permanent: true },
+      { source: "/capabilities", destination: "/services", permanent: true },
+      { source: "/capabilities/:path*", destination: "/services/:path*", permanent: true },
+      { source: "/our-universe", destination: "/about-us", permanent: true },
+      { source: "/our-universe/:path*", destination: "/about-us/:path*", permanent: true },
+      { source: "/our-story", destination: "/about-us", permanent: true },
+      { source: "/our-story/:path*", destination: "/about-us/:path*", permanent: true },
+      { source: "/connect", destination: "/contact-us", permanent: true },
+      { source: "/connect/:path*", destination: "/contact-us/:path*", permanent: true },
+    ];
+  },
   experimental: {
     optimizeCss: false,
     serverActions: { bodySizeLimit: "30mb" },

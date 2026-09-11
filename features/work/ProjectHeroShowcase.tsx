@@ -17,7 +17,7 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
     >
       <div className="container-site relative z-10">
         <Link
-          href="/work"
+          href="/portfolio"
           className="inline-flex items-center gap-2 text-kod-text-2 hover:text-kod-clay font-medium text-base transition-colors mb-6 sm:mb-8 group"
           aria-label="Back to all projects"
         >

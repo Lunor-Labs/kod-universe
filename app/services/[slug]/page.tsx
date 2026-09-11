@@ -33,7 +33,7 @@ export async function generateMetadata({
   return {
     title: `${cap.title} | KOD Universe`,
     description: cap.longDescription,
-    alternates: { canonical: `/capabilities/${slug}` },
+    alternates: { canonical: `/services/${slug}` },
   };
 }
 

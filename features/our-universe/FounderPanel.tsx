@@ -132,7 +132,7 @@ export function FounderPanel() {
                 ))}
               </div>
 
-              <Link href="/our-universe" className="btn-primary w-fit">
+              <Link href="/about-us" className="btn-primary w-fit">
                 <span>Read the Full Story</span>
                 <span className="btn-badge">
                   <ArrowRight size={13} aria-hidden="true" />

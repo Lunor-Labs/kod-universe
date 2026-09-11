@@ -95,7 +95,7 @@ export function WhyUsSection() {
 
               <div>
                 <Link
-                  href="/work"
+                  href="/portfolio"
                   className="btn-link !text-white hover:!text-kod-orange"
                 >
                   <span>View case study</span>

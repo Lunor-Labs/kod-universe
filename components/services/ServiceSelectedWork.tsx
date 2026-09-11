@@ -35,7 +35,7 @@ export function ServiceSelectedWork({
 
           <ScrollReveal variant="right">
             <Link
-              href="/work"
+              href="/portfolio"
               className="btn-link !text-kod-orange hover:!text-kod-earth"
             >
               <span>View all work</span>
@@ -53,7 +53,7 @@ export function ServiceSelectedWork({
           {projects.map((project, idx) => (
             <ScrollReveal key={project.id} variant="up" delay={idx * 0.1}>
               <Link
-                href={`/work/${project.slug}`}
+                href={`/portfolio/${project.slug}`}
                 className="group bg-white border border-kod-border rounded overflow-hidden block hover:border-kod-orange transition-all duration-300 shadow-sm"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-kod-earth">

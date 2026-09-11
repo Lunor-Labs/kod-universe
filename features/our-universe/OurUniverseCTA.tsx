@@ -37,7 +37,7 @@ export function OurUniverseCTA() {
                   Whether you have a spark or need help finding one, we&apos;re
                   here to turn ideas into impact.
                 </p>
-                <Link href="/connect" className="btn-primary flex-shrink-0">
+                <Link href="/contact-us" className="btn-primary flex-shrink-0">
                   <span>Start a Conversation</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} aria-hidden="true" />

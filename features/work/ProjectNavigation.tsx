@@ -16,7 +16,7 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
         <div className="grid grid-cols-2 gap-4">
           {prev ? (
             <Link
-              href={`/work/${prev.slug}`}
+              href={`/portfolio/${prev.slug}`}
               className="group flex items-center gap-4 p-4 rounded-xl hover:bg-kod-canvas transition-colors"
               aria-label={`Previous project: ${prev.title}`}
             >
@@ -40,7 +40,7 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
 
           {next && (
             <Link
-              href={`/work/${next.slug}`}
+              href={`/portfolio/${next.slug}`}
               className="group flex items-center gap-4 p-4 rounded-xl hover:bg-kod-canvas transition-colors text-right justify-end ml-auto"
               aria-label={`Next project: ${next.title}`}
             >

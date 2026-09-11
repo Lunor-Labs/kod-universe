@@ -21,7 +21,7 @@ export function ProjectCard({
 
   return (
     <Link
-      href={`/work/${project.slug}`}
+      href={`/portfolio/${project.slug}`}
       className={cn(
         "group block bg-white border border-border-warm/30 rounded overflow-hidden",
         "transition-colors duration-300",

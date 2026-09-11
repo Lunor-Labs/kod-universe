@@ -94,7 +94,7 @@ export function InfoCards({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <ScrollReveal variant="up" delay={0}>
             <Link
-              href="/our-universe"
+              href="/about-us"
               className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
@@ -145,7 +145,7 @@ export function InfoCards({
                     </h3>
                   </div>
                   <Link
-                    href="/capabilities"
+                    href="/services"
                     className="mt-6 w-12 h-12 rounded-full border border-border-warm flex items-center justify-center hover:border-signal-orange hover:text-signal-orange bg-white transition-colors duration-200"
                     aria-label="View our process"
                   >
@@ -183,7 +183,7 @@ export function InfoCards({
                 className="h-full"
               >
                 <Link
-                  href={`/work/${currentProject.slug}`}
+                  href={`/portfolio/${currentProject.slug}`}
                   className="group relative bg-white rounded p-6 lg:p-8 
                              overflow-hidden hover:border-dust-rose transition-all duration-300 
                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full select-none"
@@ -290,7 +290,7 @@ export function InfoCards({
 
           <ScrollReveal variant="up" delay={0.24}>
             <Link
-              href="/connect"
+              href="/contact-us"
               className="group relative bg-white rounded p-6 lg:p-8 
                          overflow-hidden hover:border-dust-rose transition-all duration-300 
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
