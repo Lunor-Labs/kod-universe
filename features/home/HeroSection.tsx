@@ -11,17 +11,7 @@ const SLIDES = [
     title1: "Ancient Origins.",
     title2: "Impact.",
     titleHighlight: "Modern ",
-    description: (
-      <>
-        We believe creative forces arrive from the universe -{" "}
-        <br className="hidden md:block" />
-        carrying meaning, energy, and responsibility.
-        <br className="hidden md:block" />
-        We transform these seeds of ideas into modern
-        <br className="hidden md:block" />
-        brands, stories, and experiences that matter.
-      </>
-    ),
+    description: "We believe creative forces arrive from the universe — carrying meaning, energy, and responsibility. We transform these seeds of ideas into modern brands, stories, and experiences that matter.",
     image: "/main/hero1.webp",
     linkText: "Explore our work",
     linkHref: "/portfolio",
@@ -31,17 +21,7 @@ const SLIDES = [
     title1: "Creative Forces.",
     title2: "Form.",
     titleHighlight: "Taking ",
-    description: (
-      <>
-        We listen to the universe, observing signals and shifts.
-        <br className="hidden md:block" />
-        Aligning raw potential with human truth, we shape
-        <br className="hidden md:block" />
-        brand identities that resonate deeply and endure
-        <br className="hidden md:block" />
-        across changing landscapes and eras.
-      </>
-    ),
+    description: "We listen to the universe, observing signals and shifts. Aligning raw potential with human truth, we shape brand identities that resonate deeply and endure across changing landscapes and eras.",
     image: "/assets/hero.webp",
     linkText: "See our capabilities",
     linkHref: "/services",
@@ -51,17 +31,7 @@ const SLIDES = [
     title1: "Let's Create",
     title2: "Next.",
     titleHighlight: "What's ",
-    description: (
-      <>
-        Whether you have a spark or need help finding one,
-        <br className="hidden md:block" />
-        we are here to turn ideas into tangible impact.
-        <br className="hidden md:block" />
-        Join us in building experiences that connect,
-        <br className="hidden md:block" />
-        inspire, and leave a lasting mark.
-      </>
-    ),
+    description: "Whether you have a spark or need help finding one, we are here to turn ideas into tangible impact. Join us in building experiences that connect, inspire, and leave a lasting mark.",
     image: "/assets/our-story-cta.webp",
     linkText: "Start a conversation",
     linkHref: "/contact-us",

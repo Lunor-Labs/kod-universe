@@ -1,7 +1,5 @@
 import type { Capability, ServiceGroup, ProcessStep } from "@/types/capability";
 
-/* ── 3 Main Services ── */
-
 export const serviceGroups: ServiceGroup[] = [
   {
     id: "marketing",
@@ -215,9 +213,128 @@ export const serviceGroups: ServiceGroup[] = [
       },
     ],
   },
+  {
+    id: "motion-3d",
+    number: "04",
+    title: "3D & Motion Graphics",
+    tagline: "3D Animation, Motion Design, Brand Films, Visual Effects",
+    description:
+      "Cinematic 3D animation and motion graphics that bring brands to life — from animated brand films and product visualisations to social-first motion content.",
+    iconName: "visual-storytelling",
+    tags: ["3D Animation", "Motion Design", "Brand Films", "Product Visualisation"],
+    contentSections: [
+      {
+        title: "3D Animation & Visualisation",
+        iconName: "visual-storytelling",
+        description:
+          "Photorealistic 3D renders and animated sequences that showcase products, spaces, and concepts with cinematic precision.",
+        deliverables: [
+          "3D modelling and scene composition",
+          "Product and architectural visualisation",
+          "Animated walkthroughs and fly-throughs",
+          "Still renders and keyframe sequences",
+        ],
+      },
+      {
+        title: "Motion Graphics & Brand Films",
+        iconName: "web-design",
+        description:
+          "Dynamic motion graphics and brand films engineered for impact — from hero showreels to platform-native social content.",
+        deliverables: [
+          "Brand film concept and script direction",
+          "Motion graphics and kinetic typography",
+          "Social-first animated content",
+          "Visual effects and compositing",
+          "Music and sound design coordination",
+        ],
+      },
+    ],
+    services: [
+      {
+        id: "motion-3d",
+        slug: "motion-3d",
+        title: "3D & Motion Graphics",
+        iconName: "visual-storytelling",
+        description:
+          "Cinematic 3D animation and motion graphics that bring brands to life.",
+        longDescription:
+          "From photorealistic 3D product visualisations to animated brand films and social-first motion content, we create moving images that command attention, build desire, and communicate what static visuals cannot.",
+        deliverables: [
+          "3D modelling and product visualisation",
+          "Animated brand films and showreels",
+          "Social-first motion content",
+          "Motion graphics and kinetic typography",
+          "Visual effects and compositing",
+        ],
+        relatedProjectSlugs: [
+          "union-assurance-commercial",
+          "digital-art-visual-explorations",
+        ],
+      },
+    ],
+  },
+  {
+    id: "spatial-design",
+    number: "05",
+    title: "Architectural & Spatial Design",
+    tagline: "Interior Design, Spatial Branding, 3D Spatial Visualisation",
+    description:
+      "Brand-led interior and spatial design concepts that transform physical environments into immersive brand experiences — visualised in detailed 3D.",
+    iconName: "architecture-designs",
+    tags: ["Interior Design", "Spatial Branding", "3D Visualisation", "Wayfinding"],
+    contentSections: [
+      {
+        title: "Spatial Branding & Interior Design",
+        iconName: "architecture-designs",
+        description:
+          "Interior design concepts rooted in brand strategy — creating spaces where every material, colour, and form communicates your identity.",
+        deliverables: [
+          "Spatial concept and brand alignment workshop",
+          "Interior layout and flow planning",
+          "Material palette, finish and lighting specification",
+          "Wayfinding and environmental signage design",
+          "Furniture and fixture selection",
+        ],
+      },
+      {
+        title: "3D Spatial Visualisation",
+        iconName: "architecture-designs",
+        description:
+          "Photorealistic 3D visualisations that communicate spatial design intent before a single wall is built.",
+        deliverables: [
+          "3D spatial modelling and scene-building",
+          "Photorealistic interior renders",
+          "Animated walkthroughs",
+          "Client presentation decks with render stills",
+        ],
+      },
+    ],
+    services: [
+      {
+        id: "spatial-design",
+        slug: "spatial-design",
+        title: "Architectural & Spatial Design",
+        iconName: "architecture-designs",
+        description:
+          "Brand-led interior and spatial design that transforms environments into immersive brand experiences.",
+        longDescription:
+          "We bridge brand identity and physical space — designing interiors, retail environments, and hospitality concepts where every material, texture, and spatial flow is an extension of your brand. All concepts are delivered as detailed 3D visualisations so clients can experience the space before it's built.",
+        deliverables: [
+          "Spatial concept and brand alignment",
+          "Interior layout and flow planning",
+          "Material, finish and lighting specification",
+          "Photorealistic 3D interior renders",
+          "Animated spatial walkthroughs",
+          "Wayfinding and environmental signage",
+        ],
+        relatedProjectSlugs: [
+          "ibiza-mirissa-architectural-design",
+        ],
+      },
+    ],
+  },
 ];
 
-/* ── Primary 3 services + backward compatibility aliases ── */
 
 const legacyAliases: Capability[] = [
   {

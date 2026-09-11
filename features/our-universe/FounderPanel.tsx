@@ -77,6 +77,15 @@ export function FounderPanel() {
                       <LinkedinIcon size={13} />
                     </a>
                     <a
+                      href="https://www.linkedin.com/in/ishara-kod/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ishara Kodithuwakku on LinkedIn"
+                      className="w-8 h-8 rounded-full bg-kod-mist border border-kod-border flex items-center justify-center text-kod-earth hover:text-kod-orange hover:border-kod-orange transition-colors"
+                    >
+                      <LinkedinIcon size={13} />
+                    </a>
+                    <a
                       href="https://www.facebook.com/kod.universe"
                       target="_blank"
                       rel="noopener noreferrer"

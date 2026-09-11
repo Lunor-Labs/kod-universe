@@ -3,27 +3,27 @@ import Image from "next/image";
 const steps = [
   {
     n: 1,
-    title: "Curiosity",
-    body: "We listen to the universe-observing signals, shifts, and stories waiting to be discovered.",
-    icon: "/icons/journey/curiosity.webp",
+    title: "Discover",
+    body: "We dive deep into your world — observing signals, shifts, and the stories waiting to be told.",
+    icon: "/icons/discover-icon.webp",
   },
   {
     n: 2,
-    title: "Purpose",
-    body: "We find meaning in the spark-aligning it with truth, intention, and human need.",
-    icon: "/icons/journey/purpose.webp",
+    title: "Define",
+    body: "We find meaning in the spark — aligning it with truth, intention, and human need to shape clear direction.",
+    icon: "/icons/define.webp",
   },
   {
     n: 3,
-    title: "Imagination",
-    body: "We shape the idea into form-through strategy, storytelling, and inspired design.",
-    icon: "/icons/journey/imagination.webp",
+    title: "Create",
+    body: "We shape the idea into form — through strategy, storytelling, and inspired design that connects.",
+    icon: "/icons/create.webp",
   },
   {
     n: 4,
-    title: "Impact",
-    body: "We launch experiences that connect, inspire, and create ripples that last.",
-    icon: "/icons/journey/impact.webp",
+    title: "Deliver",
+    body: "We launch experiences that inspire, connect, and create ripples that last beyond the moment.",
+    icon: "/icons/deliver.webp",
   },
 ];
 

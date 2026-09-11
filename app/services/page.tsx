@@ -14,7 +14,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { serviceGroups, processSteps } from "@/data/capabilities";
 import { projects } from "@/data/projects";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
-import { ProcessSection } from "@/features/home/ProcessSection";
 
 export const metadata: Metadata = {
   title: "Capabilities",
@@ -89,7 +88,7 @@ export default function CapabilitiesPage() {
         </section>
 
         <section
-          className="section-padding-top"
+          className="section-padding"
           aria-label="Our creative services"
         >
           <div className="container-site">
@@ -187,7 +186,6 @@ export default function CapabilitiesPage() {
             </div>
           </div>
         </section>
-        <ProcessSection />
         <section className="section-padding-bottom" aria-label="What clients receive">
           <div className="container-site">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

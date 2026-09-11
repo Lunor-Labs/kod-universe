@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/features/home/HeroSection";
 import { ShowreelSection } from "@/features/home/ShowreelSection";
-import { FeaturedProjects } from "@/features/home/FeaturedProjects";
 import { ServicesOverview } from "@/features/home/ServicesOverview";
+import { StudioSection } from "@/features/home/StudioSection";
 import { WhyUsSection } from "@/features/home/WhyUsSection";
-import { ProcessSection } from "@/features/home/ProcessSection";
 import { InfoCards } from "@/features/home/InfoCards";
 import { Testimonials } from "@/features/home/Testimonials";
 import { ContactCTA } from "@/features/home/ContactCTA";
@@ -50,15 +49,14 @@ export default function HomePage() {
       </div>
       <div className="relative z-10">
         <HeroSection />
-        <FeaturedProjects projects={projects} />
         <ServicesOverview />
-
-        <ProcessSection />
-        <ShowreelSection />
-        <InfoCards featuredProject={featuredProject} projects={projects} />
+        <StudioSection projects={projects} />
         <MasonryGallerySection />
-        <Testimonials />
+        {/* <ShowreelSection /> */}
+        {/* <InfoCards featuredProject={featuredProject} projects={projects} /> */}
+
         <WhyUsSection />
+        <Testimonials />
         <FAQSection />
         <ContactCTA />
       </div>

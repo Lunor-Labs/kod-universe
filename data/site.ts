@@ -35,4 +35,6 @@ export const services = [
   { title: "Package Design", description: "Packaging that tells your story and sells." },
   { title: "Creative Work", description: "Campaigns that engage and inspire." },
   { title: "Digital Experiences", description: "Smart strategy to guide your brand forward." },
+  { title: "3D & Motion Graphics", description: "Cinematic animation and motion design that brings brands to life." },
+  { title: "Architectural & Spatial Design", description: "Brand-led interior and spatial design visualised in 3D." },
 ];

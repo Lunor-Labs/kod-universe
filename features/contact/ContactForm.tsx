@@ -9,6 +9,8 @@ const SERVICE_OPTIONS = [
   "Package Design",
   "Creative Work",
   "Digital Experiences",
+  "3D & Motion Graphics",
+  "Architectural & Spatial Design",
   "I'm not sure yet",
 ];
 
@@ -25,11 +27,8 @@ interface FormErrors {
   message?: string;
 }
 
-// ✦ Isolated submit function - replace this with an API call in future
 async function submitProjectEnquiry(data: FormData): Promise<void> {
-  // Simulate API request latency
   await new Promise<void>((resolve) => setTimeout(resolve, 1500));
-  // Future: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
   console.log("[ContactForm] Enquiry submitted:", data);
 }
 
