@@ -12,6 +12,7 @@ import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import Image from "next/image";
+import { ProcessSection } from "@/features/home/ProcessSection";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.tagline}`,
@@ -43,7 +44,7 @@ export default function HomePage() {
           src="/main/wall-main-image-04.webp"
           alt=""
           fill
-          className="object-cover object-top"
+          className="object-cover object-bottom"
           priority
         />
       </div>
@@ -56,6 +57,7 @@ export default function HomePage() {
         {/* <InfoCards featuredProject={featuredProject} projects={projects} /> */}
 
         <WhyUsSection />
+        <ProcessSection />
         <Testimonials />
         <FAQSection />
         <ContactCTA />

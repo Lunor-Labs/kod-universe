@@ -969,7 +969,7 @@ export const projects: Project[] = [
       height: 941,
     },
     cardImage: {
-      src: "/portfolio/branding-identity/logo-design/area-6/area-6-1.webp",
+      src: "/portfolio/branding-identity/logo-design/area-6/area-6-fitness-products-showcase.webp",
       alt: "Area 6 Brand Logo Mark",
       width: 1254,
       height: 1254,

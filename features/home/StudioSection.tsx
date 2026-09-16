@@ -82,125 +82,11 @@ export function StudioSection({ projects }: StudioSectionProps) {
   }
 
   return (
-    <section className="section-padding-top" aria-label="Studio origin and process">
+    <section
+      className="section-padding-top"
+      aria-label="Studio origin and process"
+    >
       <div className="container-site space-y-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="hidden sm:block lg:col-span-1 h-full">
-            <ScrollReveal variant="up">
-              <div className="relative  bg-white/80 rounded p-8 lg:p-10 flex flex-col justify-center min-h-[556px] overflow-hidden items-center">
-                <div
-                  className="absolute -right-10 -top-10 w-40 h-40 rounded-full border border-border-warm/50 opacity-40 pointer-events-none"
-                  aria-hidden="true"
-                />
-                <div
-                  className="absolute -right-4 -top-4 w-24 h-24 rounded-full border border-border-warm/30 opacity-30 pointer-events-none"
-                  aria-hidden="true"
-                />
-
-                <div className="relative z-10 flex  gap-6">
-                  <div className="flex-1">
-                    {/* <p className="eyebrow mb-4">Our origin. Your impact.</p> */}
-                    <h2 className="heading-section text-earth mb-4 text-balance">
-                      We are messengers of{" "}
-                      <em className="font-serif italic font-normal">
-                        creative forces.
-                      </em>
-                    </h2>
-                    <p className="text-body text-kod-earth/85 mb-8 max-w-xs">
-                      From the vast universe, ideas spark - seeds of potential.
-                      We receive them with purpose and shape them into work that
-                      connects, inspires, and leaves a lasting mark.
-                    </p>
-                    <Link href="/about-us" className="btn-secondary">
-                      <span>Our Story</span>
-                      <span className="btn-badge">
-                        <ArrowRight size={13} aria-hidden="true" />
-                      </span>
-                    </Link>
-                  </div>
-                  {/* <div className="flex-shrink-0 w-28 h-28 sm:w-72 sm:h-72 self-center">
-                  <Image
-                    src="/main/circle.webp"
-                    alt=""
-                    width={300}
-                    height={300}
-                    className="object-contain animate-spin-slower"
-                    aria-hidden="true"
-                  />
-                </div> */}
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-          <div className="lg:col-span-2 h-full">
-            <ScrollReveal variant="up" delay={0.1}>
-              <div className="relative bg-white/80 rounded p-8 lg:p-10 h-full">
-                <SectionLabel>Our process</SectionLabel>
-                <h3 className="heading-section text-earth mb-8 mt-1 text-balance">
-                  A clear path from spark to{" "}
-                  <em className="font-serif italic font-normal">impact.</em>
-                </h3>
-
-                <motion.ol
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4"
-                  role="list"
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.15 }}
-                  variants={{
-                    hidden: { opacity: 0 },
-                    show: {
-                      opacity: 1,
-                      transition: { staggerChildren: 0.15 },
-                    },
-                  }}
-                >
-                  {steps.map((step, index) => (
-                    <motion.li
-                      key={step.number}
-                      className="flex flex-col items-start"
-                      variants={{
-                        hidden: { opacity: 0, x: -16 },
-                        show: {
-                          opacity: 1,
-                          x: 0,
-                          transition: {
-                            duration: 0.45,
-                            ease: [0.16, 1, 0.3, 1],
-                          },
-                        },
-                      }}
-                    >
-                      <div className="flex items-center justify-center overflow-hidden">
-                        <Image
-                          src={step.iconPath}
-                          alt={step.title}
-                          width={120}
-                          height={120}
-                          className="object-contain"
-                        />
-                        <div className="flex items-center gap-2">
-                          <span className="text-signal-orange font-bold text-sm tracking-wider">
-                            {step.number}
-                          </span>
-                          <h4 className="heading-item text-earth tracking-[0.05em] uppercase">
-                            {step.title}
-                          </h4>
-                        </div>
-                      </div>
-                      <div className="flex">
-                        <p className="text-body text-kod-earth/80">
-                          {step.description}
-                        </p>
-                      </div>
-                    </motion.li>
-                  ))}
-                </motion.ol>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-
         {featured && (
           <div>
             <ScrollReveal variant="up" delay={0.05}>
@@ -224,7 +110,82 @@ export function StudioSection({ projects }: StudioSectionProps) {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="md:hidden -mx-4 px-4">
+              <div
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4
+                           [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+                <motion.div
+                  className="snap-center shrink-0 w-[85vw]"
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
+                >
+                  <ProjectCard
+                    project={featured}
+                    priority={true}
+                    size="default"
+                    className="h-full"
+                  />
+                </motion.div>
+
+                {otherProjects.slice(0, 5).map((project, i) => (
+                  <motion.div
+                    key={project.id}
+                    className="snap-center shrink-0 w-[85vw]"
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      duration: 0.45,
+                      delay: i * 0.08,
+                      ease: "easeOut",
+                    }}
+                  >
+                    <ProjectCard
+                      project={project}
+                      priority={false}
+                      size="default"
+                      className="h-full"
+                    />
+                  </motion.div>
+                ))}
+
+                <motion.div
+                  className="snap-center shrink-0 w-[85vw] flex items-center justify-center"
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.45, delay: 0.48, ease: "easeOut" }}
+                >
+                  <Link
+                    href="/portfolio"
+                    className="group w-full h-full min-h-[200px] bg-earth rounded flex flex-col items-center justify-center gap-3 p-8 text-center hover:bg-signal-orange transition-colors duration-300"
+                  >
+                    <div className="w-10 h-10 rounded-full border-2 border-canvas/40 flex items-center justify-center group-hover:border-white transition-all duration-300">
+                      <ArrowRight
+                        size={18}
+                        className="text-canvas"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span className="text-sm font-bold tracking-widest uppercase text-canvas/70 group-hover:text-white/80 transition-colors">
+                      See more
+                    </span>
+                    <span className="heading-card text-canvas group-hover:text-white transition-colors">
+                      View all projects
+                    </span>
+                  </Link>
+                </motion.div>
+              </div>
+
+              <p className="text-center text-xs text-earth/40 tracking-widest uppercase mt-1 select-none">
+                swipe to explore
+              </p>
+            </div>
+
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="lg:col-span-2 h-full">
                 <ScrollReveal variant="up" delay={0}>
                   <ProjectCard
@@ -258,7 +219,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
               </AnimatePresence>
             </div>
 
-            <div className="mt-6 flex justify-center sm:hidden">
+            <div className="mt-6 hidden sm:flex justify-center md:hidden">
               <Link href="/portfolio" className="btn-link">
                 <span>View all projects</span>
                 <span className="btn-icon-circle">

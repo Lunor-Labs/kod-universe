@@ -40,12 +40,7 @@ export function ProjectCard({
           src={image.src}
           alt={image.alt}
           fill
-          sizes={
-            size === "large"
-              ? "(max-width: 768px) 100vw, 50vw"
-              : "(max-width: 768px) 100vw, 33vw"
-          }
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-contain transition-transform duration-300"
           priority={priority}
         />
         <div
