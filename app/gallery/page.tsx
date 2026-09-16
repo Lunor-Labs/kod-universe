@@ -105,7 +105,7 @@ export default function GalleryPage() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                 <div
-                  className={`lg:col-span-6 h-[300px] lg:h-[400px] w-full relative overflow-hidden rounded bg-earth shadow-xl ${index % 2 !== 0 ? "lg:order-2" : ""}`}
+                  className={`lg:col-span-6 h-[300px] lg:h-[400px] w-full relative overflow-hidden rounded  ${index % 2 !== 0 ? "lg:order-2" : ""}`}
                 >
                   <Image
                     src={category.image}
@@ -114,7 +114,6 @@ export default function GalleryPage() {
                     className="object-contain object-center transition-transform duration-[2s] ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-earth/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
                 <div
                   className={`lg:col-span-6 flex flex-col justify-center ${index % 2 !== 0 ? "lg:order-1" : ""}`}

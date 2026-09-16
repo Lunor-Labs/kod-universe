@@ -421,3 +421,120 @@ export const galleryItems: GalleryItem[] = [
     projectTitle: "Union Assurance Commercial Storytelling",
   },
 ];
+
+export interface GalleryCategoryConfig {
+  slug: string;
+  eyebrow: string;
+  title: string;
+  titleItalic: string;
+  description: string;
+  heroImage: string;
+  metaTitle: string;
+  metaDescription: string;
+  subTitle?: string;
+  categories?: { label: string; description: string; badge?: string; id?: string }[];
+  comingSoonDrops?: {
+    id: string;
+    title: string;
+    description: string;
+    tag: string;
+    image: string;
+    status: string;
+  }[];
+}
+
+export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
+  art: {
+    slug: "art",
+    eyebrow: "KOD GALLERY / ART",
+    title: "Original Art",
+    titleItalic: "& Prints.",
+    description:
+      "Artwork, prints and digital illustrations created by KoD — each piece rooted in story, process and intention.",
+    heroImage: "/gallery/art.png",
+    metaTitle: "Art & Prints — KoD Gallery",
+    metaDescription:
+      "Original artwork, art prints, digital illustrations and limited editions by KOD Universe. Each piece is created with intention and connected to a story.",
+    subTitle: "Original Artwork • Art Prints • Digital Art • Limited Editions",
+  },
+  merch: {
+    slug: "merch",
+    eyebrow: "KOD GALLERY / MERCH",
+    title: "Merch",
+    titleItalic: "& Objects.",
+    description:
+      "Apparel, creative objects and accessories that carry the KoD universe — things people actually want to own and wear.",
+    heroImage: "/gallery/merch.png",
+    metaTitle: "Merch & Objects — KoD Gallery",
+    metaDescription:
+      "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
+    categories: [
+      { label: "Apparel", description: "T-shirts, hoodies, and wearable pieces from KoD." },
+      { label: "Posters", description: "Art prints and graphic posters from the studio." },
+      { label: "Creative Objects", description: "One-of-a-kind objects with a KoD story." },
+      { label: "Accessories / Collectibles", description: "Hats, bags, and collectible items." },
+    ],
+  },
+  drops: {
+    slug: "drops",
+    eyebrow: "KOD GALLERY / DROPS",
+    title: "Limited",
+    titleItalic: "Drops.",
+    description:
+      "Available for a moment, gone forever. Limited releases, seasonal collections, artist collaborations and KoD Originals.",
+    heroImage: "/gallery/drops.png",
+    metaTitle: "Limited Drops — KoD Gallery",
+    metaDescription:
+      "KoD Gallery limited releases, seasonal collections, artist collaborations and KoD Originals. Available for a moment, gone forever.",
+    categories: [
+      {
+        label: "Limited Releases",
+        description: "One-off pieces, numbered editions and time-sensitive releases.",
+        badge: "DROPS",
+      },
+      {
+        label: "Seasonal Collections",
+        description: "Curated collections tied to seasons, moments and cultural events.",
+        badge: "SEASONAL",
+      },
+      {
+        label: "Artist Collaborations",
+        description: "Co-created pieces with artists, designers and cultural figures.",
+        badge: "COLLAB",
+        id: "collabs",
+      },
+      {
+        label: "KoD Originals",
+        description: "House-created pieces that come from the KoD creative studio directly.",
+        badge: "ORIGINAL",
+      },
+    ],
+    comingSoonDrops: [
+      {
+        id: "drop-001",
+        title: "KoD × Studio — Drop 001",
+        description: "The first official KoD Gallery drop. Limited to 50 pieces. Date TBA.",
+        tag: "UPCOMING DROP",
+        image: "/portfolio/digital-art/digital-art-1.webp",
+        status: "coming-soon",
+      },
+      {
+        id: "pissu-kanna-collab",
+        title: "Pissu Kanna Streetwear — Collab",
+        description: "The irreverent street mascot meets KoD design. Apparel and collectibles.",
+        tag: "COLLABORATION",
+        image: "/portfolio/pissu-kanna/mock.webp",
+        status: "coming-soon",
+      },
+      {
+        id: "ibiza-print-series",
+        title: "IBIZA Mirissa — Architecture Print Series",
+        description: "Architectural photography and 3D renders from the IBIZA Mirissa project, printed on archival paper.",
+        tag: "ART PRINT",
+        image: "/portfolio/digital-art/digital-art-3.webp",
+        status: "coming-soon",
+      },
+    ],
+  },
+};
+
