@@ -12,7 +12,7 @@ interface ProjectHeroShowcaseProps {
 export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcaseProps) {
   return (
     <section
-      className="relative pt-24 md:pt-32 pb-8 md:pb-12 bg-kod-canvas overflow-hidden"
+      className="relative pt-24 md:pt-28 pb-8 md:pb-12 bg-kod-canvas overflow-hidden"
       aria-label={`${project.title} project showcase`}
     >
       <div className="container-site relative z-10">
@@ -44,7 +44,7 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
               </span>
             </p>
 
-            <p className="text-lead text-kod-earth/85 mb-8 max-w-xl">
+            <p className="text-lead text-kod-earth/85 mb-4 max-w-3xl">
               {project.shortDescription}
             </p>
 
