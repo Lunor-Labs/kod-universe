@@ -50,7 +50,7 @@ export function OurUniverseHero() {
             </Link>
           </div>
 
-          <div className="lg:col-span-5 flex flex-col lg:items-end justify-center pt-12 lg:pt-0">
+          <div className="hidden  lg:col-span-5 md:flex flex-col lg:items-end justify-center pt-12 lg:pt-0">
             <div className="p-6 lg:p-0 rounded-lg max-w-xs text-left lg:text-right drop-shadow-sm">
               <div className="flex lg:justify-end mb-3">
                 <svg
@@ -63,7 +63,7 @@ export function OurUniverseHero() {
                   <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" />
                 </svg>
               </div>
-              <p className="font-editorial italic text-kod-canvas text-lg sm:text-xl leading-relaxed font-normal opacity-95">
+              <p className=" font-editorial italic text-kod-canvas text-lg sm:text-xl leading-relaxed font-normal opacity-95">
                 &ldquo;In every era, creativity is the bridge between what is
                 and what could be.&rdquo;
               </p>

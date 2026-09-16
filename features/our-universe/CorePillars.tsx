@@ -1,14 +1,13 @@
-import Link from "next/link";
-import { ArrowRight, HandFist, University } from "lucide-react";
+import { HandFist, University } from "lucide-react";
 
 export function CorePillars() {
   return (
-    <section className="bg-kod-canvas py-12 md:py-16" aria-label="Core Pillars">
+    <section className="bg-kod-canvas section-padding-top" aria-label="Core Pillars">
       <div className="container-site">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-kod-border">
-          <div className="lg:px-8 first:pl-0 flex flex-col justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+          <div className="lg:px-8 first:pl-0 flex flex-col items-center md:items-start text-center md:text-left justify-between">
             <div>
-              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center mx-auto md:mx-0">
                 <svg
                   className="w-16 h-16"
                   viewBox="0 0 40 40"
@@ -27,18 +26,11 @@ export function CorePillars() {
                 move people and shape a better tomorrow.
               </p>
             </div>
-            <Link
-              href="/services"
-              aria-label="Learn about our mission"
-              className="btn-icon"
-            >
-              <ArrowRight size={13} aria-hidden="true" />
-            </Link>
           </div>
 
-          <div className="lg:px-8 flex flex-col justify-between">
+          <div className="lg:px-8 flex flex-col items-center md:items-start text-center md:text-left justify-between">
             <div>
-              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center mx-auto md:mx-0">
                 <University className="w-10 h-10" />
               </div>
               <h3 className="pillar-heading mb-3">Our Philosophy</h3>
@@ -48,22 +40,15 @@ export function CorePillars() {
                 design, and story into powerful experiences.
               </p>
             </div>
-            <Link
-              href="/services"
-              aria-label="Learn about our philosophy"
-              className="btn-icon"
-            >
-              <ArrowRight size={13} aria-hidden="true" />
-            </Link>
           </div>
 
-          <div className="lg:px-8 flex flex-col justify-between">
+          <div className="lg:px-8 flex flex-col items-center md:items-start text-center md:text-left justify-between">
             <div>
-              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center mx-auto md:mx-0">
                 <HandFist className="w-10 h-10" />
               </div>
               <h3 className="pillar-heading mb-3">Our Values</h3>
-              <ul className="text-kod-earth/85 text-base font-medium leading-relaxed space-y-2 mb-6">
+              <ul className="text-kod-earth/85 text-base font-medium leading-relaxed space-y-2 mb-6 inline-flex flex-col items-start">
                 {[
                   "Curiosity over convention",
                   "Purpose over popularity",
@@ -78,18 +63,11 @@ export function CorePillars() {
                 ))}
               </ul>
             </div>
-            <Link
-              href="/services"
-              aria-label="Learn about our values"
-              className="btn-icon"
-            >
-              <ArrowRight size={13} aria-hidden="true" />
-            </Link>
           </div>
 
-          <div className="lg:px-8 last:pr-0 flex flex-col justify-between">
+          <div className="lg:px-8 last:pr-0 flex flex-col items-center md:items-start text-center md:text-left justify-between">
             <div>
-              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center">
+              <div className="w-16 h-16 mb-5 text-kod-orange flex items-center justify-center mx-auto md:mx-0">
                 <svg
                   className="w-16 h-16"
                   viewBox="0 0 40 40"
@@ -110,13 +88,6 @@ export function CorePillars() {
                 resonate, and endure.
               </p>
             </div>
-            <Link
-              href="/services"
-              aria-label="Learn about our approach"
-              className="btn-icon"
-            >
-              <ArrowRight size={13} aria-hidden="true" />
-            </Link>
           </div>
         </div>
       </div>

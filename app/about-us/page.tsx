@@ -22,7 +22,7 @@ export default function OurUniversePage() {
         <CorePillars />
         <TheJourney />
         <FounderPanel />
-        <MasonryGallerySection />
+        {/* <MasonryGallerySection /> */}
         <OurUniverseCTA />
       </div>
       <DecorativeBlossoms />
