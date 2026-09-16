@@ -10,6 +10,7 @@ export const siteConfig: SiteConfig = {
     { label: "PORTFOLIO", href: "/portfolio" },
     { label: "SERVICES", href: "/services" },
     { label: "OUR STORY", href: "/about-us" },
+    { label: "JOURNAL", href: "/blog" },
     { label: "CONTACT", href: "/contact-us" },
   ],
   socialLinks: [
