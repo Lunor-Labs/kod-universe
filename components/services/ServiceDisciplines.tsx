@@ -27,7 +27,7 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
                 {serviceTitle}.
               </em>
             </h2>
-            <p className="text-body text-kod-text-2">
+            <p className="text-base text-kod-text-2">
               We eliminate disjointed agency silos by clustering specialized creative capabilities into one seamless, end-to-end discipline.
             </p>
           </ScrollReveal>

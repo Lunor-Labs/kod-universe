@@ -102,9 +102,9 @@ export default async function ServiceDetailPage({
         items={config.deliverables}
       />
 
-      <ServiceProcess steps={config.process} />
+      {/* <ServiceProcess steps={config.process} /> */}
 
-      <ServiceCaseStudy caseStudy={config.featuredCaseStudy} />
+      {/* <ServiceCaseStudy caseStudy={config.featuredCaseStudy} /> */}
 
       <ServiceSelectedWork
         projects={config.selectedWorkProjects || selectedWorkProjects}

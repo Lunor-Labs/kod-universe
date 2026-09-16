@@ -54,7 +54,7 @@ export function ServiceSelectedWork({
             <ScrollReveal key={project.id} variant="up" delay={idx * 0.1}>
               <Link
                 href={`/portfolio/${project.slug}`}
-                className="group bg-white border border-kod-border rounded overflow-hidden block hover:border-kod-orange transition-all duration-300 shadow-sm"
+                className="group bg-white rounded overflow-hidden block transition-all duration-300 shadow-xs"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-kod-earth">
                   <Image

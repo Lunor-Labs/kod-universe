@@ -19,7 +19,7 @@ export function ServicePhilosophy({
 }: ServicePhilosophyProps) {
   return (
     <section
-      className="section-padding-top bg-transparent relative overflow-hidden"
+      className="pt-6 bg-transparent relative overflow-hidden"
       aria-label="Brand Philosophy and Symbol Evolution"
     >
       <div className="container-site">
@@ -39,21 +39,21 @@ export function ServicePhilosophy({
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-body text-kod-text leading-relaxed border-t border-kod-border/70">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 text-body text-kod-text leading-relaxed">
                 <p>{col1}</p>
                 <p>{col2}</p>
               </div>
-              <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-wrap sm:flex-nowrap items-center justify-around sm:justify-between text-sm sm:text-base tracking-widest font-semibold uppercase text-kod-earth gap-4">
+              <div className="mt-8 sm:mt-12  flex flex-wrap sm:flex-nowrap items-center justify-around sm:justify-between text-sm sm:text-base tracking-widest font-semibold uppercase text-kod-earth gap-4">
                 <div className="flex items-center gap-2">
                   <Sun size={26} className="text-kod-orange flex-shrink-0" />
                   <span>Meaning</span>
                 </div>
-                <div className="hidden sm:block flex-1 mx-4 h-[1px] border-t border-dashed border-kod-border" />
+                <div className="hidden sm:block flex-1 mx-4 " />
                 <div className="flex items-center gap-2">
                   <Sliders size={26} className="text-kod-orange flex-shrink-0" />
                   <span>Memory</span>
                 </div>
-                <div className="hidden sm:block flex-1 mx-4 h-[1px] border-t border-dashed border-kod-border" />
+                <div className="hidden sm:block flex-1 mx-4" />
                 <div className="flex items-center gap-2">
                   <Compass size={26} className="text-kod-orange flex-shrink-0" />
                   <span>Momentum</span>

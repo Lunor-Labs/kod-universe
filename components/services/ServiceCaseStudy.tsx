@@ -6,9 +6,16 @@ import { type FeaturedCaseStudy } from "./types";
 
 interface ServiceCaseStudyProps {
   caseStudy: FeaturedCaseStudy;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
-export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
+export function ServiceCaseStudy({
+  caseStudy,
+  ctaLabel = "EXPLORE CASE STUDY",
+  ctaHref,
+}: ServiceCaseStudyProps) {
+  const targetHref = ctaHref || `/portfolio/${caseStudy.slug}`;
   return (
     <section
       className="section-padding bg-kod-black text-white relative overflow-hidden"
@@ -78,10 +85,10 @@ export function ServiceCaseStudy({ caseStudy }: ServiceCaseStudyProps) {
               </div>
 
               <Link
-                href={`/portfolio/${caseStudy.slug}`}
+                href={targetHref}
                 className="group inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-7 py-3.5 rounded-full font-metropolis font-semibold text-sm tracking-[0.15em] uppercase hover:bg-white hover:text-kod-black transition-all shadow-md"
               >
-                <span>EXPLORE CASE STUDY</span>
+                <span>{ctaLabel}</span>
                 <ArrowRight
                   size={13}
                   className="group-hover:translate-x-1 transition-transform"

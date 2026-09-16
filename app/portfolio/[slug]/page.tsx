@@ -8,6 +8,8 @@ import {
 import type { Project, ProjectPillar } from "@/types/project";
 import { ProjectHeroShowcase } from "@/features/work/ProjectHeroShowcase";
 import { ProjectCaseStudy } from "@/features/work/ProjectCaseStudy";
+import { ServiceCaseStudy } from "@/components/services/ServiceCaseStudy";
+import { getCaseStudyForProject } from "@/features/work/projectCaseStudyData";
 import { ProjectNavigation } from "@/features/work/ProjectNavigation";
 import { RelatedProjectsSection } from "@/features/work/RelatedProjectsSection";
 
@@ -122,10 +124,17 @@ export default async function ProjectDetailPage({ params }: Props) {
   const prev = idx > 0 ? projects[idx - 1] : null;
   const next = idx < projects.length - 1 ? projects[idx + 1] : null;
 
+  const caseStudy = getCaseStudyForProject(project);
+
   return (
     <>
       <ProjectHeroShowcase project={project} pillars={pillars} />
       <ProjectCaseStudy project={project} />
+      <ServiceCaseStudy
+        caseStudy={caseStudy}
+        ctaLabel="START YOUR TRANSFORMATION"
+        ctaHref="/contact-us"
+      />
       <ProjectNavigation prev={prev} next={next} />
       <RelatedProjectsSection projects={related} />
     </>
