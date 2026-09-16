@@ -34,7 +34,7 @@ export function ServicesOverview() {
               className="h-full"
             >
               <Link
-                href={`/capabilities/${group.id}`}
+                href={`/services/${group.id}`}
                 className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
                             hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
@@ -85,17 +85,31 @@ export function ServicesOverview() {
               </Link>
             </ScrollReveal>
           ))}
-        </div>
-        <ScrollReveal variant="up" delay={0.2}>
-          <div className="mt-14 text-center">
-            <Link href="/capabilities" className="btn-link">
-              <span>View all capabilities & deliverables</span>
-              <span className="btn-icon-circle">
-                <ArrowRight size={13} aria-hidden="true" />
-              </span>
+
+          <ScrollReveal variant="up" delay={5 * 0.12} className="h-full">
+            <Link
+              href="/services"
+              className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
+                          hover:shadow-xl hover:bg-earth/80 transition-all duration-300 overflow-hidden"
+            >
+              <div className="flex flex-col justify-center items-center gap-4">
+                <div className="w-12 h-12 group-hover:bg-signal-orange group-hover:border-signal-orange rounded-full border-2 border-earth flex items-center justify-center transition-all duration-300">
+                  <ArrowRight size={20} className="text-earth group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
+                </div>
+                <p className="text-sm font-bold tracking-widest uppercase text-earth group-hover:text-white/80 transition-colors">
+                  Full picture
+                </p>
+                <h3 className="heading-card text-earth group-hover:text-white transition-colors duration-200">
+                  View all capabilities &amp; deliverables
+                </h3>
+                <p className="text-body text-earth/85 group-hover:text-white/80 transition-colors">
+                  Explore every service, process, and deliverable we offer across all disciplines.
+                </p>
+              </div>
             </Link>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
+
       </div>
     </section>
   );

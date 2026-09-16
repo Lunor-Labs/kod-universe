@@ -52,7 +52,7 @@ export function ContactCTA() {
       aria-label="Contact and project inquiry"
     >
       <div className="container-site relative z-10">
-        <div className="bg-white/70 backdrop-blur-md rounded-xl p-8 sm:p-12 lg:p-14 shadow-soft">
+        <div className="bg-white/70 backdrop-blur-md rounded p-6 sm:p-12 lg:p-14 shadow-soft">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5 flex flex-col justify-between h-full">
               <ScrollReveal variant="left">
@@ -125,7 +125,7 @@ export function ContactCTA() {
 
             <div className="lg:col-span-7">
               <ScrollReveal variant="right" delay={0.15}>
-                <div className="bg-kod-white/30 backdrop-blur-md rounded-xl p-6 sm:p-8 md:p-10 shadow-xs relative overflow-hidden">
+                <div className="bg-kod-white/30 backdrop-blur-md rounded p-0 sm:p-8 md:p-10 sm:shadow-xs relative overflow-hidden">
                   {isSuccess ? (
                     <div className="text-center py-10 sm:py-14 animate-in fade-in zoom-in-95 duration-300">
                       <div className="w-16 h-16 rounded-full bg-kod-clay/15 text-kod-clay flex items-center justify-center mx-auto mb-5">

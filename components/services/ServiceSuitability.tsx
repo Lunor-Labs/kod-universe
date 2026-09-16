@@ -17,7 +17,7 @@ export function ServiceSuitability({ points, faqs }: ServiceSuitabilityProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5">
             <ScrollReveal variant="left">
-              <span className="text-sm font-semibold tracking-[0.25em] uppercase text-kod-orange mb-3 block">
+              <span className="text-sm font-semibold tracking-[0.1em] uppercase text-kod-orange mb-3 block">
                 IS THIS THE RIGHT SERVICE FOR YOU?
               </span>
 
@@ -28,7 +28,7 @@ export function ServiceSuitability({ points, faqs }: ServiceSuitabilityProps) {
                 </em>
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-1">
                 {points.map((point) => {
                   const Icon = point.icon;
                   return (
@@ -43,7 +43,7 @@ export function ServiceSuitability({ points, faqs }: ServiceSuitabilityProps) {
                         <h3 className="font-metropolis font-semibold text-base sm:text-lg text-kod-earth mb-1">
                           {point.title}
                         </h3>
-                        <p className="text-kod-text-2 text-sm leading-relaxed font-light">
+                        <p className="text-kod-text-2 text-base leading-relaxed font-light">
                           {point.description}
                         </p>
                       </div>

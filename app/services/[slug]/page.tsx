@@ -33,7 +33,7 @@ export async function generateMetadata({
   return {
     title: `${cap.title} | KOD Universe`,
     description: cap.longDescription,
-    alternates: { canonical: `/capabilities/${slug}` },
+    alternates: { canonical: `/services/${slug}` },
   };
 }
 
@@ -102,9 +102,9 @@ export default async function ServiceDetailPage({
         items={config.deliverables}
       />
 
-      <ServiceProcess steps={config.process} />
+      {/* <ServiceProcess steps={config.process} /> */}
 
-      <ServiceCaseStudy caseStudy={config.featuredCaseStudy} />
+      {/* <ServiceCaseStudy caseStudy={config.featuredCaseStudy} /> */}
 
       <ServiceSelectedWork
         projects={config.selectedWorkProjects || selectedWorkProjects}

@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
   {
@@ -36,11 +39,8 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section
-      className="section-padding"
-      aria-label="Our creative process"
-    >
-      <div className="container-site">
+    <section className="section-padding-top" aria-label="Our creative process">
+      {/* <div className="container-site">
         <div className="relative backdrop-blur-sm rounded p-4 bg-white/80">
           <div className="text-center mb-14">
             <SectionLabel>Our process</SectionLabel>
@@ -114,6 +114,124 @@ export function ProcessSection() {
               </motion.li>
             ))}
           </motion.ol>
+        </div>
+      </div> */}
+      <div className="container-site">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="hidden sm:block lg:col-span-1 h-full">
+            <ScrollReveal variant="up">
+              <div className="relative  bg-white/80 rounded p-8 lg:p-10 flex flex-col justify-center min-h-[556px] overflow-hidden items-center">
+                <div
+                  className="absolute -right-10 -top-10 w-40 h-40 rounded-full border border-border-warm/50 opacity-40 pointer-events-none"
+                  aria-hidden="true"
+                />
+                <div
+                  className="absolute -right-4 -top-4 w-24 h-24 rounded-full border border-border-warm/30 opacity-30 pointer-events-none"
+                  aria-hidden="true"
+                />
+
+                <div className="relative z-10 flex  gap-6">
+                  <div className="flex-1">
+                    {/* <p className="eyebrow mb-4">Our origin. Your impact.</p> */}
+                    <h2 className="heading-section text-earth mb-4 text-balance">
+                      We are messengers of{" "}
+                      <em className="font-serif italic font-normal">
+                        creative forces.
+                      </em>
+                    </h2>
+                    <p className="text-body text-kod-earth/85 mb-8 max-w-xs">
+                      From the vast universe, ideas spark - seeds of potential.
+                      We receive them with purpose and shape them into work that
+                      connects, inspires, and leaves a lasting mark.
+                    </p>
+                    <Link href="/about-us" className="btn-secondary">
+                      <span>Our Story</span>
+                      <span className="btn-badge">
+                        <ArrowRight size={13} aria-hidden="true" />
+                      </span>
+                    </Link>
+                  </div>
+                  {/* <div className="flex-shrink-0 w-28 h-28 sm:w-72 sm:h-72 self-center">
+                  <Image
+                    src="/main/circle.webp"
+                    alt=""
+                    width={300}
+                    height={300}
+                    className="object-contain animate-spin-slower"
+                    aria-hidden="true"
+                  />
+                </div> */}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          <div className="lg:col-span-2 h-full">
+            <ScrollReveal variant="up" delay={0.1}>
+              <div className="relative bg-white/80 rounded p-8 lg:p-10 h-full">
+                <SectionLabel>Our process</SectionLabel>
+                <h3 className="heading-section text-earth mb-8 mt-1 text-balance">
+                  A clear path from spark to{" "}
+                  <em className="font-serif italic font-normal">impact.</em>
+                </h3>
+
+                <motion.ol
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4"
+                  role="list"
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.15 }}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    show: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.15 },
+                    },
+                  }}
+                >
+                  {steps.map((step, index) => (
+                    <motion.li
+                      key={step.number}
+                      className="flex flex-col items-start"
+                      variants={{
+                        hidden: { opacity: 0, x: -16 },
+                        show: {
+                          opacity: 1,
+                          x: 0,
+                          transition: {
+                            duration: 0.45,
+                            ease: [0.16, 1, 0.3, 1],
+                          },
+                        },
+                      }}
+                    >
+                      <div className="flex items-center justify-center overflow-hidden">
+                        <Image
+                          src={step.iconPath}
+                          alt={step.title}
+                          width={120}
+                          height={120}
+                          className="object-contain"
+                        />
+                        <div className="flex items-center gap-2">
+                          <span className="text-signal-orange font-bold text-sm tracking-wider">
+                            {step.number}
+                          </span>
+                          <h4 className="heading-item text-earth tracking-[0.05em] uppercase">
+                            {step.title}
+                          </h4>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <p className="text-body text-kod-earth/80">
+                          {step.description}
+                        </p>
+                      </div>
+                    </motion.li>
+                  ))}
+                </motion.ol>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

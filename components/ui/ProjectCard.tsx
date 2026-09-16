@@ -21,7 +21,7 @@ export function ProjectCard({
 
   return (
     <Link
-      href={`/work/${project.slug}`}
+      href={`/portfolio/${project.slug}`}
       className={cn(
         "group block bg-white border border-border-warm/30 rounded overflow-hidden",
         "transition-colors duration-300",
@@ -32,19 +32,15 @@ export function ProjectCard({
     >
       <div
         className={cn(
-          "img-zoom relative aspect-square bg-[#FBF9F5] flex items-center justify-center overflow-hidden",
+          "img-zoom relative bg-[#FBF9F5] flex items-center justify-center overflow-hidden",
+          size === "large" ? "aspect-[2/1]" : "aspect-square"
         )}
       >
         <Image
           src={image.src}
           alt={image.alt}
           fill
-          sizes={
-            size === "large"
-              ? "(max-width: 768px) 100vw, 50vw"
-              : "(max-width: 768px) 100vw, 33vw"
-          }
-          className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+          className="object-contain transition-transform duration-300"
           priority={priority}
         />
         <div

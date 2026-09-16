@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/features/home/HeroSection";
 import { ShowreelSection } from "@/features/home/ShowreelSection";
-import { FeaturedProjects } from "@/features/home/FeaturedProjects";
 import { ServicesOverview } from "@/features/home/ServicesOverview";
+import { StudioSection } from "@/features/home/StudioSection";
 import { WhyUsSection } from "@/features/home/WhyUsSection";
-import { ProcessSection } from "@/features/home/ProcessSection";
 import { InfoCards } from "@/features/home/InfoCards";
 import { Testimonials } from "@/features/home/Testimonials";
 import { ContactCTA } from "@/features/home/ContactCTA";
@@ -13,6 +12,7 @@ import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import Image from "next/image";
+import { ProcessSection } from "@/features/home/ProcessSection";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.tagline}`,
@@ -44,21 +44,21 @@ export default function HomePage() {
           src="/main/wall-main-image-04.webp"
           alt=""
           fill
-          className="object-cover object-top"
+          className="object-cover object-bottom"
           priority
         />
       </div>
       <div className="relative z-10">
         <HeroSection />
-        <FeaturedProjects projects={projects} />
         <ServicesOverview />
-
-        <ProcessSection />
-        <ShowreelSection />
-        <InfoCards featuredProject={featuredProject} projects={projects} />
+        <StudioSection projects={projects} />
         <MasonryGallerySection />
-        <Testimonials />
+        {/* <ShowreelSection /> */}
+        {/* <InfoCards featuredProject={featuredProject} projects={projects} /> */}
+
         <WhyUsSection />
+        <ProcessSection />
+        <Testimonials />
         <FAQSection />
         <ContactCTA />
       </div>

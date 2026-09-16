@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ArrowRight } from "lucide-react";
 import { ProjectGrid } from "@/features/work/ProjectGrid";
 import { projects, getFeaturedProject } from "@/data/projects";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: "Selected Works",
   description:
     "Explore KOD Universe's portfolio of branding, social media, packaging, and digital experience projects.",
-  alternates: { canonical: "/work" },
+  alternates: { canonical: "/portfolio" },
 };
 
 export default function WorkPage() {
@@ -20,7 +21,7 @@ export default function WorkPage() {
     <main className="relative bg-canvas overflow-hidden">
       <div className="relative z-10">
         <section
-          className="relative overflow-hidden bg-earth flex items-center justify-center min-h-[70vh] pt-32 pb-20"
+          className="relative overflow-hidden bg-earth flex items-center justify-center min-h-[80vh] pt-32 pb-20"
           aria-label="Portfolio page hero"
         >
           <div className="absolute inset-0" aria-hidden="true">
@@ -42,14 +43,12 @@ export default function WorkPage() {
             <p className="eyebrow text-black mb-5">
               Seeds of ideas. Forged on earth.
             </p>
-            <h1 className="heading-hero text-black mb-6">
-              Selected Works.
-            </h1>
+            <h1 className="heading-hero text-black mb-6">Selected Works.</h1>
             <p className="text-lead text-black max-w-md mb-10">
               Ideas have energy. We transform them into visual stories that
               connect, inspire, and leave a lasting mark.
             </p>
-            <Link href="/connect" className="btn-primary">
+            <Link href="/contact-us" className="btn-primary">
               <span>Start a project</span>
               <span className="btn-badge">
                 <ArrowRight size={13} aria-hidden="true" />
@@ -58,16 +57,22 @@ export default function WorkPage() {
           </div>
 
           <div
-            className="absolute -bottom-1 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/30 to-transparent pointer-events-none z-20"
+            className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
             aria-hidden="true"
           />
         </section>
 
-        <section className="section-padding" aria-label="Portfolio projects">
-          <ProjectGrid projects={projects} featuredProject={featuredProject} />
+        <section className="section-padding-bottom sm:section-padding" aria-label="Portfolio projects">
+          <Suspense fallback={null}>
+            <ProjectGrid projects={projects} featuredProject={featuredProject} />
+          </Suspense>
         </section>
       </div>
-      <DecorativeBlossoms />
+      {/* <DecorativeBlossoms /> */}
     </main>
   );
 }

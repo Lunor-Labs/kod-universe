@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["creative studio", "branding", "social media", "package design", "digital experiences", "KOD Universe"],
+  keywords: ["creative studio", "branding", "social media", "package design", "digital experiences", "3D motion graphics", "architectural design", "spatial design", "interior design", "KOD Universe"],
   authors: [{ name: "KOD Universe", url: siteConfig.url }],
   creator: "KOD Universe",
   openGraph: {

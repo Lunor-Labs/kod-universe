@@ -6,7 +6,7 @@ export function OurUniverseCTA() {
   return (
     <section className="section-padding" aria-label="Call to action">
       <div className="container-site">
-        <div className="relative rounded-xl overflow-hidden">
+        <div className="relative rounded overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/assets/our-story-cta.webp"
@@ -33,11 +33,11 @@ export function OurUniverseCTA() {
               </div>
 
               <div className="lg:col-span-7 flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:justify-start">
-                <p className="text-body text-kod-earth/85 max-w-sm">
+                <p className="text-lg text-kod-earth max-w-sm">
                   Whether you have a spark or need help finding one, we&apos;re
                   here to turn ideas into impact.
                 </p>
-                <Link href="/connect" className="btn-primary flex-shrink-0">
+                <Link href="/contact-us" className="btn-primary flex-shrink-0">
                   <span>Start a Conversation</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} aria-hidden="true" />

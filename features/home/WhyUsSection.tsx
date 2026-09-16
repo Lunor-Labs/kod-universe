@@ -18,9 +18,9 @@ export function WhyUsSection() {
     >
       <div className="container-site">
         <ScrollReveal variant="up">
-          <div className="grid grid-cols-1 lg:grid-cols-12 rounded-xl overflow-hidden bg-[#171312] border border-white/10 shadow-2xl">
-            <div className="lg:col-span-3 p-8 lg:p-10 bg-[#120F0E] border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-between relative overflow-hidden min-h-[320px]">
-              <div className="absolute bottom-6 left-0 w-full h-64 opacity-15 invert mix-blend-screen pointer-events-none z-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 rounded overflow-hidden  border border-white/10 shadow-2xl">
+            <div className="lg:col-span-3 p-8 lg:p-10 bg-kod-earth flex flex-col justify-between relative overflow-hidden min-h-[320px]">
+              <div className="absolute -bottom-4 sm:bottom-6 left-40 sm:left-0 w-full h-64 opacity-15 invert mix-blend-screen pointer-events-none z-0">
                 <Image
                   src="/icons/web-hero-design-25.webp"
                   alt=""
@@ -47,19 +47,31 @@ export function WhyUsSection() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 relative aspect-[4/3] lg:aspect-auto min-h-[320px] bg-black border-b lg:border-b-0 lg:border-r border-white/10 overflow-hidden group">
-              <video
+            <div className="lg:col-span-4 relative aspect-square lg:aspect-auto min-h-[320px] bg-canvas overflow-hidden group">
+              {/* <video
                 src="/video/video-3.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              /> */}
+              <Image
+                src="/main/circle.webp"
+                alt=""
+                fill
+                className="absolute inset-0 w-full h-full object-contain animate-[spin_30s_linear_infinite] sm:p-8 [transform-origin:center]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 group-hover:opacity-60 transition-opacity" />
+              <div
+                className="absolute inset-0 transition-opacity"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)",
+                }}
+              />
             </div>
 
-            <div className="lg:col-span-5 p-8 lg:p-12 bg-[#171312] flex flex-col justify-between">
+            <div className="lg:col-span-5 p-8 lg:p-12 bg-kod-earth flex flex-col justify-between">
               <div>
                 <h3 className="heading-section font-editorial font-normal text-white mb-6">
                   From quiet idea <br />
@@ -95,7 +107,7 @@ export function WhyUsSection() {
 
               <div>
                 <Link
-                  href="/work"
+                  href="/portfolio"
                   className="btn-link !text-white hover:!text-kod-orange"
                 >
                   <span>View case study</span>

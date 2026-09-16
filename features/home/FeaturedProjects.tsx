@@ -89,7 +89,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               </div>
             )}
             <div className="mt-8 flex justify-start">
-              <Link href="/work" className="btn-link">
+              <Link href="/portfolio" className="btn-link">
                 <span>View all projects</span>
                 <span className="btn-icon-circle">
                   <ArrowRight size={13} aria-hidden="true" />
@@ -118,7 +118,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   receive them with purpose and shape them into work that
                   connects, inspires, and leaves a lasting mark.
                 </p>
-                <Link href="/our-universe" className="btn-secondary">
+                <Link href="/about-us" className="btn-secondary">
                   <span>Our Story</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} aria-hidden="true" />

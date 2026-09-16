@@ -302,7 +302,7 @@ export function MasonryGallerySection() {
 
                 {currentZoomItem.projectSlug && (
                   <Link
-                    href={`/work/${currentZoomItem.projectSlug}`}
+                    href={`/portfolio/${currentZoomItem.projectSlug}`}
                     onClick={() => setSelectedItemIndex(null)}
                     className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-kod-clay hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded flex-shrink-0"
                   >

@@ -114,7 +114,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               }}
             >
               <Link
-                href="/connect"
+                href="/contact-us"
                 onClick={onClose}
                 className="btn-primary w-fit"
               >

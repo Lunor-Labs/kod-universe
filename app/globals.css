@@ -187,7 +187,20 @@ h6 {
   background: var(--color-dust-rose);
 }
 
-/* ── Layout helpers ───────────────────────────── */
+:root {
+  --header-h: 64px;
+}
+@media (min-width: 768px) {
+  :root {
+    --header-h: 80px;
+  }
+}
+
+[id],
+section {
+  scroll-margin-top: var(--header-h);
+}
+
 .container-site {
   width: 100%;
   max-width: 1536px;

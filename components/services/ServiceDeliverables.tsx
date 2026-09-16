@@ -51,7 +51,7 @@ export function ServiceDeliverables({
               </p>
 
               <Link
-                href="/connect"
+                href="/contact-us"
                 className="btn-link !text-kod-orange hover:!text-kod-earth"
               >
                 <span>Request capabilities deck</span>

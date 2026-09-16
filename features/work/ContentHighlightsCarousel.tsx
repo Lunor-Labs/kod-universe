@@ -12,20 +12,27 @@ interface ContentHighlightsCarouselProps {
   tags?: string[];
 }
 
+const PAGE_SIZE = 6;
+
 export function ContentHighlightsCarousel({
   title = "Content Highlights",
   images,
   tags = [],
 }: ContentHighlightsCarouselProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [currentPage, setCurrentPage] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+
+  const totalPages = Math.max(1, Math.ceil(images.length / PAGE_SIZE));
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [images]);
 
   useEffect(() => {
     if (selectedIndex !== null) {
@@ -38,18 +45,30 @@ export function ContentHighlightsCarousel({
     };
   }, [selectedIndex]);
 
-  const checkScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+  const canPrevPage = currentPage > 0;
+  const canNextPage = currentPage < totalPages - 1;
+
+  const handlePrevPage = () => {
+    if (canPrevPage) setCurrentPage((prev) => prev - 1);
   };
 
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = direction === "left" ? -360 : 360;
-    scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
-    setTimeout(checkScroll, 350);
+  const handleNextPage = () => {
+    if (canNextPage) setCurrentPage((prev) => prev + 1);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 50 && canNextPage) {
+      handleNextPage();
+    } else if (diff < -50 && canPrevPage) {
+      handlePrevPage();
+    }
+    touchStartX.current = null;
   };
 
   const handlePrev = useCallback(() => {
@@ -84,6 +103,10 @@ export function ContentHighlightsCarousel({
   }, [selectedIndex, handlePrev, handleNext]);
 
   const currentImage = selectedIndex !== null ? images[selectedIndex] : null;
+  const currentImages = images.slice(
+    currentPage * PAGE_SIZE,
+    (currentPage + 1) * PAGE_SIZE,
+  );
 
   return (
     <div className="w-full pt-8 pb-4">
@@ -94,54 +117,80 @@ export function ContentHighlightsCarousel({
           </h2>
           <div className="h-[2px] bg-kod-border flex-1" />
         </div>
-        {images.length > 3 && (
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <button
-              onClick={() => scroll("left")}
-              disabled={!canScrollLeft}
-              aria-label="Scroll left"
-              className="w-10 h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              disabled={!canScrollRight}
-              aria-label="Scroll right"
-              className="w-10 h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
-            >
-              <ChevronRight size={18} />
-            </button>
+        {totalPages > 1 && (
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <span className="text-xs sm:text-sm font-metropolis font-semibold text-kod-earth/60">
+              {currentPage + 1} / {totalPages}
+            </span>
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={handlePrevPage}
+                disabled={!canPrevPage}
+                aria-label="Previous page"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                onClick={handleNextPage}
+                disabled={!canNextPage}
+                aria-label="Next page"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
           </div>
         )}
       </div>
 
       <div
-        ref={scrollRef}
-        onScroll={checkScroll}
-        className="flex gap-4 overflow-x-auto pb-4 pt-1 select-none scrollbar-none scroll-smooth cursor-grab active:cursor-grabbing snap-x"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="w-full select-none"
       >
-        {images.map((img, i) => (
-          <div
-            key={i}
-            onClick={() => setSelectedIndex(i)}
-            className="flex-shrink-0 w-48 sm:w-56 md:w-64 aspect-square rounded overflow-hidden border border-kod-border bg-kod-white shadow-sm hover:shadow-md hover:border-kod-clay transition-all hover:scale-[1.02] cursor-pointer snap-start relative group"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+          {currentImages.map((img, i) => {
+            const globalIndex = currentPage * PAGE_SIZE + i;
+            return (
+              <div
+                key={globalIndex}
+                onClick={() => setSelectedIndex(globalIndex)}
+                className="aspect-[4/3] rounded overflow-hidden border border-kod-border bg-kod-white shadow-sm hover:shadow-md hover:border-kod-clay transition-all hover:scale-[1.01] cursor-pointer relative group"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none" />
+              </div>
+            );
+          })}
+        </div>
+
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 pt-4">
+            {Array.from({ length: totalPages }).map((_, pageIdx) => (
+              <button
+                key={pageIdx}
+                onClick={() => setCurrentPage(pageIdx)}
+                aria-label={`Go to page ${pageIdx + 1}`}
+                className={`h-2 rounded-full transition-all cursor-pointer ${
+                  currentPage === pageIdx
+                    ? "w-6 bg-kod-clay"
+                    : "w-2 bg-kod-border hover:bg-kod-clay/50"
+                }`}
+              />
+            ))}
           </div>
-        ))}
+        )}
       </div>
 
       {tags.length > 0 && (
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-5 select-none">
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 select-none">
           {tags.map((tag) => (
             <div
               key={tag}

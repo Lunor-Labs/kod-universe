@@ -173,7 +173,7 @@ export function Header() {
 
               <div className="hidden md:block">
                 <Link
-                  href="/connect"
+                  href="/contact-us"
                   onClick={() => setActiveDropdown(null)}
                   className="btn-dark !h-11 !px-4 !text-xs"
                 >

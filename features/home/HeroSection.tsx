@@ -11,60 +11,30 @@ const SLIDES = [
     title1: "Ancient Origins.",
     title2: "Impact.",
     titleHighlight: "Modern ",
-    description: (
-      <>
-        We believe creative forces arrive from the universe -{" "}
-        <br className="hidden md:block" />
-        carrying meaning, energy, and responsibility.
-        <br className="hidden md:block" />
-        We transform these seeds of ideas into modern
-        <br className="hidden md:block" />
-        brands, stories, and experiences that matter.
-      </>
-    ),
+    description: "We believe creative forces arrive from the universe — carrying meaning, energy, and responsibility. We transform these seeds of ideas into modern brands, stories, and experiences that matter.",
     image: "/main/hero1.webp",
     linkText: "Explore our work",
-    linkHref: "/work",
+    linkHref: "/portfolio",
   },
   {
     eyebrow: "Strategy. Design. Story.",
     title1: "Creative Forces.",
     title2: "Form.",
     titleHighlight: "Taking ",
-    description: (
-      <>
-        We listen to the universe, observing signals and shifts.
-        <br className="hidden md:block" />
-        Aligning raw potential with human truth, we shape
-        <br className="hidden md:block" />
-        brand identities that resonate deeply and endure
-        <br className="hidden md:block" />
-        across changing landscapes and eras.
-      </>
-    ),
+    description: "We listen to the universe, observing signals and shifts. Aligning raw potential with human truth, we shape brand identities that resonate deeply and endure across changing landscapes and eras.",
     image: "/assets/hero.webp",
     linkText: "See our capabilities",
-    linkHref: "/capabilities",
+    linkHref: "/services",
   },
   {
     eyebrow: "Your vision, realized.",
     title1: "Let's Create",
     title2: "Next.",
     titleHighlight: "What's ",
-    description: (
-      <>
-        Whether you have a spark or need help finding one,
-        <br className="hidden md:block" />
-        we are here to turn ideas into tangible impact.
-        <br className="hidden md:block" />
-        Join us in building experiences that connect,
-        <br className="hidden md:block" />
-        inspire, and leave a lasting mark.
-      </>
-    ),
+    description: "Whether you have a spark or need help finding one, we are here to turn ideas into tangible impact. Join us in building experiences that connect, inspire, and leave a lasting mark.",
     image: "/assets/our-story-cta.webp",
     linkText: "Start a conversation",
-    linkHref: "/connect",
+    linkHref: "/contact-us",
   },
 ];
 
@@ -210,112 +180,12 @@ export function HeroSection() {
             </motion.div>
           </AnimatePresence>
         )}
-        {!isMobile && (
-          <motion.div
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-3"
-            initial="hidden"
-            animate="show"
-            aria-hidden="true"
-            variants={{
-              hidden: { opacity: 0 },
-              show: {
-                opacity: 1,
-                transition: { staggerChildren: 0.12, delayChildren: 1 },
-              },
-            }}
-          >
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: -15 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-            >
-              <svg
-                className="w-8 h-8 mb-1 text-white/80 animate-spin-slow"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4" />
-              </svg>
-            </motion.div>
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={`dot-top-${i}`}
-                className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
-                style={{ animationDelay: `${i * 0.4}s` }}
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-                }}
-              />
-            ))}
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, scale: 0.5, rotate: -45 },
-                show: {
-                  opacity: 1,
-                  scale: 1,
-                  rotate: 0,
-                  transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-            >
-              <svg
-                className="w-6 h-6 my-1 text-white/90 animate-spin-slower"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" />
-              </svg>
-            </motion.div>
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={`dot-bot-${i}`}
-                className="w-1.5 h-1.5 rounded-full bg-white animate-twinkle"
-                style={{ animationDelay: `${1.2 + i * 0.4}s` }}
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-                }}
-              />
-            ))}
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 15 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
-            >
-              <svg
-                className="w-8 h-8 mt-1 text-white animate-breathe"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <circle cx="12" cy="12" r="9" />
-              </svg>
-            </motion.div>
-          </motion.div>
-        )}
       </div>
-      <div className="absolute inset-0 pointer-events-none z-30 pt-38 sm:pt-28">
+      <div className="absolute inset-0 pointer-events-none z-30 pt-18 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
           <Link
-            href="/our-universe"
-            className="group flex flex-col items-center gap-4 pointer-events-auto pr-2 md:pr-4"
+            href="/about-us"
+            className="group flex flex-col items-center pointer-events-auto pr-2 md:pr-4"
           >
             <div
               className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl animate-breathe group-hover:scale-110 transition-transform duration-300"
@@ -327,7 +197,7 @@ export function HeroSection() {
                 className="object-contain"
               />
             </div>
-            <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
+            <span className="hidden md:block translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
               About Us
             </span>
           </Link>
@@ -335,7 +205,11 @@ export function HeroSection() {
       </div>
 
       <div
-        className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-20"
+        className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
         aria-hidden="true"
       />
     </section>
