@@ -19,7 +19,7 @@ export function ServicesOverview() {
               <em className="font-serif italic font-normal">Two Worlds.</em>
             </h2>
             <p className="mt-4 text-body text-kod-earth/85 max-w-xl mx-auto">
-              We operate as a master brand with two distinct arms — a 360°
+              We operate as a master brand with two distinct arms - a 360°
               creative agency and an independent gallery for art and commerce.
             </p>
           </ScrollReveal>
@@ -27,7 +27,7 @@ export function ServicesOverview() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center max-w-5xl mx-auto">
           <ScrollReveal variant="up" delay={0.1}>
-            <div className="group relative bg-white/60 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
+            <div className="group relative bg-white/80 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
               <div className="relative z-10 flex flex-col items-center h-full">
                 <p className="eyebrow text-signal-orange mb-4">
                   360° CREATIVE AGENCY
@@ -55,7 +55,7 @@ export function ServicesOverview() {
           </ScrollReveal>
 
           <ScrollReveal variant="up" delay={0.2}>
-            <div className="group relative bg-white/60 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
+            <div className="group relative bg-white/80 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
               <div className="relative z-10 flex flex-col items-center h-full">
                 <p className="eyebrow text-clay mb-4">ART + COMMERCE</p>
                 <h3 className="heading-section text-earth mb-4">KoD Gallery</h3>

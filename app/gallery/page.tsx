@@ -7,7 +7,7 @@ import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "KoD Gallery — Art, Merch & Limited Drops",
+  title: "KoD Gallery - Art, Merch & Limited Drops",
   description:
     "KoD Gallery is an independent creative-commercial world inside KOD Universe. Original art, prints, merchandise, apparel and limited edition drops.",
   alternates: { canonical: "/gallery" },
@@ -18,7 +18,7 @@ const galleryCategories = [
     id: "art",
     title: "Art",
     description:
-      "Original artwork, prints, digital art and limited editions — created by KoD.",
+      "Original artwork, prints, digital art and limited editions - created by KoD.",
     image: "/gallery/art.png",
     tags: ["Originals", "Prints", "Digital Art"],
   },
@@ -34,7 +34,7 @@ const galleryCategories = [
     id: "drops",
     title: "Drops",
     description:
-      "Limited releases, seasonal collections, artist collaborations and KoD originals — available for a moment, gone forever.",
+      "Limited releases, seasonal collections, artist collaborations and KoD originals - available for a moment, gone forever.",
     image: "/gallery/drops.png",
     tags: ["Limited Releases", "Collabs", "KoD Originals"],
   },

@@ -22,12 +22,17 @@ export function ProjectCard({
   return (
     <Link
       href={`/portfolio/${project.slug}`}
-      className={cn("group flex flex-col bg-white rounded overflow-hidden", className)}
+      className={cn(
+        "group flex flex-col bg-white rounded overflow-hidden",
+        className,
+      )}
     >
       <div
         className={cn(
           "img-zoom relative bg-[#FBF9F5] flex items-center justify-center overflow-hidden",
-          size === "large" ? "aspect-video md:aspect-[4/3] lg:aspect-[16/10]" : "aspect-[4/5] sm:aspect-square"
+          size === "large"
+            ? "aspect-video md:aspect-[4/3] lg:aspect-[16/10]"
+            : "aspect-[4/5] sm:aspect-square",
         )}
       >
         <Image
@@ -49,6 +54,7 @@ export function ProjectCard({
       <div className="p-4 sm:p-5 flex flex-col flex-grow">
         <p className="eyebrow !text-xs mb-2 text-signal-orange !font-bold tracking-widest uppercase">
           {project.category}
+          {project.subCategory ? ` - ${project.subCategory}` : ""}
         </p>
         <h3
           className="font-metropolis font-bold text-earth text-lg sm:text-xl leading-tight mb-2 

@@ -7,7 +7,7 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Design",
     tagline: "Identities, spaces, digital",
     description:
-      "End-to-end design systems that build enduring brand authority — spanning brand identity, physical packaging, and spatial architecture.",
+      "End-to-end design systems that build enduring brand authority - spanning brand identity, physical packaging, and spatial architecture.",
     iconName: "packaging",
     tags: ["Identity", "Digital", "Spatial", "Objects"],
     contentSections: [
@@ -15,7 +15,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Branding & Identity",
         badge: "Identity",
         iconName: "logo-design",
-        description: "Creating enduring visual identities, brand marks, and typographic systems that define your market presence.",
+        description:
+          "Creating enduring visual identities, brand marks, and typographic systems that define your market presence.",
         deliverables: [
           "Logo Design",
           "Brand Identity Systems",
@@ -27,7 +28,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Graphic & Editorial",
         badge: "Editorial",
         iconName: "BookOpen",
-        description: "Crafting meticulous graphic layouts and editorial design for both physical publications and digital formats.",
+        description:
+          "Crafting meticulous graphic layouts and editorial design for both physical publications and digital formats.",
         deliverables: [
           "Company Profiles",
           "Magazines / Editorial",
@@ -39,7 +41,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Packaging & Merchandise",
         badge: "Physical",
         iconName: "packaging",
-        description: "Designing tactile, shelf-commanding packaging and wearable merchandise that extends your brand universe.",
+        description:
+          "Designing tactile, shelf-commanding packaging and wearable merchandise that extends your brand universe.",
         deliverables: [
           "Packaging Design",
           "Product Packaging",
@@ -51,7 +54,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Digital Design & Development",
         badge: "Digital",
         iconName: "web-design",
-        description: "Engineering high-performance web platforms and digital experiences focused on clarity and conversion.",
+        description:
+          "Engineering high-performance web platforms and digital experiences focused on clarity and conversion.",
         deliverables: [
           "Website Design",
           "UI/UX",
@@ -63,7 +67,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Spatial & Architectural",
         badge: "Spatial",
         iconName: "architecture-designs",
-        description: "Translating your brand into immersive physical environments and photorealistic 3D spatial concepts.",
+        description:
+          "Translating your brand into immersive physical environments and photorealistic 3D spatial concepts.",
         deliverables: [
           "Architecture Design",
           "Interior / Spatial Concepts",
@@ -111,7 +116,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Brand & Communication Strategy",
         badge: "Strategy",
         iconName: "Compass",
-        description: "Defining your brand's core positioning and the strategic roadmap to connect with your target audience.",
+        description:
+          "Defining your brand's core positioning and the strategic roadmap to connect with your target audience.",
         deliverables: [
           "Brand Strategy",
           "Brand Positioning",
@@ -123,7 +129,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Social Media Marketing",
         badge: "Social",
         iconName: "social-media",
-        description: "Building and managing engaging social ecosystems that foster community and drive brand awareness.",
+        description:
+          "Building and managing engaging social ecosystems that foster community and drive brand awareness.",
         deliverables: [
           "Social Strategy",
           "Social Media Management",
@@ -135,7 +142,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Content Marketing",
         badge: "Content",
         iconName: "Pen",
-        description: "Crafting compelling narratives and branded content designed to spark conversations and build loyalty.",
+        description:
+          "Crafting compelling narratives and branded content designed to spark conversations and build loyalty.",
         deliverables: [
           "Content Strategy",
           "Branded Content",
@@ -147,7 +155,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Integrated Campaigns",
         badge: "Campaigns",
         iconName: "Target",
-        description: "Developing holistic, 360-degree campaigns that activate your brand across multiple touchpoints.",
+        description:
+          "Developing holistic, 360-degree campaigns that activate your brand across multiple touchpoints.",
         deliverables: [
           "360° Campaign Development",
           "Product Launches",
@@ -159,7 +168,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Digital Marketing & Consultation",
         badge: "Growth",
         iconName: "TrendingUp",
-        description: "Data-driven digital marketing and strategic consultation to optimize performance and maximize ROI.",
+        description:
+          "Data-driven digital marketing and strategic consultation to optimize performance and maximize ROI.",
         deliverables: [
           "Digital Campaigns",
           "Audience Planning",
@@ -205,7 +215,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Visual Narrative & Creative Direction",
         badge: "Direction",
         iconName: "Compass",
-        description: "Guiding the visual story of your brand, ensuring every aesthetic choice aligns with your core narrative.",
+        description:
+          "Guiding the visual story of your brand, ensuring every aesthetic choice aligns with your core narrative.",
         deliverables: [
           "Visual Narrative Strategy",
           "Story Development",
@@ -217,7 +228,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Photography",
         badge: "Production",
         iconName: "visual-storytelling",
-        description: "High-end photography capturing the essence of your brand, products, and lifestyle.",
+        description:
+          "High-end photography capturing the essence of your brand, products, and lifestyle.",
         deliverables: [
           "Photography Direction & Curation",
           "Brand Photography",
@@ -229,7 +241,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Film & Video",
         badge: "Motion",
         iconName: "Volume2",
-        description: "Cinematic film and video production that commands attention and evokes emotion.",
+        description:
+          "Cinematic film and video production that commands attention and evokes emotion.",
         deliverables: [
           "Video Production",
           "Filming",
@@ -241,7 +254,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Social & Short-form Content",
         badge: "Social",
         iconName: "social-media",
-        description: "Dynamic, platform-native short-form content engineered for modern algorithms and audience retention.",
+        description:
+          "Dynamic, platform-native short-form content engineered for modern algorithms and audience retention.",
         deliverables: [
           "Reels",
           "Short-form Video",
@@ -253,7 +267,8 @@ export const serviceGroups: ServiceGroup[] = [
         title: "Motion & Illustrated Storytelling",
         badge: "Animation",
         iconName: "Sparkles",
-        description: "Bringing ideas to life through dynamic motion graphics, 2D/3D animation, and bespoke illustrations.",
+        description:
+          "Bringing ideas to life through dynamic motion graphics, 2D/3D animation, and bespoke illustrations.",
         deliverables: [
           "Motion Graphics",
           "2D / 3D Animation",

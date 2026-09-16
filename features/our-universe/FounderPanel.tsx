@@ -103,7 +103,7 @@ export function FounderPanel() {
                   extension of curiosity.
                 </p>
                 <p>
-                  KOD Universe is the culmination of that journey—an independent
+                  KOD Universe is the culmination of that journey-an independent
                   studio where brand identity, spatial architecture, packaging,
                   and digital experiences are crafted with authentic passion and
                   uncompromising attention to detail.

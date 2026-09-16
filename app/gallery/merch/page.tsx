@@ -6,9 +6,9 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { galleryItems } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Merch & Objects — KoD Gallery",
+  title: "Merch & Objects - KoD Gallery",
   description:
-    "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
+    "KoD branded merchandise - apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
   alternates: { canonical: "/gallery/merch" },
 };
 
@@ -69,7 +69,7 @@ export default function GalleryMerchPage() {
           </h1>
           <p className="text-lead text-canvas/75 max-w-xl">
             Apparel, creative objects and accessories that carry the KoD
-            universe — things people actually want to own and wear.
+            universe - things people actually want to own and wear.
           </p>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function GalleryMerchPage() {
             </h3>
             <p className="text-body text-canvas/70 max-w-md mx-auto mb-6">
               We design and produce custom merchandise for brands through KoD
-              Creative. Apparel, packaging and creative objects — all tell your
+              Creative. Apparel, packaging and creative objects - all tell your
               brand story.
             </p>
             <Link href="/contact" className="btn-primary">

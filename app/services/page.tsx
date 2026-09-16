@@ -8,7 +8,7 @@ import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Agency Services — KoD Creative",
+  title: "Agency Services - KoD Creative",
   description:
     "KoD Creative transforms abstract ideas into meaningful brands, experiences, and digital ecosystems.",
   alternates: { canonical: "/services" },

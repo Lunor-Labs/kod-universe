@@ -21,7 +21,7 @@ export function FounderStory() {
       era: "The Natural Transition · Hobby to Career",
       title: "Where Work Ceases to Feel Like Work",
       description:
-        "Because every project is rooted in that original childlike excitement of turning nothing into something, work does not make me feel tired. Creative problem-solving is not a tedious duty—it is an energizing daily playground where fatigue naturally gives way to creative momentum and joy.",
+        "Because every project is rooted in that original childlike excitement of turning nothing into something, work does not make me feel tired. Creative problem-solving is not a tedious duty-it is an energizing daily playground where fatigue naturally gives way to creative momentum and joy.",
     },
     {
       icon: Heart,
@@ -95,7 +95,7 @@ export function FounderStory() {
             others are fuel for my passion.&rdquo;
           </p>
           <p className="font-metropolis font-bold text-sm tracking-widest uppercase text-kod-clay">
-            — Ishara Kodithuwakku
+            - Ishara Kodithuwakku
           </p>
         </div>
       </div>

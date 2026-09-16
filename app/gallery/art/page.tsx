@@ -6,7 +6,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { galleryItems } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Art & Prints — KoD Gallery",
+  title: "Art & Prints - KoD Gallery",
   description:
     "Original artwork, art prints, digital illustrations and limited editions by KOD Universe. Each piece is created with intention and connected to a story.",
   alternates: { canonical: "/gallery/art" },
@@ -47,7 +47,7 @@ export default function GalleryArtPage() {
             <em className="font-serif italic font-normal">& Prints.</em>
           </h1>
           <p className="text-lead text-canvas/75 max-w-xl">
-            Artwork, prints and digital illustrations created by KoD — each
+            Artwork, prints and digital illustrations created by KoD - each
             piece rooted in story, process and intention.
           </p>
         </div>

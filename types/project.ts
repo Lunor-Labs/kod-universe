@@ -1,11 +1,27 @@
 // Project type definitions
 
-export type ProjectCategory =
-  | "SOCIAL MEDIA"
-  | "BRANDING & IDENTITY"
-  | "PACKAGE DESIGN"
-  | "CREATIVE WORK"
-  | "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING";
+export type MainCategory = "DESIGN" | "MARKETING" | "VISUAL STORYTELLING";
+
+export type SubCategory =
+  | "Branding"
+  | "Packaging"
+  | "Editorial"
+  | "Web & Digital"
+  | "Spatial / Architecture"
+  | "Merchandise"
+  | "Social Media"
+  | "Campaigns"
+  | "Content Marketing"
+  | "Brand Strategy"
+  | "Activations"
+  | "Photography"
+  | "Film & Video"
+  | "TVC"
+  | "Motion"
+  | "Illustration"
+  | "Social Content";
+
+export type ProjectCategory = MainCategory | string;
 
 export interface ProjectImage {
   src: string;
@@ -26,6 +42,8 @@ export interface Project {
   title: string;
   client: string;
   category: ProjectCategory;
+  subCategory?: string;
+  subCategories?: string[];
   year: number;
   location?: string;
   timeline?: string;

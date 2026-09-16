@@ -4,8 +4,10 @@ export const posts: Post[] = [
   {
     id: "post-1",
     slug: "kod-universe-expands-spatial-architectural-designing",
-    title: "KOD Universe Expands Spatial & Architectural Designing Capabilities",
-    subtitle: "Bridging 3D CGI photorealism with physical luxury hospitality environments",
+    title:
+      "KOD Universe Expands Spatial & Architectural Designing Capabilities",
+    subtitle:
+      "Bridging 3D CGI photorealism with physical luxury hospitality environments",
     excerpt:
       "Announcing the formal expansion of our spatial architecture wing, bringing together holistic masterplanning, atmospheric 3D visualization, and brand-led interior experiences for visionary hospitality clients.",
     type: "NEWS",
@@ -24,17 +26,23 @@ export const posts: Post[] = [
     },
     publishedAt: "September 15, 2026",
     readTime: "4 min read",
-    tags: ["Studio News", "Spatial Design", "Architecture", "3D Visualization", "IBIZA Mirissa"],
+    tags: [
+      "Studio News",
+      "Spatial Design",
+      "Architecture",
+      "3D Visualization",
+      "IBIZA Mirissa",
+    ],
     featured: true,
     content: [
       {
         heading: "A New Chapter in Spatial Storytelling",
         paragraphs: [
-          "For years, KOD Universe has operated at the intersection of brand strategy, high-touch packaging, and commercial film. Today, we are proud to formally unveil our expanded Spatial & Architectural Designing practice—a discipline built to translate brand narratives directly into physical, three-dimensional spaces.",
+          "For years, KOD Universe has operated at the intersection of brand strategy, high-touch packaging, and commercial film. Today, we are proud to formally unveil our expanded Spatial & Architectural Designing practice-a discipline built to translate brand narratives directly into physical, three-dimensional spaces.",
           "Modern luxury is no longer defined merely by materials; it is defined by atmosphere, light physics, and the deliberate choreography of human movement through a landscape. By uniting our 3D animation heritage with architectural masterplanning, we provide clients with an unbroken bridge between conceptual vision and tactile construction.",
         ],
         quote:
-          "Architecture is not just concrete and timber—it is an emotional continuum where light, sound, and brand philosophy converge into an unforgettable memory.",
+          "Architecture is not just concrete and timber-it is an emotional continuum where light, sound, and brand philosophy converge into an unforgettable memory.",
       },
       {
         heading: "From Digital Explorations to Built Environments",
@@ -45,7 +53,8 @@ export const posts: Post[] = [
         image: {
           src: "/portfolio/architectural-design/ibiza-mirissa/m3.webp",
           alt: "IBIZA Mirissa coastal terrace lounge render",
-          caption: "Atmospheric dusk rendering of the coastal terrace lounge at IBIZA Mirissa.",
+          caption:
+            "Atmospheric dusk rendering of the coastal terrace lounge at IBIZA Mirissa.",
         },
       },
       {
@@ -61,7 +70,8 @@ export const posts: Post[] = [
     id: "post-2",
     slug: "from-hobby-to-calling-creative-fuel",
     title: "From Grade 10 Curiosity to a Lifelong Calling",
-    subtitle: "Why work never makes a creator feel tired when passion leads the way",
+    subtitle:
+      "Why work never makes a creator feel tired when passion leads the way",
     excerpt:
       "A personal reflection by founder Ishara Kodithuwakku on how early schoolboy experiments evolved into a lifelong devotion to craft, where the creative challenges of others become the ultimate fuel for passion.",
     type: "BLOG",
@@ -87,15 +97,15 @@ export const posts: Post[] = [
         heading: "The Late-Night Canvas in Grade 10",
         paragraphs: [
           "It never started with a business plan. In Grade 10 at Walasmulla National School, while studying within the Advanced Level mathematics stream, my true fascination began the moment homework books were set aside.",
-          "Late into the evening, I would open digital software and experiment with vector shapes, typeface curves, and color gradients. There were no client briefs, no invoices, and no looming deadlines—only the pure, uninhibited joy of making something exist where blank space had been a moment before.",
+          "Late into the evening, I would open digital software and experiment with vector shapes, typeface curves, and color gradients. There were no client briefs, no invoices, and no looming deadlines-only the pure, uninhibited joy of making something exist where blank space had been a moment before.",
         ],
         quote:
-          "When you discover what genuinely moves your curiosity as a child, your career ceases to feel like labor. Work does not make me feel tired—the creative needs of others are fuel for my passion.",
+          "When you discover what genuinely moves your curiosity as a child, your career ceases to feel like labor. Work does not make me feel tired-the creative needs of others are fuel for my passion.",
       },
       {
         heading: "Where Energy Multiplies Instead of Depleting",
         paragraphs: [
-          "People often ask how creative directors sustain long hours across multiple disciplines—from commercial film sets to 3D architectural models and packaging dielines. The answer is simple: when your profession is your natural playground, time works differently.",
+          "People often ask how creative directors sustain long hours across multiple disciplines-from commercial film sets to 3D architectural models and packaging dielines. The answer is simple: when your profession is your natural playground, time works differently.",
           "Instead of draining energy, solving complex aesthetic dilemmas revitalizes the mind. Every client brings a spark of ambition they have carried in their chest for months or years. Being trusted to give that spark form, color, and voice is a sacred privilege.",
         ],
       },
@@ -110,8 +120,10 @@ export const posts: Post[] = [
   {
     id: "post-3",
     slug: "tactile-packaging-in-a-digital-age",
-    title: "Tactile Packaging in a Digital Age: The Power of the Physical Touchpoint",
-    subtitle: "How custom structural dielines and material honesty foster brand loyalty",
+    title:
+      "Tactile Packaging in a Digital Age: The Power of the Physical Touchpoint",
+    subtitle:
+      "How custom structural dielines and material honesty foster brand loyalty",
     excerpt:
       "In a world saturated by fleeting digital impressions, physical product packaging is the only brand touchpoint that invites all five human senses. An exploration of structural craft and tactile storytelling.",
     type: "BLOG",
@@ -137,7 +149,7 @@ export const posts: Post[] = [
         heading: "The Vanishing Physical Touchpoint",
         paragraphs: [
           "We live in a landscape dominated by glass screens. Consumers scroll past thousands of pixels every morning, forgetting 99% of what their eyes register within seconds. In this hyper-digital era, physical packaging holds unprecedented power.",
-          "When a customer holds a package in their hands, they are engaging with weight, surface texture, paper grain, emboss friction, and acoustic sound. The unboxing moment is a ritual—a micro-ceremony between a brand and a human being.",
+          "When a customer holds a package in their hands, they are engaging with weight, surface texture, paper grain, emboss friction, and acoustic sound. The unboxing moment is a ritual-a micro-ceremony between a brand and a human being.",
         ],
         quote:
           "Good packaging protects the product. Exceptional packaging dignifies the person who holds it.",
@@ -146,12 +158,13 @@ export const posts: Post[] = [
         heading: "Case Study Reflection: Niwarthana Packaging",
         paragraphs: [
           "When we engineered the packaging architecture for Niwarthana, we bypassed generic off-the-shelf dielines. We designed custom structural folds that opened like traditional botanical chambers, paired with debossed foil finishes and ethically sourced paper stocks.",
-          "The tactile resistance of the box opening was calculated to create an instant of pause—encouraging the user to slow down and appreciate the craftsmanship within.",
+          "The tactile resistance of the box opening was calculated to create an instant of pause-encouraging the user to slow down and appreciate the craftsmanship within.",
         ],
         image: {
           src: "/portfolio/branding-identity/package-design/niwarthana-2.webp",
           alt: "Niwarthana packaging dieline detail",
-          caption: "Custom debossing and structural folds designed for Niwarthana.",
+          caption:
+            "Custom debossing and structural folds designed for Niwarthana.",
         },
       },
       {
@@ -167,8 +180,10 @@ export const posts: Post[] = [
   {
     id: "post-4",
     slug: "ancient-traces-modern-impact-brand-philosophy",
-    title: "Ancient Traces, Modern Impact: Finding Visual Identity that Endures",
-    subtitle: "Why borrowing from timeless cultural symbols builds more resilient brands",
+    title:
+      "Ancient Traces, Modern Impact: Finding Visual Identity that Endures",
+    subtitle:
+      "Why borrowing from timeless cultural symbols builds more resilient brands",
     excerpt:
       "Trends are born and die within calendar quarters. By studying ancient rock inscriptions, geometric astrolabes, and cultural symbolism, we craft brand identities that outlast fleeting aesthetic fads.",
     type: "BLOG",
@@ -202,8 +217,8 @@ export const posts: Post[] = [
       {
         heading: "The Geometry of the Astrolabe",
         paragraphs: [
-          "Consider the ancient astrolabe—a navigational instrument used by mariners and astronomers to track stars and steer across uncharted oceans. It is simultaneously an exquisite piece of mathematical engineering and a poetic work of visual art.",
-          "When we design an identity mark—whether for an apparel house like ROUKA or an artisanal roaster like Coffee 1911—we seek that same mathematical balance. Every curve is intentional; every proportion has gravity.",
+          "Consider the ancient astrolabe-a navigational instrument used by mariners and astronomers to track stars and steer across uncharted oceans. It is simultaneously an exquisite piece of mathematical engineering and a poetic work of visual art.",
+          "When we design an identity mark-whether for an apparel house like ROUKA or an artisanal roaster like Coffee 1911-we seek that same mathematical balance. Every curve is intentional; every proportion has gravity.",
         ],
       },
     ],
@@ -212,7 +227,8 @@ export const posts: Post[] = [
     id: "post-5",
     slug: "visual-storytelling-commercial-film-production",
     title: "Cinematic Commercial Direction: Storyboarding for Human Resonance",
-    subtitle: "Behind the lens of high-velocity commercials, music videos, and TV campaigns",
+    subtitle:
+      "Behind the lens of high-velocity commercials, music videos, and TV campaigns",
     excerpt:
       "Exploring the discipline of commercial storytelling, costume design, and visual keyframing learned through leading productions for Union Assurance, Iraj Productions, and national media campaigns.",
     type: "BLOG",
@@ -241,7 +257,7 @@ export const posts: Post[] = [
           "Every frame must communicate story, emotion, and brand identity simultaneously. This requires obsessive attention to lighting temperature, actor posture, costume texture, and acoustic pacing.",
         ],
         quote:
-          "Directing a commercial is not about showing the product—it is about revealing the emotional truth of the person who uses it.",
+          "Directing a commercial is not about showing the product-it is about revealing the emotional truth of the person who uses it.",
       },
       {
         heading: "From Script to Screen: Union Assurance Uniship",
@@ -256,7 +272,8 @@ export const posts: Post[] = [
     id: "post-6",
     slug: "sustainable-streetwear-rouka-journey",
     title: "ROUKA: Building a Sustainable Streetwear Label from Ground Up",
-    subtitle: "From limited-edition crewneck drops to an intentional fashion philosophy",
+    subtitle:
+      "From limited-edition crewneck drops to an intentional fashion philosophy",
     excerpt:
       "How ROUKA was conceived as an answer to mindful consumption, blending 100% natural cotton apparel with bold graphic identity and direct-to-consumer authenticity.",
     type: "NEWS",

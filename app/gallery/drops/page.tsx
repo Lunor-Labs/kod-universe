@@ -5,7 +5,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Limited Drops — KoD Gallery",
+  title: "Limited Drops - KoD Gallery",
   description:
     "KoD Gallery limited releases, seasonal collections, artist collaborations and KoD Originals. Available for a moment, gone forever.",
   alternates: { canonical: "/gallery/drops" },
@@ -42,7 +42,7 @@ const dropCategories = [
 const comingSoonDrops = [
   {
     id: "drop-001",
-    title: "KoD × Studio — Drop 001",
+    title: "KoD × Studio - Drop 001",
     description:
       "The first official KoD Gallery drop. Limited to 50 pieces. Date TBA.",
     tag: "UPCOMING DROP",
@@ -51,7 +51,7 @@ const comingSoonDrops = [
   },
   {
     id: "pissu-kanna-collab",
-    title: "Pissu Kanna Streetwear — Collab",
+    title: "Pissu Kanna Streetwear - Collab",
     description:
       "The irreverent street mascot meets KoD design. Apparel and collectibles.",
     tag: "COLLABORATION",
@@ -60,7 +60,7 @@ const comingSoonDrops = [
   },
   {
     id: "ibiza-print-series",
-    title: "IBIZA Mirissa — Architecture Print Series",
+    title: "IBIZA Mirissa - Architecture Print Series",
     description:
       "Architectural photography and 3D renders from the IBIZA Mirissa project, printed on archival paper.",
     tag: "ART PRINT",
@@ -193,7 +193,10 @@ export default function GalleryDropsPage() {
                     <ArrowRight size={13} />
                   </span>
                 </a>
-                <Link href="/contact"  className="btn-secondary !h-14 !px-8 !text-canvas !border-canvas/50 hover:!border-canvas hover:!bg-canvas hover:!text-earth">
+                <Link
+                  href="/contact"
+                  className="btn-secondary !h-14 !px-8 !text-canvas !border-canvas/50 hover:!border-canvas hover:!bg-canvas hover:!text-earth"
+                >
                   <span>Early Access List</span>
                   <span className="btn-badge">
                     <ArrowRight size={13} />

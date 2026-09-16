@@ -29,7 +29,10 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       { label: "Marketing & Social", href: "/work?category=SOCIAL+MEDIA" },
       { label: "Packaging & Craft", href: "/work?category=PACKAGE+DESIGN" },
       { label: "3D & Motion", href: "/work?category=3D+%26+MOTION" },
-      { label: "Spatial & Architectural", href: "/work?category=SPATIAL+DESIGN" },
+      {
+        label: "Spatial & Architectural",
+        href: "/work?category=SPATIAL+DESIGN",
+      },
     ],
     secondaryHeading: "",
     secondaryLinks: [],
@@ -59,9 +62,11 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     spotlight: {
       tag: "Studio Philosophy",
       title: "360° Creative Agency.",
-      description: "Design, marketing and visual storytelling — one coherent creative universe.",
+      description:
+        "Design, marketing and visual storytelling - one coherent creative universe.",
       href: "/services",
-      image: "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
+      image:
+        "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
     },
   },
   STUDIO: {
@@ -76,15 +81,16 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     ],
     secondaryHeading: "Studio Insights",
     secondaryLinks: [
-      { label: "KoD Creative — Agency Arm", href: "/services" },
-      { label: "KoD Gallery — Art & Commerce", href: "/gallery" },
+      { label: "KoD Creative - Agency Arm", href: "/services" },
+      { label: "KoD Gallery - Art & Commerce", href: "/gallery" },
       { label: "Careers & Internships", href: "/contact#careers" },
       { label: "Press & Media Inquiries", href: "/contact#press" },
     ],
     spotlight: {
       tag: "Studio Manifesto",
       title: "Crafting Brands That Endure",
-      description: "We partner with visionary founders to build identities with soul, weight, and longevity.",
+      description:
+        "We partner with visionary founders to build identities with soul, weight, and longevity.",
       href: "/studio",
     },
   },
@@ -107,7 +113,8 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     spotlight: {
       tag: "Art + Commerce",
       title: "A Creative-Commercial World.",
-      description: "Original art, objects, merch and limited drops inside KoD Universe.",
+      description:
+        "Original art, objects, merch and limited drops inside KoD Universe.",
       href: "/gallery",
     },
   },
@@ -123,7 +130,8 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     spotlight: {
       tag: "Culture + Updates",
       title: "Inside the Universe.",
-      description: "Thoughts, process stories, and creative culture from the KoD studio.",
+      description:
+        "Thoughts, process stories, and creative culture from the KoD studio.",
       href: "/news",
     },
   },
