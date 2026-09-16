@@ -2,16 +2,17 @@ import type { SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
   name: "KOD Universe",
-  tagline: "Ancient ideas. Modern impact.",
+  tagline: "A 360° creative agency shaping brands through design, marketing and visual storytelling.",
   description:
-    "KOD Universe is a creative studio that transforms ideas into modern brands, stories, and experiences that connect, inspire, and leave a lasting mark.",
+    "KOD Universe is a 360° creative agency shaping brands through design, marketing and visual storytelling — with an independent gallery for art, objects and limited drops.",
   url: "https://www.kod.lk",
   nav: [
-    { label: "PORTFOLIO", href: "/portfolio" },
+    { label: "WORK", href: "/work" },
     { label: "SERVICES", href: "/services" },
-    { label: "OUR STORY", href: "/about-us" },
-    { label: "JOURNAL", href: "/blog" },
-    { label: "CONTACT", href: "/contact-us" },
+    { label: "STUDIO", href: "/studio" },
+    { label: "GALLERY", href: "/gallery" },
+    { label: "NEWS", href: "/news" },
+    { label: "CONTACT", href: "/contact" },
   ],
   socialLinks: [
     { platform: "Instagram", href: "https://www.instagram.com/kod.universe", iconName: "Instagram" },
@@ -31,11 +32,7 @@ export const siteConfig: SiteConfig = {
 };
 
 export const services = [
-  { title: "Content Marketing", description: "Strategic content that builds lasting brand communities." },
-  { title: "Branding & Identity", description: "Purpose-driven brands that endure." },
-  { title: "Package Design", description: "Packaging that tells your story and sells." },
-  { title: "Creative Work", description: "Campaigns that engage and inspire." },
-  { title: "Digital Experiences", description: "Smart strategy to guide your brand forward." },
-  { title: "3D & Motion Graphics", description: "Cinematic animation and motion design that brings brands to life." },
-  { title: "Architectural & Spatial Design", description: "Brand-led interior and spatial design visualised in 3D." },
+  { title: "Design", description: "We create identities, objects, spaces and digital experiences." },
+  { title: "Marketing", description: "We build strategies and campaigns that connect brands with people." },
+  { title: "Visual Storytelling", description: "We turn ideas into stories people can see, feel and remember." },
 ];

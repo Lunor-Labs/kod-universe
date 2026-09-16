@@ -41,10 +41,10 @@ export default function HomePage() {
     <main className="relative overflow-hidden min-h-screen">
       <div className="absolute inset-0 top-[100vh] -z-10 pointer-events-none opacity-40">
         <Image
-          src="/main/wall-main-image-04.webp"
+          src="/main/our-universe-cave.png"
           alt=""
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-top opacity-30 mix-blend-multiply"
           priority
         />
       </div>
@@ -58,8 +58,8 @@ export default function HomePage() {
 
         <WhyUsSection />
         <ProcessSection />
-        <Testimonials />
-        <FAQSection />
+        {/* <Testimonials /> */}
+        {/* <FAQSection /> */}
         <ContactCTA />
       </div>
     </main>

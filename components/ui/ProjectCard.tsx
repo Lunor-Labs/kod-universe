@@ -22,50 +22,44 @@ export function ProjectCard({
   return (
     <Link
       href={`/portfolio/${project.slug}`}
-      className={cn(
-        "group block bg-white border border-border-warm/30 rounded overflow-hidden",
-        "transition-colors duration-300",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50",
-        className,
-      )}
-      aria-label={`View project: ${project.title} by ${project.client}`}
+      className={cn("group flex flex-col bg-white rounded overflow-hidden", className)}
     >
       <div
         className={cn(
           "img-zoom relative bg-[#FBF9F5] flex items-center justify-center overflow-hidden",
-          size === "large" ? "aspect-[2/1]" : "aspect-square"
+          size === "large" ? "aspect-video md:aspect-[4/3] lg:aspect-[16/10]" : "aspect-[4/5] sm:aspect-square"
         )}
       >
         <Image
           src={image.src}
           alt={image.alt}
           fill
-          className="object-contain transition-transform duration-300"
+          className="object-contain  transition-transform duration-500 group-hover:scale-105"
           priority={priority}
         />
         <div
           className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white/90 shadow-sm
-                     flex items-center justify-center opacity-80 group-hover:opacity-100 
-                     translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                     flex items-center justify-center opacity-0 group-hover:opacity-100 
+                     translate-y-2 group-hover:translate-y-0 transition-all duration-300"
           aria-hidden="true"
         >
           <ArrowRight size={14} className="text-signal-orange" />
         </div>
       </div>
-      <div className="p-4 sm:p-5">
-        <p className="eyebrow mb-1.5 text-signal-orange">
+      <div className="p-4 sm:p-5 flex flex-col flex-grow">
+        <p className="eyebrow !text-xs mb-2 text-signal-orange !font-bold tracking-widest uppercase">
           {project.category}
         </p>
         <h3
-          className="heading-item text-earth leading-snug mb-1.5 
+          className="font-metropolis font-bold text-earth text-lg sm:text-xl leading-tight mb-2 
                        group-hover:text-signal-orange transition-colors duration-200"
         >
           {project.title}
         </h3>
-        <p className="text-body text-kod-earth/80 mb-2 line-clamp-2">
+        <p className="text-kod-earth/70 leading-relaxed mb-4 line-clamp-2">
           {project.shortDescription}
         </p>
-        <div className="mt-3 flex items-center gap-1.5 text-sm font-medium text-kod-earth/70">
+        <div className="mt-auto flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-kod-earth/50">
           <span>{project.client}</span>
           <span>·</span>
           <span>{project.year}</span>
@@ -74,4 +68,3 @@ export function ProjectCard({
     </Link>
   );
 }
-
