@@ -5,7 +5,7 @@ export type ProjectCategory =
   | "BRANDING & IDENTITY"
   | "PACKAGE DESIGN"
   | "CREATIVE WORK"
-  | "DIGITAL EXPERIENCES";
+  | "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING";
 
 export interface ProjectImage {
   src: string;

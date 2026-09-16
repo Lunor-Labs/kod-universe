@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Search } from "lucide-react";
@@ -15,7 +16,7 @@ const CATEGORIES = [
   "BRANDING & IDENTITY",
   "PACKAGE DESIGN",
   "CREATIVE WORK",
-  "DIGITAL EXPERIENCES",
+  "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING",
 ] as const;
 
 interface ProjectGridProps {
@@ -23,10 +24,32 @@ interface ProjectGridProps {
   featuredProject: Project;
 }
 
+const CATEGORY_PARAM_MAP: Record<string, string> = {
+  "SPATIAL DESIGN": "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING",
+  "SPATIAL+DESIGN": "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING",
+  "SOCIAL MEDIA": "SOCIAL MEDIA",
+  "BRANDING": "BRANDING & IDENTITY",
+  "PACKAGE DESIGN": "PACKAGE DESIGN",
+  "CREATIVE WORK": "CREATIVE WORK",
+};
+
 export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState("latest");
+
+
+  useEffect(() => {
+    const param = searchParams.get("category");
+    if (!param) return;
+    const upper = param.toUpperCase();
+    const matched =
+      CATEGORIES.find((c) => c === upper) ??
+      CATEGORY_PARAM_MAP[upper] ??
+      null;
+    if (matched) setActiveCategory(matched);
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     let result = projects;
@@ -140,7 +163,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
               </div>
             </div>
 
-            <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain">
+            <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain hidden md:block">
               <SectionLabel>Our Philosophy</SectionLabel>
               <h3 className="heading-card font-editorial text-earth mb-4 italic mt-2 leading-tight">
                 Ideas are ancient.<br/>

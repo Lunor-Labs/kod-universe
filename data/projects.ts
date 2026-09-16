@@ -1165,7 +1165,7 @@ export const projects: Project[] = [
     slug: "ibiza-mirissa-architectural-design",
     title: "IBIZA Mirissa Spatial Architecture",
     client: "IBIZA Mirissa",
-    category: "DIGITAL EXPERIENCES",
+    category: "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING",
     year: 2024,
     location: "Mirissa, Sri Lanka",
     timeline: "2024",

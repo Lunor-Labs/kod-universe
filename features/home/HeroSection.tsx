@@ -208,6 +208,10 @@ export function HeroSection() {
         className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
         aria-hidden="true"
       />
+      <div
+        className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-canvas via-canvas/60 to-transparent pointer-events-none z-0"
+        aria-hidden="true"
+      />
     </section>
   );
 }
