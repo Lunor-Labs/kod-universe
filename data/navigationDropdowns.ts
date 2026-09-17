@@ -66,7 +66,7 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
         "Design, marketing and visual storytelling - one coherent creative universe.",
       href: "/services",
       image:
-        "/projects/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
+        "/portfolio/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
     },
   },
   STUDIO: {

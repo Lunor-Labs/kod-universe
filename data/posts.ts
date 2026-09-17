@@ -129,7 +129,7 @@ export const posts: Post[] = [
     type: "BLOG",
     category: "PACKAGING & CRAFT",
     coverImage: {
-      src: "/projects/branding-identity/package-design/niwarthana-1.webp",
+      src: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
       alt: "Niwarthana packaging box and tea canisters",
       width: 1672,
       height: 941,
@@ -279,7 +279,7 @@ export const posts: Post[] = [
     type: "NEWS",
     category: "STUDIO NEWS",
     coverImage: {
-      src: "/projects/branding-identity/branding/rouka-1.webp",
+      src: "/portfolio/branding-identity/branding/rouka-1.webp",
       alt: "ROUKA brand identity and streetwear showcase",
       width: 1672,
       height: 941,

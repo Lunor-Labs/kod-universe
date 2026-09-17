@@ -36,7 +36,7 @@ export function ServicesOverview() {
                   KoD Creative
                 </h3>
                 <Image
-                  src="/icons/Branding.webp"
+                  src="/icons/branding.webp"
                   alt="Design"
                   width={160}
                   height={160}

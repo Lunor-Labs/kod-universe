@@ -28,7 +28,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/projects/social-media/bio-oil-social-media-content-highlights/01-01.webp",
+      "/portfolio/social-media/bio-oil-social-media-content-highlights/01-01.webp",
   },
   "area-6-social-media": {
     badge: "FEATURED SOCIAL STRATEGY",
@@ -44,7 +44,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#0F172A", "#E11D48", "#FB7185", "#334155", "#F1F5F9"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/social-media/area-6/area-6-single-post-01.webp",
+    imageSrc: "/portfolio/social-media/area-6/singale-post.webp",
   },
   "coats-sri-lanka-campaign": {
     badge: "FEATURED BRAND STORYTELLING",
@@ -60,7 +60,8 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#0B2545", "#134074", "#8DA9C4", "#EE6C4D", "#EEF4F8"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/social-media/coats/01.webp",
+    imageSrc:
+      "/portfolio/social-media/coats-sri-lanka-social-media-post/coats-thread-showcase.webp",
   },
   "niwarthana-packaging-design": {
     badge: "FEATURED PACKAGING",
@@ -76,7 +77,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
     headlineFont: "Cormorant Garamond",
     bodyFont: "Metropolis",
-    imageSrc: "/projects/branding-identity/package-design/niwarthana-1.webp",
+    imageSrc: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
   },
   "rouka-brand-identity": {
     badge: "FEATURED BRAND ARCHITECTURE",
@@ -92,7 +93,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#1F2937", "#4B5563", "#D97706", "#F59E0B", "#FEF3C7"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/projects/branding-identity/branding/rouka-1.webp",
+    imageSrc: "/portfolio/branding-identity/branding/rouka-1.webp",
   },
   "slsa-uk-identity": {
     badge: "SPORTS IDENTITY & REBRANDING",
