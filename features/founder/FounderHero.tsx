@@ -36,14 +36,14 @@ export function FounderHero() {
             </h1>
 
             <p className="font-editorial italic text-2xl sm:text-3xl text-kod-clay mb-6 leading-snug">
-              &ldquo;Work does not make me feel tired—the creative needs of
+              &ldquo;Work does not make me feel tired-the creative needs of
               others are fuel for my passion.&rdquo;
             </p>
 
             <p className="text-body text-kod-earth/85 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
               An interdisciplinary designer and creative director whose journey
-              began as an after-school curiosity in Grade 10. Over eight years of
-              hands-on craft across agencies and organizations have shaped a
+              began as an after-school curiosity in Grade 10. Over eight years
+              of hands-on craft across agencies and organizations have shaped a
               humble, relentless dedication to turning human vision into iconic,
               lasting reality.
             </p>

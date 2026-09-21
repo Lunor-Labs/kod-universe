@@ -34,12 +34,12 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
         </div>
 
         <div
-          className={`grid gap-6 ${
+          className={`grid gap-6 lg:gap-8 ${
             disciplines.length === 1
               ? "grid-cols-1 max-w-3xl"
-              : disciplines.length === 2
+              : disciplines.length === 2 || disciplines.length === 4
               ? "grid-cols-1 md:grid-cols-2"
-              : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+              : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           }`}
         >
           {disciplines.map((item, idx) => (

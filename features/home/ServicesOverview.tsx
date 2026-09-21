@@ -1,115 +1,85 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { serviceGroups } from "@/data/capabilities";
 
 export function ServicesOverview() {
   return (
     <section
       className="section-padding-top bg-transparent"
-      aria-label="Our creative services"
+      aria-label="KOD Universe Structure"
     >
       <div className="container-site">
         <div className="text-center mb-16">
           <ScrollReveal variant="up">
-            <SectionLabel>Our creative services</SectionLabel>
-            <h2 className="heading-section text-earth text-balance">
-              End-to-end creative{" "}
-              <em className="font-serif italic font-normal">solutions.</em>
+            <SectionLabel>Our Structure</SectionLabel>
+            <h2 className="heading-section text-earth text-balance mt-3">
+              One Universe.{" "}
+              <em className="font-serif italic font-normal">Two Worlds.</em>
             </h2>
-            <p className="mt-3 text-body text-kod-earth/85 max-w-xl mx-auto">
-              Three core creative disciplines engineered to scale your brand from initial spark to global resonance.
+            <p className="mt-4 text-body text-kod-earth/85 max-w-xl mx-auto">
+              We operate as a master brand with two distinct arms - a 360°
+              creative agency and an independent gallery for art and commerce.
             </p>
           </ScrollReveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {serviceGroups.map((group, index) => (
-            <ScrollReveal
-              key={group.id}
-              variant="up"
-              delay={index * 0.12}
-              className="h-full"
-            >
-              <Link
-                href={`/services/${group.id}`}
-                className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
-                            hover:shadow-xl transition-all duration-300 overflow-hidden"
-              >
-
-                <div className="flex flex-col justify-center items-center">
-                  <div className="w-24 h-24 rounded bg-canvas/40 flex items-center justify-center mb-6 group-hover:border-signal-orange group-hover:scale-105 transition-all duration-300">
-                    <Image
-                      src={`/icons/${group.iconName || "Branding"}.webp`}
-                      alt=""
-                      width={72}
-                      height={72}
-                      className="object-contain"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="heading-card text-earth mb-2 group-hover:text-signal-orange transition-colors duration-200">
-                    {group.title}
-                  </h3>
-                  <p className="text-body text-kod-earth/85 mb-6">
-                    {group.description}
-                  </p>
-                  {group.tags && group.tags.length > 0 && (
-                    <div className="mb-6">
-                      <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/80 mb-2.5">
-                        Inside this discipline:
-                      </p>
-                      <div className="flex flex-wrap justify-center gap-1.5">
-                        {group.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="inline-block px-3 py-1 rounded bg-canvas text-earth text-sm font-semibold group-hover:border-border-warm transition-colors"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="flex items-center justify-between gap-4 mt-auto">
-                  <span className="text-sm font-bold uppercase tracking-wider text-earth group-hover:text-signal-orange transition-colors">
-                    Explore {group.title}
-                  </span>
-                  <div className="w-8 h-8 rounded-full border border-border-warm flex items-center justify-center group-hover:bg-signal-orange group-hover:border-signal-orange text-earth group-hover:text-white transition-all duration-200 shadow-sm">
-                    <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </ScrollReveal>
-          ))}
-
-          <ScrollReveal variant="up" delay={5 * 0.12} className="h-full">
-            <Link
-              href="/services"
-              className="group relative bg-white/80 rounded p-7 lg:p-8 flex flex-col justify-center items-center text-center h-full
-                          hover:shadow-xl hover:bg-earth/80 transition-all duration-300 overflow-hidden"
-            >
-              <div className="flex flex-col justify-center items-center gap-4">
-                <div className="w-12 h-12 group-hover:bg-signal-orange group-hover:border-signal-orange rounded-full border-2 border-earth flex items-center justify-center transition-all duration-300">
-                  <ArrowRight size={20} className="text-earth group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
-                </div>
-                <p className="text-sm font-bold tracking-widest uppercase text-earth group-hover:text-white/80 transition-colors">
-                  Full picture
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center max-w-5xl mx-auto">
+          <ScrollReveal variant="up" delay={0.1}>
+            <div className="group relative bg-white/80 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
+              <div className="relative z-10 flex flex-col items-center h-full">
+                <p className="eyebrow text-signal-orange mb-4">
+                  360° CREATIVE AGENCY
                 </p>
-                <h3 className="heading-card text-earth group-hover:text-white transition-colors duration-200">
-                  View all capabilities &amp; deliverables
+                <h3 className="heading-section text-earth mb-4">
+                  KoD Creative
                 </h3>
-                <p className="text-body text-earth/85 group-hover:text-white/80 transition-colors">
-                  Explore every service, process, and deliverable we offer across all disciplines.
-                </p>
+                <Image
+                  src="/icons/branding.webp"
+                  alt="Design"
+                  width={160}
+                  height={160}
+                  className="group-hover/link:brightness-200"
+                />
+                <div className="mt-auto flex items-center justify-between">
+                  <Link href="/services" className="btn-link">
+                    <span>Explore Agency Services</span>
+                    <span className="btn-icon-circle">
+                      <ArrowRight size={14} />
+                    </span>
+                  </Link>
+                </div>
               </div>
-            </Link>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal variant="up" delay={0.2}>
+            <div className="group relative bg-white/80 rounded p-8 lg:p-12 h-full flex flex-col hover:shadow-sm transition-all duration-500 overflow-hidden">
+              <div className="relative z-10 flex flex-col items-center h-full">
+                <p className="eyebrow text-clay mb-4">ART + COMMERCE</p>
+                <h3 className="heading-section text-earth mb-4">KoD Gallery</h3>
+                <Image
+                  src="/icons/thumbnail-design.webp"
+                  alt="Merch"
+                  width={160}
+                  height={160}
+                />
+                <div className="mt-auto flex items-center justify-between">
+                  <Link
+                    href="/gallery"
+                    className="group-hover:text-signal-orange flex items-center gap-2.5 font-bold tracking-widest text-sm uppercase text-earth transition-colors"
+                  >
+                    <span>Explore Gallery</span>
+                    <span className="w-7 h-7 rounded-full border border-current flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                      <ArrowRight size={12} />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
-
       </div>
     </section>
   );

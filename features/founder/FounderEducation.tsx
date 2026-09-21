@@ -36,7 +36,7 @@ export function FounderEducation() {
       period: "2004 – 2012",
       icon: Award,
       highlights: [
-        "President's Scout Parchment Award (2011) — Highest national honor",
+        "President's Scout Parchment Award (2011) - Highest national honor",
         "Member of the Senior School Prefect Board",
         "Provincial Educational Software Competition Winner (2008, 2009, 2010)",
         "Artificial Intelligence Certificate (University of Moratuwa SL Association)",

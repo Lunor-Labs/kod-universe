@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
       { source: "/our-universe/:path*", destination: "/about-us/:path*", permanent: true },
       { source: "/our-story", destination: "/about-us", permanent: true },
       { source: "/our-story/:path*", destination: "/about-us/:path*", permanent: true },
+      { source: "/studio", destination: "/about-us", permanent: true },
+      { source: "/studio/:path*", destination: "/about-us/:path*", permanent: true },
+      { source: "/contact", destination: "/contact-us", permanent: true },
+      { source: "/contact/:path*", destination: "/contact-us/:path*", permanent: true },
       { source: "/connect", destination: "/contact-us", permanent: true },
       { source: "/connect/:path*", destination: "/contact-us/:path*", permanent: true },
     ];

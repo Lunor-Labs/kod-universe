@@ -44,7 +44,7 @@ export default function HomePage() {
           src="/main/wall-main-image-04.webp"
           alt=""
           fill
-          className="object-cover object-bottom"
+          className="object-contain object-top opacity-70"
           priority
         />
       </div>
@@ -58,8 +58,8 @@ export default function HomePage() {
 
         <WhyUsSection />
         <ProcessSection />
-        <Testimonials />
-        <FAQSection />
+        {/* <Testimonials /> */}
+        {/* <FAQSection /> */}
         <ContactCTA />
       </div>
     </main>

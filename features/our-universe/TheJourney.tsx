@@ -4,19 +4,19 @@ const steps = [
   {
     n: 1,
     title: "Discover",
-    body: "We dive deep into your world — observing signals, shifts, and the stories waiting to be told.",
+    body: "We dive deep into your world - observing signals, shifts, and the stories waiting to be told.",
     icon: "/icons/discover-icon.webp",
   },
   {
     n: 2,
     title: "Define",
-    body: "We find meaning in the spark — aligning it with truth, intention, and human need to shape clear direction.",
+    body: "We find meaning in the spark - aligning it with truth, intention, and human need to shape clear direction.",
     icon: "/icons/define.webp",
   },
   {
     n: 3,
     title: "Create",
-    body: "We shape the idea into form — through strategy, storytelling, and inspired design that connects.",
+    body: "We shape the idea into form - through strategy, storytelling, and inspired design that connects.",
     icon: "/icons/create.webp",
   },
   {
