@@ -4,20 +4,11 @@ export interface DropdownLink {
   badge?: string;
 }
 
-export interface DropdownSpotlight {
-  title: string;
-  description: string;
-  href: string;
-  tag: string;
-  image?: string;
-}
-
 export interface DropdownSectionData {
   primaryHeading: string;
   primaryLinks: DropdownLink[];
   secondaryHeading: string;
   secondaryLinks: DropdownLink[];
-  spotlight: DropdownSpotlight;
 }
 
 export const navigationDropdowns: Record<string, DropdownSectionData> = {
@@ -36,12 +27,6 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     ],
     secondaryHeading: "",
     secondaryLinks: [],
-    spotlight: {
-      tag: "",
-      title: "",
-      description: "",
-      href: "/work",
-    },
   },
   SERVICES: {
     primaryHeading: "KoD Creative",
@@ -59,15 +44,6 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       { label: "Digital Design & Development", href: "/services/design" },
       { label: "Start a Project", href: "/contact" },
     ],
-    spotlight: {
-      tag: "Studio Philosophy",
-      title: "360° Creative Agency.",
-      description:
-        "Design, marketing and visual storytelling - one coherent creative universe.",
-      href: "/services",
-      image:
-        "/portfolio/branding-identity/logo-design/area-6/area-6-fitness-equipment-showcase.webp",
-    },
   },
   STUDIO: {
     primaryHeading: "The Studio",
@@ -86,13 +62,6 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       { label: "Careers & Internships", href: "/contact#careers" },
       { label: "Press & Media Inquiries", href: "/contact#press" },
     ],
-    spotlight: {
-      tag: "Studio Manifesto",
-      title: "Crafting Brands That Endure",
-      description:
-        "We partner with visionary founders to build identities with soul, weight, and longevity.",
-      href: "/studio",
-    },
   },
   GALLERY: {
     primaryHeading: "KoD Gallery",
@@ -110,13 +79,6 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
       { label: "Apparel & Accessories", href: "/gallery/merch" },
       { label: "Creative Objects", href: "/gallery/merch" },
     ],
-    spotlight: {
-      tag: "Art + Commerce",
-      title: "A Creative-Commercial World.",
-      description:
-        "Original art, objects, merch and limited drops inside KoD Universe.",
-      href: "/gallery",
-    },
   },
   NEWS: {
     primaryHeading: "Latest from KoD",
@@ -127,12 +89,5 @@ export const navigationDropdowns: Record<string, DropdownSectionData> = {
     ],
     secondaryHeading: "",
     secondaryLinks: [],
-    spotlight: {
-      tag: "Culture + Updates",
-      title: "Inside the Universe.",
-      description:
-        "Thoughts, process stories, and creative culture from the KoD studio.",
-      href: "/news",
-    },
   },
 };

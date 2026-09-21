@@ -120,48 +120,6 @@ export function HeaderDropdown({
               </div>
             )}
 
-            {data.spotlight.title && (
-              <div
-                className={`lg:col-span-4 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                  isOpen
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-3"
-                }`}
-                style={{ transitionDelay: "130ms" }}
-              >
-                <div className="bg-kod-white rounded p-5 shadow-soft hover:border-kod-clay/70 transition-all group relative overflow-hidden">
-                  <p className="text-sm font-bold tracking-[0.15em] uppercase text-kod-clay mb-2 font-metropolis">
-                    {data.spotlight.tag}
-                  </p>
-                  <h4 className="text-lg font-bold text-kod-earth font-metropolis mb-2 group-hover:text-kod-clay transition-colors">
-                    {data.spotlight.title}
-                  </h4>
-                  <p className="text-sm text-kod-earth/80 leading-relaxed mb-3">
-                    {data.spotlight.description}
-                  </p>
-
-                  {data.spotlight.image && (
-                    <div className="relative w-full h-32 rounded-lg overflow-hidden mb-3">
-                      <Image
-                        src={data.spotlight.image}
-                        alt={data.spotlight.title}
-                        fill
-                        className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  )}
-
-                  <Link
-                    href={data.spotlight.href}
-                    onClick={onClose}
-                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-kod-clay group-hover:gap-3 transition-all"
-                  >
-                    <span>Explore</span>
-                    <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-            )}
           </div>
         )}
       </div>
