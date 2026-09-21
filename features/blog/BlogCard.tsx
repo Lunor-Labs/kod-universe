@@ -19,12 +19,12 @@ export function BlogCard({ post }: BlogCardProps) {
           alt={post.coverImage.alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         <div className="absolute top-4 left-4 z-10">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-kod-canvas/90 backdrop-blur-md text-kod-earth border border-kod-border/50 shadow-sm">
+          <span className="inline-flex items-center px-3 py-1 rounded text-[11px] font-semibold tracking-wider uppercase bg-kod-canvas/90 backdrop-blur-md text-kod-earth border border-kod-border/50 shadow-sm">
             {post.category}
           </span>
         </div>

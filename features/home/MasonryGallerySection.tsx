@@ -27,6 +27,61 @@ const CATEGORIES = [
 const INITIAL_BATCH = 12;
 const LOAD_MORE_STEP = 6;
 
+function MasonryItem({ item, index, onClick }: { item: GalleryItem; index: number; onClick: () => void }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div
+      className="break-inside-avoid mb-4 sm:mb-5 group relative rounded overflow-hidden bg-white/70 border border-border-warm/50 shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer select-none"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      aria-label={`Zoom into ${item.title}`}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+    >
+      <div
+        className={`relative w-full overflow-hidden ${
+          item.aspectClass || "aspect-square"
+        } ${!isLoaded ? "bg-kod-mist animate-pulse" : ""}`}
+      >
+        <Image
+          src={item.src}
+          alt={item.alt}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+          className={`object-cover group-hover:scale-105 transition-all duration-700 ease-out ${
+            isLoaded ? "opacity-100 blur-0" : "opacity-0 blur-sm scale-110"
+          }`}
+          loading={index < 4 ? "eager" : "lazy"}
+          onLoad={() => setIsLoaded(true)}
+        />
+        <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+          <ZoomIn size={15} />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span className="text-sm font-bold uppercase tracking-wider text-kod-clay mb-1">
+            {item.category}
+          </span>
+          <h3 className="font-metropolis font-bold text-base leading-snug line-clamp-2">
+            {item.title}
+          </h3>
+          {item.projectTitle && (
+            <p className="text-sm text-white/85 mt-0.5 truncate">
+              {item.projectTitle}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function MasonryGallerySection() {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
@@ -152,56 +207,14 @@ export function MasonryGallerySection() {
         </div>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5">
-          {visibleItems.map((item, index) => {
-            return (
-              <div
-                key={item.id}
-                className="break-inside-avoid mb-4 sm:mb-5 group relative rounded overflow-hidden bg-white/70 border border-border-warm/50 shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer select-none"
-                onClick={() => setSelectedItemIndex(index)}
-                role="button"
-                tabIndex={0}
-                aria-label={`Zoom into ${item.title}`}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedItemIndex(index);
-                  }
-                }}
-              >
-                <div
-                  className={`relative w-full overflow-hidden ${
-                    item.aspectClass || "aspect-square"
-                  }`}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                    loading={index < 4 ? "eager" : "lazy"}
-                  />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
-                    <ZoomIn size={15} />
-                  </div>
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                    <span className="text-sm font-bold uppercase tracking-wider text-kod-clay mb-1">
-                      {item.category}
-                    </span>
-                    <h3 className="font-metropolis font-bold text-base leading-snug line-clamp-2">
-                      {item.title}
-                    </h3>
-                    {item.projectTitle && (
-                      <p className="text-sm text-white/85 mt-0.5 truncate">
-                        {item.projectTitle}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {visibleItems.map((item, index) => (
+            <MasonryItem
+              key={item.id}
+              item={item}
+              index={index}
+              onClick={() => setSelectedItemIndex(index)}
+            />
+          ))}
         </div>
 
         <div className="mt-10 sm:mt-12 flex flex-col items-center justify-center gap-3">

@@ -1,11 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export function OurUniverseHero() {
+  const [imageReady, setImageReady] = useState(false);
+
   return (
     <section
-      className="relative flex items-center pt-28 pb-20 min-h-[80vh] overflow-hidden"
+      className="relative flex items-center pt-28 pb-20 min-h-[80vh] overflow-hidden bg-stone-300"
       aria-label="Our Story hero"
     >
       <div className="absolute inset-0 z-0">
@@ -14,16 +19,32 @@ export function OurUniverseHero() {
           alt="Cave wall with KOD logo painted on it"
           fill
           priority
-          className="object-cover object-center"
+          className={`object-cover object-center transition-opacity duration-700 ${
+            imageReady ? "opacity-100" : "opacity-0"
+          }`}
           sizes="100vw"
+          onLoad={() => setImageReady(true)}
         />
+
+        <div
+          className={`absolute inset-0 bg-stone-300 transition-opacity duration-700 ${
+            imageReady ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-200 via-stone-100 to-stone-200 animate-shimmer bg-[length:200%_100%]" />
+        </div>
+
         <div
           className="absolute inset-0 bg-gradient-to-r from-kod-canvas/90 via-kod-canvas/60 to-transparent md:w-1/2"
           aria-hidden="true"
         />
       </div>
 
-      <div className="container-site relative z-10 w-full">
+      <div
+        className={`container-site relative z-10 w-full transition-all duration-700 ease-out ${
+          imageReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 max-w-xl">
             <p className="eyebrow mb-4">Our Story. Our Origin. Our Why.</p>

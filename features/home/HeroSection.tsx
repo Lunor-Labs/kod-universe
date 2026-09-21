@@ -46,6 +46,7 @@ export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -83,13 +84,27 @@ export function HeroSection() {
             muted
             playsInline
             preload="auto"
-            className="w-full h-full object-cover object-center"
+            className={`w-full h-full object-cover object-center transition-opacity duration-700 ${
+              videoReady ? "opacity-100" : "opacity-0"
+            }`}
             aria-hidden="true"
+            onCanPlay={() => setVideoReady(true)}
           />
+          <div
+            className={`absolute inset-0 bg-stone-300 transition-opacity duration-700 ${
+              videoReady ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-stone-200 via-stone-100 to-stone-200 animate-shimmer bg-[length:200%_100%]" />
+          </div>
         </div>
       </>
 
-      <div className="container-site relative z-10 pt-10 md:pt-36 pb-20 w-full">
+      <div
+        className={`container-site relative z-10 pt-10 md:pt-36 pb-20 w-full transition-all duration-700 ease-out ${
+          videoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
         {isMobile ? (
           <div
             key={`content-mobile-${currentSlide}`}

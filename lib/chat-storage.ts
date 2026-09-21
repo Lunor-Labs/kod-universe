@@ -6,7 +6,22 @@ export interface QuickOption {
   id: string;
   label: string;
   payload?: string;
-  actionType?: "quote_form" | "services_info" | "contact_info" | "pricing_info" | "custom_message";
+  actionType?:
+    | "quote_form"
+    | "services_info"
+    | "contact_info"
+    | "pricing_info"
+    | "portfolio_info"
+    | "about_info"
+    | "gallery_info"
+    | "studio_info"
+    | "process_info"
+    | "branding_info"
+    | "marketing_info"
+    | "motion_info"
+    | "spatial_info"
+    | "photo_info"
+    | "custom_message";
 }
 
 export interface ChatFormData {
@@ -17,11 +32,14 @@ export interface ChatFormData {
   notes: string;
 }
 
+export type MessageType = "text" | "system-card";
+
 export interface ChatMessage {
   id: string;
   sender: "user" | "assistant" | "system";
   text: string;
   timestamp: string;
+  messageType?: MessageType;
   options?: QuickOption[];
   hasForm?: boolean;
   formData?: Partial<ChatFormData>;
@@ -35,32 +53,37 @@ export const INITIAL_WELCOME_MESSAGES: ChatMessage[] = [
   {
     id: "welcome-1",
     sender: "assistant",
-    text: "Welcome to KOD Universe! We craft ancient ideas into modern digital impact. What can our creative studio help you with today?",
+    text: "Hello — welcome to **KOD Universe**.\n\nWe're a 360° creative studio where ancient ideas are reborn into modern brand power. Whether you need a full brand identity, a digital presence, stunning visuals, or a creative campaign — you're in the right place.\n\nHow can I help you today?",
     timestamp: "Just now",
     options: [
       {
         id: "opt-quote",
-        label: "Get a free project quote (branding, web, design)",
+        label: "Get a free project quote",
         actionType: "quote_form",
       },
       {
         id: "opt-services",
-        label: "Explore our core services & capabilities",
+        label: "Explore services & capabilities",
         actionType: "services_info",
-      },
-      {
-        id: "opt-pricing",
-        label: "Ask about pricing & project timelines",
-        actionType: "pricing_info",
       },
       {
         id: "opt-portfolio",
         label: "View portfolio & featured work",
-        payload: "Tell me about your portfolio and recent work",
+        actionType: "portfolio_info",
+      },
+      {
+        id: "opt-about",
+        label: "Who is KOD Universe?",
+        actionType: "about_info",
+      },
+      {
+        id: "opt-pricing",
+        label: "Ask about pricing & timelines",
+        actionType: "pricing_info",
       },
       {
         id: "opt-contact",
-        label: "Book a discovery call or leave details",
+        label: "Book a call or leave details",
         actionType: "contact_info",
       },
       {
@@ -75,7 +98,9 @@ export const INITIAL_WELCOME_MESSAGES: ChatMessage[] = [
 function getSafeStorage(type: StorageType): Storage | null {
   if (typeof window === "undefined") return null;
   try {
-    return type === "localStorage" ? window.localStorage : window.sessionStorage;
+    return type === "localStorage"
+      ? window.localStorage
+      : window.sessionStorage;
   } catch (err) {
     console.warn("Storage access error:", err);
     return null;
@@ -85,8 +110,13 @@ function getSafeStorage(type: StorageType): Storage | null {
 export function getStorageMode(): StorageType {
   if (typeof window === "undefined") return "localStorage";
   try {
-    const savedMode = window.localStorage.getItem(STORAGE_MODE_KEY) as StorageType;
-    if (savedMode === "localStorage" || savedMode === "sessionStorage") {
+    const savedMode = window.localStorage.getItem(
+      STORAGE_MODE_KEY,
+    ) as StorageType;
+    if (
+      savedMode === "localStorage" ||
+      savedMode === "sessionStorage"
+    ) {
       return savedMode;
     }
   } catch (e) {
@@ -125,7 +155,10 @@ export function loadMessages(): ChatMessage[] {
   return INITIAL_WELCOME_MESSAGES;
 }
 
-export function saveMessages(messages: ChatMessage[], targetMode?: StorageType): void {
+export function saveMessages(
+  messages: ChatMessage[],
+  targetMode?: StorageType,
+): void {
   if (typeof window === "undefined") return;
   const mode = targetMode || getStorageMode();
   const storage = getSafeStorage(mode);

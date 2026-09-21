@@ -44,7 +44,7 @@ export default function HomePage() {
           src="/main/wall-main-image-04.webp"
           alt=""
           fill
-          className="object-contain object-top opacity-70"
+          className="object-cover object-top opacity-70"
           priority
         />
       </div>

@@ -761,3 +761,13 @@ section {
   will-change: transform;
   transform: translateZ(0);
 }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s ease-in-out infinite;
+  background-size: 200% 100%;
+}

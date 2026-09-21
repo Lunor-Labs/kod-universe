@@ -1,15 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Sparkles } from "lucide-react";
 import { LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export function FounderHero() {
+  const [imageReady, setImageReady] = useState(false);
+
   return (
     <section
       className="relative pt-28 sm:pt-32 pb-16 md:pb-24 bg-kod-canvas overflow-hidden"
       aria-label="Ishara Kodithuwakku - Founder of KOD Universe"
     >
-      <div className="container-site relative z-10">
+      <div
+        className={`container-site relative z-10 transition-all duration-700 ease-out ${
+          imageReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
         <Link
           href="/about-us"
           className="inline-flex items-center gap-2 text-kod-text-2 hover:text-kod-clay font-medium text-sm sm:text-base transition-colors mb-8 sm:mb-10 group"
@@ -113,6 +122,7 @@ export function FounderHero() {
                 priority
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 35vw"
+                onLoad={() => setImageReady(true)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-kod-earth/40 via-transparent to-transparent pointer-events-none" />
 
