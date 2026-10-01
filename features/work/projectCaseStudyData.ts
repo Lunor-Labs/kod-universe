@@ -344,7 +344,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.png",
+      "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
   },
 };
 

@@ -24,7 +24,7 @@ export const galleryItems: GalleryItem[] = [
     id: "dsg-campaign-banner",
     title: "DSG & Bio-Oil Omnichannel Launch Showcase",
     category: "SOCIAL MEDIA",
-    src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.png",
+    src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
     alt: "DSG & Bio-Oil Omnichannel Launch Showcase",
     aspectClass: "aspect-video",
     projectSlug: "dsg-launch-campaign",
@@ -34,7 +34,7 @@ export const galleryItems: GalleryItem[] = [
     id: "dsg-product-launch",
     title: "DSG Bio-Oil Official Product Launch",
     category: "SOCIAL MEDIA",
-    src: "/portfolio/marketing/DSG Launch campaign/Product Launch.jpg",
+    src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
     alt: "DSG Bio-Oil Official Product Launch Poster",
     aspectClass: "aspect-[4/5]",
     projectSlug: "dsg-launch-campaign",
@@ -44,7 +44,7 @@ export const galleryItems: GalleryItem[] = [
     id: "dsg-stall-design",
     title: "Bio-Oil Experiential Stall Architecture",
     category: "SOCIAL MEDIA",
-    src: "/portfolio/marketing/DSG Launch campaign/Bio-Oil_Stall-Design-.png",
+    src: "/portfolio/marketing/DSG Launch campaign/Bio-Oil_Stall-Design-.webp",
     alt: "Bio-Oil Experiential Stall Architecture",
     aspectClass: "aspect-square",
     projectSlug: "dsg-launch-campaign",
@@ -481,7 +481,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "& Prints.",
     description:
       "Artwork, prints and digital illustrations created by KoD — each piece rooted in story, process and intention.",
-    heroImage: "/gallery/art.png",
+    heroImage: "/gallery/art.webp",
     metaTitle: "Art & Prints — KoD Gallery",
     metaDescription:
       "Original artwork, art prints, digital illustrations and limited editions by KOD Universe. Each piece is created with intention and connected to a story.",
@@ -494,7 +494,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "& Objects.",
     description:
       "Apparel, creative objects and accessories that carry the KoD universe — things people actually want to own and wear.",
-    heroImage: "/gallery/merch.png",
+    heroImage: "/gallery/merch.webp",
     metaTitle: "Merch & Objects — KoD Gallery",
     metaDescription:
       "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
@@ -512,7 +512,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "Drops.",
     description:
       "Available for a moment, gone forever. Limited releases, seasonal collections, artist collaborations and KoD Originals.",
-    heroImage: "/gallery/drops.png",
+    heroImage: "/gallery/drops.webp",
     metaTitle: "Limited Drops — KoD Gallery",
     metaDescription:
       "KoD Gallery limited releases, seasonal collections, artist collaborations and KoD Originals. Available for a moment, gone forever.",

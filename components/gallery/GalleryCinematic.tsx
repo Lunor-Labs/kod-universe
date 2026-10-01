@@ -285,7 +285,7 @@ export function GalleryCinematic() {
       title: "Art",
       description:
         "Original artwork, prints, digital art and limited editions - created by KoD.",
-      image: "/gallery/art.png",
+      image: "/gallery/art.webp",
       tags: ["Originals", "Prints", "Digital Art"],
     },
     {
@@ -293,7 +293,7 @@ export function GalleryCinematic() {
       title: "Merch",
       description:
         "Apparel, t-shirts, posters, creative objects and accessories carrying the KoD universe.",
-      image: "/gallery/merch.png",
+      image: "/gallery/merch.webp",
       tags: ["Apparel", "Objects", "Accessories"],
     },
     {
@@ -301,7 +301,7 @@ export function GalleryCinematic() {
       title: "Drops",
       description:
         "Limited releases, seasonal collections, artist collaborations and KoD originals.",
-      image: "/gallery/drops.png",
+      image: "/gallery/drops.webp",
       tags: ["Limited Releases", "Collabs", "KoD Originals"],
     },
   ];
