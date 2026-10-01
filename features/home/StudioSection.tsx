@@ -12,10 +12,10 @@ import type { Project } from "@/types/project";
 
 // Pinned slugs shown in the static project row - edit order here to change display
 const FEATURED_SLUGS = [
-  "area-6-brand-identity",
   "bio-oil-skincare-campaign",
   "niwarthana-packaging-design",
-  "rouka-brand-identity",
+  "pissukanna-merchandise",
+  "cool-step-identity",
 ];
 
 const steps = [

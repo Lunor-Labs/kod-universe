@@ -28,7 +28,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/social-media/bio-oil-social-media-content-highlights/01-01.webp",
+      "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/01-01.webp",
   },
   "area-6-social-media": {
     badge: "FEATURED SOCIAL STRATEGY",
@@ -44,7 +44,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#0F172A", "#E11D48", "#FB7185", "#334155", "#F1F5F9"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/social-media/area-6/singale-post.webp",
+    imageSrc: "/portfolio/marketing/social-media/area-6/singale-post.webp",
   },
   "coats-sri-lanka-campaign": {
     badge: "FEATURED BRAND STORYTELLING",
@@ -61,7 +61,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/social-media/coats-sri-lanka-social-media-post/coats-thread-showcase.webp",
+      "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-thread-showcase.webp",
   },
   "niwarthana-packaging-design": {
     badge: "FEATURED PACKAGING",
@@ -77,7 +77,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
     headlineFont: "Cormorant Garamond",
     bodyFont: "Metropolis",
-    imageSrc: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
+    imageSrc: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
   },
   "rouka-brand-identity": {
     badge: "FEATURED BRAND ARCHITECTURE",
@@ -93,7 +93,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#1F2937", "#4B5563", "#D97706", "#F59E0B", "#FEF3C7"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/branding-identity/branding/rouka-1.webp",
+    imageSrc: "/portfolio/Design/branding-identity/branding/rouka-1.webp",
   },
   "slsa-uk-identity": {
     badge: "SPORTS IDENTITY & REBRANDING",
@@ -110,7 +110,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/slsa-logo/slsa-logo-mock-1.webp",
+      "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-mock-1.webp",
   },
   "coffee-1911-identity": {
     badge: "ARTISANAL BRAND IDENTITY",
@@ -127,7 +127,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Cormorant Garamond",
     bodyFont: "Metropolis",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/coffee-1911/coffee-1911-brand-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-brand-showcase.webp",
   },
   "cool-step-identity": {
     badge: "STREET CULTURE & IDENTITY",
@@ -144,7 +144,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/cool-step-final/cool-step-dance-studio-sneaker-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-dance-studio-sneaker-showcase.webp",
   },
   "focal-logo-identity": {
     badge: "CREATIVE TECH IDENTITY",
@@ -161,7 +161,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/focal/focal-camera-and-controller-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/focal/focal-camera-and-controller-showcase.webp",
   },
   "frans-niwasa-identity": {
     badge: "ARCHITECTURAL EXHIBITION IDENTITY",
@@ -178,7 +178,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Cormorant Garamond",
     bodyFont: "Metropolis",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/frans-niwasa/frans-niwasa-framed-poster-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-framed-poster-showcase.webp",
   },
   "kaiz-brand-identity": {
     badge: "LIFESTYLE & APPAREL IDENTITY",
@@ -195,7 +195,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
   },
   "maya-brand-identity": {
     badge: "ORGANIC SPICE IDENTITY",
@@ -212,7 +212,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Cormorant Garamond",
     bodyFont: "Metropolis",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/maya/maya-spice-packaging-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/maya/maya-spice-packaging-showcase.webp",
   },
   "area-6-brand-identity": {
     badge: "PERFORMANCE BRAND IDENTITY",
@@ -229,7 +229,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/area-6/area-6-fitness-products-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/area-6/area-6-fitness-products-showcase.webp",
   },
   "bito-brand-identity": {
     badge: "MODERN FOOTWEAR IDENTITY",
@@ -246,7 +246,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/bito/bito-footwear-and-packaging-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/bito/bito-footwear-and-packaging-showcase.webp",
   },
   "coco-brand-identity": {
     badge: "NATURAL LIVING BRAND IDENTITY",
@@ -263,7 +263,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/branding-identity/logo-design/coco/coco-packaging-and-jar-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/coco/coco-packaging-and-jar-showcase.webp",
   },
   "ibiza-mirissa-architectural-design": {
     badge: "FEATURED SPATIAL ARCHITECTURE",
@@ -279,7 +279,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#0E1F1A", "#1C382E", "#C89D66", "#DFC39A", "#F5EFE6"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/architectural-design/ibiza-mirissa/m5.webp",
+    imageSrc: "/portfolio/Design/architectural-design/ibiza-mirissa/m5.webp",
   },
   "pissu-kanna-brand-merchandise": {
     badge: "STREETWEAR MERCHANDISE IDENTITY",
@@ -295,7 +295,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#0A0A0A", "#FF2A2A", "#FFE500", "#FFFFFF", "#262626"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/pissu-kanna/mock.webp",
+    imageSrc: "/portfolio/Design/pissu-kanna/mock.webp",
   },
   "digital-art-visual-explorations": {
     badge: "FEATURED DIGITAL ART",
@@ -311,7 +311,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#05050D", "#7C3AED", "#EC4899", "#38BDF8", "#F1F5F9"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/digital-art/digital-art-1.webp",
+    imageSrc: "/portfolio/Design/digital-art/digital-art-1.webp",
   },
   "union-assurance-commercial": {
     badge: "COMMERCIAL STORYTELLING",
@@ -327,7 +327,24 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#081B33", "#0070F3", "#00DFD8", "#F0F4F8", "#1A2E44"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/story-telling/union-assuranse-commercial.webp",
+    imageSrc: "/portfolio/Visual Story Telling/story-telling/union-assuranse-commercial.webp",
+  },
+  "dsg-launch-campaign": {
+    badge: "OMNICHANNEL LAUNCH CAMPAIGN",
+    tagline: "Strategic Teaser Rollout & Experiential Activation",
+    description:
+      "Engineered an integrated launch narrative bridging suspenseful teaser campaigns, high-energy experiential booth architecture, and digital retail rollouts.",
+    deliverables: [
+      "Teaser Strategy",
+      "Launch Key Visuals",
+      "Event Stall Design",
+      "Retail & Merch Systems",
+    ],
+    palette: ["#E76F51", "#F4A261", "#E9C46A", "#264653", "#2A9D8F"],
+    headlineFont: "Metropolis",
+    bodyFont: "Inter",
+    imageSrc:
+      "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.png",
   },
 };
 

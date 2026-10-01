@@ -13,7 +13,7 @@ export const posts: Post[] = [
     type: "NEWS",
     category: "STUDIO NEWS",
     coverImage: {
-      src: "/portfolio/architectural-design/ibiza-mirissa/m5.webp",
+      src: "/portfolio/Design/architectural-design/ibiza-mirissa/m5.webp",
       alt: "IBIZA Mirissa Oceanfront Villa and Infinity Pool",
       width: 1920,
       height: 1080,
@@ -51,7 +51,7 @@ export const posts: Post[] = [
           "This gives property developers, hospitality founders, and private estate owners the confidence to preview, iterate, and refine their spatial investments with cinematic precision.",
         ],
         image: {
-          src: "/portfolio/architectural-design/ibiza-mirissa/m3.webp",
+          src: "/portfolio/Design/architectural-design/ibiza-mirissa/m3.webp",
           alt: "IBIZA Mirissa coastal terrace lounge render",
           caption:
             "Atmospheric dusk rendering of the coastal terrace lounge at IBIZA Mirissa.",
@@ -129,7 +129,7 @@ export const posts: Post[] = [
     type: "BLOG",
     category: "PACKAGING & CRAFT",
     coverImage: {
-      src: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
+      src: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
       alt: "Niwarthana packaging box and tea canisters",
       width: 1672,
       height: 941,
@@ -161,7 +161,7 @@ export const posts: Post[] = [
           "The tactile resistance of the box opening was calculated to create an instant of pause-encouraging the user to slow down and appreciate the craftsmanship within.",
         ],
         image: {
-          src: "/portfolio/branding-identity/package-design/niwarthana-2.webp",
+          src: "/portfolio/Design/branding-identity/package-design/niwarthana-2.webp",
           alt: "Niwarthana packaging dieline detail",
           caption:
             "Custom debossing and structural folds designed for Niwarthana.",
@@ -234,7 +234,7 @@ export const posts: Post[] = [
     type: "BLOG",
     category: "DESIGN ESSAYS",
     coverImage: {
-      src: "/portfolio/story-telling/union-assuranse-commercial.webp",
+      src: "/portfolio/Visual Story Telling/story-telling/union-assuranse-commercial.webp",
       alt: "Union Assurance Commercial Storytelling Keyframe",
       width: 1672,
       height: 941,
@@ -279,7 +279,7 @@ export const posts: Post[] = [
     type: "NEWS",
     category: "STUDIO NEWS",
     coverImage: {
-      src: "/portfolio/branding-identity/branding/rouka-1.webp",
+      src: "/portfolio/Design/branding-identity/branding/rouka-1.webp",
       alt: "ROUKA brand identity and streetwear showcase",
       width: 1672,
       height: 941,

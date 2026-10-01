@@ -171,10 +171,16 @@ export function MasonryGallerySection() {
                 Moments in the{" "}
                 <em className="font-serif italic font-normal">Universe.</em>
               </h2>
-              <p className="mt-2 text-body text-kod-earth/85 max-w-xl">
+              <p className="mt-2 mb-6 text-body text-kod-earth/85 max-w-xl">
                 A curated mosaic of brand artifacts, editorial frames, and
                 physical craft created by KOD Universe.
               </p>
+              <Link href="/gallery" className="btn-secondary inline-flex">
+                <span>View Full Gallery</span>
+                <span className="btn-badge">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
+              </Link>
             </ScrollReveal>
           </div>
 

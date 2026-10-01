@@ -299,14 +299,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
         imageSrc:
-          "/portfolio/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promoetion-01.webp",
+          "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promoetion-01.webp",
       },
       {
         id: "2",
         slug: "area-6-social-media",
         title: "Area 6 Social & Posters",
         category: "POSTER & ENGAGEMENT",
-        imageSrc: "/portfolio/social-media/area-6/area-6-social-media-hero.webp",
+        imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.webp",
       },
       {
         id: "3",
@@ -314,7 +314,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coats Sri Lanka Campaign",
         category: "HERITAGE & SOCIAL",
         imageSrc:
-          "/portfolio/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.webp",
+          "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.webp",
       },
     ],
     ctaTitle: "Ready to spark cultural momentum?",
@@ -381,7 +381,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       bodyFont: "Inter",
       slug: "bio-oil-skincare-campaign",
       imageSrc:
-        "/portfolio/social-media/bio-oil-social-media-content-highlights/01-01.webp",
+        "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/01-01.webp",
     },
     qualificationPoints: [
       {
@@ -537,14 +537,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         slug: "niwarthana-packaging-design",
         title: "Niwarthana Artisan Packaging",
         category: "SUSTAINABLE PACKAGING & CRAFT",
-        imageSrc: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
+        imageSrc: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
       },
       {
         id: "2",
         slug: "rouka-brand-identity",
         title: "ROUKA Brand Identity",
         category: "BRAND SYSTEM & IDENTITY",
-        imageSrc: "/portfolio/branding-identity/branding/rouka-1.webp",
+        imageSrc: "/portfolio/Design/branding-identity/branding/rouka-1.webp",
       },
       {
         id: "3",
@@ -552,7 +552,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "SLSA UK Emblem & Identity",
         category: "COMMUNITY BRAND & LOGO",
         imageSrc:
-          "/portfolio/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.webp",
+          "/portfolio/Design/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.webp",
       },
     ],
     ctaTitle: "Ready to build an identity that endures?",
@@ -618,7 +618,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Cormorant Garamond",
       bodyFont: "Metropolis",
       slug: "niwarthana-packaging-design",
-      imageSrc: "/portfolio/branding-identity/package-design/niwarthana-1.webp",
+      imageSrc: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
     },
     qualificationPoints: [
       {
@@ -775,7 +775,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coffee 1911 Brand & Spatial",
         category: "BRAND & SPATIAL ARCHITECTURE",
         imageSrc:
-          "/portfolio/branding-identity/logo-design/coffee-1911/coffee-1911-1.webp",
+          "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-1.webp",
       },
       {
         id: "2",
@@ -783,7 +783,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Cool Step Footwear Identity",
         category: "PRODUCT & APPAREL DESIGN",
         imageSrc:
-          "/portfolio/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
+          "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
       },
       {
         id: "3",
@@ -791,7 +791,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "FOCAL Visual Architecture",
         category: "DIGITAL IDENTITY & GEOMETRY",
         imageSrc:
-          "/portfolio/branding-identity/logo-design/focal/focal-logo-1.webp",
+          "/portfolio/Design/branding-identity/logo-design/focal/focal-logo-1.webp",
       },
     ],
     ctaTitle: "Ready to expand your brand universe?",
@@ -857,7 +857,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       headlineFont: "Metropolis",
       bodyFont: "Inter",
       slug: "rouka-brand-identity",
-      imageSrc: "/portfolio/branding-identity/branding/rouka-1.webp",
+      imageSrc: "/portfolio/Design/branding-identity/branding/rouka-1.webp",
     },
     qualificationPoints: [
       {
