@@ -259,6 +259,7 @@ export function ContentHighlightsCarousel({
                   alt={currentImage.alt}
                   width={currentImage.width || 1200}
                   height={currentImage.height || 1200}
+                  style={{ width: "auto", height: "auto" }}
                   priority
                   className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-200"
                 />

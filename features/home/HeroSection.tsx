@@ -208,6 +208,7 @@ export function HeroSection() {
                 src="/icons/web-hero-design-20.webp"
                 alt="About Us"
                 fill
+                sizes="(min-width: 768px) 128px, 96px"
                 className="object-contain"
               />
             </div>

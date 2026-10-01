@@ -63,6 +63,7 @@ export default async function DynamicGalleryCategoryPage({ params }: GalleryCate
             src={config.heroImage}
             alt={config.title}
             fill
+            sizes="100vw"
             className="object-cover object-center"
             priority
           />

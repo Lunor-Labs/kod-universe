@@ -145,7 +145,7 @@ function AccordionItem({
                 alt={service.category}
                 width={160}
                 height={160}
-                className="object-contain sm:w-48 w-24"
+                className="object-contain sm:w-48 w-24 h-auto"
               />
             </div>
 

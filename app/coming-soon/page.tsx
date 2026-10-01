@@ -9,6 +9,7 @@ export default function ComingSoonPage() {
           src="/coming-soon.jpg"
           alt="KOD Universe - The Cave is Almost Open"
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-80"
           priority
         />

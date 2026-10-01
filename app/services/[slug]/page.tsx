@@ -70,6 +70,7 @@ export default async function ServiceDetailPage({
           src="/main/single-service-main.webp"
           alt=""
           fill
+          sizes="100vw"
           priority
           className="object-cover object-top"
         />

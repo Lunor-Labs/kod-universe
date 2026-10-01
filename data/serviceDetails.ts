@@ -205,7 +205,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Brand & Communication Strategy",
         badge: "Strategy",
-        iconName: "Compass",
+        iconName: "branding",
         description: "Defining your brand's core positioning and the strategic roadmap to connect with your target audience.",
         deliverables: [
           "Brand Strategy",
@@ -229,7 +229,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Content Marketing",
         badge: "Content",
-        iconName: "Pen",
+        iconName: "create",
         description: "Crafting compelling narratives and branded content designed to spark conversations and build loyalty.",
         deliverables: [
           "Content Strategy",
@@ -241,7 +241,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Integrated Campaigns",
         badge: "Campaigns",
-        iconName: "Target",
+        iconName: "deliver",
         description: "Developing holistic, 360-degree campaigns that activate your brand across multiple touchpoints.",
         deliverables: [
           "360° Campaign Development",
@@ -253,7 +253,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Digital Marketing & Consultation",
         badge: "Growth",
-        iconName: "TrendingUp",
+        iconName: "discover-icon",
         description: "Data-driven digital marketing and strategic consultation to optimize performance and maximize ROI.",
         deliverables: [
           "Digital Campaigns",
@@ -456,7 +456,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Graphic & Editorial",
         badge: "Editorial",
-        iconName: "BookOpen",
+        iconName: "poster-design",
         description: "Crafting meticulous graphic layouts and editorial design for both physical publications and digital formats.",
         deliverables: [
           "Company Profiles",
@@ -681,7 +681,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Visual Narrative & Creative Direction",
         badge: "Direction",
-        iconName: "Compass",
+        iconName: "branding",
         description: "Guiding the visual story of your brand, ensuring every aesthetic choice aligns with your core narrative.",
         deliverables: [
           "Visual Narrative Strategy",
@@ -705,7 +705,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Film & Video",
         badge: "Motion",
-        iconName: "Volume2",
+        iconName: "filming",
         description: "Cinematic film and video production that commands attention and evokes emotion.",
         deliverables: [
           "Video Production",
@@ -729,7 +729,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
       {
         title: "Motion & Illustrated Storytelling",
         badge: "Animation",
-        iconName: "Sparkles",
+        iconName: "design-digital-art",
         description: "Bringing ideas to life through dynamic motion graphics, 2D/3D animation, and bespoke illustrations.",
         deliverables: [
           "Motion Graphics",

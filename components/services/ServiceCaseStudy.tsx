@@ -104,6 +104,7 @@ export function ServiceCaseStudy({
                   src={caseStudy.imageSrc}
                   alt={caseStudy.client}
                   fill
+                  sizes="(min-width: 1024px) 58vw, 100vw"
                   className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
               </div>

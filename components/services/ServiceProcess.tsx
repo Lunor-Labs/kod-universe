@@ -71,6 +71,7 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
                             src={step.imageSrc}
                             alt={step.title}
                             fill
+                            sizes="(min-width: 1024px) 42vw, 100vw"
                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                           />
                           <div className="absolute inset-0 bg-kod-earth/10 group-hover:bg-transparent transition-colors" />

@@ -126,6 +126,7 @@ export function InfoCards({
                   src="/assets/hero.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 33vw, 50vw"
                   className="object-cover object-right"
                 />
               </div>
@@ -324,6 +325,7 @@ export function InfoCards({
                   src="/assets/project-origins.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 33vw, 50vw"
                   className="object-cover object-right"
                 />
               </div>

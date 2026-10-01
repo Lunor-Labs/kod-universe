@@ -302,6 +302,7 @@ export function MasonryGallerySection() {
                   src={currentZoomItem.src}
                   alt={currentZoomItem.alt}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                   priority
                   className="object-contain rounded shadow-2xl animate-in zoom-in-95 duration-200"
                 />

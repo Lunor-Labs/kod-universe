@@ -70,6 +70,7 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
                 src={post.author.avatar}
                 alt={post.author.name}
                 fill
+                sizes="48px"
                 className="object-cover"
               />
             </div>

@@ -25,6 +25,7 @@ export function WhyUsSection() {
                   src="/icons/web-hero-design-25.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 25vw, 100vw"
                   className="object-contain object-left"
                 />
               </div>
@@ -60,6 +61,7 @@ export function WhyUsSection() {
                 src="/main/circle.webp"
                 alt=""
                 fill
+                sizes="(min-width: 1024px) 33vw, 100vw"
                 className="absolute inset-0 w-full h-full object-contain animate-[spin_30s_linear_infinite] sm:p-8 [transform-origin:center]"
               />
               <div

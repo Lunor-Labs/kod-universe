@@ -43,6 +43,7 @@ export default function HomePage() {
           src="/main/wall-main-image-04.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-top opacity-50"
           priority
         />

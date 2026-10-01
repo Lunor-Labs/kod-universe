@@ -60,6 +60,7 @@ export function BlogCard({ post }: BlogCardProps) {
                 src={post.author.avatar}
                 alt={post.author.name}
                 fill
+                sizes="28px"
                 className="object-cover"
               />
             </div>
