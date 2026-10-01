@@ -43,10 +43,27 @@ const SLIDES = [
 
 export function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    const notifyReady = () => {
+      setVideoReady(true);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("kod-hero-ready"));
+      }
+    };
+
+    if (videoRef.current && videoRef.current.readyState >= 2) {
+      notifyReady();
+    }
+
+    const fallback = setTimeout(notifyReady, 1200);
+    return () => clearTimeout(fallback);
+  }, []);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -78,6 +95,7 @@ export function HeroSection() {
       <>
         <div className="absolute inset-0 z-0 w-full h-full">
           <video
+            ref={videoRef}
             src={"/video/main-video.mp4"}
             autoPlay
             loop
@@ -88,7 +106,18 @@ export function HeroSection() {
               videoReady ? "opacity-100" : "opacity-0"
             }`}
             aria-hidden="true"
-            onCanPlay={() => setVideoReady(true)}
+            onCanPlay={() => {
+              setVideoReady(true);
+              if (typeof window !== "undefined") {
+                window.dispatchEvent(new CustomEvent("kod-hero-ready"));
+              }
+            }}
+            onLoadedData={() => {
+              setVideoReady(true);
+              if (typeof window !== "undefined") {
+                window.dispatchEvent(new CustomEvent("kod-hero-ready"));
+              }
+            }}
           />
           <div
             className={`absolute inset-0 bg-stone-300 transition-opacity duration-700 ${
@@ -101,9 +130,7 @@ export function HeroSection() {
       </>
 
       <div
-        className={`container-site relative z-10 pt-10 md:pt-36 pb-20 w-full transition-all duration-700 ease-out ${
-          videoReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
+        className="container-site relative z-10 pt-10 md:pt-36 pb-20 w-full transition-all duration-700 ease-out opacity-100 translate-y-0"
       >
         {isMobile ? (
           <div

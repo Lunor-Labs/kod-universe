@@ -111,6 +111,7 @@ export default async function ServiceDetailPage({
         projects={config.selectedWorkProjects || selectedWorkProjects}
         title={config.selectedWorkTitle}
         subtitle={config.selectedWorkSubtitle}
+        filterCategory={cap.title}
       />
 
       <ServiceSuitability

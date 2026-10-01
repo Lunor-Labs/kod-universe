@@ -8,12 +8,14 @@ interface ServiceSelectedWorkProps {
   projects: SelectedProject[];
   title?: string;
   subtitle?: string;
+  filterCategory?: string;
 }
 
 export function ServiceSelectedWork({
   projects,
   title = "SELECTED DISCIPLINE WORK",
   subtitle = "Stories crafted with purpose and lasting resonance.",
+  filterCategory,
 }: ServiceSelectedWorkProps) {
   if (!projects || projects.length === 0) return null;
 
@@ -35,7 +37,7 @@ export function ServiceSelectedWork({
 
           <ScrollReveal variant="right">
             <Link
-              href="/portfolio"
+              href={filterCategory ? `/portfolio?category=${encodeURIComponent(filterCategory)}#projects` : "/portfolio"}
               className="btn-link !text-kod-orange hover:!text-kod-earth"
             >
               <span>View all work</span>

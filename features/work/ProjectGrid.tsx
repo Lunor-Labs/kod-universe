@@ -94,6 +94,13 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
       setActiveCategory(mapped.category);
       if (mapped.sub) setActiveSubCategory(mapped.sub);
     }
+
+    const target = document.getElementById("projects");
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    }
   }, [searchParams]);
 
   const handleMainCategoryChange = (cat: string) => {
