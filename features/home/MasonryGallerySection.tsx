@@ -27,7 +27,15 @@ const CATEGORIES = [
 const INITIAL_BATCH = 12;
 const LOAD_MORE_STEP = 6;
 
-function MasonryItem({ item, index, onClick }: { item: GalleryItem; index: number; onClick: () => void }) {
+function MasonryItem({
+  item,
+  index,
+  onClick,
+}: {
+  item: GalleryItem;
+  index: number;
+  onClick: () => void;
+}) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -159,58 +167,61 @@ export function MasonryGallerySection() {
 
   return (
     <section
-      className="section-padding-top bg-transparent relative overflow-hidden"
+      className="bg-transparent relative overflow-hidden"
       aria-label="Visual Gallery Archive"
     >
       <div className="container-site">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
-          <div>
-            <ScrollReveal variant="up">
+        <ScrollReveal variant="up" delay={0.05}>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 sm:mb-10">
+            <div>
               <SectionLabel>Visual Archive</SectionLabel>
               <h2 className="heading-section text-earth text-balance">
                 Moments in the{" "}
                 <em className="font-serif italic font-normal">Universe.</em>
               </h2>
-              <p className="mt-2 mb-6 text-body text-kod-earth/85 max-w-xl">
+              <p className="mt-2 text-body text-kod-earth/85 max-w-xl">
                 A curated mosaic of brand artifacts, editorial frames, and
                 physical craft created by KOD Universe.
               </p>
-              <Link href="/gallery" className="btn-secondary inline-flex">
+            </div>
+
+            <div className="shrink-0 md:pt-1">
+              <Link href="/gallery" className="btn-secondary">
                 <span>View Full Gallery</span>
                 <span className="btn-badge">
                   <ArrowRight size={13} aria-hidden="true" />
                 </span>
               </Link>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal variant="up" delay={0.1}>
-            <div
-              className="flex items-center gap-1.5 sm:gap-2 flex-wrap"
-              role="tablist"
-              aria-label="Filter visual gallery"
-            >
-              {CATEGORIES.map((cat) => {
-                const isActive = activeCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => handleCategoryChange(cat)}
-                    role="tab"
-                    aria-selected={isActive}
-                    className={`text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded transition-all cursor-pointer ${
-                      isActive
-                        ? "bg-earth text-white shadow-xs"
-                        : "bg-white/80 hover:bg-white text-kod-earth/70 hover:text-earth border border-border-warm/50"
-                    }`}
-                  >
-                    {cat === "ALL" ? "All Moments" : cat}
-                  </button>
-                );
-              })}
             </div>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal variant="up" delay={0.15}>
+          <div
+            className="flex items-center gap-1.5 sm:gap-2 flex-wrap mb-8 sm:mb-10"
+            role="tablist"
+            aria-label="Filter visual gallery"
+          >
+            {CATEGORIES.map((cat) => {
+              const isActive = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => handleCategoryChange(cat)}
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded transition-all cursor-pointer ${
+                    isActive
+                      ? "bg-earth text-white shadow-xs"
+                      : "bg-white/80 hover:bg-white text-kod-earth/70 hover:text-earth border border-border-warm/50"
+                  }`}
+                >
+                  {cat === "ALL" ? "All Moments" : cat}
+                </button>
+              );
+            })}
+          </div>
+        </ScrollReveal>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5">
           {visibleItems.map((item, index) => (

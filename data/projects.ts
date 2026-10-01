@@ -1802,6 +1802,8 @@ const slugAliases: Record<string, string> = {
   "origins-concept-series": "focal-logo-identity",
   "cosmic-explorations": "maya-brand-identity",
   "editorial-campaign": "frans-niwasa-identity",
+  "pissukanna-merchandise": "pissu-kanna-brand-merchandise",
+  "bio-oil-dsg-launch": "dsg-launch-campaign",
 };
 
 export function getProjectBySlug(slug: string): Project | undefined {

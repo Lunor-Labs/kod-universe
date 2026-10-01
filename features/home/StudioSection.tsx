@@ -1,234 +1,235 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ProjectCard } from "@/components/ui/ProjectCard";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Project } from "@/types/project";
 
-// Pinned slugs shown in the static project row - edit order here to change display
-const FEATURED_SLUGS = [
-  "bio-oil-skincare-campaign",
-  "niwarthana-packaging-design",
-  "pissukanna-merchandise",
-  "cool-step-identity",
-];
+interface SelectedProjectItem {
+  number: string;
+  slug: string;
+  title: string;
+  client: string;
+  category: string;
+  badge: string;
+  imageSrc: string;
+  imageAlt: string;
+  description: string;
+  stats: {
+    primaryValue: string;
+    primaryLabel: string;
+    secondaryValue: string;
+    secondaryLabel: string;
+    summary: string;
+  };
+}
 
-const steps = [
+const SELECTED_PROJECTS: SelectedProjectItem[] = [
   {
     number: "01",
-    title: "Discover",
+    slug: "dsg-launch-campaign",
+    title: "Bio-Oil DSG Launch",
+    client: "Bio-Oil / DSG",
+    category: "MARKETING",
+    badge: "Campaign",
+    imageSrc: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
+    imageAlt: "Bio-Oil DSG Launch Campaign Showcase",
     description:
-      "We dive deep to understand your goals, audience, and opportunities.",
-    iconPath: "/icons/discover-icon.webp",
+      "An integrated omnichannel launch combining sequential teaser rollouts, retail event architecture, and high-impact digital activations.",
+    stats: {
+      primaryValue: "+453%",
+      primaryLabel: "Sales Growth",
+      secondaryValue: "$0.25",
+      secondaryLabel: "Reported CPA",
+      summary: "453% sales growth during lockdown. Reported CPA: USD 0.25.",
+    },
   },
   {
     number: "02",
-    title: "Define",
+    slug: "niwarthana-packaging-design",
+    title: "Niwarthana",
+    client: "Niwarthana Ceylon Tea",
+    category: "DESIGN",
+    badge: "Packaging",
+    imageSrc:
+      "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
+    imageAlt: "Niwarthana Artisan Ceylon Tea Packaging Architecture",
     description:
-      "We shape the strategy and creative direction with clarity and intent.",
-    iconPath: "/icons/define.webp",
+      "Tactile, export-grade packaging architectures that turn Sinhala typography into rich visual textures across sustainable tea cartons.",
+    stats: {
+      primaryValue: "13+",
+      primaryLabel: "Bespoke SKUs",
+      secondaryValue: "100%",
+      secondaryLabel: "Plastic-Free",
+      summary:
+        "13+ custom die-line architectures crafted with 100% sustainable paperboard.",
+    },
   },
   {
     number: "03",
-    title: "Create",
-    description: "We design, craft, and refine ideas that connect and convert.",
-    iconPath: "/icons/create.webp",
-  },
-  {
-    number: "04",
-    title: "Deliver",
+    slug: "pissu-kanna-brand-merchandise",
+    title: "Pissukanna",
+    client: "Pissu Kanna",
+    category: "DESIGN",
+    badge: "Streetwear",
+    imageSrc: "/portfolio/Design/pissu-kanna/mock.webp",
+    imageAlt: "Pissu Kanna Mascot & Streetwear Merchandise Collection",
     description:
-      "We launch with precision and support your growth every step ahead.",
-    iconPath: "/icons/deliver.webp",
+      "An irreverent street-culture lifestyle identity uniting raw mascot illustration, collectible graphic art, and wearable apparel merchandise.",
+    stats: {
+      primaryValue: "10K+",
+      primaryLabel: "Community Reach",
+      secondaryValue: "100%",
+      secondaryLabel: "Drop Sell-Out",
+      summary:
+        "10,000+ organic youth subculture reach with an instant 100% initial drop sell-out.",
+    },
   },
 ];
 
 interface StudioSectionProps {
-  projects: Project[];
+  projects?: Project[];
 }
 
 export function StudioSection({ projects }: StudioSectionProps) {
-  const featured = (() => {
-    const pinned = FEATURED_SLUGS.map((slug) =>
-      projects.find((p) => p.slug === slug),
-    ).filter(Boolean) as Project[];
-    return pinned.length > 0 ? pinned[0] : projects[0];
-  })();
-
-  const otherProjects = projects.filter((p) => p.id !== featured?.id);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (otherProjects.length <= 2) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % otherProjects.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [otherProjects.length]);
-
-  const displayOthers = [];
-  if (otherProjects.length > 0) {
-    for (let i = 0; i < Math.min(2, otherProjects.length); i++) {
-      displayOthers.push(
-        otherProjects[(currentIndex + i) % otherProjects.length],
-      );
-    }
-  }
-
   return (
     <section
-      className="section-padding-top"
-      aria-label="Studio origin and process"
+      id="selected-work"
+      className="section-padding text-kod-black"
+      aria-label="Selected Work and Case Studies"
     >
-      <div className="container-site space-y-10">
-        {featured && (
-          <div>
-            <ScrollReveal variant="up" delay={0.05}>
-              <div className="flex items-end justify-between mb-6">
-                <div>
-                  <SectionLabel>Selected work</SectionLabel>
-                  <h3 className="heading-section text-earth mt-1 text-balance">
-                    Work that{" "}
-                    <em className="font-serif italic font-normal">matters.</em>
-                  </h3>
-                </div>
-                <Link
-                  href="/portfolio"
-                  className="btn-link hidden sm:inline-flex"
-                >
-                  <span>View all projects</span>
-                  <span className="btn-icon-circle">
-                    <ArrowRight size={13} aria-hidden="true" />
-                  </span>
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            <div className="md:hidden -mx-4 px-4">
-              <div
-                className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4
-                           [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              >
-                <motion.div
-                  className="snap-center shrink-0 w-[85vw]"
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.45, ease: "easeOut" }}
-                >
-                  <ProjectCard
-                    project={featured}
-                    priority={true}
-                    size="default"
-                    className="h-full"
-                  />
-                </motion.div>
-
-                {otherProjects.slice(0, 5).map((project, i) => (
-                  <motion.div
-                    key={project.id}
-                    className="snap-center shrink-0 w-[85vw]"
-                    initial={{ opacity: 0, x: 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{
-                      duration: 0.45,
-                      delay: i * 0.08,
-                      ease: "easeOut",
-                    }}
-                  >
-                    <ProjectCard
-                      project={project}
-                      priority={false}
-                      size="default"
-                      className="h-full"
-                    />
-                  </motion.div>
-                ))}
-
-                <motion.div
-                  className="snap-center shrink-0 w-[85vw] flex items-center justify-center"
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.45, delay: 0.48, ease: "easeOut" }}
-                >
-                  <Link
-                    href="/portfolio"
-                    className="group w-full h-full min-h-[200px] bg-earth rounded flex flex-col items-center justify-center gap-3 p-8 text-center hover:bg-signal-orange transition-colors duration-300"
-                  >
-                    <div className="w-10 h-10 rounded-full border-2 border-canvas/40 flex items-center justify-center group-hover:border-white transition-all duration-300">
-                      <ArrowRight
-                        size={18}
-                        className="text-canvas"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <span className="text-sm font-bold tracking-widest uppercase text-canvas/70 group-hover:text-white/80 transition-colors">
-                      See more
-                    </span>
-                    <span className="heading-card text-canvas group-hover:text-white transition-colors">
-                      View all projects
-                    </span>
-                  </Link>
-                </motion.div>
-              </div>
-
-              <p className="text-center text-xs text-earth/40 tracking-widest uppercase mt-1 select-none">
-                swipe to explore
+      <div className="container-site space-y-10 md:space-y-14">
+        <ScrollReveal variant="up" delay={0.05}>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <SectionLabel className="mb-3">Selected Work</SectionLabel>
+              <h2 className="text-4xl md:text-6xl text-editorial">
+                Work that{" "}
+                <em className="font-serif italic font-normal text-kod-earth">
+                  matters.
+                </em>
+              </h2>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:pb-1">
+              <p className="text-sm md:text-base text-kod-text-2 leading-relaxed max-w-sm">
+                Three highlighted transformations spanning brand campaigns,
+                export packaging, and youth streetwear.
               </p>
-            </div>
-
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="lg:col-span-2 h-full">
-                <ScrollReveal variant="up" delay={0}>
-                  <ProjectCard
-                    project={featured}
-                    priority={true}
-                    size="large"
-                    className="h-full"
-                  />
-                </ScrollReveal>
-              </div>
-
-              <AnimatePresence mode="popLayout">
-                {displayOthers.map((project) => (
-                  <motion.div
-                    key={project.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="lg:col-span-1 h-full"
-                  >
-                    <ProjectCard
-                      project={project}
-                      priority={false}
-                      size="default"
-                      className="h-full"
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-
-            <div className="mt-6 hidden sm:flex justify-center md:hidden">
-              <Link href="/portfolio" className="btn-link">
-                <span>View all projects</span>
-                <span className="btn-icon-circle">
+              <Link
+                href="/portfolio"
+                className="btn-secondary text-sm self-start sm:self-auto shrink-0"
+              >
+                <span>View All Projects</span>
+                <span className="btn-badge">
                   <ArrowRight size={13} aria-hidden="true" />
                 </span>
               </Link>
             </div>
           </div>
-        )}
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr_1.5fr] gap-6 lg:gap-8">
+          {SELECTED_PROJECTS.map((item, idx) => (
+            <ScrollReveal
+              key={item.slug}
+              variant="up"
+              delay={0.1 + idx * 0.1}
+              className="h-full"
+            >
+              <Link
+                href={`/portfolio/${item.slug}`}
+                className="group flex flex-col h-full bg-white/80 hover:bg-white rounded border border-black/[0.08] hover:border-signal-orange/40 shadow-xs hover:shadow-xl transition-all duration-500 overflow-hidden select-none"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 flex items-center justify-center">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    fill
+                    sizes={
+                      idx === 0
+                        ? "(min-width: 1024px) 40vw, 100vw"
+                        : "(min-width: 1024px) 30vw, 100vw"
+                    }
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
+
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-white/90 text-kod-earth backdrop-blur-md shadow-sm border border-black/[0.06]">
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3.5 right-3.5 z-10 w-9 h-9 rounded-full bg-white/90 text-kod-black shadow-md flex items-center justify-center translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <ArrowUpRight size={16} className="text-signal-orange" />
+                  </div>
+                </div>
+
+                <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between gap-5">
+                  <div className="space-y-2.5">
+                    <div className="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-kod-earth/50">
+                      <span>{item.client}</span>
+                      <span>·</span>
+                      <span className="text-signal-orange">
+                        {item.category}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl sm:text-[1.75rem] font-bold font-metropolis text-kod-earth leading-tight group-hover:text-signal-orange transition-colors duration-200">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm text-kod-text-2 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="rounded p-4 sm:p-5 bg-black/[0.02] border border-black/[0.06] group-hover:border-signal-orange/30 group-hover:bg-signal-orange/[0.03] transition-colors duration-300">
+                    <div className="grid grid-cols-2 gap-4 pb-3 mb-3 border-b border-black/[0.06]">
+                      <div>
+                        <span className="block text-2xl sm:text-3xl font-bold font-metropolis text-signal-orange tracking-tight leading-none">
+                          {item.stats.primaryValue}
+                        </span>
+                        <span className="block text-[11px] font-bold uppercase tracking-wider text-kod-earth/70 mt-1.5">
+                          {item.stats.primaryLabel}
+                        </span>
+                      </div>
+                      <div className="border-l border-black/[0.06] pl-4">
+                        <span className="block text-2xl sm:text-3xl font-bold font-metropolis text-kod-earth tracking-tight leading-none">
+                          {item.stats.secondaryValue}
+                        </span>
+                        <span className="block text-[11px] font-bold uppercase tracking-wider text-kod-earth/70 mt-1.5">
+                          {item.stats.secondaryLabel}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2 pt-0.5">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-signal-orange shrink-0 mt-1.5"
+                        aria-hidden="true"
+                      />
+                      <p className="text-xs text-kod-earth/85 leading-snug font-medium">
+                        {item.stats.summary}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <div className="flex sm:hidden justify-center pt-2">
+          <Link href="/portfolio" className="btn-secondary w-full text-center">
+            <span>View All Projects</span>
+            <span className="btn-badge">
+              <ArrowRight size={13} aria-hidden="true" />
+            </span>
+          </Link>
+        </div>
       </div>
     </section>
   );

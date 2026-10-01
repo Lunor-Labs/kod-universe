@@ -36,6 +36,14 @@ export interface ProjectPillar {
   icon?: string;
 }
 
+export interface ProjectStats {
+  primaryValue: string;
+  primaryLabel: string;
+  secondaryValue: string;
+  secondaryLabel: string;
+  summary: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -59,5 +67,6 @@ export interface Project {
   tags: string[];
   featured: boolean;
   relatedSlugs: string[];
+  stats?: ProjectStats;
 }
 
