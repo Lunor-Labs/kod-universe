@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import {
@@ -18,10 +19,9 @@ interface MobileMenuProps {
   triggerRef: React.RefObject<HTMLButtonElement | null>;
 }
 
-
-
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -52,7 +52,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           role="dialog"
           aria-label="Navigation menu"
           aria-modal="true"
-          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-24 pb-8 px-6 md:px-12 md:hidden overflow-hidden antialiased"
+          className="fixed inset-0 z-40 bg-canvas flex flex-col pt-20 pb-8 px-6 sm:px-10 md:hidden overflow-y-auto overscroll-contain antialiased"
           style={{ 
             willChange: "opacity", 
             WebkitBackfaceVisibility: "hidden", 
@@ -60,7 +60,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           }}
         >
           <div 
-            className="absolute top-[20%] -right-[150px] w-[500px] h-[500px] pointer-events-none opacity-[0.08] z-0"
+            className="absolute top-[10%] -right-[120px] w-[400px] h-[400px] pointer-events-none opacity-[0.06] z-0"
             style={{ 
               transform: "rotate(45deg) translateZ(0)", 
               WebkitBackfaceVisibility: "hidden", 
@@ -71,82 +71,75 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               src="/main/blossom.webp"
               alt=""
               fill
+              sizes="400px"
               className="object-contain"
               priority
             />
           </div>
 
-          <nav
-            aria-label="Mobile navigation"
-            className="flex-1 flex flex-col justify-center relative z-10"
-          >
-            <ul
-              className="space-y-6"
-              role="list"
+          <div className="min-h-full flex flex-col justify-between relative z-10 py-2">
+            <nav
+              aria-label="Mobile navigation"
+              className="my-auto py-4"
             >
-              {siteConfig.nav.map((item) => (
-                <li
-                  key={item.href}
-                  className="antialiased"
-                  style={{ 
-                    willChange: "opacity, transform",
-                    WebkitBackfaceVisibility: "hidden", 
-                    backfaceVisibility: "hidden" 
-                  }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={onClose}
-                    className="block font-editorial text-5xl sm:text-6xl text-earth hover:text-signal-orange transition-colors duration-200"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+              <ul
+                className="space-y-4 sm:space-y-5"
+                role="list"
+              >
+                {siteConfig.nav.map((item, idx) => {
+                  const isActive =
+                    pathname === item.href ||
+                    (item.href !== "/" && pathname.startsWith(item.href));
+
+                  return (
+                    <li
+                      key={item.href}
+                      className="antialiased"
+                      style={{ 
+                        willChange: "opacity, transform",
+                        WebkitBackfaceVisibility: "hidden", 
+                        backfaceVisibility: "hidden" 
+                      }}
+                    >
+                      <Link
+                        href={item.href}
+                        onClick={onClose}
+                        className={`group flex items-baseline gap-3 text-3xl sm:text-4xl font-editorial tracking-tight transition-colors duration-200 ${
+                          isActive
+                            ? "text-signal-orange"
+                            : "text-earth hover:text-signal-orange"
+                        }`}
+                      >
+                        <span className="text-xs font-mono font-medium tracking-widest text-kod-earth/40 group-hover:text-signal-orange/70 transition-colors">
+                          0{idx + 1}
+                        </span>
+                        <span>{item.label}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
 
             <div 
-              className="mt-12 antialiased"
-              style={{ 
-                willChange: "opacity, transform",
-                WebkitBackfaceVisibility: "hidden", 
-                backfaceVisibility: "hidden" 
-              }}
+              className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+              style={{ WebkitBackfaceVisibility: "hidden", backfaceVisibility: "hidden", transform: "translateZ(0)" }}
             >
-              <Link
-                href="/contact-us"
-                onClick={onClose}
-                className="btn-primary w-fit"
-              >
-                <span>Start a Project</span>
-                <span className="btn-badge">
-                  <ArrowRight size={13} aria-hidden="true" />
-                </span>
-              </Link>
-            </div>
-          </nav>
-
-          <div 
-            className="mt-auto border-t border-border-warm pt-6 flex items-center justify-between relative z-10"
-            style={{ WebkitBackfaceVisibility: "hidden", backfaceVisibility: "hidden", transform: "translateZ(0)" }}
-          >
-            <p className="font-serif italic text-secondary text-sm">
-              Ancient ideas. Modern impact.
-            </p>
-            
-            <div className="flex items-center gap-4 text-secondary">
-              <a href={siteConfig.socialLinks.find(s => s.platform === "Instagram")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Instagram">
-                <InstagramIcon className="w-5 h-5" />
-              </a>
-              <a href={siteConfig.socialLinks.find(s => s.platform === "LinkedIn")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="LinkedIn">
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
-              <a href={siteConfig.socialLinks.find(s => s.platform === "Behance")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Behance">
-                <BehanceIcon className="w-5 h-5" />
-              </a>
-              <a href={siteConfig.socialLinks.find(s => s.platform === "Facebook")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Facebook">
-                <FacebookIcon className="w-5 h-5" />
-              </a>
+              
+              <div className="flex items-center gap-4 text-secondary">
+                <a href={siteConfig.socialLinks.find(s => s.platform === "Instagram")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Instagram">
+                  <InstagramIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a href={siteConfig.socialLinks.find(s => s.platform === "LinkedIn")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="LinkedIn">
+                  <LinkedinIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a href={siteConfig.socialLinks.find(s => s.platform === "Behance")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Behance">
+                  <BehanceIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a href={siteConfig.socialLinks.find(s => s.platform === "Facebook")?.href || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-signal-orange transition-colors" aria-label="Facebook">
+                  <FacebookIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -7,36 +7,36 @@ import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 const SLIDES = [
   {
-    eyebrow: "Seeds of ideas. Forged on earth.",
-    title1: "Ancient Origins.",
-    title2: "Impact.",
-    titleHighlight: "Modern ",
+    eyebrow: "Who We Are · Creative Agency & Studio",
+    title1: "Messengers of",
+    title2: "Forces.",
+    titleHighlight: "Creative ",
     description:
-      "We believe creative forces arrive from the universe - carrying meaning, energy, and responsibility. We transform these seeds of ideas into modern brands, stories, and experiences that matter.",
+      "KOD Universe is a 360° creative agency and studio shaping brands through design, marketing, and visual storytelling — transforming sparks of ideas into enduring cultural and commercial impact.",
     image: "/main/hero1.webp",
-    linkText: "Explore our work",
+    linkText: "Explore Our Work",
     linkHref: "/portfolio",
   },
   {
-    eyebrow: "Strategy. Design. Story.",
-    title1: "Creative Forces.",
-    title2: "Form.",
-    titleHighlight: "Taking ",
+    eyebrow: "What We Do · Strategy · Design · Story",
+    title1: "Shaping Brands.",
+    title2: "Culture.",
+    titleHighlight: "Moving ",
     description:
-      "We listen to the universe, observing signals and shifts. Aligning raw potential with human truth, we shape brand identities that resonate deeply and endure across changing landscapes and eras.",
+      "We observe cultural signals and market truths to build bespoke identity systems, tactile packaging architecture, and cinematic stories engineered for category leadership.",
     image: "/assets/hero.webp",
-    linkText: "See our capabilities",
+    linkText: "View Our Services",
     linkHref: "/services",
   },
   {
-    eyebrow: "Your vision, realized.",
-    title1: "Let's Create",
+    eyebrow: "Collaboration · Partner With Us",
+    title1: "Let's Build",
     title2: "Next.",
     titleHighlight: "What's ",
     description:
-      "Whether you have a spark or need help finding one, we are here to turn ideas into tangible impact. Join us in building experiences that connect, inspire, and leave a lasting mark.",
+      "Whether launching a new market-defining venture or redefining an established legacy, we partner with visionary founders to turn ambitious visions into tangible reality.",
     image: "/assets/our-story-cta.webp",
-    linkText: "Start a conversation",
+    linkText: "Start a Conversation",
     linkHref: "/contact-us",
   },
 ];
@@ -206,14 +206,14 @@ export function HeroSection() {
             <div className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl animate-breathe group-hover:scale-110 transition-transform duration-300">
               <Image
                 src="/icons/web-hero-design-20.webp"
-                alt="About Us"
+                alt="Who We Are"
                 fill
                 sizes="(min-width: 768px) 128px, 96px"
                 className="object-contain"
               />
             </div>
             <span className="hidden md:block translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
-              About Us
+              Who We Are
             </span>
           </Link>
         </div>

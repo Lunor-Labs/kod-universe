@@ -221,15 +221,6 @@ export function StudioSection({ projects }: StudioSectionProps) {
             </ScrollReveal>
           ))}
         </div>
-
-        <div className="flex sm:hidden justify-center pt-2">
-          <Link href="/portfolio" className="btn-secondary w-full text-center">
-            <span>View All Projects</span>
-            <span className="btn-badge">
-              <ArrowRight size={13} aria-hidden="true" />
-            </span>
-          </Link>
-        </div>
       </div>
     </section>
   );
