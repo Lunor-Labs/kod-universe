@@ -58,15 +58,15 @@ export function ProjectCard({
           {project.subCategory ? ` - ${project.subCategory}` : ""}
         </p>
         <h3
-          className="font-metropolis font-bold text-earth text-lg sm:text-xl leading-tight mb-2 
-                       group-hover:text-signal-orange transition-colors duration-200"
+          className="font-metropolis font-bold text-kod-black text-lg sm:text-xl leading-tight mb-2 
+                       group-hover:text-kod-orange transition-colors duration-200"
         >
           {project.title}
         </h3>
-        <p className="text-kod-earth/70 leading-relaxed mb-4 line-clamp-2">
+        <p className="text-kod-black/70 leading-relaxed mb-4 line-clamp-2">
           {project.shortDescription}
         </p>
-        <div className="mt-auto flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-kod-earth/50">
+        <div className="mt-auto flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-kod-black/50">
           <span>{project.client}</span>
           <span>·</span>
           <span>{project.year}</span>

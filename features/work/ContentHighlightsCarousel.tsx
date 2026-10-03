@@ -109,17 +109,17 @@ export function ContentHighlightsCarousel({
   );
 
   return (
-    <div className="w-full pt-8 pb-4">
+    <div className="w-full pt-8">
       <div className="flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-4 flex-1">
-          <h2 className="font-metropolis font-bold text-display-sm sm:text-display-md text-kod-clay tracking-tight whitespace-nowrap">
+          <h2 className="font-metropolis font-bold text-display-sm sm:text-display-md text-kod-black tracking-tight whitespace-nowrap">
             {title}
           </h2>
           <div className="h-[2px] bg-kod-border flex-1" />
         </div>
         {totalPages > 1 && (
           <div className="flex items-center gap-3 flex-shrink-0">
-            <span className="text-xs sm:text-sm font-metropolis font-semibold text-kod-earth/60">
+            <span className="text-xs sm:text-sm font-metropolis font-semibold text-kod-black/60">
               {currentPage + 1} / {totalPages}
             </span>
             <div className="flex items-center gap-1.5">
@@ -127,7 +127,7 @@ export function ContentHighlightsCarousel({
                 onClick={handlePrevPage}
                 disabled={!canPrevPage}
                 aria-label="Previous page"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-black hover:bg-kod-black hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
               >
                 <ChevronLeft size={18} />
               </button>
@@ -135,7 +135,7 @@ export function ContentHighlightsCarousel({
                 onClick={handleNextPage}
                 disabled={!canNextPage}
                 aria-label="Next page"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-clay hover:bg-kod-clay hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-kod-border flex items-center justify-center text-kod-black hover:bg-kod-black hover:text-kod-white transition-all disabled:opacity-30 disabled:pointer-events-none cursor-pointer"
               >
                 <ChevronRight size={18} />
               </button>
@@ -156,7 +156,7 @@ export function ContentHighlightsCarousel({
               <div
                 key={globalIndex}
                 onClick={() => setSelectedIndex(globalIndex)}
-                className="aspect-[4/3] rounded overflow-hidden border border-kod-border bg-kod-white shadow-sm hover:shadow-md hover:border-kod-clay transition-all hover:scale-[1.01] cursor-pointer relative group"
+                className="aspect-[4/3] rounded overflow-hidden border border-kod-border bg-kod-white shadow-sm hover:shadow-md hover:border-kod-black transition-all hover:scale-[1.01] cursor-pointer relative group"
               >
                 <Image
                   src={img.src}
@@ -180,8 +180,8 @@ export function ContentHighlightsCarousel({
                 aria-label={`Go to page ${pageIdx + 1}`}
                 className={`h-2 rounded-full transition-all cursor-pointer ${
                   currentPage === pageIdx
-                    ? "w-6 bg-kod-clay"
-                    : "w-2 bg-kod-border hover:bg-kod-clay/50"
+                    ? "w-6 bg-kod-black"
+                    : "w-2 bg-kod-border hover:bg-kod-black/50"
                 }`}
               />
             ))}
@@ -189,23 +189,23 @@ export function ContentHighlightsCarousel({
         )}
       </div>
 
-      {tags.length > 0 && (
+      {/* {tags.length > 0 && (
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 select-none">
           {tags.map((tag) => (
             <div
               key={tag}
-              className="inline-flex items-center gap-3 text-base md:text-lg font-medium text-kod-earth"
+              className="inline-flex items-center gap-3 text-base md:text-lg font-medium text-kod-black"
             >
-              <div className="w-5 h-5 rounded-full bg-kod-clay flex items-center justify-center text-kod-white flex-shrink-0 shadow-sm">
+              <div className="w-5 h-5 rounded-full bg-kod-black flex items-center justify-center text-kod-white flex-shrink-0 shadow-sm">
                 <Check size={12} strokeWidth={3} />
               </div>
-              <span className="font-metropolis tracking-tight text-kod-earth">
+              <span className="font-metropolis tracking-tight text-kod-black">
                 {tag}
               </span>
             </div>
           ))}
         </div>
-      )}
+      )} */}
 
       {mounted &&
         currentImage &&

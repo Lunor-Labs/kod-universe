@@ -8,7 +8,7 @@ interface ProjectCaseStudyProps {
 export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
   return (
     <article
-      className="section-padding bg-kod-canvas"
+      className="section-padding-bottom bg-kod-canvas"
       aria-label="Project details"
     >
       <div className="container-site">
@@ -16,21 +16,21 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
           <div className="lg:col-span-2 space-y-12">
             <div>
               <SectionLabel>Project Overview</SectionLabel>
-              <p className="text-kod-earth text-lg md:text-xl leading-relaxed mt-3">
+              <p className="text-kod-black text-lg md:text-xl leading-relaxed mt-3">
                 {project.overview}
               </p>
             </div>
 
             <div>
               <SectionLabel>The Challenge</SectionLabel>
-              <p className="text-kod-earth/85 text-base md:text-lg leading-relaxed mt-3">
+              <p className="text-kod-black/85 text-base md:text-lg leading-relaxed mt-3">
                 {project.challenge}
               </p>
             </div>
 
             <div>
               <SectionLabel>Our Approach</SectionLabel>
-              <p className="text-kod-earth/85 text-base md:text-lg leading-relaxed mt-3">
+              <p className="text-kod-black/85 text-base md:text-lg leading-relaxed mt-3">
                 {project.approach}
               </p>
             </div>
@@ -42,10 +42,10 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                 {project.deliverables.map((d) => (
                   <li
                     key={d}
-                    className="flex items-start gap-3 text-base text-kod-earth/85 font-medium"
+                    className="flex items-start gap-3 text-base text-kod-black/85 font-medium"
                   >
                     <span
-                      className="mt-2 w-2 h-2 rounded-full bg-kod-clay flex-shrink-0"
+                      className="mt-2 w-2 h-2 rounded-full bg-kod-black flex-shrink-0"
                       aria-hidden="true"
                     />
                     <span>{d}</span>
@@ -54,15 +54,14 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
               </ul>
 
               <div className="mt-8 pt-6 border-t border-kod-border">
-                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/80 mb-3">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-black/80 mb-3">
                   Project Disciplines
                 </p>
                 <div className="flex flex-wrap gap-2.5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-sm font-medium tracking-wide uppercase px-3.5 py-1.5 
-                                 bg-kod-canvas border border-kod-border rounded-full text-kod-earth"
+                      className="text-sm font-medium tracking-wide uppercase px-3.5 py-1.5 bg-kod-canvas border border-kod-border rounded-full text-kod-black"
                     >
                       {tag}
                     </span>
