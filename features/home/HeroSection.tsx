@@ -5,47 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-const SLIDES = [
-  {
-    eyebrow: "Who We Are · Creative Agency & Studio",
-    title1: "Messengers of",
-    title2: "Forces.",
-    titleHighlight: "Creative ",
-    description:
-      "KOD Universe is a 360° creative agency and studio shaping brands through design, marketing, and visual storytelling — transforming sparks of ideas into enduring cultural and commercial impact.",
-    image: "/main/hero1.webp",
-    linkText: "Explore Our Work",
-    linkHref: "/portfolio",
-  },
-  {
-    eyebrow: "What We Do · Strategy · Design · Story",
-    title1: "Shaping Brands.",
-    title2: "Culture.",
-    titleHighlight: "Moving ",
-    description:
-      "We observe cultural signals and market truths to build bespoke identity systems, tactile packaging architecture, and cinematic stories engineered for category leadership.",
-    image: "/assets/hero.webp",
-    linkText: "View Our Services",
-    linkHref: "/services",
-  },
-  {
-    eyebrow: "Collaboration · Partner With Us",
-    title1: "Let's Build",
-    title2: "Next.",
-    titleHighlight: "What's ",
-    description:
-      "Whether launching a new market-defining venture or redefining an established legacy, we partner with visionary founders to turn ambitious visions into tangible reality.",
-    image: "/assets/our-story-cta.webp",
-    linkText: "Start a Conversation",
-    linkHref: "/contact-us",
-  },
-];
+const HERO_CONTENT = {
+  eyebrow: "WHO WE ARE",
+  title1: "We Don't Just Build Brands.",
+  titleHighlight: " We Create ",
+  title2: "Universes.",
+  description:
+    "Since 2018, we've been blending strategy, creativity, and storytelling to transform brands into unforgettable experiences. Every brand has a story. We make the world feel it.",
+  linkText: "Explore Our Work",
+  linkHref: "/portfolio",
+};
 
 export function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [videoReady, setVideoReady] = useState(false);
 
@@ -74,23 +47,13 @@ export function HeroSection() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  useEffect(() => {
-    if (isHovered) return;
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [isHovered]);
-
-  const slide = SLIDES[currentSlide];
+  const slide = HERO_CONTENT;
 
   return (
     <section
       ref={heroRef}
       className="relative flex items-center overflow-hidden bg-stone-300 min-h-screen"
-      aria-label="Hero slider"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      aria-label="Hero section"
     >
       <>
         <div className="absolute inset-0 z-0 w-full h-full">
@@ -134,18 +97,15 @@ export function HeroSection() {
       >
         {isMobile ? (
           <div
-            key={`content-mobile-${currentSlide}`}
             className="relative max-w-4xl animate-fade-in"
           >
             <p className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased">
               {slide.eyebrow}
             </p>
             <h1 className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased">
-              {slide.title1} <br />
+              {slide.title1}
               {slide.titleHighlight}
-              <em className="font-editorial italic font-normal text-earth">
                 {slide.title2}
-              </em>
             </h1>
             <p className="text-lead text-earth mb-10 max-w-xl antialiased">
               {slide.description}
@@ -165,20 +125,12 @@ export function HeroSection() {
             </div>
           </div>
         ) : (
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`content-desktop-${currentSlide}`}
-              className="relative max-w-4xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.45, ease: "easeOut" }}
-            >
+          <div className="relative max-w-4xl">
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.05, ease: "easeOut" }}
-                className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased"
+                className="font-semibold tracking-widest uppercase text-black mb-6 antialiased"
               >
                 {slide.eyebrow}
               </motion.p>
@@ -186,13 +138,11 @@ export function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.45, delay: 0.1, ease: "easeOut" }}
-                className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased"
+                className="text-5xl !font-bold text-earth mb-6 tracking-tight font-normal antialiased"
               >
                 {slide.title1} <br />
                 {slide.titleHighlight}
-                <em className="font-editorial italic font-normal text-earth">
                   {slide.title2}
-                </em>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -220,8 +170,7 @@ export function HeroSection() {
                   </Link>
                 </div>
               </motion.div>
-            </motion.div>
-          </AnimatePresence>
+          </div>
         )}
       </div>
       <div className="absolute inset-0 pointer-events-none z-30 pt-18 sm:pt-28">

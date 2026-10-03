@@ -120,30 +120,26 @@ export function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="hidden sm:block lg:col-span-1 h-full">
             <ScrollReveal variant="up">
-              <div className="relative  bg-white/80 rounded p-8 lg:p-10 flex flex-col justify-center min-h-[556px] overflow-hidden items-center">
-                <div
-                  className="absolute -right-10 -top-10 w-40 h-40 rounded-full border border-border-warm/50 opacity-40 pointer-events-none"
-                  aria-hidden="true"
-                />
-                <div
-                  className="absolute -right-4 -top-4 w-24 h-24 rounded-full border border-border-warm/30 opacity-30 pointer-events-none"
-                  aria-hidden="true"
-                />
+              <div className="relative  bg-white/80 rounded px-8 lg:px-10 py-4 flex flex-col justify-center min-h-[556px] overflow-hidden items-center">
+                
 
-                <div className="relative z-10 flex  gap-6">
-                  <div className="flex-1">
-                    {/* <p className="eyebrow mb-4">Our origin. Your impact.</p> */}
+                <div className="relative z-10 flex flex-col items-center gap-1">
+                  <div className="relative flex-shrink-0 w-48 h-48 sm:w-full sm:h-90 self-center">
+                    <Image
+                      src="/main/circle.webp"
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="w-full h-full object-contain animate-[spin_30s_linear_infinite] [transform-origin:center]"
+                    />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left flex flex-col items-center sm:items-start">
                     <h2 className="heading-section text-earth mb-4 text-balance">
                       We are messengers of{" "}
                       <em className="font-serif italic font-normal">
                         creative forces.
                       </em>
                     </h2>
-                    <p className="text-body text-kod-earth/85 mb-8 max-w-xs">
-                      From the vast universe, ideas spark - seeds of potential.
-                      We receive them with purpose and shape them into work that
-                      connects, inspires, and leaves a lasting mark.
-                    </p>
                     <Link href="/about-us" className="btn-secondary">
                       <span>Our Story</span>
                       <span className="btn-badge">
@@ -151,16 +147,6 @@ export function ProcessSection() {
                       </span>
                     </Link>
                   </div>
-                  {/* <div className="flex-shrink-0 w-28 h-28 sm:w-72 sm:h-72 self-center">
-                  <Image
-                    src="/main/circle.webp"
-                    alt=""
-                    width={300}
-                    height={300}
-                    className="object-contain animate-spin-slower"
-                    aria-hidden="true"
-                  />
-                </div> */}
                 </div>
               </div>
             </ScrollReveal>
