@@ -7,6 +7,7 @@ import { Testimonials } from "@/features/home/Testimonials";
 import { ContactCTA } from "@/features/home/ContactCTA";
 import { FAQSection } from "@/features/home/FAQSection";
 import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
+import { GallerySection } from "@/features/home/GallerySection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import Image from "next/image";
@@ -52,11 +53,12 @@ export default function HomePage() {
         <HeroSection />
         <ServicesSection />
         <StudioSection projects={projects} />
-        <MasonryGallerySection />
+        <GallerySection />
+        {/* <MasonryGallerySection /> */}
         {/* <ShowreelSection /> */}
         {/* <InfoCards featuredProject={featuredProject} projects={projects} /> */}
 
-        <WhyUsSection />
+        {/* <WhyUsSection /> */}
         <ProcessSection />
         {/* <Testimonials /> */}
         {/* <FAQSection /> */}
