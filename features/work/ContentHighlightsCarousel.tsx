@@ -156,13 +156,13 @@ export function ContentHighlightsCarousel({
               <div
                 key={globalIndex}
                 onClick={() => setSelectedIndex(globalIndex)}
-                className="aspect-[4/3] rounded overflow-hidden border border-kod-border bg-kod-white shadow-sm hover:shadow-md hover:border-kod-black transition-all hover:scale-[1.01] cursor-pointer relative group"
+                className="aspect-square rounded overflow-hidden bg-kod-white shadow-sm hover:shadow-md hover:border-kod-black transition-all hover:scale-[1.01] cursor-pointer relative group"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none" />

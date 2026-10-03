@@ -50,41 +50,39 @@ const SELECTED_PROJECTS: SelectedProjectItem[] = [
     number: "02",
     slug: "niwarthana-packaging-design",
     title: "Niwarthana",
-    client: "Niwarthana Ceylon Tea",
-    category: "DESIGN",
+    client: "REBRANDING AND PACKAGING",
+    category: "LANGUAGE BECAME THE PACKAGING",
     badge: "Packaging",
     imageSrc:
       "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
     imageAlt: "Niwarthana Artisan Ceylon Tea Packaging Architecture",
     description:
-      "Tactile, export-grade packaging architectures that turn Sinhala typography into rich visual textures across sustainable tea cartons.",
+      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept. The rebrand and conceptual packaging work resulted in 24 designs, turning language into part of the experience of the pack.",
     stats: {
-      primaryValue: "13+",
-      primaryLabel: "Bespoke SKUs",
+      primaryValue: "24",
+      primaryLabel: "Pack Designs",
       secondaryValue: "100%",
-      secondaryLabel: "Plastic-Free",
-      summary:
-        "13+ custom die-line architectures crafted with 100% sustainable paperboard.",
+      secondaryLabel: "Cultural Identity",
+      summary: "Culture, transformed into design.",
     },
   },
   {
     number: "03",
     slug: "pissu-kanna-brand-merchandise",
     title: "Pissukanna",
-    client: "Pissu Kanna",
-    category: "DESIGN",
+    client: "MERCHANDISE DESIGN",
+    category: "CRAZY ENOUGH TO WIN",
     badge: "Streetwear",
-    imageSrc: "/portfolio/Design/pissu-kanna/mock.webp",
+    imageSrc: "/portfolio/Design/pissu-kanna/pissu-kanna-merch-showcase.webp",
     imageAlt: "Pissu Kanna Mascot & Streetwear Merchandise Collection",
     description:
-      "An irreverent street-culture lifestyle identity uniting raw mascot illustration, collectible graphic art, and wearable apparel merchandise.",
+      "Some briefs ask for restraint. This one didn’t. We made a bold, expressive merchandise concept for the Pissukanna Design Challenge, and it won first place.",
     stats: {
-      primaryValue: "10K+",
-      primaryLabel: "Community Reach",
+      primaryValue: "1st",
+      primaryLabel: "Design Challenge",
       secondaryValue: "100%",
       secondaryLabel: "Drop Sell-Out",
-      summary:
-        "10,000+ organic youth subculture reach with an instant 100% initial drop sell-out.",
+      summary: "Challenge entered. Rules stretched. Champion crowned.",
     },
   },
 ];
@@ -142,7 +140,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
                 href={`/portfolio/${item.slug}`}
                 className="group flex flex-col h-full bg-white/80 hover:bg-white rounded border border-black/[0.08] hover:border-signal-orange/40 shadow-xs hover:shadow-xl transition-all duration-500 overflow-hidden select-none"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 flex items-center justify-center">
+                <div className="relative aspect-[16/11] overflow-hidden bg-stone-100 flex items-center justify-center">
                   <Image
                     src={item.imageSrc}
                     alt={item.imageAlt}
@@ -169,9 +167,9 @@ export function StudioSection({ projects }: StudioSectionProps) {
 
                 <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between gap-5">
                   <div className="space-y-2.5">
-                    <div className="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-kod-earth/50">
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-bold tracking-widest uppercase text-kod-earth/50">
                       <span>{item.client}</span>
-                      <span>·</span>
+                      <span className="text-black/30">|</span>
                       <span className="text-signal-orange">
                         {item.category}
                       </span>

@@ -87,7 +87,7 @@ export default function CapabilitiesPage() {
               variant="up"
               className="relative group"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center bg-kod-orange/5 p-4 rounded hover:border hover:border-kod-orange/40">
                 <div
                   className={`lg:col-span-4 h-64 w-full relative  overflow-hidden ${index % 2 !== 0 ? "lg:order-2" : ""}`}
                 >
@@ -95,7 +95,7 @@ export default function CapabilitiesPage() {
                     src={pillarImages[group.id]}
                     alt={group.title}
                     fill
-                    className="object-contain transition-transform duration-[2s] ease-out group-hover:scale-105 rounded-sm  py-8 bg-kod-orange/5"
+                    className="object-contain transition-transform duration-[2s] ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 60vw"
                   />
                 </div>

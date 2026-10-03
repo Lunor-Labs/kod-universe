@@ -284,7 +284,7 @@ export const projects: Project[] = [
     subCategories: ["Packaging"],
     year: 2024,
     shortDescription:
-      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept.",
+      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept. The rebrand and conceptual packaging work resulted in 24 designs, turning language into part of the experience of the pack. Culture, transformed into design.",
     overview:
       "Niwarthana commissioned KOD Universe to design full product packaging architectures that evoke organic authenticity, refined shelf presence, and an immersive unboxing ritual.",
     challenge:
@@ -848,8 +848,8 @@ export const projects: Project[] = [
       "Digital presence guidelines",
     ],
     heroImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
-      alt: "Kaiz Apparel Merchandise Podium Showcase",
+      src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-king-crown-and-plaque-showcase.webp",
+      alt: "Kaiz King Crown and Branded Plaque Showcase",
       width: 1672,
       height: 941,
     },
@@ -861,8 +861,8 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
-        alt: "Kaiz apparel merchandise podium showcase",
+        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-king-crown-and-plaque-showcase.webp",
+        alt: "Kaiz king crown, microphone, and branded plaque showcase",
         width: 1672,
         height: 941,
       },
@@ -1360,7 +1360,7 @@ export const projects: Project[] = [
     location: "Sri Lanka",
     timeline: "2024",
     shortDescription:
-      "Bold street-culture brand identity, character illustration, and wearable merchandise apparel system for Pissu Kanna.",
+      "Some briefs ask for restraint. This one didn’t. We made a bold, expressive merchandise concept for the Pissukanna Design Challenge, and it won first place. Challenge entered. Rules stretched. Champion crowned.",
     overview:
       "Pissu Kanna commissioned KOD Universe to develop an irreverent, expressive youth-culture lifestyle identity. Combining raw graphic character illustrations, street art aesthetics, and bespoke apparel merchandise, we built a brand that commands attention in modern urban spaces.",
     challenge:
@@ -1393,27 +1393,45 @@ export const projects: Project[] = [
       },
     ],
     heroImage: {
-      src: "/portfolio/Design/pissu-kanna/mock.webp",
-      alt: "Pissu Kanna Streetwear T-Shirt & Lifestyle Apparel Mockup",
+      src: "/portfolio/Design/pissu-kanna/pissu-kanna-merch-showcase.webp",
+      alt: "Pissu Kanna Streetwear Merchandise Showcase",
       width: 5018,
       height: 3584,
     },
     cardImage: {
-      src: "/portfolio/Design/pissu-kanna/kanna-branding.webp",
-      alt: "Pissu Kanna Signature Brand Identity & Logo Mark",
+      src: "/portfolio/Design/pissu-kanna/pissu-kanna-merch-showcase.webp",
+      alt: "Pissu Kanna Streetwear Merchandise Showcase",
       width: 3584,
       height: 3584,
     },
     galleryImages: [
       {
         src: "/portfolio/Design/pissu-kanna/mock.webp",
-        alt: "Pissu Kanna Apparel Merchandise Presentation",
+        alt: "Pissu Kanna Streetwear Apparel Presentation",
         width: 5018,
         height: 3584,
       },
       {
+        src: "/portfolio/Design/pissu-kanna/pissu-kanna-lookbook-02.webp",
+        alt: "Pissu Kanna Streetwear Campaign Lookbook Editorial",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/portfolio/Design/pissu-kanna/pissu-kanna-lookbook-01.webp",
+        alt: "Pissu Kanna Streetwear In-Store Fashion Editorial",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/portfolio/Design/pissu-kanna/pissu-kanna-art-board-09.webp",
+        alt: "Pissu Kanna Merchandise Palette & Apparel Mockups",
+        width: 2250,
+        height: 2250,
+      },
+      {
         src: "/portfolio/Design/pissu-kanna/kanna-branding.webp",
-        alt: "Pissu Kanna Brand Mark & Typography",
+        alt: "Pissu Kanna Brand Mark & Retail Space",
         width: 3584,
         height: 3584,
       },
@@ -1424,22 +1442,22 @@ export const projects: Project[] = [
         height: 2250,
       },
       {
-        src: "/portfolio/Design/pissu-kanna/pissu-kanna-art-board-04.webp",
-        alt: "Pissu Kanna Character Art Board 04",
+        src: "/portfolio/Design/pissu-kanna/pissu-kanna-art-board-07.webp",
+        alt: "Pissu Kanna Streetwear Apparel Shorts",
         width: 2250,
         height: 2250,
       },
       {
         src: "/portfolio/Design/pissu-kanna/pissu-kanna-art-board-06.webp",
-        alt: "Pissu Kanna Merchandise Graphic Board 06",
+        alt: "Pissu Kanna Mascot Graphic Board 06",
         width: 2251,
         height: 2250,
       },
       {
-        src: "/portfolio/Design/pissu-kanna/pissu-kanna-art-board-07.webp",
-        alt: "Pissu Kanna Collectible Graphic Board 07",
-        width: 2250,
-        height: 2250,
+        src: "/portfolio/Design/pissu-kanna/pissu-kanna-tee-white.webp",
+        alt: "Pissu Kanna Minimal White Graphic Tee",
+        width: 1200,
+        height: 1200,
       },
     ],
     tags: ["Branding", "Merchandising", "Streetwear", "Character Design", "Illustration"],

@@ -70,7 +70,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
                     alt={section.image.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 800px"
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 {section.image.caption && (

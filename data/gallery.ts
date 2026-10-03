@@ -334,7 +334,7 @@ export const galleryItems: GalleryItem[] = [
     id: "kaiz-apparel-showcase",
     title: "Kaiz Signature Apparel & Lifestyle Merch",
     category: "BRANDING & IDENTITY",
-    src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
+    src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-king-crown-and-plaque-showcase.webp",
     alt: "Kaiz Signature Apparel & Lifestyle Merch",
     aspectClass: "aspect-[16/9]",
     projectSlug: "kaiz-brand-identity",
@@ -462,7 +462,12 @@ export interface GalleryCategoryConfig {
   metaTitle: string;
   metaDescription: string;
   subTitle?: string;
-  categories?: { label: string; description: string; badge?: string; id?: string }[];
+  categories?: {
+    label: string;
+    description: string;
+    badge?: string;
+    id?: string;
+  }[];
   comingSoonDrops?: {
     id: string;
     title: string;
@@ -499,10 +504,22 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     metaDescription:
       "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
     categories: [
-      { label: "Apparel", description: "T-shirts, hoodies, and wearable pieces from KoD." },
-      { label: "Posters", description: "Art prints and graphic posters from the studio." },
-      { label: "Creative Objects", description: "One-of-a-kind objects with a KoD story." },
-      { label: "Accessories / Collectibles", description: "Hats, bags, and collectible items." },
+      {
+        label: "Apparel",
+        description: "T-shirts, hoodies, and wearable pieces from KoD.",
+      },
+      {
+        label: "Posters",
+        description: "Art prints and graphic posters from the studio.",
+      },
+      {
+        label: "Creative Objects",
+        description: "One-of-a-kind objects with a KoD story.",
+      },
+      {
+        label: "Accessories / Collectibles",
+        description: "Hats, bags, and collectible items.",
+      },
     ],
   },
   drops: {
@@ -519,23 +536,27 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     categories: [
       {
         label: "Limited Releases",
-        description: "One-off pieces, numbered editions and time-sensitive releases.",
+        description:
+          "One-off pieces, numbered editions and time-sensitive releases.",
         badge: "DROPS",
       },
       {
         label: "Seasonal Collections",
-        description: "Curated collections tied to seasons, moments and cultural events.",
+        description:
+          "Curated collections tied to seasons, moments and cultural events.",
         badge: "SEASONAL",
       },
       {
         label: "Artist Collaborations",
-        description: "Co-created pieces with artists, designers and cultural figures.",
+        description:
+          "Co-created pieces with artists, designers and cultural figures.",
         badge: "COLLAB",
         id: "collabs",
       },
       {
         label: "KoD Originals",
-        description: "House-created pieces that come from the KoD creative studio directly.",
+        description:
+          "House-created pieces that come from the KoD creative studio directly.",
         badge: "ORIGINAL",
       },
     ],
@@ -543,7 +564,8 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
       {
         id: "drop-001",
         title: "KoD × Studio — Drop 001",
-        description: "The first official KoD Gallery drop. Limited to 50 pieces. Date TBA.",
+        description:
+          "The first official KoD Gallery drop. Limited to 50 pieces. Date TBA.",
         tag: "UPCOMING DROP",
         image: "/portfolio/Design/digital-art/digital-art-1.webp",
         status: "coming-soon",
@@ -551,15 +573,17 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
       {
         id: "pissu-kanna-collab",
         title: "Pissu Kanna Streetwear — Collab",
-        description: "The irreverent street mascot meets KoD design. Apparel and collectibles.",
+        description:
+          "The irreverent street mascot meets KoD design. Apparel and collectibles.",
         tag: "COLLABORATION",
-        image: "/portfolio/Design/pissu-kanna/mock.webp",
+        image: "/portfolio/Design/pissu-kanna/pissu-kanna-merch-showcase.webp",
         status: "coming-soon",
       },
       {
         id: "ibiza-print-series",
         title: "IBIZA Mirissa — Architecture Print Series",
-        description: "Architectural photography and 3D renders from the IBIZA Mirissa project, printed on archival paper.",
+        description:
+          "Architectural photography and 3D renders from the IBIZA Mirissa project, printed on archival paper.",
         tag: "ART PRINT",
         image: "/portfolio/Design/digital-art/digital-art-3.webp",
         status: "coming-soon",
@@ -567,4 +591,3 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     ],
   },
 };
-

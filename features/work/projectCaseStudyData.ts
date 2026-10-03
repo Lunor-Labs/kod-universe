@@ -24,7 +24,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
       "Retail Creatives",
       "Community Growth",
     ],
-    palette: ["#E54C2A", "#F4A261", "#E9C46A", "#2A9D8F", "#264653"],
+    palette: ["#FF5C39", "#F88D74", "#F4B8A5", "#FCE4DC", "#FFFFFF"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
@@ -65,19 +65,20 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
   },
   "niwarthana-packaging-design": {
     badge: "FEATURED PACKAGING",
-    tagline: "Sustainable Packaging & Identity Architecture",
+    tagline: "Language Became the Packaging",
     description:
-      "Engineered tactile, artisanal packaging architecture for Niwarthana with intricate foil stamping, custom die cuts, and memorable unboxing layers.",
+      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept. The rebrand and conceptual packaging work resulted in 24 designs, turning language into part of the experience of the pack. Culture, transformed into design.",
     deliverables: [
-      "Packaging Dielines",
-      "Unboxing Architecture",
-      "Label Hierarchy",
-      "Print Specifications",
+      "24 Packaging Designs",
+      "Typography as Visual Texture",
+      "Retail Pouches & Dielines",
+      "Unboxing & Pack Experience",
     ],
-    palette: ["#2C3531", "#116466", "#D9B08C", "#FFCB9A", "#D1E8E2"],
-    headlineFont: "Cormorant Garamond",
-    bodyFont: "Metropolis",
-    imageSrc: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
+    palette: ["#1F2E54", "#3A5BA0", "#E86A58", "#F4B266", "#FAF9F6"],
+    headlineFont: "Metropolis",
+    bodyFont: "Inter",
+    imageSrc:
+      "/portfolio/Design/branding-identity/package-design/niwarthana-3.webp",
   },
   "rouka-brand-identity": {
     badge: "FEATURED BRAND ARCHITECTURE",
@@ -140,7 +141,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
       "Subculture Graphics",
       "Motion Systems",
     ],
-    palette: ["#121212", "#E11D48", "#06B6D4", "#F4F4F5", "#27272A"],
+    palette: ["#7928CA", "#A855F7", "#0B0914", "#E9D5FF", "#FFFFFF"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
@@ -157,7 +158,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
       "Design Guidelines",
       "Vector Kit",
     ],
-    palette: ["#09090B", "#2563EB", "#60A5FA", "#E2E8F0", "#18181B"],
+    palette: ["#0C625D", "#14B8A6", "#111618", "#E2ECE9", "#FFFFFF"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
@@ -195,7 +196,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     headlineFont: "Metropolis",
     bodyFont: "Inter",
     imageSrc:
-      "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-apparel-merch-showcase.webp",
+      "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-king-crown-and-plaque-showcase.webp",
   },
   "maya-brand-identity": {
     badge: "ORGANIC SPICE IDENTITY",
@@ -327,7 +328,8 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#081B33", "#0070F3", "#00DFD8", "#F0F4F8", "#1A2E44"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc: "/portfolio/Visual Story Telling/story-telling/union-assuranse-commercial.webp",
+    imageSrc:
+      "/portfolio/Visual Story Telling/story-telling/union-assuranse-commercial.webp",
   },
   "dsg-launch-campaign": {
     badge: "OMNICHANNEL LAUNCH CAMPAIGN",
@@ -343,8 +345,7 @@ const PROJECT_CASE_STUDY_MAP: Record<string, CaseStudyPreset> = {
     palette: ["#E76F51", "#F4A261", "#E9C46A", "#264653", "#2A9D8F"],
     headlineFont: "Metropolis",
     bodyFont: "Inter",
-    imageSrc:
-      "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
+    imageSrc: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
   },
 };
 
@@ -363,12 +364,8 @@ export function getCaseStudyForProject(project: Project): FeaturedCaseStudy {
       project.shortDescription ||
       "Strategy, Identity & Direction",
     description:
-      preset?.description ||
-      project.overview ||
-      project.shortDescription,
-    deliverables:
-      preset?.deliverables ||
-      project.deliverables.slice(0, 4),
+      preset?.description || project.overview || project.shortDescription,
+    deliverables: preset?.deliverables || project.deliverables.slice(0, 4),
     palette: preset?.palette || [
       "#161616",
       "#2D2825",
@@ -380,8 +377,6 @@ export function getCaseStudyForProject(project: Project): FeaturedCaseStudy {
     bodyFont: preset?.bodyFont || "Inter",
     slug: project.slug,
     imageSrc:
-      preset?.imageSrc ||
-      project.cardImage?.src ||
-      project.heroImage.src,
+      preset?.imageSrc || project.cardImage?.src || project.heroImage.src,
   };
 }
