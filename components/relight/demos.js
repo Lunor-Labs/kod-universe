@@ -47,17 +47,17 @@ export const DEMOS_LIST = [
     map: '/textures/merch-new.webp',
     depth: '/textures/merch-new-depth.webp',
     setUniforms() {
-      depthSmoothing.percent = 0.3
-      uDisplacementScale.value = 1.2
-      uNormalScale.value = 2.0
-      uDetailScale.value = 0.5
-      uShadowIntensity.value = 0.6
-      uShadowSoftness.value = 0.3
-      pointLight.color.set('#e9e2da')
-      pointLight.intensity = 5.0
-      pointLight.decay = 1.8
-      pointLight.position.z = 1.0
-      ambientLight.intensity = 0.2
+      depthSmoothing.percent = 0.4
+      uDisplacementScale.value = 1.3
+      uNormalScale.value = 2.4
+      uDetailScale.value = 0.4
+      uShadowIntensity.value = 0.75
+      uShadowSoftness.value = 0.22
+      pointLight.color.set('#fae8d4')
+      pointLight.intensity = 5.5
+      pointLight.decay = 2.0
+      pointLight.position.z = 1.1
+      ambientLight.intensity = 0.15
     },
   }
 ];
