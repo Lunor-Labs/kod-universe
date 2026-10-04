@@ -195,7 +195,7 @@ export function Header() {
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 onClick={() => setMenuOpen((v) => !v)}
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-white/60 backdrop-blur-md border border-white/20 shadow-sm text-black hover:border-earth transition-colors lg:hidden"
+                className="w-11 h-11 hidden md:flex lg:hidden items-center justify-center rounded-full bg-white/60 backdrop-blur-md border border-white/20 shadow-sm text-black hover:border-earth transition-colors"
               >
                 {menuOpen ? (
                   <X size={18} strokeWidth={1.5} />

@@ -6,6 +6,8 @@ import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { FloatingActions } from "@/components/ui/FloatingActions";
+import { IosInstallPrompt } from "@/components/ui/IosInstallPrompt";
+import { MobileAppNav } from "@/components/layout/MobileAppNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -127,6 +129,22 @@ const SPLASH_SCRIPT = `
 })();
 `;
 
+const SW_SCRIPT = `
+(function(){
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(function(reg){
+          console.log('[KOD SW] Registered, scope:', reg.scope);
+        })
+        .catch(function(err){
+          console.warn('[KOD SW] Registration failed:', err);
+        });
+    });
+  }
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -158,11 +176,19 @@ export default function RootLayout({
           as="image"
           type="image/webp"
         />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1c1916" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="KOD" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <style dangerouslySetInnerHTML={{ __html: SPLASH_STYLE }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script dangerouslySetInnerHTML={{ __html: SW_SCRIPT }} />
       </head>
       <body
         className={`${inter.variable} ${cormorant.variable} bg-canvas text-void-black antialiased`}
@@ -187,7 +213,9 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <MobileAppNav />
           <FloatingActions />
+          <IosInstallPrompt />
         </SmoothScrollProvider>
       </body>
     </html>
