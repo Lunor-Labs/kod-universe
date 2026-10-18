@@ -88,6 +88,7 @@ export function Header() {
     "fixed top-0 left-0 right-0 z-[100] transition-all duration-300";
 
   const isGallery = pathname === "/gallery";
+  const isInverted = isGallery && !menuOpen && !isDropdownOpen;
 
   const headerBg =
     (scrolled && !isGallery) || menuOpen || isDropdownOpen
@@ -121,9 +122,9 @@ export function Header() {
               className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 cursor-pointer"
             >
               <KodLogo
-                className={`h-12 sm:h-32 w-auto transition-colors duration-300 ${
-                  !scrolled && isHome && !menuOpen && !isDropdownOpen
-                    ? "text-earth"
+                className={`h-12 sm:h-32 w-auto transition-all duration-300 ${
+                  isInverted
+                    ? "brightness-0 invert drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
                     : "text-earth"
                 }`}
               />
@@ -169,9 +170,13 @@ export function Header() {
                           <span
                             className={`text-sm tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] inline-block ${
                               isActive
-                                ? "text-signal-orange font-bold"
+                                ? "text-signal-orange font-bold drop-shadow-[0_2px_8px_rgba(229,76,42,0.4)]"
                                 : isCurrentDropdown
-                                ? "text-kod-clay font-semibold"
+                                ? isInverted
+                                  ? "text-kod-gold font-semibold"
+                                  : "text-kod-clay font-semibold"
+                                : isInverted
+                                ? "text-white/90 group-hover:text-white font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
                                 : "text-black font-semibold"
                             }`}
                           >
@@ -181,6 +186,8 @@ export function Header() {
                             className={`absolute left-0 top-[120%] text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] ${
                               isActive
                                 ? "text-signal-orange font-bold"
+                                : isInverted
+                                ? "text-kod-gold drop-shadow-[0_2px_8px_rgba(234,194,64,0.4)]"
                                 : "text-kod-clay"
                             }`}
                             aria-hidden="true"
@@ -198,7 +205,11 @@ export function Header() {
                 <Link
                   href="/contact-us"
                   onClick={() => setActiveDropdown(null)}
-                  className="btn-dark !h-11 !px-4 !text-xs"
+                  className={`transition-all duration-300 ${
+                    isInverted
+                      ? "inline-flex items-center justify-center gap-3.5 h-11 px-5 text-xs font-semibold uppercase tracking-[0.12em] rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-kod-orange/70 backdrop-blur-md shadow-lg"
+                      : "btn-dark !h-11 !px-4 !text-xs"
+                  }`}
                 >
                   <span>Connect with KoD</span>
                   <span className="btn-badge !w-7 !h-7">
@@ -216,7 +227,11 @@ export function Header() {
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 onClick={() => setMenuOpen((v) => !v)}
-                className="w-11 h-11 hidden md:flex lg:hidden items-center justify-center rounded-full bg-white/60 backdrop-blur-md border border-white/20 shadow-sm text-black hover:border-earth transition-colors"
+                className={`w-11 h-11 hidden md:flex lg:hidden items-center justify-center rounded-full backdrop-blur-md border shadow-sm transition-colors ${
+                  isInverted
+                    ? "bg-white/10 border-white/30 text-white hover:border-white/60"
+                    : "bg-white/60 border-white/20 text-black hover:border-earth"
+                }`}
               >
                 {menuOpen ? (
                   <X size={18} strokeWidth={1.5} />

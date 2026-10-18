@@ -64,7 +64,7 @@ export function GallerySection() {
         >
           <div ref={containerRef} className="absolute inset-0 z-0" />
           <div className="absolute inset-0 pointer-events-none z-10 flex flex-col items-center justify-center">
-            <h2 className="text-[10vw] md:text-[8vw] font-black text-white/40 uppercase tracking-tighter font-metropolis select-none pointer-events-none text-center px-4 drop-shadow-2xl">
+            <h2 className="text-[10vw] md:text-[8vw] font-black text-white/20 uppercase tracking-tighter font-metropolis select-none pointer-events-none text-center px-4 drop-shadow-2xl">
               View Gallery
             </h2>
           </div>
