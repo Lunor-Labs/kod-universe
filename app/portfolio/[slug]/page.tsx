@@ -4,12 +4,12 @@ import {
   projects,
   getProjectBySlug,
   getRelatedProjects,
+  getCaseStudyForProject,
 } from "@/data/projects";
 import type { Project, ProjectPillar } from "@/types/project";
 import { ProjectHeroShowcase } from "@/features/work/ProjectHeroShowcase";
 import { ProjectCaseStudy } from "@/features/work/ProjectCaseStudy";
 import { ServiceCaseStudy } from "@/components/services/ServiceCaseStudy";
-import { getCaseStudyForProject } from "@/features/work/projectCaseStudyData";
 import { ProjectNavigation } from "@/features/work/ProjectNavigation";
 import { RelatedProjectsSection } from "@/features/work/RelatedProjectsSection";
 

@@ -60,7 +60,7 @@ export function ProjectHeroShowcase({ project, pillars }: ProjectHeroShowcasePro
               </span>
             </p>
 
-            <p className="text-lead text-kod-black mb-4 max-w-3xl">
+            <p className="text-lead text-kod-black mb-4 max-w-3xl whitespace-pre-line">
               {project.shortDescription}
             </p>
           </div>

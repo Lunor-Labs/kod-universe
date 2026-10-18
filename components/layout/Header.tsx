@@ -136,8 +136,15 @@ export function Header() {
               >
                 {siteConfig.nav.map((item) => {
                   const isActive =
-                    pathname === item.href ||
-                    (item.href !== "/" && pathname.startsWith(item.href));
+                    (item.href === "/" && pathname === "/") ||
+                    (item.href !== "/" && (
+                      pathname === item.href ||
+                      pathname.startsWith(item.href) ||
+                      (item.href === "/work" && pathname.startsWith("/portfolio")) ||
+                      (item.href === "/portfolio" && (pathname === "/work" || pathname.startsWith("/portfolio") || pathname.startsWith("/work"))) ||
+                      (item.href === "/contact" && (pathname === "/contact-us" || pathname.startsWith("/contact-us"))) ||
+                      (item.href === "/contact-us" && (pathname === "/contact" || pathname.startsWith("/contact-us")))
+                    ));
                   const isCurrentDropdown = activeDropdown === item.label;
 
                   return (
@@ -148,25 +155,39 @@ export function Header() {
                     >
                       <Link
                         href={item.href}
-                        onClick={() => setActiveDropdown(null)}
-                        className="group relative inline-flex overflow-hidden py-1"
+                        onClick={(e) => {
+                          setActiveDropdown(null);
+                          if (item.href === "/" && pathname === "/") {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }}
+                        className="group relative inline-flex flex-col items-center py-1"
                         aria-current={isActive ? "page" : undefined}
                       >
-                        <span
-                          className={`text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] ${
-                            isActive || isCurrentDropdown
-                              ? "text-kod-clay"
-                              : "text-black"
-                          }`}
-                        >
-                          {item.label}
-                        </span>
-                        <span
-                          className="absolute left-0 top-[120%] text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] text-kod-clay"
-                          aria-hidden="true"
-                        >
-                          {item.label}
-                        </span>
+                        <div className="relative overflow-hidden py-0.5">
+                          <span
+                            className={`text-sm tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] inline-block ${
+                              isActive
+                                ? "text-signal-orange font-bold"
+                                : isCurrentDropdown
+                                ? "text-kod-clay font-semibold"
+                                : "text-black font-semibold"
+                            }`}
+                          >
+                            {item.label}
+                          </span>
+                          <span
+                            className={`absolute left-0 top-[120%] text-sm font-semibold tracking-widest uppercase transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-[120%] ${
+                              isActive
+                                ? "text-signal-orange font-bold"
+                                : "text-kod-clay"
+                            }`}
+                            aria-hidden="true"
+                          >
+                            {item.label}
+                          </span>
+                        </div>
                       </Link>
                     </div>
                   );

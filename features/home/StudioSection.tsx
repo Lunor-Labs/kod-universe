@@ -7,6 +7,8 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Project } from "@/types/project";
 
+import { projects as defaultProjects } from "@/data/projects";
+
 interface SelectedProjectItem {
   number: string;
   slug: string;
@@ -26,65 +28,10 @@ interface SelectedProjectItem {
   };
 }
 
-const SELECTED_PROJECTS: SelectedProjectItem[] = [
-  {
-    number: "01",
-    slug: "dsg-launch-campaign",
-    title: "Bio-Oil DSG Launch",
-    client: "Bio-Oil / DSG",
-    category: "MARKETING",
-    badge: "Campaign",
-    imageSrc: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
-    imageAlt: "Bio-Oil DSG Launch Campaign Showcase",
-    description:
-      "An integrated omnichannel launch combining sequential teaser rollouts, retail event architecture, and high-impact digital activations.",
-    stats: {
-      primaryValue: "+453%",
-      primaryLabel: "Sales Growth",
-      secondaryValue: "$0.25",
-      secondaryLabel: "Reported CPA",
-      summary: "453% sales growth during lockdown. Reported CPA: USD 0.25.",
-    },
-  },
-  {
-    number: "02",
-    slug: "niwarthana-packaging-design",
-    title: "Niwarthana",
-    client: "REBRANDING AND PACKAGING",
-    category: "LANGUAGE BECAME THE PACKAGING",
-    badge: "Packaging",
-    imageSrc:
-      "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
-    imageAlt: "Niwarthana Artisan Ceylon Tea Packaging Architecture",
-    description:
-      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept. The rebrand and conceptual packaging work resulted in 24 designs, turning language into part of the experience of the pack.",
-    stats: {
-      primaryValue: "24",
-      primaryLabel: "Pack Designs",
-      secondaryValue: "100%",
-      secondaryLabel: "Cultural Identity",
-      summary: "Culture, transformed into design.",
-    },
-  },
-  {
-    number: "03",
-    slug: "pissu-kanna-brand-merchandise",
-    title: "Pissukanna",
-    client: "MERCHANDISE DESIGN",
-    category: "CRAZY ENOUGH TO WIN",
-    badge: "Streetwear",
-    imageSrc: "/portfolio/Design/pissu-kanna/pissu-kanna-merch-showcase.webp",
-    imageAlt: "Pissu Kanna Mascot & Streetwear Merchandise Collection",
-    description:
-      "Some briefs ask for restraint. This one didn’t. We made a bold, expressive merchandise concept for the Pissukanna Design Challenge, and it won first place.",
-    stats: {
-      primaryValue: "1st",
-      primaryLabel: "Design Challenge",
-      secondaryValue: "100%",
-      secondaryLabel: "Drop Sell-Out",
-      summary: "Challenge entered. Rules stretched. Champion crowned.",
-    },
-  },
+const SELECTED_SLUGS = [
+  "dsg-launch-campaign",
+  "niwarthana-packaging-design",
+  "pissu-kanna-brand-merchandise",
 ];
 
 interface StudioSectionProps {
@@ -92,6 +39,30 @@ interface StudioSectionProps {
 }
 
 export function StudioSection({ projects }: StudioSectionProps) {
+  const allProjects = projects && projects.length > 0 ? projects : defaultProjects;
+
+  const selectedProjects = SELECTED_SLUGS.map((slug, idx) => {
+    const p = allProjects.find((proj) => proj.slug === slug);
+    if (!p) return null;
+    return {
+      number: String(idx + 1).padStart(2, "0"),
+      slug: p.slug,
+      title: p.slug === "dsg-launch-campaign" ? "Bio-Oil Dry Skin Gel Launch" : p.slug === "niwarthana-packaging-design" ? "Niwarthana" : p.slug === "pissu-kanna-brand-merchandise" ? "Pissukanna" : p.title,
+      client: p.slug === "niwarthana-packaging-design" ? "REBRANDING AND PACKAGING" : p.slug === "pissu-kanna-brand-merchandise" ? "MERCHANDISE DESIGN" : p.client,
+      category: p.tagline?.toUpperCase() || p.category,
+      badge: p.badge || p.subCategory || "Selected",
+      imageSrc: p.heroImage.src,
+      imageAlt: p.heroImage.alt,
+      description: p.shortDescription,
+      stats: p.stats || {
+        primaryValue: "100%",
+        primaryLabel: "Quality",
+        secondaryValue: String(p.year),
+        secondaryLabel: "Year",
+        summary: p.overview,
+      },
+    };
+  }).filter(Boolean) as SelectedProjectItem[];
   return (
     <section
       id="selected-work"
@@ -129,7 +100,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr_1.5fr] gap-6 lg:gap-8">
-          {SELECTED_PROJECTS.map((item, idx) => (
+          {selectedProjects.map((item, idx) => (
             <ScrollReveal
               key={item.slug}
               variant="up"
@@ -179,7 +150,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
                       {item.title}
                     </h3>
 
-                    <p className="text-sm text-kod-text-2 leading-relaxed">
+                    <p className="text-sm text-kod-text-2 leading-relaxed whitespace-pre-line">
                       {item.description}
                     </p>
                   </div>

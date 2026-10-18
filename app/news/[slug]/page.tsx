@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { posts, getPostBySlug, getRelatedPosts } from "@/data/posts";
+import { posts, getPostBySlug, getRelatedPosts } from "@/data/blogs";
 import { ArticleHeader } from "@/features/blog/ArticleHeader";
 import { ArticleContent } from "@/features/blog/ArticleContent";
 import { RelatedArticles } from "@/features/blog/RelatedArticles";

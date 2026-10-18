@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 const HERO_CONTENT = {
-  eyebrow: "WHO WE ARE",
+  eyebrow: "ABOUT US",
   title1: "We Don't Just Build Brands.",
   titleHighlight: " We Create ",
   title2: "Universes.",
@@ -182,14 +182,14 @@ export function HeroSection() {
             <div className="w-24 h-24 md:w-32 md:h-32 relative cursor-pointer drop-shadow-2xl animate-breathe group-hover:scale-110 transition-transform duration-300">
               <Image
                 src="/icons/web-hero-design-20.webp"
-                alt="Who We Are"
+                alt="About Us"
                 fill
                 sizes="(min-width: 768px) 128px, 96px"
                 className="object-contain"
               />
             </div>
             <span className="hidden md:block translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
-              Who We Are
+              About Us
             </span>
           </Link>
         </div>

@@ -28,7 +28,7 @@ export function FounderHero() {
             size={18}
             className="transition-transform group-hover:-translate-x-1"
           />
-          <span>Our Story / About Us</span>
+          <span>About Us</span>
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

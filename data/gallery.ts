@@ -22,23 +22,23 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "dsg-campaign-banner",
-    title: "DSG & Bio-Oil Omnichannel Launch Showcase",
+    title: "Bio-Oil Dry Skin Gel Omnichannel Launch Showcase",
     category: "SOCIAL MEDIA",
     src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
-    alt: "DSG & Bio-Oil Omnichannel Launch Showcase",
+    alt: "Bio-Oil Dry Skin Gel Omnichannel Launch Showcase",
     aspectClass: "aspect-video",
     projectSlug: "dsg-launch-campaign",
-    projectTitle: "DSG & Bio-Oil Launch Campaign",
+    projectTitle: "Bio-Oil Dry Skin Gel Launch Campaign",
   },
   {
     id: "dsg-product-launch",
-    title: "DSG Bio-Oil Official Product Launch",
+    title: "Bio-Oil Dry Skin Gel Official Product Launch",
     category: "SOCIAL MEDIA",
     src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
-    alt: "DSG Bio-Oil Official Product Launch Poster",
+    alt: "Bio-Oil Dry Skin Gel Official Product Launch Poster",
     aspectClass: "aspect-[4/5]",
     projectSlug: "dsg-launch-campaign",
-    projectTitle: "DSG & Bio-Oil Launch Campaign",
+    projectTitle: "Bio-Oil Dry Skin Gel Launch Campaign",
   },
   {
     id: "dsg-stall-design",
@@ -48,7 +48,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Bio-Oil Experiential Stall Architecture",
     aspectClass: "aspect-square",
     projectSlug: "dsg-launch-campaign",
-    projectTitle: "DSG & Bio-Oil Launch Campaign",
+    projectTitle: "Bio-Oil Dry Skin Gel Launch Campaign",
   },
   {
     id: "area-6-poster",
@@ -72,13 +72,13 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "niwarthana-pack-1",
-    title: "Niwarthana Artisan Box Packaging",
+    title: "Niwarthana Packaging",
     category: "PACKAGE DESIGN",
     src: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
-    alt: "Niwarthana Artisan Box Packaging",
+    alt: "Niwarthana Packaging",
     aspectClass: "aspect-square",
     projectSlug: "niwarthana-packaging-design",
-    projectTitle: "Niwarthana Artisan Packaging",
+    projectTitle: "Niwarthana Packaging",
   },
   {
     id: "coats-100",
@@ -198,7 +198,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Niwarthana Unboxing & Structural Craft",
     aspectClass: "aspect-[4/3]",
     projectSlug: "niwarthana-packaging-design",
-    projectTitle: "Niwarthana Artisan Packaging",
+    projectTitle: "Niwarthana Packaging",
   },
   {
     id: "slsa-mark",
@@ -498,7 +498,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     title: "Merch",
     titleItalic: "& Objects.",
     description:
-      "Apparel, creative objects and accessories that carry the KoD universe — things people actually want to own and wear.",
+      "Apparel, creative objects and accessories created in the KoD universe and by the KOD universe  - things people actually want to own and wear.",
     heroImage: "/gallery/merch.webp",
     metaTitle: "Merch & Objects — KoD Gallery",
     metaDescription:

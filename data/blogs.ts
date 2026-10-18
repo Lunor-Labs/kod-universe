@@ -335,3 +335,8 @@ export function getRelatedPosts(currentSlug: string, count = 3): Post[] {
     })
     .slice(0, count);
 }
+
+// Aliases for blog naming
+export const blogs = posts;
+export const getBlogBySlug = getPostBySlug;
+export const getRelatedBlogs = getRelatedPosts;

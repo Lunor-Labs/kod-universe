@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { serviceGroups } from "@/data/capabilities";
+import { serviceGroups } from "@/data/services";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 

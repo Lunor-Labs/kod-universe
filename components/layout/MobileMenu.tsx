@@ -88,8 +88,15 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               >
                 {siteConfig.nav.map((item, idx) => {
                   const isActive =
-                    pathname === item.href ||
-                    (item.href !== "/" && pathname.startsWith(item.href));
+                    (item.href === "/" && pathname === "/") ||
+                    (item.href !== "/" && (
+                      pathname === item.href ||
+                      pathname.startsWith(item.href) ||
+                      (item.href === "/work" && pathname.startsWith("/portfolio")) ||
+                      (item.href === "/portfolio" && (pathname === "/work" || pathname.startsWith("/portfolio") || pathname.startsWith("/work"))) ||
+                      (item.href === "/contact" && (pathname === "/contact-us" || pathname.startsWith("/contact-us"))) ||
+                      (item.href === "/contact-us" && (pathname === "/contact" || pathname.startsWith("/contact-us")))
+                    ));
 
                   return (
                     <li
@@ -104,16 +111,25 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                       <Link
                         href={item.href}
                         onClick={onClose}
-                        className={`group flex items-baseline gap-3 text-3xl sm:text-4xl font-editorial tracking-tight transition-colors duration-200 ${
+                        className={`group flex items-center justify-between py-1 text-3xl sm:text-4xl font-editorial tracking-tight transition-colors duration-200 ${
                           isActive
-                            ? "text-signal-orange"
+                            ? "text-signal-orange font-bold"
                             : "text-earth hover:text-signal-orange"
                         }`}
                       >
-                        <span className="text-xs font-mono font-medium tracking-widest text-kod-earth/40 group-hover:text-signal-orange/70 transition-colors">
-                          0{idx + 1}
-                        </span>
-                        <span>{item.label}</span>
+                        <div className="flex items-baseline gap-3">
+                          <span className={`text-xs font-mono font-medium tracking-widest transition-colors ${
+                            isActive
+                              ? "text-signal-orange"
+                              : "text-kod-earth/40 group-hover:text-signal-orange/70"
+                          }`}>
+                            0{idx + 1}
+                          </span>
+                          <span>{item.label}</span>
+                        </div>
+                        {isActive && (
+                          <span className="w-2.5 h-2.5 rounded-full bg-signal-orange shadow-[0_0_8px_rgba(229,76,42,0.6)]" />
+                        )}
                       </Link>
                     </li>
                   );

@@ -68,5 +68,10 @@ export interface Project {
   featured: boolean;
   relatedSlugs: string[];
   stats?: ProjectStats;
+  badge?: string;
+  tagline?: string;
+  palette?: string[];
+  headlineFont?: string;
+  bodyFont?: string;
 }
 

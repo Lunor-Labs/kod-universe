@@ -74,19 +74,19 @@ export function GallerySection() {
               onClick={() => changeDemo(0)}
               className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
             >
-              Drops
+              Art
             </button>
             <button
               onClick={() => changeDemo(1)}
               className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
             >
-              Art
+              Merch
             </button>
             <button
               onClick={() => changeDemo(2)}
               className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
             >
-              Merch
+              Drops
             </button>
           </div>
 

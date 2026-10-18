@@ -150,15 +150,13 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
         return a.title.localeCompare(b.title);
       }
       if (sortOption === "oldest") {
-        return a.year === b.year ? a.id.localeCompare(b.id) : a.year - b.year;
+        return a.year === b.year ? Number(a.id) - Number(b.id) : a.year - b.year;
       }
-      return a.year === b.year ? b.id.localeCompare(a.id) : b.year - a.year;
+      return a.year === b.year ? Number(a.id) - Number(b.id) : b.year - a.year;
     });
 
     return result;
   }, [projects, activeCategory, activeSubCategory, searchQuery, sortOption]);
-
-  const gridProjects = filtered.filter((p) => p.id !== featuredProject.id);
 
   return (
     <>
@@ -239,84 +237,9 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
       </div>
 
       <div className="container-site">
-        {(activeCategory === "ALL" ||
-          featuredProject.category === activeCategory) &&
-          activeSubCategory === "ALL" && (
-            <div className="mb-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
-              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 border border-border-warm rounded-sm overflow-hidden bg-white">
-                <div className="relative aspect-square img-zoom min-h-[260px] bg-[#FBF9F5] flex items-center justify-center">
-                  <Image
-                    src={
-                      featuredProject.cardImage?.src ??
-                      featuredProject.heroImage.src
-                    }
-                    alt={featuredProject.heroImage.alt}
-                    fill
-                    priority
-                    className="object-contain p-4"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-8 flex flex-col justify-center">
-                  <SectionLabel>Featured project</SectionLabel>
-                  <h2 className="heading-card text-earth mb-2">
-                    {featuredProject.title}
-                  </h2>
-                  <p className="text-signal-orange text-sm font-semibold tracking-[0.12em] uppercase mb-4">
-                    {featuredProject.category}{" "}
-                    {featuredProject.subCategory
-                      ? `-${featuredProject.subCategory}`
-                      : ""}
-                  </p>
-                  <p className="text-body text-kod-earth/85 mb-6 max-w-sm">
-                    {featuredProject.shortDescription}
-                  </p>
-                  <Link
-                    href={`/portfolio/${featuredProject.slug}`}
-                    className="btn-secondary w-fit"
-                  >
-                    <span>View case study</span>
-                    <span className="btn-badge">
-                      <ArrowRight size={13} aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="border border-border-warm rounded-sm bg-canvas p-8 flex flex-col relative overflow-hidden texture-grain hidden md:block">
-                <SectionLabel>Our Philosophy</SectionLabel>
-                <h3 className="heading-card font-editorial text-earth mb-4 italic mt-2 leading-tight">
-                  Ideas are ancient.
-                  <br />
-                  Execution is modern.
-                  <br />
-                  <span className="font-bold">Impact is timeless.</span>
-                </h3>
-                <p className="text-body text-kod-earth/85 mb-auto">
-                  We believe every brand has a story worth telling. Our work
-                  blends strategy, creativity, and craftsmanship to build
-                  experiences that resonate and endure.
-                </p>
-                <div className="mt-8 flex items-end justify-between">
-                  <span className="font-editorial italic text-base text-earth opacity-70">
-                    The KOD Universe
-                  </span>
-                  <div className="w-16 h-16 opacity-10 relative">
-                    <Image
-                      src="/icon_astrolabe.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-        {gridProjects.length > 0 ? (
+        {filtered.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {gridProjects.map((project) => (
+            {filtered.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>

@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project";
+import type { FeaturedCaseStudy } from "@/components/services/types";
 
 export const projects: Project[] = [
   {
@@ -30,22 +31,26 @@ export const projects: Project[] = [
     pillars: [
       {
         title: "Growth",
-        description: "Built a stronger digital presence with consistent branded content.",
+        description:
+          "Built a stronger digital presence with consistent branded content.",
         icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
       },
       {
         title: "Awareness",
-        description: "Created memorable campaigns, product education and seasonal storytelling.",
+        description:
+          "Created memorable campaigns, product education and seasonal storytelling.",
         icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
       },
       {
         title: "Engagement",
-        description: "Designed conversation-driven posts and community-first content.",
+        description:
+          "Designed conversation-driven posts and community-first content.",
         icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
       },
       {
         title: "Lead Conversion",
-        description: "Supported promotions, inquiries and product-driven action.",
+        description:
+          "Supported promotions, inquiries and product-driven action.",
         icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
       },
     ],
@@ -112,10 +117,169 @@ export const projects: Project[] = [
       "Content Strategy",
     ],
     featured: true,
-    relatedSlugs: ["dsg-launch-campaign", "area-6-social-media", "coats-sri-lanka-campaign"],
+    badge: "FEATURED CAMPAIGN",
+    tagline: "Omnichannel Social Activation",
+    palette: ["#FF5C39", "#F88D74", "#F4B8A5", "#FCE4DC", "#FFFFFF"],
+    relatedSlugs: [
+      "dsg-launch-campaign",
+      "area-6-social-media",
+      "coats-sri-lanka-campaign",
+    ],
   },
   {
     id: "2",
+    slug: "dsg-launch-campaign",
+    title: "Bio-Oil Dry Skin Gel Launch Campaign",
+    client: "Bio-Oil",
+    category: "MARKETING",
+    subCategory: "Campaigns",
+    subCategories: ["Campaigns", "Social Media", "Retail Activations"],
+    year: 2024,
+    location: "Sri Lanka",
+    timeline: "2023–2024",
+    shortDescription:
+      "A high-impact omnichannel launch campaign engineered for Bio-Oil Dry Skin Gel, weaving suspenseful teaser rollouts, vibrant social collateral, event stall architecture, and retail activations.",
+    overview:
+      "Bio-Oil partnered with KOD Universe to architect and execute a complete teaser and product launch campaign for Bio-Oil Dry Skin Gel. From mysterious countdown teasers building curiosity to full-scale event stall design, promotional flags, apparel, and responsive campaign web pages, our creative direction drove nationwide buzz and retail engagement.",
+    challenge:
+      "Generating authentic anticipation and retail conversion for a flagship product introduction in a competitive market, maintaining Bio-Oil's premium heritage while commanding immediate cultural attention.",
+    approach:
+      "We engineered a multi-phase narrative: deploying countdown teaser graphics across social media to ignite organic discussions, followed by an explosive product reveal, experiential stall spaces for live audience engagement, and complete brand merchandise touchpoints.",
+    deliverables: [
+      "Teaser campaign & countdown rollout",
+      "Official launch key visuals & art direction",
+      "Experiential event stall architecture",
+      "Merchandise & event apparel (T-shirts, flags)",
+      "Social media post systems & digital collateral",
+      "Campaign web page layouts",
+    ],
+    pillars: [
+      {
+        title: "Teaser Momentum",
+        description:
+          "Built intrigue and organic speculation through phased countdown visuals.",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
+      },
+      {
+        title: "Product Unveiling",
+        description:
+          "Engineered bold, high-clarity key visuals commanding attention across retail and digital.",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
+      },
+      {
+        title: "Experiential Space",
+        description:
+          "Created modular, aesthetically immersive stalls for high-traffic public activations.",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
+      },
+      {
+        title: "Omnichannel Reach",
+        description:
+          "Seamlessly unified physical flags and apparel with online web and social collateral.",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
+      },
+    ],
+    heroImage: {
+      src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
+      alt: "Bio-Oil Dry Skin Gel Product Launch Campaign Key Visual",
+      width: 1672,
+      height: 941,
+    },
+    cardImage: {
+      src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
+      alt: "Bio-Oil Dry Skin Gel Official Product Launch Poster",
+      width: 1080,
+      height: 1350,
+    },
+    galleryImages: [
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
+        alt: "Bio-Oil Dry Skin Gel Official Launch Campaign Banner",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
+        alt: "Bio-Oil Dry Skin Gel Official Product Launch Reveal",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (1).webp",
+        alt: "Bio-Oil Dry Skin Gel Teaser Campaign Phase 1",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (2).webp",
+        alt: "Bio-Oil Dry Skin Gel Teaser Campaign Phase 2",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (3).webp",
+        alt: "Bio-Oil Dry Skin Gel Teaser Campaign Phase 3",
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/Bio-Oil_Stall-Design-.webp",
+        alt: "Bio-Oil Experiential Stall Architecture & Booth Concept",
+        width: 1080,
+        height: 1080,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/INGREDIENTS _2.webp",
+        alt: "Bio-Oil Natural Ingredients Detail & Graphic Showcase",
+        width: 2400,
+        height: 2400,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/T-design.webp",
+        alt: "Bio-Oil Dry Skin Gel Launch Campaign Custom Staff Apparel & T-Shirt",
+        width: 1080,
+        height: 1080,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/Flag.webp",
+        alt: "Bio-Oil Dry Skin Gel Event Activation Feather Flag & Signage",
+        width: 1080,
+        height: 1080,
+      },
+      {
+        src: "/portfolio/marketing/DSG Launch campaign/Bio Oil Social media and Campaign web pages-14.webp",
+        alt: "Bio-Oil Digital Campaign Web Layout and Social Assets",
+        width: 2732,
+        height: 2732,
+      },
+    ],
+    tags: [
+      "Campaigns",
+      "Product Launch",
+      "Social Media",
+      "Event Stall",
+      "Art Direction",
+      "Teaser Campaign",
+    ],
+    featured: false,
+    badge: "Campaign",
+    tagline: "Omnichannel Launch & Event Architecture",
+    palette: ["#E76F51", "#F4A261", "#E9C46A", "#264653", "#2A9D8F"],
+    stats: {
+      primaryValue: "+453%",
+      primaryLabel: "Sales Growth",
+      secondaryValue: "$0.25",
+      secondaryLabel: "Reported CPA",
+      summary: "453% sales growth during lockdown. Reported CPA: USD 0.25.",
+    },
+    relatedSlugs: [
+      "bio-oil-skincare-campaign",
+      "area-6-social-media",
+      "coats-sri-lanka-campaign",
+    ],
+  },
+  {
+    id: "3",
     slug: "area-6-social-media",
     title: "Area 6 Social Media & Creative",
     client: "Area 6",
@@ -195,10 +359,14 @@ export const projects: Project[] = [
     ],
     tags: ["Social Media", "Poster Design", "Creative Direction"],
     featured: false,
-    relatedSlugs: ["area-6-brand-identity", "bio-oil-skincare-campaign", "coats-sri-lanka-campaign"],
+    relatedSlugs: [
+      "area-6-brand-identity",
+      "bio-oil-skincare-campaign",
+      "coats-sri-lanka-campaign",
+    ],
   },
   {
-    id: "3",
+    id: "4",
     slug: "coats-sri-lanka-campaign",
     title: "Coats Sri Lanka Social Content",
     client: "Coats Sri Lanka",
@@ -275,16 +443,16 @@ export const projects: Project[] = [
     relatedSlugs: ["bio-oil-skincare-campaign", "area-6-social-media"],
   },
   {
-    id: "4",
+    id: "5",
     slug: "niwarthana-packaging-design",
-    title: "Niwarthana Artisan Packaging",
+    title: "Niwarthana Packaging",
     client: "Niwarthana",
     category: "DESIGN",
     subCategory: "Packaging",
     subCategories: ["Packaging"],
     year: 2024,
     shortDescription:
-      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept. The rebrand and conceptual packaging work resulted in 24 designs, turning language into part of the experience of the pack. Culture, transformed into design.",
+      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept.\n\nThe brand’s long-trusted products were relaunched in new packaging, and the same conceptual framework carried across every new product, for 23+ designs in total. Language became part of the experience of the pack. Culture, transformed into design.",
     overview:
       "Niwarthana commissioned KOD Universe to design full product packaging architectures that evoke organic authenticity, refined shelf presence, and an immersive unboxing ritual.",
     challenge:
@@ -349,10 +517,20 @@ export const projects: Project[] = [
     ],
     tags: ["Packaging", "Structural Design", "Sustainable", "Print"],
     featured: true,
+    badge: "Packaging",
+    tagline: "Language Became the Packaging",
+    palette: ["#1F2E54", "#3A5BA0", "#E86A58", "#F4B266", "#FAF9F6"],
+    stats: {
+      primaryValue: "23+",
+      primaryLabel: "Pack Designs",
+      secondaryValue: "100%",
+      secondaryLabel: "Cultural Identity",
+      summary: "Culture, transformed into design.",
+    },
     relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
   },
   {
-    id: "5",
+    id: "6",
     slug: "rouka-brand-identity",
     title: "ROUKA Brand Identity",
     client: "ROUKA",
@@ -426,10 +604,13 @@ export const projects: Project[] = [
     ],
     tags: ["Branding", "Identity", "Logo Design", "Typography"],
     featured: false,
+    badge: "FEATURED BRAND ARCHITECTURE",
+    tagline: "Contemporary Spatial Signage & Fashion Identity",
+    palette: ["#1F2937", "#4B5563", "#D97706", "#F59E0B", "#FEF3C7"],
     relatedSlugs: ["slsa-uk-identity", "niwarthana-packaging-design"],
   },
   {
-    id: "6",
+    id: "7",
     slug: "slsa-uk-identity",
     title: "SLSA UK Brand & Logo",
     client: "Sri Lankan Student Association UK",
@@ -506,7 +687,7 @@ export const projects: Project[] = [
     relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
   },
   {
-    id: "7",
+    id: "8",
     slug: "coffee-1911-identity",
     title: "Coffee 1911 Brand & Identity",
     client: "Coffee 1911",
@@ -589,7 +770,7 @@ export const projects: Project[] = [
     relatedSlugs: ["niwarthana-packaging-design", "cool-step-identity"],
   },
   {
-    id: "8",
+    id: "9",
     slug: "cool-step-identity",
     title: "Cool Step Footwear Identity",
     client: "Cool Step",
@@ -669,10 +850,14 @@ export const projects: Project[] = [
     ],
     tags: ["Branding", "Logo Design", "Footwear", "Apparel"],
     featured: false,
-    relatedSlugs: ["area-6-brand-identity", "focal-logo-identity", "frans-niwasa-identity"],
+    relatedSlugs: [
+      "area-6-brand-identity",
+      "focal-logo-identity",
+      "frans-niwasa-identity",
+    ],
   },
   {
-    id: "9",
+    id: "10",
     slug: "focal-logo-identity",
     title: "FOCAL Visual Identity",
     client: "FOCAL",
@@ -749,7 +934,7 @@ export const projects: Project[] = [
     relatedSlugs: ["cool-step-identity", "frans-niwasa-identity"],
   },
   {
-    id: "10",
+    id: "11",
     slug: "frans-niwasa-identity",
     title: "FRANS Niwasa Brand Identity",
     client: "FRANS Niwasa",
@@ -826,7 +1011,7 @@ export const projects: Project[] = [
     relatedSlugs: ["cool-step-identity", "kaiz-brand-identity"],
   },
   {
-    id: "11",
+    id: "12",
     slug: "kaiz-brand-identity",
     title: "Kaiz Brand & Logo Mark",
     client: "Kaiz",
@@ -902,7 +1087,7 @@ export const projects: Project[] = [
     relatedSlugs: ["focal-logo-identity", "maya-brand-identity"],
   },
   {
-    id: "12",
+    id: "13",
     slug: "maya-brand-identity",
     title: "MAYA Brand Symbol & Mark",
     client: "MAYA",
@@ -961,12 +1146,17 @@ export const projects: Project[] = [
         height: 1000,
       },
     ],
-    tags: ["Creative Work", "Symbol Design", "Sacred Geometry", "Art Direction"],
+    tags: [
+      "Creative Work",
+      "Symbol Design",
+      "Sacred Geometry",
+      "Art Direction",
+    ],
     featured: false,
     relatedSlugs: ["kaiz-brand-identity", "focal-logo-identity"],
   },
   {
-    id: "13",
+    id: "14",
     slug: "area-6-brand-identity",
     title: "Area 6 Brand & Identity",
     client: "Area 6",
@@ -1046,10 +1236,14 @@ export const projects: Project[] = [
     ],
     tags: ["Branding", "Logo Design", "Identity", "Athletic", "Apparel"],
     featured: false,
-    relatedSlugs: ["area-6-social-media", "cool-step-identity", "kaiz-brand-identity"],
+    relatedSlugs: [
+      "area-6-social-media",
+      "cool-step-identity",
+      "kaiz-brand-identity",
+    ],
   },
   {
-    id: "14",
+    id: "15",
     slug: "bito-brand-identity",
     title: "Bito Brand & Logo Design",
     client: "Bito",
@@ -1117,10 +1311,14 @@ export const projects: Project[] = [
     ],
     tags: ["Branding", "Logo Design", "Digital Identity", "Visual System"],
     featured: false,
-    relatedSlugs: ["coco-brand-identity", "focal-logo-identity", "coffee-1911-identity"],
+    relatedSlugs: [
+      "coco-brand-identity",
+      "focal-logo-identity",
+      "coffee-1911-identity",
+    ],
   },
   {
-    id: "15",
+    id: "16",
     slug: "coco-brand-identity",
     title: "COCO Brand & Identity",
     client: "COCO",
@@ -1188,10 +1386,14 @@ export const projects: Project[] = [
     ],
     tags: ["Branding", "Logo Design", "Lifestyle", "Minimalism"],
     featured: false,
-    relatedSlugs: ["bito-brand-identity", "rouka-brand-identity", "niwarthana-packaging-design"],
+    relatedSlugs: [
+      "bito-brand-identity",
+      "rouka-brand-identity",
+      "niwarthana-packaging-design",
+    ],
   },
   {
-    id: "16",
+    id: "17",
     slug: "ibiza-mirissa-architectural-design",
     title: "IBIZA Mirissa Spatial Architecture",
     client: "IBIZA Mirissa",
@@ -1219,19 +1421,23 @@ export const projects: Project[] = [
     pillars: [
       {
         title: "Atmosphere",
-        description: "Capturing the serene, golden-hour dusk light across oceanside living spaces.",
+        description:
+          "Capturing the serene, golden-hour dusk light across oceanside living spaces.",
       },
       {
         title: "Materiality",
-        description: "Curating authentic textures of raw timber, sandstone, and bespoke fixtures.",
+        description:
+          "Curating authentic textures of raw timber, sandstone, and bespoke fixtures.",
       },
       {
         title: "Spatial Flow",
-        description: "Seamless transitions between open-air coastal terraces and secluded villas.",
+        description:
+          "Seamless transitions between open-air coastal terraces and secluded villas.",
       },
       {
         title: "Immersion",
-        description: "Photorealistic perspective rendering that brings prospective guests into the space.",
+        description:
+          "Photorealistic perspective rendering that brings prospective guests into the space.",
       },
     ],
     heroImage: {
@@ -1344,12 +1550,22 @@ export const projects: Project[] = [
         height: 1980,
       },
     ],
-    tags: ["3D Architecture", "Spatial Design", "CGI Rendering", "Hospitality", "Luxury"],
+    tags: [
+      "3D Architecture",
+      "Spatial Design",
+      "CGI Rendering",
+      "Hospitality",
+      "Luxury",
+    ],
     featured: false,
-    relatedSlugs: ["digital-art-visual-explorations", "pissu-kanna-brand-merchandise", "area-6-brand-identity"],
+    relatedSlugs: [
+      "digital-art-visual-explorations",
+      "pissu-kanna-brand-merchandise",
+      "area-6-brand-identity",
+    ],
   },
   {
-    id: "17",
+    id: "18",
     slug: "pissu-kanna-brand-merchandise",
     title: "Pissu Kanna Brand & Merchandise",
     client: "Pissu Kanna",
@@ -1377,19 +1593,23 @@ export const projects: Project[] = [
     pillars: [
       {
         title: "Rebellion",
-        description: "Breaking free from corporate neutrality with authentic, high-voltage street personality.",
+        description:
+          "Breaking free from corporate neutrality with authentic, high-voltage street personality.",
       },
       {
         title: "Character",
-        description: "An instantly identifiable mascot mark engineered for stickers, shirts, and screens.",
+        description:
+          "An instantly identifiable mascot mark engineered for stickers, shirts, and screens.",
       },
       {
         title: "Tactility",
-        description: "Rich apparel mockups and screen-print-ready artwork calibrated for high quality.",
+        description:
+          "Rich apparel mockups and screen-print-ready artwork calibrated for high quality.",
       },
       {
         title: "Culture",
-        description: "Deeply rooted in grassroots urban art, youth humor, and creative freedom.",
+        description:
+          "Deeply rooted in grassroots urban art, youth humor, and creative freedom.",
       },
     ],
     heroImage: {
@@ -1460,12 +1680,32 @@ export const projects: Project[] = [
         height: 1200,
       },
     ],
-    tags: ["Branding", "Merchandising", "Streetwear", "Character Design", "Illustration"],
+    tags: [
+      "Branding",
+      "Merchandising",
+      "Streetwear",
+      "Character Design",
+      "Illustration",
+    ],
     featured: false,
-    relatedSlugs: ["area-6-brand-identity", "kaiz-brand-identity", "slsa-uk-identity"],
+    badge: "Streetwear",
+    tagline: "Crazy Enough to Win",
+    palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
+    stats: {
+      primaryValue: "1st",
+      primaryLabel: "Design Challenge",
+      secondaryValue: "100%",
+      secondaryLabel: "Drop Sell-Out",
+      summary: "Challenge entered. Rules stretched. Champion crowned.",
+    },
+    relatedSlugs: [
+      "area-6-brand-identity",
+      "kaiz-brand-identity",
+      "slsa-uk-identity",
+    ],
   },
   {
-    id: "18",
+    id: "19",
     slug: "digital-art-visual-explorations",
     title: "Digital Art & Visual Explorations",
     client: "KOD Creative Lab",
@@ -1492,15 +1732,18 @@ export const projects: Project[] = [
     pillars: [
       {
         title: "Expression",
-        description: "Pure creative freedom exploring surreal and mythical motifs.",
+        description:
+          "Pure creative freedom exploring surreal and mythical motifs.",
       },
       {
         title: "Lighting",
-        description: "Dramatic chiaroscuro and luminescent color palettes creating cinematic mood.",
+        description:
+          "Dramatic chiaroscuro and luminescent color palettes creating cinematic mood.",
       },
       {
         title: "Detail",
-        description: "Intricate digital brushwork and textural nuance built for gallery-scale viewing.",
+        description:
+          "Intricate digital brushwork and textural nuance built for gallery-scale viewing.",
       },
     ],
     heroImage: {
@@ -1607,12 +1850,22 @@ export const projects: Project[] = [
         height: 1254,
       },
     ],
-    tags: ["Digital Art", "Illustration", "Concept Art", "Visual Storytelling", "Creative Lab"],
+    tags: [
+      "Digital Art",
+      "Illustration",
+      "Concept Art",
+      "Visual Storytelling",
+      "Creative Lab",
+    ],
     featured: false,
-    relatedSlugs: ["union-assurance-commercial", "ibiza-mirissa-architectural-design", "maya-brand-identity"],
+    relatedSlugs: [
+      "union-assurance-commercial",
+      "ibiza-mirissa-architectural-design",
+      "maya-brand-identity",
+    ],
   },
   {
-    id: "19",
+    id: "20",
     slug: "union-assurance-commercial",
     title: "Union Assurance Commercial Storytelling",
     client: "Union Assurance",
@@ -1639,15 +1892,18 @@ export const projects: Project[] = [
     pillars: [
       {
         title: "Empathy",
-        description: "Capturing life's quiet, meaningful moments that need protection.",
+        description:
+          "Capturing life's quiet, meaningful moments that need protection.",
       },
       {
         title: "Cinematography",
-        description: "Warm, natural lighting and compositional depth tailored for commercial film.",
+        description:
+          "Warm, natural lighting and compositional depth tailored for commercial film.",
       },
       {
         title: "Trust",
-        description: "Building an unwavering sense of institutional strength and genuine care.",
+        description:
+          "Building an unwavering sense of institutional strength and genuine care.",
       },
     ],
     heroImage: {
@@ -1676,136 +1932,19 @@ export const projects: Project[] = [
         height: 941,
       },
     ],
-    tags: ["Visual Storytelling", "Commercial", "Filming", "Art Direction", "Campaign"],
+    tags: [
+      "Visual Storytelling",
+      "Commercial",
+      "Filming",
+      "Art Direction",
+      "Campaign",
+    ],
     featured: false,
-    relatedSlugs: ["digital-art-visual-explorations", "bio-oil-skincare-campaign", "area-6-social-media"],
-  },
-  {
-    id: "20",
-    slug: "dsg-launch-campaign",
-    title: "DSG & Bio-Oil Launch Campaign",
-    client: "DSG / Bio-Oil",
-    category: "MARKETING",
-    subCategory: "Campaigns",
-    subCategories: ["Campaigns", "Social Media", "Retail Activations"],
-    year: 2024,
-    location: "Sri Lanka",
-    timeline: "2023–2024",
-    shortDescription:
-      "A high-impact omnichannel launch campaign engineered for DSG and Bio-Oil, weaving suspenseful teaser rollouts, vibrant social collateral, event stall architecture, and retail activations.",
-    overview:
-      "DSG partnered with KOD Universe to architect and execute a complete teaser and product launch campaign for Bio-Oil. From mysterious countdown teasers building curiosity to full-scale event stall design, promotional flags, apparel, and responsive campaign web pages, our creative direction drove nationwide buzz and retail engagement.",
-    challenge:
-      "Generating authentic anticipation and retail conversion for a flagship product introduction in a competitive market, maintaining Bio-Oil's premium heritage while commanding immediate cultural attention.",
-    approach:
-      "We engineered a multi-phase narrative: deploying countdown teaser graphics across social media to ignite organic discussions, followed by an explosive product reveal, experiential stall spaces for live audience engagement, and complete brand merchandise touchpoints.",
-    deliverables: [
-      "Teaser campaign & countdown rollout",
-      "Official launch key visuals & art direction",
-      "Experiential event stall architecture",
-      "Merchandise & event apparel (T-shirts, flags)",
-      "Social media post systems & digital collateral",
-      "Campaign web page layouts",
+    relatedSlugs: [
+      "digital-art-visual-explorations",
+      "bio-oil-skincare-campaign",
+      "area-6-social-media",
     ],
-    pillars: [
-      {
-        title: "Teaser Momentum",
-        description: "Built intrigue and organic speculation through phased countdown visuals.",
-        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
-      },
-      {
-        title: "Product Unveiling",
-        description: "Engineered bold, high-clarity key visuals commanding attention across retail and digital.",
-        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
-      },
-      {
-        title: "Experiential Space",
-        description: "Created modular, aesthetically immersive stalls for high-traffic public activations.",
-        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
-      },
-      {
-        title: "Omnichannel Reach",
-        description: "Seamlessly unified physical flags and apparel with online web and social collateral.",
-        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
-      },
-    ],
-    heroImage: {
-      src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
-      alt: "DSG and Bio-Oil Product Launch Campaign Key Visual",
-      width: 1672,
-      height: 941,
-    },
-    cardImage: {
-      src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
-      alt: "DSG Bio-Oil Official Product Launch Poster",
-      width: 1080,
-      height: 1350,
-    },
-    galleryImages: [
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/Bio Oil campaign.webp",
-        alt: "DSG & Bio-Oil Official Launch Campaign Banner",
-        width: 1672,
-        height: 941,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/Product Launch.webp",
-        alt: "DSG Bio-Oil Official Product Launch Reveal",
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (1).webp",
-        alt: "DSG Teaser Campaign Phase 1",
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (2).webp",
-        alt: "DSG Teaser Campaign Phase 2",
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/DSG teaser campaign  (3).webp",
-        alt: "DSG Teaser Campaign Phase 3",
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/Bio-Oil_Stall-Design-.webp",
-        alt: "Bio-Oil Experiential Stall Architecture & Booth Concept",
-        width: 1080,
-        height: 1080,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/INGREDIENTS _2.webp",
-        alt: "Bio-Oil Natural Ingredients Detail & Graphic Showcase",
-        width: 2400,
-        height: 2400,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/T-design.webp",
-        alt: "DSG Launch Campaign Custom Staff Apparel & T-Shirt",
-        width: 1080,
-        height: 1080,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/Flag.webp",
-        alt: "DSG Event Activation Feather Flag & Signage",
-        width: 1080,
-        height: 1080,
-      },
-      {
-        src: "/portfolio/marketing/DSG Launch campaign/Bio Oil Social media and Campaign web pages-14.webp",
-        alt: "Bio-Oil Digital Campaign Web Layout and Social Assets",
-        width: 2732,
-        height: 2732,
-      },
-    ],
-    tags: ["Campaigns", "Product Launch", "Social Media", "Event Stall", "Art Direction", "Teaser Campaign"],
-    featured: false,
-    relatedSlugs: ["bio-oil-skincare-campaign", "area-6-social-media", "coats-sri-lanka-campaign"],
   },
 ];
 
@@ -1841,4 +1980,58 @@ export function getProjectsByCategory(category: string): Project[] {
 export function getRelatedProjects(slugs: string[]): Project[] {
   const resolvedSlugs = slugs.map((s) => slugAliases[s] || s);
   return projects.filter((p) => resolvedSlugs.includes(p.slug));
+}
+
+const CATEGORY_DEFAULT_PALETTES: Record<string, string[]> = {
+  MARKETING: ["#FF5C39", "#F88D74", "#F4B8A5", "#FCE4DC", "#FFFFFF"],
+  DESIGN: ["#1F2E54", "#3A5BA0", "#E86A58", "#F4B266", "#FAF9F6"],
+  "VISUAL STORYTELLING": [
+    "#0B2545",
+    "#134074",
+    "#8DA9C4",
+    "#EE6C4D",
+    "#EEF4F8",
+  ],
+  "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING": [
+    "#1F2937",
+    "#4B5563",
+    "#D97706",
+    "#F59E0B",
+    "#FEF3C7",
+  ],
+};
+
+export function getCaseStudyForProject(project: Project): FeaturedCaseStudy {
+  const defaultPalette = CATEGORY_DEFAULT_PALETTES[project.category] || [
+    "#161616",
+    "#2D2825",
+    "#E54C2A",
+    "#F4A261",
+    "#EDEAEA",
+  ];
+
+  return {
+    badge:
+      project.badge ||
+      (project.category === "ARCHITECTURAL DESIGNING / SPATIAL DESIGNING"
+        ? "FEATURED SPATIAL ARCHITECTURE"
+        : `${project.category} TRANSFORMATION`),
+    client: project.client || project.title,
+    tagline: project.tagline || "Strategy, Identity & Direction",
+    description: project.shortDescription || project.overview || "",
+    deliverables:
+      project.deliverables && project.deliverables.length > 0
+        ? project.deliverables.slice(0, 4)
+        : [],
+    palette: project.palette || defaultPalette,
+    headlineFont: project.headlineFont || "Metropolis",
+    bodyFont: project.bodyFont || "Inter",
+    slug: project.slug,
+    imageSrc: project.cardImage?.src || project.heroImage.src || "",
+  };
+}
+
+export function getCaseStudyBySlug(slug: string): FeaturedCaseStudy | null {
+  const project = getProjectBySlug(slug);
+  return project ? getCaseStudyForProject(project) : null;
 }

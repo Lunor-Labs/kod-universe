@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
-import { posts } from "@/data/posts";
+import { posts } from "@/data/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.kod.lk";

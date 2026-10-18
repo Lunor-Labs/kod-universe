@@ -37,7 +37,7 @@ export function ServiceCaseStudy({
                 {caseStudy.tagline}
               </p>
 
-              <p className="text-body text-white/80 font-light mb-8 max-w-md">
+              <p className="text-body text-white/80 font-light mb-8 max-w-md whitespace-pre-line">
                 {caseStudy.description}
               </p>
               <div className="mb-8">

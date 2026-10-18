@@ -100,7 +100,7 @@ export function InfoCards({
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50 col-span-1 min-h-[360px] lg:min-h-[400px] flex flex-col justify-between h-full"
             >
               <div className="relative z-10 w-[60%]">
-                <p className="eyebrow mb-4">OUR STORY</p>
+                <p className="eyebrow mb-4">ABOUT US</p>
                 <h3 className="heading-card font-editorial font-normal text-earth mb-4 leading-tight">
                   Rooted in curiosity. Driven by purpose.
                 </h3>

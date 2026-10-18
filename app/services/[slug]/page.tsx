@@ -1,11 +1,12 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { capabilities, serviceGroups } from "@/data/capabilities";
 import {
+  capabilities,
+  serviceGroups,
   getServiceDetailConfig,
   selectedWorkProjects,
-} from "@/data/serviceDetails";
+} from "@/data/services";
 import {
   ServiceHero,
   ServicePhilosophy,

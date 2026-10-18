@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { posts } from "@/data/posts";
+import { posts } from "@/data/blogs";
 import { BlogListingView } from "@/features/blog/BlogListingView";
 
 export const metadata: Metadata = {

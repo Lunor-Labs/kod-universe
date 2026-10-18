@@ -141,7 +141,7 @@ export function ProcessSection() {
                       </em>
                     </h2>
                     <Link href="/about-us" className="btn-secondary">
-                      <span>Our Story</span>
+                      <span>About Us</span>
                       <span className="btn-badge">
                         <ArrowRight size={13} aria-hidden="true" />
                       </span>
