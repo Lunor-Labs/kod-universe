@@ -10,19 +10,19 @@ import { uShadowIntensity, uShadowSoftness } from './effect/nodes/shadow.js'
 export const DEMOS_LIST = [
   {
     id: 'art',
-    map: '/textures/art-new.webp',
-    depth: '/textures/art-new-depth.webp',
+    map: '/textures/mother-new.webp',
+    depth: '/textures/mother-new-depth.webp',
     setUniforms() {
-      depthSmoothing.percent = 0.5
-      uDisplacementScale.value = 1.3
-      uNormalScale.value = 2.2
+      depthSmoothing.percent = 0.6
+      uDisplacementScale.value = 1.2
+      uNormalScale.value = 2.0
       uDetailScale.value = 0.5
       uShadowSoftness.value = 0.2
-      pointLight.color.set('#ffe6cc') 
-      pointLight.intensity = 4.5
-      pointLight.decay = 2.0
-      pointLight.position.z = 1.05
-      ambientLight.intensity = 0.25
+      pointLight.color.set('#ffccaa')
+      pointLight.intensity = 6.0
+      pointLight.decay = 2.5
+      pointLight.position.z = 1.2
+      ambientLight.intensity = 0.05
     }
   },
   {
@@ -45,20 +45,20 @@ export const DEMOS_LIST = [
   },
   {
     id: 'drops',
-    map: '/textures/mother-new.webp',
-    depth: '/textures/mother-new-depth.webp',
+    map: '/textures/art-new.webp',
+    depth: '/textures/art-new-depth.webp',
     setUniforms() {
-      depthSmoothing.percent = 0.6
-      uDisplacementScale.value = 1.2
-      uNormalScale.value = 2.0
+      depthSmoothing.percent = 0.5
+      uDisplacementScale.value = 1.3
+      uNormalScale.value = 2.2
       uDetailScale.value = 0.5
       uShadowSoftness.value = 0.2
-      pointLight.color.set('#ffccaa') 
-      pointLight.intensity = 6.0
-      pointLight.decay = 2.5
-      pointLight.position.z = 1.2
-      ambientLight.intensity = 0.05
-    },
+      pointLight.color.set('#ffe6cc')
+      pointLight.intensity = 4.5
+      pointLight.decay = 2.0
+      pointLight.position.z = 1.05
+      ambientLight.intensity = 0.25
+    }
   }
 ];
 

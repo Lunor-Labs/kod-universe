@@ -12,6 +12,13 @@ export function GallerySection() {
   const router = useRouter();
 
   const engineRef = useRef<any>(null);
+  const [activeDemo, setActiveDemo] = useState(0);
+
+  const categories = [
+    { id: 0, label: "Art" },
+    { id: 1, label: "Merch" },
+    { id: 2, label: "Drops" },
+  ];
 
   useEffect(() => {
     const init = async () => {
@@ -46,6 +53,7 @@ export function GallerySection() {
   };
 
   const changeDemo = async (index: number) => {
+    setActiveDemo(index);
     if (engineRef.current?.setDemo) {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -69,25 +77,25 @@ export function GallerySection() {
             </h2>
           </div>
 
-          <div className="absolute bottom-6 left-0 w-full flex justify-center gap-4 z-20 pointer-events-auto">
-            <button
-              onClick={() => changeDemo(0)}
-              className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
-            >
-              Art
-            </button>
-            <button
-              onClick={() => changeDemo(1)}
-              className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
-            >
-              Merch
-            </button>
-            <button
-              onClick={() => changeDemo(2)}
-              className="px-4 py-2 text-xs font-semibold tracking-widest text-white/70 uppercase border border-white/20 rounded-full bg-black/40 backdrop-blur-md hover:bg-white hover:text-black transition-colors cursor-pointer"
-            >
-              Drops
-            </button>
+          <div className="absolute bottom-6 left-0 w-full flex justify-center gap-3 sm:gap-4 z-20 pointer-events-auto">
+            {categories.map((cat) => {
+              const isActive = activeDemo === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => changeDemo(cat.id)}
+                  className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-widest uppercase rounded-full backdrop-blur-md transition-all duration-300 cursor-pointer border ${
+                    isActive
+                      ? "bg-kod-orange text-white border-kod-orange shadow-lg shadow-kod-orange/40 scale-105 font-bold"
+                      : "bg-black/40 text-white/70 border-white/20 hover:border-white/60 hover:text-white hover:bg-black/60"
+                  }`}
+                  aria-pressed={isActive}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
           </div>
 
           {loading && (

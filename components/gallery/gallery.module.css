@@ -125,7 +125,7 @@
   letter-spacing: 0.08em;
   text-align: center;
   transform: translate3d(-50%, var(--title-y, 0px), 0) scale(var(--title-scale, 1));
-  opacity: var(--title-opacity, 1);
+  opacity: var(--title-opacity, 0.5);
   will-change: transform, opacity;
   white-space: nowrap;
   pointer-events: none;

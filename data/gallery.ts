@@ -486,7 +486,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "& Prints.",
     description:
       "Artwork, prints and digital illustrations created by KoD — each piece rooted in story, process and intention.",
-    heroImage: "/gallery/art.webp",
+    heroImage: "/textures/mother-new.webp",
     metaTitle: "Art & Prints — KoD Gallery",
     metaDescription:
       "Original artwork, art prints, digital illustrations and limited editions by KOD Universe. Each piece is created with intention and connected to a story.",
@@ -499,7 +499,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "& Objects.",
     description:
       "Apparel, creative objects and accessories created in the KoD universe and by the KOD universe  - things people actually want to own and wear.",
-    heroImage: "/gallery/merch.webp",
+    heroImage: "/textures/merch-new.webp",
     metaTitle: "Merch & Objects — KoD Gallery",
     metaDescription:
       "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
@@ -529,7 +529,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     titleItalic: "Drops.",
     description:
       "Available for a moment, gone forever. Limited releases, seasonal collections, artist collaborations and KoD Originals.",
-    heroImage: "/gallery/drops.webp",
+    heroImage: "/textures/art-new.webp",
     metaTitle: "Limited Drops — KoD Gallery",
     metaDescription:
       "KoD Gallery limited releases, seasonal collections, artist collaborations and KoD Originals. Available for a moment, gone forever.",

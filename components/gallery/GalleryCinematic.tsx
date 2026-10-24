@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -30,6 +30,28 @@ function segmentInOut(s: number, a: number, b: number, c: number, d: number) {
 export function GalleryCinematic() {
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const collectionsScrollRef = useRef<HTMLDivElement>(null);
+  const [activeCategory, setActiveCategory] = useState(0);
+
+  const scrollToCategory = (idx: number) => {
+    setActiveCategory(idx);
+    const container = collectionsScrollRef.current;
+    if (!container) return;
+    const card = container.children[idx] as HTMLElement;
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  };
+
+  const onCollectionsScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    const card = el.firstElementChild as HTMLElement | null;
+    const cardWidth = card ? card.offsetWidth : 1;
+    const idx = Math.round(el.scrollLeft / (cardWidth + 16));
+    if (idx !== activeCategory && idx >= 0 && idx < 3) {
+      setActiveCategory(idx);
+    }
+  };
 
   // Animation state refs
   const state = useRef({
@@ -199,7 +221,7 @@ export function GalleryCinematic() {
       title: "Art",
       description:
         "Original fine art, sacred cave iconography, limited print editions, and digital masterpieces created by KoD.",
-      image: "/gallery/art.webp",
+      image: "/textures/mother-new.webp",
       tags: ["Originals", "Prints", "Digital Art"],
     },
     {
@@ -207,7 +229,7 @@ export function GalleryCinematic() {
       title: "Merch",
       description:
         "Apparel, luxury streetwear, bespoke posters, creative objects, and wearable relics of the KoD universe.",
-      image: "/gallery/merch.webp",
+      image: "/textures/merch-new.webp",
       tags: ["Apparel", "Relics", "Accessories"],
     },
     {
@@ -215,7 +237,7 @@ export function GalleryCinematic() {
       title: "Drops",
       description:
         "Time-gated releases, seasonal ceremonial capsules, artist collaborations, and rare numbered editions.",
-      image: "/gallery/drops.webp",
+      image: "/textures/art-new.webp",
       tags: ["Limited Releases", "Collabs", "KoD Editions"],
     },
   ];
@@ -321,46 +343,92 @@ export function GalleryCinematic() {
             </div>
           </section>
           <section
-            className="absolute z-15 left-1/2 top-[48%] md:top-1/2 w-[94vw] md:w-[min(1160px,92vw)] will-change-[transform,opacity] [transform:translate3d(-50%,calc(-50%+var(--panel2-y,0px)),0)] [opacity:var(--panel2-opacity,0)] [pointer-events:var(--panel2-pe,none)] motion-reduce:transition-none"
+            className="absolute z-15 left-1/2 top-1/2 w-[94vw] md:w-[min(1160px,92vw)] will-change-[transform,opacity] [transform:translate3d(-50%,calc(-50%+var(--panel2-y,0px)),0)] [opacity:var(--panel2-opacity,0)] [pointer-events:var(--panel2-pe,none)] motion-reduce:transition-none"
             id="collections"
             aria-label="KoD Gallery Collections"
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 w-full">
-              {galleryCategories.map((category) => (
-                <div
+            {/* Mobile Category Tabs */}
+            <div className="flex md:hidden items-center justify-center gap-2 mb-3">
+              {galleryCategories.map((category, idx) => (
+                <button
                   key={category.id}
-                  className="relative flex flex-col justify-between bg-black/65 backdrop-blur-2xl rounded p-5 md:p-6 border border-white/10 hover:border-kod-orange/50 transition-all duration-500 group shadow-2xl hover:shadow-[0_20px_40px_rgba(229,76,42,0.18)]"
+                  type="button"
+                  onClick={() => scrollToCategory(idx)}
+                  className={`px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                    activeCategory === idx
+                      ? "bg-kod-orange text-white shadow-md shadow-kod-orange/30 scale-105 font-bold"
+                      : "bg-black/60 text-kod-dust/80 border border-white/10 hover:text-white"
+                  }`}
                 >
-                  <div>
-                    <div className="w-full h-40 sm:h-48 relative overflow-hidden rounded mb-4 bg-black/40">
-                      <Image
-                        src={category.image}
-                        alt={category.title}
-                        fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  {category.title}
+                </button>
+              ))}
+            </div>
+
+            <div
+              ref={collectionsScrollRef}
+              onScroll={onCollectionsScroll}
+              className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 w-full overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none py-1"
+            >
+              {galleryCategories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={`/gallery/${category.id}`}
+                  className="w-[82vw] max-w-[340px] md:w-auto md:max-w-none flex-shrink-0 snap-center relative rounded overflow-hidden border border-white/15 hover:border-kod-orange/70 transition-all duration-500 group shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_60px_-10px_rgba(229,76,42,0.35)] flex flex-col justify-between h-[390px] sm:h-[430px] md:h-[460px] p-5 sm:p-6 cursor-pointer isolate"
+                >
+                  <div className="absolute inset-0 -z-10 overflow-hidden">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      sizes="(max-width: 768px) 85vw, 33vw"
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/25 group-hover:via-black/45 transition-colors duration-500" />
+                  </div>
+                  <div className="relative z-10 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5">
+                      {category.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[9px] sm:text-[10px] tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-white/85 border border-white/15"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative z-10 flex flex-col justify-end mt-auto pt-6">
+                    <div className="mb-2">
+                      <h3 className="font-metropolis text-2xl sm:text-3xl font-extrabold text-white tracking-tight group-hover:text-kod-orange transition-colors duration-300 drop-shadow-md">
+                        {category.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-kod-canvas tracking-tight mb-2 group-hover:text-kod-orange transition-colors">
-                      {category.title}
-                    </h3>
-
-                    <p className="eading-relaxed mb-5">
+                    <p className="text-xs sm:text-sm text-kod-mist/90 leading-relaxed line-clamp-3 mb-5 group-hover:text-white/95 transition-colors duration-300 drop-shadow">
                       {category.description}
                     </p>
-                  </div>
 
-                  <Link
-                    href={`/gallery/${category.id}`}
-                    className="btn-primary !w-fit justify-center text-xs sm:text-sm !py-2.5 sm:!py-3"
-                  >
-                    <span>View {category.title}</span>
-                    <span className="btn-badge">
-                      <ArrowRight size={14} aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
+                    <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white group-hover:bg-kod-orange group-hover:border-kod-orange group-hover:text-white transition-all duration-300 shadow-lg w-fit">
+                      <span>Explore {category.title}</span>
+                      <span className="w-6 h-6 rounded-full bg-white/20 group-hover:bg-white group-hover:text-kod-orange flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                        <ArrowRight size={13} aria-hidden="true" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex md:hidden items-center justify-center gap-1.5 mt-2.5">
+              {galleryCategories.map((cat, idx) => (
+                <span
+                  key={cat.id}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    activeCategory === idx ? "w-6 bg-kod-orange" : "w-1.5 bg-white/25"
+                  }`}
+                  aria-hidden="true"
+                />
               ))}
             </div>
           </section>
