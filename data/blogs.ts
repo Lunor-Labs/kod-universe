@@ -13,7 +13,7 @@ export const posts: Post[] = [
     type: "NEWS",
     category: "STUDIO NEWS",
     coverImage: {
-      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-pavilion-plaza.png",
+      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-pavilion-plaza.webp",
       alt: "IBIZA Mirissa Oceanfront Villa and Infinity Pool",
       width: 1920,
       height: 1080,
@@ -51,7 +51,7 @@ export const posts: Post[] = [
           "This gives property developers, hospitality founders, and private estate owners the confidence to preview, iterate, and refine their spatial investments with cinematic precision.",
         ],
         image: {
-          src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.png",
+          src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.webp",
           alt: "IBIZA Mirissa coastal terrace lounge render",
           caption:
             "Atmospheric dusk rendering of the coastal terrace lounge at IBIZA Mirissa.",
@@ -234,7 +234,7 @@ export const posts: Post[] = [
     type: "BLOG",
     category: "DESIGN ESSAYS",
     coverImage: {
-      src: "/portfolio/visual-storytelling/union-assurance-commercial/union-assurance-commercial-hero.png",
+      src: "/portfolio/visual-storytelling/union-assurance-commercial/union-assurance-commercial-hero.webp",
       alt: "Union Assurance Commercial Storytelling Keyframe",
       width: 1672,
       height: 941,

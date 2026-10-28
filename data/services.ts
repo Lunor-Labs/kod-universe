@@ -645,14 +645,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
         imageSrc:
-          "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promotion-01.jpg",
+          "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promotion-01.webp",
       },
       {
         id: "2",
         slug: "area-6-social-media",
         title: "Area 6 Social & Posters",
         category: "POSTER & ENGAGEMENT",
-        imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.png",
+        imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.webp",
       },
       /*
       {
@@ -661,7 +661,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coats Sri Lanka Campaign",
         category: "HERITAGE & SOCIAL",
         imageSrc:
-          "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
+          "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.webp",
       },
       */
       {

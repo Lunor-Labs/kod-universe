@@ -15,7 +15,7 @@ export function OurUniverseHero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/main/about-us-hero.png"
+          src="/main/about-us-hero.webp"
           alt="Cave wall with KOD logo painted on it"
           fill
           priority
