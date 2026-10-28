@@ -645,14 +645,14 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Bio-Oil Social Campaign",
         category: "SOCIAL MEDIA & CAMPAIGN",
         imageSrc:
-          "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promoetion-01.webp",
+          "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-cargills-promotion-01.jpg",
       },
       {
         id: "2",
         slug: "area-6-social-media",
         title: "Area 6 Social & Posters",
         category: "POSTER & ENGAGEMENT",
-        imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.webp",
+        imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.png",
       },
       {
         id: "3",
@@ -660,7 +660,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Coats Sri Lanka Campaign",
         category: "HERITAGE & SOCIAL",
         imageSrc:
-          "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.webp",
+          "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
       },
     ],
     ctaTitle: "Ready to spark cultural momentum?",
@@ -872,7 +872,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         slug: "rouka-brand-identity",
         title: "ROUKA Brand Identity",
         category: "BRAND SYSTEM & IDENTITY",
-        imageSrc: "/portfolio/Design/branding-identity/branding/rouka-1.webp",
+        imageSrc: "/portfolio/Design/branding-identity/branding/rouka/rouka-1.webp",
       },
       {
         id: "3",
