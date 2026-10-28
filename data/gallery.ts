@@ -54,7 +54,7 @@ export const galleryItems: GalleryItem[] = [
     id: "area-6-poster",
     title: "Area 6 Graphic Poster & Typography",
     category: "BRANDING & IDENTITY",
-    src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-1.webp",
+    src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-2.webp",
     alt: "Area 6 Graphic Poster & Typography",
     aspectClass: "aspect-square",
     projectSlug: "area-6-brand-identity",
@@ -80,6 +80,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "niwarthana-packaging-design",
     projectTitle: "Niwarthana Packaging",
   },
+  /*
   {
     id: "coats-100",
     title: "Coats Sri Lanka 100 Countries Milestone",
@@ -90,6 +91,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "coats-sri-lanka-campaign",
     projectTitle: "Coats Sri Lanka Social Content",
   },
+  */
   {
     id: "coffee-1911-artisan",
     title: "Coffee 1911 Roasted Blend Pack",
@@ -124,7 +126,7 @@ export const galleryItems: GalleryItem[] = [
     id: "cool-step-type",
     title: "Cool Step Footwear Identity System",
     category: "BRANDING & IDENTITY",
-    src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
+    src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-3.webp",
     alt: "Cool Step Footwear Identity System",
     aspectClass: "aspect-[4/3]",
     projectSlug: "cool-step-identity",
@@ -210,6 +212,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "slsa-uk-identity",
     projectTitle: "SLSA – Logo & Brand Identity",
   },
+  /*
   {
     id: "coats-connection",
     title: "Coats Astra Thread Craft Heritage",
@@ -220,6 +223,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "coats-sri-lanka-campaign",
     projectTitle: "Coats Sri Lanka Social Content",
   },
+  */
   {
     id: "kaiz-identity",
     title: "Kaiz Architectural Monogram",
@@ -360,6 +364,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "rouka-brand-identity",
     projectTitle: "ROUKA Brand Identity",
   },
+  /*
   {
     id: "coats-thread-showcase",
     title: "Coats Sri Lanka Craftsmanship & Thread Heritage",
@@ -370,6 +375,7 @@ export const galleryItems: GalleryItem[] = [
     projectSlug: "coats-sri-lanka-campaign",
     projectTitle: "Coats Sri Lanka Social Content",
   },
+  */
   {
     id: "maya-spice-showcase",
     title: "MAYA Artisanal Spices & Pouch Packaging",

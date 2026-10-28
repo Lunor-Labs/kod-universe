@@ -69,13 +69,13 @@ export function ServiceCaseStudy({
 
           <div className="lg:col-span-7">
             <ScrollReveal variant="right" delay={0.2}>
-              <div className="relative aspect-[16/10] rounded overflow-hidden border border-white/10 shadow-2xl bg-kod-black">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-kod-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8">
                 <Image
                   src={caseStudy.imageSrc}
                   alt={caseStudy.client}
                   fill
                   sizes="(min-width: 1024px) 58vw, 100vw"
-                  className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  className="object-contain p-4 sm:p-6 drop-shadow-2xl opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500"
                 />
               </div>
             </ScrollReveal>

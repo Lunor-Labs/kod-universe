@@ -654,6 +654,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         category: "POSTER & ENGAGEMENT",
         imageSrc: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.png",
       },
+      /*
       {
         id: "3",
         slug: "coats-sri-lanka-campaign",
@@ -661,6 +662,15 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         category: "HERITAGE & SOCIAL",
         imageSrc:
           "/portfolio/marketing/social-media/coats-sri-lanka-social-media-post/coats-social-media-post-hero.png",
+      },
+      */
+      {
+        id: "3",
+        slug: "dsg-launch-campaign",
+        title: "Bio-Oil DSG Launch Campaign",
+        category: "RETAIL & DIGITAL ACTIVATION",
+        imageSrc:
+          "/portfolio/marketing/campaigns/bio-oil-dry-skin-gel-launch-campaign/bio-oil-dry-skin-gel-launch-hero.png",
       },
     ],
     ctaTitle: "Ready to spark cultural momentum?",
@@ -1094,7 +1104,7 @@ const serviceConfigsMap: Record<string, Partial<ServiceDetailConfig>> = {
         title: "Cool Step Footwear Identity",
         category: "PRODUCT & APPAREL DESIGN",
         imageSrc:
-          "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
+          "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-3.webp",
       },
       {
         id: "3",

@@ -7,6 +7,19 @@ interface ProjectCaseStudyProps {
 }
 
 export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
+  const categoryLabel = (() => {
+    if (!project.category) return null;
+    const cat = project.category.trim().toUpperCase();
+    if (cat === "VISUAL STORYTELLING") return "Visual Storytelling";
+    if (cat === "MARKETING") return "Marketing";
+    if (cat === "DESIGN") return "Design";
+    return project.category;
+  })();
+
+  const subDisciplines = (project.tags || []).filter(
+    (tag) => tag.trim().toLowerCase() !== categoryLabel?.toLowerCase()
+  );
+
   return (
     <article
       className="section-padding-bottom bg-kod-canvas"
@@ -90,7 +103,14 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                   Project Disciplines
                 </p>
                 <div className="flex flex-wrap gap-2.5">
-                  {project.tags.map((tag) => (
+                  {categoryLabel && (
+                    <span
+                      className="text-sm font-semibold tracking-wide uppercase px-3.5 py-1.5 bg-kod-black text-white border border-kod-black rounded-full shadow-sm"
+                    >
+                      {categoryLabel}
+                    </span>
+                  )}
+                  {subDisciplines.map((tag) => (
                     <span
                       key={tag}
                       className="text-sm font-medium tracking-wide uppercase px-3.5 py-1.5 bg-kod-canvas border border-kod-border rounded-full text-kod-black"

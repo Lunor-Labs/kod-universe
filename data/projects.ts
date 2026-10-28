@@ -68,12 +68,6 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/bio-oil-social-media-hero.png",
-        alt: "Bio-Oil Social Media campaign showcase hero",
-        width: 4000,
-        height: 2250,
-      },
-      {
         src: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/kod-bio-oil-summary-work-02.png",
         alt: "Bio-Oil campaign summary overview",
         width: 5000,
@@ -135,7 +129,7 @@ export const projects: Project[] = [
     relatedSlugs: [
       "dsg-launch-campaign",
       "area-6-social-media",
-      "coats-sri-lanka-campaign",
+      "niwarthana-packaging-design",
     ],
   },
   {
@@ -198,12 +192,18 @@ export const projects: Project[] = [
       height: 1174,
     },
     cardImage: {
-      src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-teaser-campaign-overview.png",
+      src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-campaign-web-page-14.png",
       alt: "Bio-Oil Dry Skin Gel Official Product Launch Poster",
       width: 2400,
       height: 2400,
     },
     galleryImages: [
+      {
+        src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-stall-design.png",
+        alt: "Bio-Oil Experiential Stall Architecture & Booth Concept",
+        width: 1080,
+        height: 1080,
+      },
       {
         src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-teaser-campaign-overview.png",
         alt: "Bio-Oil Dry Skin Gel Teaser Campaign Overview",
@@ -227,12 +227,6 @@ export const projects: Project[] = [
         alt: "Bio-Oil Dry Skin Gel Campaign Display",
         width: 1800,
         height: 1800,
-      },
-      {
-        src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-stall-design.png",
-        alt: "Bio-Oil Experiential Stall Architecture & Booth Concept",
-        width: 1080,
-        height: 1080,
       },
       {
         src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-ingredients-key-visual.jpg",
@@ -299,7 +293,7 @@ export const projects: Project[] = [
     relatedSlugs: [
       "bio-oil-skincare-campaign",
       "area-6-social-media",
-      "coats-sri-lanka-campaign",
+      "niwarthana-packaging-design",
     ],
   },
   {
@@ -326,24 +320,24 @@ export const projects: Project[] = [
       "Community activation copy",
     ],
     heroImage: {
-      src: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.png",
+      src: "/portfolio/marketing/social-media/area-6/Orange-Fitness.png",
       alt: "Area 6 Fitness Social Media Campaign Hero Showcase",
       width: 4000,
       height: 2250,
     },
     cardImage: {
-      src: "/portfolio/marketing/social-media/area-6/area-6-single-post.jpg",
+      src: "/portfolio/marketing/social-media/area-6/area-6-join-today-post.png",
       alt: "Area 6 Motivational Typography Gym Poster",
       width: 2250,
       height: 2812,
     },
+    transparentImage: {
+      src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-fitness-gear-collection.png",
+      alt: "Area 6 Fitness Gear & Identity Showcase",
+      width: 1254,
+      height: 1254,
+    },
     galleryImages: [
-      {
-        src: "/portfolio/marketing/social-media/area-6/area-6-social-media-hero.png",
-        alt: "Area 6 Social Media Hero",
-        width: 4000,
-        height: 2250,
-      },
       {
         src: "/portfolio/marketing/social-media/area-6/area-6-single-post.jpg",
         alt: "Area 6 Single Gym Post",
@@ -398,9 +392,10 @@ export const projects: Project[] = [
     relatedSlugs: [
       "area-6-brand-identity",
       "bio-oil-skincare-campaign",
-      "coats-sri-lanka-campaign",
+      "dsg-launch-campaign",
     ],
   },
+  /*
   {
     id: "4",
     slug: "coats-sri-lanka-campaign",
@@ -478,6 +473,7 @@ export const projects: Project[] = [
     featured: false,
     relatedSlugs: ["bio-oil-skincare-campaign", "area-6-social-media"],
   },
+  */
   {
     id: "5",
     slug: "niwarthana-packaging-design",
@@ -670,6 +666,31 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-logo-process-elements.png",
+        alt: "ROUKA Rouka Logo Process Elements",
+        width: 1600,
+        height: 1600,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-storyboard-elements.png",
+        alt: "ROUKA Rouka Storyboard Elements",
+        width: 1600,
+        height: 1600,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-concept-elements.png",
+        alt: "ROUKA Rouka Concept Elements",
+        width: 1600,
+        height: 1600,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-logo-construction-board.png",
+        alt: "ROUKA Rouka Logo Construction Board",
+        width: 1254,
+        height: 1254,
+      },
+
+      {
         src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-1.webp",
         alt: "ROUKA Rouka 1",
         width: 1254,
@@ -692,12 +713,6 @@ export const projects: Project[] = [
         alt: "ROUKA Rouka 4",
         width: 1254,
         height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-concept-elements.png",
-        alt: "ROUKA Rouka Concept Elements",
-        width: 1600,
-        height: 1600,
       },
       {
         src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-label-mockup-01.png",
@@ -730,28 +745,10 @@ export const projects: Project[] = [
         height: 5631,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-logo-construction-board.png",
-        alt: "ROUKA Rouka Logo Construction Board",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-logo-process-elements.png",
-        alt: "ROUKA Rouka Logo Process Elements",
-        width: 1600,
-        height: 1600,
-      },
-      {
         src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-logo-reel-11.webp",
         alt: "ROUKA Rouka Logo Reel 11",
         width: 1349,
         height: 2400,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-storyboard-elements.png",
-        alt: "ROUKA Rouka Storyboard Elements",
-        width: 1600,
-        height: 1600,
       },
     ],
     tags: [
@@ -834,18 +831,12 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-brand-concept-01.png",
+      src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-mock-2.webp",
       alt: "SLSA Sri Lankan Student Association Concept Presentation",
       width: 1254,
       height: 1254,
     },
     galleryImages: [
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/kod-logo-web-18.webp",
-        alt: "SLSA Kod Logo Web 18",
-        width: 1045,
-        height: 1046,
-      },
       {
         src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-brand-concept-01.png",
         alt: "SLSA Slsa Brand Concept 01",
@@ -859,16 +850,22 @@ export const projects: Project[] = [
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-03.webp",
-        alt: "SLSA Slsa Logo 03",
-        width: 804,
-        height: 749,
-      },
-      {
         src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-concept-01.webp",
         alt: "SLSA Slsa Logo Concept 01",
         width: 1254,
         height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/kod-logo-web-18.webp",
+        alt: "SLSA Kod Logo Web 18",
+        width: 1045,
+        height: 1046,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-03.webp",
+        alt: "SLSA Slsa Logo 03",
+        width: 804,
+        height: 749,
       },
       {
         src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-logo-mock-1.webp",
@@ -976,36 +973,6 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-1.webp",
-        alt: "Coffee 1911 Coffee 1911 1",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-2.webp",
-        alt: "Coffee 1911 Coffee 1911 2",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-3.webp",
-        alt: "Coffee 1911 Coffee 1911 3",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-4.webp",
-        alt: "Coffee 1911 Coffee 1911 4",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-5.webp",
-        alt: "Coffee 1911 Coffee 1911 5",
-        width: 1254,
-        height: 1254,
-      },
-      {
         src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-concept-01.png",
         alt: "Coffee 1911 Coffee 1911 Concept 01",
         width: 1254,
@@ -1062,6 +1029,36 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-concept-10.png",
         alt: "Coffee 1911 Coffee 1911 Concept 10",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-1.webp",
+        alt: "Coffee 1911 Coffee 1911 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-2.webp",
+        alt: "Coffee 1911 Coffee 1911 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-3.webp",
+        alt: "Coffee 1911 Coffee 1911 3",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-4.webp",
+        alt: "Coffee 1911 Coffee 1911 4",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-5.webp",
+        alt: "Coffee 1911 Coffee 1911 5",
         width: 1254,
         height: 1254,
       },
@@ -1185,16 +1182,10 @@ export const projects: Project[] = [
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-1.webp",
-        alt: "Cool Steps Cool Step Final 1",
-        width: 1920,
-        height: 2400,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-2.webp",
-        alt: "Cool Steps Cool Step Final 2",
-        width: 1920,
-        height: 2400,
+        src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-7.webp",
+        alt: "Cool Steps Cool Step Final 7",
+        width: 1254,
+        height: 1254,
       },
       {
         src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-3.webp",
@@ -1305,6 +1296,12 @@ export const projects: Project[] = [
         height: 1254,
       },
       {
+        src: "/portfolio/Design/branding-identity/logo-design/focal/focal-concept-09.png",
+        alt: "FOCAL Focal Concept 09",
+        width: 1254,
+        height: 1254,
+      },
+      {
         src: "/portfolio/Design/branding-identity/logo-design/focal/focal-concept-02.png",
         alt: "FOCAL Focal Concept 02",
         width: 1254,
@@ -1343,12 +1340,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/focal/focal-concept-08.png",
         alt: "FOCAL Focal Concept 08",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/focal/focal-concept-09.png",
-        alt: "FOCAL Focal Concept 09",
         width: 1254,
         height: 1254,
       },
@@ -1495,36 +1486,6 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-2.webp",
-        alt: "FRANS Niwasa Frans Niwasa 2",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-3.webp",
-        alt: "FRANS Niwasa Frans Niwasa 3",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-4.webp",
-        alt: "FRANS Niwasa Frans Niwasa 4",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-5.webp",
-        alt: "FRANS Niwasa Frans Niwasa 5",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-6.webp",
-        alt: "FRANS Niwasa Frans Niwasa 6",
-        width: 1254,
-        height: 1254,
-      },
-      {
         src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-concept-01.png",
         alt: "FRANS Niwasa Frans Niwasa Concept 01",
         width: 1254,
@@ -1533,6 +1494,12 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-concept-02.png",
         alt: "FRANS Niwasa Frans Niwasa Concept 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-concept-09.png",
+        alt: "FRANS Niwasa Frans Niwasa Concept 09",
         width: 1254,
         height: 1254,
       },
@@ -1573,8 +1540,20 @@ export const projects: Project[] = [
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-concept-09.png",
-        alt: "FRANS Niwasa Frans Niwasa Concept 09",
+        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-1.webp",
+        alt: "FRANS Niwasa Frans Niwasa 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-2.webp",
+        alt: "FRANS Niwasa Frans Niwasa 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-6.webp",
+        alt: "FRANS Niwasa Frans Niwasa 6",
         width: 1254,
         height: 1254,
       },
@@ -1663,6 +1642,18 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-brand-style-guide-board.png",
+        alt: "Kaizer Kaiz Brand Style Guide Board",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-brand-concept-01.png",
+        alt: "Kaizer Kaiz Brand Concept 01",
+        width: 1302,
+        height: 1208,
+      },
+      {
         src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-amila-1.webp",
         alt: "Kaizer Kaiz Amila 1",
         width: 1254,
@@ -1677,18 +1668,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-amila-3.webp",
         alt: "Kaizer Kaiz Amila 3",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-brand-concept-01.png",
-        alt: "Kaizer Kaiz Brand Concept 01",
-        width: 1302,
-        height: 1208,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/kaiz/kaiz-brand-style-guide-board.png",
-        alt: "Kaizer Kaiz Brand Style Guide Board",
         width: 1254,
         height: 1254,
       },
@@ -1782,6 +1761,18 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/branding-identity/logo-design/maya/maya-monogram-symbol.png",
+        alt: "MAYA Enterprises Maya Monogram Symbol",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/maya/maya-stationery-showcase.png",
+        alt: "MAYA Enterprises Maya Stationery Showcase",
+        width: 1254,
+        height: 1254,
+      },
+      {
         src: "/portfolio/Design/branding-identity/logo-design/maya/maya-brand-concept-01.png",
         alt: "MAYA Enterprises Maya Brand Concept 01",
         width: 1254,
@@ -1802,12 +1793,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/maya/maya-monogram-construction-grid.jpg",
         alt: "MAYA Enterprises Maya Monogram Construction Grid",
-        width: 2250,
-        height: 2250,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/maya/maya-monogram-symbol.png",
-        alt: "MAYA Enterprises Maya Monogram Symbol",
         width: 2250,
         height: 2250,
       },
@@ -1844,12 +1829,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/maya/maya-spice-symbol-04.webp",
         alt: "MAYA Enterprises Maya Spice Symbol 04",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/maya/maya-stationery-showcase.png",
-        alt: "MAYA Enterprises Maya Stationery Showcase",
         width: 1254,
         height: 1254,
       },
@@ -1949,26 +1928,8 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-1.webp",
-        alt: "AREA 6 Area 6 1",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-2.webp",
-        alt: "AREA 6 Area 6 2",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-3.webp",
-        alt: "AREA 6 Area 6 3",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-4.webp",
-        alt: "AREA 6 Area 6 4",
+        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-brand-concept-06.png",
+        alt: "AREA 6 Area 6 Brand Concept 06",
         width: 1254,
         height: 1254,
       },
@@ -2003,8 +1964,14 @@ export const projects: Project[] = [
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-brand-concept-06.png",
-        alt: "AREA 6 Area 6 Brand Concept 06",
+        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-2.webp",
+        alt: "AREA 6 Area 6 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-3.webp",
+        alt: "AREA 6 Area 6 3",
         width: 1254,
         height: 1254,
       },
@@ -2103,6 +2070,25 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-shield-presentation-board.png",
+        alt: "BITO Bito Shield Presentation Board",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-brand-concept-01.png",
+        alt: "BITO Bito Brand Concept 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-brand-concept-02.png",
+        alt: "BITO Bito Brand Concept 02",
+        width: 1254,
+        height: 1254,
+      },
+      
+      {
         src: "/portfolio/Design/branding-identity/logo-design/bito/bito-1.webp",
         alt: "BITO Bito 1",
         width: 1254,
@@ -2123,24 +2109,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/branding-identity/logo-design/bito/bito-4.webp",
         alt: "BITO Bito 4",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-brand-concept-01.png",
-        alt: "BITO Bito Brand Concept 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-brand-concept-02.png",
-        alt: "BITO Bito Brand Concept 02",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/bito/bito-shield-presentation-board.png",
-        alt: "BITO Bito Shield Presentation Board",
         width: 1254,
         height: 1254,
       },
@@ -2232,26 +2200,20 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-1.webp",
-        alt: "Coconut Husk Chips Coco 1",
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-05.png",
+        alt: "Coconut Husk Chips Coco Concept 05",
         width: 1254,
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-2.webp",
-        alt: "Coconut Husk Chips Coco 2",
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-luxury-brand-concept-board.png",
+        alt: "Coconut Husk Chips Coco Luxury Brand Concept Board",
         width: 1254,
         height: 1254,
       },
       {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-3.webp",
-        alt: "Coconut Husk Chips Coco 3",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-4.webp",
-        alt: "Coconut Husk Chips Coco 4",
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-12.png",
+        alt: "Coconut Husk Chips Coco Concept 12",
         width: 1254,
         height: 1254,
       },
@@ -2279,12 +2241,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-05.png",
-        alt: "Coconut Husk Chips Coco Concept 05",
-        width: 1254,
-        height: 1254,
-      },
+      
       {
         src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-06.png",
         alt: "Coconut Husk Chips Coco Concept 06",
@@ -2321,12 +2278,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-12.png",
-        alt: "Coconut Husk Chips Coco Concept 12",
-        width: 1254,
-        height: 1254,
-      },
+      
       {
         src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-13.png",
         alt: "Coconut Husk Chips Coco Concept 13",
@@ -2339,9 +2291,28 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
+      
       {
-        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-luxury-brand-concept-board.png",
-        alt: "Coconut Husk Chips Coco Luxury Brand Concept Board",
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-1.webp",
+        alt: "Coconut Husk Chips Coco 1",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-2.webp",
+        alt: "Coconut Husk Chips Coco 2",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-3.webp",
+        alt: "Coconut Husk Chips Coco 3",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/coco/coco-4.webp",
+        alt: "Coconut Husk Chips Coco 4",
         width: 1254,
         height: 1254,
       },
@@ -2582,6 +2553,30 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-01.png",
+        alt: "Pissu Kanna Visual Concept 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-02.png",
+        alt: "Pissu Kanna Visual Concept 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-03.png",
+        alt: "Pissu Kanna Visual Concept 03",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-04.png",
+        alt: "Pissu Kanna Visual Concept 04",
+        width: 1672,
+        height: 941,
+      },
+      {
         src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-merch-lifestyle.png",
         alt: "Pissu Kanna Merch Lifestyle",
         width: 1600,
@@ -2616,30 +2611,6 @@ export const projects: Project[] = [
         alt: "Pissu Kanna Street Art Artboard 09",
         width: 2251,
         height: 2250,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-01.png",
-        alt: "Pissu Kanna Visual Concept 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-02.png",
-        alt: "Pissu Kanna Visual Concept 02",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-03.png",
-        alt: "Pissu Kanna Visual Concept 03",
-        width: 1672,
-        height: 941,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-04.png",
-        alt: "Pissu Kanna Visual Concept 04",
-        width: 1672,
-        height: 941,
       },
     ],
     tags: [
@@ -2723,14 +2694,20 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
-        src: "/portfolio/Design/digital-art/digital-art-1.webp",
-        alt: "Digital Art Study 01 - Cyber Character Portrait",
+        src: "/portfolio/Design/digital-art/digital-art-2.webp",
+        alt: "Digital Art Study 02 - Ethereal Concept Art",
         width: 1122,
         height: 1402,
       },
       {
-        src: "/portfolio/Design/digital-art/digital-art-2.webp",
-        alt: "Digital Art Study 02 - Ethereal Concept Art",
+        src: "/portfolio/Design/digital-art/digital-art-7.webp",
+        alt: "Digital Art Study 07 - Cyberpunk Concept Art",
+        width: 1122,
+        height: 1402,
+      },
+      {
+        src: "/portfolio/Design/digital-art/digital-art-1.webp",
+        alt: "Digital Art Study 01 - Cyber Character Portrait",
         width: 1122,
         height: 1402,
       },
@@ -2749,12 +2726,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/digital-art/digital-art-6.webp",
         alt: "Digital Art Study 06 - Luminous Fantasy Figure",
-        width: 1122,
-        height: 1402,
-      },
-      {
-        src: "/portfolio/Design/digital-art/digital-art-7.webp",
-        alt: "Digital Art Study 07 - Cyberpunk Concept Art",
         width: 1122,
         height: 1402,
       },
@@ -3017,6 +2988,32 @@ export const projects: Project[] = [
     },
     galleryImages: [
       {
+        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-01.png",
+        alt: "AGARTHA Films Agartha Films Visual 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-storyboard.png",
+        alt: "AGARTHA Films Agartha Films Storyboard",
+        width: 1400,
+        height: 1400,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-logo-process.png",
+        alt: "AGARTHA Films Agartha Films Logo Process",
+        width: 1400,
+        height: 1400,
+      },
+      
+      
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-02.png",
+        alt: "AGARTHA Films Agartha Films Visual 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
         src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-brand-01.png",
         alt: "AGARTHA Films Agartha Films Brand 01",
         width: 1254,
@@ -3076,30 +3073,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-logo-process.png",
-        alt: "AGARTHA Films Agartha Films Logo Process",
-        width: 1400,
-        height: 1400,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-storyboard.png",
-        alt: "AGARTHA Films Agartha Films Storyboard",
-        width: 1400,
-        height: 1400,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-01.png",
-        alt: "AGARTHA Films Agartha Films Visual 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-02.png",
-        alt: "AGARTHA Films Agartha Films Visual 02",
-        width: 1254,
-        height: 1254,
-      },
+      
       {
         src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-03.png",
         alt: "AGARTHA Films Agartha Films Visual 03",
@@ -3183,7 +3157,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/ampm-law/ampm-law-brand-board.png",
+      src: "/portfolio/Design/branding-identity/logo-design/ampm-law/ampm-law-concept-03.png",
       alt: "AM | PM Law Ampm Law Brand Board",
       width: 1254,
       height: 1254,
@@ -3243,6 +3217,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
+      
     ],
     tags: [
       "Logo Design",
@@ -3311,7 +3286,7 @@ export const projects: Project[] = [
       },
     ],
     heroImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/papa-films/papa-films-brandboard-sketch-to-set.png",
+      src: "/portfolio/Design/branding-identity/logo-design/papa-films/Neon.png",
       alt: "PAPA FILMS Brandboard From Sketch to Set",
       width: 1254,
       height: 1254,
@@ -3583,7 +3558,7 @@ export const projects: Project[] = [
       },
     ],
     heroImage: {
-      src: "/portfolio/Design/web/rouka/rouka-web-design.png",
+      src: "/portfolio/Design/web/rouka/rouka-creative-workspace.png",
       alt: "ROUKA Fashion E-Commerce Website Interface Design",
       width: 1672,
       height: 941,
@@ -3593,6 +3568,12 @@ export const projects: Project[] = [
       alt: "ROUKA Creative Workspace and E-Commerce Mockup",
       width: 1254,
       height: 1254,
+    },
+    transparentImage: {
+      src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-apparel-packaging-showcase.webp",
+      alt: "ROUKA Apparel Packaging & Identity Showcase",
+      width: 1672,
+      height: 941,
     },
     galleryImages: [
       {
@@ -3606,18 +3587,6 @@ export const projects: Project[] = [
         alt: "ROUKA Creative Studio Workspace",
         width: 1254,
         height: 1254,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/logo-design/rouka/rouka-1.webp",
-        alt: "ROUKA Logomark",
-        width: 1200,
-        height: 1200,
-      },
-      {
-        src: "/portfolio/Design/branding-identity/branding/rouka/rouka-2.webp",
-        alt: "ROUKA Brand Collateral",
-        width: 800,
-        height: 1000,
       },
     ],
     tags: [
@@ -3648,7 +3617,7 @@ const slugAliases: Record<string, string> = {
   "soluna-wellness-identity": "rouka-brand-identity",
   "terra-origins-brand-kit": "slsa-uk-identity",
   "bio-oil-retail-packaging": "niwarthana-packaging-design",
-  "glow-naturally-campaign": "coats-sri-lanka-campaign",
+  // "glow-naturally-campaign": "coats-sri-lanka-campaign",
   "origins-concept-series": "focal-logo-identity",
   "cosmic-explorations": "maya-brand-identity",
   "editorial-campaign": "frans-niwasa-identity",
@@ -3728,7 +3697,11 @@ export function getCaseStudyForProject(project: Project): FeaturedCaseStudy {
     headlineFont: project.headlineFont || "Metropolis",
     bodyFont: project.bodyFont || "Inter",
     slug: project.slug,
-    imageSrc: project.cardImage?.src || project.heroImage.src || "",
+    imageSrc:
+      project.transparentImage?.src ||
+      project.heroImage?.src ||
+      project.cardImage?.src ||
+      "",
   };
 }
 
