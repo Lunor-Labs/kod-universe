@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 
 export function GallerySection() {
@@ -48,7 +50,7 @@ export function GallerySection() {
   }, []);
 
   const handleClick = (e: React.MouseEvent) => {
-    if ((e.target as HTMLElement).tagName === "BUTTON") return;
+    if ((e.target as HTMLElement).closest("button, a")) return;
     router.push("/gallery");
   };
 
@@ -71,10 +73,19 @@ export function GallerySection() {
           aria-label="Interactive Torch Gallery Preview"
         >
           <div ref={containerRef} className="absolute inset-0 z-0" />
-          <div className="absolute inset-0 pointer-events-none z-10 flex flex-col items-center justify-center">
-            <h2 className="text-[10vw] md:text-[8vw] font-black text-white/20 uppercase tracking-tighter font-metropolis select-none pointer-events-none text-center px-4 drop-shadow-2xl">
-              View Gallery
-            </h2>
+
+          {/* Top-Right: View Gallery Button */}
+          <div className="absolute top-5 right-5 sm:top-6 sm:right-6 z-20 pointer-events-auto">
+            <Link
+              href="/gallery"
+              onClick={(e) => e.stopPropagation()}
+              className="btn-primary !h-10 sm:!h-11 !px-4 sm:!px-5 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-xl hover:scale-105 transition-all"
+            >
+              <span>View Gallery</span>
+              <span className="btn-badge !w-6 !h-6 sm:!w-7 sm:!h-7">
+                <ArrowRight size={13} />
+              </span>
+            </Link>
           </div>
 
           <div className="absolute bottom-6 left-0 w-full flex justify-center gap-3 sm:gap-4 z-20 pointer-events-auto">
