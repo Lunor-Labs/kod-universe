@@ -53,7 +53,7 @@ export const INITIAL_WELCOME_MESSAGES: ChatMessage[] = [
   {
     id: "welcome-1",
     sender: "assistant",
-    text: "Hello — welcome to **KOD Universe**.\n\nWe're a 360° creative studio where ancient ideas are reborn into modern brand power. Whether you need a full brand identity, a digital presence, stunning visuals, or a creative campaign — you're in the right place.\n\nHow can I help you today?",
+    text: "Hello - welcome to **KOD Universe**.\n\nWe're a 360° creative studio where ancient ideas are reborn into modern brand power. Whether you need a full brand identity, a digital presence, stunning visuals, or a creative campaign - you're in the right place.\n\nHow can I help you today?",
     timestamp: "Just now",
     options: [
       {
@@ -113,10 +113,7 @@ export function getStorageMode(): StorageType {
     const savedMode = window.localStorage.getItem(
       STORAGE_MODE_KEY,
     ) as StorageType;
-    if (
-      savedMode === "localStorage" ||
-      savedMode === "sessionStorage"
-    ) {
+    if (savedMode === "localStorage" || savedMode === "sessionStorage") {
       return savedMode;
     }
   } catch (e) {

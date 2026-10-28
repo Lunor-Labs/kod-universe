@@ -55,7 +55,7 @@ function renderMarkdown(text: string) {
           </span>
           <span>
             <strong className="text-white">{numMatch[2]}</strong>
-            {numMatch[3] ? ` — ${numMatch[3]}` : ""}
+            {numMatch[3] ? ` - ${numMatch[3]}` : ""}
           </span>
         </div>,
       );

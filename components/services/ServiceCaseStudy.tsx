@@ -54,36 +54,6 @@ export function ServiceCaseStudy({
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start sm:items-end mb-8">
-                <div>
-                  <span className="text-sm font-semibold tracking-widest uppercase text-white/60 mb-2.5 block">
-                    COLOR SYSTEM
-                  </span>
-                  <div className="flex items-center gap-1.5">
-                    {caseStudy.palette.map((color, idx) => (
-                      <div
-                        key={idx}
-                        className="w-7 h-7 rounded-sm border border-white/20 shadow-sm"
-                        style={{ backgroundColor: color }}
-                        title={color}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <span className="font-editorial text-4xl text-white font-normal leading-none select-none">
-                    Aa
-                  </span>
-                  <div className="text-sm uppercase tracking-wider text-white/70 leading-tight">
-                    <p className="text-white font-semibold font-editorial">
-                      {caseStudy.headlineFont}
-                    </p>
-                    <p>{caseStudy.bodyFont}</p>
-                  </div>
-                </div>
-              </div>
-
               <Link
                 href={targetHref}
                 className="group inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-7 py-3.5 rounded-full font-metropolis font-semibold text-sm tracking-[0.15em] uppercase hover:bg-white hover:text-kod-black transition-all shadow-md"

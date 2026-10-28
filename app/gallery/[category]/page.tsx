@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { galleryItems, galleryCategoryConfigs } from "@/data/gallery";
+import { galleryCategoryConfigs } from "@/data/gallery";
 
 interface GalleryCategoryPageProps {
   params: Promise<{ category: string }>;
@@ -37,20 +37,6 @@ export default async function DynamicGalleryCategoryPage({ params }: GalleryCate
   if (!config) {
     notFound();
   }
-
-  const filteredItems = galleryItems.filter((item) => {
-    if (config.slug === "art") {
-      return ["BRANDING & IDENTITY", "CREATIVE WORK"].includes(item.category);
-    }
-    if (config.slug === "merch") {
-      return (
-        item.category === "BRANDING & IDENTITY" ||
-        item.projectSlug?.includes("pissu-kanna") ||
-        item.projectSlug?.includes("kaiz")
-      );
-    }
-    return true;
-  });
 
   return (
     <main className="relative bg-canvas overflow-hidden">
@@ -134,88 +120,138 @@ export default async function DynamicGalleryCategoryPage({ params }: GalleryCate
             </div>
           )}
 
-          {config.comingSoonDrops && (
+          {/* Art Page Showcase: Cinematic Exhibition Image & Coming Soon */}
+          {config.slug === "art" && (
             <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <Clock size={16} className="text-signal-orange" />
-                <h2 className="heading-card text-earth">Upcoming Drops</h2>
-              </div>
+              <div className="relative rounded-2xl overflow-hidden border border-border-warm/60 bg-earth shadow-2xl">
+                <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full">
+                  <Image
+                    src="/gallery/art-cinematic-exhibition.webp"
+                    alt="KoD Gallery Cinematic Exhibition"
+                    fill
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-earth via-earth/30 to-transparent" />
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {config.comingSoonDrops.map((drop) => (
-                  <div
-                    key={drop.id}
-                    id={drop.id}
-                    className="group relative rounded-sm overflow-hidden bg-earth aspect-[4/5] flex flex-col justify-end"
-                  >
-                    <Image
-                      src={drop.image}
-                      alt={drop.title}
-                      fill
-                      className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-earth/95 via-earth/30 to-transparent" />
-
-                    <div className="absolute top-4 right-4 z-10">
-                      <span className="text-xs font-bold tracking-widest uppercase bg-earth/80 backdrop-blur-sm text-clay px-3 py-1.5 rounded-full border border-clay/30">
+                <div className="p-8 sm:p-12 md:p-14 relative -mt-20 sm:-mt-28 z-10">
+                  <div className="max-w-2xl bg-earth/95 backdrop-blur-md p-6 sm:p-8 rounded-xl border border-white/10 shadow-2xl">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kod-orange/20 border border-kod-orange/40 w-fit mb-4">
+                      <span className="w-2 h-2 rounded-full bg-kod-orange animate-pulse" />
+                      <span className="text-xs font-metropolis font-bold tracking-widest uppercase text-kod-orange">
                         Coming Soon
                       </span>
                     </div>
 
-                    <div className="relative z-10 p-6">
-                      <span className="eyebrow text-clay mb-2 block text-xs">
-                        {drop.tag}
-                      </span>
-                      <h3 className="heading-item text-canvas mb-2">
-                        {drop.title}
-                      </h3>
-                      <p className="text-body text-canvas/65 line-clamp-2">
-                        {drop.description}
-                      </p>
+                    <h2 className="heading-section text-canvas mb-3">
+                      Original Artworks &{" "}
+                      <em className="font-serif italic font-normal text-clay">Fine Prints.</em>
+                    </h2>
+
+                    <p className="text-body text-canvas/75 leading-relaxed mb-6">
+                      Our inaugural exhibition of original fine art, sacred cave iconography, limited print editions, and digital masterpieces is currently undergoing archival preparation. Private collector preview opens soon.
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-4">
+                      <Link href="/contact" className="btn-primary !px-6 !py-3">
+                        <span>Request Collector Preview</span>
+                        <span className="btn-badge !w-6 !h-6">
+                          <ArrowRight size={12} />
+                        </span>
+                      </Link>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           )}
 
-          {config.slug !== "drops" && (
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3 mb-16">
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="group relative rounded-sm overflow-hidden bg-earth break-inside-avoid"
-                >
-                  <div
-                    className={`relative w-full ${item.aspectClass ?? "aspect-square"}`}
-                  >
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-earth/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div>
-                      <p className="text-xs text-clay mb-1">{item.category}</p>
-                      <p className="text-sm font-semibold text-canvas">
-                        {item.title}
-                      </p>
-                      {item.projectSlug && (
-                        <Link
-                          href={`/portfolio/${item.projectSlug}`}
-                          className="text-xs text-signal-orange mt-1 inline-flex items-center gap-1"
-                        >
-                          View Project <ArrowRight size={10} />
-                        </Link>
-                      )}
+          {/* Merch Page Showcase: Astral Collection Image & Coming Soon */}
+          {config.slug === "merch" && (
+            <div className="mb-16">
+              <div className="relative rounded-2xl overflow-hidden border border-border-warm/60 bg-earth shadow-2xl">
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src="/gallery/merch-astral-collection.webp"
+                    alt="KoD Astral Merchandise Collection"
+                    fill
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-earth via-earth/30 to-transparent" />
+                </div>
+
+                <div className="p-8 sm:p-12 md:p-14 relative -mt-20 sm:-mt-28 z-10">
+                  <div className="max-w-2xl bg-earth/95 backdrop-blur-md p-6 sm:p-8 rounded-xl border border-white/10 shadow-2xl">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kod-orange/20 border border-kod-orange/40 w-fit mb-4">
+                      <span className="w-2 h-2 rounded-full bg-kod-orange animate-pulse" />
+                      <span className="text-xs font-metropolis font-bold tracking-widest uppercase text-kod-orange">
+                        Coming Soon
+                      </span>
+                    </div>
+
+                    <h2 className="heading-section text-canvas mb-3">
+                      Astral Relics{" "}
+                      <em className="font-serif italic font-normal text-clay">Apparel Capsule.</em>
+                    </h2>
+
+                    <p className="text-body text-canvas/75 leading-relaxed mb-6">
+                      Heavyweight luxury streetwear, chiseled celestial stone hoodies, raw oversized tees, ceremonial caps, and tote bags. Wearable relics designed from the KoD visual universe. Limited inaugural drop arriving soon.
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-4">
+                      <Link href="/contact" className="btn-primary !px-6 !py-3">
+                        <span>Join Drop Notification List</span>
+                        <span className="btn-badge !w-6 !h-6">
+                          <ArrowRight size={12} />
+                        </span>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+            </div>
+          )}
+
+          {/* Drops Page Showcase: Coming Soon Section (bottom images removed) */}
+          {config.slug === "drops" && (
+            <div className="mb-16">
+              <div className="rounded-2xl border border-border-warm/60 bg-gradient-to-br from-earth via-earth to-[#1A1412] p-8 sm:p-12 md:p-16 text-center relative overflow-hidden shadow-2xl">
+                <div
+                  className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,76,42,0.12)_0%,transparent_70%)] pointer-events-none"
+                  aria-hidden="true"
+                />
+
+                <div className="relative z-10 max-w-2xl mx-auto">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kod-orange/20 border border-kod-orange/40 w-fit mb-6 mx-auto">
+                    <Sparkles size={14} className="text-kod-orange" />
+                    <span className="text-xs font-metropolis font-bold tracking-widest uppercase text-kod-orange">
+                      Coming Soon · Drop 001
+                    </span>
+                  </div>
+
+                  <h2 className="heading-section text-canvas mb-4">
+                    The Vault is Preparing for{" "}
+                    <em className="font-serif italic font-normal text-clay">Drop 001.</em>
+                  </h2>
+
+                  <p className="text-lead text-canvas/75 leading-relaxed mb-8">
+                    KoD limited releases are time-gated, numbered ceremonial artifacts and artist collaborations that vanish once claimed. Public countdown and release details will be revealed exclusively to waitlist members.
+                  </p>
+
+                  <div className="flex flex-wrap items-center justify-center gap-4">
+                    <Link href="/contact" className="btn-primary !px-7 !py-3.5">
+                      <span>Join Priority Waitlist</span>
+                      <span className="btn-badge !w-7 !h-7">
+                        <ArrowRight size={13} />
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
 

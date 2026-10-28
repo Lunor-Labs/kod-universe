@@ -108,7 +108,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "FRANS Niwasa Spatial Branding",
     aspectClass: "aspect-[3/4]",
     projectSlug: "frans-niwasa-identity",
-    projectTitle: "FRANS Niwasa Brand Identity",
+    projectTitle: "FRANS Niwasa – Logo & Brand Identity",
   },
   {
     id: "bio-oil-motherhood",
@@ -204,11 +204,11 @@ export const galleryItems: GalleryItem[] = [
     id: "slsa-mark",
     title: "SLSA UK Cultural Identity Emblem",
     category: "BRANDING & IDENTITY",
-    src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/sri-lankan-student-association-uk-01.webp",
+    src: "/portfolio/Design/branding-identity/logo-design/slsa-logo/slsa-brand-concept-01.png",
     alt: "SLSA UK Cultural Identity Emblem",
     aspectClass: "aspect-square",
     projectSlug: "slsa-uk-identity",
-    projectTitle: "SLSA UK Brand & Logo",
+    projectTitle: "SLSA – Logo & Brand Identity",
   },
   {
     id: "coats-connection",
@@ -228,7 +228,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Kaiz Architectural Monogram",
     aspectClass: "aspect-[4/5]",
     projectSlug: "kaiz-brand-identity",
-    projectTitle: "Kaiz Brand & Logo Mark",
+    projectTitle: "Kaizer Kaiz – Artist Logo & Brand Identity",
   },
   {
     id: "area-6-poster-set",
@@ -278,7 +278,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "FRANS Niwasa Architectural Detail",
     aspectClass: "aspect-[4/3]",
     projectSlug: "frans-niwasa-identity",
-    projectTitle: "FRANS Niwasa Brand Identity",
+    projectTitle: "FRANS Niwasa – Logo & Brand Identity",
   },
   {
     id: "bito-footwear-showcase",
@@ -338,7 +338,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Kaiz Signature Apparel & Lifestyle Merch",
     aspectClass: "aspect-[16/9]",
     projectSlug: "kaiz-brand-identity",
-    projectTitle: "Kaiz Brand & Logo Mark",
+    projectTitle: "Kaizer Kaiz – Artist Logo & Brand Identity",
   },
   {
     id: "slsa-merch-showcase",
@@ -348,7 +348,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "SLSA UK Student Leadership Merchandise",
     aspectClass: "aspect-[16/9]",
     projectSlug: "slsa-uk-identity",
-    projectTitle: "SLSA UK Brand & Logo",
+    projectTitle: "SLSA – Logo & Brand Identity",
   },
   {
     id: "rouka-apparel-showcase",
@@ -485,9 +485,9 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     title: "Original Art",
     titleItalic: "& Prints.",
     description:
-      "Artwork, prints and digital illustrations created by KoD — each piece rooted in story, process and intention.",
+      "Artwork, prints and digital illustrations created by KoD - each piece rooted in story, process and intention.",
     heroImage: "/textures/mother-new.webp",
-    metaTitle: "Art & Prints — KoD Gallery",
+    metaTitle: "Art & Prints - KoD Gallery",
     metaDescription:
       "Original artwork, art prints, digital illustrations and limited editions by KOD Universe. Each piece is created with intention and connected to a story.",
     subTitle: "Original Artwork • Art Prints • Digital Art • Limited Editions",
@@ -500,9 +500,9 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     description:
       "Apparel, creative objects and accessories created in the KoD universe and by the KOD universe  - things people actually want to own and wear.",
     heroImage: "/textures/merch-new.webp",
-    metaTitle: "Merch & Objects — KoD Gallery",
+    metaTitle: "Merch & Objects - KoD Gallery",
     metaDescription:
-      "KoD branded merchandise — apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
+      "KoD branded merchandise - apparel, t-shirts, posters, creative objects and accessories extending the KOD Universe into tangible, wearable items.",
     categories: [
       {
         label: "Apparel",
@@ -530,7 +530,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     description:
       "Available for a moment, gone forever. Limited releases, seasonal collections, artist collaborations and KoD Originals.",
     heroImage: "/textures/art-new.webp",
-    metaTitle: "Limited Drops — KoD Gallery",
+    metaTitle: "Limited Drops - KoD Gallery",
     metaDescription:
       "KoD Gallery limited releases, seasonal collections, artist collaborations and KoD Originals. Available for a moment, gone forever.",
     categories: [
@@ -563,7 +563,7 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
     comingSoonDrops: [
       {
         id: "drop-001",
-        title: "KoD × Studio — Drop 001",
+        title: "KoD × Studio - Drop 001",
         description:
           "The first official KoD Gallery drop. Limited to 50 pieces. Date TBA.",
         tag: "UPCOMING DROP",
@@ -572,16 +572,17 @@ export const galleryCategoryConfigs: Record<string, GalleryCategoryConfig> = {
       },
       {
         id: "pissu-kanna-collab",
-        title: "Pissu Kanna Streetwear — Collab",
+        title: "Pissu Kanna Streetwear - Collab",
         description:
           "The irreverent street mascot meets KoD design. Apparel and collectibles.",
         tag: "COLLABORATION",
-        image: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-apparel-showcase.png",
+        image:
+          "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-apparel-showcase.png",
         status: "coming-soon",
       },
       {
         id: "ibiza-print-series",
-        title: "IBIZA Mirissa — Architecture Print Series",
+        title: "IBIZA Mirissa - Architecture Print Series",
         description:
           "Architectural photography and 3D renders from the IBIZA Mirissa project, printed on archival paper.",
         tag: "ART PRINT",

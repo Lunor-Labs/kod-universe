@@ -79,8 +79,8 @@ export const posts: Post[] = [
     coverImage: {
       src: "/main/profile.webp",
       alt: "Ishara Kodithuwakku profile portrait",
-      width: 1200,
-      height: 1200,
+      width: 853,
+      height: 1024,
     },
     author: {
       name: "Ishara Kodithuwakku",

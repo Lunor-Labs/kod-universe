@@ -310,18 +310,31 @@ export function GalleryCinematic() {
 
           {/* ── Intro Section (Scroll 0) ── */}
           <section
-            className="absolute z-12 left-1/2 bottom-48 w-[min(840px,92vw)] text-center will-change-[transform,opacity] [transform:translate3d(-50%,var(--intro-y,0px),0)] [opacity:var(--intro-opacity,1)] [pointer-events:var(--intro-pe,auto)]"
+            className="absolute z-12 left-1/2 bottom-24 sm:bottom-32 md:bottom-40 w-[min(860px,94vw)] text-center will-change-[transform,opacity] [transform:translate3d(-50%,var(--intro-y,0px),0)] [opacity:var(--intro-opacity,1)] [pointer-events:var(--intro-pe,auto)]"
             aria-label="Gallery overview"
           >
-            <div className="bg-black/45 !backdrop-blur-lg p-6 md:p-8 border border-white/10 max-w-2xl mx-auto shadow-2xl">
-              <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-kod-gold mb-3 inline-block">
+            <div className="relative max-w-2xl mx-auto px-6 py-9 sm:px-12 sm:py-12 md:px-16 md:py-14 isolate">
+              <div
+                className="absolute inset-0 -z-10 pointer-events-none filter drop-shadow-[0_22px_45px_rgba(0,0,0,0.95)]"
+                aria-hidden="true"
+              >
+                <Image
+                  src="/gallery/hero-stone-backdrop.webp"
+                  alt=""
+                  fill
+                  priority
+                  className="object-fill select-none opacity-80"
+                />
+              </div>
+
+              <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-kod-gold mb-2.5 inline-block drop-shadow-sm">
                 KOD UNIVERSE
               </span>
-              <h2 className="font-editorial text-3xl md:text-5xl text-kod-canvas leading-[1.1] mb-4">
+              <h2 className="font-editorial text-3xl md:text-5xl text-kod-canvas leading-[1.1] mb-3.5 drop-shadow-md">
                 Art + Commerce.
                 <br />A Creative Sanctuary.
               </h2>
-              <p className="text-sm md:text-base text-kod-mist/90 max-w-lg mx-auto mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-kod-mist/95 max-w-lg mx-auto mb-6 leading-relaxed drop-shadow-sm">
                 An ancient visual realm meeting contemporary creative commerce.
                 Original artwork, limited drops, and artifacts that tell a profound story.
               </p>
@@ -333,7 +346,7 @@ export function GalleryCinematic() {
                     window.scrollTo({ top, behavior: "smooth" });
                   }
                 }}
-                className="btn-primary !px-7 !py-3.5 mx-auto"
+                className="btn-primary !px-7 !py-3.5 mx-auto shadow-2xl hover:scale-105 transition-transform"
               >
                 <span>Explore the collections</span>
                 <span className="btn-badge">

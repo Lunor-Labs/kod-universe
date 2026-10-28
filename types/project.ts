@@ -44,6 +44,11 @@ export interface ProjectStats {
   summary: string;
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -59,6 +64,7 @@ export interface Project {
   overview: string;
   challenge: string;
   approach: string;
+  outcome?: string;
   deliverables: string[];
   pillars?: ProjectPillar[];
   heroImage: ProjectImage;
@@ -73,5 +79,5 @@ export interface Project {
   palette?: string[];
   headlineFont?: string;
   bodyFont?: string;
+  projectLinks?: ProjectLink[];
 }
-
