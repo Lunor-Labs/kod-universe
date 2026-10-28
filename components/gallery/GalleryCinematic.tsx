@@ -313,19 +313,7 @@ export function GalleryCinematic() {
             className="absolute z-12 left-1/2 bottom-24 sm:bottom-32 md:bottom-40 w-[min(860px,94vw)] text-center will-change-[transform,opacity] [transform:translate3d(-50%,var(--intro-y,0px),0)] [opacity:var(--intro-opacity,1)] [pointer-events:var(--intro-pe,auto)]"
             aria-label="Gallery overview"
           >
-            <div className="relative max-w-2xl mx-auto px-6 py-9 sm:px-12 sm:py-12 md:px-16 md:py-14 isolate">
-              <div
-                className="absolute inset-0 -z-10 pointer-events-none filter drop-shadow-[0_22px_45px_rgba(0,0,0,0.95)]"
-                aria-hidden="true"
-              >
-                <Image
-                  src="/gallery/hero-stone-backdrop.webp"
-                  alt=""
-                  fill
-                  priority
-                  className="object-fill select-none opacity-80"
-                />
-              </div>
+            <div className="relative max-w-2xl mx-auto px-6 py-9 sm:px-12 sm:py-12 md:px-16 md:py-14 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-black/55 via-black/45 to-black/75 backdrop-blur-md shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
 
               <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-kod-gold mb-2.5 inline-block drop-shadow-sm">
                 KOD UNIVERSE

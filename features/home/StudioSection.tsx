@@ -51,8 +51,8 @@ export function StudioSection({ projects }: StudioSectionProps) {
       client: p.slug === "niwarthana-packaging-design" ? "REBRANDING AND PACKAGING" : p.slug === "pissu-kanna-brand-merchandise" ? "MERCHANDISE DESIGN" : p.client,
       category: p.tagline?.toUpperCase() || p.category,
       badge: p.badge || p.subCategory || "Selected",
-      imageSrc: p.heroImage.src,
-      imageAlt: p.heroImage.alt,
+      imageSrc: p.cardImage?.src || p.heroImage.src,
+      imageAlt: p.cardImage?.alt || p.heroImage.alt,
       description: p.shortDescription,
       stats: p.stats || {
         primaryValue: "100%",
@@ -63,6 +63,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
       },
     };
   }).filter(Boolean) as SelectedProjectItem[];
+
   return (
     <section
       id="selected-work"
@@ -111,7 +112,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
                 href={`/portfolio/${item.slug}`}
                 className="group flex flex-col h-full bg-white/80 hover:bg-white rounded border border-black/[0.08] hover:border-signal-orange/40 shadow-xs hover:shadow-xl transition-all duration-500 overflow-hidden select-none"
               >
-                <div className="relative aspect-[16/11] overflow-hidden bg-stone-100 flex items-center justify-center">
+                <div className="relative aspect-square overflow-hidden bg-stone-100 flex items-center justify-center">
                   <Image
                     src={item.imageSrc}
                     alt={item.imageAlt}
@@ -121,7 +122,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
                         ? "(min-width: 1024px) 40vw, 100vw"
                         : "(min-width: 1024px) 30vw, 100vw"
                     }
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
 

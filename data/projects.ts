@@ -504,7 +504,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/packaging/niwarthana/ceylon-spice-trio-product-packshot.webp",
+      src: "/portfolio/Design/packaging/niwarthana/niwarthana-spice-pack-03.webp",
       alt: "Niwarthana Ceylon Spice Trio Product Packshot",
       width: 1254,
       height: 1254,
@@ -966,7 +966,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-brand-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/coffee-1911/coffee-1911-concept-02.webp",
       alt: "Coffee 1911 Coffee 1911 Brand Showcase",
       width: 1672,
       height: 941,
@@ -1127,7 +1127,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-dance-studio-sneaker-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/cool-step-final/cool-step-final-3.webp",
       alt: "Cool Steps Cool Step Dance Studio Sneaker Showcase",
       width: 1672,
       height: 941,
@@ -1283,7 +1283,7 @@ export const projects: Project[] = [
       height: 1024,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/focal/focal-camera-and-controller-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/focal/focal-concept-05.webp",
       alt: "FOCAL Focal Camera And Controller Showcase",
       width: 1672,
       height: 941,
@@ -1479,7 +1479,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-framed-poster-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/frans-niwasa/frans-niwasa-concept-05.webp",
       alt: "FRANS Niwasa Frans Niwasa Framed Poster Showcase",
       width: 1672,
       height: 941,
@@ -1921,7 +1921,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-fitness-products-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/area-6/area-6-brand-concept-02.webp",
       alt: "AREA 6 Area 6 Fitness Products Showcase",
       width: 1672,
       height: 941,
@@ -2063,7 +2063,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/bito/bito-footwear-and-packaging-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/bito/bito-brand-concept-02.webp",
       alt: "BITO Bito Footwear And Packaging Showcase",
       width: 1672,
       height: 941,
@@ -2193,7 +2193,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/coco/coco-packaging-and-jar-showcase.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-07.webp",
       alt: "Coconut Husk Chips Coco Packaging And Jar Showcase",
       width: 1672,
       height: 941,
@@ -2500,7 +2500,7 @@ export const projects: Project[] = [
     location: "Sri Lanka",
     timeline: "2024",
     shortDescription:
-      "PISSUKANNA\nCrazy Enough to Win.\n\nSome briefs ask for restraint.\nThis one didn’t.\n\nOur merchandise concept for Pissukanna was created to be bold, expressive and impossible to ignore-and it went on to secure 1st place in the Pissukanna Design Challenge.\n\nA reminder that sometimes the idea that stands furthest outside the ordinary is the one that stands tallest.\n\nChallenge entered. Rules stretched. Champion crowned.",
+      "Some briefs ask for restraint. This one didn’t. We made a bold, expressive merchandise concept for the Pissukanna Design Challenge, and it won first place. Challenge entered. Rules stretched. Champion crowned.",
     overview:
       "PISSUKANNA is all about being different, thinking freely, and having the confidence to stand out.\n\nKoD Universe took on the Pissukanna Design Challenge with one goal: to create merchandise that was anything but ordinary.\n\nOur design brought together bold creativity, expressive visuals, and a little madness, turning a fun idea into an award-winning concept.",
     challenge:
@@ -2623,7 +2623,7 @@ export const projects: Project[] = [
     featured: true,
     badge: "1ST PLACE WINNER",
     tagline:
-      "Merchandise Design | Graphic Design | Creative Concept Development",
+      "Graphic Design | Creative Concept Development",
     palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
     stats: {
       primaryValue: "1st",
@@ -2681,7 +2681,7 @@ export const projects: Project[] = [
       },
     ],
     heroImage: {
-      src: "/portfolio/Design/digital-art/digital-art-1.webp",
+      src: "/portfolio/Design/digital-art/Digital-Art.png",
       alt: "Digital Art Concept Exploration Character Visual",
       width: 1122,
       height: 1402,
@@ -2748,12 +2748,6 @@ export const projects: Project[] = [
         height: 1402,
       },
       {
-        src: "/portfolio/Design/digital-art/digi-art-1.webp",
-        alt: "Digi Art Square Study 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
         src: "/portfolio/Design/digital-art/digi-art-2.webp",
         alt: "Digi Art Square Study 02",
         width: 1254,
@@ -2768,18 +2762,6 @@ export const projects: Project[] = [
       {
         src: "/portfolio/Design/digital-art/digi-art-4.webp",
         alt: "Digi Art Square Study 04",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/digital-art/digi-art-5.webp",
-        alt: "Digi Art Square Study 05",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/digital-art/digi-art-7.webp",
-        alt: "Digi Art Square Study 07",
         width: 1254,
         height: 1254,
       },
@@ -2981,7 +2963,7 @@ export const projects: Project[] = [
       height: 1254,
     },
     cardImage: {
-      src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-brand-01.webp",
+      src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-brand-05.webp",
       alt: "AGARTHA Films Agartha Films Brand 01",
       width: 1254,
       height: 1254,
