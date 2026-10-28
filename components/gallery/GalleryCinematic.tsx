@@ -255,21 +255,21 @@ export function GalleryCinematic() {
             {/* Layer 7: Deepest glowing cave portal */}
             <img
               className={`${styles.layer} ${styles.layer7}`}
-              src="/gallery/parallax/layer-7-portal.webp"
+              src="/gallery/parallax/layer-77-portal.png"
               alt="Deep cavern portal glow"
             />
 
             {/* Layer 6: Cavern spires and stalagmites */}
             <img
               className={`${styles.layer} ${styles.layer6}`}
-              src="/gallery/parallax/layer-6-spires.webp"
+              src="/gallery/parallax/layer-66-spires.png"
               alt="Distant cave rock spires"
             />
 
             {/* Layer 5: High chamber vault & volumetric golden light */}
             <img
               className={`${styles.layer} ${styles.layer5}`}
-              src="/gallery/parallax/layer-5-rays.webp"
+              src="/gallery/parallax/layer-55-rays.png"
               alt="Volumetric light rays"
             />
 
@@ -279,28 +279,28 @@ export function GalleryCinematic() {
             {/* Layer 4: Illuminated reflective pools and stone pathway */}
             <img
               className={`${styles.layer} ${styles.layer4}`}
-              src="/gallery/parallax/layer-4-path.webp"
+              src="/gallery/parallax/layer-44-path.png"
               alt="Illuminated stone path and pools"
             />
 
             {/* Layer 3: Ancient wall paintings and sacred carvings */}
             <img
               className={`${styles.layer} ${styles.layer3}`}
-              src="/gallery/parallax/layer-3-carvings.webp"
+              src="/gallery/parallax/layer-33-carvings.png"
               alt="Ancient cave wall paintings"
             />
 
             {/* Layer 2: Foreground cave floor rocks and mist */}
             <img
               className={`${styles.layer} ${styles.layer2}`}
-              src="/gallery/parallax/layer-2-rocks.webp"
+              src="/gallery/parallax/layer-22-rocks.png"
               alt="Foreground cave floor and mist"
             />
 
             {/* Layer 1: Foreground stalactite framing arch at cave mouth */}
             <img
               className={`${styles.layer} ${styles.layer1}`}
-              src="/gallery/parallax/layer-1-arch.webp"
+              src="/gallery/parallax/layer-11-arch.png"
               alt="Cave entrance framing arch"
             />
 
