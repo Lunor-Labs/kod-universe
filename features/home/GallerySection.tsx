@@ -75,7 +75,7 @@ export function GallerySection() {
           <div ref={containerRef} className="absolute inset-0 z-0" />
 
           {/* Top-Left: Gallery Description Overlay */}
-          <div className="absolute top-5 left-5 sm:top-8 sm:left-8 z-20 max-w-xs sm:max-w-md pointer-events-auto bg-black/65 backdrop-blur-md p-4 sm:p-6 rounded-xl border border-white/15 text-white shadow-2xl">
+          <div className="absolute top-5 left-5 sm:top-8 sm:left-8 z-20 max-w-xs sm:max-w-md pointer-events-auto bg-black/35 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/15 text-white shadow-2xl">
             <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-kod-orange mb-1.5 block">
               THE KOD GALLERY
             </span>
