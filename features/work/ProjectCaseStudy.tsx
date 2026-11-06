@@ -55,6 +55,22 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                 <p className="text-kod-black/85 text-base md:text-lg leading-relaxed mt-3 whitespace-pre-line">
                   {project.outcome}
                 </p>
+                {project.projectLinks && project.projectLinks.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {project.projectLinks.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-kod-orange hover:underline transition-colors"
+                      >
+                        <ExternalLink size={14} className="flex-shrink-0" />
+                        <span>{link.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>

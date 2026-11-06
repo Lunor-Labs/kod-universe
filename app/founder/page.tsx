@@ -10,7 +10,7 @@ import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 export const metadata: Metadata = {
   title: "Ishara Kodithuwakku - Founder & Creative Director | KOD Universe",
   description:
-    "Explore the personal journey, Grade 10 roots, agency leadership across Limra Holdings, Iraj Production, Hashtag, global brand collaborations, and education of Ishara Kodithuwakku, Founder of KOD Universe.",
+    "Explore the personal journey, Grade 10 roots, professional career starting in 2014, freelance art direction with Iraj Productions, commercial direction, Rouka Clothing, and fine art practice of Ishara Kodithuwakku, Founder of KOD Universe.",
   alternates: { canonical: "/founder" },
 };
 

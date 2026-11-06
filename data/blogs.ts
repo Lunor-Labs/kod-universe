@@ -157,14 +157,14 @@ export const posts: Post[] = [
       {
         heading: "Case Study Reflection: Niwarthana Packaging",
         paragraphs: [
-          "When we engineered the packaging architecture for Niwarthana, we bypassed generic off-the-shelf dielines. We designed custom structural folds that opened like traditional botanical chambers, paired with debossed foil finishes and ethically sourced paper stocks.",
-          "The tactile resistance of the box opening was calculated to create an instant of pause-encouraging the user to slow down and appreciate the craftsmanship within.",
+          "When we developed the packaging identity for Niwarthana, we created 24 label designs rooted in Sri Lankan visual culture and Sinhala typography, establishing a cohesive design language across diverse product lines.",
+          "The visual hierarchy and cultural motifs were calculated to create an instant of connection—encouraging the user to slow down and appreciate the craftsmanship of the heritage brand.",
         ],
         image: {
           src: "/portfolio/Design/branding-identity/package-design/niwarthana-2.webp",
-          alt: "Niwarthana packaging dieline detail",
+          alt: "Niwarthana packaging label detail",
           caption:
-            "Custom debossing and structural folds designed for Niwarthana.",
+            "Sinhala typography and label design system crafted for Niwarthana.",
         },
       },
       {

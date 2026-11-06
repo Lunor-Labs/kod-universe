@@ -11,9 +11,11 @@ const HERO_CONTENT = {
   titleHighlight: " We Create ",
   title2: "Universes.",
   description:
-    "Since 2018, we've been blending strategy, creativity, and storytelling to transform brands into unforgettable experiences. Every brand has a story. We make the world feel it.",
-  linkText: "Explore Our Work",
-  linkHref: "/portfolio",
+    "Since 2018, KOD Universe has helped brands stand out through branding, packaging, campaigns, and visual storytelling. Beyond the agency, our Gallery connects artists and audiences through original art, curated merchandise, short films, events, and creative collaborations.",
+  primaryLinkText: "Explore Our Work",
+  primaryLinkHref: "/portfolio",
+  secondaryLinkText: "Discover Our Gallery",
+  secondaryLinkHref: "/gallery",
 };
 
 export function HeroSection() {
@@ -110,18 +112,25 @@ export function HeroSection() {
             <p className="text-lead text-earth mb-10 max-w-xl antialiased">
               {slide.description}
             </p>
-            <div className="antialiased">
-              <div className="inline-block">
-                <Link
-                  href={slide.linkHref}
-                  className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
-                >
-                  <span>{slide.linkText}</span>
-                  <span className="btn-badge">
-                    <ArrowRight size={14} aria-hidden="true" />
-                  </span>
-                </Link>
-              </div>
+            <div className="antialiased flex flex-wrap items-center gap-4">
+              <Link
+                href={slide.primaryLinkHref}
+                className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
+              >
+                <span>{slide.primaryLinkText}</span>
+                <span className="btn-badge">
+                  <ArrowRight size={14} aria-hidden="true" />
+                </span>
+              </Link>
+              <Link
+                href={slide.secondaryLinkHref}
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-black/20 bg-white/70 hover:bg-white text-kod-earth font-metropolis font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xs hover:border-kod-orange hover:text-kod-orange backdrop-blur-md"
+              >
+                <span>{slide.secondaryLinkText}</span>
+                <span className="w-6 h-6 rounded-full bg-black/5 flex items-center justify-center text-kod-earth group-hover:text-kod-orange transition-colors">
+                  <ArrowRight size={12} aria-hidden="true" />
+                </span>
+              </Link>
             </div>
           </div>
         ) : (
@@ -156,19 +165,26 @@ export function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-                className="antialiased"
+                className="antialiased flex flex-wrap items-center gap-4"
               >
-                <div className="inline-block">
-                  <Link
-                    href={slide.linkHref}
-                    className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
-                  >
-                    <span>{slide.linkText}</span>
-                    <span className="btn-badge">
-                      <ArrowRight size={14} aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  href={slide.primaryLinkHref}
+                  className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
+                >
+                  <span>{slide.primaryLinkText}</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </span>
+                </Link>
+                <Link
+                  href={slide.secondaryLinkHref}
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-black/20 bg-white/70 hover:bg-white text-kod-earth font-metropolis font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xs hover:border-kod-orange hover:text-kod-orange backdrop-blur-md"
+                >
+                  <span>{slide.secondaryLinkText}</span>
+                  <span className="w-6 h-6 rounded-full bg-black/5 flex items-center justify-center text-kod-earth group-hover:text-kod-orange transition-colors">
+                    <ArrowRight size={12} aria-hidden="true" />
+                  </span>
+                </Link>
               </motion.div>
           </div>
         )}

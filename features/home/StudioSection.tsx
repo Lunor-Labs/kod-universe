@@ -44,11 +44,78 @@ export function StudioSection({ projects }: StudioSectionProps) {
   const selectedProjects = SELECTED_SLUGS.map((slug, idx) => {
     const p = allProjects.find((proj) => proj.slug === slug);
     if (!p) return null;
+
+    if (slug === "dsg-launch-campaign") {
+      return {
+        number: String(idx + 1).padStart(2, "0"),
+        slug: p.slug,
+        title: "Bio-Oil Dry Skin Gel Launch",
+        client: p.client || "Bio-Oil",
+        category: p.tagline?.toUpperCase() || "LAUNCH CAMPAIGN",
+        badge: "Campaign",
+        imageSrc: p.cardImage?.src || p.heroImage.src,
+        imageAlt: p.cardImage?.alt || p.heroImage.alt,
+        description:
+          "Beginning on 25 December 2020 ahead of the product launch on 22 January 2021, this integrated campaign brought together influencer marketing, EDM campaigns, leaflets, event-stall design and consumer activations, staff T-shirt designs, and pharmacy gondola displays.",
+        stats: {
+          primaryValue: "2020-2021",
+          primaryLabel: "LAUNCH CAMPAIGN",
+          secondaryValue: "22 JAN 2021",
+          secondaryLabel: "PRODUCT LAUNCH",
+          summary: "Commenced 25 Dec 2020 ahead of 22 Jan 2021 product launch.",
+        },
+      };
+    }
+
+    if (slug === "niwarthana-packaging-design") {
+      return {
+        number: String(idx + 1).padStart(2, "0"),
+        slug: p.slug,
+        title: "Niwarthana",
+        client: "REBRANDING AND PACKAGING",
+        category: "SRI LANKAN-INSPIRED DESIGN",
+        badge: "Packaging",
+        imageSrc: p.cardImage?.src || p.heroImage.src,
+        imageAlt: p.cardImage?.alt || p.heroImage.alt,
+        description:
+          "For Niwarthana, we developed a cohesive packaging identity inspired by Sri Lankan culture. Sinhala typography became a defining design element across the range, supported by 24 distinct label designs.",
+        stats: {
+          primaryValue: "24",
+          primaryLabel: "LABEL DESIGNS",
+          secondaryValue: "SRI LANKAN",
+          secondaryLabel: "INSPIRED DESIGN",
+          summary: "24 distinct label designs unified by a Sri Lankan cultural design system.",
+        },
+      };
+    }
+
+    if (slug === "pissu-kanna-brand-merchandise") {
+      return {
+        number: String(idx + 1).padStart(2, "0"),
+        slug: p.slug,
+        title: "Pissukanna",
+        client: "MERCHANDISE DESIGN",
+        category: "DESIGN CHALLENGE CONCEPT",
+        badge: "1st Place Winner",
+        imageSrc: p.cardImage?.src || p.heroImage.src,
+        imageAlt: p.cardImage?.alt || p.heroImage.alt,
+        description:
+          "Created for the 2021 Pissukanna Design Challenge, this bold merchandise design concept combined expressive graphics and vibrant apparel mockups. The concept won first place in the competition.",
+        stats: {
+          primaryValue: "2021",
+          primaryLabel: "DESIGN CHALLENGE",
+          secondaryValue: "1ST PLACE",
+          secondaryLabel: "WINNER",
+          summary: "Awarded first place in the 2021 Pissukanna Design Challenge.",
+        },
+      };
+    }
+
     return {
       number: String(idx + 1).padStart(2, "0"),
       slug: p.slug,
-      title: p.slug === "dsg-launch-campaign" ? "Bio-Oil Dry Skin Gel Launch" : p.slug === "niwarthana-packaging-design" ? "Niwarthana" : p.slug === "pissu-kanna-brand-merchandise" ? "Pissukanna" : p.title,
-      client: p.slug === "niwarthana-packaging-design" ? "REBRANDING AND PACKAGING" : p.slug === "pissu-kanna-brand-merchandise" ? "MERCHANDISE DESIGN" : p.client,
+      title: p.title,
+      client: p.client,
       category: p.tagline?.toUpperCase() || p.category,
       badge: p.badge || p.subCategory || "Selected",
       imageSrc: p.cardImage?.src || p.heroImage.src,
@@ -76,16 +143,12 @@ export function StudioSection({ projects }: StudioSectionProps) {
             <div>
               <SectionLabel className="mb-3">Selected Work</SectionLabel>
               <h2 className="text-4xl md:text-6xl text-editorial">
-                Work that{" "}
-                <em className="font-serif italic font-normal text-kod-earth">
-                  matters.
-                </em>
+                Featured Projects.
               </h2>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:pb-1">
               <p className="text-sm md:text-base text-kod-text-2 leading-relaxed max-w-sm">
-                Three highlighted transformations spanning brand campaigns,
-                export packaging, and youth streetwear.
+                A selection of launch campaigns, packaging designs, and award-winning creative concepts.
               </p>
               <Link
                 href="/portfolio"
@@ -100,7 +163,7 @@ export function StudioSection({ projects }: StudioSectionProps) {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr_1.5fr] gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.9fr_1.7fr_1.5fr] gap-4">
           {selectedProjects.map((item, idx) => (
             <ScrollReveal
               key={item.slug}

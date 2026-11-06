@@ -88,8 +88,8 @@ export function FounderPanel() {
             {/* Content column */}
             <div className="md:col-span-7 flex flex-col gap-7 pt-2">
               <blockquote className="font-editorial italic text-kod-earth text-2xl sm:text-3xl leading-[1.3]">
-                &ldquo;When a hobby turns into a lifelong calling, work never
-                makes you tired. The creative needs of others are fuel for my
+                &ldquo;When a hobby becomes a lifelong calling, the work never
+                feels tiring. Bringing others’ creative visions to life fuels my
                 passion.&rdquo;
               </blockquote>
 
@@ -97,30 +97,32 @@ export function FounderPanel() {
 
               <div className="text-kod-earth/85 text-base leading-relaxed space-y-4">
                 <p>
-                  From Grade 10 personal experiments to leading creative
-                  projects across Limra Holdings, Iraj Production, and Hashtag,
-                  Ishara Kodithuwakku has always seen design as a natural
-                  extension of curiosity.
+                  Ishara Kodithuwakku’s creative journey began with artistic
+                  experiments in Grade 10 before he started his professional
+                  career as a Graphic Designer in 2014. His experience grew
+                  through freelance art direction with Iraj Productions and now
+                  spans concept art, commercial direction, branding, visual
+                  storytelling, digital painting and canvas art.
                 </p>
                 <p>
-                  KOD Universe is the culmination of that journey-an independent
-                  studio where brand identity, spatial architecture, packaging,
-                  and digital experiences are crafted with authentic passion and
-                  uncompromising attention to detail.
+                  As founder of KOD Universe and Rouka Clothing, he connects
+                  design, art, fashion and entrepreneurship. Across his
+                  professional career, he has worked with more than 70 local and
+                  international brands.
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-2 border-t border-kod-border">
                 {[
-                  { n: "Grade 10", label: "Origins" },
-                  { n: "60+", label: "Brands shaped" },
-                  { n: "8+", label: "Years of craft" },
+                  { n: "Since 2014", label: "Professional Career" },
+                  { n: "70+", label: "Brands Worked With" },
+                  { n: "2", label: "Ventures Founded" },
                 ].map((s) => (
                   <div key={s.label}>
                     <p className="font-metropolis font-bold text-2xl text-kod-earth">
                       {s.n}
                     </p>
-                    <p className="text-kod-earth/80 text-sm font-semibold uppercase tracking-[0.08em]">
+                    <p className="text-kod-earth/80 text-xs sm:text-sm font-semibold uppercase tracking-[0.08em] mt-1">
                       {s.label}
                     </p>
                   </div>

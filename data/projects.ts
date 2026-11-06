@@ -14,7 +14,7 @@ export const projects: Project[] = [
     location: "Sri Lanka",
     timeline: "2019–2021",
     shortDescription:
-      "When the world slowed down, Bio-Oil’s digital performance moved in the opposite direction. Through social media strategy, creative communication and performance campaigns, our work contributed to 453% sales growth during the COVID-19 lockdown, with a reported CPA of USD 0.25.",
+      "When the world slowed down, Bio-Oil’s digital engagement expanded rapidly. Through social media strategy, creative communication, and targeted digital campaigns, our work helped Bio-Oil maintain active consumer engagement and high brand affinity during the lockdown period.",
     overview:
       "Bio-Oil engaged KOD Universe to produce a comprehensive social media and digital campaign designed to celebrate authentic skincare narratives. We directed content highlights, high-impact retail promotion visuals, and platform-native storytelling.",
     challenge:
@@ -140,24 +140,24 @@ export const projects: Project[] = [
     category: "MARKETING",
     subCategory: "Campaigns",
     subCategories: ["Campaigns", "Social Media", "Retail Activations"],
-    year: 2024,
+    year: 2021,
     location: "Sri Lanka",
-    timeline: "2023–2024",
+    timeline: "2020–2021",
     shortDescription:
-      "A high-impact omnichannel launch campaign engineered for Bio-Oil Dry Skin Gel, weaving suspenseful teaser rollouts, vibrant social collateral, event stall architecture, and retail activations.",
+      "The Bio-Oil Dry Skin Gel launch campaign began on 25 December 2020, leading up to the product launch on 22 January 2021. KOD Universe developed influencer and EDM campaigns, printed leaflets, event-stall designs and activations, T-shirts for sales representatives and managers, and pharmacy gondola displays.",
     overview:
-      "Bio-Oil partnered with KOD Universe to architect and execute a complete teaser and product launch campaign for Bio-Oil Dry Skin Gel. From mysterious countdown teasers building curiosity to full-scale event stall design, promotional flags, apparel, and responsive campaign web pages, our creative direction drove nationwide buzz and retail engagement.",
+      "KOD Universe planned and executed a multi-channel launch campaign for Bio-Oil Dry Skin Gel. Work began on 25 December 2020 ahead of the product launch on 22 January 2021. The campaign combined influencer marketing, email direct marketing (EDM), printed leaflets, event-stall design and live activations, branded T-shirts for sales representatives and managers, and pharmacy gondola displays.",
     challenge:
-      "Generating authentic anticipation and retail conversion for a flagship product introduction in a competitive market, maintaining Bio-Oil's premium heritage while commanding immediate cultural attention.",
+      "Introduce Bio-Oil Dry Skin Gel across digital, pharmacy, and in-person channels while keeping the launch message visually consistent and encouraging consumer awareness and engagement.",
     approach:
-      "We engineered a multi-phase narrative: deploying countdown teaser graphics across social media to ignite organic discussions, followed by an explosive product reveal, experiential stall spaces for live audience engagement, and complete brand merchandise touchpoints.",
+      "We connected digital communication with retail and event touchpoints. Influencer content and EDMs supported launch awareness, while leaflets, branded apparel, pharmacy gondolas, and interactive stall activations brought the product experience directly to consumers.",
     deliverables: [
-      "Teaser campaign & countdown rollout",
-      "Official launch key visuals & art direction",
-      "Experiential event stall architecture",
-      "Merchandise & event apparel (T-shirts, flags)",
-      "Social media post systems & digital collateral",
-      "Campaign web page layouts",
+      "Influencer marketing campaign",
+      "EDM (email direct marketing) campaign",
+      "Promotional leaflets",
+      "Event-stall design and consumer activation",
+      "T-shirt design for sales representatives and managers",
+      "Pharmacy gondola displays",
     ],
     pillars: [
       {
@@ -274,21 +274,21 @@ export const projects: Project[] = [
     tags: [
       "Campaigns",
       "Product Launch",
-      "Social Media",
-      "Event Stall",
-      "Art Direction",
-      "Teaser Campaign",
+      "Influencer Marketing",
+      "EDM Campaign",
+      "Event Stall Activation",
+      "Retail Displays",
     ],
     featured: false,
     badge: "Campaign",
-    tagline: "Omnichannel Launch & Event Architecture",
+    tagline: "Omnichannel Launch & Event Activation",
     palette: ["#E76F51", "#F4A261", "#E9C46A", "#264653", "#2A9D8F"],
     stats: {
-      primaryValue: "+453%",
-      primaryLabel: "Sales Growth",
-      secondaryValue: "$0.25",
-      secondaryLabel: "Reported CPA",
-      summary: "453% sales growth during lockdown. Reported CPA: USD 0.25.",
+      primaryValue: "2020-2021",
+      primaryLabel: "Launch Campaign",
+      secondaryValue: "22 JAN 2021",
+      secondaryLabel: "Product Launch",
+      summary: "Beginning 25 Dec 2020 ahead of product launch on 22 Jan 2021.",
     },
     relatedSlugs: [
       "bio-oil-skincare-campaign",
@@ -484,18 +484,19 @@ export const projects: Project[] = [
     subCategories: ["Packaging"],
     year: 2024,
     shortDescription:
-      "For Niwarthana, we explored how Sri Lankan identity could travel beyond geography without losing its character. Sinhala typography became a visual texture across a new packaging concept.\n\nThe brand’s long-trusted products were relaunched in new packaging, and the same conceptual framework carried across every new product, for 23+ designs in total. Language became part of the experience of the pack. Culture, transformed into design.",
+      "For Niwarthana, KOD Universe developed a packaging identity rooted in Sri Lankan visual culture. Sinhala typography, expressive color palettes, and distinctive design details helped bring the brand's story to life across its product range.\n\nThe project included 24 label designs, developed as a coherent visual system while giving each product its own identity.",
     overview:
-      "Niwarthana commissioned KOD Universe to design full product packaging architectures that evoke organic authenticity, refined shelf presence, and an immersive unboxing ritual.",
+      "KOD Universe created 24 label designs for Niwarthana, developing a recognizable packaging identity across its product range. The visual language drew on Sri Lankan culture, including Sinhala-inspired typography and a consistent design system.",
     challenge:
-      "Crafting packaging that stands out with tactile sophistication while meeting strict production, protection, and sustainability requirements.",
+      "Create labels that feel distinctive on the shelf while maintaining brand consistency across 24 designs and different product variants.",
     approach:
-      "We engineered nuanced color harmony, custom typography layout, and delicate embossed line work across multiple SKU boxes and labels.",
+      "We built a unified visual direction and adapted typography, colors, layout, and decorative details for each product label so the designs work individually and as one family.",
     deliverables: [
-      "Primary and secondary packaging architectures",
-      "Label design & material specification",
-      "Production-ready die lines & artwork",
-      "Brand touchpoint guidelines",
+      "24 product label designs",
+      "Consistent visual design direction",
+      "Typography, color, and layout system",
+      "Product-specific label artwork",
+      "Packaging presentation mockups",
     ],
     heroImage: {
       src: "/portfolio/Design/packaging/niwarthana/ceylon-spice-trio-product-packshot.webp",
@@ -583,17 +584,17 @@ export const projects: Project[] = [
         height: 1200,
       },
     ],
-    tags: ["Packaging", "Structural Design", "Sustainable", "Print"],
+    tags: ["Packaging", "Label Design", "Typography", "Visual System"],
     featured: true,
     badge: "Packaging",
     tagline: "Language Became the Packaging",
     palette: ["#1F2E54", "#3A5BA0", "#E86A58", "#F4B266", "#FAF9F6"],
     stats: {
-      primaryValue: "23+",
-      primaryLabel: "Pack Designs",
-      secondaryValue: "100%",
-      secondaryLabel: "Cultural Identity",
-      summary: "Culture, transformed into design.",
+      primaryValue: "24",
+      primaryLabel: "Label Designs",
+      secondaryValue: "SRI LANKAN",
+      secondaryLabel: "Inspired Design",
+      summary: "24 distinct label designs unified by a Sri Lankan cultural design system.",
     },
     relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
   },
@@ -2496,26 +2497,31 @@ export const projects: Project[] = [
       "Creative Concept Development",
       "Visual Storytelling",
     ],
-    year: 2024,
+    year: 2021,
     location: "Sri Lanka",
-    timeline: "2024",
+    timeline: "2021",
     shortDescription:
-      "Some briefs ask for restraint. This one didn’t. We made a bold, expressive merchandise concept for the Pissukanna Design Challenge, and it won first place. Challenge entered. Rules stretched. Champion crowned.",
+      "Created for the 2021 Pissukanna Design Challenge, this merchandise concept explored bold graphics, playful patterns, and expressive apparel design. KOD Universe's entry won first place in the competition.",
     overview:
-      "PISSUKANNA is all about being different, thinking freely, and having the confidence to stand out.\n\nKoD Universe took on the Pissukanna Design Challenge with one goal: to create merchandise that was anything but ordinary.\n\nOur design brought together bold creativity, expressive visuals, and a little madness, turning a fun idea into an award-winning concept.",
+      "For the 2021 Pissukanna Design Challenge, KOD Universe created an expressive merchandise design concept that embraced the brand's playful, unconventional personality. The concept included original graphics and apparel mockups and was awarded first place.",
     challenge:
-      "The challenge was to create a merchandise design that captured the fearless and unconventional spirit of PISSUKANNA.\n\nWe wanted something with personality. Something people would notice, remember, and actually want to wear.",
+      "Create merchandise that expresses Pissukanna's distinctive identity and stands apart from conventional apparel graphics.",
     approach:
-      "We started with a simple thought: What if being a little crazy is exactly what makes a design great?\n\nInstead of playing it safe, we embraced the name PISSUKANNA and everything it represents.\n\nWe explored bold graphics, playful ideas, and an expressive visual direction that felt energetic, confident, and different.\n\nThe result was a merchandise concept that wasn't afraid to break away from the expected.",
+      "We explored bold colors, illustrative motifs, high-energy compositions, and playful styling, applying the concept across T-shirt and other apparel mockups.",
     outcome:
-      "And the crazy idea worked.\n\nOur design won 1st place in the Pissukanna Design Challenge, proving that sometimes the most unexpected ideas make the biggest impact.\n\nMore than just merchandise, it became a celebration of creativity without limits.\n\nCrazy Enough to Win.",
+      "The merchandise concept won first place in the 2021 Pissukanna Design Challenge.",
     deliverables: [
-      "Merchandise Design Concept",
-      "Creative Concept Development",
-      "Custom Graphic Design",
-      "Apparel Design",
-      "Merchandise Mockups",
-      "Design Challenge Submission",
+      "Merchandise design concept",
+      "Creative concept development",
+      "Custom graphic design",
+      "Apparel mockups",
+      "Design-challenge submission",
+    ],
+    projectLinks: [
+      {
+        label: "Watch 2021 challenge video",
+        url: "https://www.youtube.com/watch?v=ExDGExKX6sw&t=784s",
+      },
     ],
     pillars: [
       {
@@ -2626,11 +2632,11 @@ export const projects: Project[] = [
       "Graphic Design | Creative Concept Development",
     palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
     stats: {
-      primaryValue: "1st",
+      primaryValue: "2021",
       primaryLabel: "Design Challenge",
-      secondaryValue: "100%",
-      secondaryLabel: "Drop Sell-Out",
-      summary: "Challenge entered. Rules stretched. Champion crowned.",
+      secondaryValue: "1ST PLACE",
+      secondaryLabel: "Winner",
+      summary: "Won first place in the 2021 Pissukanna Design Challenge.",
     },
     relatedSlugs: [
       "area-6-brand-identity",
