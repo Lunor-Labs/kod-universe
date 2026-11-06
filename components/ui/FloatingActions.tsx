@@ -59,23 +59,6 @@ export function FloatingActions() {
 
         <AiChatWidget />
       </div>
-
-      <div className="fixed bottom-0 left-0 right-0 z-40 p-3 bg-kod-canvas/95 backdrop-blur-xl border-t border-kod-border/40 shadow-2xl flex md:hidden items-center gap-3">
-        <a
-          href={`tel:${phoneRaw}`}
-          className="flex-1 h-12 rounded-xl bg-kod-earth hover:bg-black text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
-        >
-          <Phone size={15} className="text-kod-orange" />
-          <span>Call Now</span>
-        </a>
-        <Link
-          href="/contact-us"
-          className="flex-1 h-12 rounded-xl bg-kod-orange hover:bg-kod-earth text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
-        >
-          <span>Connect</span>
-          <ArrowRight size={15} />
-        </Link>
-      </div>
     </>
   );
 }

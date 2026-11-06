@@ -21,13 +21,12 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 60vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300" />
 
           <div className="absolute top-6 left-6 z-10">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-kod-orange text-white shadow-md">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded text-xs font-bold tracking-widest uppercase bg-kod-orange/80 text-white shadow-md">
               Featured Dispatch
             </span>
           </div>
@@ -81,6 +80,7 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
                   src={post.author.avatar}
                   alt={post.author.name}
                   fill
+                  sizes="40px"
                   className="object-cover"
                 />
               </div>

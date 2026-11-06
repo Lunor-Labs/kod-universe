@@ -1,6 +1,51 @@
 import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { type ServiceDiscipline } from "./types";
+import {
+  Compass,
+  Volume2,
+  Sparkles,
+  Pen,
+  Target,
+  TrendingUp,
+  BookOpen,
+  Layers,
+  type LucideIcon,
+} from "lucide-react";
+
+const KNOWN_ICON_IMAGES = new Set([
+  "architecture-designs",
+  "branding",
+  "create",
+  "define",
+  "deliver",
+  "design-digital-art",
+  "discover-icon",
+  "filming",
+  "KoD-Eye",
+  "logo-design",
+  "merchandising",
+  "packaging",
+  "poster-design",
+  "social-media",
+  "thumbnail-design",
+  "visual-storytelling",
+  "web-design",
+  "web-hero-design-20",
+  "web-hero-design-22",
+  "web-hero-design-25",
+]);
+
+const LUCIDE_ICON_MAP: Record<string, LucideIcon> = {
+  Compass,
+  Volume2,
+  Sparkles,
+  Pen,
+  Target,
+  TrendingUp,
+  BookOpen,
+  Layers,
+};
 
 interface ServiceDisciplinesProps {
   serviceTitle: string;
@@ -48,15 +93,20 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     {item.iconName && (
-                      <div className="w-16 h-16 rounded bg-kod-canvas flex items-center justify-center">
-                        <Image
-                          src={`/icons/${item.iconName}.webp`}
-                          alt=""
-                          width={72}
-                          height={72}
-                          className="object-contain"
-                          aria-hidden="true"
-                        />
+                      <div className="w-16 h-16 rounded bg-kod-canvas flex items-center justify-center p-2.5">
+                        {KNOWN_ICON_IMAGES.has(item.iconName) ? (
+                          <Image
+                            src={`/icons/${item.iconName}.webp`}
+                            alt=""
+                            width={72}
+                            height={72}
+                            className="object-contain"
+                            aria-hidden="true"
+                          />
+                        ) : (() => {
+                          const IconComp = LUCIDE_ICON_MAP[item.iconName] || Layers;
+                          return <IconComp className="w-8 h-8 text-kod-orange" aria-hidden="true" />;
+                        })()}
                       </div>
                     )}
                     {item.badge && (

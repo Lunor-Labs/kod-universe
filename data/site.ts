@@ -8,12 +8,13 @@ export const siteConfig: SiteConfig = {
     "KOD Universe is a 360° creative agency shaping brands through design, marketing and visual storytelling - with an independent gallery for art, objects and limited drops.",
   url: "https://www.kod.lk",
   nav: [
-    { label: "WORK", href: "/work" },
+    { label: "HOME", href: "/" },
+    { label: "WORK", href: "/portfolio" },
     { label: "SERVICES", href: "/services" },
-    { label: "STUDIO", href: "/studio" },
+    { label: "ABOUT US", href: "/about-us" },
     { label: "GALLERY", href: "/gallery" },
     { label: "NEWS", href: "/news" },
-    { label: "CONTACT", href: "/contact" },
+    { label: "CONTACT", href: "/contact-us" },
   ],
   socialLinks: [
     {

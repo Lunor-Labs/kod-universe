@@ -22,14 +22,14 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
             >
               <ArrowLeft
                 size={18}
-                className="text-kod-text-2 group-hover:text-kod-clay group-hover:-translate-x-1 transition-all"
+                className="text-kod-black/60 group-hover:text-kod-black group-hover:-translate-x-1 transition-all"
                 aria-hidden="true"
               />
               <div>
-                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/70 mb-1">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-black/70 mb-1">
                   Previous
                 </p>
-                <p className="text-base md:text-lg font-bold text-kod-earth group-hover:text-kod-clay transition-colors">
+                <p className="text-base md:text-lg font-bold text-kod-black group-hover:text-kod-black/80 transition-colors">
                   {prev.title}
                 </p>
               </div>
@@ -45,16 +45,16 @@ export function ProjectNavigation({ prev, next }: ProjectNavigationProps) {
               aria-label={`Next project: ${next.title}`}
             >
               <div>
-                <p className="text-sm font-bold tracking-wider uppercase text-kod-earth/70 mb-1">
+                <p className="text-sm font-bold tracking-wider uppercase text-kod-black/70 mb-1">
                   Next
                 </p>
-                <p className="text-base md:text-lg font-bold text-kod-earth group-hover:text-kod-clay transition-colors">
+                <p className="text-base md:text-lg font-bold text-kod-black group-hover:text-kod-black/80 transition-colors">
                   {next.title}
                 </p>
               </div>
               <ArrowRight
                 size={18}
-                className="text-kod-text-2 group-hover:text-kod-clay group-hover:translate-x-1 transition-all"
+                className="text-kod-black/60 group-hover:text-kod-black group-hover:translate-x-1 transition-all"
                 aria-hidden="true"
               />
             </Link>

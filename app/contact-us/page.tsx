@@ -44,6 +44,7 @@ export default function ConnectPage() {
           src="/main/cave.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-top"
           priority
         />

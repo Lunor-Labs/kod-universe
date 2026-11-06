@@ -27,6 +27,69 @@ const CATEGORIES = [
 const INITIAL_BATCH = 12;
 const LOAD_MORE_STEP = 6;
 
+function MasonryItem({
+  item,
+  index,
+  onClick,
+}: {
+  item: GalleryItem;
+  index: number;
+  onClick: () => void;
+}) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div
+      className="break-inside-avoid mb-4 sm:mb-5 group relative rounded overflow-hidden bg-white/70 border border-border-warm/50 shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer select-none"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      aria-label={`Zoom into ${item.title}`}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+    >
+      <div
+        className={`relative w-full overflow-hidden ${
+          item.aspectClass || "aspect-square"
+        } ${!isLoaded ? "bg-kod-mist animate-pulse" : ""}`}
+      >
+        <Image
+          src={item.src}
+          alt={item.alt}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+          className={`object-cover group-hover:scale-105 transition-all duration-700 ease-out ${
+            isLoaded ? "opacity-100 blur-0" : "opacity-0 blur-sm scale-110"
+          }`}
+          loading={index < 4 ? "eager" : "lazy"}
+          onLoad={() => setIsLoaded(true)}
+        />
+        <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+          <ZoomIn size={15} />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+          <span className="text-sm font-bold uppercase tracking-wider text-kod-clay mb-1">
+            {item.category}
+          </span>
+          <h3 className="font-metropolis font-bold text-base leading-snug line-clamp-2">
+            {item.title}
+          </h3>
+          {item.projectTitle && (
+            <p className="text-sm text-white/85 mt-0.5 truncate">
+              {item.projectTitle}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function MasonryGallerySection() {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
@@ -104,13 +167,13 @@ export function MasonryGallerySection() {
 
   return (
     <section
-      className="section-padding-top bg-transparent relative overflow-hidden"
+      className="bg-transparent relative overflow-hidden"
       aria-label="Visual Gallery Archive"
     >
       <div className="container-site">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
-          <div>
-            <ScrollReveal variant="up">
+        <ScrollReveal variant="up" delay={0.05}>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 sm:mb-10">
+            <div>
               <SectionLabel>Visual Archive</SectionLabel>
               <h2 className="heading-section text-earth text-balance">
                 Moments in the{" "}
@@ -120,88 +183,55 @@ export function MasonryGallerySection() {
                 A curated mosaic of brand artifacts, editorial frames, and
                 physical craft created by KOD Universe.
               </p>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal variant="up" delay={0.1}>
-            <div
-              className="flex items-center gap-1.5 sm:gap-2 flex-wrap"
-              role="tablist"
-              aria-label="Filter visual gallery"
-            >
-              {CATEGORIES.map((cat) => {
-                const isActive = activeCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => handleCategoryChange(cat)}
-                    role="tab"
-                    aria-selected={isActive}
-                    className={`text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded transition-all cursor-pointer ${
-                      isActive
-                        ? "bg-earth text-white shadow-xs"
-                        : "bg-white/80 hover:bg-white text-kod-earth/70 hover:text-earth border border-border-warm/50"
-                    }`}
-                  >
-                    {cat === "ALL" ? "All Moments" : cat}
-                  </button>
-                );
-              })}
             </div>
-          </ScrollReveal>
-        </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5">
-          {visibleItems.map((item, index) => {
-            return (
-              <div
-                key={item.id}
-                className="break-inside-avoid mb-4 sm:mb-5 group relative rounded overflow-hidden bg-white/70 border border-border-warm/50 shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer select-none"
-                onClick={() => setSelectedItemIndex(index)}
-                role="button"
-                tabIndex={0}
-                aria-label={`Zoom into ${item.title}`}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedItemIndex(index);
-                  }
-                }}
-              >
-                <div
-                  className={`relative w-full overflow-hidden ${
-                    item.aspectClass || "aspect-square"
+            <div className="shrink-0 md:pt-1">
+              <Link href="/gallery" className="btn-secondary">
+                <span>View Full Gallery</span>
+                <span className="btn-badge">
+                  <ArrowRight size={13} aria-hidden="true" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal variant="up" delay={0.15}>
+          <div
+            className="flex items-center gap-1.5 sm:gap-2 flex-wrap mb-8 sm:mb-10"
+            role="tablist"
+            aria-label="Filter visual gallery"
+          >
+            {CATEGORIES.map((cat) => {
+              const isActive = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => handleCategoryChange(cat)}
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`text-sm font-semibold uppercase tracking-wider px-4 py-2 rounded transition-all cursor-pointer ${
+                    isActive
+                      ? "bg-earth text-white shadow-xs"
+                      : "bg-white/80 hover:bg-white text-kod-earth/70 hover:text-earth border border-border-warm/50"
                   }`}
                 >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                    loading={index < 4 ? "eager" : "lazy"}
-                  />
-                  <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
-                    <ZoomIn size={15} />
-                  </div>
+                  {cat === "ALL" ? "All Moments" : cat}
+                </button>
+              );
+            })}
+          </div>
+        </ScrollReveal>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                    <span className="text-sm font-bold uppercase tracking-wider text-kod-clay mb-1">
-                      {item.category}
-                    </span>
-                    <h3 className="font-metropolis font-bold text-base leading-snug line-clamp-2">
-                      {item.title}
-                    </h3>
-                    {item.projectTitle && (
-                      <p className="text-sm text-white/85 mt-0.5 truncate">
-                        {item.projectTitle}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5">
+          {visibleItems.map((item, index) => (
+            <MasonryItem
+              key={item.id}
+              item={item}
+              index={index}
+              onClick={() => setSelectedItemIndex(index)}
+            />
+          ))}
         </div>
 
         <div className="mt-10 sm:mt-12 flex flex-col items-center justify-center gap-3">
@@ -283,6 +313,7 @@ export function MasonryGallerySection() {
                   src={currentZoomItem.src}
                   alt={currentZoomItem.alt}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                   priority
                   className="object-contain rounded shadow-2xl animate-in zoom-in-95 duration-200"
                 />

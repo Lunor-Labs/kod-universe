@@ -10,17 +10,17 @@ export async function POST(req: Request) {
       console.log("KOD Chat Form Lead Submission:", formData);
       return NextResponse.json({
         success: true,
-        replyText: `Thank you, ${formData.name || "friend"}! We have received your inquiry for ${formData.service || "our services"}. Our team will call or email you shortly at ${formData.phone || formData.email || "your provided contact"}.`,
+        replyText: `Thank you, **${formData.name || "friend"}**! We have received your inquiry for **${formData.service || "our services"}**.\n\nOur team will reach out to you shortly at ${formData.phone || formData.email || "your provided contact"}.`,
         options: [
           {
             id: "opt-another-quote",
-            label: "⚡ Submit Another Request",
+            label: "Submit another request",
             actionType: "quote_form",
           },
           {
             id: "opt-whatsapp-direct",
-            label: "💬 Continue on WhatsApp",
-            actionType: "contact_info",
+            label: "Continue on WhatsApp",
+            payload: "WHATSAPP_REDIRECT",
           },
         ],
       });
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     console.error("API Chat Error:", error);
     return NextResponse.json(
       { success: false, error: "Internal chat server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

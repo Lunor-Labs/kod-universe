@@ -66,7 +66,7 @@ export default function WorkPage() {
           />
         </section>
 
-        <section className="section-padding-bottom sm:section-padding" aria-label="Portfolio projects">
+        <section id="projects" className="section-padding-bottom sm:section-padding" aria-label="Portfolio projects">
           <Suspense fallback={null}>
             <ProjectGrid projects={projects} featuredProject={featuredProject} />
           </Suspense>

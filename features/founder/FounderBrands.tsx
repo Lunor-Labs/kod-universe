@@ -1,29 +1,140 @@
+import Image from "next/image";
 import { Globe, MapPin, Users } from "lucide-react";
 
+interface BrandItem {
+  name: string;
+  category: string;
+  logo: string;
+  bgClass?: string;
+}
+
 export function FounderBrands() {
-  const internationalBrands = [
-    { name: "Barbie", category: "Global Toy & Entertainment Icon" },
-    { name: "Disney", category: "Global Media & Character Franchise" },
-    { name: "Hotwheels", category: "Die-Cast & Toy Design Franchise" },
-    { name: "Lego", category: "Modular Play & Creative Building System" },
-    { name: "Thomas & Friends", category: "Children's Heritage Franchise" },
-    { name: "Leapfrog", category: "Educational Tech & Child Learning" },
-    { name: "Toy Story", category: "Pixar Animated Feature Franchise" },
-    { name: "Uno", category: "Global Card Game & Family Recreation" },
-    { name: "Farlin", category: "Baby Care & Maternal Healthcare" },
-    { name: "Chicco", category: "Italian Infant Care & Hardware" },
-    { name: "ESET Virus Guard", category: "Cybersecurity & Software Solutions" },
-    { name: "Symantec", category: "Enterprise Threat & Data Protection" },
-    { name: "Zaizi", category: "Digital Consultancy & Cloud Architecture" },
-    { name: "Michelin", category: "Global Automotive & Mobility" },
+  const internationalBrands: BrandItem[] = [
+    {
+      name: "Barbie",
+      category: "Global Toy & Entertainment Icon",
+      logo: "/brands/International/barbie.webp",
+    },
+    {
+      name: "Disney",
+      category: "Global Media & Character Franchise",
+      logo: "/brands/International/disney.webp",
+    },
+    {
+      name: "Hot Wheels",
+      category: "Die-Cast & Toy Design Franchise",
+      logo: "/brands/International/hot-wheels.webp",
+    },
+    {
+      name: "Lego",
+      category: "Modular Play & Creative Building System",
+      logo: "/brands/International/lego.webp",
+    },
+    {
+      name: "Mattel",
+      category: "Global Toy Manufacturing & Entertainment",
+      logo: "/brands/International/mattel.webp",
+    },
+    {
+      name: "Thomas & Friends",
+      category: "Children's Heritage Franchise",
+      logo: "/brands/International/thomas-and-friends.webp",
+    },
+    {
+      name: "Toy Story",
+      category: "Pixar Animated Feature Franchise",
+      logo: "/brands/International/toy-story.webp",
+    },
+    {
+      name: "Alex Toys",
+      category: "Creative Children's Play & Crafts",
+      logo: "/brands/International/alex-toys.webp",
+    },
+    {
+      name: "LeapFrog",
+      category: "Educational Tech & Child Learning",
+      logo: "/brands/International/leapfrog.webp",
+    },
+    {
+      name: "Toy Craft",
+      category: "Artisanal Toy & Hobby Crafts",
+      logo: "/brands/International/toy-craft.webp",
+    },
+    {
+      name: "Chicco",
+      category: "Italian Infant Care & Hardware",
+      logo: "/brands/International/chicco.webp",
+    },
+    {
+      name: "Farlin",
+      category: "Baby Care & Maternal Healthcare",
+      logo: "/brands/International/farlin.webp",
+    },
+    {
+      name: "ESET",
+      category: "Cybersecurity & Software Solutions",
+      logo: "/brands/International/eset.webp",
+    },
+    {
+      name: "Symantec",
+      category: "Enterprise Threat & Data Protection",
+      logo: "/brands/International/symantec.webp",
+    },
+    {
+      name: "Michelin",
+      category: "Global Automotive & Mobility",
+      logo: "/brands/International/michelin.webp",
+    },
+    {
+      name: "Zaizi",
+      category: "Digital Consultancy & Cloud Architecture",
+      logo: "/brands/International/zaizi.webp",
+    },
   ];
 
-  const localBrands = [
-    { name: "Hemas", category: "Healthcare, FMCG & Retail Conglomerate" },
-    { name: "Arpico", category: "Retail Supercentre & Household Manufacturing" },
-    { name: "Kids Joy", category: "Maternal & Childcare Essentials" },
-    { name: "Dialog", category: "Telecommunications & Digital Services" },
-    { name: "Bubblicious", category: "Youth Confectionery & Brand Activation" },
+  const localBrands: BrandItem[] = [
+    {
+      name: "Dialog Axiata",
+      category: "Telecommunications & Digital Services",
+      logo: "/brands/local/dialog-axiata.webp",
+    },
+    {
+      name: "Hemas",
+      category: "Healthcare, FMCG & Retail Conglomerate",
+      logo: "/brands/local/hemas.webp",
+    },
+    {
+      name: "Union Assurance",
+      category: "Life Insurance & Financial Services",
+      logo: "/brands/local/union-assurance.webp",
+    },
+    {
+      name: "Arpico Supercentre",
+      category: "Retail Supercentre & Household Manufacturing",
+      logo: "/brands/local/arpico.webp",
+    },
+    {
+      name: "Colombo Fashion Week",
+      category: "Premier Fashion Platform & Runway",
+      logo: "/brands/local/colombo-fashion-week.webp",
+    },
+    {
+      name: "Club House Vivaldi",
+      category: "Luxury Hospitality & Entertainment",
+      logo: "/brands/local/club-house-vivaldi.webp",
+    },
+    {
+      name: "Iraj Productions",
+      category: "Music Production & Visual Entertainment",
+      logo: "/brands/local/iraj-production.webp",
+      bgClass: "bg-[#0c0c0e] border border-white/10",
+    },
+    {
+      name: "Bubblicious",
+      category: "Youth Confectionery & Brand Activation",
+      logo: "/brands/local/bubblicious.webp",
+      bgClass: "bg-[#181222] border border-white/10",
+    },
   ];
 
   return (
@@ -57,27 +168,39 @@ export function FounderBrands() {
               International Brands
             </h3>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-white/70 ml-auto">
-              14 Brands
+              {internationalBrands.length} Brands
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
-            {internationalBrands.map((brand, idx) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-5">
+            {internationalBrands.map((brand) => (
               <div
-                key={idx}
-                className="bg-white/5 border border-white/10 hover:border-kod-orange/70 hover:bg-white/10 rounded-xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 group min-h-[110px]"
+                key={brand.name}
+                className="bg-white/[0.04] border border-white/10 hover:border-kod-orange/60 hover:bg-white/[0.07] rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl"
               >
-                <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40 block mb-2 font-metropolis">
-                    Global
-                  </span>
-                  <h4 className="font-metropolis font-bold text-base sm:text-lg text-white group-hover:text-kod-orange transition-colors">
-                    {brand.name}
-                  </h4>
+                <div
+                  className={`w-full h-20 sm:h-24 rounded-xl ${
+                    brand.bgClass || "bg-white"
+                  } flex items-center justify-center p-3 relative overflow-hidden shadow-sm group-hover:shadow-md transition-shadow`}
+                >
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    fill
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 15vw"
+                    className="object-contain p-2.5 transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <p className="text-[11px] text-white/60 line-clamp-2 mt-2 font-light leading-snug">
-                  {brand.category}
-                </p>
+                <div className="mt-3.5 pt-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-metropolis font-bold text-sm sm:text-base text-white group-hover:text-kod-orange transition-colors truncate">
+                      {brand.name}
+                    </h4>
+                  </div>
+                  <p className="text-[11px] text-white/60 line-clamp-2 font-light leading-snug">
+                    {brand.category}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -90,27 +213,39 @@ export function FounderBrands() {
               National & Local Brands
             </h3>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-white/70 ml-auto">
-              5 Brands
+              {localBrands.length} Brands
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
-            {localBrands.map((brand, idx) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-5">
+            {localBrands.map((brand) => (
               <div
-                key={idx}
-                className="bg-white/5 border border-white/10 hover:border-kod-clay/70 hover:bg-white/10 rounded-xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 group min-h-[110px]"
+                key={brand.name}
+                className="bg-white/[0.04] border border-white/10 hover:border-kod-gold/60 hover:bg-white/[0.07] rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl"
               >
-                <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40 block mb-2 font-metropolis">
-                    Sri Lanka
-                  </span>
-                  <h4 className="font-metropolis font-bold text-base sm:text-lg text-white group-hover:text-kod-gold transition-colors">
-                    {brand.name}
-                  </h4>
+                <div
+                  className={`w-full h-20 sm:h-24 rounded-xl ${
+                    brand.bgClass || "bg-white"
+                  } flex items-center justify-center p-3 relative overflow-hidden shadow-sm group-hover:shadow-md transition-shadow`}
+                >
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    fill
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 15vw"
+                    className="object-contain p-2.5 transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <p className="text-[11px] text-white/60 line-clamp-2 mt-2 font-light leading-snug">
-                  {brand.category}
-                </p>
+                <div className="mt-3.5 pt-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-metropolis font-bold text-sm sm:text-base text-white group-hover:text-kod-gold transition-colors truncate">
+                      {brand.name}
+                    </h4>
+                  </div>
+                  <p className="text-[11px] text-white/60 line-clamp-2 font-light leading-snug">
+                    {brand.category}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

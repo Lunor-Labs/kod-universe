@@ -1,0 +1,135 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+
+export function GallerySection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const initialized = useRef(false);
+  const router = useRouter();
+
+  const engineRef = useRef<any>(null);
+  const [activeDemo, setActiveDemo] = useState(0);
+
+  const categories = [
+    { id: 0, label: "Art" },
+    { id: 1, label: "Merch" },
+    { id: 2, label: "Drops" },
+  ];
+
+  useEffect(() => {
+    const init = async () => {
+      if (initialized.current) return;
+      initialized.current = true;
+      try {
+        if (!containerRef.current) return;
+        const { initRelight } = await import("@/components/relight/app.js");
+        engineRef.current = await initRelight(containerRef.current, 0);
+        setLoading(false);
+      } catch (err: any) {
+        console.error("Failed to initialize WebGPU relighting effect:", err);
+        setError(
+          "Your browser may not support WebGPU, or an error occurred loading the effect.",
+        );
+        setLoading(false);
+      }
+    };
+
+    init();
+
+    return () => {
+      if (engineRef.current?.cleanup) {
+        engineRef.current.cleanup();
+      }
+    };
+  }, []);
+
+  const handleClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest("button, a")) return;
+    router.push("/gallery");
+  };
+
+  const changeDemo = async (index: number) => {
+    setActiveDemo(index);
+    if (engineRef.current?.setDemo) {
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      await engineRef.current.setDemo(index);
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section className="w-full ">
+      <div className="container-site">
+        <div
+          className="relative w-full h-[60vh] md:h-[80vh] bg-black overflow-hidden cursor-pointer rounded shadow-2xl group"
+          onClick={handleClick}
+          aria-label="Interactive Torch Gallery Preview"
+        >
+          <div ref={containerRef} className="absolute inset-0 z-0" />
+
+          {/* Top-Right: View Gallery Button */}
+          <div className="absolute top-5 right-5 sm:top-6 sm:right-6 z-20 pointer-events-auto">
+            <Link
+              href="/gallery"
+              onClick={(e) => e.stopPropagation()}
+              className="btn-primary !h-10 sm:!h-11 !px-4 sm:!px-5 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-xl hover:scale-105 transition-all"
+            >
+              <span>View Gallery</span>
+              <span className="btn-badge !w-6 !h-6 sm:!w-7 sm:!h-7">
+                <ArrowRight size={13} />
+              </span>
+            </Link>
+          </div>
+
+          <div className="absolute bottom-6 left-0 w-full flex justify-center gap-3 sm:gap-4 z-20 pointer-events-auto">
+            {categories.map((cat) => {
+              const isActive = activeDemo === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => changeDemo(cat.id)}
+                  className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-widest uppercase rounded-full backdrop-blur-md transition-all duration-300 cursor-pointer border ${
+                    isActive
+                      ? "bg-kod-orange text-white border-kod-orange shadow-lg shadow-kod-orange/40 scale-105 font-bold"
+                      : "bg-black/40 text-white/70 border-white/20 hover:border-white/60 hover:text-white hover:bg-black/60"
+                  }`}
+                  aria-pressed={isActive}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {loading && (
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black pointer-events-none">
+              <div className="animate-spin w-8 h-8 border-2 border-white/20 border-t-white rounded-full" />
+            </div>
+          )}
+
+          {error && (
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 pointer-events-none">
+              <div className="max-w-md text-center p-6 bg-red-950/30 border border-red-500/30 rounded-xl">
+                <p className="text-red-400 font-medium mb-2">
+                  Initialization Failed
+                </p>
+                <p className="text-white/60 text-sm mb-4">{error}</p>
+                <p className="text-white/40 text-xs">
+                  This effect requires a browser with WebGPU support.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}

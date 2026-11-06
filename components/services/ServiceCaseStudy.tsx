@@ -37,7 +37,7 @@ export function ServiceCaseStudy({
                 {caseStudy.tagline}
               </p>
 
-              <p className="text-body text-white/80 font-light mb-8 max-w-md">
+              <p className="text-body text-white/80 font-light mb-8 max-w-md whitespace-pre-line">
                 {caseStudy.description}
               </p>
               <div className="mb-8">
@@ -51,36 +51,6 @@ export function ServiceCaseStudy({
                       <span>{del}</span>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start sm:items-end mb-8">
-                <div>
-                  <span className="text-sm font-semibold tracking-widest uppercase text-white/60 mb-2.5 block">
-                    COLOR SYSTEM
-                  </span>
-                  <div className="flex items-center gap-1.5">
-                    {caseStudy.palette.map((color, idx) => (
-                      <div
-                        key={idx}
-                        className="w-7 h-7 rounded-sm border border-white/20 shadow-sm"
-                        style={{ backgroundColor: color }}
-                        title={color}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <span className="font-editorial text-4xl text-white font-normal leading-none select-none">
-                    Aa
-                  </span>
-                  <div className="text-sm uppercase tracking-wider text-white/70 leading-tight">
-                    <p className="text-white font-semibold font-editorial">
-                      {caseStudy.headlineFont}
-                    </p>
-                    <p>{caseStudy.bodyFont}</p>
-                  </div>
                 </div>
               </div>
 
@@ -99,12 +69,13 @@ export function ServiceCaseStudy({
 
           <div className="lg:col-span-7">
             <ScrollReveal variant="right" delay={0.2}>
-              <div className="relative aspect-[16/10] rounded overflow-hidden border border-white/10 shadow-2xl bg-kod-black">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-kod-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8">
                 <Image
                   src={caseStudy.imageSrc}
                   alt={caseStudy.client}
                   fill
-                  className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  className="object-contain p-4 sm:p-6 drop-shadow-2xl opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500"
                 />
               </div>
             </ScrollReveal>

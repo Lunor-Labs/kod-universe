@@ -8,7 +8,7 @@ import { OurUniverseCTA } from "@/features/our-universe/OurUniverseCTA";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 
 export const metadata: Metadata = {
-  title: "Our Story",
+  title: "About Us",
   description:
     "We Are Messengers of Creative Forces. The story, origin, mission, philosophy, and creative journey behind KOD Universe.",
   alternates: { canonical: "/about-us" },

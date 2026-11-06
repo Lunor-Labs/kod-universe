@@ -70,7 +70,8 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
                 src={post.author.avatar}
                 alt={post.author.name}
                 fill
-                className="object-cover"
+                sizes="48px"
+                className="object-cover object-top"
               />
             </div>
             <div>
@@ -97,14 +98,14 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full rounded overflow-hidden shadow-xl border border-kod-border/50 bg-kod-mist">
+        <div className="relative aspect-[16/9] sm:aspect-[21/12] w-full rounded overflow-hidden shadow-xl border border-kod-border/50 bg-kod-mist">
           <Image
             src={post.coverImage.src}
             alt={post.coverImage.alt}
             fill
             priority
             sizes="(max-width: 1200px) 100vw, 1200px"
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
         {post.coverImage.alt && (

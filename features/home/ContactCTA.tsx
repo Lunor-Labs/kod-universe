@@ -18,6 +18,7 @@ const SERVICES_OPTIONS = [
   "Social Media & Content",
   "Package Design",
   "Creative Art Direction",
+  "Others",
 ];
 
 export function ContactCTA() {

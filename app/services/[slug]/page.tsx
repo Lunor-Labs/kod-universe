@@ -1,11 +1,12 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { capabilities, serviceGroups } from "@/data/capabilities";
 import {
+  capabilities,
+  serviceGroups,
   getServiceDetailConfig,
   selectedWorkProjects,
-} from "@/data/serviceDetails";
+} from "@/data/services";
 import {
   ServiceHero,
   ServicePhilosophy,
@@ -70,6 +71,7 @@ export default async function ServiceDetailPage({
           src="/main/single-service-main.webp"
           alt=""
           fill
+          sizes="100vw"
           priority
           className="object-cover object-top"
         />
@@ -110,6 +112,7 @@ export default async function ServiceDetailPage({
         projects={config.selectedWorkProjects || selectedWorkProjects}
         title={config.selectedWorkTitle}
         subtitle={config.selectedWorkSubtitle}
+        filterCategory={cap.title}
       />
 
       <ServiceSuitability

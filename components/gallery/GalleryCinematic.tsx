@@ -1,93 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 import styles from "./gallery.module.css";
 
-// ─── Data ────────────────────────────────────────────────────────
-const galleryCategories = [
-  {
-    id: "art",
-    title: "Art",
-    tagline: "Originals. Prints. Digital. Limited.",
-    image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&h=560&fit=crop&crop=center",
-  },
-  {
-    id: "merch",
-    title: "Merch",
-    tagline: "Wear. Display. Collect.",
-    image:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=900&h=560&fit=crop&crop=center",
-  },
-  {
-    id: "drops",
-    title: "Drops",
-    tagline: "Limited. Seasonal. Collaborative.",
-    image:
-      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=900&h=560&fit=crop&crop=center",
-  },
-  {
-    id: "original-artwork",
-    title: "Originals",
-    tagline: "The Silent Path",
-    image:
-      "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=900&h=560&fit=crop&crop=center",
-  },
-  {
-    id: "creative-objects",
-    title: "Objects",
-    tagline: "KoD Figure",
-    image:
-      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=900&h=560&fit=crop&crop=center",
-  },
-];
-
-const journeySteps = [
-  {
-    id: "idea",
-    label: "IDEA",
-    caption: "A thought, a feeling, a spark.",
-    image:
-      "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=300&h=300&fit=crop&crop=center",
-  },
-  {
-    id: "process",
-    label: "PROCESS",
-    caption: "Sketches, concepts, iterations.",
-    image:
-      "https://images.unsplash.com/photo-1452457807411-4979b707c5be?w=300&h=300&fit=crop&crop=center",
-  },
-  {
-    id: "art",
-    label: "ART",
-    caption: "The vision takes form.",
-    image:
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=300&h=300&fit=crop&crop=center",
-  },
-  {
-    id: "object",
-    label: "OBJECT",
-    caption: "From art to collectible objects.",
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop&crop=center",
-  },
-  {
-    id: "product",
-    label: "PRODUCT",
-    caption: "Made for you. Limited. Real.",
-    image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop&crop=top",
-  },
-];
-
-
-// ─── Helpers ─────────────────────────────────────────────────────
+// ─── Math Helpers ──────────────────────────────────────────────────
 function clamp(v: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, v));
 }
@@ -110,12 +30,31 @@ function segmentInOut(s: number, a: number, b: number, c: number, d: number) {
 export function GalleryCinematic() {
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const collectionsScrollRef = useRef<HTMLDivElement>(null);
+  const [activeCategory, setActiveCategory] = useState(0);
+
+  const scrollToCategory = (idx: number) => {
+    setActiveCategory(idx);
+    const container = collectionsScrollRef.current;
+    if (!container) return;
+    const card = container.children[idx] as HTMLElement;
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  };
+
+  const onCollectionsScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    const card = el.firstElementChild as HTMLElement | null;
+    const cardWidth = card ? card.offsetWidth : 1;
+    const idx = Math.round(el.scrollLeft / (cardWidth + 16));
+    if (idx !== activeCategory && idx >= 0 && idx < 3) {
+      setActiveCategory(idx);
+    }
+  };
+
   // Animation state refs
   const state = useRef({
-    targetMouseX: 0,
-    targetMouseY: 0,
-    mouseX: 0,
-    mouseY: 0,
     targetScroll: 0,
     smoothScroll: 0,
     initialized: false,
@@ -128,17 +67,13 @@ export function GalleryCinematic() {
 
     const root = containerRef.current;
     const st = state.current;
-    st.reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    st.reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function getScrollDistance() {
       if (!sectionRef.current) return 0;
-      return clamp(
-        -sectionRef.current.getBoundingClientRect().top,
-        0,
-        sectionRef.current.offsetHeight - window.innerHeight,
-      );
+      const rect = sectionRef.current.getBoundingClientRect();
+      const maxScroll = sectionRef.current.offsetHeight - window.innerHeight;
+      return clamp(-rect.top, 0, Math.max(1, maxScroll));
     }
 
     function set(prop: string, val: string | number) {
@@ -153,106 +88,107 @@ export function GalleryCinematic() {
         st.smoothScroll = st.targetScroll;
         st.initialized = true;
       } else {
-        st.smoothScroll = lerp(st.smoothScroll, st.targetScroll, 0.14);
+        st.smoothScroll = lerp(st.smoothScroll, st.targetScroll, 0.12);
       }
-      if (Math.abs(st.smoothScroll - st.targetScroll) < 0.08)
-        st.smoothScroll = st.targetScroll;
 
-      st.mouseX = lerp(st.mouseX, st.targetMouseX, 0.12);
-      st.mouseY = lerp(st.mouseY, st.targetMouseY, 0.12);
+      if (Math.abs(st.smoothScroll - st.targetScroll) < 0.08) {
+        st.smoothScroll = st.targetScroll;
+      }
 
       const s = st.smoothScroll;
+      const sProgress = clamp(s / 1800);
 
-      const frame2 = segmentInOut(s, 200, 400, 600, 800);
-      const frame3 = segmentInOut(s, 700, 900, 2000, 2500);
+      // Phase 1: Cave Entrance & Hero Intro (0 to 450px)
+      const introProgress = clamp(s / 420);
+      const titleExit = smoothstep(40, 280, s);
+      const introExit = smoothstep(20, 240, s);
+      const archExit = smoothstep(60, 380, s);
 
-      const progress = clamp(s / 900);
-      const introExit = smoothstep(50, 200, s);
-      const blurActive = clamp(frame2.active + frame3.active);
-      const frame2Opacity = frame2.active * (1 - frame3.enter);
-      const splitDrift = Math.pow(frame2.enter, 1.5);
-      const panel2Opacity = frame2.active * (1 - frame2.exit);
-      const panel3Opacity = frame3.active * (1 - frame3.exit);
-      const backScale =
-        0.76 + progress * 0.2 + frame2.enter * 0.18 + frame3.enter * 0.16;
-      const sharedHeroY = progress * -74;
-      const sharedHeroScale = progress * 0.23;
+      // Phase 2: Collections Showcase (420px to 1100px)
+      const p2 = segmentInOut(s, 420, 600, 940, 1100);
 
-      set("--mx", st.reduceMotion ? "0" : st.mouseX.toFixed(4));
-      set("--my", st.reduceMotion ? "0" : st.mouseY.toFixed(4));
+      // Phase 3: Collaborate & Commission (1080px to end of sticky scroll)
+      // Stays fully locked and opaque all the way to the end of the section
+      const p3Enter = smoothstep(1080, 1260, s);
+      const p3Y = (1 - p3Enter) * 45;
 
-      set("--back-opacity", 1 - frame2.active * 0.06);
-      set("--back-x", `${st.mouseX * -12}px`);
-      set("--back-y", `${st.mouseY * -4}px`);
-      set("--back-scale", backScale);
-      set("--four-y", `${10 + progress * 10}vh`);
-      set("--four-scale", 0.78 + progress * 0.16);
-      set("--bazaar-y", `${20 - progress * 8}vh`);
+      // ── Act 1 -> Act 2: Walking through Entrance Arch (Layer 1) ──
+      const l1T = clamp((s - 30) / 320);
+      const l1Scale = 1.05 + l1T * 1.5;
+      const l1Y = -l1T * 70;
+      const l1Opacity = 1 - smoothstep(0.1, 0.9, l1T);
 
-      set("--blur-px", `${blurActive * 14}px`);
-      set("--back-brightness", 1 - blurActive * 0.255);
-      set("--bazaar-blur-px", `${frame2.active * 14}px`);
-      set(
-        "--bazaar-brightness",
-        1 - frame2.active * 0.255 - frame3.active * 0.06,
-      );
-      set("--bazaar-saturation", 1 + frame3.active * 0.18);
+      // ── Act 1 -> Act 2: Stepping over Entrance Floor Rocks (Layer 2) ──
+      const l2T = clamp((s - 340) / 460);
+      const l2Scale = 1.04 + clamp(s / 340) * 0.18 + l2T * 1.1;
+      const l2Y = l2T * 110;
+      const l2Opacity = 1 - smoothstep(0.15, 0.9, l2T);
 
-      set("--shade-opacity", "1");
-      set("--shade-z", frame2.active > 0.02 ? "2" : "0");
-      set("--shade-top-alpha", blurActive * 0.465);
-      set("--shade-mid-alpha", blurActive * 0.42);
-      set("--shade-bottom-alpha", blurActive * 0.51);
+      // ── Act 2 -> Act 3: Leaving Outer Gallery Carvings (Layer 3) ──
+      // Prominent during Collections (Act 2), then zooms past as you reach Inner Sanctum
+      const l3T = clamp((s - 850) / 380);
+      const l3Scale = 1.04 + clamp(s / 850) * 0.16 + l3T * 1.35;
+      const l3Y = -l3T * 50;
+      const l3Opacity = 1 - smoothstep(0.1, 0.92, l3T);
 
-      set("--title-y", `${introExit * -210}px`);
-      set("--title-scale", 1 - introExit * 0.08);
-      set("--title-opacity", 1 - introExit);
+      // ── Layer 7: Deepest glowing cave portal ──
+      set("--l7-y", `${(sProgress * 12).toFixed(2)}px`);
+      set("--l7-scale", (1.01 + sProgress * 0.16).toFixed(4));
+      set("--l7-opacity", "1");
 
-      set("--bridge-x", `calc(-50% + ${st.mouseX * 18}px)`);
-      set("--bridge-y", `${st.mouseY * 8 + sharedHeroY - frame2.exit * 760}px`);
-      set("--bridge-bottom", `${5 - frame2.enter * 13}vh`);
-      set("--bridge-width", `${67.2 + frame2.enter * 37.8}vw`);
-      set("--bridge-scale", 1.02 + sharedHeroScale + frame2.exit * 0.46);
+      // ── Layer 6: Midground stalagmites and spires ──
+      set("--l6-y", `${(sProgress * 16).toFixed(2)}px`);
+      set("--l6-scale", (1.02 + sProgress * 0.26).toFixed(4));
+      set("--l6-opacity", "1");
 
-      set(
-        "--split-left-x",
-        `calc(-50% + ${-splitDrift * 46}vw + ${st.mouseX * 22}px)`,
-      );
-      set(
-        "--split-left-y",
-        `${st.mouseY * 10 + sharedHeroY - splitDrift * 180}px`,
-      );
-      set("--split-left-scale", 1 + sharedHeroScale + frame2.enter * 0.74);
-      set(
-        "--split-right-x",
-        `calc(-50% + ${splitDrift * 46}vw + ${st.mouseX * 22}px)`,
-      );
-      set(
-        "--split-right-y",
-        `${st.mouseY * 10 + sharedHeroY - splitDrift * 180}px`,
-      );
-      set("--split-right-scale", 1 + sharedHeroScale + frame2.enter * 0.74);
+      // ── Layer 5: High chamber vault and light rays ──
+      set("--l5-y", `${(sProgress * 18).toFixed(2)}px`);
+      set("--l5-scale", (1.03 + sProgress * 0.32).toFixed(4));
+      set("--l5-opacity", "1");
 
-      set("--frame2-opacity", frame2Opacity);
-      set("--frame2-x", `calc(-50% + ${st.mouseX * 10}px)`);
-      set("--frame2-y", `calc(-50% + ${st.mouseY * 8 - frame2.exit * 150}px)`);
-      set("--frame2-scale", 1.06 + frame2.enter * 0.08 + frame2.exit * 0.08);
+      // ── Hero Title: GALLERY ──
+      set("--title-y", `${(-titleExit * 160).toFixed(2)}px`);
+      set("--title-scale", (1 - titleExit * 0.08).toFixed(4));
+      set("--title-opacity", (1 - titleExit).toFixed(4));
 
-      set("--intro-copy-y", `${introExit * 90}px`);
-      set("--intro-copy-opacity", 1 - introExit);
+      // ── Layer 4: Reflective pools and stone pathway ──
+      set("--l4-y", `${(-sProgress * 25).toFixed(2)}px`);
+      set("--l4-scale", (1.04 + sProgress * 0.38).toFixed(4));
+      set("--l4-opacity", "1");
 
-      set("--panel2-opacity", panel2Opacity);
-      set("--panel2-pe", panel2Opacity > 0.5 ? "auto" : "none");
-      set(
-        "--panel2-y",
-        `calc(-50% + ${-frame2.exit * 86 + (1 - frame2.enter) * 58}px)`,
-      );
-      set("--panel3-opacity", panel3Opacity);
-      set("--panel3-pe", panel3Opacity > 0.5 ? "auto" : "none");
-      set(
-        "--panel3-y",
-        `calc(-50% + ${-frame3.exit * 86 + (1 - frame3.enter) * 58}px)`,
-      );
+      // ── Layer 3: Ancient wall paintings & celestial carvings ──
+      set("--l3-y", `${l3Y.toFixed(2)}px`);
+      set("--l3-scale", l3Scale.toFixed(4));
+      set("--l3-opacity", l3Opacity.toFixed(4));
+
+      // ── Layer 2: Foreground cave floor rocks and mist ──
+      set("--l2-y", `${l2Y.toFixed(2)}px`);
+      set("--l2-scale", l2Scale.toFixed(4));
+      set("--l2-opacity", l2Opacity.toFixed(4));
+
+      // ── Layer 1: Foreground stalactite framing arch at cave mouth ──
+      set("--l1-y", `${l1Y.toFixed(2)}px`);
+      set("--l1-scale", l1Scale.toFixed(4));
+      set("--l1-opacity", l1Opacity.toFixed(4));
+
+      // ── Scrim Shade: subtle ambient vignette only, never covers or blurs the cave ──
+      const shadeLevel = Math.max(p2.active * 0.35, p3Enter * 0.25);
+      set("--shade-opacity", shadeLevel.toFixed(4));
+
+      // ── Intro Copy ──
+      set("--intro-y", `${(introExit * 70).toFixed(2)}px`);
+      set("--intro-opacity", (1 - introExit).toFixed(4));
+      set("--intro-pe", introExit > 0.5 ? "none" : "auto");
+
+      // ── Panel 2: Collections ──
+      set("--panel2-opacity", p2.active.toFixed(4));
+      set("--panel2-y", `${((1 - p2.enter) * 45 - p2.exit * 45).toFixed(2)}px`);
+      set("--panel2-pe", p2.active > 0.45 ? "auto" : "none");
+
+      // ── Panel 3: Collaborate (stays locked & fully visible) ──
+      set("--panel3-opacity", p3Enter.toFixed(4));
+      set("--panel3-y", `${p3Y.toFixed(2)}px`);
+      set("--panel3-pe", p3Enter > 0.4 ? "auto" : "none");
 
       const needsMore = Math.abs(st.smoothScroll - st.targetScroll) > 0.08;
 
@@ -266,11 +202,11 @@ export function GalleryCinematic() {
       }
     }
 
-    // Scroll listeners
+    // Event listeners - only scroll & resize
     window.addEventListener("scroll", requestTick, { passive: true });
     window.addEventListener("resize", requestTick);
 
-    // Initial Tick
+    // Initial tick
     requestTick();
 
     return () => {
@@ -284,217 +220,258 @@ export function GalleryCinematic() {
       id: "art",
       title: "Art",
       description:
-        "Original artwork, prints, digital art and limited editions - created by KoD.",
-      image: "/gallery/art.png",
+        "Original fine art, sacred cave iconography, limited print editions, and digital masterpieces created by KoD.",
+      image: "/textures/mother-new.webp",
       tags: ["Originals", "Prints", "Digital Art"],
     },
     {
       id: "merch",
       title: "Merch",
       description:
-        "Apparel, t-shirts, posters, creative objects and accessories carrying the KoD universe.",
-      image: "/gallery/merch.png",
-      tags: ["Apparel", "Objects", "Accessories"],
+        "Apparel, luxury streetwear, bespoke posters, creative objects, and wearable relics of the KoD universe.",
+      image: "/textures/merch-new.webp",
+      tags: ["Apparel", "Relics", "Accessories"],
     },
     {
       id: "drops",
       title: "Drops",
       description:
-        "Limited releases, seasonal collections, artist collaborations and KoD originals.",
-      image: "/gallery/drops.png",
-      tags: ["Limited Releases", "Collabs", "KoD Originals"],
+        "Time-gated releases, seasonal ceremonial capsules, artist collaborations, and rare numbered editions.",
+      image: "/textures/art-new.webp",
+      tags: ["Limited Releases", "Collabs", "KoD Editions"],
     },
   ];
 
   return (
     <div className={styles.galleryContainer} ref={containerRef}>
       <section
-        className={styles["cinema-scroll"]}
+        className={styles.cinemaScroll}
         id="cinema"
-        aria-label="KoD Cinematic scroll story"
+        aria-label="KoD Cinematic Sanctuary Journey"
         ref={sectionRef}
       >
         <div className={styles.stage}>
           <div className={styles.world}>
+            {/* Layer 7: Deepest glowing cave portal */}
             <img
-              className={`${styles["scene-img"]} ${styles["sky-img"]}`}
-              src="https://raft-blast-61784561.figma.site/_assets/v11/16b5007d9c93971e26ffe4e0e3e37946f6bd538c.png"
-              alt=""
+              className={`${styles.layer} ${styles.layer7}`}
+              src="/gallery/parallax/layer-77-portal.webp"
+              alt="Deep cavern portal glow"
             />
 
-            <div className={styles["back-stack"]}>
-              <img
-                className={`${styles["scene-img"]} ${styles["back-img"]} ${styles["back-four"]}`}
-                src="https://raft-blast-61784561.figma.site/_assets/v11/8a7f8af50e0ce92ec2e228e7b0b4112178c51cf1.png"
-                alt=""
-              />
-
-              <img
-                className={`${styles["scene-img"]} ${styles["back-img"]} ${styles["back-bazaar"]}`}
-                src="https://raft-blast-61784561.figma.site/_assets/v11/864afe00e41e2fa20a5aa546e15cb807e0f81384.png"
-                alt=""
-              />
-            </div>
-
-            <h1 className={styles["hero-title"]}>GALLERY</h1>
-
+            {/* Layer 6: Cavern spires and stalagmites */}
             <img
-              className={`${styles["scene-img"]} ${styles["splitframe-img"]} ${styles["splitframe-left"]}`}
-              src="https://raft-blast-61784561.figma.site/_assets/v11/7536d7b60a1fce482cf6edf3f0bffd3bad5d0f8a.png"
-              alt=""
-            />
-            <img
-              className={`${styles["scene-img"]} ${styles["splitframe-img"]} ${styles["splitframe-right"]}`}
-              src="https://raft-blast-61784561.figma.site/_assets/v11/392db6a6a6b98e868bd7f8d3f55bb719d51e5028.png"
-              alt=""
-            />
-            <img
-              className={`${styles["scene-img"]} ${styles["bridge-img"]}`}
-              src="https://raft-blast-61784561.figma.site/_assets/v11/c6a6d8ef49bca43f708aa852692942c45ec950d4.png"
-              alt=""
-            />
-            <img
-              className={`${styles["scene-img"]} ${styles["frame-two-img"]}`}
-              src="https://raft-blast-61784561.figma.site/_assets/v11/ba75252bab2b1c510987b74837770f7bc8a6b2d4.png"
-              alt=""
+              className={`${styles.layer} ${styles.layer6}`}
+              src="/gallery/parallax/layer-66-spires.webp"
+              alt="Distant cave rock spires"
             />
 
-            <div className={styles.shade}></div>
+            {/* Layer 5: High chamber vault & volumetric golden light */}
+            <img
+              className={`${styles.layer} ${styles.layer5}`}
+              src="/gallery/parallax/layer-55-rays.webp"
+              alt="Volumetric light rays"
+            />
+
+            {/* Hero Title: Embedded in the 3D cavern atmosphere */}
+            <h1 className={styles.heroTitle}>GALLERY</h1>
+
+            {/* Layer 4: Illuminated reflective pools and stone pathway */}
+            <img
+              className={`${styles.layer} ${styles.layer4}`}
+              src="/gallery/parallax/layer-44-path.webp"
+              alt="Illuminated stone path and pools"
+            />
+
+            {/* Layer 3: Ancient wall paintings and sacred carvings */}
+            <img
+              className={`${styles.layer} ${styles.layer3}`}
+              src="/gallery/parallax/layer-33-carvings.webp"
+              alt="Ancient cave wall paintings"
+            />
+
+            {/* Layer 2: Foreground cave floor rocks and mist */}
+            <img
+              className={`${styles.layer} ${styles.layer2}`}
+              src="/gallery/parallax/layer-22-rocks.webp"
+              alt="Foreground cave floor and mist"
+            />
+
+            {/* Layer 1: Foreground stalactite framing arch at cave mouth */}
+            <img
+              className={`${styles.layer} ${styles.layer1}`}
+              src="/gallery/parallax/layer-11-arch.webp"
+              alt="Cave entrance framing arch"
+            />
+
+            {/* Scrim Shade for enhanced content readability */}
+            <div className={styles.shade} />
           </div>
 
+          {/* ── Intro Section (Scroll 0) ── */}
           <section
-            className={`${styles["intro-copy"]} !bottom-[max(25vh,10px)] md:!bottom-[max(15vh,10px)]`}
+            className="absolute z-12 left-1/2 bottom-24 sm:bottom-32 md:bottom-40 w-[min(860px,94vw)] text-center will-change-[transform,opacity] [transform:translate3d(-50%,var(--intro-y,0px),0)] [opacity:var(--intro-opacity,1)] [pointer-events:var(--intro-pe,auto)]"
             aria-label="Gallery overview"
-            style={{
-              pointerEvents: "auto",
-              width: "min(900px, 95vw)",
-            }}
           >
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto w-full">
-              <span className="text-base font-bold tracking-[0.15em] uppercase text-canvas mb-4 inline-block drop-shadow-md">
+            <div className="relative max-w-2xl mx-auto px-6 py-9 sm:px-12 sm:py-12 md:px-16 md:py-14 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-black/55 via-black/45 to-black/75 backdrop-blur-md shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
+
+              <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-kod-gold mb-2.5 inline-block drop-shadow-sm">
                 KOD UNIVERSE
               </span>
-              <h2 className="font-editorial text-4xl md:text-5xl text-canvas leading-[1.1] mb-5 drop-shadow-lg">
+              <h2 className="font-editorial text-3xl md:text-5xl text-kod-canvas leading-[1.1] mb-3.5 drop-shadow-md">
                 Art + Commerce.
-                <br />A Creative World.
+                <br />A Creative Sanctuary.
               </h2>
-              <p className="max-w-xl mx-auto mb-8">
-                An independent creative-commercial destination. Original pieces,
-                limited drops, and objects that tell a story.
+              <p className="text-sm md:text-base text-kod-mist/95 max-w-lg mx-auto mb-6 leading-relaxed drop-shadow-sm">
+                An ancient visual realm meeting contemporary creative commerce.
+                Original artwork, limited drops, and artifacts that tell a profound story.
               </p>
-              <Link
-                href="https://kod-universe.vercel.app/gallery#gallery-collections"
-                className="btn-primary mt-10"
+              <button
+                type="button"
+                onClick={() => {
+                  if (sectionRef.current) {
+                    const top = sectionRef.current.offsetTop + 700;
+                    window.scrollTo({ top, behavior: "smooth" });
+                  }
+                }}
+                className="btn-primary !px-7 !py-3.5 mx-auto shadow-2xl hover:scale-105 transition-transform"
               >
                 <span>Explore the collections</span>
                 <span className="btn-badge">
-                  <ArrowRight size={13} aria-hidden="true" />
+                  <ArrowRight size={14} aria-hidden="true" />
                 </span>
-              </Link>
+              </button>
             </div>
           </section>
-
           <section
-            className={`${styles["story-panel"]} ${styles["story-panel-bridge"]}`}
-            id="journey"
-            aria-label="The Journey details"
-            style={{ pointerEvents: "var(--panel2-pe, none)" as any, width: "min(1000px, 90vw)" }}
+            className="absolute z-15 left-1/2 top-1/2 w-[94vw] md:w-[min(1160px,92vw)] will-change-[transform,opacity] [transform:translate3d(-50%,calc(-50%+var(--panel2-y,0px)),0)] [opacity:var(--panel2-opacity,0)] [pointer-events:var(--panel2-pe,none)] motion-reduce:transition-none"
+            id="collections"
+            aria-label="KoD Gallery Collections"
           >
-            <div className="flex flex-col md:flex-row gap-3 md:gap-12 items-start w-full">
-              {galleryCategories.map((category, index) => (
-                <div
+            {/* Mobile Category Tabs */}
+            <div className="flex md:hidden items-center justify-center gap-2 mb-3">
+              {galleryCategories.map((category, idx) => (
+                <button
                   key={category.id}
-                  className="relative flex flex-row md:flex-col items-center md:items-start justify-between w-full bg-earth/70 backdrop-blur-3xl rounded p-1 md:p-2 group border border-transparent hover:border-signal-orange/30 transition-colors"
+                  type="button"
+                  onClick={() => scrollToCategory(idx)}
+                  className={`px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                    activeCategory === idx
+                      ? "bg-kod-orange text-white shadow-md shadow-kod-orange/30 scale-105 font-bold"
+                      : "bg-black/60 text-kod-dust/80 border border-white/10 hover:text-white"
+                  }`}
                 >
-                  <Link href={`/gallery/${category.id}`} className="absolute inset-0 md:hidden z-10">
-                    <span className="sr-only">View {category.title}</span>
-                  </Link>
-                  <div className="w-16 h-32 shrink-0 md:w-full md:h-48 relative overflow-hidden rounded md:mb-0">
+                  {category.title}
+                </button>
+              ))}
+            </div>
+
+            <div
+              ref={collectionsScrollRef}
+              onScroll={onCollectionsScroll}
+              className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 w-full overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none py-1"
+            >
+              {galleryCategories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={`/gallery/${category.id}`}
+                  className="w-[82vw] max-w-[340px] md:w-auto md:max-w-none flex-shrink-0 snap-center relative rounded overflow-hidden border border-white/15 hover:border-kod-orange/70 transition-all duration-500 group shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_25px_60px_-10px_rgba(229,76,42,0.35)] flex flex-col justify-between h-[390px] sm:h-[430px] md:h-[460px] p-5 sm:p-6 cursor-pointer isolate"
+                >
+                  <div className="absolute inset-0 -z-10 overflow-hidden">
                     <Image
                       src={category.image}
                       alt={category.title}
                       fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 85vw, 33vw"
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/25 group-hover:via-black/45 transition-colors duration-500" />
                   </div>
+                  <div className="relative z-10 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5">
+                      {category.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[9px] sm:text-[10px] tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-white/85 border border-white/15"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative z-10 flex flex-col justify-end mt-auto pt-6">
+                    <div className="mb-2">
+                      <h3 className="font-metropolis text-2xl sm:text-3xl font-extrabold text-white tracking-tight group-hover:text-kod-orange transition-colors duration-300 drop-shadow-md">
+                        {category.title}
+                      </h3>
+                    </div>
 
-                  <div className="flex flex-col flex-grow pl-4 md:pl-0 md:pt-6 w-full text-left md:text-center md:justify-center">
-                    <h2 className="!text-xl md:!text-4xl font-semibold text-earth tracking-tight !mb-0 md:mb-8 group-hover:text-signal-orange transition-colors duration-500 m-0">
-                      {category.title}
-                    </h2>
-
-                    <p className="text-xs md:text-lg text-earth/80 md:pb-2 leading-relaxed line-clamp-2 md:line-clamp-none !mt-2 md:mt-0">
+                    <p className="text-xs sm:text-sm text-kod-mist/90 leading-relaxed line-clamp-3 mb-5 group-hover:text-white/95 transition-colors duration-300 drop-shadow">
                       {category.description}
                     </p>
 
-                    <Link
-                      href={`/gallery/${category.id}`}
-                      className="flex items-center justify-center btn-dark mt-4 w-fit mx-auto"
-                    >
-                      <span>View {category.title}</span> <span className="hidden md:block">Gallery</span>
-                      <span className="btn-badge">
-                        <ArrowRight size={18} />
+                    <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white group-hover:bg-kod-orange group-hover:border-kod-orange group-hover:text-white transition-all duration-300 shadow-lg w-fit">
+                      <span>Explore {category.title}</span>
+                      <span className="w-6 h-6 rounded-full bg-white/20 group-hover:bg-white group-hover:text-kod-orange flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                        <ArrowRight size={13} aria-hidden="true" />
                       </span>
-                    </Link>
+                    </div>
                   </div>
-                </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex md:hidden items-center justify-center gap-1.5 mt-2.5">
+              {galleryCategories.map((cat, idx) => (
+                <span
+                  key={cat.id}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    activeCategory === idx ? "w-6 bg-kod-orange" : "w-1.5 bg-white/25"
+                  }`}
+                  aria-hidden="true"
+                />
               ))}
             </div>
           </section>
 
           <section
-            className={`${styles["story-panel"]} ${styles["story-panel-bazaar"]}`}
+            className="absolute z-15 left-1/2 top-[48%] md:top-1/2 w-[94vw] md:w-[min(1460px,98vw)] will-change-[transform,opacity] [transform:translate3d(-50%,calc(-50%+var(--panel3-y,0px)),0)] [opacity:var(--panel3-opacity,0)] [pointer-events:var(--panel3-pe,none)] motion-reduce:transition-none"
             id="collaborate"
             aria-label="Collaborate details"
-            style={{ pointerEvents: "var(--panel3-pe, none)" as any, width: "min(900px, 92vw)" }}
           >
-            <div className="bg-earth/70 backdrop-blur-3xl rounded p-10 md:p-14 relative overflow-hidden shadow-2xl flex flex-col items-center text-center w-full">
-              <div className="relative z-10 max-w-2xl mx-auto">
-                <SectionLabel className="text-clay">
-                  Collaborate &amp; Commission
-                </SectionLabel>
-                <h3
-                  className="text-4xl md:text-5xl text-canvas mb-6 leading-tight mt-6"
-                  style={{ textShadow: "none" }}
+            <div className="bg-black/65 !backdrop-blur-xl rounded p-8 sm:p-12 md:p-14 border border-white/15 shadow-2xl flex flex-col items-center text-center max-w-2xl mx-auto relative overflow-hidden">
+              <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-40 bg-kod-orange/15 rounded-full blur-3xl pointer-events-none" />
+
+              <SectionLabel className="text-kod-gold !border-kod-gold/30 relative z-10">
+                Collaborate &amp; Commission
+              </SectionLabel>
+
+              <h2 className="font-editorial text-3xl sm:text-4xl md:text-5xl text-kod-canvas mt-5 mb-4 leading-tight relative z-10 drop-shadow-md">
+                Art that lives{" "}
+                <em className="italic font-normal text-kod-clay">beyond the screen.</em>
+              </h2>
+
+              <p className="text-sm sm:text-base text-kod-mist/90 max-w-xl mx-auto mb-8 leading-relaxed relative z-10 drop-shadow">
+                Looking for a bespoke creation, exclusive exhibition pieces, or limited editions?
+                Step into our creative space and collaborate directly with the studio.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center relative z-10">
+                <Link href="/gallery/drops" className="btn-primary shadow-xl ">
+                  <span>See Latest Drops</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="btn-secondary !text-kod-canvas !border-white/30 hover:!border-kod-orange hover:!text-kod-orange hover:!bg-white/5 shadow-xl"
                 >
-                  Art that lives{" "}
-                  <em className="font-serif italic font-normal text-clay">
-                    beyond the screen.
-                  </em>
-                </h3>
-                <p
-                  className="text-base text-canvas/70 mb-10 max-w-lg mx-auto"
-                  style={{
-                    textShadow: "none",
-                    margin: "0 auto 40px auto",
-                    width: "100%",
-                  }}
-                >
-                  Looking for a bespoke creation or interested in our latest
-                  drops? Step into the studio and let&apos;s collaborate.
-                </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link
-                    href="/gallery/drops"
-                    className="btn-primary !h-12 !px-6"
-                    style={{ textShadow: "none" }}
-                  >
-                    <span>See Latest Drops</span>
-                    <span className="btn-badge">
-                      <ArrowRight size={13} aria-hidden="true" />
-                    </span>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="btn-secondary !h-12 !px-6 !text-canvas !border-canvas/50 hover:!border-canvas hover:!bg-canvas hover:!text-earth"
-                    style={{ textShadow: "none" }}
-                  >
-                    <span>Commission a Piece</span>
-                    <span className="btn-badge !border-current !text-current">
-                      <ArrowRight size={13} aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
+                  <span>Commission a Piece</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </span>
+                </Link>
               </div>
             </div>
           </section>

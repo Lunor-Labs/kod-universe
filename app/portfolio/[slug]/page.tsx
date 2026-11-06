@@ -4,12 +4,12 @@ import {
   projects,
   getProjectBySlug,
   getRelatedProjects,
+  getCaseStudyForProject,
 } from "@/data/projects";
 import type { Project, ProjectPillar } from "@/types/project";
 import { ProjectHeroShowcase } from "@/features/work/ProjectHeroShowcase";
 import { ProjectCaseStudy } from "@/features/work/ProjectCaseStudy";
 import { ServiceCaseStudy } from "@/components/services/ServiceCaseStudy";
-import { getCaseStudyForProject } from "@/features/work/projectCaseStudyData";
 import { ProjectNavigation } from "@/features/work/ProjectNavigation";
 import { RelatedProjectsSection } from "@/features/work/RelatedProjectsSection";
 
@@ -42,25 +42,25 @@ function getPillarsForProject(project: Project): ProjectPillar[] {
         title: "Growth",
         description:
           "Built a stronger digital presence with consistent branded content.",
-        icon: "/portfolio/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/growth.webp",
       },
       {
         title: "Awareness",
         description:
           "Created memorable campaigns, product education and seasonal storytelling.",
-        icon: "/portfolio/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/awareness.webp",
       },
       {
         title: "Engagement",
         description:
           "Designed conversation-driven posts and community-first content.",
-        icon: "/portfolio/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/engagement.webp",
       },
       {
         title: "Lead Conversion",
         description:
           "Supported promotions, inquiries and product-driven action.",
-        icon: "/portfolio/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
+        icon: "/portfolio/marketing/social-media/bio-oil-social-media-content-highlights/icon/lead-conversion.webp",
       },
     ];
   }

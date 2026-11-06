@@ -31,7 +31,7 @@ export function Footer() {
       role="contentinfo"
       aria-label="Site footer"
     >
-      <div className="container-site py-16 md:py-20">
+      <div className="container-site py-10 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-2">
             <Link
@@ -127,7 +127,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-earth">
-        <div className="container-site py-5 pb-24 md:pb-5">
+        <div className="container-site py-5 pb-8 md:pb-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/70">
               © {new Date().getFullYear()} KOD Universe. All rights reserved.
