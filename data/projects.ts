@@ -298,6 +298,316 @@ export const projects: Project[] = [
   },
   {
     id: "3",
+    slug: "pissu-kanna-brand-merchandise",
+    title: "PISSUKANNA – Merchandise Design",
+    client: "PISSUKANNA",
+    category: "DESIGN",
+    subCategory: "Merchandise",
+    subCategories: [
+      "Merchandise Design",
+      "Apparel Design",
+      "Graphic Design",
+      "Creative Concept Development",
+      "Visual Storytelling",
+    ],
+    year: 2021,
+    location: "Sri Lanka",
+    timeline: "2021",
+    shortDescription:
+      "Created for the 2021 Pissukanna Design Challenge, this merchandise concept explored bold graphics, playful patterns, and expressive apparel design. KOD Universe's entry won first place in the competition.",
+    overview:
+      "For the 2021 Pissukanna Design Challenge, KOD Universe created an expressive merchandise design concept that embraced the brand's playful, unconventional personality. The concept included original graphics and apparel mockups and was awarded first place.",
+    challenge:
+      "Create merchandise that expresses Pissukanna's distinctive identity and stands apart from conventional apparel graphics.",
+    approach:
+      "We explored bold colors, illustrative motifs, high-energy compositions, and playful styling, applying the concept across T-shirt and other apparel mockups.",
+    outcome:
+      "The merchandise concept won first place in the 2021 Pissukanna Design Challenge.",
+    deliverables: [
+      "Merchandise design concept",
+      "Creative concept development",
+      "Custom graphic design",
+      "Apparel mockups",
+      "Design-challenge submission",
+    ],
+    projectLinks: [
+      {
+        label: "Watch 2021 challenge video",
+        url: "https://www.youtube.com/watch?v=ExDGExKX6sw&t=784s",
+      },
+    ],
+    pillars: [
+      {
+        title: "Rebellion",
+        description:
+          "Breaking free from corporate neutrality with authentic, high-voltage street personality.",
+      },
+      {
+        title: "Character",
+        description:
+          "An instantly identifiable mascot mark engineered for stickers, shirts, and screens.",
+      },
+      {
+        title: "Tactility",
+        description:
+          "Rich apparel mockups and screen-print-ready artwork calibrated for high quality.",
+      },
+      {
+        title: "Culture",
+        description:
+          "Deeply rooted in grassroots urban art, youth humor, and creative freedom.",
+      },
+    ],
+    heroImage: {
+      src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-apparel-showcase.webp",
+      alt: "Pissu Kanna Streetwear Apparel Splash Showcase",
+      width: 1254,
+      height: 1254,
+    },
+    cardImage: {
+      src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-merch-lifestyle.webp",
+      alt: "Pissu Kanna Street Merch Lifestyle Showcase",
+      width: 1600,
+      height: 1600,
+    },
+    galleryImages: [
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-01.webp",
+        alt: "Pissu Kanna Visual Concept 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-02.webp",
+        alt: "Pissu Kanna Visual Concept 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-03.webp",
+        alt: "Pissu Kanna Visual Concept 03",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-04.webp",
+        alt: "Pissu Kanna Visual Concept 04",
+        width: 1672,
+        height: 941,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-merch-lifestyle.webp",
+        alt: "Pissu Kanna Merch Lifestyle",
+        width: 1600,
+        height: 1600,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-branding.webp",
+        alt: "Pissu Kanna Mascot & Character Branding",
+        width: 3584,
+        height: 3584,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-03.webp",
+        alt: "Pissu Kanna Street Art Artboard 03",
+        width: 2251,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-06.webp",
+        alt: "Pissu Kanna Street Art Artboard 06",
+        width: 2251,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-07.webp",
+        alt: "Pissu Kanna Street Art Artboard 07",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-09.webp",
+        alt: "Pissu Kanna Street Art Artboard 09",
+        width: 2251,
+        height: 2250,
+      },
+    ],
+    tags: [
+      "Merchandise Design",
+      "Apparel Design",
+      "Graphic Design",
+      "Creative Concept Development",
+      "Visual Storytelling",
+    ],
+    featured: true,
+    badge: "1ST PLACE WINNER",
+    tagline:
+      "Graphic Design | Creative Concept Development",
+    palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
+    stats: {
+      primaryValue: "2021",
+      primaryLabel: "Design Challenge",
+      secondaryValue: "1ST PLACE",
+      secondaryLabel: "Winner",
+      summary: "Won first place in the 2021 Pissukanna Design Challenge.",
+    },
+    relatedSlugs: [
+      "area-6-brand-identity",
+      "kaiz-brand-identity",
+      "slsa-uk-identity",
+    ],
+  },
+  {
+    id: "4",
+    slug: "ibiza-mirissa-architectural-design",
+    title: "IBIZA Mirissa – Architectural Visualization",
+    client: "IBIZA Mirissa (Architect: Dilan Rajanayake)",
+    category: "DESIGN",
+    subCategory: "Spatial / Architecture",
+    subCategories: [
+      "Architectural Visualization",
+      "3D Modeling & Rendering",
+      "Interior & Exterior Visualization",
+      "Spatial Design Visualization",
+      "Creative Direction",
+    ],
+    year: 2024,
+    location: "Mirissa, Sri Lanka",
+    timeline: "2024",
+    shortDescription:
+      "A luxury coastal hospitality visualization for IBIZA Mirissa, bringing architectural design to life through realistic 3D rendering, spatial detailing, and atmospheric visuals.",
+    overview:
+      "IBIZA Mirissa is a coastal hospitality project located in Mirissa, Sri Lanka, designed by architect Dilan Rajanayake.\n\nKoD Universe worked on the architectural visualization, transforming the design into realistic 3D visuals that capture the atmosphere, character, and experience of the space.",
+    challenge:
+      "The objective was to present the architectural vision of IBIZA Mirissa through detailed 3D visualizations.\n\nThe visuals needed to communicate the design, spatial arrangement, materials, and overall atmosphere of a modern coastal hospitality destination.",
+    approach:
+      "We focused on bringing the architectural concept to life through realistic 3D environments.\n\nWorking with the architectural design, we developed visualizations that highlight the building's structure, spatial flow, materials, lighting, and surrounding environment.\n\nCareful attention was given to textures, natural lighting, and camera perspectives to create an inviting coastal atmosphere.",
+    outcome:
+      "The final visualizations bring the architectural vision of IBIZA Mirissa closer to reality, showcasing the relationship between design, space, and the coastal setting.\n\nThe project demonstrates how thoughtful 3D visualization can communicate an architectural experience before construction.\n\nFrom architectural vision to visual reality.",
+    deliverables: [
+      "3D Architectural Visualization",
+      "Exterior Architectural Rendering",
+      "Interior Visualization",
+      "Material & Texture Visualization",
+      "Lighting & Atmosphere Development",
+      "Environmental Visualization",
+      "Final CGI Renders",
+    ],
+    pillars: [
+      {
+        title: "Atmosphere",
+        description:
+          "Capturing the serene, golden-hour dusk light across oceanside living spaces.",
+      },
+      {
+        title: "Materiality",
+        description:
+          "Curating authentic textures of raw timber, sandstone, and bespoke fixtures.",
+      },
+      {
+        title: "Spatial Flow",
+        description:
+          "Seamless transitions between open-air coastal terraces and secluded villas.",
+      },
+      {
+        title: "Immersion",
+        description:
+          "Photorealistic perspective rendering that brings prospective guests into the space.",
+      },
+    ],
+    heroImage: {
+      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-pavilion-plaza.webp",
+      alt: "IBIZA Mirissa Tropical A-Frame Pavilion Plaza Spatial Architecture",
+      width: 1254,
+      height: 1254,
+    },
+    cardImage: {
+      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.webp",
+      alt: "IBIZA Mirissa Architectural Concept 01",
+      width: 1254,
+      height: 1254,
+    },
+    galleryImages: [
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 01",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-02.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 02",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-03.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 03",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-04.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 04",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-05.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 05",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-06.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 06",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-07.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 07",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-08.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 08",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-09.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 09",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-10.webp",
+        alt: "IBIZA Mirissa Spatial Architecture View 10",
+        width: 1254,
+        height: 1254,
+      },
+    ],
+    tags: [
+      "Architectural Visualization",
+      "3D Modeling & Rendering",
+      "Interior & Exterior Visualization",
+      "Spatial Design Visualization",
+      "Creative Direction",
+    ],
+    featured: false,
+    badge: "COASTAL HOSPITALITY",
+    tagline: "3D Visualization | Architectural Rendering | Spatial Design",
+    palette: ["#1E3A8A", "#D97706", "#F3F4F6", "#1F2937", "#FFFFFF"],
+    relatedSlugs: [
+      "digital-art-visual-explorations",
+      "pissu-kanna-brand-merchandise",
+      "area-6-brand-identity",
+    ],
+  },
+  {
+    id: "5",
     slug: "area-6-social-media",
     title: "Area 6 Social Media & Creative",
     client: "Area 6",
@@ -397,7 +707,7 @@ export const projects: Project[] = [
   },
   /*
   {
-    id: "4",
+    id: "6",
     slug: "coats-sri-lanka-campaign",
     title: "Coats Sri Lanka Social Content",
     client: "Coats Sri Lanka",
@@ -475,7 +785,7 @@ export const projects: Project[] = [
   },
   */
   {
-    id: "5",
+    id: "7",
     slug: "niwarthana-packaging-design",
     title: "Niwarthana Packaging",
     client: "Niwarthana",
@@ -599,7 +909,7 @@ export const projects: Project[] = [
     relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
   },
   {
-    id: "6",
+    id: "8",
     slug: "rouka-brand-identity",
     title: "ROUKA – Logo & Brand Identity",
     client: "ROUKA",
@@ -767,7 +1077,7 @@ export const projects: Project[] = [
     relatedSlugs: ["slsa-uk-identity", "niwarthana-packaging-design"],
   },
   {
-    id: "7",
+    id: "9",
     slug: "slsa-uk-identity",
     title: "SLSA – Logo & Brand Identity",
     client: "SLSA (University of Kentucky)",
@@ -910,7 +1220,7 @@ export const projects: Project[] = [
     relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
   },
   {
-    id: "8",
+    id: "10",
     slug: "coffee-1911-identity",
     title: "Coffee 1911 – Brand & Identity",
     client: "Coffee 1911",
@@ -1072,7 +1382,7 @@ export const projects: Project[] = [
     relatedSlugs: ["niwarthana-packaging-design", "cool-step-identity"],
   },
   {
-    id: "9",
+    id: "11",
     slug: "cool-step-identity",
     title: "Cool Steps – Brand Identity",
     client: "Cool Steps",
@@ -1225,7 +1535,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "10",
+    id: "12",
     slug: "focal-logo-identity",
     title: "FOCAL – One Focus. Two Worlds.",
     client: "FOCAL",
@@ -1419,7 +1729,7 @@ export const projects: Project[] = [
     relatedSlugs: ["cool-step-identity", "frans-niwasa-identity"],
   },
   {
-    id: "11",
+    id: "13",
     slug: "frans-niwasa-identity",
     title: "FRANS Niwasa – Logo & Brand Identity",
     client: "FRANS Niwasa",
@@ -1574,7 +1884,7 @@ export const projects: Project[] = [
     relatedSlugs: ["cool-step-identity", "kaiz-brand-identity"],
   },
   {
-    id: "12",
+    id: "14",
     slug: "kaiz-brand-identity",
     title: "Kaizer Kaiz – Artist Logo & Brand Identity",
     client: "Kaizer Kaiz",
@@ -1688,7 +1998,7 @@ export const projects: Project[] = [
     relatedSlugs: ["focal-logo-identity", "maya-brand-identity"],
   },
   {
-    id: "13",
+    id: "15",
     slug: "maya-brand-identity",
     title: "MAYA Enterprises – Brand Identity & Logo Design",
     client: "MAYA Enterprises",
@@ -1858,7 +2168,7 @@ export const projects: Project[] = [
     relatedSlugs: ["kaiz-brand-identity", "focal-logo-identity"],
   },
   {
-    id: "14",
+    id: "16",
     slug: "area-6-brand-identity",
     title: "AREA 6 – Logo & Brand Identity",
     client: "AREA 6",
@@ -1997,7 +2307,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "15",
+    id: "17",
     slug: "bito-brand-identity",
     title: "BITO – Footwear Logo & Brand Identity",
     client: "BITO",
@@ -2137,7 +2447,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "16",
+    id: "18",
     slug: "coco-brand-identity",
     title: "Coconut Husk Chips – Product Branding & Visual Identity",
     client: "Coconut Husk Chips",
@@ -2332,316 +2642,6 @@ export const projects: Project[] = [
       "bito-brand-identity",
       "rouka-brand-identity",
       "niwarthana-packaging-design",
-    ],
-  },
-  {
-    id: "17",
-    slug: "ibiza-mirissa-architectural-design",
-    title: "IBIZA Mirissa – Architectural Visualization",
-    client: "IBIZA Mirissa (Architect: Dilan Rajanayake)",
-    category: "DESIGN",
-    subCategory: "Spatial / Architecture",
-    subCategories: [
-      "Architectural Visualization",
-      "3D Modeling & Rendering",
-      "Interior & Exterior Visualization",
-      "Spatial Design Visualization",
-      "Creative Direction",
-    ],
-    year: 2024,
-    location: "Mirissa, Sri Lanka",
-    timeline: "2024",
-    shortDescription:
-      "A luxury coastal hospitality visualization for IBIZA Mirissa, bringing architectural design to life through realistic 3D rendering, spatial detailing, and atmospheric visuals.",
-    overview:
-      "IBIZA Mirissa is a coastal hospitality project located in Mirissa, Sri Lanka, designed by architect Dilan Rajanayake.\n\nKoD Universe worked on the architectural visualization, transforming the design into realistic 3D visuals that capture the atmosphere, character, and experience of the space.",
-    challenge:
-      "The objective was to present the architectural vision of IBIZA Mirissa through detailed 3D visualizations.\n\nThe visuals needed to communicate the design, spatial arrangement, materials, and overall atmosphere of a modern coastal hospitality destination.",
-    approach:
-      "We focused on bringing the architectural concept to life through realistic 3D environments.\n\nWorking with the architectural design, we developed visualizations that highlight the building's structure, spatial flow, materials, lighting, and surrounding environment.\n\nCareful attention was given to textures, natural lighting, and camera perspectives to create an inviting coastal atmosphere.",
-    outcome:
-      "The final visualizations bring the architectural vision of IBIZA Mirissa closer to reality, showcasing the relationship between design, space, and the coastal setting.\n\nThe project demonstrates how thoughtful 3D visualization can communicate an architectural experience before construction.\n\nFrom architectural vision to visual reality.",
-    deliverables: [
-      "3D Architectural Visualization",
-      "Exterior Architectural Rendering",
-      "Interior Visualization",
-      "Material & Texture Visualization",
-      "Lighting & Atmosphere Development",
-      "Environmental Visualization",
-      "Final CGI Renders",
-    ],
-    pillars: [
-      {
-        title: "Atmosphere",
-        description:
-          "Capturing the serene, golden-hour dusk light across oceanside living spaces.",
-      },
-      {
-        title: "Materiality",
-        description:
-          "Curating authentic textures of raw timber, sandstone, and bespoke fixtures.",
-      },
-      {
-        title: "Spatial Flow",
-        description:
-          "Seamless transitions between open-air coastal terraces and secluded villas.",
-      },
-      {
-        title: "Immersion",
-        description:
-          "Photorealistic perspective rendering that brings prospective guests into the space.",
-      },
-    ],
-    heroImage: {
-      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-pavilion-plaza.webp",
-      alt: "IBIZA Mirissa Tropical A-Frame Pavilion Plaza Spatial Architecture",
-      width: 1254,
-      height: 1254,
-    },
-    cardImage: {
-      src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.webp",
-      alt: "IBIZA Mirissa Architectural Concept 01",
-      width: 1254,
-      height: 1254,
-    },
-    galleryImages: [
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-01.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-02.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 02",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-03.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 03",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-04.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 04",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-05.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 05",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-06.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 06",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-07.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 07",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-08.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 08",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-09.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 09",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/architectural-design/ibiza-mirissa/ibiza-mirissa-concept-10.webp",
-        alt: "IBIZA Mirissa Spatial Architecture View 10",
-        width: 1254,
-        height: 1254,
-      },
-    ],
-    tags: [
-      "Architectural Visualization",
-      "3D Modeling & Rendering",
-      "Interior & Exterior Visualization",
-      "Spatial Design Visualization",
-      "Creative Direction",
-    ],
-    featured: false,
-    badge: "COASTAL HOSPITALITY",
-    tagline: "3D Visualization | Architectural Rendering | Spatial Design",
-    palette: ["#1E3A8A", "#D97706", "#F3F4F6", "#1F2937", "#FFFFFF"],
-    relatedSlugs: [
-      "digital-art-visual-explorations",
-      "pissu-kanna-brand-merchandise",
-      "area-6-brand-identity",
-    ],
-  },
-  {
-    id: "18",
-    slug: "pissu-kanna-brand-merchandise",
-    title: "PISSUKANNA – Merchandise Design",
-    client: "PISSUKANNA",
-    category: "DESIGN",
-    subCategory: "Merchandise",
-    subCategories: [
-      "Merchandise Design",
-      "Apparel Design",
-      "Graphic Design",
-      "Creative Concept Development",
-      "Visual Storytelling",
-    ],
-    year: 2021,
-    location: "Sri Lanka",
-    timeline: "2021",
-    shortDescription:
-      "Created for the 2021 Pissukanna Design Challenge, this merchandise concept explored bold graphics, playful patterns, and expressive apparel design. KOD Universe's entry won first place in the competition.",
-    overview:
-      "For the 2021 Pissukanna Design Challenge, KOD Universe created an expressive merchandise design concept that embraced the brand's playful, unconventional personality. The concept included original graphics and apparel mockups and was awarded first place.",
-    challenge:
-      "Create merchandise that expresses Pissukanna's distinctive identity and stands apart from conventional apparel graphics.",
-    approach:
-      "We explored bold colors, illustrative motifs, high-energy compositions, and playful styling, applying the concept across T-shirt and other apparel mockups.",
-    outcome:
-      "The merchandise concept won first place in the 2021 Pissukanna Design Challenge.",
-    deliverables: [
-      "Merchandise design concept",
-      "Creative concept development",
-      "Custom graphic design",
-      "Apparel mockups",
-      "Design-challenge submission",
-    ],
-    projectLinks: [
-      {
-        label: "Watch 2021 challenge video",
-        url: "https://www.youtube.com/watch?v=ExDGExKX6sw&t=784s",
-      },
-    ],
-    pillars: [
-      {
-        title: "Rebellion",
-        description:
-          "Breaking free from corporate neutrality with authentic, high-voltage street personality.",
-      },
-      {
-        title: "Character",
-        description:
-          "An instantly identifiable mascot mark engineered for stickers, shirts, and screens.",
-      },
-      {
-        title: "Tactility",
-        description:
-          "Rich apparel mockups and screen-print-ready artwork calibrated for high quality.",
-      },
-      {
-        title: "Culture",
-        description:
-          "Deeply rooted in grassroots urban art, youth humor, and creative freedom.",
-      },
-    ],
-    heroImage: {
-      src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-apparel-showcase.webp",
-      alt: "Pissu Kanna Streetwear Apparel Splash Showcase",
-      width: 1254,
-      height: 1254,
-    },
-    cardImage: {
-      src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-merch-lifestyle.webp",
-      alt: "Pissu Kanna Street Merch Lifestyle Showcase",
-      width: 1600,
-      height: 1600,
-    },
-    galleryImages: [
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-01.webp",
-        alt: "Pissu Kanna Visual Concept 01",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-02.webp",
-        alt: "Pissu Kanna Visual Concept 02",
-        width: 1254,
-        height: 1254,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-03.webp",
-        alt: "Pissu Kanna Visual Concept 03",
-        width: 1672,
-        height: 941,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-concept-04.webp",
-        alt: "Pissu Kanna Visual Concept 04",
-        width: 1672,
-        height: 941,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-merch-lifestyle.webp",
-        alt: "Pissu Kanna Merch Lifestyle",
-        width: 1600,
-        height: 1600,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-branding.webp",
-        alt: "Pissu Kanna Mascot & Character Branding",
-        width: 3584,
-        height: 3584,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-03.webp",
-        alt: "Pissu Kanna Street Art Artboard 03",
-        width: 2251,
-        height: 2250,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-06.webp",
-        alt: "Pissu Kanna Street Art Artboard 06",
-        width: 2251,
-        height: 2250,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-07.webp",
-        alt: "Pissu Kanna Street Art Artboard 07",
-        width: 2250,
-        height: 2250,
-      },
-      {
-        src: "/portfolio/Design/merchandise/pissu-kanna/pissu-kanna-artboard-09.webp",
-        alt: "Pissu Kanna Street Art Artboard 09",
-        width: 2251,
-        height: 2250,
-      },
-    ],
-    tags: [
-      "Merchandise Design",
-      "Apparel Design",
-      "Graphic Design",
-      "Creative Concept Development",
-      "Visual Storytelling",
-    ],
-    featured: true,
-    badge: "1ST PLACE WINNER",
-    tagline:
-      "Graphic Design | Creative Concept Development",
-    palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
-    stats: {
-      primaryValue: "2021",
-      primaryLabel: "Design Challenge",
-      secondaryValue: "1ST PLACE",
-      secondaryLabel: "Winner",
-      summary: "Won first place in the 2021 Pissukanna Design Challenge.",
-    },
-    relatedSlugs: [
-      "area-6-brand-identity",
-      "kaiz-brand-identity",
-      "slsa-uk-identity",
     ],
   },
   {

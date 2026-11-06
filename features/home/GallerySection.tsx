@@ -75,7 +75,7 @@ export function GallerySection() {
           <div ref={containerRef} className="absolute inset-0 z-0" />
 
           {/* Top-Left: Gallery Description Overlay */}
-          <div className="absolute top-5 left-5 sm:top-8 sm:left-8 z-20 max-w-xs sm:max-w-md pointer-events-auto bg-black/35 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/15 text-white shadow-2xl">
+          <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8 z-20 max-w-xs sm:max-w-md pointer-events-auto bg-black/35 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/15 text-white shadow-2xl">
             <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-kod-orange mb-1.5 block">
               THE KOD GALLERY
             </span>
@@ -106,7 +106,7 @@ export function GallerySection() {
           </div>
 
           {/* Top-Right: View Gallery Button */}
-          <div className="absolute top-5 right-5 sm:top-8 sm:right-8 z-20 pointer-events-auto">
+          {/* <div className="absolute top-5 right-5 sm:top-8 sm:right-8 z-20 pointer-events-auto">
             <Link
               href="/gallery"
               onClick={(e) => e.stopPropagation()}
@@ -117,9 +117,9 @@ export function GallerySection() {
                 <ArrowRight size={13} />
               </span>
             </Link>
-          </div>
+          </div> */}
 
-          <div className="absolute bottom-6 left-0 w-full flex flex-col items-center gap-2 z-20 pointer-events-auto px-4">
+          <div className="absolute top-6 left-0 w-full flex flex-col items-center sm:items-end gap-2 z-20 pointer-events-auto px-4">
             <div className="flex justify-center gap-3 sm:gap-4">
               {categories.map((cat) => {
                 const isActive = activeDemo === cat.id;

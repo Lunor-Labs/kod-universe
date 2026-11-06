@@ -32,13 +32,18 @@ export function HeroSection() {
       }
     };
 
+    if (isMobile) {
+      notifyReady();
+      return;
+    }
+
     if (videoRef.current && videoRef.current.readyState >= 2) {
       notifyReady();
     }
 
     const fallback = setTimeout(notifyReady, 1200);
     return () => clearTimeout(fallback);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -57,8 +62,18 @@ export function HeroSection() {
       className="relative flex items-center overflow-hidden bg-stone-300 min-h-screen"
       aria-label="Hero section"
     >
-      <>
-        <div className="absolute inset-0 z-0 w-full h-full">
+      <div className="md:hidden absolute inset-0 z-0 w-full h-full">
+        <Image
+          src="/main/hero-mobile-backdrop.jpg"
+          alt="KOD Universe creative origins backdrop"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+      <div className="hidden md:block absolute inset-0 z-0 w-full h-full">
+        {!isMobile && (
           <video
             ref={videoRef}
             src={"/video/main-video.mp4"}
@@ -84,18 +99,18 @@ export function HeroSection() {
               }
             }}
           />
-          <div
-            className={`absolute inset-0 bg-stone-300 transition-opacity duration-700 ${
-              videoReady ? "opacity-0 pointer-events-none" : "opacity-100"
-            }`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-stone-200 via-stone-100 to-stone-200 animate-shimmer bg-[length:200%_100%]" />
-          </div>
+        )}
+        <div
+          className={`absolute inset-0 bg-stone-300 transition-opacity duration-700 ${
+            videoReady ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-200 via-stone-100 to-stone-200 animate-shimmer bg-[length:200%_100%]" />
         </div>
-      </>
+      </div>
 
       <div
-        className="container-site relative z-10 pt-10 md:pt-36 pb-20 w-full transition-all duration-700 ease-out opacity-100 translate-y-0"
+        className="container-site relative z-10 pt-20 md:pt-36 pb-20 w-full transition-all duration-700 ease-out opacity-100 translate-y-0"
       >
         {isMobile ? (
           <div
