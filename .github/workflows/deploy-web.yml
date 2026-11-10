@@ -54,6 +54,22 @@ jobs:
             --project=${{ env.VERCEL_PROJECT_NAME }} \
             --token=${{ secrets.VERCEL_TOKEN }}
 
+      - name: Sync SMTP Environment Variables to Vercel (Preview)
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_TO: ${{ secrets.SMTP_TO }}
+        run: |
+          for key in SMTP_HOST SMTP_PORT SMTP_USER SMTP_PASS SMTP_FROM SMTP_TO; do
+            val="${!key}"
+            if [ -n "$val" ]; then
+              printf '%s' "$val" | vercel env add "$key" preview --force --yes --token=${{ secrets.VERCEL_TOKEN }}
+            fi
+          done
+
       - name: Pull Vercel Environment Info (Preview)
         run: |
           vercel pull \
@@ -109,6 +125,22 @@ jobs:
             --yes \
             --project=${{ env.VERCEL_PROJECT_NAME }} \
             --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Sync SMTP Environment Variables to Vercel (Production)
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_TO: ${{ secrets.SMTP_TO }}
+        run: |
+          for key in SMTP_HOST SMTP_PORT SMTP_USER SMTP_PASS SMTP_FROM SMTP_TO; do
+            val="${!key}"
+            if [ -n "$val" ]; then
+              printf '%s' "$val" | vercel env add "$key" production --force --yes --token=${{ secrets.VERCEL_TOKEN }}
+            fi
+          done
 
       - name: Pull Vercel Environment Info (Production)
         run: |

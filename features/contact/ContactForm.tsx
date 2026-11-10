@@ -28,8 +28,19 @@ interface FormErrors {
 }
 
 async function submitProjectEnquiry(data: FormData): Promise<void> {
-  await new Promise<void>((resolve) => setTimeout(resolve, 1500));
-  console.log("[ContactForm] Enquiry submitted:", data);
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      source: "contact-page",
+      ...data,
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || "Failed to send message.");
+  }
 }
 
 function validateForm(data: FormData): FormErrors {
@@ -271,6 +282,16 @@ export function ContactForm() {
           </p>
         )}
       </div>
+
+      {/* Error Banner */}
+      {status === "error" && (
+        <p
+          role="alert"
+          className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-md px-4 py-3"
+        >
+          Unable to send your message right now. Please try again or email us directly at ayubowan@kod.lk.
+        </p>
+      )}
 
       {/* Submit & Privacy */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
