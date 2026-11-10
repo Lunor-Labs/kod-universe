@@ -29,22 +29,47 @@ export function ContactCTA() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !contact.trim() || !message.trim()) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMsg(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "home-cta",
+          name,
+          contact,
+          service: selectedService,
+          message,
+        }),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Unable to send inquiry right now.");
+      }
       setIsSuccess(true);
-    }, 800);
+    } catch (err) {
+      setErrorMsg(
+        err instanceof Error
+          ? err.message
+          : "Unable to send inquiry right now. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
     setName("");
     setContact("");
     setMessage("");
+    setErrorMsg(null);
     setIsSuccess(false);
   };
 
@@ -244,6 +269,14 @@ export function ContactCTA() {
                           className="w-full p-3.5 text-sm sm:text-base rounded bg-kod-canvas/60 border border-kod-border focus:border-kod-clay focus:outline-none transition-colors text-kod-earth placeholder:text-kod-text-2/50 resize-none"
                         />
                       </div>
+                      {errorMsg && (
+                        <p
+                          role="alert"
+                          className="text-sm text-red-600 bg-red-50 border border-red-200 rounded px-3.5 py-2.5"
+                        >
+                          {errorMsg}
+                        </p>
+                      )}
                       <button
                         type="submit"
                         disabled={isSubmitting}

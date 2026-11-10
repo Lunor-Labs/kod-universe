@@ -48,6 +48,8 @@ export function GalleryCinematic() {
   const [isArtistModalOpen, setIsArtistModalOpen] = useState(false);
   const [creativeTab, setCreativeTab] = useState<"films" | "events" | "collabs">("films");
   const [registrationSubmitted, setRegistrationSubmitted] = useState(false);
+  const [registrationSubmitting, setRegistrationSubmitting] = useState(false);
+  const [registrationError, setRegistrationError] = useState<string | null>(null);
   const [artistForm, setArtistForm] = useState({
     name: "",
     pseudonym: "",
@@ -547,10 +549,40 @@ export function GalleryCinematic() {
                 </div>
 
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    if (!artistForm.consentAgreed) return;
-                    setRegistrationSubmitted(true);
+                    if (!artistForm.consentAgreed || registrationSubmitting) return;
+                    setRegistrationSubmitting(true);
+                    setRegistrationError(null);
+                    try {
+                      const res = await fetch("/api/contact", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                          source: "artist-onboarding",
+                          name: artistForm.name,
+                          email: artistForm.email,
+                          service: artistForm.disciplines,
+                          message: artistForm.bio,
+                          pseudonym: artistForm.pseudonym,
+                          portfolioUrl: artistForm.portfolioUrl,
+                          consentAgreed: artistForm.consentAgreed,
+                        }),
+                      });
+                      if (!res.ok) {
+                        const body = await res.json().catch(() => ({}));
+                        throw new Error(body.error || "Unable to submit registration.");
+                      }
+                      setRegistrationSubmitted(true);
+                    } catch (err) {
+                      setRegistrationError(
+                        err instanceof Error
+                          ? err.message
+                          : "Unable to submit registration right now."
+                      );
+                    } finally {
+                      setRegistrationSubmitting(false);
+                    }
                   }}
                   className="space-y-4"
                 >
@@ -655,6 +687,15 @@ export function GalleryCinematic() {
                     </label>
                   </div>
 
+                  {registrationError && (
+                    <p
+                      role="alert"
+                      className="text-xs text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg px-3 py-2"
+                    >
+                      {registrationError}
+                    </p>
+                  )}
+
                   <div className="pt-4 flex items-center justify-end gap-3">
                     <button
                       type="button"
@@ -665,10 +706,10 @@ export function GalleryCinematic() {
                     </button>
                     <button
                       type="submit"
-                      disabled={!artistForm.consentAgreed}
+                      disabled={!artistForm.consentAgreed || registrationSubmitting}
                       className="btn-primary !px-5 !py-2.5 text-xs uppercase font-bold tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Submit Registration
+                      {registrationSubmitting ? "Submitting..." : "Submit Registration"}
                     </button>
                   </div>
                 </form>

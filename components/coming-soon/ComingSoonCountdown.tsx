@@ -35,13 +35,14 @@ export function ComingSoonCountdown() {
 
   if (timeLeft?.isLaunched) {
     return (
-      <div className="flex flex-col items-center gap-5">
-        <div className="inline-flex items-center justify-center px-6 py-2 rounded-md border border-blue-400/40 bg-blue-900/20 backdrop-blur-sm text-blue-300 tracking-[0.2em] uppercase text-sm md:text-base">
-          The Cave Is Open
+      <div className="flex flex-col items-center lg:items-start gap-5">
+        <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-kod-gold/40 bg-kod-gold/10 backdrop-blur-md text-kod-gold tracking-[0.22em] uppercase text-xs sm:text-sm font-semibold">
+          <span className="w-2 h-2 rounded-full bg-kod-gold animate-pulse" />
+          <span>The Cave Is Open</span>
         </div>
         <Link
           href="/"
-          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black font-metropolis font-bold text-xs sm:text-sm tracking-[0.18em] uppercase hover:bg-blue-200 transition-colors shadow-lg"
+          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-kod-orange text-white font-metropolis font-bold text-xs sm:text-sm tracking-[0.18em] uppercase hover:bg-kod-gold hover:text-kod-black transition-all shadow-lg"
         >
           <span>Enter KOD Universe</span>
           <ArrowRight size={15} aria-hidden="true" />
@@ -64,9 +65,9 @@ export function ComingSoonCountdown() {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center lg:items-start gap-5">
       <div
-        className="grid grid-cols-4 gap-3 sm:gap-5"
+        className="grid grid-cols-4 gap-2.5 sm:gap-4"
         role="timer"
         aria-live="polite"
         aria-label="Countdown to KOD Universe launch"
@@ -74,20 +75,24 @@ export function ComingSoonCountdown() {
         {units.map((unit) => (
           <div
             key={unit.label}
-            className="min-w-[68px] sm:min-w-[92px] md:min-w-[108px] px-3 py-3.5 sm:px-5 sm:py-4 rounded-xl border border-blue-300/25 bg-black/55 backdrop-blur-md shadow-[0_0_24px_rgba(0,0,0,0.6)] flex flex-col items-center"
+            className="min-w-[68px] sm:min-w-[88px] md:min-w-[98px] px-3 py-3.5 sm:px-4 sm:py-4 rounded-2xl border border-amber-200/20 bg-black/55 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.65)] flex flex-col items-center relative overflow-hidden"
           >
+            <div
+              className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-kod-gold/50 to-transparent"
+              aria-hidden="true"
+            />
             <span className="font-metropolis font-bold tabular-nums text-2xl sm:text-4xl md:text-5xl text-white tracking-tight leading-none">
               {unit.value}
             </span>
-            <span className="mt-2 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">
+            <span className="mt-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-kod-gold/85">
               {unit.label}
             </span>
           </div>
         ))}
       </div>
 
-      <div className="inline-flex items-center justify-center px-6 py-2 rounded-md border border-blue-400/40 bg-blue-900/15 backdrop-blur-sm text-blue-300/90 tracking-[0.2em] uppercase text-xs sm:text-sm md:text-base shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-        Launching 11 · 11 · 2026 - 11:11:11 AM SLST
+      <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded sm:rounded-full border border-amber-200/20 bg-black/50 backdrop-blur-md text-amber-100/90 tracking-[0.18em] uppercase text-[11px] sm:text-xs font-medium shadow-md">
+        <span>Launching 11 · 11 · 2026 - 11:11:11 AM SLST</span>
       </div>
     </div>
   );

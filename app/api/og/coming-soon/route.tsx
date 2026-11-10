@@ -83,7 +83,7 @@ export async function GET() {
             style={{
               fontSize: 18,
               letterSpacing: "0.35em",
-              color: "#93c5fd",
+              color: "#eac240",
               fontWeight: 700,
               marginBottom: 18,
               display: "flex",
@@ -108,7 +108,7 @@ export async function GET() {
           <div
             style={{
               fontSize: 22,
-              color: "#bfdbfe",
+              color: "#f3e5d0",
               letterSpacing: "0.08em",
               marginBottom: 36,
               display: "flex",
@@ -139,8 +139,8 @@ export async function GET() {
                     width: "160px",
                     height: "136px",
                     borderRadius: "18px",
-                    backgroundColor: "rgba(10, 12, 18, 0.78)",
-                    border: "2px solid rgba(147, 197, 253, 0.35)",
+                    backgroundColor: "rgba(12, 10, 9, 0.82)",
+                    border: "2px solid rgba(234, 194, 64, 0.35)",
                   }}
                 >
                   <div
@@ -159,7 +159,7 @@ export async function GET() {
                       fontSize: 15,
                       fontWeight: 700,
                       letterSpacing: "0.24em",
-                      color: "#93c5fd",
+                      color: "#eac240",
                       marginTop: 10,
                       display: "flex",
                     }}
@@ -175,12 +175,12 @@ export async function GET() {
             style={{
               display: "flex",
               padding: "12px 28px",
-              borderRadius: "10px",
-              border: "1px solid rgba(96, 165, 250, 0.45)",
-              backgroundColor: "rgba(30, 58, 138, 0.25)",
+              borderRadius: "999px",
+              border: "1px solid rgba(234, 194, 64, 0.45)",
+              backgroundColor: "rgba(229, 76, 42, 0.2)",
               fontSize: 18,
               letterSpacing: "0.22em",
-              color: "#dbeafe",
+              color: "#fef3c7",
               fontWeight: 600,
             }}
           >
