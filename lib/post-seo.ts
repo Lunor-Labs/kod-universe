@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { Post } from "@/types/post";
+import { META_IMAGES } from "@/lib/meta-images";
 
 export function buildPostMetadata(
   post: Post,
@@ -8,6 +9,7 @@ export function buildPostMetadata(
   const defaultSuffix = basePath === "/news" ? "KOD News" : "KOD Journal";
   const seoTitle = post.seoTitle ?? `${post.title} | ${defaultSuffix}`;
   const seoDesc = post.seoDescription ?? post.excerpt;
+  const imageSrc = post.coverImage.src || META_IMAGES.news.url;
 
   return {
     title: seoTitle,
@@ -22,12 +24,19 @@ export function buildPostMetadata(
       url: `https://www.kod.lk${basePath}/${post.slug}`,
       images: [
         {
-          url: post.coverImage.src,
+          url: imageSrc,
           width: post.coverImage.width ?? 1600,
           height: post.coverImage.height ?? 900,
           alt: post.coverImage.alt,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: seoDesc,
+      creator: "@koduniverse",
+      images: [imageSrc],
     },
   };
 }

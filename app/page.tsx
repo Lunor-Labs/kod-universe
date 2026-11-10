@@ -10,28 +10,25 @@ import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { GallerySection } from "@/features/home/GallerySection";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { siteConfig } from "@/data/site";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 import Image from "next/image";
 import { ProcessSection } from "@/features/home/ProcessSection";
 import { StudioSection } from "@/features/home/StudioSection";
 
+const homeTitle = `${siteConfig.name} - ${siteConfig.tagline}`;
+
 export const metadata: Metadata = {
-  title: `${siteConfig.name} - ${siteConfig.tagline}`,
+  title: homeTitle,
   description: siteConfig.description,
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
+  ...buildPageSocialMetadata({
+    title: homeTitle,
     description: siteConfig.description,
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} - ${siteConfig.tagline}`,
-      },
-    ],
-  },
+    path: "/",
+    image: META_IMAGES.home,
+  }),
 };
 
 export default function HomePage() {

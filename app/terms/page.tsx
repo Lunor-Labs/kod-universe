@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for KOD Universe.",
+  alternates: { canonical: "/terms" },
+  ...buildPageSocialMetadata({
+    title: "Terms of Service - KOD Universe",
+    description: "Terms of Service for KOD Universe.",
+    path: "/terms",
+    image: META_IMAGES.about,
+  }),
 };
 
 export default function TermsOfServicePage() {

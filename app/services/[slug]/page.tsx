@@ -18,6 +18,7 @@ import {
   ServiceSuitability,
   ServiceNav,
 } from "@/components/services";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 export async function generateStaticParams() {
   return capabilities.map((c) => ({ slug: c.slug }));
@@ -31,10 +32,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const cap = capabilities.find((c) => c.slug === slug);
   if (!cap) return {};
+  const title = `${cap.title} | KOD Universe`;
   return {
-    title: `${cap.title} | KOD Universe`,
+    title,
     description: cap.longDescription,
     alternates: { canonical: `/services/${slug}` },
+    ...buildPageSocialMetadata({
+      title,
+      description: cap.longDescription,
+      path: `/services/${slug}`,
+      image: META_IMAGES.services,
+    }),
   };
 }
 

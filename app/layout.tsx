@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
+import { META_IMAGES } from "@/lib/meta-images";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { FloatingActions } from "@/components/ui/FloatingActions";
 import { IosInstallPrompt } from "@/components/ui/IosInstallPrompt";
@@ -53,10 +54,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} - ${siteConfig.tagline}`,
+        url: META_IMAGES.home.url,
+        width: META_IMAGES.home.width,
+        height: META_IMAGES.home.height,
+        alt: META_IMAGES.home.alt,
       },
     ],
   },
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
     creator: "@koduniverse",
-    images: ["/og-image.jpg"],
+    images: [META_IMAGES.home.url],
   },
   robots: {
     index: true,

@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import { posts } from "@/data/blogs";
 import { BlogListingView } from "@/features/blog/BlogListingView";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+const newsDesc =
+  "Official announcements, studio updates, and latest press from KOD Universe.";
 
 export const metadata: Metadata = {
   title: "News & Dispatches",
-  description:
-    "Official announcements, studio updates, and latest press from KOD Universe.",
+  description: newsDesc,
   alternates: { canonical: "/news" },
-  openGraph: {
+  ...buildPageSocialMetadata({
     title: "News & Dispatches - KOD Universe",
-    description:
-      "Official announcements, studio updates, and latest press from KOD Universe.",
-    type: "website",
-    url: "https://www.kod.lk/news",
-  },
+    description: newsDesc,
+    path: "/news",
+    image: META_IMAGES.news,
+  }),
 };
 
 export default function NewsPage() {

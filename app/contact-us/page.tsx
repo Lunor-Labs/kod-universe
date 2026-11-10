@@ -17,12 +17,21 @@ import { InstagramIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/Socia
 import { ContactForm } from "@/features/contact/ContactForm";
 import { siteConfig, services } from "@/data/site";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+const contactDesc =
+  "Start a project with KOD Universe. Share your goals and let's explore how we can create something extraordinary together.";
 
 export const metadata: Metadata = {
   title: "Connect",
-  description:
-    "Start a project with KOD Universe. Share your goals and let's explore how we can create something extraordinary together.",
+  description: contactDesc,
   alternates: { canonical: "/contact-us" },
+  ...buildPageSocialMetadata({
+    title: "Connect - KOD Universe",
+    description: contactDesc,
+    path: "/contact-us",
+    image: META_IMAGES.contact,
+  }),
 };
 
 const contactIcons: Record<string, React.ElementType> = {

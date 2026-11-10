@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { KodLogo } from "@/components/ui/KodLogo";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+export const metadata: Metadata = {
+  title: "Launching Soon",
+  description: "The Cave is Almost Open. KOD Universe website is on the way.",
+  alternates: { canonical: "/coming-soon" },
+  ...buildPageSocialMetadata({
+    title: "Launching Soon - KOD Universe",
+    description: "The Cave is Almost Open. KOD Universe website is on the way.",
+    path: "/coming-soon",
+    image: META_IMAGES.home,
+  }),
+};
 
 export default function ComingSoonPage() {
   return (
