@@ -3,7 +3,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  X,
+  CheckCircle2,
+  Film,
+  Calendar,
+  Users,
+  ShieldCheck,
+  Eye,
+  Palette,
+  ExternalLink,
+  User,
+} from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import styles from "./gallery.module.css";
 
@@ -32,6 +45,18 @@ export function GalleryCinematic() {
   const sectionRef = useRef<HTMLElement>(null);
   const collectionsScrollRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState(0);
+  const [isArtistModalOpen, setIsArtistModalOpen] = useState(false);
+  const [creativeTab, setCreativeTab] = useState<"films" | "events" | "collabs">("films");
+  const [registrationSubmitted, setRegistrationSubmitted] = useState(false);
+  const [artistForm, setArtistForm] = useState({
+    name: "",
+    pseudonym: "",
+    email: "",
+    portfolioUrl: "",
+    disciplines: "Painting & Illustration",
+    bio: "",
+    consentAgreed: false,
+  });
 
   const scrollToCategory = (idx: number) => {
     setActiveCategory(idx);
@@ -316,31 +341,41 @@ export function GalleryCinematic() {
             <div className="relative max-w-2xl mx-auto px-6 py-9 sm:px-12 sm:py-12 md:px-16 md:py-14 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-black/55 via-black/45 to-black/75 backdrop-blur-md shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
 
               <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-kod-gold mb-2.5 inline-block drop-shadow-sm">
-                KOD UNIVERSE
+                KOD GALLERY
               </span>
               <h2 className="font-editorial text-3xl md:text-5xl text-kod-canvas leading-[1.1] mb-3.5 drop-shadow-md">
-                Art + Commerce.
-                <br />A Creative Sanctuary.
+                Where Art, Artists &amp; Ideas Meet.
               </h2>
-              <p className="text-sm md:text-base text-kod-mist/95 max-w-lg mx-auto mb-6 leading-relaxed drop-shadow-sm">
-                An ancient visual realm meeting contemporary creative commerce.
-                Original artwork, limited drops, and artifacts that tell a profound story.
+              <p className="text-xs sm:text-sm md:text-base text-kod-mist/95 max-w-xl mx-auto mb-6 leading-relaxed drop-shadow-sm">
+                Discover original artworks and the artists behind them. Explore KOD-curated merchandise, limited drops, short films, events and creative collaborations. Artists can join KOD Universe, create profiles and share their work.
               </p>
-              <button
-                type="button"
-                onClick={() => {
-                  if (sectionRef.current) {
-                    const top = sectionRef.current.offsetTop + 700;
-                    window.scrollTo({ top, behavior: "smooth" });
-                  }
-                }}
-                className="btn-primary !px-7 !py-3.5 mx-auto shadow-2xl hover:scale-105 transition-transform"
-              >
-                <span>Explore the collections</span>
-                <span className="btn-badge">
-                  <ArrowRight size={14} aria-hidden="true" />
-                </span>
-              </button>
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (sectionRef.current) {
+                      const top = sectionRef.current.offsetTop + 700;
+                      window.scrollTo({ top, behavior: "smooth" });
+                    }
+                  }}
+                  className="btn-primary !px-6 !py-3 shadow-2xl hover:scale-105 transition-transform text-xs sm:text-sm"
+                >
+                  <span>Explore the Gallery</span>
+                  <span className="btn-badge">
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setIsArtistModalOpen(true)}
+                  className="btn-secondary !text-white !border-white/30 hover:!border-kod-orange hover:!text-kod-orange hover:!bg-white/10 !px-6 !py-3 text-xs sm:text-sm transition-all shadow-xl"
+                >
+                  <span>Join as an Artist</span>
+                  <span className="btn-badge">
+                    <User  size={13} aria-hidden="true"/>
+                  </span>
+                </button>
+              </div>
             </div>
           </section>
           <section
@@ -477,6 +512,195 @@ export function GalleryCinematic() {
           </section>
         </div>
       </section>
+      {isArtistModalOpen && (
+        <div
+          className="fixed inset-0 z-[150] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="artist-modal-title"
+        >
+          <div className="relative w-full max-w-xl bg-[#161211] border border-white/20 rounded-2xl p-6 sm:p-8 text-white shadow-2xl my-auto">
+            <button
+              type="button"
+              onClick={() => {
+                setIsArtistModalOpen(false);
+                setRegistrationSubmitted(false);
+              }}
+              className="absolute cursor-pointer top-5 right-5 text-white/60 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
+              aria-label="Close dialog"
+            >
+              <X size={20} />
+            </button>
+
+            {!registrationSubmitted ? (
+              <>
+                <div className="mb-6 pr-6">
+                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-kod-orange font-metropolis">
+                    Creator Onboarding
+                  </span>
+                  <h3 id="artist-modal-title" className="font-metropolis font-bold text-2xl text-white mt-1">
+                    Join KOD Universe as an Artist
+                  </h3>
+                  <p className="text-sm text-kod-mist/80 mt-1.5 leading-relaxed">
+                    Submit your details and portfolio. Your work is reviewed by our editorial team, and rights are protected before any work is showcased or merchandised.
+                  </p>
+                </div>
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    if (!artistForm.consentAgreed) return;
+                    setRegistrationSubmitted(true);
+                  }}
+                  className="space-y-4"
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={artistForm.name}
+                        onChange={(e) => setArtistForm({ ...artistForm, name: e.target.value })}
+                        placeholder="Ishara Kodithuwakku"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder-white/30 text-xs focus:border-kod-orange focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                        Artist / Creator Pseudonym
+                      </label>
+                      <input
+                        type="text"
+                        value={artistForm.pseudonym}
+                        onChange={(e) => setArtistForm({ ...artistForm, pseudonym: e.target.value })}
+                        placeholder="KoD Studio"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder-white/30 text-xs focus:border-kod-orange focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={artistForm.email}
+                        onChange={(e) => setArtistForm({ ...artistForm, email: e.target.value })}
+                        placeholder="artist@example.com"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder-white/30 text-xs focus:border-kod-orange focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                        Portfolio / Social Link *
+                      </label>
+                      <input
+                        type="url"
+                        required
+                        value={artistForm.portfolioUrl}
+                        onChange={(e) => setArtistForm({ ...artistForm, portfolioUrl: e.target.value })}
+                        placeholder="https://instagram.com/myart"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder-white/30 text-xs focus:border-kod-orange focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                      Creative Discipline *
+                    </label>
+                    <select
+                      value={artistForm.disciplines}
+                      onChange={(e) => setArtistForm({ ...artistForm, disciplines: e.target.value })}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-[#201a18] border border-white/15 text-white text-xs focus:border-kod-orange focus:outline-none"
+                    >
+                      <option value="Painting & Illustration">Traditional Canvas &amp; Fine Art Painting</option>
+                      <option value="Digital Art & 3D">Digital Painting, Concept Art &amp; 3D</option>
+                      <option value="Streetwear & Apparel">Apparel &amp; Streetwear Graphics</option>
+                      <option value="Film & Motion">Short Films, Motion &amp; Cinematography</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold uppercase tracking-wider text-white/70 mb-1">
+                      Artist Statement / Short Bio
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={artistForm.bio}
+                      onChange={(e) => setArtistForm({ ...artistForm, bio: e.target.value })}
+                      placeholder="Briefly describe your style, inspiration, and themes..."
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder-white/30 text-xs focus:border-kod-orange focus:outline-none resize-none"
+                    />
+                  </div>
+
+                  <div className="pt-2">
+                    <label className="flex items-start gap-2.5 cursor-pointer select-none">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={artistForm.consentAgreed}
+                        onChange={(e) => setArtistForm({ ...artistForm, consentAgreed: e.target.checked })}
+                        className="mt-0.5 rounded border-white/30 bg-white/10 text-kod-orange focus:ring-0"
+                      />
+                      <span className="text-sm text-white/80 leading-snug">
+                        I agree that my submitted work remains 100% my intellectual property. Commercial reproduction, prints, or merchandise require a separate written licensing agreement.
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="pt-4 flex items-center justify-end gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsArtistModalOpen(false)}
+                      className="px-4 py-2 text-xs font-semibold uppercase text-white/70 hover:text-white cursor-pointer"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={!artistForm.consentAgreed}
+                      className="btn-primary !px-5 !py-2.5 text-xs uppercase font-bold tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      Submit Registration
+                    </button>
+                  </div>
+                </form>
+              </>
+            ) : (
+              <div className="py-8 text-center space-y-4">
+                <div className="w-16 h-16 rounded-full cursor-pointer bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
+                  <CheckCircle2 size={32} />
+                </div>
+                <h3 className="font-metropolis font-bold text-2xl text-white">
+                  Registration Received!
+                </h3>
+                <p className="text-xs sm:text-sm text-kod-mist/90 max-w-md mx-auto leading-relaxed">
+                  Thank you for applying to the KOD Creator Network. Our curatorial board reviews submissions weekly. We will be in touch via email regarding profile onboarding and licensing terms.
+                </p>
+                <div className="pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsArtistModalOpen(false);
+                      setRegistrationSubmitted(false);
+                    }}
+                    className="btn-primary !px-6 !py-2.5 text-xs uppercase"
+                  >
+                    Done
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

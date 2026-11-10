@@ -146,18 +146,19 @@ export function FounderBrands() {
         <div className="max-w-3xl mb-14 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-metropolis font-semibold tracking-wider uppercase text-kod-orange mb-4">
             <Users size={14} />
-            <span>Collaborative Track Record</span>
+            <span>Brands I’ve Worked With</span>
           </div>
 
           <h2 className="heading-section text-white mb-4">
-            Brands Contributed to Throughout the Journey
+            70+ Brands. One Creative Journey.
           </h2>
 
           <p className="text-body text-white/80 text-base sm:text-lg leading-relaxed">
-            A selection of renowned global and national household names where
-            Ishara contributed creative direction, design systems, and campaign
-            deliverables collaboratively alongside talented teams and colleagues
-            at previous organizations.
+            Throughout his professional career, Ishara Kodithuwakku has worked
+            on creative projects involving more than 70 local and international
+            brands through a combination of employment, freelance assignments,
+            and collaborations. Displayed below are 24 selected brand logos
+            highlighting part of that experience.
           </p>
         </div>
 
@@ -168,7 +169,7 @@ export function FounderBrands() {
               International Brands
             </h3>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-white/70 ml-auto">
-              {internationalBrands.length} Brands
+              16 Featured
             </span>
           </div>
 
@@ -213,7 +214,7 @@ export function FounderBrands() {
               National & Local Brands
             </h3>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-white/70 ml-auto">
-              {localBrands.length} Brands
+              8 Featured
             </span>
           </div>
 
@@ -252,10 +253,8 @@ export function FounderBrands() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-white/10 text-center">
-          <p className="text-xs sm:text-sm text-white/50 max-w-2xl mx-auto leading-relaxed">
-            * All respective brand trademarks, marks, and IP belong to their
-            individual owners. Contributions were delivered in collaborative team
-            environments across previous agencies and production companies.
+          <p className="text-xs sm:text-sm text-white/50 max-w-3xl mx-auto leading-relaxed">
+            * Featured brands represent selected projects from Ishara’s professional career and do not necessarily indicate direct KOD Universe client relationships. Displayed above are 24 selected brand logos (16 international and 8 national/local) highlighting that cumulative experience. All respective trademarks and marks belong to their individual owners.
           </p>
         </div>
       </div>

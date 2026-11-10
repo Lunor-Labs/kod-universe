@@ -12,6 +12,7 @@ import { ProjectCaseStudy } from "@/features/work/ProjectCaseStudy";
 import { ServiceCaseStudy } from "@/components/services/ServiceCaseStudy";
 import { ProjectNavigation } from "@/features/work/ProjectNavigation";
 import { RelatedProjectsSection } from "@/features/work/RelatedProjectsSection";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -25,10 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return {};
+  const title = `${project.title} - ${project.client}`;
   return {
-    title: `${project.title} - ${project.client}`,
+    title,
     description: project.shortDescription,
     alternates: { canonical: `/portfolio/${project.slug}` },
+    ...buildPageSocialMetadata({
+      title,
+      description: project.shortDescription,
+      path: `/portfolio/${project.slug}`,
+      image: META_IMAGES.portfolio,
+    }),
   };
 }
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Mail } from "lucide-react";
-import { LinkedinIcon, InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
+import { siteConfig } from "@/data/site";
 
 export function FounderCTA() {
   return (
@@ -52,10 +53,10 @@ export function FounderCTA() {
             <div className="flex items-center gap-2">
               <Mail size={15} className="text-kod-clay" />
               <a
-                href="mailto:hello@koduniverse.com"
+                href={`mailto:${siteConfig.contact.email}`}
                 className="hover:text-kod-earth transition-colors"
               >
-                hello@koduniverse.com
+                {siteConfig.contact.email}
               </a>
             </div>
             <span>•</span>

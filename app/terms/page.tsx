@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for KOD Universe.",
+  alternates: { canonical: "/terms" },
+  ...buildPageSocialMetadata({
+    title: "Terms of Service - KOD Universe",
+    description: "Terms of Service for KOD Universe.",
+    path: "/terms",
+    image: META_IMAGES.about,
+  }),
 };
 
 export default function TermsOfServicePage() {
@@ -63,7 +71,7 @@ export default function TermsOfServicePage() {
 
           <h2 className="text-xl mt-8 mb-4">6. Contact Us</h2>
           <p>
-            If you have any questions about these Terms, please contact us at: <a href="mailto:hello@kod.lk">hello@kod.lk</a>.
+            If you have any questions about these Terms, please contact us at: <a href="mailto:ayubowan@kod.lk">ayubowan@kod.lk</a>.
           </p>
         </div>
       </div>

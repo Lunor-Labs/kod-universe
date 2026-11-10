@@ -6,12 +6,21 @@ import { ArrowRight } from "lucide-react";
 import { ProjectGrid } from "@/features/work/ProjectGrid";
 import { projects, getFeaturedProject } from "@/data/projects";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+const portfolioDesc =
+  "Explore KOD Universe's portfolio of branding, social media, packaging, and digital experience projects.";
 
 export const metadata: Metadata = {
   title: "Selected Works",
-  description:
-    "Explore KOD Universe's portfolio of branding, social media, packaging, and digital experience projects.",
+  description: portfolioDesc,
   alternates: { canonical: "/portfolio" },
+  ...buildPageSocialMetadata({
+    title: "Selected Works - KOD Universe",
+    description: portfolioDesc,
+    path: "/portfolio",
+    image: META_IMAGES.portfolio,
+  }),
 };
 
 export default function WorkPage() {

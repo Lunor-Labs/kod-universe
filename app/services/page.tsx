@@ -6,12 +6,21 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { serviceGroups } from "@/data/services";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+const servicesDesc =
+  "KoD Creative transforms abstract ideas into meaningful brands, experiences, and digital ecosystems.";
 
 export const metadata: Metadata = {
   title: "Agency Services - KoD Creative",
-  description:
-    "KoD Creative transforms abstract ideas into meaningful brands, experiences, and digital ecosystems.",
+  description: servicesDesc,
   alternates: { canonical: "/services" },
+  ...buildPageSocialMetadata({
+    title: "Agency Services - KoD Creative | KOD Universe",
+    description: servicesDesc,
+    path: "/services",
+    image: META_IMAGES.services,
+  }),
 };
 
 const pillarImages: Record<string, string> = {

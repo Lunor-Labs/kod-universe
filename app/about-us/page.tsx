@@ -6,12 +6,21 @@ import { FounderPanel } from "@/features/our-universe/FounderPanel";
 import { MasonryGallerySection } from "@/features/home/MasonryGallerySection";
 import { OurUniverseCTA } from "@/features/our-universe/OurUniverseCTA";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
+
+const aboutDesc =
+  "We Are Messengers of Creative Forces. The story, origin, mission, philosophy, and creative journey behind KOD Universe.";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description:
-    "We Are Messengers of Creative Forces. The story, origin, mission, philosophy, and creative journey behind KOD Universe.",
+  description: aboutDesc,
   alternates: { canonical: "/about-us" },
+  ...buildPageSocialMetadata({
+    title: "About Us - KOD Universe",
+    description: aboutDesc,
+    path: "/about-us",
+    image: META_IMAGES.about,
+  }),
 };
 
 export default function OurUniversePage() {

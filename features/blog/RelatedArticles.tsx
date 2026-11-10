@@ -5,9 +5,13 @@ import type { Post } from "@/types/post";
 
 interface RelatedArticlesProps {
   posts: Post[];
+  basePath?: "/blog" | "/news";
 }
 
-export function RelatedArticles({ posts }: RelatedArticlesProps) {
+export function RelatedArticles({
+  posts,
+  basePath = "/blog",
+}: RelatedArticlesProps) {
   if (!posts || posts.length === 0) return null;
 
   return (
@@ -24,7 +28,7 @@ export function RelatedArticles({ posts }: RelatedArticlesProps) {
           </div>
 
           <Link
-            href="/blog"
+            href={basePath}
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-kod-earth hover:text-kod-orange transition-colors"
           >
             <span>View All Stories</span>
@@ -34,7 +38,7 @@ export function RelatedArticles({ posts }: RelatedArticlesProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <BlogCard key={post.id} post={post} basePath={basePath} />
           ))}
         </div>
       </div>

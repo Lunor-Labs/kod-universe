@@ -26,12 +26,19 @@ export interface PostContentSection {
   };
 }
 
+export interface PostCta {
+  label: string;
+  href: string;
+}
+
 export interface Post {
   id: string;
   slug: string;
   title: string;
   subtitle?: string;
   excerpt: string;
+  seoTitle?: string;
+  seoDescription?: string;
   type: PostType;
   category: PostCategory;
   coverImage: {
@@ -45,5 +52,6 @@ export interface Post {
   readTime: string;
   tags: string[];
   featured?: boolean;
+  ctas?: PostCta[];
   content: PostContentSection[];
 }

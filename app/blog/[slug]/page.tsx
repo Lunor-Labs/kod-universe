@@ -5,6 +5,7 @@ import { ArticleHeader } from "@/features/blog/ArticleHeader";
 import { ArticleContent } from "@/features/blog/ArticleContent";
 import { RelatedArticles } from "@/features/blog/RelatedArticles";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { buildPostJsonLd, buildPostMetadata } from "@/lib/post-seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -19,24 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  return {
-    title: `${post.title} | KOD Journal`,
-    description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: {
-      title: `${post.title} | KOD Journal`,
-      description: post.excerpt,
-      type: "article",
-      publishedTime: post.publishedAt,
-      authors: [post.author.name],
-      images: [
-        {
-          url: post.coverImage.src,
-          alt: post.coverImage.alt,
-        },
-      ],
-    },
-  };
+  return buildPostMetadata(post, "/blog");
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -48,14 +32,19 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const related = getRelatedPosts(post.slug, 3);
+  const jsonLd = buildPostJsonLd(post, "/blog");
 
   return (
     <main className="relative bg-kod-canvas min-h-screen overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <DecorativeBlossoms />
       <div className="relative z-10">
-        <ArticleHeader post={post} />
-        <ArticleContent post={post} />
-        <RelatedArticles posts={related} />
+        <ArticleHeader post={post} basePath="/blog" />
+        <ArticleContent post={post} basePath="/blog" />
+        <RelatedArticles posts={related} basePath="/blog" />
       </div>
     </main>
   );

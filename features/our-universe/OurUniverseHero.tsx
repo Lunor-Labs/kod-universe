@@ -35,7 +35,7 @@ export function OurUniverseHero() {
         </div>
 
         <div
-          className="absolute inset-0 bg-gradient-to-r from-kod-canvas/90 via-kod-canvas/60 to-transparent md:w-1/2"
+          className="absolute inset-0 bg-gradient-to-r from-kod-canvas/90 via-kod-canvas/90 to-transparent md:w-1/2"
           aria-hidden="true"
         />
       </div>
@@ -46,22 +46,24 @@ export function OurUniverseHero() {
         }`}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 max-w-xl">
-            <p className="eyebrow mb-4">Our Story. Our Origin. Our Why.</p>
+          <div className="lg:col-span-7 max-w-4xl">
+            <p className="eyebrow mb-4">ABOUT US</p>
 
             <h1 className="heading-hero text-kod-earth mb-6 text-balance">
-              We Are Messengers <br />
-              of{" "}
+              We Don&apos;t Just Build Brands. <br />
               <span className="font-editorial italic font-normal text-kod-earth">
-                Creative Forces.
+                We Create Universes.
               </span>
             </h1>
 
-            <p className="text-lead text-kod-earth mb-8 max-w-lg font-normal">
-              From the vast universe, ideas spark-seeds of potential. We receive
-              them with purpose and shape them into modern brand experiences
-              that connect, inspire, and leave a lasting mark.
-            </p>
+            <div className="text-lead text-kod-earth mb-8 max-w-2xl font-normal space-y-4">
+              <p>
+                Since 2018, KOD Universe has brought ideas to life through creative strategy, branding, design, packaging, marketing campaigns, and visual storytelling, crafting meaningful experiences that connect brands with people.
+              </p>
+              <p>
+                Beyond the agency, we&apos;re building a creative universe where artists showcase their work, audiences discover original art, and selected creations become merchandise and exclusive drops. Through short films, events, and collaborations, we bring art, culture, and commerce together.
+              </p>
+            </div>
 
             <Link href="/portfolio" className="btn-primary w-fit">
               <span>Explore Our Work</span>

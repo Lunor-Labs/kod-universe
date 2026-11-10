@@ -5,13 +5,16 @@ import type { Post } from "@/types/post";
 
 interface BlogCardProps {
   post: Post;
+  basePath?: "/blog" | "/news";
 }
 
-export function BlogCard({ post }: BlogCardProps) {
+export function BlogCard({ post, basePath = "/blog" }: BlogCardProps) {
+  const articleHref = `${basePath}/${post.slug}`;
+
   return (
     <article className="group flex flex-col bg-white rounded overflow-hidden border border-kod-border/60 hover:border-kod-orange/40 hover:shadow-xl transition-all duration-300 h-full">
       <Link
-        href={`/blog/${post.slug}`}
+        href={articleHref}
         className="relative aspect-[16/10] w-full overflow-hidden bg-kod-mist block"
       >
         <Image
@@ -45,7 +48,7 @@ export function BlogCard({ post }: BlogCardProps) {
           </div>
 
           <h3 className="text-xl font-bold tracking-tight text-kod-earth group-hover:text-kod-orange transition-colors duration-200 line-clamp-2 mb-2.5">
-            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+            <Link href={articleHref}>{post.title}</Link>
           </h3>
 
           <p className="text-sm text-kod-text-2 leading-relaxed line-clamp-3 mb-4">
@@ -70,7 +73,7 @@ export function BlogCard({ post }: BlogCardProps) {
           </div>
 
           <Link
-            href={`/blog/${post.slug}`}
+            href={articleHref}
             className="inline-flex items-center gap-1 text-xs font-semibold tracking-wider uppercase text-kod-earth group-hover:text-kod-orange transition-colors"
             aria-label={`Read ${post.title}`}
           >

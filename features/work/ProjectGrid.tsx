@@ -152,7 +152,7 @@ export function ProjectGrid({ projects, featuredProject }: ProjectGridProps) {
       if (sortOption === "oldest") {
         return a.year === b.year ? Number(a.id) - Number(b.id) : a.year - b.year;
       }
-      return a.year === b.year ? Number(a.id) - Number(b.id) : b.year - a.year;
+      return Number(a.id) - Number(b.id);
     });
 
     return result;

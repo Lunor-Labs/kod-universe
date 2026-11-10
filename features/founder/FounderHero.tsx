@@ -33,36 +33,55 @@ export function FounderHero() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-kod-mist border border-kod-border/80 w-fit mb-5">
-              <span className="w-2 h-2 rounded-full bg-kod-orange animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded sm:rounded-sm bg-kod-mist border border-kod-border/80 w-fit mb-5">
+              <span className="w-2 h-2 rounded sm:rounded-lg bg-kod-orange animate-pulse" />
               <span className="text-xs sm:text-sm font-metropolis font-semibold tracking-wider uppercase text-kod-earth">
-                Founder & Creative Director
+                FOUNDER · CREATIVE DIRECTOR · CONCEPT ARTIST · VISUAL ARTIST
               </span>
             </div>
 
-            <h1 className="font-metropolis font-extrabold text-4xl sm:text-5xl lg:text-6xl text-kod-earth tracking-tight mb-4">
-              Ishara Kodithuwakku
+            <h1 className="font-metropolis font-extrabold text-3xl sm:text-4xl lg:text-5xl text-kod-earth tracking-tight mb-4 leading-[1.12]">
+              Ishara Kodithuwakku -{" "}
+              <span className="text-kod-clay font-bold">
+                Creative Director, Concept Artist &amp; Visual Artist
+              </span>
             </h1>
 
             <p className="font-editorial italic text-2xl sm:text-3xl text-kod-clay mb-6 leading-snug">
-              &ldquo;Work does not make me feel tired-the creative needs of
-              others are fuel for my passion.&rdquo;
+              &ldquo;When a hobby turns into a lifelong calling, work never
+              makes you tired. The creative needs of others are fuel for my
+              passion.&rdquo;
             </p>
 
             <p className="text-body text-kod-earth/85 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-              An interdisciplinary designer and creative director whose journey
-              began as an after-school curiosity in Grade 10. Over eight years
-              of hands-on craft across agencies and organizations have shaped a
-              humble, relentless dedication to turning human vision into iconic,
-              lasting reality.
+              From graphic design and costume design to film production,
+              commercial direction, creative consultation, script development,
+              painting and independent fashion, Ishara Kodithuwakku has built a
+              career around turning ideas into visual experiences. He is the
+              founder of KOD Universe and Rouka Clothing.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 bg-kod-clay text-white px-5 sm:px-6 py-3.5 rounded-full font-metropolis font-semibold text-xs sm:text-sm tracking-wider uppercase hover:bg-kod-earth transition-all shadow-sm"
+              >
+                <span>View Selected Work</span>
+              </Link>
+
+              <Link
+                href="/gallery"
+                className="inline-flex items-center gap-2 border border-kod-border bg-kod-mist text-kod-earth px-5 sm:px-6 py-3.5 rounded-full font-metropolis font-semibold text-xs sm:text-sm tracking-wider uppercase hover:border-kod-orange hover:text-kod-orange transition-all shadow-xs"
+              >
+                <Sparkles size={15} className="text-kod-orange" />
+                <span>Explore Artwork</span>
+              </Link>
+
               <a
                 href="https://www.linkedin.com/in/ishara-kod/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-kod-clay text-white px-6 py-3.5 rounded-full font-metropolis font-semibold text-sm tracking-wider uppercase hover:bg-kod-earth transition-all shadow-sm group"
+                className="inline-flex items-center gap-2.5 border border-kod-border bg-white text-kod-earth px-5 sm:px-6 py-3.5 rounded-full font-metropolis font-semibold text-xs sm:text-sm tracking-wider uppercase hover:border-kod-clay hover:text-kod-clay transition-all shadow-xs group"
               >
                 <LinkedinIcon size={16} />
                 <span>Connect on LinkedIn</span>
@@ -71,38 +90,31 @@ export function FounderHero() {
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </a>
-
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center gap-2 border border-kod-border bg-white text-kod-earth px-6 py-3.5 rounded-full font-metropolis font-semibold text-sm tracking-wider uppercase hover:border-kod-clay hover:text-kod-clay transition-all shadow-xs"
-              >
-                <span>View Portfolio</span>
-              </Link>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-kod-border/70 max-w-lg">
+            <div className="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-kod-border/70 max-w-2xl">
               <div>
                 <p className="font-metropolis font-bold text-2xl sm:text-3xl text-kod-earth">
-                  Grade 10
+                  Since 2014
                 </p>
                 <p className="text-kod-text-2 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">
-                  Creative Spark
+                  Professional Creative Career
                 </p>
               </div>
               <div>
                 <p className="font-metropolis font-bold text-2xl sm:text-3xl text-kod-earth">
-                  8+ Years
+                  70+
                 </p>
                 <p className="text-kod-text-2 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">
-                  Industry Journey
+                  Brands Worked With
                 </p>
               </div>
               <div>
                 <p className="font-metropolis font-bold text-2xl sm:text-3xl text-kod-earth">
-                  20+
+                  24
                 </p>
                 <p className="text-kod-text-2 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">
-                  Global & Local Brands
+                  Selected Brand Logos Featured
                 </p>
               </div>
             </div>

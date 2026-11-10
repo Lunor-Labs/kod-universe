@@ -3,15 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Share2, Check, Copy, Quote } from "lucide-react";
+import { Share2, Check, Copy, Quote, ArrowRight } from "lucide-react";
 import { LinkedinIcon, TwitterXIcon } from "@/components/ui/SocialIcons";
 import type { Post } from "@/types/post";
 
 interface ArticleContentProps {
   post: Post;
+  basePath?: "/blog" | "/news";
 }
 
-export function ArticleContent({ post }: ArticleContentProps) {
+export function ArticleContent({ post, basePath = "/blog" }: ArticleContentProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
@@ -84,6 +85,25 @@ export function ArticleContent({ post }: ArticleContentProps) {
         ))}
       </div>
 
+      {post.ctas && post.ctas.length > 0 && (
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          {post.ctas.map((cta, i) => (
+            <Link
+              key={cta.href}
+              href={cta.href}
+              className={
+                i === 0
+                  ? "inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-kod-earth text-white hover:bg-kod-orange transition-colors text-xs font-bold tracking-wider uppercase shadow-sm"
+                  : "inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-kod-border bg-white text-kod-earth hover:border-kod-orange hover:text-kod-orange transition-colors text-xs font-bold tracking-wider uppercase"
+              }
+            >
+              <span>{cta.label}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          ))}
+        </div>
+      )}
+
       <div className="mt-16 pt-8 border-t border-kod-border/60">
         <h4 className="text-xs font-bold uppercase tracking-widest text-kod-text-2 mb-4">
           Tags & Topics
@@ -92,7 +112,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
           {post.tags.map((tag) => (
             <Link
               key={tag}
-              href={`/blog?category=${encodeURIComponent(post.category)}`}
+              href={`${basePath}?category=${encodeURIComponent(post.category)}`}
               className="text-xs px-3.5 py-1.5 rounded bg-white text-kod-earth/80 hover:text-kod-orange hover:border-kod-orange/40 border border-kod-border/60 transition-colors font-medium"
             >
               #{tag}

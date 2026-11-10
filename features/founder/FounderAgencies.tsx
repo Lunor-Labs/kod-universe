@@ -16,7 +16,7 @@ export function FounderAgencies() {
     {
       company: "KoD (KOD Universe)",
       role: "Founder & Creative Director",
-      period: "Dec 2018 - Present · 7+ yrs",
+      period: "Oct 2019 - Present",
       location: "United Arab Emirates & Sri Lanka",
       icon: Compass,
       highlight:
@@ -69,7 +69,7 @@ export function FounderAgencies() {
     },
     {
       company: "IRAJ Productions (PVT) LTD",
-      role: "Multimedia Creative Specialist",
+      role: "Freelance Art Director",
       period: "Oct 2017 - Oct 2019 · 2 yrs",
       location: "Kirulapone, Colombo 05",
       icon: Film,
@@ -137,9 +137,10 @@ export function FounderAgencies() {
             Hands-On Leadership Across Studios, Agencies & Brands
           </h2>
           <p className="text-body text-kod-earth/80 text-base sm:text-lg leading-relaxed">
-            Over eight years of multidisciplinary craftsmanship spanning corporate
-            conglomerates, national media houses, independent startups, and
-            cinema.
+            A professional creative career starting in 2014, spanning corporate
+            conglomerates, national media houses, founded creative ventures,
+            costume design, commercial direction, and creative consultation
+            since 2023.
           </p>
         </div>
 

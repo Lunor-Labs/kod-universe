@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { DecorativeBlossoms } from "@/components/ui/DecorativeBlossoms";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for KOD Universe.",
+  alternates: { canonical: "/privacy" },
+  ...buildPageSocialMetadata({
+    title: "Privacy Policy - KOD Universe",
+    description: "Privacy Policy for KOD Universe.",
+    path: "/privacy",
+    image: META_IMAGES.about,
+  }),
 };
 
 export default function PrivacyPolicyPage() {
@@ -53,7 +61,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-xl mt-8 mb-4">4. Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:hello@kod.lk">hello@kod.lk</a>.
+            If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:ayubowan@kod.lk">ayubowan@kod.lk</a>.
           </p>
         </div>
       </div>

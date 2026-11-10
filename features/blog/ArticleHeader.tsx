@@ -6,9 +6,12 @@ import type { Post } from "@/types/post";
 
 interface ArticleHeaderProps {
   post: Post;
+  basePath?: "/blog" | "/news";
 }
 
-export function ArticleHeader({ post }: ArticleHeaderProps) {
+export function ArticleHeader({ post, basePath = "/blog" }: ArticleHeaderProps) {
+  const sectionLabel = basePath === "/news" ? "News" : "Journal";
+
   return (
     <header className="pt-28 sm:pt-36 md:pt-40 pb-8 sm:pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -24,14 +27,14 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-kod-border" />
           <Link
-            href="/blog"
+            href={basePath}
             className="hover:text-kod-earth transition-colors uppercase tracking-wider font-medium"
           >
-            Journal
+            {sectionLabel}
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-kod-border" />
           <Link
-            href={`/blog?category=${encodeURIComponent(post.category)}`}
+            href={`${basePath}?category=${encodeURIComponent(post.category)}`}
             className="text-kod-clay hover:text-kod-orange transition-colors uppercase tracking-wider font-semibold"
           >
             {post.category}

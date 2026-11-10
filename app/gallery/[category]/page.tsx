@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { galleryCategoryConfigs } from "@/data/gallery";
+import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 
 interface GalleryCategoryPageProps {
   params: Promise<{ category: string }>;
@@ -27,6 +28,12 @@ export async function generateMetadata({ params }: GalleryCategoryPageProps): Pr
     title: config.metaTitle,
     description: config.metaDescription,
     alternates: { canonical: `/gallery/${config.slug}` },
+    ...buildPageSocialMetadata({
+      title: config.metaTitle,
+      description: config.metaDescription,
+      path: `/gallery/${config.slug}`,
+      image: META_IMAGES.gallery,
+    }),
   };
 }
 

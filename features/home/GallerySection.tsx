@@ -74,8 +74,39 @@ export function GallerySection() {
         >
           <div ref={containerRef} className="absolute inset-0 z-0" />
 
+          {/* Top-Left: Gallery Description Overlay */}
+          <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8 z-20 max-w-xs sm:max-w-md pointer-events-auto bg-black/35 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/15 text-white shadow-2xl">
+            <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-kod-orange mb-1.5 block">
+              THE KOD GALLERY
+            </span>
+            <h3 className="font-editorial text-lg sm:text-2xl md:text-3xl text-white font-normal leading-tight mb-2">
+              Where Creativity Lives Beyond the Canvas.
+            </h3>
+            <p className="text-xs sm:text-sm text-white/85 leading-relaxed mb-3 sm:mb-4">
+              Explore original artworks, discover the artists behind them, shop KOD-curated merchandise and limited drops, and experience short films, events and collaborations.
+            </p>
+            <div className="flex flex-wrap items-center gap-3 text-xs">
+              <Link
+                href="/gallery"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-1.5 font-semibold tracking-wider uppercase text-kod-orange hover:text-white transition-colors"
+              >
+                <span>Explore Platform</span>
+                <ArrowRight size={12} />
+              </Link>
+              <span className="text-white/30">•</span>
+              <Link
+                href="/gallery#join-artist"
+                onClick={(e) => e.stopPropagation()}
+                className="font-medium text-white/80 hover:text-white transition-colors underline underline-offset-2"
+              >
+                Artist Registration
+              </Link>
+            </div>
+          </div>
+
           {/* Top-Right: View Gallery Button */}
-          <div className="absolute top-5 right-5 sm:top-6 sm:right-6 z-20 pointer-events-auto">
+          {/* <div className="absolute top-5 right-5 sm:top-8 sm:right-8 z-20 pointer-events-auto">
             <Link
               href="/gallery"
               onClick={(e) => e.stopPropagation()}
@@ -86,27 +117,34 @@ export function GallerySection() {
                 <ArrowRight size={13} />
               </span>
             </Link>
-          </div>
+          </div> */}
 
-          <div className="absolute bottom-6 left-0 w-full flex justify-center gap-3 sm:gap-4 z-20 pointer-events-auto">
-            {categories.map((cat) => {
-              const isActive = activeDemo === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => changeDemo(cat.id)}
-                  className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-widest uppercase rounded-full backdrop-blur-md transition-all duration-300 cursor-pointer border ${
-                    isActive
-                      ? "bg-kod-orange text-white border-kod-orange shadow-lg shadow-kod-orange/40 scale-105 font-bold"
-                      : "bg-black/40 text-white/70 border-white/20 hover:border-white/60 hover:text-white hover:bg-black/60"
-                  }`}
-                  aria-pressed={isActive}
-                >
-                  {cat.label}
-                </button>
-              );
-            })}
+          <div className="absolute top-6 left-0 w-full flex flex-col items-center sm:items-end gap-2 z-20 pointer-events-auto px-4">
+            <div className="flex justify-center gap-3 sm:gap-4">
+              {categories.map((cat) => {
+                const isActive = activeDemo === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => changeDemo(cat.id)}
+                    className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-widest uppercase rounded-full backdrop-blur-md transition-all duration-300 cursor-pointer border ${
+                      isActive
+                        ? "bg-kod-orange text-white border-kod-orange shadow-lg shadow-kod-orange/40 scale-105 font-bold"
+                        : "bg-black/40 text-white/70 border-white/20 hover:border-white/60 hover:text-white hover:bg-black/60"
+                    }`}
+                    aria-pressed={isActive}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-[11px] sm:text-xs text-white/80 bg-black/60 px-3.5 py-1 rounded-full backdrop-blur-sm border border-white/10 text-center tracking-wide">
+              {activeDemo === 0 && "ART: Artworks, artist profiles and creative work"}
+              {activeDemo === 1 && "MERCH: Curated artist-inspired products & apparel"}
+              {activeDemo === 2 && "DROPS: Limited or special release collections"}
+            </p>
           </div>
 
           {loading && (

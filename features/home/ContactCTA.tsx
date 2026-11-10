@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import Image from "next/image";
+import { siteConfig } from "@/data/site";
 
 const SERVICES_OPTIONS = [
   "Branding & Identity",
@@ -71,7 +72,7 @@ export function ContactCTA() {
                 </p>
                 <div className="space-y-4 pt-4 mb-8">
                   <a
-                    href="mailto:hello@kod.lk"
+                    href={`mailto:${siteConfig.contact.email}`}
                     className="flex items-center gap-3.5 text-kod-earth hover:text-kod-clay transition-colors group"
                   >
                     <div className="w-9 h-9 rounded-full bg-kod-canvas flex items-center justify-center text-kod-earth group-hover:bg-kod-clay group-hover:text-white transition-colors">
@@ -82,7 +83,7 @@ export function ContactCTA() {
                         Direct Mail
                       </p>
                       <p className="text-base font-semibold text-kod-earth">
-                        hello@kod.lk
+                        {siteConfig.contact.email}
                       </p>
                     </div>
                   </a>
@@ -111,7 +112,7 @@ export function ContactCTA() {
                         Headquarters
                       </p>
                       <p className="text-base font-semibold text-kod-earth">
-                        Colombo 07, Sri Lanka
+                        {siteConfig.contact.locations[0]}
                       </p>
                     </div>
                   </div>
