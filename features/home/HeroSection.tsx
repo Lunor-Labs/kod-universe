@@ -116,18 +116,15 @@ export function HeroSection() {
           <div
             className="relative max-w-4xl animate-fade-in"
           >
-            <p className="text-sm font-semibold tracking-widest uppercase text-black mb-6 antialiased">
-              {slide.eyebrow}
-            </p>
-            <h1 className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased">
+            <h1 className="heading-hero text-earth mb-6 tracking-tight font-normal antialiased text-left">
               {slide.title1}
               {slide.titleHighlight}
                 {slide.title2}
             </h1>
-            <p className="text-lead text-earth mb-10 max-w-xl antialiased">
+            <p className="text-lead text-earth mb-4 max-w-xl antialiased line-clamp-3 pt-72 text-">
               {slide.description}
             </p>
-            <div className="antialiased flex flex-wrap items-center gap-4">
+            <div className="antialiased flex flex-wrap items-start justify-start gap-4">
               <Link
                 href={slide.primaryLinkHref}
                 className="btn-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kod-orange/50"
@@ -204,7 +201,7 @@ export function HeroSection() {
           </div>
         )}
       </div>
-      <div className="absolute inset-0 pointer-events-none z-30 pt-18 sm:pt-28">
+      <div className="absolute inset-0 pointer-events-none z-30 pt-44 sm:pt-28">
         <div className="container-site relative w-full flex justify-end">
           <Link
             href="/about-us"
@@ -219,7 +216,7 @@ export function HeroSection() {
                 className="object-contain"
               />
             </div>
-            <span className="hidden md:block translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
+            <span className="sm:translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-black font-semibold sm:font-bold tracking-widest uppercase whitespace-nowrap drop-shadow-md">
               About Us
             </span>
           </Link>

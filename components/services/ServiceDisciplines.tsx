@@ -57,7 +57,7 @@ export function ServiceDisciplines({ serviceTitle, disciplines }: ServiceDiscipl
 
   return (
     <section
-      className="section-padding-top bg-transparent relative overflow-hidden"
+      className="section-padding-top bg-transparent relative overflow-hidden sm:pt-0 !pt-24"
       aria-label="Integrated Disciplines"
     >
       <div className="container-site">

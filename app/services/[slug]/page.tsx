@@ -73,9 +73,9 @@ export default async function ServiceDetailPage({
           fill
           sizes="100vw"
           priority
-          className="object-cover object-top"
+          className="object-contain sm:object-cover object-top  sm:object-[center_5%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-[#F7F3F1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white via-10% to-transparent sm:via-transparent sm:via-50% sm:to-white" />
       </div>
 
       <div

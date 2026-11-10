@@ -63,9 +63,9 @@ export function ServicePhilosophy({
           </div>
           <div className="lg:col-span-6">
             <ScrollReveal variant="right" delay={0.15}>
-              <div className="bg-kod-canvas rounded p-5 sm:p-8 lg:p-10 shadow-sm relative group hover:border-kod-orange/50 transition-colors">
+              <div className="bg-kod-canvas/70 backdrop-blur-sm rounded p-5 sm:p-8 lg:p-10 shadow-sm relative group hover:border-kod-orange/50 transition-colors">
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center justify-center mb-6 sm:mb-8">
-                  <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
+                  <div className="bg-kod-mist/50  rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-85 group-hover/item:opacity-100 transition-opacity">
                       <Image
                         src="/icons/logo-design.webp"
@@ -80,7 +80,7 @@ export function ServicePhilosophy({
                     </span>
                   </div>
 
-                  <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
+                  <div className="bg-kod-mist/50 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-90 group-hover/item:opacity-100 transition-opacity">
                       <Image
                         src="/icons/visual-storytelling.webp"
@@ -95,7 +95,7 @@ export function ServicePhilosophy({
                     </span>
                   </div>
 
-                  <div className="bg-kod-mist rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center relative overflow-hidden shadow-inner group/item">
+                  <div className="bg-kod-mist/50 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center relative overflow-hidden shadow-inner group/item">
                     <div className="absolute inset-2 animate-spin-slow pointer-events-none" />
                     <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center z-10">
                       <Image
