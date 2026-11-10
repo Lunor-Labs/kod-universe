@@ -88,8 +88,8 @@ export function FounderPanel() {
             {/* Content column */}
             <div className="md:col-span-7 flex flex-col gap-7 pt-2">
               <blockquote className="font-editorial italic text-kod-earth text-2xl sm:text-3xl leading-[1.3]">
-                &ldquo;When a hobby becomes a lifelong calling, the work never
-                feels tiring. Bringing others’ creative visions to life fuels my
+                &ldquo;When a hobby turns into a lifelong calling, work never
+                makes you tired. The creative needs of others are fuel for my
                 passion.&rdquo;
               </blockquote>
 
@@ -99,10 +99,11 @@ export function FounderPanel() {
                 <p>
                   Ishara Kodithuwakku’s creative journey began with artistic
                   experiments in Grade 10 before he started his professional
-                  career as a Graphic Designer in 2014. His experience grew
-                  through freelance art direction with Iraj Productions and now
-                  spans concept art, commercial direction, branding, visual
-                  storytelling, digital painting and canvas art.
+                  career as a Graphic Designer in 2014. His experience spans
+                  branding, freelance art direction, costume design (including a
+                  2018 feature-length film), commercial direction, script
+                  development, creative consultation (since 2023), digital
+                  painting and canvas art.
                 </p>
                 <p>
                   As founder of KOD Universe and Rouka Clothing, he connects

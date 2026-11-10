@@ -63,15 +63,15 @@ export function ServicePhilosophy({
           </div>
           <div className="lg:col-span-6">
             <ScrollReveal variant="right" delay={0.15}>
-              <div className="bg-kod-canvas/70 backdrop-blur-sm rounded p-5 sm:p-8 lg:p-10 shadow-sm relative group hover:border-kod-orange/50 transition-colors">
+              <div className="relative group ">
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center justify-center mb-6 sm:mb-8">
-                  <div className="bg-kod-mist/50  rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-85 group-hover/item:opacity-100 transition-opacity">
+                  <div className="bg-kod-mist/80  rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
+                    <div className="w-16 h-16 sm:w-32 sm:h-32 relative flex items-center justify-center opacity-85 group-hover/item:opacity-100 transition-opacity">
                       <Image
                         src="/icons/logo-design.webp"
                         alt="Spark - Logo Design Icon"
-                        width={84}
-                        height={84}
+                        width={184}
+                        height={184}
                         className="object-contain"
                       />
                     </div>
@@ -80,13 +80,13 @@ export function ServicePhilosophy({
                     </span>
                   </div>
 
-                  <div className="bg-kod-mist/50 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center opacity-90 group-hover/item:opacity-100 transition-opacity">
+                  <div className="bg-kod-mist/80 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center group/item hover:border-kod-orange/40 transition-colors">
+                    <div className="w-16 h-16 sm:w-32 sm:h-32 relative flex items-center justify-center opacity-90 group-hover/item:opacity-100 transition-opacity">
                       <Image
                         src="/icons/visual-storytelling.webp"
                         alt="Harmony - Visual Storytelling Icon"
-                        width={84}
-                        height={84}
+                        width={184}
+                        height={184}
                         className="object-contain"
                       />
                     </div>
@@ -95,14 +95,14 @@ export function ServicePhilosophy({
                     </span>
                   </div>
 
-                  <div className="bg-kod-mist/50 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center relative overflow-hidden shadow-inner group/item">
+                  <div className="bg-kod-mist/80 rounded-sm p-3 sm:p-4 text-center aspect-square flex flex-col items-center justify-center relative overflow-hidden shadow-inner group/item">
                     <div className="absolute inset-2 animate-spin-slow pointer-events-none" />
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 relative flex items-center justify-center z-10">
+                    <div className="w-16 h-16 sm:w-32 sm:h-32 relative flex items-center justify-center z-10">
                       <Image
                         src="/icons/branding.webp"
                         alt="The Mark - Branding Icon"
-                        width={84}
-                        height={84}
+                        width={184}
+                        height={184}
                         className="object-contain drop-shadow-[0_0_8px_rgba(229,76,42,0.4)]"
                       />
                     </div>
@@ -112,7 +112,7 @@ export function ServicePhilosophy({
                   </div>
                 </div>
 
-                <p className="text-center text-sm sm:text-base text-kod-earth/80 max-w-md mx-auto leading-relaxed">
+                <p className="text-center text-sm sm:text-base text-kod-earth max-w-md mx-auto leading-relaxed">
                   From ancient archetypes to precision geometry. We build iconic marks engineered for enduring brand recognition.
                 </p>
               </div>

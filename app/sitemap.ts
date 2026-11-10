@@ -29,5 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...projectPages, ...postPages];
+  const newsPages: MetadataRoute.Sitemap = posts
+    .filter((post) => post.type === "NEWS")
+    .map((post) => ({
+      url: `${baseUrl}/news/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }));
+
+  return [...staticPages, ...projectPages, ...postPages, ...newsPages];
 }

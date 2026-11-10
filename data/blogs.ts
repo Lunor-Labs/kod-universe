@@ -2,6 +2,240 @@ import type { Post } from "@/types/post";
 
 export const posts: Post[] = [
   {
+    id: "post-news-1",
+    slug: "introducing-kod-universe",
+    title: "A New Universe Opens: Introducing KOD Universe",
+    subtitle:
+      "A new online home for ideas, brands, visual stories, and the creative worlds still to come.",
+    excerpt:
+      "The new KOD Universe website brings our work in design, marketing and visual storytelling together, with a new chapter for artists on the horizon.",
+    seoTitle: "Introducing KOD Universe | Creative Agency in Sri Lanka",
+    seoDescription:
+      "Meet KOD Universe, a Sri Lankan creative agency bringing together brand design, marketing, visual storytelling and an upcoming artist-led Gallery.",
+    type: "NEWS",
+    category: "STUDIO NEWS",
+    coverImage: {
+      src: "/news/kod-universe-launch-hero.jpg",
+      alt: "Original illustrative artwork created for this news announcement; not a photograph of KOD premises.",
+      width: 1600,
+      height: 900,
+    },
+    author: {
+      name: "Ishara Kodithuwakku",
+      role: "Founder & Creative Director",
+      avatar: "/main/profile.webp",
+      linkedIn: "https://www.linkedin.com/in/ishara-kod/",
+    },
+    publishedAt: "November 10, 2026",
+    readTime: "3 min read",
+    tags: [
+      "Studio News",
+      "KOD Universe",
+      "Launch",
+      "Creative Agency",
+      "Sri Lanka",
+    ],
+    featured: true,
+    ctas: [
+      { label: "Explore Our Work", href: "/portfolio" },
+      { label: "Meet the Founder", href: "/about-us/founder" },
+    ],
+    content: [
+      {
+        paragraphs: [
+          "A good idea rarely stays in one place. It can begin as a sketch, become a campaign, move onto a screen, or grow into something people remember long after they've seen it.",
+          "That's the thinking behind KOD Universe. And with our new website, we're opening a space to share the work we've created, the people behind it, and the ideas we're building next.",
+          "Based in Sri Lanka, KOD Universe is a creative agency working across three connected disciplines: Design, Marketing, and Visual Storytelling. We bring strategy and execution together, whether the project is a new brand identity, an ambitious launch, or a story that needs a visual world of its own.",
+        ],
+      },
+      {
+        heading: "One creative universe, three connected disciplines",
+        paragraphs: [
+          "Design gives an idea its identity. From branding and packaging to graphic design and creative concepts, we shape how a brand looks, feels, and communicates.",
+          "Marketing takes that idea into the world. Our work includes campaign concepts, product launches, digital content, and physical brand experiences created to connect with real audiences.",
+          "Visual Storytelling brings an idea to life through concept art, art direction, commercial production, film, and other image-led experiences. Sometimes a single frame is where the strongest story begins.",
+        ],
+      },
+      {
+        heading: "The people and ideas behind KOD",
+        paragraphs: [
+          "KOD Universe is founded by Ishara Kodithuwakku, whose professional creative career began in 2014. His experience spans graphic design, freelance art direction with Iraj Productions, concept art, commercial direction, digital painting, and canvas art. He is also the founder of Rouka Clothing.",
+          "That mix of commercial craft and independent artistic practice shapes how we work. We don't see design, storytelling, art, and business as separate territories. The most interesting ideas often happen where they overlap.",
+        ],
+      },
+      {
+        heading: "The next chapter: KOD Gallery",
+        paragraphs: [
+          "Alongside the agency, we're developing KOD Gallery: an upcoming space connecting original art, artists, creative merchandise, and collaborative projects. Its three planned areas-Art, Merch, and Drops-will be introduced as they're ready. Artist registration and shopping are not open yet.",
+          "For now, explore our selected work, get to know the people behind KOD, and follow the stories we share here. This website is our new starting point, not the end of the journey.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "post-news-2",
+    slug: "kod-gallery-art-merch-drops-coming-soon",
+    title: "KOD Gallery Is Coming: Art, Merch & Creative Drops",
+    subtitle:
+      "Three spaces for discovering original work, connecting with artists, and exploring what art can become.",
+    excerpt:
+      "Art to discover. Merch to wear. Stories to experience. Meet the three creative spaces being developed for KOD Gallery.",
+    seoTitle: "KOD Gallery Coming Soon | Art, Merch & Creative Drops",
+    seoDescription:
+      "Discover the upcoming KOD Gallery: artist profiles, original artwork, artist and KOD merchandise, creative collaborations, films and events.",
+    type: "NEWS",
+    category: "STUDIO NEWS",
+    coverImage: {
+      src: "/news/kod-gallery-coming-soon-hero.jpg",
+      alt: "Concept illustration of the future KOD Gallery vision; not a photograph of a completed physical Gallery or released merchandise.",
+      width: 1600,
+      height: 900,
+    },
+    author: {
+      name: "Ishara Kodithuwakku",
+      role: "Founder & Creative Director",
+      avatar: "/main/profile.webp",
+      linkedIn: "https://www.linkedin.com/in/ishara-kod/",
+    },
+    publishedAt: "November 10, 2026",
+    readTime: "3 min read",
+    tags: [
+      "KOD Gallery",
+      "Coming Soon",
+      "Art",
+      "Merch",
+      "Drops",
+      "Studio News",
+    ],
+    featured: false,
+    ctas: [{ label: "Explore the Gallery Preview", href: "/gallery" }],
+    content: [
+      {
+        paragraphs: [
+          "Not every artwork is meant to stay on a wall. Some pieces find their way into the things we wear. Others spark a film, a collaboration, or an experience that brings people together.",
+          "That's the idea taking shape behind KOD Gallery, a new creative platform currently in development at KOD Universe.",
+          "The Gallery will bring artists, audiences, original work, and experimental creative projects into one space. We are planning it around three areas: Art, Merch, and Drops. Each has a different purpose, but all begin with the same belief: good creative work deserves to be discovered.",
+        ],
+      },
+      {
+        heading: "01 / Art - Meet the artists behind the work",
+        paragraphs: [
+          "The Art section is being designed for artists who want to share what they create and for visitors who want to discover something new.",
+          "Our plan is to allow artists to register, build profiles, and present original work, including digital paintings, canvas paintings, and other artistic expressions. Visitors will be able to explore the work alongside the people and stories behind it.",
+          "We want the experience to feel more personal than scrolling past an image. Knowing who made something can change the way you see it.",
+        ],
+      },
+      {
+        heading: "02 / Merch - Art that travels with you",
+        paragraphs: [
+          "Merch will bring selected artworks into new forms. We are developing both KOD Universe merchandise and artist collaborations that translate original creative work into wearable or collectible pieces.",
+          "Our goal is not simply to put an image on a product. We want the artist's identity and the story behind each collection to matter, too.",
+          "When this area opens, visitors will be able to explore the collections and purchase available merchandise through the platform. No collections are on sale yet.",
+        ],
+      },
+      {
+        heading: "03 / Drops - Ideas beyond a single format",
+        paragraphs: [
+          "Drops will be our space for collaborations and creative releases that don't fit neatly into one category.",
+          "We're planning projects with artists and other creators, including events, posters, original storytelling, short films, cinematic work, and other experimental experiences. Some may exist for a moment; others may grow into larger stories.",
+          "The format will change from project to project. That's exactly the point.",
+        ],
+      },
+      {
+        heading: "When will KOD Gallery open?",
+        paragraphs: [
+          "KOD Gallery is still being developed, and no opening date has been announced. Artist registration, merchandise purchasing, and Drops will become available as the respective features are completed.",
+          "Until then, the Gallery page is a first look at what we're creating. Follow KOD Universe for future announcements and opportunities to get involved.",
+        ],
+        quote:
+          "ART. MERCH. DROPS. Three spaces. One growing creative universe.",
+      },
+    ],
+  },
+  {
+    id: "post-news-3",
+    slug: "behind-bio-oil-dry-skin-gel-launch",
+    title: "Behind the Work: The Bio-Oil Dry Skin Gel Launch Campaign",
+    subtitle:
+      "How a product story moved from anticipation to real-world experiences across digital, retail, and event touchpoints.",
+    excerpt:
+      "From the first teasers in December 2020 to the January 2021 launch, discover how campaign design connected digital communication and real-world brand experiences.",
+    seoTitle: "Behind the Bio-Oil Dry Skin Gel Launch | KOD Universe",
+    seoDescription:
+      "Explore the creative work behind the Bio-Oil Dry Skin Gel launch in Sri Lanka, from December 2020 teasers to January 2021 retail and event activations.",
+    type: "NEWS",
+    category: "STUDIO NEWS",
+    coverImage: {
+      src: "/news/bio-oil-behind-the-work-hero.jpg",
+      alt: "Editorial concept illustration for the Bio-Oil Dry Skin Gel launch article; authentic campaign photography is shown below.",
+      width: 1600,
+      height: 900,
+    },
+    author: {
+      name: "Ishara Kodithuwakku",
+      role: "Founder & Creative Director",
+      avatar: "/main/profile.webp",
+      linkedIn: "https://www.linkedin.com/in/ishara-kod/",
+    },
+    publishedAt: "November 10, 2026",
+    readTime: "4 min read",
+    tags: [
+      "Behind the Work",
+      "Bio-Oil",
+      "Campaign",
+      "Product Launch",
+      "Sri Lanka",
+    ],
+    featured: false,
+    ctas: [
+      {
+        label: "View the Bio-Oil Project",
+        href: "/portfolio/dsg-launch-campaign",
+      },
+    ],
+    content: [
+      {
+        paragraphs: [
+          "A product launch is more than the day a product becomes available. It's the weeks of planning that lead up to it-the messages people see, the experiences they walk into, and the details they take away.",
+          "For the Bio-Oil Dry Skin Gel launch in Sri Lanka, KOD's creative work connected digital communication with physical brand experiences. The campaign began on 25 December 2020, leading into the product launch on 22 January 2021.",
+          "The challenge was to carry a recognisable brand story across many different touchpoints while keeping the visual experience consistent.",
+        ],
+      },
+      {
+        heading: "Building anticipation before launch day",
+        paragraphs: [
+          "The rollout began with teaser and countdown content designed to introduce the coming launch before the full reveal. Alongside social media creative, the campaign included influencer activity and email direct marketing (EDM), allowing the message to reach audiences in different contexts.",
+          "Each format had a different job. A teaser had to attract attention quickly; a longer message could provide more context; influencer content could bring a human voice to the campaign. They all needed to feel part of one visual story.",
+        ],
+      },
+      {
+        heading: "Taking the campaign into the real world",
+        paragraphs: [
+          "The campaign extended into physical spaces through stall design and activation, where visitors could engage directly with the brand. Supporting materials included leaflets, promotional and display elements, T-shirt designs for sales representatives and managers, and pharmacy gondolas.",
+          "These pieces may appear very different on a production checklist. From the audience's perspective, though, they should feel like one experience-from what they see online to what they encounter at a retail display or event.",
+        ],
+      },
+      {
+        heading: "The creative lesson",
+        paragraphs: [
+          "What made this project interesting wasn't just the number of deliverables. It was the need to think across every moment of the customer journey. Digital content, uniforms, printed pieces, and physical environments had to reinforce the same campaign identity.",
+          "For KOD Universe, projects like this show what happens when design, marketing, and visual storytelling are planned together instead of separately.",
+          "The campaign remains part of our selected work. Explore the project gallery to see the actual design and activation materials.",
+        ],
+      },
+      {
+        heading: "Original campaign image supplied by KOD Universe",
+        paragraphs: [],
+        image: {
+          src: "/portfolio/marketing/dsg-launch-campaign/bio-oil-dsg-exhibition-stand.webp",
+          alt: "Authentic Bio-Oil Dry Skin Gel launch campaign exhibition stand and activation supplied by KOD Universe",
+          caption:
+            "Original campaign photograph from the Bio-Oil Dry Skin Gel launch activation in Sri Lanka.",
+        },
+      },
+    ],
+  },
+  {
     id: "post-1",
     slug: "kod-universe-expands-spatial-architectural-designing",
     title:
@@ -100,7 +334,7 @@ export const posts: Post[] = [
           "Late into the evening, I would open digital software and experiment with vector shapes, typeface curves, and color gradients. There were no client briefs, no invoices, and no looming deadlines-only the pure, uninhibited joy of making something exist where blank space had been a moment before.",
         ],
         quote:
-          "When you discover what genuinely moves your curiosity as a child, your career ceases to feel like labor. Work does not make me feel tired-the creative needs of others are fuel for my passion.",
+          "When a hobby turns into a lifelong calling, work never makes you tired. The creative needs of others are fuel for my passion.",
       },
       {
         heading: "Where Energy Multiplies Instead of Depleting",
@@ -119,66 +353,6 @@ export const posts: Post[] = [
   },
   {
     id: "post-3",
-    slug: "tactile-packaging-in-a-digital-age",
-    title:
-      "Tactile Packaging in a Digital Age: The Power of the Physical Touchpoint",
-    subtitle:
-      "How custom structural dielines and material honesty foster brand loyalty",
-    excerpt:
-      "In a world saturated by fleeting digital impressions, physical product packaging is the only brand touchpoint that invites all five human senses. An exploration of structural craft and tactile storytelling.",
-    type: "BLOG",
-    category: "PACKAGING & CRAFT",
-    coverImage: {
-      src: "/portfolio/Design/branding-identity/package-design/niwarthana-1.webp",
-      alt: "Niwarthana packaging box and tea canisters",
-      width: 1672,
-      height: 941,
-    },
-    author: {
-      name: "Ishara Kodithuwakku",
-      role: "Founder & Creative Director",
-      avatar: "/main/profile.webp",
-      linkedIn: "https://www.linkedin.com/in/ishara-kod/",
-    },
-    publishedAt: "August 28, 2026",
-    readTime: "6 min read",
-    tags: ["Packaging", "Sustainable Design", "Tactile Craft", "Niwarthana"],
-    featured: false,
-    content: [
-      {
-        heading: "The Vanishing Physical Touchpoint",
-        paragraphs: [
-          "We live in a landscape dominated by glass screens. Consumers scroll past thousands of pixels every morning, forgetting 99% of what their eyes register within seconds. In this hyper-digital era, physical packaging holds unprecedented power.",
-          "When a customer holds a package in their hands, they are engaging with weight, surface texture, paper grain, emboss friction, and acoustic sound. The unboxing moment is a ritual-a micro-ceremony between a brand and a human being.",
-        ],
-        quote:
-          "Good packaging protects the product. Exceptional packaging dignifies the person who holds it.",
-      },
-      {
-        heading: "Case Study Reflection: Niwarthana Packaging",
-        paragraphs: [
-          "When we developed the packaging identity for Niwarthana, we created 24 label designs rooted in Sri Lankan visual culture and Sinhala typography, establishing a cohesive design language across diverse product lines.",
-          "The visual hierarchy and cultural motifs were calculated to create an instant of connection—encouraging the user to slow down and appreciate the craftsmanship of the heritage brand.",
-        ],
-        image: {
-          src: "/portfolio/Design/branding-identity/package-design/niwarthana-2.webp",
-          alt: "Niwarthana packaging label detail",
-          caption:
-            "Sinhala typography and label design system crafted for Niwarthana.",
-        },
-      },
-      {
-        heading: "The Three Pillars of Enduring Packaging",
-        paragraphs: [
-          "1. Structural Integrity: The geometry must protect and feel intentional, not accidental.",
-          "2. Typographic Restraint: Clear hierarchy that respects the customer's intelligence rather than shouting.",
-          "3. Environmental Respect: Recyclable stocks, vegetable inks, and zero unnecessary plastic laminates.",
-        ],
-      },
-    ],
-  },
-  {
-    id: "post-4",
     slug: "ancient-traces-modern-impact-brand-philosophy",
     title:
       "Ancient Traces, Modern Impact: Finding Visual Identity that Endures",
@@ -224,7 +398,7 @@ export const posts: Post[] = [
     ],
   },
   {
-    id: "post-5",
+    id: "post-4",
     slug: "visual-storytelling-commercial-film-production",
     title: "Cinematic Commercial Direction: Storyboarding for Human Resonance",
     subtitle:
@@ -269,7 +443,7 @@ export const posts: Post[] = [
     ],
   },
   {
-    id: "post-6",
+    id: "post-5",
     slug: "sustainable-streetwear-rouka-journey",
     title: "ROUKA: Building a Sustainable Streetwear Label from Ground Up",
     subtitle:

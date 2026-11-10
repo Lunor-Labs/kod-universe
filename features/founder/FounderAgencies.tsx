@@ -16,7 +16,7 @@ export function FounderAgencies() {
     {
       company: "KoD (KOD Universe)",
       role: "Founder & Creative Director",
-      period: "Dec 2018 - Present · 7+ yrs",
+      period: "Oct 2019 - Present",
       location: "United Arab Emirates & Sri Lanka",
       icon: Compass,
       highlight:
@@ -138,8 +138,9 @@ export function FounderAgencies() {
           </h2>
           <p className="text-body text-kod-earth/80 text-base sm:text-lg leading-relaxed">
             A professional creative career starting in 2014, spanning corporate
-            conglomerates, national media houses, founded creative ventures, and
-            commercial direction.
+            conglomerates, national media houses, founded creative ventures,
+            costume design, commercial direction, and creative consultation
+            since 2023.
           </p>
         </div>
 

@@ -5,12 +5,14 @@ interface BlogGridProps {
   posts: Post[];
   title?: string;
   onResetFilters?: () => void;
+  basePath?: "/blog" | "/news";
 }
 
 export function BlogGrid({
   posts,
   title = "Recent Dispatches & Articles",
   onResetFilters,
+  basePath = "/blog",
 }: BlogGridProps) {
   if (posts.length === 0) {
     return (
@@ -51,7 +53,7 @@ export function BlogGrid({
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
-          <BlogCard key={post.id} post={post} />
+          <BlogCard key={post.id} post={post} basePath={basePath} />
         ))}
       </div>
     </div>

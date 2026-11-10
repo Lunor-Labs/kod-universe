@@ -86,7 +86,7 @@ export function generateAssistantResponse(
     q.includes("what do you do")
   ) {
     return {
-      text: "**KOD Universe** is a 360° creative studio based in Colombo, Sri Lanka.\n\nWe exist at the intersection of **ancient wisdom and modern design** - building brands that carry real weight, visual brands that endure, and campaigns that move people.\n\nOur two core arms:\n• **KOD Creative** - Agency services: branding, digital, marketing, visual storytelling\n• **KOD Gallery** - Art, original prints, limited-edition merch & creative objects\n\nFounded with a single belief: *every great brand has a soul*. Our job is to find it and make it visible.",
+      text: "**KOD Universe** is a 360° creative studio based in Malabe, Sri Lanka.\n\nWe exist at the intersection of **ancient wisdom and modern design** - building brands that carry real weight, visual brands that endure, and campaigns that move people.\n\nOur two core arms:\n• **KOD Creative** - Agency services: branding, digital, marketing, visual storytelling\n• **KOD Gallery** - Art, original prints, limited-edition merch & creative objects\n\nFounded with a single belief: *every great brand has a soul*. Our job is to find it and make it visible.",
       typingDelay: 900,
       options: [
         {
@@ -116,7 +116,7 @@ export function generateAssistantResponse(
     q.includes("based in")
   ) {
     return {
-      text: "**The KOD Studio** is led by a team of strategists, designers, photographers, and storytellers - all deeply invested in the craft.\n\nWe're headquartered in **Colombo 07, Sri Lanka**, with a creative culture built around curiosity, precision, and originality.\n\nOur founder built KOD on the conviction that Sri Lankan creativity belongs on the world stage - and we're proving it every day through the brands and visuals we produce.",
+      text: "**The KOD Studio** is led by a team of strategists, designers, photographers, and storytellers - all deeply invested in the craft.\n\nWe're located at **1062/8 12th Lane, Pothuwarawa Road, Malabe**, with a creative culture built around curiosity, precision, and originality.\n\nOur founder built KOD on the conviction that Sri Lankan creativity belongs on the world stage - and we're proving it every day through the brands and visuals we produce.",
       typingDelay: 850,
       options: [
         OPT_PORTFOLIO,
@@ -436,7 +436,7 @@ export function generateAssistantResponse(
     q.includes("where are you")
   ) {
     return {
-      text: "We'd love to connect directly:\n\n• **Phone / WhatsApp:** +94 77 200 0504\n• **Email:** hello@kod.lk\n• **Studio:** Colombo 07, Sri Lanka\n• **Hours:** Mon – Sat, 9am – 6pm (SLST)\n\nOr drop your name and number below and we'll call you right back.",
+      text: "We'd love to connect directly:\n\n• **Phone / WhatsApp:** +94 77 200 0504\n• **Email:** ayubowan@kod.lk\n• **Studio:** KoD Universe, 1062/8 12th Lane, Pothuwarawa Road, Malabe\n• **Hours:** Mon – Sat, 9am – 6pm (SLST)\n\nOr drop your name and number below and we'll call you right back.",
       hasForm: true,
       typingDelay: 750,
       options: [OPT_WHATSAPP],

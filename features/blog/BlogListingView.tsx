@@ -10,6 +10,7 @@ import type { Post, PostCategory } from "@/types/post";
 
 interface BlogListingViewProps {
   initialPosts: Post[];
+  basePath?: "/blog" | "/news";
 }
 
 const CATEGORY_MAP: Record<string, PostCategory> = {
@@ -28,7 +29,10 @@ const CATEGORY_MAP: Record<string, PostCategory> = {
   PACKAGING: "PACKAGING & CRAFT",
 };
 
-function BlogListingContent({ initialPosts }: BlogListingViewProps) {
+function BlogListingContent({
+  initialPosts,
+  basePath = "/blog",
+}: BlogListingViewProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -110,7 +114,9 @@ function BlogListingContent({ initialPosts }: BlogListingViewProps) {
       />
 
       <main className="container-site relative z-20 px-4 sm:px-6 lg:px-8">
-        {featuredPost && <FeaturedArticle post={featuredPost} />}
+        {featuredPost && (
+          <FeaturedArticle post={featuredPost} basePath={basePath} />
+        )}
 
         <BlogGrid
           posts={gridPosts}
@@ -122,13 +128,17 @@ function BlogListingContent({ initialPosts }: BlogListingViewProps) {
               : `${activeCategory}`
           }
           onResetFilters={handleResetFilters}
+          basePath={basePath}
         />
       </main>
     </div>
   );
 }
 
-export function BlogListingView({ initialPosts }: BlogListingViewProps) {
+export function BlogListingView({
+  initialPosts,
+  basePath = "/blog",
+}: BlogListingViewProps) {
   return (
     <Suspense
       fallback={
@@ -139,7 +149,7 @@ export function BlogListingView({ initialPosts }: BlogListingViewProps) {
         </div>
       }
     >
-      <BlogListingContent initialPosts={initialPosts} />
+      <BlogListingContent initialPosts={initialPosts} basePath={basePath} />
     </Suspense>
   );
 }

@@ -157,10 +157,18 @@ export default function RootLayout({
     url: siteConfig.url,
     logo: `${siteConfig.url}/icon.png`,
     description: siteConfig.description,
+    email: siteConfig.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1062/8 12th Lane, Pothuwarawa Road",
+      addressLocality: "Malabe",
+      addressCountry: "LK",
+    },
     sameAs: siteConfig.socialLinks.map((link) => link.href),
     contactPoint: {
       "@type": "ContactPoint",
       telephone: siteConfig.contact.phones[0]?.number,
+      email: siteConfig.contact.email,
       contactType: "customer service",
       areaServed: "LK",
       availableLanguage: "English",

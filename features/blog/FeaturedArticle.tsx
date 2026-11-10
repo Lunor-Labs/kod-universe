@@ -5,14 +5,17 @@ import type { Post } from "@/types/post";
 
 interface FeaturedArticleProps {
   post: Post;
+  basePath?: "/blog" | "/news";
 }
 
-export function FeaturedArticle({ post }: FeaturedArticleProps) {
+export function FeaturedArticle({ post, basePath = "/blog" }: FeaturedArticleProps) {
+  const articleHref = `${basePath}/${post.slug}`;
+
   return (
     <article className="group relative bg-white rounded overflow-hidden border border-kod-border/70 hover:border-kod-orange/50 hover:shadow-2xl transition-all duration-500 mb-16">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
         <Link
-          href={`/blog/${post.slug}`}
+          href={articleHref}
           className="lg:col-span-7 relative min-h-[320px] sm:min-h-[420px] lg:min-h-[480px] w-full overflow-hidden bg-kod-mist block"
         >
           <Image
@@ -49,7 +52,7 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-kod-earth group-hover:text-kod-orange transition-colors duration-300 leading-tight mb-4">
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              <Link href={articleHref}>{post.title}</Link>
             </h2>
 
             {post.subtitle && (
@@ -93,7 +96,7 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
             </div>
 
             <Link
-              href={`/blog/${post.slug}`}
+              href={articleHref}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-kod-earth text-white hover:bg-kod-orange transition-all duration-300 text-xs font-bold tracking-wider uppercase group-hover:shadow-md"
             >
               <span>Read Story</span>

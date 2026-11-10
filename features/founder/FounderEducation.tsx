@@ -4,21 +4,21 @@ export function FounderEducation() {
   const credentials = [
     {
       institution: "University of Kelaniya Sri Lanka",
-      degree: "Bachelor of Arts (BA) in Film and Television",
-      period: "2012 – 2015",
+      degree: "Diploma in Film & Television Studies",
+      period: "2017 – 2018",
       icon: GraduationCap,
       highlights: [
-        "Creative Direction & Cinematic Visual Storytelling",
-        "Team Leadership & Production Management",
+        "Film & Television Production Studies",
+        "Cinematic Visual Storytelling",
         "Screenplay Structure & Visual Composition",
-        "Costume & Production Design Foundation",
+        "Costume & Art Direction Foundations",
       ],
       description:
-        "Comprehensive academic training in cinematic aesthetics, moving image psychology, art direction, and production leadership.",
+        "Practical training in film studies, production, and television craft, grounding Ishara in cinematic theory, art direction, and moving-image storytelling.",
     },
     {
-      institution: "Teleview Academy",
-      degree: "Diploma in 3D Animation & Visual Special Effects",
+      institution: "Teleview, Colombo",
+      degree: "Diploma in 3D Animation",
       period: "2014 – 2015",
       icon: Box,
       highlights: [
@@ -28,7 +28,7 @@ export function FounderEducation() {
         "Collaborative projects with Skyco Construction",
       ],
       description:
-        "Rigorous technical diploma focusing on 3D spatial modeling, architectural layout rendering, lighting simulations, and VFX.",
+        "Rigorous technical diploma focusing on 3D animation, spatial modeling, architectural layout rendering, and lighting simulations.",
     },
     {
       institution: "Walasmulla National School",

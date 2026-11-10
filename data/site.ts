@@ -39,9 +39,9 @@ export const siteConfig: SiteConfig = {
     },
   ],
   contact: {
-    email: "hello@kod.lk",
+    email: "ayubowan@kod.lk",
     phones: [{ region: "Sri Lanka Hub", number: "077 200 0504" }],
-    locations: ["Colombo 07, Sri Lanka"],
+    locations: ["1062/8 12th Lane, Pothuwarawa Road, Malabe"],
   },
 };
 

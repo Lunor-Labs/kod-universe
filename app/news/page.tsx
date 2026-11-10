@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function NewsPage() {
-  return <BlogListingView initialPosts={posts} />;
+  return <BlogListingView initialPosts={posts} basePath="/news" />;
 }
