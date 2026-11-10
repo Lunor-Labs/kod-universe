@@ -1,19 +1,55 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { META_IMAGES, buildPageSocialMetadata } from "@/lib/meta-images";
 import { ComingSoonCountdown } from "@/components/coming-soon/ComingSoonCountdown";
+import { formatCountdownLabel, getCountdownParts } from "@/lib/launch";
 
-export const metadata: Metadata = {
-  title: "Launching Soon",
-  description: "The Cave is Almost Open. KOD Universe website is on the way.",
-  alternates: { canonical: "/coming-soon" },
-  ...buildPageSocialMetadata({
-    title: "Launching Soon - KOD Universe",
-    description: "The Cave is Almost Open. KOD Universe website is on the way.",
-    path: "/coming-soon",
-    image: META_IMAGES.home,
-  }),
-};
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const now = Date.now();
+  const parts = getCountdownParts(now);
+  const summary = formatCountdownLabel(parts);
+  const minuteBucket = Math.floor(now / 60000);
+
+  const title = parts.isLaunched
+    ? "The Cave Is Open - KOD Universe"
+    : `Launching in ${summary} - The Cave Is Almost Open`;
+
+  const description = parts.isLaunched
+    ? "KOD Universe is now live. Explore design, marketing, and visual storytelling."
+    : `Countdown: ${summary} remaining until launch on November 11, 2026 at 11:11:11 AM SLST.`;
+
+  const ogImageUrl = `/api/og/coming-soon?t=${minuteBucket}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/coming-soon" },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      siteName: "KOD Universe",
+      url: "https://www.kod.lk/coming-soon",
+      title,
+      description,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      creator: "@koduniverse",
+      images: [ogImageUrl],
+    },
+  };
+}
 
 export default function ComingSoonPage() {
   return (

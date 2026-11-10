@@ -3,41 +3,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { LAUNCH_TIMESTAMP } from "@/lib/launch";
-
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-  isLaunched: boolean;
-}
-
-function calculateTimeLeft(): TimeLeft {
-  const diff = LAUNCH_TIMESTAMP - Date.now();
-  if (diff <= 0) {
-    return { days: 0, hours: 0, minutes: 0, seconds: 0, isLaunched: true };
-  }
-
-  return {
-    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-    isLaunched: false,
-  };
-}
-
-function pad(value: number): string {
-  return String(value).padStart(2, "0");
-}
+import {
+  getCountdownParts,
+  padCountdownUnit,
+  type CountdownParts,
+} from "@/lib/launch";
 
 export function ComingSoonCountdown() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+  const [timeLeft, setTimeLeft] = useState<CountdownParts | null>(null);
 
   useEffect(() => {
     const sync = () => {
-      const next = calculateTimeLeft();
+      const next = getCountdownParts();
       setTimeLeft(next);
       return next;
     };
@@ -74,10 +51,16 @@ export function ComingSoonCountdown() {
   }
 
   const units = [
-    { label: "Days", value: timeLeft ? pad(timeLeft.days) : "--" },
-    { label: "Hours", value: timeLeft ? pad(timeLeft.hours) : "--" },
-    { label: "Minutes", value: timeLeft ? pad(timeLeft.minutes) : "--" },
-    { label: "Seconds", value: timeLeft ? pad(timeLeft.seconds) : "--" },
+    { label: "Days", value: timeLeft ? padCountdownUnit(timeLeft.days) : "--" },
+    { label: "Hours", value: timeLeft ? padCountdownUnit(timeLeft.hours) : "--" },
+    {
+      label: "Minutes",
+      value: timeLeft ? padCountdownUnit(timeLeft.minutes) : "--",
+    },
+    {
+      label: "Seconds",
+      value: timeLeft ? padCountdownUnit(timeLeft.seconds) : "--",
+    },
   ];
 
   return (
