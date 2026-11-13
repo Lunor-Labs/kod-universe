@@ -441,8 +441,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     badge: "1ST PLACE WINNER",
-    tagline:
-      "Graphic Design | Creative Concept Development",
+    tagline: "Graphic Design | Creative Concept Development",
     palette: ["#111827", "#F59E0B", "#EF4444", "#10B981", "#F3F4F6"],
     stats: {
       primaryValue: "2021",
@@ -904,9 +903,14 @@ export const projects: Project[] = [
       primaryLabel: "Label Designs",
       secondaryValue: "SRI LANKAN",
       secondaryLabel: "Inspired Design",
-      summary: "24 distinct label designs unified by a Sri Lankan cultural design system.",
+      summary:
+        "24 distinct label designs unified by a Sri Lankan cultural design system.",
     },
-    relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
+    relatedSlugs: [
+      "rouka-brand-identity",
+      "coffee-1911-identity",
+      "aromavitae-brand-identity",
+    ],
   },
   {
     id: "8",
@@ -1217,7 +1221,11 @@ export const projects: Project[] = [
     badge: "CULTURAL SYMBOLISM",
     tagline: "Logo Design | Brand Identity | Cultural Symbolism",
     palette: ["#0033A0", "#FFD100", "#1E3A8A", "#F59E0B", "#FFFFFF"],
-    relatedSlugs: ["rouka-brand-identity", "coffee-1911-identity"],
+    relatedSlugs: [
+      "rouka-brand-identity",
+      "coffee-1911-identity",
+      "aromavitae-brand-identity",
+    ],
   },
   {
     id: "10",
@@ -2398,7 +2406,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/bito/bito-1.webp",
         alt: "BITO Bito 1",
@@ -2552,7 +2560,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-06.webp",
         alt: "Coconut Husk Chips Coco Concept 06",
@@ -2589,7 +2597,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/coco/coco-concept-13.webp",
         alt: "Coconut Husk Chips Coco Concept 13",
@@ -2602,7 +2610,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/coco/coco-1.webp",
         alt: "Coconut Husk Chips Coco 1",
@@ -2993,8 +3001,7 @@ export const projects: Project[] = [
         width: 1400,
         height: 1400,
       },
-      
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-02.webp",
         alt: "AGARTHA Films Agartha Films Visual 02",
@@ -3061,7 +3068,7 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
+
       {
         src: "/portfolio/Design/branding-identity/logo-design/agartha-films/agartha-films-visual-03.webp",
         alt: "AGARTHA Films Agartha Films Visual 03",
@@ -3205,7 +3212,6 @@ export const projects: Project[] = [
         width: 1254,
         height: 1254,
       },
-      
     ],
     tags: [
       "Logo Design",
@@ -3596,10 +3602,191 @@ export const projects: Project[] = [
       "pissu-kanna-brand-merchandise",
     ],
   },
+  {
+    id: "26",
+    slug: "aromavitae-brand-identity",
+    title: "AROMAVITAE – Logo & Brand Identity",
+    client: "AROMAVITAE",
+    category: "DESIGN",
+    subCategory: "Branding",
+    subCategories: [
+      "Branding",
+      "Packaging",
+      "Brand Identity",
+      "Logo Design",
+      "Product Design",
+      "Packaging Design",
+      "Art Direction",
+    ],
+    year: 2026,
+    location: "Sri Lanka",
+    timeline: "2026",
+    shortDescription:
+      "One brand identity for two expressions of Sri Lankan aroma - Ceylon spices and agarwood fragrances.",
+    overview:
+      "AROMAVITAE is a Sri Lankan brand that sells Ceylon spices, including cinnamon, alongside agarwood oils and fragrances.\n\nKoD Universe developed a shared visual identity that connects both ranges through their Sri Lankan origins and their distinct aromas.",
+    challenge:
+      "A cinnamon product and an oud oil bottle serve different purposes, but both need to feel unmistakably AROMAVITAE.\n\nThe identity had to feel at home in the kitchen as well as on a fragrance shelf, without making either range look like an afterthought.",
+    approach:
+      "We started with what the two ranges share - aroma.\n\nThe monogram brings together the letters A, R, and O, drawing on the curves of the Sinhala vowel ඇ to evoke the way a scent moves through the air.\n\nThat same mark became the basis for a repeating pattern. We explored it in a carved-wood study and carried it into the wrapping paper and box lining.\n\nA palette of forest green, warm ivory, agarwood brown, and antique gold gives both ranges a shared visual language, while details like the wooden roll-on and wax seal give the fragrance range its own character.",
+    outcome:
+      "AROMAVITAE has one recognizable identity with room for both ranges to express themselves.\n\nThis project showcase focuses on the fragrance applications, from the first bottle sketches to the finished packaging concepts, while the logo, palette, and pattern belong to the wider brand.\n\nNature’s Finest. Ceylon’s Pride.",
+    deliverables: [
+      "Creative concept and art direction",
+      "Logo, monogram, wordmark, and spacing guidelines",
+      "Typography, colour palettes, and signature brand pattern",
+      "Oud oil bottle form development",
+      "Packaging and label design",
+      "Brand application mockups and campaign visuals",
+      "Website UI/UX",
+    ],
+    pillars: [
+      {
+        title: "Sinhala-Rooted Monogram",
+        description:
+          "Brings together letters A, R, and O, drawing on curves of Sinhala vowel 'ඇ' to evoke scent moving through the air.",
+      },
+      {
+        title: "Carved-Wood & Pattern Study",
+        description:
+          "Translating the mark into an architectural carved-wood study and repeating pattern for luxury box linings and wrap.",
+      },
+      {
+        title: "Shared Visual Language",
+        description:
+          "Forest green, warm ivory, agarwood brown, and antique gold connecting Ceylon spices and fragrance ranges.",
+      },
+      {
+        title: "Bespoke Fragrance Craft",
+        description:
+          "Form development for wooden roll-on bottles, ornate gold vessels, and wax seals for a distinct tactile ritual.",
+      },
+    ],
+    heroImage: {
+      src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Ceylon cinnamon quills and perfume bottles.png",
+      alt: "AROMAVITAE Ceylon Spices and Fragrances Product Showcase",
+      width: 1448,
+      height: 1086,
+    },
+    cardImage: {
+      src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-09.png",
+      alt: "AROMAVITAE Luxury Emerald Packaging Box with Gold Foil Stamped Mark",
+      width: 2250,
+      height: 2250,
+    },
+    transparentImage: {
+      src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Ceylon cinnamon quills and perfume bottles.png",
+      alt: "AROMAVITAE Ceylon Cinnamon Quills, Oud Fragrance Bottles, and Box Packaging",
+      width: 1448,
+      height: 1086,
+    },
+    galleryImages: [
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups.png",
+        alt: "AROMAVITAE Logo Construction & Spacing Guide - Sinhala Vowel 'ඇ' Monogram Breakdown",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-06.png",
+        alt: "AROMAVITAE Logo Concept, Proportions, Clear Space & Monogram Breakdown",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-07.png",
+        alt: "AROMAVITAE Product Shape Design, Concept Sketches, Refinement & Color Palette",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-08.png",
+        alt: "AROMAVITAE Signature Repeating Brand Pattern & Foundational Motif",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-12.png",
+        alt: "AROMAVITAE Architectural Wood Carving Motif Study",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-01.png",
+        alt: "AROMAVITAE Pattern Wrapping Paper with Gold Wax Seal",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-02.png",
+        alt: "AROMAVITAE Forest Green Rigid Gift Box with Patterned Lining and Envelope",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-09.png",
+        alt: "AROMAVITAE Emerald Green Box Packaging with Gold Hot Foil Stamping",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-03.png",
+        alt: "AROMAVITAE Antique Gold Oud Fragrance Vessel and Packaging Box",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-10.png",
+        alt: "AROMAVITAE Viba Sivora Wooden Roll-on Bottle, Jute Pouch, and Agarwood Chips",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-11.png",
+        alt: "AROMAVITAE Fragrance Collection Flat-lay with Spices, Saffron & Agarwood",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-04.png",
+        alt: "AROMAVITAE Fragrance Brand Campaign Ritual Visual",
+        width: 2250,
+        height: 2250,
+      },
+      {
+        src: "/portfolio/Design/branding-identity/logo-design/aromavitae/Design mockups-13.png",
+        alt: "AROMAVITAE Brand Identity Showcase by KoD Universe",
+        width: 2250,
+        height: 2250,
+      },
+    ],
+    tags: [
+      "Brand Identity",
+      "Logo Design",
+      "Product Design",
+      "Packaging Design",
+      "Art Direction",
+      "Monogram Design",
+      "Pattern Design",
+      "Visual Identity",
+    ],
+    featured: true,
+    badge: "LUXURY BRAND IDENTITY",
+    tagline: "Logo Design | Product Design | Packaging Design | Art Direction",
+    palette: ["#1B3B2B", "#F4EFE6", "#C59B3F", "#4A2E1B", "#8A4B20"],
+    relatedSlugs: [
+      "niwarthana-packaging-design",
+      "rouka-brand-identity",
+      "papa-films-identity",
+    ],
+  },
 ];
 
 // Slug aliases to ensure backward-compatibility with old dummy slugs
 const slugAliases: Record<string, string> = {
+  aromavitae: "aromavitae-brand-identity",
+  "aromavitae-logo-identity": "aromavitae-brand-identity",
+  "aromavitae-logo-and-brand-identity": "aromavitae-brand-identity",
   "corepoint-fitness-identity": "area-6-social-media",
   "threadline-textiles-packaging": "niwarthana-packaging-design",
   "soluna-wellness-identity": "rouka-brand-identity",

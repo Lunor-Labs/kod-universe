@@ -36,7 +36,7 @@ function getTransporter() {
 
   if (!user || !rawPass) {
     throw new Error(
-      "Missing SMTP_USER or SMTP_PASS environment variables for mail delivery."
+      "Missing SMTP_USER or SMTP_PASS environment variables for mail delivery.",
     );
   }
 
@@ -84,15 +84,15 @@ const SOURCE_LABELS: Record<InquiryEmailPayload["source"], string> = {
 };
 
 export async function sendInquiryEmail(
-  payload: InquiryEmailPayload
+  payload: InquiryEmailPayload,
 ): Promise<void> {
   const sourceLabel = SOURCE_LABELS[payload.source];
   const replyToEmail =
     payload.email && EMAIL_REGEX.test(payload.email)
       ? payload.email
       : payload.contact && EMAIL_REGEX.test(payload.contact)
-      ? payload.contact
-      : undefined;
+        ? payload.contact
+        : undefined;
 
   const rows: Array<[string, string]> = [
     ["Source", sourceLabel],
@@ -120,7 +120,7 @@ export async function sendInquiryEmail(
         <tr>
           <td style="padding:10px 12px;border-bottom:1px solid #e7dfd8;font-weight:600;color:#2c2520;width:180px;vertical-align:top;">${escapeHtml(k)}</td>
           <td style="padding:10px 12px;border-bottom:1px solid #e7dfd8;color:#4a3f37;white-space:pre-wrap;">${escapeHtml(v)}</td>
-        </tr>`
+        </tr>`,
     )
     .join("");
 
@@ -140,10 +140,9 @@ export async function sendInquiryEmail(
   `;
 
   await sendMail({
-    subject: `[KOD Universe] ${sourceLabel} — ${payload.name}`,
+    subject: `[KOD Universe] ${sourceLabel} - ${payload.name}`,
     replyTo: replyToEmail,
     text,
     html,
   });
 }
-

@@ -94,6 +94,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Architecture Design",
         ],
         relatedProjectSlugs: [
+          "aromavitae-brand-identity",
           "niwarthana-packaging-design",
           "area-6-brand-identity",
           "rouka-brand-identity",
