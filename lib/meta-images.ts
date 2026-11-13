@@ -12,19 +12,19 @@ export const META_IMAGES = {
     url: encodeURI("/meta/Futuristic Bronze Canyon Amphitheater-1.png"),
     width: 1672,
     height: 941,
-    alt: "KOD Universe — 360° Creative Studio",
+    alt: "KOD Universe - 360° Creative Studio",
   },
   about: {
     url: encodeURI("/meta/Futuristic Canyon Cultural Complex-2.png"),
     width: 1672,
     height: 941,
-    alt: "About KOD Universe — Story, Vision & Creative Force",
+    alt: "About KOD Universe - Story, Vision & Creative Force",
   },
   services: {
     url: encodeURI("/meta/Golden Cavern and Cosmic Portal-3.png"),
     width: 1730,
     height: 909,
-    alt: "KOD Creative Services — Design, Marketing & Visual Storytelling",
+    alt: "KOD Creative Services - Design, Marketing & Visual Storytelling",
   },
   portfolio: {
     url: encodeURI("/meta/Amber Arches_ Underground Art Gallery-4.png"),
@@ -36,23 +36,23 @@ export const META_IMAGES = {
     url: encodeURI("/meta/Cinematic Cave Atelier at Dusk-5.png"),
     width: 1734,
     height: 907,
-    alt: "Ishara Kodithuwakku — Founder & Creative Director of KOD Universe",
+    alt: "Ishara Kodithuwakku - Founder & Creative Director of KOD Universe",
   },
   contact: {
     url: encodeURI("/meta/Cosmic Cave Art Observatory-6.png"),
     width: 1734,
     height: 907,
-    alt: "Connect with KOD Universe — Malabe, Sri Lanka",
+    alt: "Connect with KOD Universe - Malabe, Sri Lanka",
   },
   gallery: {
     url: encodeURI("/meta/Futuristic Amber Cave Art Gallery-7.png"),
     width: 1734,
     height: 907,
-    alt: "KOD Gallery — Art, Merch & Limited Drops",
+    alt: "KOD Gallery - Art, Merch & Limited Drops",
   },
   news: {
     url: encodeURI(
-      "/meta/Futuristic Observatory Newsroom Under the Stars-8.png"
+      "/meta/Futuristic Observatory Newsroom Under the Stars-8.png",
     ),
     width: 1734,
     height: 907,
@@ -97,4 +97,3 @@ export function buildPageSocialMetadata({
     },
   };
 }
-

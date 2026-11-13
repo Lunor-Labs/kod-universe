@@ -184,7 +184,7 @@ export async function GET() {
               fontWeight: 600,
             }}
           >
-            11 · 11 · 2026 — 11:11:11 AM SLST
+            11 · 11 · 2026 - 11:11:11 AM SLST
           </div>
         </div>
       </div>

@@ -76,7 +76,7 @@ export default function ComingSoonPage() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/coming-soon-mobile.jpg"
-          alt="KOD Universe — The Cave is Almost Open"
+          alt="KOD Universe - The Cave is Almost Open"
           fill
           sizes="100vw"
           className="object-cover object-center opacity-95 md:hidden"
@@ -84,7 +84,7 @@ export default function ComingSoonPage() {
         />
         <Image
           src="/coming-soon.png"
-          alt="KOD Universe — The Cave is Almost Open"
+          alt="KOD Universe - The Cave is Almost Open"
           fill
           sizes="100vw"
           className="hidden md:block object-cover object-center opacity-90"
